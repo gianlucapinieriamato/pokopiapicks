@@ -303,15 +303,18 @@ def scrape_habitats(use_cache: bool) -> None:
             seen.add(key)
             slugs.append(key)
 
-    # Extract names from index (same pattern as specialties)
+    # Extract names from index — each habitat has 2 anchors (icon + text); take first non-empty
     index_info: dict[str, dict] = {}
     for m in re.finditer(
-        r'href="habitatdex/([a-z0-9\-]+)\.shtml"[^>]*>([^<]+)<',
-        html, re.IGNORECASE,
+        r'href="habitatdex/([a-z0-9\-]+)\.shtml"[^>]*>(.*?)</a',
+        html, re.IGNORECASE | re.DOTALL,
     ):
         key = m.group(1).lower()
-        if key not in index_info:
-            index_info[key] = {'name': clean_text(m.group(2))}
+        if key in index_info:
+            continue
+        candidate = clean_text(re.sub(r'<[^>]+>', '', m.group(2)))
+        if candidate:
+            index_info[key] = {'name': candidate}
 
     print(f'Found {len(slugs)} habitats.\n')
 
