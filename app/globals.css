@@ -815,6 +815,16 @@ h1 .accent {
 .site-footer a { color: var(--ink-soft); text-decoration: none; }
 .site-footer a:hover { color: var(--accent-deep); }
 
+/* ── Hoverable row / card tile ─────────────────────────────────────────────── */
+.hover-tile {
+  background: var(--bg-1);
+  border: 1px solid var(--paper-edge);
+  border-radius: 8px;
+  transition: background 0.1s;
+  cursor: pointer;
+}
+.hover-tile:hover { background: var(--bg-2); }
+
 /* ── Responsive ────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .site-nav-inner { height: auto; padding: 10px 16px; gap: 8px; flex-wrap: wrap; }

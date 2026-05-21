@@ -83,20 +83,7 @@ export default function ItemsPage() {
                 href={`/item/${item.slug}`}
                 style={{ textDecoration: "none" }}
               >
-                <div style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: "8px 10px",
-                  borderRadius: 8,
-                  border: "1px solid var(--paper-edge)",
-                  background: "var(--bg-1)",
-                  transition: "background 0.1s",
-                  cursor: "pointer",
-                }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "var(--bg-2)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "var(--bg-1)")}
-                >
+                <div className="hover-tile" style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px" }}>
                   {item.icon && (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img src={item.icon} alt="" style={{ width: 28, height: 28, objectFit: "contain", imageRendering: "pixelated", flexShrink: 0 }} />

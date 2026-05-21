@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { CATEGORIES, POKEMON } from "@/app/lib/data";
 
@@ -28,17 +27,7 @@ export default function CategoriesPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 8 }}>
           {ALL_CATS.map((cat) => (
             <Link key={cat.slug} href={`/category/${cat.slug}`} style={{ textDecoration: "none" }}>
-              <div style={{
-                padding: "12px 14px",
-                borderRadius: 8,
-                border: "1px solid var(--paper-edge)",
-                background: "var(--bg-1)",
-                transition: "background 0.1s",
-                cursor: "pointer",
-              }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = "var(--bg-2)")}
-                onMouseLeave={(e) => (e.currentTarget.style.background = "var(--bg-1)")}
-              >
+              <div className="hover-tile" style={{ padding: "12px 14px" }}>
                 <div style={{
                   fontFamily: "'Outfit', sans-serif",
                   fontWeight: 700,
