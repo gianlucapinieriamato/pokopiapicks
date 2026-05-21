@@ -1,69 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import pokemonData from "@/data/pokemon.json";
-import categoriesData from "@/data/favorite-categories.json";
-import itemsData from "@/data/items.json";
-
-// ── Types ─────────────────────────────────────────────────────────────────────
-
-type PokemonEntry = {
-  name: string;
-  num: number;
-  habitat: string;
-  categories: string[];
-  icon: string;
-  slug: string;
-  nationalDexNum: number | null;
-  spriteHq: string | null;
-};
-
-type CategoryEntry = {
-  slug: string;
-  name: string;
-  items: string[];
-};
-
-type ItemEntry = {
-  slug: string;
-  name: string;
-  icon: string | null;
-  categories: string[];
-};
-
-// ── Data ──────────────────────────────────────────────────────────────────────
-
-const POKEMON = pokemonData as Record<string, PokemonEntry>;
-const CATEGORIES = categoriesData as Record<string, CategoryEntry>;
-const ITEMS = itemsData as Record<string, ItemEntry>;
-
-const POKEMON_LIST: PokemonEntry[] = Object.entries(POKEMON)
-  .map(([slug, p]) => ({ ...p, slug }))
-  .sort((a, b) => a.num - b.num);
-
-// Index by BOTH slug and display name — pokemon.json uses display names as category refs
-const CAT_ITEMS: Record<string, string[]> = {};
-for (const [slug, cat] of Object.entries(CATEGORIES)) {
-  CAT_ITEMS[slug] = cat.items;
-  CAT_ITEMS[cat.name] = cat.items; // display name alias
-}
-
-// Map category ref (slug or display name) → display name
-function dexNum(p: PokemonEntry): string {
-  return String(p.nationalDexNum ?? p.num).padStart(3, "0");
-}
-
-function catDisplayName(catRef: string): string {
-  if (CATEGORIES[catRef]) return CATEGORIES[catRef].name;
-  return catRef; // already a display name
-}
-
-// Map category ref → slug for URLs
-function catSlug(catRef: string): string {
-  if (CATEGORIES[catRef]) return catRef;
-  const slug = catRef.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  return slug;
-}
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { POKEMON, POKEMON_LIST, ITEMS, getCatItems, pkmnIconUrl, dexNum, catDisplayName } from "@/app/lib/data";
+import type { PokemonEntry } from "@/app/lib/types";
+import PkmnIcon from "@/app/components/PkmnIcon";
 
 // ── i18n ──────────────────────────────────────────────────────────────────────
 
@@ -126,20 +66,25 @@ function normalize(s: string) {
   return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 }
 
-function pkmnIconUrl(p: PokemonEntry) {
-  return `/icons/pokemon/${p.icon}`;
-}
-
 // ── Sub-components ────────────────────────────────────────────────────────────
 
-function PkmnIcon({ src, alt, className }: { src: string | null; alt: string; className?: string }) {
-  const [failed, setFailed] = useState(false);
-  if (!src || failed) {
-    return <div className={`flex items-center justify-center text-[var(--ink-fade)] ${className ?? ""}`}>·</div>;
-  }
+function CollapsibleCat({ name, count, children }: { name: string; count: string; children: React.ReactNode }) {
+  const [open, setOpen] = useState(true);
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} className={`img-icon ${className ?? ""}`} loading="lazy" onError={() => setFailed(true)} />
+    <div className="cat-block">
+      <button
+        className="cat-head"
+        onClick={() => setOpen((prev) => !prev)}
+        style={{ width: "100%", textAlign: "left", cursor: "pointer", background: "none", border: "none", padding: 0 }}
+      >
+        <span className="cat-name">{name}</span>
+        <span className="cat-count">{count}</span>
+        <span style={{ marginLeft: 8, fontFamily: "'DM Mono', monospace", fontSize: 11, color: "var(--ink-fade)" }}>
+          {open ? "▲" : "▼"}
+        </span>
+      </button>
+      {open && children}
+    </div>
   );
 }
 
@@ -149,14 +94,17 @@ function GoesWellWith({ slug, p, onSelect, s }: {
   onSelect: (slug: string) => void;
   s: (typeof STRINGS)[Lang];
 }) {
-  const sameHabitat = POKEMON_LIST.filter((q) => q.habitat === p.habitat && q.slug !== slug);
-  const seen = new Set<number>();
-  const deduped = sameHabitat.filter((q) => {
-    if (seen.has(q.num)) return false;
-    seen.add(q.num);
-    return true;
-  });
-  const picks = deduped.sort(() => Math.random() - 0.5).slice(0, 6);
+  const picks = useMemo(() => {
+    const sameHabitat = POKEMON_LIST.filter((q) => q.habitat === p.habitat && q.slug !== slug);
+    const seen = new Set<number>();
+    const deduped = sameHabitat.filter((q) => {
+      if (seen.has(q.num)) return false;
+      seen.add(q.num);
+      return true;
+    });
+    return deduped.sort(() => Math.random() - 0.5).slice(0, 6);
+  }, [slug, p.habitat]);
+
   if (picks.length === 0) return null;
   return (
     <div className="gww-section">
@@ -174,22 +122,102 @@ function GoesWellWith({ slug, p, onSelect, s }: {
   );
 }
 
-function CollapsibleCat({ name, count, children }: { name: string; count: string; children: React.ReactNode }) {
-  const [open, setOpen] = useState(true);
+function PokemonView({ slug, s, onSelect }: {
+  slug: string;
+  s: (typeof STRINGS)[Lang];
+  onSelect: (slug: string) => void;
+}) {
+  const p = POKEMON[slug];
+  if (!p) return null;
+
+  const { itemToCats, allItems, sharedItems } = useMemo(() => {
+    const itemToCats: Record<string, string[]> = {};
+    for (const catRef of p.categories) {
+      for (const item of getCatItems(catRef)) {
+        if (!itemToCats[item]) itemToCats[item] = [];
+        itemToCats[item].push(catRef);
+      }
+    }
+    const allItems = Object.entries(itemToCats);
+    const sharedItems = allItems
+      .filter(([, cats]) => cats.length >= 2)
+      .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+    return { itemToCats, allItems, sharedItems };
+  }, [p]);
+
   return (
-    <div className="cat-block">
-      <button
-        className="cat-head"
-        onClick={() => setOpen(!open)}
-        style={{ width: "100%", textAlign: "left", cursor: "pointer", background: "none", border: "none", padding: 0 }}
-      >
-        <span className="cat-name">{name}</span>
-        <span className="cat-count">{count}</span>
-        <span style={{ marginLeft: 8, fontFamily: "'DM Mono', monospace", fontSize: 11, color: "var(--ink-fade)" }}>
-          {open ? "▲" : "▼"}
-        </span>
-      </button>
-      {open && children}
+    <div className="card">
+      <div className="pkmn-head">
+        <div className="pkmn-portrait">
+          <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} className="w-20 h-20 object-contain" />
+        </div>
+        <div className="pkmn-info">
+          <div className="pkmn-num">#{dexNum(p)}</div>
+          <div className="pkmn-name">{p.name}</div>
+          <div className="pkmn-meta">{s.habitat} <span className="habitat-tag">{p.habitat}</span></div>
+          <div className="pkmn-cats">
+            {p.categories.map((c) => <span key={c} className="pkmn-cat-tag">{catDisplayName(c)}</span>)}
+          </div>
+        </div>
+      </div>
+
+      <div className="summary-strip">
+        <div className="stat-box"><div className="stat-num">{allItems.length}</div><div className="stat-label">{s.items_total}</div></div>
+        <div className="stat-box"><div className="stat-num">{sharedItems.length}</div><div className="stat-label">{s.multi_cat}</div></div>
+        <div className="stat-box"><div className="stat-num">{p.categories.length}</div><div className="stat-label">{s.categories}</div></div>
+      </div>
+
+      {sharedItems.length > 0 && (
+        <>
+          <div className="section-title">{s.best_gifts} <span className="pill">{s.best_gifts_pill}</span></div>
+          <p className="section-sub">{s.best_gifts_sub}</p>
+          <div className="best-grid">
+            {sharedItems.map(([item, cats]) => {
+              const isElite = cats.length >= 3;
+              const iconPath = ITEMS[item]?.icon ?? null;
+              return (
+                <div key={item} className={`best-item${isElite ? " elite" : ""}`}>
+                  <div className="best-item-badge">{s.cats_x(cats.length)}</div>
+                  <div className="best-item-icon"><PkmnIcon src={iconPath} alt={item} /></div>
+                  <div className="best-item-body">
+                    <div className="best-item-name">{item}</div>
+                    <div className="best-item-cats">{cats.map((c) => catDisplayName(c)).join(" · ")}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      <div className="section-title">{s.all_by_cat}</div>
+      <p className="section-sub">{s.all_by_cat_sub}</p>
+      {p.categories.map((catRef) => {
+        const items = getCatItems(catRef);
+        return (
+          <CollapsibleCat key={catRef} name={catDisplayName(catRef)} count={s.item(items.length)}>
+            <div className="cat-items">
+              {items.map((item) => {
+                const cats = itemToCats[item] ?? [];
+                const isShared = cats.length >= 2;
+                const otherCats = cats.filter((c) => c !== catRef);
+                const iconPath = ITEMS[item]?.icon ?? null;
+                return (
+                  <div key={item} className={`cat-item${isShared ? " shared" : ""}`}>
+                    <div className="cat-item-icon"><PkmnIcon src={iconPath} alt={item} /></div>
+                    <div className="cat-item-body">
+                      <div className="cat-item-name">{item}</div>
+                      {isShared && <div className="cat-item-cats">{s.also_in(otherCats.map((c) => catDisplayName(c)).join(", "))}</div>}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </CollapsibleCat>
+        );
+      })}
+
+      <GoesWellWith slug={slug} p={p} onSelect={onSelect} s={s} />
     </div>
   );
 }
@@ -256,100 +284,6 @@ export default function Home() {
     else if (e.key === "Escape") setShowSuggestions(false);
   };
 
-  const renderPokemon = (slug: string) => {
-    const p = POKEMON[slug];
-    if (!p) return null;
-
-    const itemToCats: Record<string, string[]> = {};
-    for (const catRef of p.categories) {
-      for (const item of CAT_ITEMS[catRef] ?? []) {
-        if (!itemToCats[item]) itemToCats[item] = [];
-        itemToCats[item].push(catRef);
-      }
-    }
-
-    const allItems = Object.entries(itemToCats);
-    const sharedItems = allItems
-      .filter(([, cats]) => cats.length >= 2)
-      .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
-
-    return (
-      <div className="card">
-        <div className="pkmn-head">
-          <div className="pkmn-portrait">
-            <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} className="w-20 h-20 object-contain" />
-          </div>
-          <div className="pkmn-info">
-            <div className="pkmn-num">#{p.nationalDexNum ?? String(p.num).padStart(3, "0")}</div>
-            <div className="pkmn-name">{p.name}</div>
-            <div className="pkmn-meta">{s.habitat} <span className="habitat-tag">{p.habitat}</span></div>
-            <div className="pkmn-cats">
-              {p.categories.map((c) => <span key={c} className="pkmn-cat-tag">{catDisplayName(c)}</span>)}
-            </div>
-          </div>
-        </div>
-
-        <div className="summary-strip">
-          <div className="stat-box"><div className="stat-num">{allItems.length}</div><div className="stat-label">{s.items_total}</div></div>
-          <div className="stat-box"><div className="stat-num">{sharedItems.length}</div><div className="stat-label">{s.multi_cat}</div></div>
-          <div className="stat-box"><div className="stat-num">{p.categories.length}</div><div className="stat-label">{s.categories}</div></div>
-        </div>
-
-        {sharedItems.length > 0 && (
-          <>
-            <div className="section-title">{s.best_gifts} <span className="pill">{s.best_gifts_pill}</span></div>
-            <p className="section-sub">{s.best_gifts_sub}</p>
-            <div className="best-grid">
-              {sharedItems.map(([item, cats]) => {
-                const isElite = cats.length >= 3;
-                const iconPath = ITEMS[item]?.icon ?? null;
-                return (
-                  <div key={item} className={`best-item${isElite ? " elite" : ""}`}>
-                    <div className="best-item-badge">{s.cats_x(cats.length)}</div>
-                    <div className="best-item-icon"><PkmnIcon src={iconPath} alt={item} /></div>
-                    <div className="best-item-body">
-                      <div className="best-item-name">{item}</div>
-                      <div className="best-item-cats">{cats.map((c) => catDisplayName(c)).join(" · ")}</div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </>
-        )}
-
-        <div className="section-title">{s.all_by_cat}</div>
-        <p className="section-sub">{s.all_by_cat_sub}</p>
-        {p.categories.map((catRef) => {
-          const items = CAT_ITEMS[catRef] ?? [];
-          return (
-            <CollapsibleCat key={catRef} name={catDisplayName(catRef)} count={s.item(items.length)}>
-              <div className="cat-items">
-                {items.map((item) => {
-                  const cats = itemToCats[item] ?? [];
-                  const isShared = cats.length >= 2;
-                  const otherCats = cats.filter((c) => c !== catRef);
-                  const iconPath = ITEMS[item]?.icon ?? null;
-                  return (
-                    <div key={item} className={`cat-item${isShared ? " shared" : ""}`}>
-                      <div className="cat-item-icon"><PkmnIcon src={iconPath} alt={item} /></div>
-                      <div className="cat-item-body">
-                        <div className="cat-item-name">{item}</div>
-                        {isShared && <div className="cat-item-cats">{s.also_in(otherCats.map((c) => catDisplayName(c)).join(", "))}</div>}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </CollapsibleCat>
-          );
-        })}
-
-        <GoesWellWith slug={slug} p={p} onSelect={selectPokemon} s={s} />
-      </div>
-    );
-  };
-
   return (
     <>
       <div className="wrap">
@@ -357,6 +291,7 @@ export default function Home() {
           <span className="eyebrow">{s.eyebrow}</span>
           <h1>{s.h1_1}<br /><span className="accent">{s.h1_accent}</span></h1>
           <p className="lede">{s.lede}</p>
+          <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">{s.lang_btn}</button>
         </header>
 
         <section className="card">
@@ -382,7 +317,7 @@ export default function Home() {
                     onMouseDown={(e) => { e.preventDefault(); selectPokemon(p.slug); }}
                   >
                     <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} className="suggestion-icon" />
-                    <span className="suggestion-num">#{p.nationalDexNum ?? String(p.num).padStart(3, "0")}</span>
+                    <span className="suggestion-num">#{dexNum(p)}</span>
                     <span className="suggestion-name">{p.name}</span>
                     <span className="suggestion-meta">{p.categories.length} cats</span>
                   </div>
@@ -401,7 +336,9 @@ export default function Home() {
         </section>
 
         <div ref={outputRef} id="output">
-          {selectedSlug ? renderPokemon(selectedSlug) : (
+          {selectedSlug ? (
+            <PokemonView slug={selectedSlug} s={s} onSelect={selectPokemon} />
+          ) : (
             <>
               <div className="card" style={{ textAlign: "center", padding: "20px 28px 16px" }}>
                 <div className="placeholder" style={{ padding: "16px 0 8px" }}>
@@ -409,7 +346,6 @@ export default function Home() {
                   <small className="block mt-1 text-sm text-[var(--ink-fade)]">{s.placeholder_sub}</small>
                 </div>
               </div>
-              {/* Show all Pokémon grid before anything is selected */}
               <div className="card">
                 <div className="section-title" style={{ marginBottom: 12 }}>All Pokémon</div>
                 <div className="pkmn-grid">
@@ -423,7 +359,7 @@ export default function Home() {
                       <div className="pkmn-grid-icon">
                         <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} />
                       </div>
-                      <div className="pkmn-grid-num">#{p.nationalDexNum ?? String(p.num).padStart(3, "0")}</div>
+                      <div className="pkmn-grid-num">#{dexNum(p)}</div>
                       <div className="pkmn-grid-name">{p.name}</div>
                     </button>
                   ))}

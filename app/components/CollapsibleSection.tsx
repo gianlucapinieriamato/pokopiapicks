@@ -17,7 +17,7 @@ export default function CollapsibleSection({
     <div className="cat-block">
       <button
         className="cat-head"
-        onClick={() => setOpen(!open)}
+        onClick={() => setOpen((prev) => !prev)}
         style={{ width: "100%", textAlign: "left", cursor: "pointer", background: "none", border: "none", padding: 0 }}
         aria-expanded={open}
       >
