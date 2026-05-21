@@ -33,204 +33,210 @@ export default function TcgCard({
   const isSm = size === "sm";
   const holoOpacity = r.holoIntensity / 100;
   const [h1, h2] = HABITAT_BG[p.habitat] ?? ["#d8ccb8", "#a89070"];
+  const pad = isLg ? 7 : 4;
 
   return (
+    // Outer wrapper — width + padding-bottom trick enforces strict aspect ratio
     <div style={{
+      position: "relative",
       width: "100%",
       maxWidth: isLg ? 340 : isSm ? 220 : 260,
-      aspectRatio: "1 / 1.42",
-      overflow: "hidden",
-      borderRadius: isLg ? 16 : 12,
-      background: `linear-gradient(135deg, var(--accent-soft) 0%, var(--accent) 30%, var(--accent-soft) 60%, var(--accent-deep) 100%)`,
-      padding: isLg ? 7 : 4,
-      position: "relative",
-      boxShadow: `
-        0 0 0 1px rgba(138,105,25,0.35),
-        0 ${isLg ? 18 : 8}px ${isLg ? 36 : 20}px -10px rgba(45,36,24,0.35)
-        ${r.sparkles ? ", 0 0 28px rgba(201,149,43,0.3)" : ""}
-      `,
     }}>
-      {/* Inner card face */}
+      {/* Aspect ratio spacer: height = width × 1.42 */}
+      <div style={{ paddingBottom: "142%", pointerEvents: "none" }} />
+
+      {/* Card frame — absolutely fills the wrapper */}
       <div style={{
-        width: "100%",
-        height: "100%",
-        borderRadius: isLg ? 10 : 8,
-        background: "var(--paper)",
-        border: "1.5px solid rgba(138,105,25,0.28)",
-        overflow: "hidden",
-        display: "flex",
-        flexDirection: "column",
-        position: "relative",
+        position: "absolute",
+        inset: 0,
+        borderRadius: isLg ? 16 : 12,
+        background: `linear-gradient(135deg, var(--accent-soft) 0%, var(--accent) 30%, var(--accent-soft) 60%, var(--accent-deep) 100%)`,
+        boxShadow: `
+          0 0 0 1px rgba(138,105,25,0.35),
+          0 ${isLg ? 18 : 8}px ${isLg ? 36 : 20}px -10px rgba(45,36,24,0.35)
+          ${r.sparkles ? ", 0 0 28px rgba(201,149,43,0.3)" : ""}
+        `,
       }}>
-
-        {/* ── Header: name + dex num ─────────────────────────── */}
+        {/* Inner card face — absolutely inset by the frame padding */}
         <div style={{
-          padding: isLg ? "10px 14px" : "6px 9px",
-          background: `linear-gradient(180deg, var(--bg-2) 0%, var(--chrome) 100%)`,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          borderBottom: "1.5px solid var(--accent)",
-          flexShrink: 0,
-          gap: 4,
-        }}>
-          <div style={{
-            fontFamily: "'Outfit', sans-serif",
-            fontWeight: 800,
-            fontSize: isLg ? 20 : isSm ? 12 : 14,
-            letterSpacing: "-0.01em",
-            lineHeight: 1,
-            color: "var(--ink)",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            minWidth: 0,
-          }}>
-            {p.name}
-            {r.sparkles && (
-              <span style={{ fontSize: isLg ? 13 : 9, color: "var(--accent)", filter: "drop-shadow(0 0 3px var(--accent))", marginLeft: 4 }}>★</span>
-            )}
-          </div>
-          <div style={{
-            fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
-            fontWeight: 600,
-            fontSize: isLg ? 11 : 8,
-            color: "var(--accent-deep)",
-            letterSpacing: "0.08em",
-            flexShrink: 0,
-          }}>{dexNum(p)}</div>
-        </div>
-
-        {/* ── Art window: 54% of card height ────────────────── */}
-        <div style={{
-          margin: isLg ? "8px 8px 0" : "4px 4px 0",
-          height: "54%",
-          borderRadius: 6,
-          background: `linear-gradient(160deg, ${h1} 0%, ${h2} 100%)`,
-          position: "relative",
+          position: "absolute",
+          inset: pad,
+          borderRadius: isLg ? 10 : 8,
+          background: "var(--paper)",
+          border: "1.5px solid rgba(138,105,25,0.28)",
           overflow: "hidden",
-          border: "1.5px solid rgba(138,105,25,0.42)",
           display: "flex",
-          alignItems: "flex-end",
-          justifyContent: "center",
-          flexShrink: 0,
+          flexDirection: "column",
         }}>
-          {r.sparkles && (
-            <div style={{
-              position: "absolute", inset: 0, pointerEvents: "none",
-              backgroundImage: `
-                radial-gradient(circle at 18% 22%, rgba(255,255,255,0.95) 1.2px, transparent 2.5px),
-                radial-gradient(circle at 72% 30%, rgba(255,255,255,0.85) 1px, transparent 2px),
-                radial-gradient(circle at 30% 65%, rgba(255,255,255,0.9) 1.4px, transparent 3px),
-                radial-gradient(circle at 85% 70%, rgba(255,255,255,0.8) 1px, transparent 2px),
-                radial-gradient(circle at 50% 88%, rgba(255,255,255,0.95) 1.2px, transparent 2.5px)`,
-            }} />
-          )}
-          <div style={{
-            position: "absolute", inset: 0, pointerEvents: "none",
-            background: HOLO, mixBlendMode: "screen", opacity: holoOpacity,
-          }} />
-          {/* Habitat pill */}
-          <div style={{
-            position: "absolute", top: 5, left: 5,
-            padding: "2px 7px", borderRadius: 99,
-            background: "rgba(255,255,255,0.84)", color: "var(--ink)",
-            fontFamily: "'Outfit', sans-serif", fontWeight: 700,
-            fontSize: isLg ? 10 : 8, letterSpacing: "0.03em",
-          }}>{p.habitat}</div>
-          {/* Badge */}
-          {(giftCount !== null || r.sparkles) && (
-            <div style={{
-              position: "absolute", top: 5, right: 5,
-              padding: "2px 7px", borderRadius: 99,
-              background: r.sparkles
-                ? `linear-gradient(135deg, var(--accent), var(--accent-deep))`
-                : "var(--accent)",
-              color: "var(--paper)",
-              fontFamily: "'Outfit', sans-serif", fontWeight: 800,
-              fontSize: isLg ? 10 : 8, letterSpacing: "0.03em",
-              boxShadow: "0 1px 0 var(--accent-deep)",
-            }}>
-              {r.sparkles ? "LEGENDARY" : `${giftCount} GIFTS`}
-            </div>
-          )}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={pkmnIconUrl(p)}
-            alt={p.name}
-            style={{
-              width: "75%",
-              height: "88%",
-              objectFit: "contain",
-              imageRendering: "pixelated",
-              filter: "drop-shadow(0 4px 0 rgba(45,36,24,0.20))",
-              position: "relative",
-              zIndex: 1,
-              marginBottom: -2,
-            }}
-          />
-        </div>
 
-        {/* ── Category chips ──────────────────────────────────── */}
-        <div style={{
-          padding: isLg ? "6px 10px 4px" : "4px 6px 3px",
-          flexShrink: 0,
-        }}>
-          {!isSm && (
+          {/* ── Header: name + dex num ─────────────────────────── */}
+          <div style={{
+            padding: isLg ? "10px 14px" : "6px 9px",
+            background: `linear-gradient(180deg, var(--bg-2) 0%, var(--chrome) 100%)`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            borderBottom: "1.5px solid var(--accent)",
+            flexShrink: 0,
+            gap: 4,
+          }}>
+            <div style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 800,
+              fontSize: isLg ? 20 : isSm ? 12 : 14,
+              letterSpacing: "-0.01em",
+              lineHeight: 1,
+              color: "var(--ink)",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              minWidth: 0,
+            }}>
+              {p.name}
+              {r.sparkles && (
+                <span style={{ fontSize: isLg ? 13 : 9, color: "var(--accent)", filter: "drop-shadow(0 0 3px var(--accent))", marginLeft: 4 }}>★</span>
+              )}
+            </div>
             <div style={{
               fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
-              fontSize: isLg ? 8 : 7,
-              color: "var(--ink-fade)",
-              letterSpacing: "0.07em",
               fontWeight: 600,
-              textTransform: "uppercase",
-              marginBottom: 3,
-            }}>Likes</div>
-          )}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-            {p.categories.slice(0, isSm ? 2 : isLg ? undefined : 3).map((c) => (
-              <span key={c} className="pkmn-cat-tag" style={{
-                fontSize: isSm ? 8 : 9,
-                padding: isSm ? "2px 6px" : "2px 8px",
-                lineHeight: 1.4,
-              }}>{c}</span>
-            ))}
+              fontSize: isLg ? 11 : 8,
+              color: "var(--accent-deep)",
+              letterSpacing: "0.08em",
+              flexShrink: 0,
+            }}>{dexNum(p)}</div>
           </div>
-        </div>
 
-        {/* ── Footer bar ─────────────────────────────────────── */}
-        <div style={{
-          marginTop: "auto",
-          padding: isLg ? "6px 12px 8px" : "3px 8px 5px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          background: `linear-gradient(180deg, transparent, var(--chrome))`,
-          borderTop: "1px solid var(--paper-edge)",
-          flexShrink: 0,
-        }}>
-          <span style={{
-            fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
-            fontSize: isLg ? 9 : 7,
-            color: "var(--ink-fade)",
-            letterSpacing: "0.08em",
-            fontWeight: 600,
-          }}>POKOPIA · PICKS</span>
-          <span style={{
-            fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
-            fontSize: isLg ? 9 : 7,
-            color: r.sparkles ? "var(--accent)" : "var(--ink-fade)",
-            letterSpacing: "0.06em",
-            fontWeight: 600,
-          }}>{r.sparkles ? "LEGENDARY" : (p.types?.[0] ?? p.flavor ?? p.habitat).toUpperCase()}</span>
-        </div>
+          {/* ── Art window: flex-basis 54% of card face height ─── */}
+          <div style={{
+            margin: isLg ? "8px 8px 0" : "4px 4px 0",
+            flex: "0 0 54%",
+            borderRadius: 6,
+            background: `linear-gradient(160deg, ${h1} 0%, ${h2} 100%)`,
+            position: "relative",
+            overflow: "hidden",
+            border: "1.5px solid rgba(138,105,25,0.42)",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
+          }}>
+            {r.sparkles && (
+              <div style={{
+                position: "absolute", inset: 0, pointerEvents: "none",
+                backgroundImage: `
+                  radial-gradient(circle at 18% 22%, rgba(255,255,255,0.95) 1.2px, transparent 2.5px),
+                  radial-gradient(circle at 72% 30%, rgba(255,255,255,0.85) 1px, transparent 2px),
+                  radial-gradient(circle at 30% 65%, rgba(255,255,255,0.9) 1.4px, transparent 3px),
+                  radial-gradient(circle at 85% 70%, rgba(255,255,255,0.8) 1px, transparent 2px),
+                  radial-gradient(circle at 50% 88%, rgba(255,255,255,0.95) 1.2px, transparent 2.5px)`,
+              }} />
+            )}
+            <div style={{
+              position: "absolute", inset: 0, pointerEvents: "none",
+              background: HOLO, mixBlendMode: "screen", opacity: holoOpacity,
+            }} />
+            {/* Habitat pill */}
+            <div style={{
+              position: "absolute", top: 5, left: 5,
+              padding: "2px 7px", borderRadius: 99,
+              background: "rgba(255,255,255,0.84)", color: "var(--ink)",
+              fontFamily: "'Outfit', sans-serif", fontWeight: 700,
+              fontSize: isLg ? 10 : 8, letterSpacing: "0.03em",
+            }}>{p.habitat}</div>
+            {/* Badge */}
+            {(giftCount !== null || r.sparkles) && (
+              <div style={{
+                position: "absolute", top: 5, right: 5,
+                padding: "2px 7px", borderRadius: 99,
+                background: r.sparkles
+                  ? `linear-gradient(135deg, var(--accent), var(--accent-deep))`
+                  : "var(--accent)",
+                color: "var(--paper)",
+                fontFamily: "'Outfit', sans-serif", fontWeight: 800,
+                fontSize: isLg ? 10 : 8, letterSpacing: "0.03em",
+                boxShadow: "0 1px 0 var(--accent-deep)",
+              }}>
+                {r.sparkles ? "LEGENDARY" : `${giftCount} GIFTS`}
+              </div>
+            )}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={pkmnIconUrl(p)}
+              alt={p.name}
+              style={{
+                width: "75%",
+                height: "88%",
+                objectFit: "contain",
+                imageRendering: "pixelated",
+                filter: "drop-shadow(0 4px 0 rgba(45,36,24,0.20))",
+                position: "relative",
+                zIndex: 1,
+                marginBottom: -2,
+              }}
+            />
+          </div>
 
-        {/* Holo sweep */}
-        <div className="tcg-holo-sweep" style={{
-          position: "absolute", inset: 0, pointerEvents: "none",
-          background: HOLO, mixBlendMode: "soft-light",
-          opacity: r.sparkles ? holoOpacity * 0.65 : 0,
-        }} />
+          {/* ── Category chips ──────────────────────────────────── */}
+          <div style={{
+            padding: isLg ? "6px 10px 4px" : "4px 6px 3px",
+            flexShrink: 0,
+          }}>
+            {!isSm && (
+              <div style={{
+                fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
+                fontSize: isLg ? 8 : 7,
+                color: "var(--ink-fade)",
+                letterSpacing: "0.07em",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                marginBottom: 3,
+              }}>Likes</div>
+            )}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+              {p.categories.slice(0, isSm ? 2 : isLg ? undefined : 3).map((c) => (
+                <span key={c} className="pkmn-cat-tag" style={{
+                  fontSize: isSm ? 8 : 9,
+                  padding: isSm ? "2px 6px" : "2px 8px",
+                  lineHeight: 1.4,
+                }}>{c}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Footer bar ─────────────────────────────────────── */}
+          <div style={{
+            marginTop: "auto",
+            padding: isLg ? "6px 12px 8px" : "3px 8px 5px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            background: `linear-gradient(180deg, transparent, var(--chrome))`,
+            borderTop: "1px solid var(--paper-edge)",
+            flexShrink: 0,
+          }}>
+            <span style={{
+              fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
+              fontSize: isLg ? 9 : 7,
+              color: "var(--ink-fade)",
+              letterSpacing: "0.08em",
+              fontWeight: 600,
+            }}>POKOPIA · PICKS</span>
+            <span style={{
+              fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
+              fontSize: isLg ? 9 : 7,
+              color: r.sparkles ? "var(--accent)" : "var(--ink-fade)",
+              letterSpacing: "0.06em",
+              fontWeight: 600,
+            }}>{r.sparkles ? "LEGENDARY" : (p.types?.[0] ?? p.flavor ?? p.habitat).toUpperCase()}</span>
+          </div>
+
+          {/* Holo sweep */}
+          <div className="tcg-holo-sweep" style={{
+            position: "absolute", inset: 0, pointerEvents: "none",
+            background: HOLO, mixBlendMode: "soft-light",
+            opacity: r.sparkles ? holoOpacity * 0.65 : 0,
+          }} />
+        </div>
       </div>
     </div>
   );
