@@ -1,24 +1,33 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ITEMS, CATEGORIES, POKEMON, pkmnIconUrl, catName } from "@/app/lib/data";
+import { ITEMS, CATEGORIES, POKEMON, pkmnIconUrl } from "@/app/lib/data";
 
 export function generateStaticParams() {
   return Object.values(ITEMS).map((item) => ({ slug: item.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const item = Object.values(ITEMS).find((i) => i.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const item = Object.values(ITEMS).find((i) => i.slug === slug);
   if (!item) return { title: "Not found" };
   return { title: item.name, description: `${item.name} — appears in ${item.categories.length} favorite categories.` };
 }
 
-export default function ItemPage({ params }: { params: { slug: string } }) {
-  const item = Object.values(ITEMS).find((i) => i.slug === params.slug);
+export default async function ItemPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const item = Object.values(ITEMS).find((i) => i.slug === slug);
   if (!item) return <div className="detail-wrap"><p>Item not found.</p></div>;
 
-  // Pokémon that like this item (appear in any of its categories)
+  const catName = (catSlug: string) => CATEGORIES[catSlug]?.name ?? catSlug;
+
   const pokemonWhoLike = Object.values(POKEMON)
-    .filter((p) => item.categories.some((c) => p.categories.includes(c)))
+    .filter((p) => {
+      // categories in pokemon.json are display names; convert to slugs for comparison
+      return item.categories.some((catSlug) => {
+        const catDisplayName = CATEGORIES[catSlug]?.name ?? catSlug;
+        return p.categories.includes(catDisplayName) || p.categories.includes(catSlug);
+      });
+    })
     .sort((a, b) => a.num - b.num);
 
   return (

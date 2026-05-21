@@ -6,18 +6,20 @@ export function generateStaticParams() {
   return Object.keys(LOCATIONS).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const loc = LOCATIONS[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const loc = LOCATIONS[slug];
   if (!loc) return { title: "Not found" };
   return { title: loc.name, description: loc.description };
 }
 
-export default function LocationPage({ params }: { params: { slug: string } }) {
-  const loc = LOCATIONS[params.slug];
+export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const loc = LOCATIONS[slug];
   if (!loc) return <div className="detail-wrap"><p>Location not found.</p></div>;
 
   const pokemonHere = Object.values(POKEMON)
-    .filter((p) => p.habitatList?.some((h) => h.locations.includes(params.slug)))
+    .filter((p) => p.habitatList?.some((h) => h.locations.includes(slug)))
     .sort((a, b) => a.num - b.num);
 
   return (

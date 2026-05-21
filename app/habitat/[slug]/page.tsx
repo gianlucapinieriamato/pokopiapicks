@@ -6,14 +6,16 @@ export function generateStaticParams() {
   return Object.keys(HABITATS).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const h = HABITATS[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const h = HABITATS[slug];
   if (!h) return { title: "Not found" };
   return { title: h.name, description: h.description };
 }
 
-export default function HabitatPage({ params }: { params: { slug: string } }) {
-  const h = HABITATS[params.slug];
+export default async function HabitatPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const h = HABITATS[slug];
   if (!h) return <div className="detail-wrap"><p>Habitat not found.</p></div>;
 
   const pokemonHere = h.pokemon

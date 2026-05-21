@@ -6,18 +6,20 @@ export function generateStaticParams() {
   return Object.keys(SPECIALTIES).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const s = SPECIALTIES[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const s = SPECIALTIES[slug];
   if (!s) return { title: "Not found" };
   return { title: `${s.name} specialty`, description: s.description };
 }
 
-export default function SpecialtyPage({ params }: { params: { slug: string } }) {
-  const s = SPECIALTIES[params.slug];
+export default async function SpecialtyPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const s = SPECIALTIES[slug];
   if (!s) return <div className="detail-wrap"><p>Specialty not found.</p></div>;
 
   const pokemonWith = s.pokemon
-    .map((slug) => POKEMON[slug])
+    .map((pSlug) => POKEMON[pSlug])
     .filter(Boolean)
     .sort((a, b) => a!.num - b!.num) as NonNullable<typeof POKEMON[string]>[];
 
