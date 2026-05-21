@@ -1,18 +1,18 @@
 "use client";
 import Link from "next/link";
 import { useState, useMemo, useCallback } from "react";
-import { POKEMON, POKEMON_LIST, CATEGORIES, SPECIALTIES, pkmnIconUrl, catName } from "@/app/lib/data";
+import { POKEMON, POKEMON_LIST, CATEGORIES, SPECIALTIES, pkmnIconUrl, getCatItems, catDisplayName } from "@/app/lib/data";
 
 // ── Scoring logic ─────────────────────────────────────────────────────────────
 
 function sharedItemCount(a: string[], b: string[]): number {
   const setA = new Set<string>();
   for (const cat of a) {
-    for (const item of CATEGORIES[cat]?.items ?? []) setA.add(item);
+    for (const item of getCatItems(cat)) setA.add(item);
   }
   let count = 0;
   for (const cat of b) {
-    for (const item of CATEGORIES[cat]?.items ?? []) {
+    for (const item of getCatItems(cat)) {
       if (setA.has(item)) count++;
     }
   }
@@ -101,11 +101,11 @@ export default function MatchmakerPage() {
     ? (() => {
         const setA = new Set<string>();
         for (const cat of anchor.categories) {
-          for (const item of CATEGORIES[cat]?.items ?? []) setA.add(item);
+          for (const item of getCatItems(cat)) setA.add(item);
         }
         const shared: string[] = [];
         for (const cat of compareTarget.categories) {
-          for (const item of CATEGORIES[cat]?.items ?? []) {
+          for (const item of getCatItems(cat)) {
             if (setA.has(item)) shared.push(item);
           }
         }
@@ -165,7 +165,7 @@ export default function MatchmakerPage() {
               <div className="pkmn-name">{anchor.name}</div>
               <div className="pkmn-meta">Habitat: <span className="habitat-tag">{anchor.habitat}</span></div>
               <div className="pkmn-cats" style={{ marginTop: 8 }}>
-                {anchor.categories.map((c) => <span key={c} className="pkmn-cat-tag">{catName(c)}</span>)}
+                {anchor.categories.map((c) => <span key={c} className="pkmn-cat-tag">{catDisplayName(c)}</span>)}
               </div>
             </div>
           </div>
@@ -231,7 +231,7 @@ export default function MatchmakerPage() {
                       style={compareTarget.categories.includes(c) && anchor!.categories.includes(c)
                         ? { background: "var(--sun-soft)", borderColor: "var(--sun)" }
                         : {}}
-                    >{catName(c)}</span>
+                    >{catDisplayName(c)}</span>
                   ))}
                 </div>
               </div>

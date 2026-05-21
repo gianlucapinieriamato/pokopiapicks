@@ -639,7 +639,15 @@ h1 .accent {
 .site-footer a { color: var(--ink-soft); text-decoration: none; }
 .site-footer a:hover { color: var(--accent); }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  /* Nav: stack logo + links */
+  .site-nav-inner { height: auto; padding: 10px 16px; gap: 10px; flex-wrap: wrap; }
+  .site-nav-logo { font-size: 16px; }
+  .site-nav-links { flex-wrap: wrap; gap: 2px; }
+  .site-nav-link { font-size: 12px; padding: 4px 8px; }
+  /* Reduce lang toggle conflict */
+  .lang-toggle { top: 12px; right: 12px; padding: 5px 12px; font-size: 11px; }
+  /* Cards */
   .card { padding: 20px 18px; }
   .pkmn-head { gap: 14px; }
   .pkmn-portrait { width: 84px; height: 84px; }
@@ -647,4 +655,11 @@ h1 .accent {
   .best-grid { grid-template-columns: 1fr; }
   .cat-items { grid-template-columns: 1fr; }
   .gww-grid { grid-template-columns: repeat(3, 1fr); }
+  .pkmn-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+  .wrap { padding-bottom: 60px; }
+  h1 { font-size: 1.8rem; }
+  .lede { font-size: 14px; }
+  /* Pokémon prev/next nav */
+  .pkmn-nav { gap: 8px; }
+  .pkmn-nav-btn { font-size: 11px; padding: 6px 10px; }
 }

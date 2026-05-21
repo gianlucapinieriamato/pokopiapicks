@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ITEMS, CATEGORIES, POKEMON, pkmnIconUrl } from "@/app/lib/data";
+import { ITEMS, CATEGORIES, POKEMON, pkmnIconUrl, catDisplayName } from "@/app/lib/data";
 
 export function generateStaticParams() {
   return Object.values(ITEMS).map((item) => ({ slug: item.slug }));
@@ -18,7 +18,6 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
   const item = Object.values(ITEMS).find((i) => i.slug === slug);
   if (!item) return <div className="detail-wrap"><p>Item not found.</p></div>;
 
-  const catName = (catSlug: string) => CATEGORIES[catSlug]?.name ?? catSlug;
 
   const pokemonWhoLike = Object.values(POKEMON)
     .filter((p) => {
@@ -53,7 +52,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
         <div className="section-title">Favorite categories</div>
         <div className="pkmn-cats" style={{ marginTop: 10, marginBottom: 16 }}>
           {item.categories.map((c) => (
-            <Link key={c} href={`/category/${c}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>{catName(c)}</Link>
+            <Link key={c} href={`/category/${c}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>{catDisplayName(c)}</Link>
           ))}
         </div>
 

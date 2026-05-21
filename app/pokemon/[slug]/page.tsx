@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { POKEMON, POKEMON_LIST, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS, pkmnIconUrl } from "@/app/lib/data";
+import { POKEMON, POKEMON_LIST, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS, pkmnIconUrl, getCatItems, catDisplayName, catSlug as toCatSlug } from "@/app/lib/data";
+import CollapsibleSection from "@/app/components/CollapsibleSection";
+import GoesWellWith from "@/app/components/GoesWellWith";
 import ArrowKeyNav from "@/app/components/ArrowKeyNav";
 
 export function generateStaticParams() {
@@ -17,20 +19,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-function catName(slug: string): string {
-  // categories in pokemon.json are display names; try direct lookup first, then slug-based
-  if (CATEGORIES[slug]) return CATEGORIES[slug].name;
-  // Convert display name to slug and try
-  const asSlug = slug.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  return CATEGORIES[asSlug]?.name ?? slug;
-}
-
-function getCatItems(catRef: string): string[] {
-  // catRef may be a display name ("Complicated stuff") or slug ("complicated-stuff")
-  if (CATEGORIES[catRef]) return CATEGORIES[catRef].items;
-  const asSlug = catRef.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  return CATEGORIES[asSlug]?.items ?? [];
-}
 
 export default async function PokemonPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -90,7 +78,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             )}
           </div>
           <div className="pkmn-info">
-            <div className="pkmn-num">N.º {String(p.num).padStart(3, "0")} · #{p.nationalDexNum ?? "?"} National</div>
+            <div className="pkmn-num">#{p.nationalDexNum ?? String(p.num).padStart(3, "0")}</div>
             <div className="pkmn-name">{p.name}</div>
             <div className="pkmn-meta">
               Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
@@ -107,8 +95,8 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             )}
             <div className="pkmn-cats">
               {p.categories.map((c) => (
-                <Link key={c} href={`/category/${catSlug(c)}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>
-                  {catName(c)}
+                <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>
+                  {catDisplayName(c)}
                 </Link>
               ))}
             </div>
@@ -138,7 +126,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                       </div>
                       <div className="best-item-body">
                         <div className="best-item-name">{item}</div>
-                        <div className="best-item-cats">{cats.map((c) => catName(c)).join(" · ")}</div>
+                        <div className="best-item-cats">{cats.map((c) => catDisplayName(c)).join(" · ")}</div>
                       </div>
                     </div>
                   </Link>
@@ -149,15 +137,11 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         )}
 
         <div className="section-title">All, by category</div>
-        <p className="section-sub">Items marked with ★ appear in more than one of this Pokémon&apos;s liked categories.</p>
+        <p className="section-sub">Items marked with ★ appear in more than one of this Pokémon&apos;s liked categories. Click a category name to collapse it.</p>
         {p.categories.map((catRef) => {
           const items = getCatItems(catRef);
           return (
-            <div key={catRef} className="cat-block">
-              <div className="cat-head">
-                <Link href={`/category/${catSlug(catRef)}`} className="cat-name" style={{ textDecoration: "none", color: "inherit" }}>{catName(catRef)}</Link>
-                <span className="cat-count">{items.length} items</span>
-              </div>
+            <CollapsibleSection key={catRef} title={catDisplayName(catRef)} count={`${items.length} items`} defaultOpen={true}>
               <div className="cat-items">
                 {items.map((item) => {
                   const cats = itemToCats[item] ?? [];
@@ -172,14 +156,14 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                         </div>
                         <div className="cat-item-body">
                           <div className="cat-item-name">{item}</div>
-                          {isShared && <div className="cat-item-cats">+ {otherCats.map((c) => catName(c)).join(", ")}</div>}
+                          {isShared && <div className="cat-item-cats">+ {otherCats.map((c) => catDisplayName(c)).join(", ")}</div>}
                         </div>
                       </div>
                     </Link>
                   );
                 })}
               </div>
-            </div>
+            </CollapsibleSection>
           );
         })}
 
@@ -211,6 +195,8 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           </>
         )}
       </div>
+
+      <GoesWellWith slug={slug} habitat={p.habitat} />
     </div>
   );
 }

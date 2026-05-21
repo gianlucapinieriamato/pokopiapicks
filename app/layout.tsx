@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Nav from "@/app/components/Nav";
+import LangToggle from "@/app/components/LangToggle";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col" style={{ paddingTop: 0, background: 'none' }}>
+        <LangToggle />
         <Nav />
         <main className="flex-1">
           {children}

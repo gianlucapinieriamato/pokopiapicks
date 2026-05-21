@@ -21,8 +21,35 @@ export const POKEMON_LIST: PokemonEntry[] = Object.entries(POKEMON)
   .map(([slug, p]) => ({ ...p, slug }))
   .sort((a, b) => a.num - b.num);
 
-export function catName(slug: string): string {
-  return CATEGORIES[slug]?.name ?? slug;
+// pokemon.json stores categories as display names ("Complicated stuff"),
+// but favorite-categories.json uses slugs as keys ("complicated-stuff").
+// This map lets us look up by display name.
+export const CAT_BY_NAME: Record<string, CategoryEntry & { slug: string }> = {};
+for (const [slug, cat] of Object.entries(CATEGORIES)) {
+  CAT_BY_NAME[cat.name] = { ...cat, slug };
+}
+
+/** Resolve a category reference (display name OR slug) → items list */
+export function getCatItems(catRef: string): string[] {
+  // Direct slug lookup
+  if (CATEGORIES[catRef]) return CATEGORIES[catRef].items;
+  // Display name lookup
+  if (CAT_BY_NAME[catRef]) return CAT_BY_NAME[catRef].items;
+  return [];
+}
+
+/** Resolve a category reference → display name */
+export function catDisplayName(catRef: string): string {
+  if (CATEGORIES[catRef]) return CATEGORIES[catRef].name;
+  if (CAT_BY_NAME[catRef]) return catRef; // already a display name
+  return catRef;
+}
+
+/** Resolve a category reference → slug (for URL linking) */
+export function catSlug(catRef: string): string {
+  if (CATEGORIES[catRef]) return catRef; // already a slug
+  if (CAT_BY_NAME[catRef]) return CAT_BY_NAME[catRef].slug;
+  return catRef.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
 export function pkmnIconUrl(p: PokemonEntry): string {

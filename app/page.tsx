@@ -41,9 +41,24 @@ const POKEMON_LIST: PokemonEntry[] = Object.entries(POKEMON)
   .map(([slug, p]) => ({ ...p, slug }))
   .sort((a, b) => a.num - b.num);
 
+// Index by BOTH slug and display name — pokemon.json uses display names as category refs
 const CAT_ITEMS: Record<string, string[]> = {};
 for (const [slug, cat] of Object.entries(CATEGORIES)) {
   CAT_ITEMS[slug] = cat.items;
+  CAT_ITEMS[cat.name] = cat.items; // display name alias
+}
+
+// Map category ref (slug or display name) → display name
+function catDisplayName(catRef: string): string {
+  if (CATEGORIES[catRef]) return CATEGORIES[catRef].name;
+  return catRef; // already a display name
+}
+
+// Map category ref → slug for URLs
+function catSlug(catRef: string): string {
+  if (CATEGORIES[catRef]) return catRef;
+  const slug = catRef.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return slug;
 }
 
 // ── i18n ──────────────────────────────────────────────────────────────────────
@@ -155,6 +170,26 @@ function GoesWellWith({ slug, p, onSelect, s }: {
   );
 }
 
+function CollapsibleCat({ name, count, children }: { name: string; count: string; children: React.ReactNode }) {
+  const [open, setOpen] = useState(true);
+  return (
+    <div className="cat-block">
+      <button
+        className="cat-head"
+        onClick={() => setOpen(!open)}
+        style={{ width: "100%", textAlign: "left", cursor: "pointer", background: "none", border: "none", padding: 0 }}
+      >
+        <span className="cat-name">{name}</span>
+        <span className="cat-count">{count}</span>
+        <span style={{ marginLeft: 8, fontFamily: "'DM Mono', monospace", fontSize: 11, color: "var(--ink-fade)" }}>
+          {open ? "▲" : "▼"}
+        </span>
+      </button>
+      {open && children}
+    </div>
+  );
+}
+
 // ── Main page ─────────────────────────────────────────────────────────────────
 
 export default function Home() {
@@ -217,17 +252,15 @@ export default function Home() {
     else if (e.key === "Escape") setShowSuggestions(false);
   };
 
-  const catName = (slug: string) => CATEGORIES[slug]?.name ?? slug;
-
   const renderPokemon = (slug: string) => {
     const p = POKEMON[slug];
     if (!p) return null;
 
     const itemToCats: Record<string, string[]> = {};
-    for (const catSlug of p.categories) {
-      for (const item of CAT_ITEMS[catSlug] ?? []) {
+    for (const catRef of p.categories) {
+      for (const item of CAT_ITEMS[catRef] ?? []) {
         if (!itemToCats[item]) itemToCats[item] = [];
-        itemToCats[item].push(catSlug);
+        itemToCats[item].push(catRef);
       }
     }
 
@@ -243,11 +276,11 @@ export default function Home() {
             <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} className="w-20 h-20 object-contain" />
           </div>
           <div className="pkmn-info">
-            <div className="pkmn-num">N.º {String(p.num).padStart(3, "0")}</div>
+            <div className="pkmn-num">#{p.nationalDexNum ?? String(p.num).padStart(3, "0")}</div>
             <div className="pkmn-name">{p.name}</div>
             <div className="pkmn-meta">{s.habitat} <span className="habitat-tag">{p.habitat}</span></div>
             <div className="pkmn-cats">
-              {p.categories.map((c) => <span key={c} className="pkmn-cat-tag">{catName(c)}</span>)}
+              {p.categories.map((c) => <span key={c} className="pkmn-cat-tag">{catDisplayName(c)}</span>)}
             </div>
           </div>
         </div>
@@ -272,7 +305,7 @@ export default function Home() {
                     <div className="best-item-icon"><PkmnIcon src={iconPath} alt={item} /></div>
                     <div className="best-item-body">
                       <div className="best-item-name">{item}</div>
-                      <div className="best-item-cats">{cats.map((c) => catName(c)).join(" · ")}</div>
+                      <div className="best-item-cats">{cats.map((c) => catDisplayName(c)).join(" · ")}</div>
                     </div>
                   </div>
                 );
@@ -283,32 +316,28 @@ export default function Home() {
 
         <div className="section-title">{s.all_by_cat}</div>
         <p className="section-sub">{s.all_by_cat_sub}</p>
-        {p.categories.map((catSlug) => {
-          const items = CAT_ITEMS[catSlug] ?? [];
+        {p.categories.map((catRef) => {
+          const items = CAT_ITEMS[catRef] ?? [];
           return (
-            <div key={catSlug} className="cat-block">
-              <div className="cat-head">
-                <span className="cat-name">{catName(catSlug)}</span>
-                <span className="cat-count">{s.item(items.length)}</span>
-              </div>
+            <CollapsibleCat key={catRef} name={catDisplayName(catRef)} count={s.item(items.length)}>
               <div className="cat-items">
                 {items.map((item) => {
                   const cats = itemToCats[item] ?? [];
                   const isShared = cats.length >= 2;
-                  const otherCats = cats.filter((c) => c !== catSlug);
+                  const otherCats = cats.filter((c) => c !== catRef);
                   const iconPath = ITEMS[item]?.icon ?? null;
                   return (
                     <div key={item} className={`cat-item${isShared ? " shared" : ""}`}>
                       <div className="cat-item-icon"><PkmnIcon src={iconPath} alt={item} /></div>
                       <div className="cat-item-body">
                         <div className="cat-item-name">{item}</div>
-                        {isShared && <div className="cat-item-cats">{s.also_in(otherCats.map((c) => catName(c)).join(", "))}</div>}
+                        {isShared && <div className="cat-item-cats">{s.also_in(otherCats.map((c) => catDisplayName(c)).join(", "))}</div>}
                       </div>
                     </div>
                   );
                 })}
               </div>
-            </div>
+            </CollapsibleCat>
           );
         })}
 
@@ -319,8 +348,6 @@ export default function Home() {
 
   return (
     <>
-      <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">{s.lang_btn}</button>
-
       <div className="wrap">
         <header>
           <span className="eyebrow">{s.eyebrow}</span>
@@ -351,7 +378,7 @@ export default function Home() {
                     onMouseDown={(e) => { e.preventDefault(); selectPokemon(p.slug); }}
                   >
                     <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} className="suggestion-icon" />
-                    <span className="suggestion-num">#{String(p.num).padStart(3, "0")}</span>
+                    <span className="suggestion-num">#{p.nationalDexNum ?? String(p.num).padStart(3, "0")}</span>
                     <span className="suggestion-name">{p.name}</span>
                     <span className="suggestion-meta">{p.categories.length} cats</span>
                   </div>
@@ -371,12 +398,34 @@ export default function Home() {
 
         <div ref={outputRef} id="output">
           {selectedSlug ? renderPokemon(selectedSlug) : (
-            <div className="card">
-              <div className="placeholder">
-                {s.placeholder_msg}
-                <small className="block mt-1 text-sm text-[var(--ink-fade)]">{s.placeholder_sub}</small>
+            <>
+              <div className="card" style={{ textAlign: "center", padding: "20px 28px 16px" }}>
+                <div className="placeholder" style={{ padding: "16px 0 8px" }}>
+                  {s.placeholder_msg}
+                  <small className="block mt-1 text-sm text-[var(--ink-fade)]">{s.placeholder_sub}</small>
+                </div>
               </div>
-            </div>
+              {/* Show all Pokémon grid before anything is selected */}
+              <div className="card">
+                <div className="section-title" style={{ marginBottom: 12 }}>All Pokémon</div>
+                <div className="pkmn-grid">
+                  {POKEMON_LIST.map((p) => (
+                    <button
+                      key={p.slug}
+                      className="pkmn-grid-card"
+                      style={{ background: "none", border: "1.5px solid var(--paper-edge)", cursor: "pointer" }}
+                      onClick={() => selectPokemon(p.slug)}
+                    >
+                      <div className="pkmn-grid-icon">
+                        <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} />
+                      </div>
+                      <div className="pkmn-grid-num">#{p.nationalDexNum ?? String(p.num).padStart(3, "0")}</div>
+                      <div className="pkmn-grid-name">{p.name}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </>
           )}
         </div>
       </div>

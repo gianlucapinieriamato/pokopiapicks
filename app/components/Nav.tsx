@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/pokedex", label: "Pokédex" },
-  { href: "/lookup", label: "Lookup" },
+  { href: "/lookup", label: "Filter Search" },
   { href: "/matchmaker", label: "Matchmaker" },
 ];
 

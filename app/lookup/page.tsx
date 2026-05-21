@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useMemo } from "react";
-import { POKEMON_LIST, CATEGORIES, SPECIALTIES, LOCATIONS, pkmnIconUrl, catName } from "@/app/lib/data";
+import { POKEMON_LIST, CATEGORIES, SPECIALTIES, LOCATIONS, pkmnIconUrl } from "@/app/lib/data";
 
 const HABITATS = ["Dry", "Bright", "Warm", "Cool", "Dark", "Humid"];
 const FLAVORS = ["Dry", "Sour", "Spicy", "Sweet", "Bitter"];
@@ -38,11 +38,11 @@ export default function LookupPage() {
   return (
     <div className="detail-wrap">
       <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>Advanced Lookup</span>
+        <Link href="/">Home</Link><span>›</span><span>Filter Search</span>
       </div>
       <div className="detail-header">
-        <div className="detail-title">Advanced Lookup</div>
-        <div className="detail-meta">Combine filters — all selected conditions must match</div>
+        <div className="detail-title">Filter Search</div>
+        <div className="detail-meta">Find Pokémon matching ALL selected criteria simultaneously — different from the Pokédex which just browses and searches by name.</div>
       </div>
 
       <div className="card">
