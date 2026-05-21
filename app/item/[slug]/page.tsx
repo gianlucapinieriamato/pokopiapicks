@@ -27,7 +27,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
         return p.categories.includes(catDisplayName) || p.categories.includes(catSlug);
       });
     })
-    .sort((a, b) => a.num - b.num);
+    .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   return (
     <div className="detail-wrap">

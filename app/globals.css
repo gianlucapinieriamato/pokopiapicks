@@ -33,7 +33,7 @@ body {
   min-height: 100vh;
   font-family: 'Outfit', system-ui, sans-serif;
   color: var(--ink);
-  padding: 32px 20px 80px;
+  padding: 0;
   position: relative;
 }
 
@@ -53,6 +53,7 @@ body::before {
 .wrap {
   max-width: 1080px;
   margin: 0 auto;
+  padding: 32px 20px 80px;
   position: relative;
   z-index: 1;
 }
@@ -490,6 +491,66 @@ h1 .accent {
   margin-top: 16px;
 }
 .header-lang-btn:hover { background: var(--accent); color: var(--paper); }
+
+/* ── Info tooltip (CSS-only hover) ────────────────────────────────────────── */
+.info-tip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink-fade);
+  color: var(--ink-fade);
+  font-size: 10px;
+  font-family: 'JetBrains Mono', 'DM Mono', monospace;
+  font-weight: 700;
+  cursor: help;
+  position: relative;
+  vertical-align: middle;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: border-color 0.1s, color 0.1s;
+}
+.info-tip:hover { border-color: var(--accent-deep); color: var(--accent-deep); }
+.info-tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  max-width: 260px;
+  white-space: normal;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  z-index: 20;
+}
+.info-tip::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  z-index: 20;
+}
+.info-tip:hover::after, .info-tip:hover::before { opacity: 1; }
 
 /* ── Goes well with ────────────────────────────────────────────────────────── */
 .gww-section {

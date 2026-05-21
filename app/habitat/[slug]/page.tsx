@@ -21,7 +21,7 @@ export default async function HabitatPage({ params }: { params: Promise<{ slug: 
   const pokemonHere = h.pokemon
     .map((s) => POKEMON[s])
     .filter(Boolean)
-    .sort((a, b) => a!.num - b!.num) as NonNullable<typeof POKEMON[string]>[];
+    .sort((a, b) => (a!.nationalDexNum ?? 99999) - (b!.nationalDexNum ?? 99999)) as NonNullable<typeof POKEMON[string]>[];
 
   return (
     <div className="detail-wrap">

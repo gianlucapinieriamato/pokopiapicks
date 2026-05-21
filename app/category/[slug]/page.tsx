@@ -21,7 +21,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   // Pokémon who like this category — categories in pokemon.json are display names
   const pokemonWhoLike = Object.values(POKEMON)
     .filter((p) => p.categories.includes(cat.name) || p.categories.includes(slug))
-    .sort((a, b) => a.num - b.num);
+    .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   return (
     <div className="detail-wrap">

@@ -20,12 +20,10 @@ export default function GoesWellWith({ slug, habitat }: { slug: string; habitat:
 
   return (
     <div className="gww-section">
-      <div className="section-title">
+      <div className="section-title" style={{ gap: 8 }}>
         Goes well with <span className="pill">{habitat}</span>
+        <span className="info-tip" data-tip="Pokémon with the same habitat can share a living space in Pokopia." aria-label="Pokémon with the same habitat can share a living space in Pokopia." style={{ fontSize: 11 }}>i</span>
       </div>
-      <p className="section-sub" style={{ marginTop: 4, marginBottom: 8 }}>
-        Pokémon from the same habitat can share a living space in Pokopia.
-      </p>
       <div className="gww-grid">
         {picks.map((q) => (
           <Link key={q.slug} href={`/pokemon/${q.slug}`} className="gww-card" style={{ textDecoration: "none" }}>

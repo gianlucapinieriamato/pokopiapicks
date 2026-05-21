@@ -20,7 +20,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   const pokemonHere = Object.values(POKEMON)
     .filter((p) => p.habitatList?.some((h) => h.locations.includes(slug)))
-    .sort((a, b) => a.num - b.num);
+    .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   return (
     <div className="detail-wrap">

@@ -77,11 +77,9 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           <div className="pkmn-name">{p.name}</div>
           <div className="pkmn-meta">
             Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
+            {" "}<span className="info-tip" data-tip="Pokémon with the same habitat can share a living space in Pokopia." aria-label="Pokémon with the same habitat can share a living space in Pokopia.">i</span>
             {p.flavor && <> · Flavor: <span style={{ color: "var(--accent2)" }}>{p.flavor}</span></>}
           </div>
-          <p className="detail-meta" style={{ fontSize: 11, marginTop: 4 }}>
-            Same habitat = can share a room in Pokopia.
-          </p>
           {p.specialties && p.specialties.length > 0 && (
             <div className="pkmn-cats" style={{ marginTop: 8 }}>
               {p.specialties.map((s) => (
@@ -98,8 +96,9 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
               </Link>
             ))}
           </div>
-          <p className="detail-meta" style={{ marginTop: 8, fontSize: 11, fontStyle: "italic" }}>
-            Gift items in each category below will earn extra happiness with {p.name}.
+          <p className="detail-meta" style={{ marginTop: 8, fontSize: 11, display: "flex", alignItems: "center", gap: 6 }}>
+            Favorite categories
+            {" "}<span className="info-tip" data-tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} aria-label={`Gift items in these categories earn extra happiness with ${p.name}.`}>i</span>
           </p>
         </div>
       </div>
