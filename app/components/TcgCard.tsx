@@ -32,7 +32,7 @@ export default function TcgCard({
   const r = getRarity(p);
   const isLg = size === "lg";
   const isSm = size === "sm";
-  const w = isLg ? 340 : isSm ? 175 : 230;
+  const w = isLg ? 340 : isSm ? 150 : 230;
   const ratio = isSm ? 1.45 : 1.4;
   const holoOpacity = r.holoIntensity / 100;
   const [h1, h2] = HABITAT_BG[p.habitat] ?? ["#d8ccb8", "#a89070"];
@@ -41,6 +41,7 @@ export default function TcgCard({
   return (
     <div style={{
       width: w,
+      maxWidth: "100%",
       height: w * ratio,
       flexShrink: 0,
       borderRadius: 14,
@@ -170,24 +171,11 @@ export default function TcgCard({
           ))}
         </div>
 
-        {/* Footer label — sm/md only */}
-        {!isLg && (
-          <div style={{
-            marginTop: "auto", padding: isSm ? "4px 10px" : "5px 12px",
-            display: "flex", justifyContent: "space-between", alignItems: "center",
-            background: `linear-gradient(180deg, transparent, var(--chrome))`,
-            fontFamily: "'JetBrains Mono', 'DM Mono', monospace", fontSize: 8,
-            color: "var(--ink-soft)", letterSpacing: "0.1em", fontWeight: 600,
-          }}>
-            <span>POKOPIA · PICKS</span>
-            <span>{r.rarityLabel}</span>
-          </div>
-        )}
-
         {/* Overall holo sweep over full card face */}
-        <div style={{
+        <div className="tcg-holo-sweep" style={{
           position: "absolute", inset: 0, pointerEvents: "none",
-          background: HOLO, mixBlendMode: "soft-light", opacity: holoOpacity * 0.65,
+          background: HOLO, mixBlendMode: "soft-light",
+          opacity: r.sparkles ? holoOpacity * 0.65 : 0,
         }} />
       </div>
     </div>

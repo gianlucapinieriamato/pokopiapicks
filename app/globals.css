@@ -537,6 +537,7 @@ h1 .accent {
   transition: transform 0.15s;
 }
 .tcg-card-wrap:hover { transform: translateY(-4px) scale(1.02); }
+.tcg-card-wrap:hover .tcg-holo-sweep { opacity: 0.18; }
 
 /* ── Ad slot placeholders ──────────────────────────────────────────────────── */
 .ad-slot {
@@ -678,7 +679,7 @@ h1 .accent {
 /* ── Pokémon grid ──────────────────────────────────────────────────────────── */
 .pkmn-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 16px;
 }
 .pkmn-grid-card {
