@@ -39,6 +39,7 @@ export default function TcgCard({
       width: "100%",
       maxWidth: isLg ? 340 : isSm ? 220 : 260,
       aspectRatio: "1 / 1.42",
+      overflow: "hidden",
       borderRadius: isLg ? 16 : 12,
       background: `linear-gradient(135deg, var(--accent-soft) 0%, var(--accent) 30%, var(--accent-soft) 60%, var(--accent-deep) 100%)`,
       padding: isLg ? 7 : 4,
