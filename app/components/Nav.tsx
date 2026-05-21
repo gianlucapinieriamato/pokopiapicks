@@ -20,15 +20,21 @@ export default function Nav() {
           POKOPIA <span>PICKS</span>
         </Link>
         <div className="site-nav-links">
-          {LINKS.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`site-nav-link${pathname === href ? " active" : ""}`}
-            >
-              {label}
-            </Link>
-          ))}
+          {LINKS.map(({ href, label }) => {
+            const isActive =
+              href === "/"
+                ? pathname === "/"
+                : pathname === href || (href === "/pokedex" && pathname.startsWith("/pokemon"));
+            return (
+              <Link
+                key={href}
+                href={href}
+                className={`site-nav-link${isActive ? " active" : ""}`}
+              >
+                {label}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>
