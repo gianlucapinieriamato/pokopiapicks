@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Pokopia Picks",
   },
   description: "Gift finder and wiki for Pokémon Pokopia — see what items each Pokémon likes, explore habitats, locations, and specialties.",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({

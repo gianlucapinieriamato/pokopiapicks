@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/pokedex", label: "Pokédex" },
+  { href: "/items", label: "Items" },
+  { href: "/categories", label: "Categories" },
   { href: "/lookup", label: "Filter" },
   { href: "/matchmaker", label: "Matchmaker" },
 ];
@@ -24,7 +26,10 @@ export default function Nav() {
             const isActive =
               href === "/"
                 ? pathname === "/"
-                : pathname === href || (href === "/pokedex" && pathname.startsWith("/pokemon"));
+                : pathname === href ||
+                  (href === "/pokedex" && pathname.startsWith("/pokemon")) ||
+                  (href === "/items" && pathname.startsWith("/item/")) ||
+                  (href === "/categories" && pathname.startsWith("/category/"));
             return (
               <Link
                 key={href}

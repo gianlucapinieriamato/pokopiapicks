@@ -32,6 +32,16 @@ Thumbs.db
 # Claude Code internals — local session state, not project artifacts
 .claude/
 .handoffs/
+.agents/
+.impeccable/
+.playwright-mcp/
+skills-lock.json
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
+# Screenshots / local captures
+home-mobile-full.png
 
 # Editors
 .vscode/
