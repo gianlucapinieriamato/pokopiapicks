@@ -78,6 +78,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             <div className="pkmn-name">{p.name}</div>
             <div className="pkmn-meta">
               Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
+              <span style={{ color: "var(--ink-fade)", fontSize: 11 }}> · same habitat = can share a room</span>
               {p.flavor && <> · Flavor: <span style={{ color: "var(--accent2)" }}>{p.flavor}</span></>}
             </div>
             {p.specialties && p.specialties.length > 0 && (
@@ -96,6 +97,9 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                 </Link>
               ))}
             </div>
+            <p className="detail-meta" style={{ marginTop: 8, fontSize: 11, fontStyle: "italic" }}>
+              Gift items in each category below will earn extra happiness with {p.name}.
+            </p>
           </div>
         </div>
 
