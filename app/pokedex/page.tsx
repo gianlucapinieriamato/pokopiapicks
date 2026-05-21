@@ -123,7 +123,7 @@ export default function PokedexPage() {
         {paginated.length === 0 ? (
           <p className="detail-meta">No Pokémon match your filters.</p>
         ) : (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 16 }}>
+          <div className="pkmn-tcg-grid">
             {paginated.map((p) => (
               <Link key={p.slug} href={`/pokemon/${p.slug}`} className="tcg-card-wrap" aria-label={p.name}>
                 <TcgCard p={p} size="sm" />

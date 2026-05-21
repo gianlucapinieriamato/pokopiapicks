@@ -585,14 +585,26 @@ h1 .accent {
 .gww-num { font-family: 'JetBrains Mono', 'DM Mono', monospace; font-size: 10px; color: var(--ink-fade); font-weight: 500; }
 .gww-name { font-weight: 700; font-size: 12px; line-height: 1.2; }
 
-/* ── TCG Card (Pokémon grid in card format) ────────────────────────────────── */
+/* ── TCG Card grid + wrapper ───────────────────────────────────────────────── */
+.pkmn-tcg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .pkmn-tcg-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
+
 .tcg-card-wrap {
   cursor: pointer;
   border: none;
   background: none;
   padding: 0;
   text-align: left;
-  display: block;
+  display: flex;
   text-decoration: none;
   color: inherit;
   transition: transform 0.15s;
@@ -740,8 +752,8 @@ h1 .accent {
 /* ── Pokémon grid ──────────────────────────────────────────────────────────── */
 .pkmn-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
 }
 .pkmn-grid-card {
   background: var(--chrome);
@@ -810,7 +822,7 @@ h1 .accent {
   .site-nav-links { flex-wrap: wrap; gap: 2px; }
   .site-nav-link { font-size: 11px; padding: 4px 8px; }
   .lang-toggle { top: 12px; right: 12px; padding: 5px 12px; font-size: 10px; }
-  .card { padding: 20px 18px; }
+  .card { padding: 20px 12px; }
   .pkmn-head { flex-direction: column; align-items: center; text-align: center; gap: 14px; }
   .pkmn-portrait { width: 84px; height: 84px; }
   .pkmn-name { font-size: 26px; }

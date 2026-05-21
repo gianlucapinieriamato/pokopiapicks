@@ -33,9 +33,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="site-footer">
-          Data from <a href="https://www.serebii.net/pokemonpokopia/" target="_blank" rel="noopener">Serebii</a> ·
-          HQ sprites from <a href="https://github.com/PokeAPI/sprites" target="_blank" rel="noopener">PokéAPI</a> (BSD-3-Clause) ·
-          Not affiliated with Nintendo or Game Freak
+          Pokopia Picks
         </footer>
       </body>
     </html>

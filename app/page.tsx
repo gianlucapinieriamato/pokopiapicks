@@ -151,7 +151,7 @@ export default function Home() {
 
       <div className="card">
         <div className="section-title" style={{ marginBottom: 20 }}>{s.all_pokemon}</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 16 }}>
+        <div className="pkmn-tcg-grid">
           {POKEMON_LIST.map((p) => (
             <Link key={p.slug} href={`/pokemon/${p.slug}`} className="tcg-card-wrap" aria-label={p.name}>
               <TcgCard p={p} size="sm" />

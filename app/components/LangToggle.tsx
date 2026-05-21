@@ -1,19 +1,23 @@
 "use client";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function LangToggle() {
   const [lang, setLang] = useState<"en" | "es">("en");
+  const pathname = usePathname();
 
   useEffect(() => {
     const stored = localStorage.getItem("pokopia-lang");
     if (stored === "en" || stored === "es") setLang(stored);
   }, []);
 
+  // Only the home page has i18n support — hide on other routes
+  if (pathname !== "/") return null;
+
   const toggle = () => {
     const next = lang === "en" ? "es" : "en";
     setLang(next);
     localStorage.setItem("pokopia-lang", next);
-    // Reload so all i18n strings update — simplest cross-page approach
     window.location.reload();
   };
 
