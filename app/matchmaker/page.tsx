@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useMemo, useCallback } from "react";
-import { POKEMON, POKEMON_LIST, CATEGORIES, SPECIALTIES, pkmnIconUrl, getCatItems, catDisplayName } from "@/app/lib/data";
+import { POKEMON, POKEMON_LIST, CATEGORIES, SPECIALTIES, pkmnIconUrl, dexNum, getCatItems, catDisplayName } from "@/app/lib/data";
 
 // ── Scoring logic ─────────────────────────────────────────────────────────────
 
@@ -145,7 +145,7 @@ export default function MatchmakerPage() {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pkmnIconUrl(p)} alt={p.name} className="suggestion-icon" />
-                  <span className="suggestion-num">#{p.nationalDexNum ?? p.num}</span>
+                  <span className="suggestion-num">#{dexNum(p)}</span>
                   <span className="suggestion-name">{p.name}</span>
                   <span className="suggestion-meta">{p.habitat}</span>
                 </div>
@@ -161,7 +161,7 @@ export default function MatchmakerPage() {
               <img src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
             </div>
             <div className="pkmn-info">
-              <div className="pkmn-num">Anchor · #{anchor.nationalDexNum ?? anchor.num}</div>
+              <div className="pkmn-num">Anchor · #{dexNum(anchor)}</div>
               <div className="pkmn-name">{anchor.name}</div>
               <div className="pkmn-meta">Habitat: <span className="habitat-tag">{anchor.habitat}</span></div>
               <div className="pkmn-cats" style={{ marginTop: 8 }}>
@@ -263,7 +263,7 @@ export default function MatchmakerPage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
                 </div>
-                <div className="pkmn-grid-num">#{p.nationalDexNum ?? p.num}</div>
+                <div className="pkmn-grid-num">#{dexNum(p)}</div>
                 <div className="pkmn-grid-name">{p.name}</div>
               </Link>
             ))}

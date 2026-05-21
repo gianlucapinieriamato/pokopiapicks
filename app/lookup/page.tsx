@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useMemo } from "react";
-import { POKEMON_LIST, CATEGORIES, SPECIALTIES, LOCATIONS, pkmnIconUrl } from "@/app/lib/data";
+import { POKEMON_LIST, CATEGORIES, SPECIALTIES, LOCATIONS, pkmnIconUrl, dexNum } from "@/app/lib/data";
 
 const HABITATS = ["Dry", "Bright", "Warm", "Cool", "Dark", "Humid"];
 const FLAVORS = ["Dry", "Sour", "Spicy", "Sweet", "Bitter"];
@@ -135,7 +135,7 @@ export default function LookupPage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
                 </div>
-                <div className="pkmn-grid-num">#{p.nationalDexNum ?? p.num}</div>
+                <div className="pkmn-grid-num">#{dexNum(p)}</div>
                 <div className="pkmn-grid-name">{p.name}</div>
                 <div style={{ fontSize: 10, fontFamily: "'DM Mono', monospace", color: "var(--ink-fade)" }}>{p.habitat}</div>
               </Link>

@@ -17,9 +17,19 @@ export const SPECIALTIES = specialtiesRaw as Record<string, SpecialtyEntry>;
 export const HABITATS = habitatsRaw as Record<string, HabitatEntry>;
 export const LOCATIONS = locationsRaw as Record<string, LocationEntry>;
 
+// Sort by national dex number; game-exclusive Pokémon (null nationalDexNum) go last
 export const POKEMON_LIST: PokemonEntry[] = Object.entries(POKEMON)
   .map(([slug, p]) => ({ ...p, slug }))
-  .sort((a, b) => a.num - b.num);
+  .sort((a, b) => {
+    const na = a.nationalDexNum ?? 99999;
+    const nb = b.nationalDexNum ?? 99999;
+    return na !== nb ? na - nb : a.num - b.num; // tiebreak by Pokopia num for alternate forms
+  });
+
+/** Zero-padded national dex number for display, e.g. "001" */
+export function dexNum(p: PokemonEntry): string {
+  return String(p.nationalDexNum ?? p.num).padStart(3, "0");
+}
 
 // pokemon.json stores categories as display names ("Complicated stuff"),
 // but favorite-categories.json uses slugs as keys ("complicated-stuff").

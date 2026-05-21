@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { POKEMON, POKEMON_LIST, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS, pkmnIconUrl, getCatItems, catDisplayName, catSlug as toCatSlug } from "@/app/lib/data";
+import { POKEMON, POKEMON_LIST, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS, pkmnIconUrl, dexNum, getCatItems, catDisplayName, catSlug as toCatSlug } from "@/app/lib/data";
 import CollapsibleSection from "@/app/components/CollapsibleSection";
 import GoesWellWith from "@/app/components/GoesWellWith";
 import ArrowKeyNav from "@/app/components/ArrowKeyNav";
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const p = POKEMON[slug];
   if (!p) return { title: "Not found" };
   return {
-    title: `${p.name} (#${p.nationalDexNum ?? p.num})`,
+    title: `${p.name} (#${dexNum(p)})`,
     description: `${p.name} — ${p.habitat} habitat, ${p.categories.length} favorite categories.`,
   };
 }
@@ -59,10 +59,10 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
 
       <div className="pkmn-nav">
         {prev ? (
-          <Link href={`/pokemon/${prev.slug}`} className="pkmn-nav-btn">◀ #{prev.nationalDexNum ?? prev.num} {prev.name}</Link>
+          <Link href={`/pokemon/${prev.slug}`} className="pkmn-nav-btn">◀ #{dexNum(prev)} {prev.name}</Link>
         ) : <span />}
         {next ? (
-          <Link href={`/pokemon/${next.slug}`} className="pkmn-nav-btn">{next.name} #{next.nationalDexNum ?? next.num} ▶</Link>
+          <Link href={`/pokemon/${next.slug}`} className="pkmn-nav-btn">{next.name} #{dexNum(next)} ▶</Link>
         ) : <span />}
       </div>
 

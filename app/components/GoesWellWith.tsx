@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useMemo } from "react";
-import { POKEMON_LIST, pkmnIconUrl } from "@/app/lib/data";
+import { POKEMON_LIST, pkmnIconUrl, dexNum } from "@/app/lib/data";
 import type { PokemonEntry } from "@/app/lib/types";
 
 export default function GoesWellWith({ slug, habitat }: { slug: string; habitat: string }) {
@@ -30,7 +30,7 @@ export default function GoesWellWith({ slug, habitat }: { slug: string; habitat:
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={pkmnIconUrl(q)} alt={q.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
             </div>
-            <div className="gww-num">#{q.nationalDexNum ?? String(q.num).padStart(3, "0")}</div>
+            <div className="gww-num">#{dexNum(q)}</div>
             <div className="gww-name">{q.name}</div>
           </Link>
         ))}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { LOCATIONS, POKEMON, pkmnIconUrl } from "@/app/lib/data";
+import { LOCATIONS, POKEMON, pkmnIconUrl, dexNum } from "@/app/lib/data";
 
 export function generateStaticParams() {
   return Object.keys(LOCATIONS).map((slug) => ({ slug }));
@@ -66,7 +66,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
                 </div>
-                <div className="pkmn-grid-num">#{p.nationalDexNum ?? p.num}</div>
+                <div className="pkmn-grid-num">#{dexNum(p)}</div>
                 <div className="pkmn-grid-name">{p.name}</div>
               </Link>
             ))}

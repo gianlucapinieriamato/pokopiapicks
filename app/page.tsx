@@ -49,6 +49,10 @@ for (const [slug, cat] of Object.entries(CATEGORIES)) {
 }
 
 // Map category ref (slug or display name) → display name
+function dexNum(p: PokemonEntry): string {
+  return String(p.nationalDexNum ?? p.num).padStart(3, "0");
+}
+
 function catDisplayName(catRef: string): string {
   if (CATEGORIES[catRef]) return CATEGORIES[catRef].name;
   return catRef; // already a display name
@@ -161,7 +165,7 @@ function GoesWellWith({ slug, p, onSelect, s }: {
         {picks.map((q) => (
           <button key={q.slug} className="gww-card" onClick={() => onSelect(q.slug)}>
             <div className="gww-icon"><PkmnIcon src={pkmnIconUrl(q)} alt={q.name} /></div>
-            <div className="gww-num">#{q.nationalDexNum ?? q.num}</div>
+            <div className="gww-num">#{dexNum(q)}</div>
             <div className="gww-name">{q.name}</div>
           </button>
         ))}
