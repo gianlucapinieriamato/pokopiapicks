@@ -10,7 +10,8 @@ const LINKS = [
 ];
 
 export default function Nav() {
-  const pathname = usePathname();
+  const raw = usePathname();
+  const pathname = raw.length > 1 ? raw.replace(/\/$/, "") : raw;
   return (
     <nav className="site-nav">
       <div className="site-nav-inner">
