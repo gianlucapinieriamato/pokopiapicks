@@ -582,7 +582,9 @@ h1 .accent {
 
 /* ── Goes well with ────────────────────────────────────────────────────────── */
 .gww-section {
-  margin-bottom: 20px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1.5px solid var(--paper-edge);
 }
 .gww-grid {
   display: grid;

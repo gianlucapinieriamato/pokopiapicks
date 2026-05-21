@@ -1,4 +1,4 @@
-import { pkmnIconUrl, dexNum, getRarity, SPECIALTIES } from "@/app/lib/data";
+import { pkmnIconUrl, dexNum, getRarity } from "@/app/lib/data";
 import type { PokemonEntry } from "@/app/lib/types";
 
 const HABITAT_BG: Record<string, [string, string]> = {
@@ -176,7 +176,7 @@ export default function TcgCard({
             />
           </div>
 
-          {/* ── Category + specialty chips ──────────────────────── */}
+          {/* ── Category chips ──────────────────────────────────── */}
           <div style={{
             padding: isLg ? "6px 10px 4px" : "4px 6px 3px",
             flexShrink: 0,
@@ -193,7 +193,7 @@ export default function TcgCard({
               }}>Likes</div>
             )}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-              {p.categories.map((c) => (
+              {p.categories.slice(0, isSm ? 2 : isLg ? undefined : 3).map((c) => (
                 <span key={c} className="pkmn-cat-tag" style={{
                   fontSize: isSm ? 8 : 9,
                   padding: isSm ? "2px 6px" : "2px 8px",
@@ -201,20 +201,6 @@ export default function TcgCard({
                 }}>{c}</span>
               ))}
             </div>
-            {p.specialties && p.specialties.length > 0 && (
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 3, marginTop: 4 }}>
-                {p.specialties.map((s) => (
-                  <span key={s} className="pkmn-cat-tag" style={{
-                    fontSize: isSm ? 8 : 9,
-                    padding: isSm ? "2px 6px" : "2px 8px",
-                    lineHeight: 1.4,
-                    color: "var(--accent-deep)",
-                    borderColor: "var(--accent)",
-                    background: "var(--accent-soft)",
-                  }}>{SPECIALTIES[s]?.name ?? s}</span>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* ── Footer bar ─────────────────────────────────────── */}
