@@ -26,6 +26,10 @@ out/
 .DS_Store
 Thumbs.db
 
+# Claude Code internals — local session state, not project artifacts
+.claude/
+.handoffs/
+
 # Editors
 .vscode/
 .idea/
