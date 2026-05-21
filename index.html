@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokopia · Qué le gusta a cada Pokémon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=DM+Mono:wght@400;500&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-1: #fef5e6;
+    --bg-2: #fbe4cf;
+    --ink: #2d2418;
+    --ink-soft: #6b5a45;
+    --ink-fade: #a89678;
+    --paper: #fffaf0;
+    --paper-edge: #e8d5b3;
+    --accent: #d63f3f;
+    --accent-soft: #f4a07a;
+    --leaf: #6b8e4e;
+    --leaf-soft: #c5d4a8;
+    --sun: #f4c542;
+    --sun-soft: #fde6a3;
+    --shadow: rgba(45, 36, 24, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    min-height: 100vh;
+    font-family: 'Nunito', system-ui, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 12% 18%, rgba(244, 197, 66, 0.15), transparent 40%),
+      radial-gradient(circle at 88% 78%, rgba(107, 142, 78, 0.12), transparent 45%),
+      linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    background-attachment: fixed;
+    padding: 32px 20px 80px;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(45, 36, 24, 0.06) 1px, transparent 0);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 24px 20px 8px;
+  }
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--paper);
+    border-radius: 100px;
+    box-shadow: 0 2px 0 var(--paper-edge);
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 14px 0 10px;
+  }
+  h1 .accent {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .lede {
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .card {
+    background: var(--paper);
+    border-radius: 22px;
+    padding: 24px 28px;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.9) inset,
+      0 2px 0 var(--paper-edge),
+      0 14px 32px -10px var(--shadow);
+    margin-bottom: 20px;
+  }
+
+  /* SEARCH BAR */
+  .search-wrap { position: relative; }
+  .search-input {
+    width: 100%;
+    padding: 16px 20px 16px 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--bg-1);
+    border: 2px solid var(--paper-edge);
+    border-radius: 14px;
+    outline: none;
+    transition: all 0.15s;
+  }
+  .search-input:focus { border-color: var(--accent); background: #fff; }
+  .search-input::placeholder { color: var(--ink-fade); font-weight: 500; }
+  .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    pointer-events: none;
+  }
+
+  .suggestions {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    border: 1.5px solid var(--paper-edge);
+    border-radius: 14px;
+    max-height: 360px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 12px 28px -8px var(--shadow);
+    display: none;
+  }
+  .suggestions.open { display: block; }
+  .suggestion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--bg-1);
+    transition: background 0.1s;
+  }
+  .suggestion:last-child { border-bottom: none; }
+  .suggestion:hover, .suggestion.active { background: var(--bg-1); }
+  .suggestion-icon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    flex-shrink: 0;
+    image-rendering: pixelated;
+  }
+  .suggestion-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-fade);
+    min-width: 32px;
+  }
+  .suggestion-name {
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .suggestion-meta {
+    margin-left: auto;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-soft);
+    background: var(--bg-2);
+    padding: 3px 8px;
+    border-radius: 100px;
+  }
+
+  /* POKEMON HEADER */
+  .pkmn-head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1.5px dashed var(--paper-edge);
+  }
+  .pkmn-portrait {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(255,255,255,0.7), transparent 60%),
+      linear-gradient(135deg, var(--sun-soft) 0%, var(--bg-2) 100%);
+    border-radius: 50%;
+    border: 3px solid var(--paper-edge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-shadow: 0 4px 12px -4px var(--shadow), inset 0 -3px 0 rgba(45, 36, 24, 0.05);
+  }
+  .pkmn-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+  }
+  .pkmn-info { flex: 1; min-width: 0; }
+  .pkmn-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  .pkmn-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 6px;
+  }
+  .pkmn-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  .pkmn-meta .habitat-tag {
+    color: var(--leaf);
+    font-weight: 500;
+  }
+  .pkmn-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .pkmn-cat-tag {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: var(--bg-1);
+    color: var(--ink);
+    border: 1.5px solid var(--paper-edge);
+  }
+
+  /* RESULTS */
+  .placeholder {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--ink-soft);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+  }
+  .placeholder small {
+    display: block;
+    margin-top: 6px;
+    font-family: 'DM Mono', monospace;
+    font-style: normal;
+    font-size: 11px;
+    color: var(--ink-fade);
+    letter-spacing: 0.04em;
+  }
+
+  .summary-strip {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+  .stat-box {
+    flex: 1;
+    min-width: 130px;
+    background: var(--bg-1);
+    border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1;
+    color: var(--accent);
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .section-title .pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 100px;
+    letter-spacing: 0.04em;
+    background: var(--accent);
+    color: var(--paper);
+  }
+  .section-sub {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  /* BEST GIFTS (multi-category items) */
+  .best-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .best-item {
+    background: linear-gradient(135deg, var(--sun-soft) 0%, var(--bg-1) 100%);
+    border: 1.5px solid var(--sun);
+    border-radius: 14px;
+    padding: 14px;
+    position: relative;
+    transition: all 0.15s;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .best-item.elite {
+    background: linear-gradient(135deg, #ffd9c9 0%, #ffe9d8 100%);
+    border-color: var(--accent);
+  }
+  .best-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px -6px var(--shadow);
+  }
+  .best-item-icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+  }
+  .best-item-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+  }
+  .best-item-body { flex: 1; min-width: 0; }
+  .best-item-badge {
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 100px;
+    background: var(--sun);
+    color: var(--ink);
+    letter-spacing: 0.04em;
+  }
+  .best-item.elite .best-item-badge {
+    background: var(--accent);
+    color: var(--paper);
+  }
+  .best-item-name {
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .best-item-cats {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  /* CATEGORY BLOCKS */
+  .cat-block {
+    margin-bottom: 18px;
+  }
+  .cat-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 8px 14px;
+    background: var(--bg-1);
+    border-radius: 10px;
+  }
+  .cat-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .cat-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-left: auto;
+  }
+  .cat-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 6px;
+    padding: 0 4px;
+  }
+  .cat-item {
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: var(--paper);
+    border: 1px solid var(--bg-2);
+    color: var(--ink);
+    transition: all 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+  }
+  .cat-item:hover {
+    border-color: var(--accent-soft);
+    background: var(--bg-1);
+  }
+  .cat-item.shared {
+    background: var(--sun-soft);
+    border-color: var(--sun);
+    font-weight: 700;
+  }
+  .cat-item-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cat-item-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+  }
+  .cat-item-body { flex: 1; min-width: 0; }
+  .cat-item-name {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .cat-item.shared .cat-item-name::before {
+    content: '★';
+    color: var(--accent);
+    font-size: 11px;
+  }
+  .cat-item-cats {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--ink-soft);
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  /* SHORTCUTS */
+  .shortcuts {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .shortcuts-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  .shortcut {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px 11px;
+    background: transparent;
+    border: 1.5px solid var(--paper-edge);
+    border-radius: 100px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  .shortcut:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+
+  /* Fallback for broken images */
+  .icon-fallback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-2);
+    color: var(--ink-fade);
+    border-radius: 6px;
+    font-size: 18px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+  .suggestion-icon.icon-fallback { width: 44px; height: 44px; flex-shrink: 0; }
+  .pkmn-portrait .icon-fallback { width: 100%; height: 100%; border-radius: 50%; }
+  .best-item-icon .icon-fallback,
+  .cat-item-icon .icon-fallback { width: 100%; height: 100%; }
+
+  @media (max-width: 600px) {
+    .card { padding: 20px 18px; }
+    .pkmn-head { gap: 14px; }
+    .pkmn-portrait { width: 84px; height: 84px; }
+    .pkmn-name { font-size: 26px; }
+    .best-grid { grid-template-columns: 1fr; }
+    .cat-items { grid-template-columns: 1fr; }
+    .gww-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* LANG TOGGLE */
+  .lang-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 7px 16px;
+    background: var(--paper);
+    border: 1.5px solid var(--paper-edge);
+    border-radius: 100px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    box-shadow: 0 2px 0 var(--paper-edge), 0 4px 12px -4px var(--shadow);
+    transition: all 0.15s;
+  }
+  .lang-toggle:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+
+  /* GOES WELL WITH */
+  .gww-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1.5px dashed var(--paper-edge);
+  }
+  .gww-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .gww-card {
+    background: var(--bg-1);
+    border: 1.5px solid var(--paper-edge);
+    border-radius: 14px;
+    padding: 14px 8px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .gww-card:hover {
+    background: var(--paper);
+    border-color: var(--accent-soft);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px -6px var(--shadow);
+  }
+  .gww-icon { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; }
+  .gww-icon img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+  .gww-num { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink-fade); }
+  .gww-name { font-weight: 700; font-size: 12px; line-height: 1.2; }
+</style>
+</head>
+<body>
+  <button id="lang-toggle" class="lang-toggle">ES</button>
+
+  <div class="wrap">
+    <header>
+      <span class="eyebrow" id="eyebrow">Pokémon Pokopia · Gift finder</span>
+      <h1 id="main-h1">What each<br><span class="accent">Pokémon likes</span></h1>
+      <p class="lede" id="lede">Type a Pokémon's name and see all the items it likes, grouped by category. Items that appear in multiple categories at once make the perfect gifts.</p>
+    </header>
+
+    <section class="card">
+      <div class="search-wrap">
+        <span class="search-icon">⚲</span>
+        <input type="text" class="search-input" id="search" placeholder="Search Pokémon… (Lucario, Onix, Eevee…)" autocomplete="off" />
+        <div class="suggestions" id="suggestions"></div>
+      </div>
+      <div class="shortcuts">
+        <span class="shortcuts-label" id="shortcuts-label">Try:</span>
+        <button class="shortcut" data-slug="lucario">Lucario</button>
+        <button class="shortcut" data-slug="onix">Onix</button>
+        <button class="shortcut" data-slug="eevee">Eevee</button>
+        <button class="shortcut" data-slug="pikachu">Pikachu</button>
+        <button class="shortcut" data-slug="snorlax">Snorlax</button>
+      </div>
+    </section>
+
+    <div id="output">
+      <div class="card">
+        <div class="placeholder" id="placeholder-msg">
+          Choose a Pokémon above ✿
+          <small id="placeholder-sub">308 Pokémon · 608 items · 43 categories</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+const DATA = {"categories":{"Blocky stuff":["Wall storage box","Plain chest","Office cabinet","Antique chest","Plain closet","Office locker","Antique closet","Office shelf","Plain stand","Iron stand","Wooden stool","Iron chair","Public seat","Soft seat","Box Sofa","Log Bed","Mini plain bed","Wall mirror","Large mirror","Picnic basket","Sandwiches","Berry basket","Letter","Notepad","Book","Open Book","Papers","Newspaper","Photo frame","Wall photo frame","Corkboard","Mini bookcase","Bookcase","Stone fireplace","Modern sink","Cooking stove","Microwave oven","Refrigerator","Washing machine","Sink","Tablet","Cell phone","Laptop","Television","Wall monitor","Arcade machine","Game Boy system","Speaker","Boo-in-the-box","Cardboard boxes","Whiteboard","Control unit","Wall Calendar","Hanging scroll","Sandbox","Vending machine","Chansey plant","Inflatable boat","Menu board","Worn wooden crate","Wooden crate","Large ventilation fan","Frame","Mini generator","Wall light","Town map","Team Rocket Wall Hanging"],"Cleanliness":["Waterproof seat","Modern sink","Washing machine","Toilet","Sink","Towel rack","Bathtime set","Cleaning supplies","Shower","Bathtub","Bouncy blue bathtub","Water basin"],"Colorful stuff":["Pok&eacute;metal","Red paint","Blue paint","Green paint","Yellow paint","Pink paint","Cyan paint","White paint","Black paint","Gaming fridge","Stylish stool","Antique chair","Pop art chair","Gaming chair","Antique sofa","Pop art sofa","Pikachu sofa","Log Bed","Gaming bed","Pizza","Fried potatoes","Soda float","Afternoon tea set","Chocolate cookies","Sandwiches","Shaved ice","Ribbon cake","CD rack","Magazine rack","Mini bookcase","Bookcase","Stone fireplace","Gaming PC","Pinwheels","Knitting supplies","First aid kit","Balloons","Punching game","Hanging banner","Party bunting","Berry wall decoration","Wall-mounted flowers","Garden flowers","Painting (landscape)","Painting (portrait)","Painting (still life)","Water basin","Raichu sign","Photo cutout board","Pok&eacute; Ball light","Model planet","Gaming light","Paint balloon (white)","Paint balloon (red)","Paint balloon (yellow)","Paint balloon (green)","Paint balloon (rose)","Paint balloon (pink)","Paint balloon (orange)","Paint balloon (purple)","Paint balloon (brown)","Paint balloon (beige)","Paint balloon (black)","Paint balloon (lime)","Paint balloon (plum)","Paint balloon (navy)","Paint balloon (blue)","Paint balloon (cyan)","Paint balloon (gray)","Paint balloon (aquamarine)","Flowery table setting","Lunch box","Hoppip water bottle","Juice trio","Flower garland","Jewel wall decoration","Treasure"],"Complicated stuff":["Pencil holder","Fancy pen","Letter","Notepad","Book","Open Book","Papers","Newspaper","CD rack","Magazine rack","Mini bookcase","Bookcase","Printer","Computer","Microscope","Science experiment","Jumbled cords","Audio mixer","Whiteboard","Control unit","Spacesuit","Wall Calendar","Antique clock","Rowlet clock","Grubby letter","Grubby notepad","Grubby book","Grubby papers","Grubby newspaper","Bike","Menu board","Signpost","Information board","Cash register","Mini generator","Card reader","Town map","Team Rocket Wall Hanging","Digital camera"],"Construction":["Sandbags","Metal drum","Construction supplies","Iron pipes","Wheelbarrow","Iron-scaffold plank","Iron scaffold"],"Containers":["Wall storage box","Plain chest","Office cabinet","Gaming fridge","Pok&eacute; Ball Chest","Berry case","Antique chest","Plain closet","Office locker","Antique closet","Office shelf","Polygonal Shelf","Plain stand","Iron stand","Luxury dresser","Cute dresser","Picnic basket","Mug","Tea set","Berry basket","Small vase","Leafy plant","Pitcher-plant pot","Extravagant flowers","Tall potted plant","Flat-leaf plant","Twisted potted plant","Small garbage can","Munna bank","Pencil holder","Photo frame","Wall photo frame","CD rack","Magazine rack","Mini bookcase","Bookcase","Dining cabinet","Refrigerator","Washing machine","First aid kit","Jumbled cords","Boo-in-the-box","Cardboard boxes","Wooden birdhouse","Mailbox","Worn wooden crate","Wooden crate","Barrel","Garbage bin","Recycling bin","Metal drum","Construction supplies","Wheelbarrow","Frame","Cash register","Hoppip water bottle","Juice trio","Flower backpack","Adventure kit","Oil lantern"],"Cute stuff":["Pok&eacute; Ball Chest","Berry case","Polygonal Shelf","Cute table","Pop art table","Berry chair","Stylish stool","Cute chair","Pop art chair","Cute sofa","Pop art sofa","Pikachu sofa","Pop art bed","Berry bed","Cute bed","Cute dresser","Wiggly mirror","Ribbon cake","Munna bank","Bathtime set","Bouncy blue bathtub","Wobbuffet Wobbler","Berry clock","Rowlet clock","Castform weather charm","Eevee doll","Pikachu doll","Clefairy doll","Arcanine doll","Dragonite doll","Ditto doll","Substitute doll","Eerie candle","Chansey plant","Photo cutout board","Berry table lamp","Cute lamp","Model planet","Red meteor lamp","Orange meteor lamp","Yellow meteor lamp","Green meteor lamp","Blue meteor lamp","Indigo meteor lamp","Violet meteor lamp","Luxury lamp","Shell lamp","Berry hanging lamp","Cute flower","Heart Scale","Fairy Feather","Flower cushion","Flowery table setting","Lunch box","Hoppip water bottle","Flower backpack"],"Electronics":["Gaming fridge","Gaming chair","Gaming bed","Microwave oven","Refrigerator","Fan","Air conditioner","Printer","Washing machine","Toilet","Tablet","Cell phone","Laptop","Computer","Gaming PC","Television","Wall monitor","Arcade machine","Game Boy system","Humidifier","Jumbled cords","CD player","Tabletop mic","Standing mic","Cool electric guitar","Cool bass guitar","Audio mixer","Speaker","Ceiling fan","Utility pole","Wireless power-transmitter switch","Wireless power transmitter","Mini generator","Floor switch","Wall switch","Card reader","Laser sensor","Security camera","Town streetlight","Harbor streetlight","Chic streetlight","Double streetlight","Mushroom lamp","Plain lamp","Desk light","Pok&eacute; Ball light","Berry table lamp","Cute lamp","Pok&eacute; Ball lamp","Model planet","Red meteor lamp","Orange meteor lamp","Yellow meteor lamp","Green meteor lamp","Blue meteor lamp","Indigo meteor lamp","Violet meteor lamp","Luxury lamp","Garden light","Lantern","Seedot Lamp","Mirror ball","Wall light","Shell lamp","Fluorescent light","Gaming light","Resort light","String lights","Pop art lamp","Berry hanging lamp","Surface light","Spotlight","Antique chandelier"],"Exercise":["Punching game","Wobbuffet Wobbler","Punching bag","Bike"],"Fabric":["Fluff","Plain chest","Plain closet","Plain stand","Simple cushion","Plain stool","Resort stool","Stylish stool","Soft seat","Box Sofa","Plain chair","Resort chair","Chic chair","Fancy chair","Antique chair","Office chair","Cute chair","Pop art chair","Gaming chair","Plain sofa","Resort sofa","Chic sofa","Antique sofa","Luxury sofa","Cute sofa","Pop art sofa","Pikachu sofa","Log Bed","Mini plain bed","Resort bed","Iron bed","Beach chair","Pop art bed","Pok&eacute; Ball bed","Berry bed","Plain bed","Resort hammock","Guest-room bed","Antique bed","Industrial bed","Cute bed","Picnic basket","Table setting","Towel rack","Knitting supplies","Crystal ball","Berry clock","Hanging banner","Party bunting","Castform weather charm","Eevee doll","Pikachu doll","Clefairy doll","Arcanine doll","Dragonite doll","Ditto doll","Substitute doll","Punching bag","Blank canvas","Painting (landscape)","Painting (portrait)","Painting (still life)","Beach parasol","Sandbags","Plain lamp","Luxury lamp","Silk Scarf","Room Service","Camping chair","Sleeping bag","Adventure kit"],"Garbage":["Nonburnable garbage","Wastepaper","Small garbage can","Jumbled cords","Grubby letter","Grubby notepad","Grubby book","Grubby papers","Grubby newspaper","Grubby tablet","Grubby cell phone","Garbage bags","Garbage bin","Recycling bin","Nonburnable garbage (outdoor)"],"Gatherings":["Office shelf","Tea set","Table setting","Paper Party cups","Fried potatoes","Afternoon tea set","Chocolate cookies","Sandwiches","Pencil holder","Corkboard","CD rack","Magazine rack","Dining cabinet","Toy blocks","Pinwheels","Knitting supplies","Science experiment","Jumbled cords","Balloons","Cardboard boxes","Whiteboard","Decorative bookshelf","Decorative storage shelf","Decorative plant shelf","Berry wall decoration","Garden ornament","Photo cutout board","Garbage bags","Sandbags","Tires","Construction supplies","Iron pipes","Gaming light","String lights","Flowery table setting","Lunch box","Juice trio","Flower garland"],"Glass stuff":["Sea glass fragments","Crystal fragment","Glass","Gaming fridge","Office shelf","Wall mirror","Large mirror","Antique dresser","Luxury dresser","Cute dresser","Wiggly mirror","Dining cabinet","Microwave oven","Printer","Washing machine","Tablet","Cell phone","Laptop","Computer","Gaming PC","Television","Wall monitor","Arcade machine","Alarm Clock","Humidifier","Crystal ball","Microscope","Science experiment","Spacesuit","Spaceship","Antique clock","Vending machine","Raichu sign","Card reader","Town streetlight","Harbor streetlight","Chic streetlight","Double streetlight","Plain lamp","Desk light","Pok&eacute; Ball light","Berry table lamp","Cute lamp","Pok&eacute; Ball lamp","Red meteor lamp","Orange meteor lamp","Yellow meteor lamp","Green meteor lamp","Blue meteor lamp","Indigo meteor lamp","Violet meteor lamp","Luxury lamp","Garden light","Lantern","Seedot Lamp","Mirror ball","Wall light","Shell lamp","Fluorescent light","Gaming light","String lights","Pop art lamp","Berry hanging lamp","Surface light","Spotlight","Antique chandelier","Clear Amulet","Modern door","Glass window","Window pane","Stained-glass window (upper)","Stained-glass window (middle)","Stained-glass window (lower)","Sash window","Water pillar quarter","Juice trio","Red crystal fragment","Digital camera","Oil lantern"],"Group Activities":["Wooden bench","Stone bench","Plain sofa","Resort sofa","Chic sofa","Antique sofa","Iron bench","Industrial bench","Luxury sofa","Garden bench","Cute sofa","Pop art sofa","Pok&eacute; Ball Sofa","Pikachu sofa","Pop art bed","Wooden Bed","Plain bed","Guest-room bed","Antique bed","Industrial bed","Luxury bed","Gaming bed","Picnic basket","Tea set","Table setting","Paper Party cups","Photo frame","Television","Wall monitor","Arcade machine","Knitting supplies","Game Boy system","Jumbled cords","CD player","Standing mic","Boo-in-the-box","Whiteboard","Campfire","Firepit","Bonfire","Sandbox","Tire toy","Slide","Vending machine","Small stage","Canoe","Inflatable boat","Photo cutout board","Construction supplies","Flower cushion","Flowery table setting","Map and compass","Treasure"],"Hard stuff":["Stone","Iron stand","Iron table","Iron rack","Stone table","Stone bench","Stone fireplace","Strength rock","Stone tiling (wallpaper)","Stone flooring (wallpaper)","Stone brick wall (wallpaper)","Iron Ball","Lagging Tail","Skull Fossil","Armor Fossil","Jaw Fossil","Sail Fossil","Wing Fossil (head)","Wing Fossil (right wing)","Wing Fossil (left wing)","Wing fossil (body)","Wing Fossil (tail)","Headbutt Fossil (head)","Headbutt Fossil (body)","Headbutt Fossil (tail)","Shield Fossil (Head)","Shield Fossil (body)","Shield Fossil (tail)","Despot Fossil (head)","Despot Fossil (body)","Despot Fossil (legs)","Despot Fossil (tail)","Tundra Fossil (head)","Tundra Fossil (body)","Tundra Fossil (tail)","Stone brick wall","Stone pillar (upper)","Stone pillar (middle)","Stone pillar (lower)","Stone flooring","Stone tiling","Stone steps","Stone hipped roof","Stone roof valley","Stone roof decoration","Stone debris","Metal Debris"],"Healing":["Humidifier","First aid kit"],"Letters and words":["Office shelf","Letter","Notepad","Book","Open Book","Papers","Newspaper","Television","Wall monitor","Science experiment","Whiteboard","Wall Calendar","Decorative bookshelf","Hanging scroll","Grubby letter","Grubby notepad","Grubby book","Grubby papers","Grubby newspaper","Gravestone","Arrow sign","Menu board","Sign","Signpost","Information board","Raichu sign","Frame","Weakness Policy","Map and compass"],"Looks like food":["Berry case","Berry table","Berry chair","Berry bed","Table setting","Pizza","Fried potatoes","Soda float","Afternoon tea set","Chocolate cookies","Sandwiches","Shaved ice","Ribbon cake","Berry basket","Berry clock","Berry wall decoration","Berry table lamp","Berry hanging lamp","Berry print (wallpaper)","Leftovers","Berry print","Lunch box","Juice trio"],"Lots of dirt":["Red paint","Blue paint","Green paint","Yellow paint","Pink paint","Cyan paint","White paint","Black paint","Knitting supplies","Sandbox","Punching bag","Sandbags","Wheelbarrow","Skull Fossil","Armor Fossil","Jaw Fossil","Sail Fossil","Wing Fossil (head)","Wing Fossil (right wing)","Wing Fossil (left wing)","Wing fossil (body)","Wing Fossil (tail)","Headbutt Fossil (head)","Headbutt Fossil (body)","Headbutt Fossil (tail)","Shield Fossil (Head)","Shield Fossil (body)","Shield Fossil (tail)","Despot Fossil (head)","Despot Fossil (body)","Despot Fossil (legs)","Despot Fossil (tail)","Tundra Fossil (head)","Tundra Fossil (body)","Tundra Fossil (tail)","Mud"],"Lots of fire":["Cooking stove","Fiery Magby statue","Campfire","Torch","Slender candle","Eerie candle","Wall torch","Firepit","Bonfire","Smelting furnace","Metallic smelting furnace","Charcoal","Oil lantern"],"Lots of nature":["Berry case","Straw table","Log table","Garden table","Berry table","Berry chair","Log chair","Garden chair","Garden bench","Log Bed","Straw bed","Berry bed","Wooden Bed","Berry basket","Tall potted plant","Flat-leaf plant","Twisted potted plant","Berry clock","Vine wall decoration","Berry wall decoration","Berry table lamp","Seedot Lamp","Berry hanging lamp","Berry print (wallpaper)","Miracle Seed","Silver Powder","Big Root","Berry print"],"Lots of water":["Resort hammock","Table setting","Paper Party cups","Soda float","Shaved ice","Modern sink","Toilet","Sink","Bathtime set","Cleaning supplies","Shower","Bathtub","Bouncy blue bathtub","Humidifier","Funky diffuser","Water basin","Inflatable boat","Beach parasol","Horsea fountain","Fire hydrant","Sprinkler","Mystic Water","Water pillar quarter","Hoppip water bottle"],"Luxury":["Antique chest","Antique closet","Antique table","Chic table","Luxury table","Chic chair","Fancy chair","Antique chair","Luxury chair","Gaming chair","Chic sofa","Antique sofa","Luxury sofa","Guest-room bed","Antique bed","Luxury bed","Wall mirror","Large mirror","Antique dresser","Luxury dresser","Afternoon tea set","Fancy pen","Stone fireplace","Dining cabinet","Auspicious Armor","Malicious Armor","Antique clock","Chansey plant","Pok&eacute; Ball light","Pok&eacute; Ball lamp","Luxury lamp","Antique chandelier","Jewel wall decoration","Treasure"],"Metal stuff":["Copper ore","Iron ore","Gold ore","Pok&eacute;metal fragment","Rare Pok&eacute;metal fragment","Copper ingot","Iron ingot","Gold ingot","Pok&eacute;metal","Office cabinet","Gaming fridge","Pok&eacute; Ball Chest","Office locker","Office shelf","Iron stand","Industrial desk","Iron table","Office desk","Industrial chair","Iron chair","Public seat","Spectator chair","Luxury chair","Garden chair","Folding chair","Office chair","Iron bench","Industrial bench","Garden bench","Pok&eacute; Ball Sofa","Iron bed","Industrial bed","Small garbage can","Fancy pen","Modern sink","Cooking stove","Microwave oven","Refrigerator","Fan","Air conditioner","Washing machine","Shower","Tablet","Cell phone","Laptop","Computer","Gaming PC","Television","Wall monitor","Alarm Clock","Funky diffuser","First aid kit","Microscope","Science experiment","Jumbled cords","Gold Teeth","Big Nugget","Step stool","Spacesuit","Model space shuttle","Spaceship","Vending machine","Bike","Mailbox","Weather vane","Cannon","Bell","Small stage","Fishing rod","Signpost","Information board","Barrel","Garbage bin","Recycling bin","Fire hydrant","Excavation tools","Metal drum","Construction supplies","Iron pipes","Wheelbarrow","Large ventilation fan","Cash register","Sprinkler","Mini generator","Card reader","Town streetlight","Harbor streetlight","Chic streetlight","Double streetlight","Desk light","Pok&eacute; Ball light","Model planet","Garden light","Lantern","Mirror ball","Resort light","Spotlight","Antique chandelier","Iron-plate flooring (wallpaper)","Team Rocket Wall Hanging","Iron wall","Iron-plate flooring","Iron deposit","Iron steps","Iron ladder","Metal chain","Iron door","Iron gate","Corrugated metal","Metal Debris","Metal fragments","Camping chair","Digital camera","Treasure","Oil lantern"],"Nice breezes":["Fan","Air conditioner","Pinwheels","Tidal Bell","Model space shuttle","Ceiling fan","Weather vane","Large ventilation fan"],"Noisy stuff":["Alarm Clock","CD player","Cool electric guitar","Cool bass guitar","Speaker","Clear Bell","Tidal Bell","Music mat (low do)","Music mat (Re)","Music mat (Mi)","Music mat (Fa)","Music mat (Sol)","Music mat (La)","Music mat (Ti)","Music mat (High do)"],"Ocean vibes":["Resort stool","Resort chair","Resort sofa","Resort bed","Deck chair","Beach chair","Resort hammock","Ship's Wheel","Beach parasol","Horsea fountain","Fishing rod","Harbor streetlight","Shell lamp","Resort light"],"Play spaces":["Arcade machine","Toy blocks","Pinwheels","Balloons","Punching game","Boo-in-the-box","Wobbuffet Wobbler","Sandbox","Tire toy","Slide","Small stage","Music mat (low do)","Music mat (Re)","Music mat (Mi)","Music mat (Fa)","Music mat (Sol)","Music mat (La)","Music mat (Ti)","Music mat (High do)"],"Pretty flowers":["Small vase","Leafy plant","Extravagant flowers","Tall potted plant","Flat-leaf plant","Twisted potted plant","Decorative plant shelf","Wall-mounted flowers","Chansey plant","Garden flowers","Wildflowers","Seashore flowers","Mountain flowers","Skyland flowers","Beautiful flower","Cute flower","Elegant flower","Robust flower","Wildflowers (orange)","Wildflowers (purple)","Wildflowers (red)","Wildflowers (blue)","Seashore flowers (blue)","Seashore flowers (orange)","Seashore flowers (white)","Seashore flowers (yellow)","Mountain flowers (pink)","Mountain flowers (purple)","Mountain flowers (red)","Mountain flowers (white)","Skyland flowers (blue)","Skyland flowers (orange)","Skyland flowers (pink)","Skyland flowers (yellow)","Beautiful flower (pink)","Beautiful flower (purple)","Beautiful flower (white)","Beautiful flower (yellow)","Cute flower (blue)","Cute flower (pink)","Cute flower (white)","Cute flower (yellow)","Elegant flower (orange)","Elegant flower (pink)","Elegant flower (red)","Elegant flower (yellow)","Robust flower (blue)","Robust flower (orange)","Robust flower (purple)","Robust flower (white)","Flower cushion","Flowery table setting","Flower garland","Flower backpack"],"Rides":["Step stool","Model space shuttle","Spaceship","Bike","Handcar"],"Round stuff":["Fluff","Pok&eacute; Ball Chest","Pizza","Chocolate cookies","Ribbon cake","Small garbage can","Alarm Clock","Knitting supplies","Humidifier","Crystal ball","Big drum","Big Nugget","Balloons","Wobbuffet Wobbler","Clear Bell","Tidal Bell","Ship's Wheel","Spaceship","Wreath","Berry clock","Firepit","Tire toy","Concrete pipe","Chansey plant","Small stage","Water basin","Canoe","Barrel","Tires","Metal drum","Construction supplies","Pok&eacute; Ball lamp","Model planet","Seedot Lamp","Mirror ball","Surface light","Paint balloon (white)","Paint balloon (red)","Paint balloon (yellow)","Paint balloon (green)","Paint balloon (rose)","Paint balloon (pink)","Paint balloon (orange)","Paint balloon (purple)","Paint balloon (brown)","Paint balloon (beige)","Paint balloon (black)","Paint balloon (lime)","Paint balloon (plum)","Paint balloon (navy)","Paint balloon (blue)","Paint balloon (cyan)","Paint balloon (gray)","Paint balloon (aquamarine)","Firework (white)","Firework (red)","Firework (green)","Firework (yellow)","Firework (blue)","Title Screen","Pallet Town","Oak's Lab","Road to Viridian City","Pewter City Theme","Pok&eacute;mon Center","Caves of Mt. Moon","Road to Cerulean City","Fuchsia City Theme","Pok&eacute;mon Gym","Road to Bill","Vermilion City Theme","The S.S. Anne","Rocket Hideout","Silph Co.","Battle! (Gym Leader Battle)","Union Cave","Ecruteak City","Bell Tower","Fortree City","Sootopolis City","Route 209 (Day)","Mt. Coronet","Game Corner","Driftveil City","Route 10 (Unova)","Dress Up With Props","Snowbelle City","Boutique","Super Training!","Contest Spectacular","Hau'oli City (Day)","Aether Paradise","Ultra Ruin","Wild Area (North)","Wyndon","Rose Tower","Battle! (Gym Leader) 1","Jubilife Village","South Province","The Academy","Area Zero","Battle! (Gym Leader) 2","Nugget","Silver Bottle Cap","Gold Bottle Cap","Lucky Egg","Life Orb","Iron Ball","Adrenaline Orb","Flame Orb","Ring Target","Armor Fossil"],"Sharp stuff":["Fancy pen","Vending machine","Frame","Wall light"],"Shiny stuff":["Crystal fragment","Stardust","Pok&eacute; Ball Chest","Iron stand","Gaming chair","Gaming bed","Bathtime set","Cleaning supplies","Tablet","Cell phone","Laptop","Computer","Gaming PC","Television","Wall monitor","Crystal ball","Tabletop mic","Standing mic","Gold Teeth","Big Nugget","Whiteboard","Auspicious Armor","Clear Bell","Gym emblem statue","Spacesuit","Model space shuttle","Bell","Signpost","Information board","Fire hydrant","Mini generator","Mushroom streetlight","Chic streetlight","Red meteor lamp","Orange meteor lamp","Yellow meteor lamp","Green meteor lamp","Blue meteor lamp","Indigo meteor lamp","Violet meteor lamp","Mirror ball","Fluorescent light","Music mat (low do)","Music mat (Re)","Music mat (Mi)","Music mat (Fa)","Music mat (Sol)","Music mat (La)","Music mat (Ti)","Music mat (High do)","Star Piece","Nugget","Silver Bottle Cap","Gold Bottle Cap","Metal Powder","Clear Amulet","Rainbow Feather","Silver Feather","Red crystal fragment","Digital camera"],"Slender objects":["Vine rope","Twine","Small vase","Tall potted plant","Flat-leaf plant","Twisted potted plant","Fancy pen","Shower","Vine wall decoration","Slender candle","Wooden birdhouse","Fishing rod","Mushroom streetlight","Town streetlight","Harbor streetlight","Chic streetlight","Double streetlight","Desk light","Luxury lamp","Fluorescent light","Berry hanging lamp","Wing Fossil (right wing)","Wing Fossil (left wing)","Wing fossil (body)","Wing Fossil (tail)","Headbutt Fossil (body)","Headbutt Fossil (tail)","Shield Fossil (body)","Shield Fossil (tail)","Despot Fossil (body)","Despot Fossil (legs)","Despot Fossil (tail)","Tundra Fossil (body)","Tundra Fossil (tail)","Wire","Metal chain","Rope","Broken streetlight","Inflatable Sudowoodo"],"Soft stuff":["Squishy clay","Fluff","Straw stool","Berry chair","Simple cushion","Plain stool","Resort stool","Stylish stool","Soft seat","Box Sofa","Plain chair","Resort chair","Chic chair","Fancy chair","Antique chair","Office chair","Cute chair","Pop art chair","Gaming chair","Plain sofa","Resort sofa","Chic sofa","Antique sofa","Luxury sofa","Cute sofa","Pop art sofa","Pikachu sofa","Log Bed","Mini plain bed","Resort bed","Iron bed","Beach chair","Straw bed","Pop art bed","Pok&eacute; Ball bed","Berry bed","Wooden Bed","Plain bed","Resort hammock","Guest-room bed","Antique bed","Industrial bed","Luxury bed","Cute bed","Gaming bed","Naptime bed","Towel rack","Knitting supplies","Eevee doll","Pikachu doll","Clefairy doll","Dragonite doll","Ditto doll","Substitute doll","Soft Sand","Light Clay","Cotton Spores","Flower cushion","Flowery table setting","Flower garland","Flower backpack","Camping chair","Sleeping bag","Adventure kit"],"Spinning stuff":["Fancy chair","Office chair","Gaming chair","Fan","Pinwheels","Ceiling fan","Castform weather charm","Weather vane","Small stage","Large ventilation fan","Model planet"],"Spooky stuff":["Luxury chair","Pitcher-plant pot","Munna bank","Boo-in-the-box","Mysterious statue","Slender candle","Eerie candle","Gravestone","Mushroom streetlight","Spell Tag"],"Stone stuff":["Stone","Stone bench","Luxury bed","Small vase","Pitcher-plant pot","Extravagant flowers","Tall potted plant","Munna bank","Pencil holder","Stone fireplace","Toilet","Sink","Bathtub","Gold Teeth","Big Nugget","Mysterious statue","Fiery Magby statue","Gym emblem statue","Spacesuit","Model space shuttle","Spaceship","Decorative storage shelf","Campfire","Slender candle","Eerie candle","Wall torch","Firepit","Concrete pipe","Garden ornament","Horsea fountain","Signpost","Information board","Ditto Flag","Sprinkler","Stone tiling (wallpaper)","Stone flooring (wallpaper)","Stone brick wall (wallpaper)","Light Clay","Stone brick wall","Stone pillar (upper)","Stone pillar (middle)","Stone pillar (lower)","Stone flooring","Stone tiling","Stone steps","Stone hipped roof","Stone roof valley","Stone roof decoration","Stone debris","Metal Debris","Jewel wall decoration","Treasure"],"Strange stuff":["Armor fragment","Polygonal Shelf","Wall mirror","Large mirror","Luxury dresser","Cute dresser","Wiggly mirror","CD rack","Modern sink","Cooking stove","Microwave oven","Refrigerator","Air conditioner","Printer","Washing machine","Toilet","Sink","Shower","Bathtub","Bouncy blue bathtub","Alarm Clock","Humidifier","Funky diffuser","Crystal ball","Microscope","Standing mic","Cool electric guitar","Cool bass guitar","Audio mixer","Gold Teeth","Repel","Boo-in-the-box","Wobbuffet Wobbler","Auspicious Armor","Malicious Armor","Clear Bell","Tidal Bell","Mysterious statue","Fiery Magby statue","Decorative storage shelf","Rowlet clock","Hanging scroll","Ceiling fan","Castform weather charm","Bike","Gravestone","Cannon","Bell","Small stage","Horsea fountain","Excavation tools","Large ventilation fan","Cash register","Sprinkler","Mini generator","Card reader","Pok&eacute; Ball lamp","Music mat (low do)","Music mat (Re)","Music mat (Mi)","Music mat (Fa)","Music mat (Sol)","Music mat (La)","Music mat (Ti)","Music mat (High do)","Large Lost Relic","Small Lost Relic","Twisted Spoon","Town map","Skull Fossil","Armor Fossil","Jaw Fossil","Sail Fossil","Wing Fossil (head)","Wing Fossil (right wing)","Wing Fossil (left wing)","Wing fossil (body)","Wing Fossil (tail)","Headbutt Fossil (head)","Headbutt Fossil (body)","Headbutt Fossil (tail)","Shield Fossil (Head)","Shield Fossil (body)","Shield Fossil (tail)","Despot Fossil (head)","Despot Fossil (body)","Despot Fossil (legs)","Despot Fossil (tail)","Tundra Fossil (head)","Tundra Fossil (body)","Tundra Fossil (tail)","Inflatable Sudowoodo","Digital camera"],"Symbols":["Mug","Sign","Signpost","Information board","Team Rocket Wall Hanging"],"Watching stuff":["Wall mirror","Wiggly mirror","Small vase","Leafy plant","Pitcher-plant pot","Extravagant flowers","Tall potted plant","Flat-leaf plant","Twisted potted plant","Letter","Notepad","Book","Open Book","Papers","Newspaper","Photo frame","Wall photo frame","Corkboard","CD rack","Magazine rack","Mini bookcase","Bookcase","Television","Wall monitor","Pinwheels","Microscope","Wall Calendar","Rowlet clock","Berry wall decoration","Grubby newspaper","Bonfire","Blank canvas","Painting (landscape)","Painting (portrait)","Painting (still life)","Photo cutout board","Frame","Town map","Team Rocket Wall Hanging","Water pillar quarter","Flower garland","Inflatable Sudowoodo","Jewel wall decoration"],"Wobbly stuff":["Folding chair","Resort hammock","Leafy plant","Pitcher-plant pot","Extravagant flowers","Big drum","Balloons","Punching game","Wobbuffet Wobbler","Berry clock","Ceiling fan","Tire toy","Punching bag","Bell","Inflatable boat","Fishing rod","Tires","Resort light","Inflatable Sudowoodo"],"Wooden stuff":["Storage box","Wall storage box","Big storage box","Plain chest","Office cabinet","Antique chest","Plain closet","Antique closet","Log table","Plain stand","Food counter","Plain table","Antique table","Study desk","Log chair","Plain chair","Log Bed","Guest-room bed","Wooden plate","CD rack","Magazine rack","Mini bookcase","Bookcase","Dining cabinet","Toy blocks","Wreath","Antique clock","Slide","Water basin","Arrow sign","Menu board","Sign","Worn wooden crate","Wooden crate","Barrel","Frame","Cutting board","Mushroom lamp","Stone fragments"]},"pokemon":{"onix":{"name":"Onix","num":30,"habitat":"Dry","categories":["Blocky stuff","Exercise","Lots of dirt","Slender objects","Stone stuff"],"icon":"095.png"},"timburr":{"name":"Timburr","num":65,"habitat":"Bright","categories":["Blocky stuff","Construction","Exercise","Slender objects","Wooden stuff"],"icon":"532.png"},"litwick":{"name":"Litwick","num":68,"habitat":"Warm","categories":["Blocky stuff","Lots of fire","Spooky stuff","Strange stuff","Wobbly stuff"],"icon":"607.png"},"charjabug":{"name":"Charjabug","num":139,"habitat":"Bright","categories":["Blocky stuff","Electronics","Glass stuff","Lots of nature","Watching stuff"],"icon":"737.png"},"tatsugiridroopyform":{"name":"Tatsugiri Droopy Form","num":145,"habitat":"Humid","categories":["Blocky stuff","Group Activities","Lots of water","Ocean vibes","Spinning stuff"],"icon":"978-tatsugiridroopyform.png"},"stereorotom":{"name":"Stereo Rotom","num":182,"habitat":"Bright","categories":["Blocky stuff","Glass stuff","Group Activities","Noisy stuff","Shiny stuff"],"icon":"479-stereorotom.png"},"porygon":{"name":"Porygon","num":218,"habitat":"Bright","categories":["Blocky stuff","Colorful stuff","Construction","Soft stuff","Strange stuff"],"icon":"137.png"},"tinkaton":{"name":"Tinkaton","num":270,"habitat":"Bright","categories":["Blocky stuff","Construction","Cute stuff","Exercise","Metal stuff"],"icon":"959-tinkmeister.png"},"squirtle":{"name":"Squirtle","num":7,"habitat":"Humid","categories":["Cleanliness","Cute stuff","Group Activities","Healing","Lots of water"],"icon":"007.png"},"wartortle":{"name":"Wartortle","num":8,"habitat":"Humid","categories":["Cleanliness","Exercise","Hard stuff","Healing","Lots of water"],"icon":"008.png"},"blastoise":{"name":"Blastoise","num":9,"habitat":"Humid","categories":["Cleanliness","Exercise","Healing","Lots of water","Luxury"],"icon":"009.png"},"slowpoke":{"name":"Slowpoke","num":24,"habitat":"Humid","categories":["Cleanliness","Healing","Lots of water","Soft stuff","Strange stuff"],"icon":"079.png"},"slowbro":{"name":"Slowbro","num":25,"habitat":"Humid","categories":["Cleanliness","Group Activities","Healing","Lots of water","Strange stuff"],"icon":"080.png"},"slowking":{"name":"Slowking","num":26,"habitat":"Humid","categories":["Cleanliness","Group Activities","Healing","Lots of water","Strange stuff"],"icon":"199.png"},"gyarados":{"name":"Gyarados","num":46,"habitat":"Humid","categories":["Cleanliness","Lots of water","Nice breezes","Ocean vibes","Slender objects"],"icon":"130.png"},"shellos":{"name":"Shellos","num":59,"habitat":"Humid","categories":["Cleanliness","Colorful stuff","Containers","Lots of water","Ocean vibes"],"icon":"422.png"},"shelloseastsea":{"name":"Shellos East Sea","num":59,"habitat":"Humid","categories":["Cleanliness","Colorful stuff","Containers","Lots of water","Ocean vibes"],"icon":"422-shelloseastsea.png"},"gastrodon":{"name":"Gastrodon","num":60,"habitat":"Humid","categories":["Cleanliness","Containers","Lots of dirt","Lots of water","Ocean vibes"],"icon":"423.png"},"gastrodoneastsea":{"name":"Gastrodon East Sea","num":60,"habitat":"Humid","categories":["Cleanliness","Containers","Lots of dirt","Lots of water","Ocean vibes"],"icon":"423-gastrodoneastsea.png"},"goomy":{"name":"Goomy","num":74,"habitat":"Humid","categories":["Cleanliness","Healing","Lots of nature","Lots of water","Luxury"],"icon":"704.png"},"sliggoo":{"name":"Sliggoo","num":75,"habitat":"Humid","categories":["Cleanliness","Healing","Lots of water","Luxury","Soft stuff"],"icon":"705.png"},"goodra":{"name":"Goodra","num":76,"habitat":"Humid","categories":["Cleanliness","Exercise","Healing","Lots of water","Luxury"],"icon":"706.png"},"lapras":{"name":"Lapras","num":106,"habitat":"Humid","categories":["Cleanliness","Healing","Lots of water","Ocean vibes","Watching stuff"],"icon":"131.png"},"azurill":{"name":"Azurill","num":114,"habitat":"Humid","categories":["Cleanliness","Cute stuff","Healing","Lots of water","Rides"],"icon":"298.png"},"marill":{"name":"Marill","num":115,"habitat":"Humid","categories":["Cleanliness","Cute stuff","Lots of water","Round stuff","Symbols"],"icon":"183.png"},"paldeanwooper":{"name":"Paldean Wooper","num":117,"habitat":"Humid","categories":["Cleanliness","Garbage","Group Activities","Lots of dirt","Stone stuff"],"icon":"194-p.png"},"clodsire":{"name":"Clodsire","num":118,"habitat":"Humid","categories":["Cleanliness","Garbage","Lots of dirt","Lots of water","Round stuff"],"icon":"980.png"},"wingull":{"name":"Wingull","num":123,"habitat":"Humid","categories":["Cleanliness","Lots of water","Nice breezes","Ocean vibes","Watching stuff"],"icon":"278.png"},"pelipper":{"name":"Pelipper","num":124,"habitat":"Humid","categories":["Cleanliness","Lots of water","Nice breezes","Ocean vibes","Watching stuff"],"icon":"279.png"},"piplup":{"name":"Piplup","num":128,"habitat":"Humid","categories":["Cleanliness","Containers","Lots of water","Nice breezes","Ocean vibes"],"icon":"393.png"},"prinplup":{"name":"Prinplup","num":129,"habitat":"Humid","categories":["Cleanliness","Containers","Lots of water","Nice breezes","Ocean vibes"],"icon":"394.png"},"empoleon":{"name":"Empoleon","num":130,"habitat":"Humid","categories":["Cleanliness","Letters and words","Lots of water","Metal stuff","Ocean vibes"],"icon":"395.png"},"minccino":{"name":"Minccino","num":136,"habitat":"Bright","categories":["Cleanliness","Cute stuff","Fabric","Rides","Soft stuff"],"icon":"572.png"},"cinccino":{"name":"Cinccino","num":137,"habitat":"Bright","categories":["Cleanliness","Cute stuff","Fabric","Rides","Soft stuff"],"icon":"573.png"},"lotad":{"name":"Lotad","num":172,"habitat":"Humid","categories":["Cleanliness","Containers","Lots of nature","Lots of water","Noisy stuff"],"icon":"270.png"},"lombre":{"name":"Lombre","num":173,"habitat":"Humid","categories":["Cleanliness","Containers","Lots of nature","Lots of water","Noisy stuff"],"icon":"271.png"},"dartrix":{"name":"Dartrix","num":186,"habitat":"Dark","categories":["Cleanliness","Lots of nature","Nice breezes","Slender objects","Wooden stuff"],"icon":"723.png"},"poliwag":{"name":"Poliwag","num":209,"habitat":"Humid","categories":["Cleanliness","Lots of water","Rides","Round stuff","Spinning stuff"],"icon":"060.png"},"poliwhirl":{"name":"Poliwhirl","num":210,"habitat":"Humid","categories":["Cleanliness","Exercise","Lots of nature","Lots of water","Spinning stuff"],"icon":"061.png"},"poliwrath":{"name":"Poliwrath","num":211,"habitat":"Humid","categories":["Cleanliness","Construction","Exercise","Group Activities","Lots of water"],"icon":"062.png"},"dratini":{"name":"Dratini","num":221,"habitat":"Humid","categories":["Cleanliness","Cute stuff","Lots of fire","Lots of water","Slender objects"],"icon":"147.png"},"dragonair":{"name":"Dragonair","num":222,"habitat":"Humid","categories":["Cleanliness","Glass stuff","Lots of fire","Lots of water","Slender objects"],"icon":"148.png"},"dragonite":{"name":"Dragonite","num":223,"habitat":"Humid","categories":["Cleanliness","Lots of fire","Nice breezes","Pretty flowers","Symbols"],"icon":"149.png"},"swablu":{"name":"Swablu","num":240,"habitat":"Bright","categories":["Cleanliness","Cute stuff","Nice breezes","Soft stuff","Watching stuff"],"icon":"333.png"},"servine":{"name":"Servine","num":249,"habitat":"Humid","categories":["Cleanliness","Lots of nature","Lots of water","Shiny stuff","Wooden stuff"],"icon":"496.png"},"froakie":{"name":"Froakie","num":251,"habitat":"Humid","categories":["Cleanliness","Containers","Lots of water","Ocean vibes","Watching stuff"],"icon":"656.png"},"frogadier":{"name":"Frogadier","num":252,"habitat":"Humid","categories":["Cleanliness","Exercise","Lots of water","Ocean vibes","Watching stuff"],"icon":"657.png"},"greninja":{"name":"Greninja","num":253,"habitat":"Humid","categories":["Cleanliness","Exercise","Lots of water","Ocean vibes","Shiny stuff"],"icon":"658.png"},"vaporeon":{"name":"Vaporeon","num":281,"habitat":"Humid","categories":["Cleanliness","Cute stuff","Lots of water","Pretty flowers","Watching stuff"],"icon":"134.png"},"suicune":{"name":"Suicune","num":292,"habitat":"Humid","categories":["Cleanliness","Healing","Lots of water","Ocean vibes","Watching stuff"],"icon":"245.png"},"ivysaur":{"name":"Ivysaur","num":2,"habitat":"Bright","categories":["Colorful stuff","Cute stuff","Lots of nature","Pretty flowers","Soft stuff"],"icon":"002.png"},"vileplume":{"name":"Vileplume","num":15,"habitat":"Humid","categories":["Colorful stuff","Lots of dirt","Lots of nature","Pretty flowers","Soft stuff"],"icon":"045.png"},"weepinbell":{"name":"Weepinbell","num":22,"habitat":"Humid","categories":["Colorful stuff","Lots of dirt","Lots of nature","Pretty flowers","Wooden stuff"],"icon":"070.png"},"victreebel":{"name":"Victreebel","num":23,"habitat":"Humid","categories":["Colorful stuff","Lots of dirt","Lots of nature","Pretty flowers","Wooden stuff"],"icon":"071.png"},"gulpin":{"name":"Gulpin","num":53,"habitat":"Humid","categories":["Colorful stuff","Containers","Cute stuff","Looks like food","Round stuff"],"icon":"316.png"},"swalot":{"name":"Swalot","num":54,"habitat":"Humid","categories":["Colorful stuff","Containers","Garbage","Looks like food","Round stuff"],"icon":"317.png"},"muk":{"name":"Muk","num":92,"habitat":"Dark","categories":["Colorful stuff","Garbage","Gatherings","Shiny stuff","Spooky stuff"],"icon":"089.png"},"voltorb":{"name":"Voltorb","num":96,"habitat":"Bright","categories":["Colorful stuff","Electronics","Round stuff","Shiny stuff","Spinning stuff"],"icon":"100.png"},"spinarak":{"name":"Spinarak","num":109,"habitat":"Humid","categories":["Colorful stuff","Garbage","Lots of nature","Rides","Wooden stuff"],"icon":"167.png"},"ariados":{"name":"Ariados","num":110,"habitat":"Humid","categories":["Colorful stuff","Garbage","Lots of nature","Rides","Wooden stuff"],"icon":"168.png"},"smeargle":{"name":"Smeargle","num":119,"habitat":"Bright","categories":["Colorful stuff","Fabric","Shiny stuff","Soft stuff","Strange stuff"],"icon":"235-smearguru.png"},"cleffa":{"name":"Cleffa","num":148,"habitat":"Dark","categories":["Colorful stuff","Cute stuff","Healing","Rides","Round stuff"],"icon":"173.png"},"mawile":{"name":"Mawile","num":175,"habitat":"Bright","categories":["Colorful stuff","Cute stuff","Group Activities","Looks like food","Metal stuff"],"icon":"303.png"},"kricketot":{"name":"Kricketot","num":177,"habitat":"Dark","categories":["Colorful stuff","Lots of nature","Noisy stuff","Watching stuff","Wooden stuff"],"icon":"401.png"},"kricketune":{"name":"Kricketune","num":178,"habitat":"Dark","categories":["Colorful stuff","Lots of nature","Noisy stuff","Watching stuff","Wooden stuff"],"icon":"402.png"},"porygon2":{"name":"Porygon2","num":219,"habitat":"Bright","categories":["Colorful stuff","Construction","Round stuff","Soft stuff","Strange stuff"],"icon":"233.png"},"porygon-z":{"name":"Porygon-Z","num":220,"habitat":"Bright","categories":["Colorful stuff","Fabric","Soft stuff","Strange stuff","Watching stuff"],"icon":"474.png"},"misdreavus":{"name":"Misdreavus","num":227,"habitat":"Dark","categories":["Colorful stuff","Shiny stuff","Spooky stuff","Strange stuff","Watching stuff"],"icon":"200.png"},"sprigatito":{"name":"Sprigatito","num":263,"habitat":"Bright","categories":["Colorful stuff","Containers","Cute stuff","Lots of nature","Pretty flowers"],"icon":"906.png"},"floragato":{"name":"Floragato","num":264,"habitat":"Bright","categories":["Colorful stuff","Cute stuff","Lots of nature","Pretty flowers","Sharp stuff"],"icon":"907.png"},"venonat":{"name":"Venonat","num":19,"habitat":"Bright","categories":["Complicated stuff","Letters and words","Lots of nature","Watching stuff","Wooden stuff"],"icon":"048.png"},"koffing":{"name":"Koffing","num":38,"habitat":"Dark","categories":["Complicated stuff","Garbage","Gatherings","Soft stuff","Wobbly stuff"],"icon":"109.png"},"weezing":{"name":"Weezing","num":39,"habitat":"Dark","categories":["Complicated stuff","Garbage","Gatherings","Soft stuff","Wobbly stuff"],"icon":"110.png"},"professortangrowth":{"name":"Professor Tangrowth","num":41,"habitat":"Humid","categories":["Complicated stuff","Group Activities","Letters and words","Lots of nature","Strange stuff"],"icon":"465-professortangrowth.png"},"vespiquen":{"name":"Vespiquen","num":58,"habitat":"Bright","categories":["Complicated stuff","Gatherings","Lots of nature","Nice breezes","Wooden stuff"],"icon":"416.png"},"zubat":{"name":"Zubat","num":81,"habitat":"Dark","categories":["Complicated stuff","Nice breezes","Spooky stuff","Wooden stuff"],"icon":"041.png"},"golbat":{"name":"Golbat","num":82,"habitat":"Dark","categories":["Complicated stuff","Nice breezes","Spooky stuff","Wooden stuff"],"icon":"042.png"},"psyduck":{"name":"Psyduck","num":86,"habitat":"Humid","categories":["Complicated stuff","Healing","Lots of water","Ocean vibes","Strange stuff"],"icon":"054.png"},"golduck":{"name":"Golduck","num":87,"habitat":"Humid","categories":["Complicated stuff","Lots of water","Ocean vibes","Sharp stuff","Strange stuff"],"icon":"055.png"},"absol":{"name":"Absol","num":127,"habitat":"Dark","categories":["Complicated stuff","Exercise","Letters and words","Nice breezes","Soft stuff"],"icon":"359.png"},"trubbish":{"name":"Trubbish","num":132,"habitat":"Humid","categories":["Complicated stuff","Construction","Garbage","Gatherings","Shiny stuff"],"icon":"568.png"},"garbodor":{"name":"Garbodor","num":133,"habitat":"Humid","categories":["Complicated stuff","Containers","Garbage","Gatherings","Shiny stuff"],"icon":"569.png"},"lucario":{"name":"Lucario","num":181,"habitat":"Dark","categories":["Complicated stuff","Construction","Exercise","Healing","Metal stuff"],"icon":"448.png"},"glimmet":{"name":"Glimmet","num":203,"habitat":"Dark","categories":["Complicated stuff","Garbage","Hard stuff","Shiny stuff","Stone stuff"],"icon":"969.png"},"glimmora":{"name":"Glimmora","num":204,"habitat":"Dark","categories":["Complicated stuff","Garbage","Hard stuff","Shiny stuff","Stone stuff"],"icon":"970.png"},"gimmighoul":{"name":"Gimmighoul","num":205,"habitat":"Dark","categories":["Complicated stuff","Metal stuff","Shiny stuff","Spooky stuff","Strange stuff"],"icon":"999.png"},"gholdengo":{"name":"Gholdengo","num":206,"habitat":"Bright","categories":["Complicated stuff","Metal stuff","Shiny stuff","Spooky stuff","Strange stuff"],"icon":"1000.png"},"beldum":{"name":"Beldum","num":245,"habitat":"Cool","categories":["Complicated stuff","Hard stuff","Metal stuff","Stone stuff","Strange stuff"],"icon":"374.png"},"metang":{"name":"Metang","num":246,"habitat":"Cool","categories":["Complicated stuff","Hard stuff","Metal stuff","Stone stuff","Strange stuff"],"icon":"375.png"},"wattrel":{"name":"Wattrel","num":266,"habitat":"Bright","categories":["Complicated stuff","Electronics","Gatherings","Nice breezes","Ocean vibes"],"icon":"940.png"},"espeon":{"name":"Espeon","num":284,"habitat":"Bright","categories":["Complicated stuff","Cute stuff","Nice breezes","Strange stuff","Watching stuff"],"icon":"196.png"},"mewtwo":{"name":"Mewtwo","num":299,"habitat":"Dark","categories":["Complicated stuff","Letters and words","Stone stuff","Strange stuff","Watching stuff"],"icon":"150.png"},"mew":{"name":"Mew","num":300,"habitat":"Warm","categories":["Complicated stuff","Luxury","Play spaces","Strange stuff","Watching stuff"],"icon":"151.png"},"cubone":{"name":"Cubone","num":32,"habitat":"Dry","categories":["Construction","Exercise","Group Activities","Lots of dirt","Slender objects"],"icon":"104.png"},"marowak":{"name":"Marowak","num":33,"habitat":"Dry","categories":["Construction","Exercise","Lots of dirt","Luxury","Slender objects"],"icon":"105.png"},"gurdurr":{"name":"Gurdurr","num":66,"habitat":"Bright","categories":["Construction","Exercise","Group Activities","Metal stuff","Slender objects"],"icon":"533.png"},"conkeldurr":{"name":"Conkeldurr","num":67,"habitat":"Bright","categories":["Construction","Exercise","Group Activities","Slender objects","Stone stuff"],"icon":"534.png"},"azumarill":{"name":"Azumarill","num":116,"habitat":"Humid","categories":["Construction","Cute stuff","Lots of water","Symbols","Wobbly stuff"],"icon":"184.png"},"combusken":{"name":"Combusken","num":121,"habitat":"Warm","categories":["Construction","Containers","Exercise","Lots of fire","Stone stuff"],"icon":"256.png"},"blaziken":{"name":"Blaziken","num":122,"habitat":"Warm","categories":["Construction","Containers","Exercise","Lots of fire","Luxury"],"icon":"257.png"},"makuhita":{"name":"Makuhita","num":125,"habitat":"Bright","categories":["Construction","Exercise","Fabric","Round stuff","Wooden stuff"],"icon":"296.png"},"hariyama":{"name":"Hariyama","num":126,"habitat":"Bright","categories":["Construction","Exercise","Fabric","Rides","Round stuff"],"icon":"297.png"},"machop":{"name":"Machop","num":156,"habitat":"Bright","categories":["Construction","Exercise","Group Activities","Hard stuff","Stone stuff"],"icon":"066.png"},"machoke":{"name":"Machoke","num":157,"habitat":"Bright","categories":["Construction","Exercise","Group Activities","Hard stuff","Stone stuff"],"icon":"067.png"},"machamp":{"name":"Machamp","num":158,"habitat":"Bright","categories":["Construction","Exercise","Group Activities","Hard stuff","Stone stuff"],"icon":"068.png"},"riolu":{"name":"Riolu","num":180,"habitat":"Dark","categories":["Construction","Exercise","Fabric","Gatherings","Watching stuff"],"icon":"447.png"},"gallade":{"name":"Gallade","num":234,"habitat":"Bright","categories":["Construction","Exercise","Fabric","Healing","Strange stuff"],"icon":"475.png"},"tinkatink":{"name":"Tinkatink","num":268,"habitat":"Bright","categories":["Construction","Cute stuff","Exercise","Looks like food","Metal stuff"],"icon":"957.png"},"tinkatuff":{"name":"Tinkatuff","num":269,"habitat":"Bright","categories":["Construction","Cute stuff","Exercise","Group Activities","Metal stuff"],"icon":"958.png"},"noctowl":{"name":"Noctowl","num":49,"habitat":"Dark","categories":["Containers","Letters and words","Nice breezes","Soft stuff","Watching stuff"],"icon":"164.png"},"lampent":{"name":"Lampent","num":69,"habitat":"Warm","categories":["Containers","Lots of fire","Spooky stuff","Strange stuff","Wobbly stuff"],"icon":"608.png"},"meowth":{"name":"Meowth","num":84,"habitat":"Cool","categories":["Containers","Glass stuff","Group Activities","Luxury","Shiny stuff"],"icon":"052.png"},"persian":{"name":"Persian","num":85,"habitat":"Cool","categories":["Containers","Group Activities","Luxury","Shiny stuff","Watching stuff"],"icon":"053.png"},"grimer":{"name":"Grimer","num":91,"habitat":"Dark","categories":["Containers","Garbage","Gatherings","Shiny stuff","Spooky stuff"],"icon":"088.png"},"gastly":{"name":"Gastly","num":93,"habitat":"Dark","categories":["Containers","Garbage","Group Activities","Spooky stuff","Strange stuff"],"icon":"092.png"},"happiny":{"name":"Happiny","num":100,"habitat":"Bright","categories":["Containers","Fabric","Healing","Round stuff","Soft stuff"],"icon":"440.png"},"torchic":{"name":"Torchic","num":120,"habitat":"Warm","categories":["Containers","Cute stuff","Lots of fire","Pretty flowers","Stone stuff"],"icon":"255.png"},"grubbin":{"name":"Grubbin","num":138,"habitat":"Bright","categories":["Containers","Electronics","Lots of dirt","Lots of nature","Watching stuff"],"icon":"736.png"},"tatsugiristretchyform":{"name":"Tatsugiri Stretchy Form","num":145,"habitat":"Humid","categories":["Containers","Group Activities","Letters and words","Lots of water","Ocean vibes"],"icon":"978-tatsugiristretchyform.png"},"ludicolo":{"name":"Ludicolo","num":174,"habitat":"Humid","categories":["Containers","Lots of nature","Lots of water","Noisy stuff","Play spaces"],"icon":"272.png"},"rowlet":{"name":"Rowlet","num":185,"habitat":"Dark","categories":["Containers","Lots of nature","Nice breezes","Spinning stuff","Wooden stuff"],"icon":"722.png"},"raboot":{"name":"Raboot","num":189,"habitat":"Warm","categories":["Containers","Group Activities","Lots of fire","Play spaces","Stone stuff"],"icon":"814.png"},"kadabra":{"name":"Kadabra","num":214,"habitat":"Dark","categories":["Containers","Metal stuff","Strange stuff","Watching stuff","Wobbly stuff"],"icon":"064.png"},"dusclops":{"name":"Dusclops","num":243,"habitat":"Dark","categories":["Containers","Rides","Soft stuff","Spooky stuff","Strange stuff"],"icon":"356.png"},"dusknoir":{"name":"Dusknoir","num":244,"habitat":"Dark","categories":["Containers","Group Activities","Rides","Spooky stuff","Strange stuff"],"icon":"477.png"},"serperior":{"name":"Serperior","num":250,"habitat":"Humid","categories":["Containers","Lots of nature","Lots of water","Slender objects","Wooden stuff"],"icon":"497.png"},"rookidee":{"name":"Rookidee","num":257,"habitat":"Bright","categories":["Containers","Nice breezes","Shiny stuff","Slender objects","Wooden stuff"],"icon":"821.png"},"corvisquire":{"name":"Corvisquire","num":258,"habitat":"Bright","categories":["Containers","Nice breezes","Shiny stuff","Slender objects","Wooden stuff"],"icon":"822.png"},"corviknight":{"name":"Corviknight","num":259,"habitat":"Bright","categories":["Containers","Metal stuff","Nice breezes","Shiny stuff","Wooden stuff"],"icon":"823.png"},"amaura":{"name":"Amaura","num":278,"habitat":"Cool","categories":["Containers","Group Activities","Hard stuff","Shiny stuff","Stone stuff"],"icon":"698.png"},"volcanion":{"name":"Volcanion","num":293,"habitat":"Warm","categories":["Containers","Lots of fire","Lots of water","Stone stuff","Symbols"],"icon":"721.png"},"bulbasaur":{"name":"Bulbasaur","num":1,"habitat":"Bright","categories":["Cute stuff","Group Activities","Lots of nature","Lots of water","Soft stuff"],"icon":"001.png"},"venusaur":{"name":"Venusaur","num":3,"habitat":"Bright","categories":["Cute stuff","Lots of nature","Luxury","Pretty flowers","Soft stuff"],"icon":"003.png"},"bellossom":{"name":"Bellossom","num":16,"habitat":"Bright","categories":["Cute stuff","Lots of nature","Noisy stuff","Play spaces","Pretty flowers"],"icon":"182.png"},"volbeat":{"name":"Volbeat","num":51,"habitat":"Dark","categories":["Cute stuff","Group Activities","Lots of nature","Shiny stuff","Wooden stuff"],"icon":"313.png"},"illumise":{"name":"Illumise","num":52,"habitat":"Dark","categories":["Cute stuff","Group Activities","Lots of nature","Shiny stuff","Wooden stuff"],"icon":"314.png"},"cacnea":{"name":"Cacnea","num":55,"habitat":"Dry","categories":["Cute stuff","Lots of nature","Pretty flowers","Round stuff","Sharp stuff"],"icon":"331.png"},"drifloon":{"name":"Drifloon","num":61,"habitat":"Warm","categories":["Cute stuff","Nice breezes","Round stuff","Spooky stuff","Strange stuff"],"icon":"425.png"},"pichu":{"name":"Pichu","num":78,"habitat":"Bright","categories":["Cute stuff","Electronics","Fabric","Glass stuff","Pretty flowers"],"icon":"172.png"},"peakychu":{"name":"Peakychu","num":79,"habitat":"Bright","categories":["Cute stuff","Electronics","Glass stuff","Healing","Letters and words"],"icon":"025-peakychu.png"},"elekid":{"name":"Elekid","num":103,"habitat":"Bright","categories":["Cute stuff","Electronics","Glass stuff","Round stuff","Spinning stuff"],"icon":"239.png"},"mareep":{"name":"Mareep","num":111,"habitat":"Bright","categories":["Cute stuff","Electronics","Fabric","Glass stuff","Shiny stuff"],"icon":"179.png"},"flaaffy":{"name":"Flaaffy","num":112,"habitat":"Bright","categories":["Cute stuff","Electronics","Glass stuff","Rides","Shiny stuff"],"icon":"180.png"},"ampharos":{"name":"Ampharos","num":113,"habitat":"Bright","categories":["Cute stuff","Electronics","Glass stuff","Pretty flowers","Shiny stuff"],"icon":"181.png"},"audino":{"name":"Audino","num":131,"habitat":"Bright","categories":["Cute stuff","Fabric","Healing","Round stuff","Soft stuff"],"icon":"531.png"},"zorua":{"name":"Zorua","num":134,"habitat":"Dark","categories":["Cute stuff","Glass stuff","Group Activities","Luxury","Shiny stuff"],"icon":"570.png"},"mimikyu":{"name":"Mimikyu","num":141,"habitat":"Dark","categories":["Cute stuff","Electronics","Fabric","Group Activities","Spooky stuff"],"icon":"778.png"},"pawmi":{"name":"Pawmi","num":142,"habitat":"Bright","categories":["Cute stuff","Electronics","Glass stuff","Group Activities","Shiny stuff"],"icon":"921.png"},"clefairy":{"name":"Clefairy","num":149,"habitat":"Dark","categories":["Cute stuff","Group Activities","Healing","Play spaces","Pretty flowers"],"icon":"035.png"},"clefable":{"name":"Clefable","num":150,"habitat":"Dark","categories":["Cute stuff","Group Activities","Healing","Play spaces","Pretty flowers"],"icon":"036.png"},"igglybuff":{"name":"Igglybuff","num":151,"habitat":"Warm","categories":["Cute stuff","Healing","Noisy stuff","Play spaces","Soft stuff"],"icon":"174.png"},"jigglypuff":{"name":"Jigglypuff","num":152,"habitat":"Bright","categories":["Cute stuff","Healing","Play spaces","Soft stuff","Wobbly stuff"],"icon":"039.png"},"wigglytuff":{"name":"Wigglytuff","num":153,"habitat":"Bright","categories":["Cute stuff","Group Activities","Healing","Play spaces","Soft stuff"],"icon":"040.png"},"diglett":{"name":"Diglett","num":154,"habitat":"Dark","categories":["Cute stuff","Group Activities","Lots of dirt","Play spaces","Slender objects"],"icon":"050.png"},"magby":{"name":"Magby","num":162,"habitat":"Warm","categories":["Cute stuff","Lots of fire","Stone stuff","Watching stuff","Wobbly stuff"],"icon":"240.png"},"fidough":{"name":"Fidough","num":198,"habitat":"Warm","categories":["Cute stuff","Letters and words","Lots of fire","Soft stuff","Watching stuff"],"icon":"926.png"},"dachsbun":{"name":"Dachsbun","num":199,"habitat":"Warm","categories":["Cute stuff","Group Activities","Looks like food","Lots of fire","Watching stuff"],"icon":"927.png"},"vulpix":{"name":"Vulpix","num":207,"habitat":"Warm","categories":["Cute stuff","Lots of fire","Pretty flowers","Round stuff","Soft stuff"],"icon":"037.png"},"ralts":{"name":"Ralts","num":231,"habitat":"Bright","categories":["Cute stuff","Healing","Strange stuff","Symbols","Watching stuff"],"icon":"280.png"},"kirlia":{"name":"Kirlia","num":232,"habitat":"Bright","categories":["Cute stuff","Healing","Strange stuff","Symbols","Watching stuff"],"icon":"281.png"},"plusle":{"name":"Plusle","num":235,"habitat":"Bright","categories":["Cute stuff","Electronics","Glass stuff","Group Activities","Soft stuff"],"icon":"311.png"},"minun":{"name":"Minun","num":236,"habitat":"Bright","categories":["Cute stuff","Electronics","Glass stuff","Group Activities","Soft stuff"],"icon":"312.png"},"altaria":{"name":"Altaria","num":241,"habitat":"Bright","categories":["Cute stuff","Nice breezes","Noisy stuff","Soft stuff","Watching stuff"],"icon":"334.png"},"dedenne":{"name":"Dedenne","num":254,"habitat":"Bright","categories":["Cute stuff","Electronics","Group Activities","Looks like food","Watching stuff"],"icon":"702.png"},"meowscarada":{"name":"Meowscarada","num":265,"habitat":"Bright","categories":["Cute stuff","Lots of nature","Luxury","Pretty flowers","Shiny stuff"],"icon":"908.png"},"eevee":{"name":"Eevee","num":280,"habitat":"Warm","categories":["Cute stuff","Group Activities","Letters and words","Soft stuff","Stone stuff"],"icon":"133.png"},"jolteon":{"name":"Jolteon","num":282,"habitat":"Bright","categories":["Cute stuff","Electronics","Glass stuff","Sharp stuff","Shiny stuff"],"icon":"135.png"},"flareon":{"name":"Flareon","num":283,"habitat":"Warm","categories":["Cute stuff","Lots of fire","Metal stuff","Rides","Wooden stuff"],"icon":"136.png"},"umbreon":{"name":"Umbreon","num":285,"habitat":"Dark","categories":["Cute stuff","Letters and words","Luxury","Shiny stuff","Watching stuff"],"icon":"197.png"},"leafeon":{"name":"Leafeon","num":286,"habitat":"Bright","categories":["Cute stuff","Fabric","Healing","Lots of nature","Pretty flowers"],"icon":"470.png"},"glaceon":{"name":"Glaceon","num":287,"habitat":"Cool","categories":["Cute stuff","Glass stuff","Group Activities","Lots of water","Shiny stuff"],"icon":"471.png"},"sylveon":{"name":"Sylveon","num":288,"habitat":"Warm","categories":["Cute stuff","Fabric","Lots of nature","Noisy stuff","Round stuff"],"icon":"700.png"},"magnemite":{"name":"Magnemite","num":27,"habitat":"Bright","categories":["Electronics","Group Activities","Hard stuff","Metal stuff","Shiny stuff"],"icon":"081.png"},"magneton":{"name":"Magneton","num":28,"habitat":"Bright","categories":["Electronics","Gatherings","Group Activities","Metal stuff","Shiny stuff"],"icon":"082.png"},"magnezone":{"name":"Magnezone","num":29,"habitat":"Bright","categories":["Electronics","Gatherings","Hard stuff","Luxury","Metal stuff"],"icon":"462.png"},"pikachu":{"name":"Pikachu","num":79,"habitat":"Bright","categories":["Electronics","Glass stuff","Group Activities","Rides","Round stuff"],"icon":"025.png"},"raichu":{"name":"Raichu","num":80,"habitat":"Bright","categories":["Electronics","Glass stuff","Group Activities","Play spaces","Round stuff"],"icon":"026.png"},"electrode":{"name":"Electrode","num":97,"habitat":"Bright","categories":["Electronics","Play spaces","Round stuff","Shiny stuff","Spinning stuff"],"icon":"101.png"},"electabuzz":{"name":"Electabuzz","num":104,"habitat":"Bright","categories":["Electronics","Exercise","Glass stuff","Lots of fire","Sharp stuff"],"icon":"125.png"},"electivire":{"name":"Electivire","num":105,"habitat":"Bright","categories":["Electronics","Exercise","Glass stuff","Hard stuff","Lots of fire"],"icon":"466.png"},"vikavolt":{"name":"Vikavolt","num":140,"habitat":"Bright","categories":["Electronics","Exercise","Glass stuff","Lots of nature","Nice breezes"],"icon":"738.png"},"pawmo":{"name":"Pawmo","num":143,"habitat":"Bright","categories":["Electronics","Exercise","Glass stuff","Group Activities","Shiny stuff"],"icon":"922.png"},"pawmot":{"name":"Pawmot","num":144,"habitat":"Bright","categories":["Electronics","Exercise","Group Activities","Healing","Shiny stuff"],"icon":"923.png"},"magmar":{"name":"Magmar","num":163,"habitat":"Warm","categories":["Electronics","Exercise","Hard stuff","Lots of fire","Stone stuff"],"icon":"126.png"},"magmortar":{"name":"Magmortar","num":164,"habitat":"Warm","categories":["Electronics","Exercise","Hard stuff","Lots of fire","Stone stuff"],"icon":"467.png"},"toxel":{"name":"Toxel","num":196,"habitat":"Humid","categories":["Electronics","Garbage","Glass stuff","Noisy stuff","Shiny stuff"],"icon":"848.png"},"toxtricityampedform":{"name":"Toxtricity Amped Form","num":197,"habitat":"Humid","categories":["Electronics","Noisy stuff","Play spaces","Sharp stuff","Slender objects"],"icon":"849-toxtricityampedform.png"},"toxtricitylowkeyform":{"name":"Toxtricity Low Key Form","num":197,"habitat":"Humid","categories":["Electronics","Noisy stuff","Play spaces","Sharp stuff","Slender objects"],"icon":"849-toxtricitylowkeyform.png"},"kilowattrel":{"name":"Kilowattrel","num":267,"habitat":"Bright","categories":["Electronics","Gatherings","Nice breezes","Ocean vibes","Slender objects"],"icon":"941.png"},"raikou":{"name":"Raikou","num":290,"habitat":"Bright","categories":["Electronics","Glass stuff","Luxury","Nice breezes","Shiny stuff"],"icon":"243.png"},"zapdos":{"name":"Zapdos","num":295,"habitat":"Bright","categories":["Electronics","Glass stuff","Luxury","Nice breezes","Symbols"],"icon":"145.png"},"charmander":{"name":"Charmander","num":4,"habitat":"Warm","categories":["Exercise","Group Activities","Hard stuff","Lots of fire","Wooden stuff"],"icon":"004.png"},"charmeleon":{"name":"Charmeleon","num":5,"habitat":"Warm","categories":["Exercise","Hard stuff","Lots of fire","Rides","Wooden stuff"],"icon":"005.png"},"charizard":{"name":"Charizard","num":6,"habitat":"Warm","categories":["Exercise","Lots of fire","Luxury","Nice breezes","Wooden stuff"],"icon":"006.png"},"tyrogue":{"name":"Tyrogue","num":34,"habitat":"Bright","categories":["Exercise","Fabric","Group Activities","Round stuff","Stone stuff"],"icon":"236.png"},"hitmonlee":{"name":"Hitmonlee","num":35,"habitat":"Bright","categories":["Exercise","Fabric","Group Activities","Round stuff","Stone stuff"],"icon":"106.png"},"hitmonchan":{"name":"Hitmonchan","num":36,"habitat":"Bright","categories":["Exercise","Fabric","Group Activities","Round stuff","Stone stuff"],"icon":"107.png"},"hitmontop":{"name":"Hitmontop","num":37,"habitat":"Bright","categories":["Exercise","Fabric","Group Activities","Round stuff","Stone stuff"],"icon":"237.png"},"scyther":{"name":"Scyther","num":42,"habitat":"Bright","categories":["Exercise","Lots of nature","Nice breezes","Sharp stuff","Wooden stuff"],"icon":"123.png"},"scizor":{"name":"Scizor","num":43,"habitat":"Bright","categories":["Exercise","Hard stuff","Lots of nature","Metal stuff","Wooden stuff"],"icon":"212.png"},"pinsir":{"name":"Pinsir","num":44,"habitat":"Bright","categories":["Exercise","Lots of nature","Pretty flowers","Sharp stuff","Wooden stuff"],"icon":"127.png"},"heracross":{"name":"Heracross","num":50,"habitat":"Bright","categories":["Exercise","Looks like food","Lots of nature","Pretty flowers","Wooden stuff"],"icon":"214.png"},"excadrill":{"name":"Excadrill","num":64,"habitat":"Dark","categories":["Exercise","Lots of dirt","Metal stuff","Sharp stuff","Watching stuff"],"icon":"530.png"},"fraxure":{"name":"Fraxure","num":72,"habitat":"Dark","categories":["Exercise","Lots of dirt","Lots of fire","Luxury","Sharp stuff"],"icon":"611.png"},"haxorus":{"name":"Haxorus","num":73,"habitat":"Dark","categories":["Exercise","Lots of dirt","Lots of fire","Luxury","Sharp stuff"],"icon":"612.png"},"geodude":{"name":"Geodude","num":159,"habitat":"Dark","categories":["Exercise","Hard stuff","Round stuff","Spinning stuff","Stone stuff"],"icon":"074.png"},"graveler":{"name":"Graveler","num":160,"habitat":"Dark","categories":["Exercise","Hard stuff","Round stuff","Spinning stuff","Stone stuff"],"icon":"075.png"},"golem":{"name":"Golem","num":161,"habitat":"Dark","categories":["Exercise","Hard stuff","Round stuff","Spinning stuff","Stone stuff"],"icon":"076.png"},"tyranitar":{"name":"Tyranitar","num":171,"habitat":"Dark","categories":["Exercise","Hard stuff","Luxury","Shiny stuff","Stone stuff"],"icon":"248.png"},"charcadet":{"name":"Charcadet","num":200,"habitat":"Warm","categories":["Exercise","Lots of fire","Luxury","Stone stuff","Strange stuff"],"icon":"935.png"},"armarouge":{"name":"Armarouge","num":201,"habitat":"Warm","categories":["Exercise","Lots of fire","Luxury","Stone stuff","Strange stuff"],"icon":"936.png"},"trapinch":{"name":"Trapinch","num":237,"habitat":"Dry","categories":["Exercise","Hard stuff","Lots of dirt","Strange stuff","Watching stuff"],"icon":"328.png"},"metagross":{"name":"Metagross","num":247,"habitat":"Cool","categories":["Exercise","Hard stuff","Luxury","Metal stuff","Strange stuff"],"icon":"376.png"},"cranidos":{"name":"Cranidos","num":272,"habitat":"Dry","categories":["Exercise","Group Activities","Hard stuff","Stone stuff","Wobbly stuff"],"icon":"408.png"},"rampardos":{"name":"Rampardos","num":273,"habitat":"Dry","categories":["Exercise","Hard stuff","Luxury","Metal stuff","Stone stuff"],"icon":"409.png"},"bastiodon":{"name":"Bastiodon","num":275,"habitat":"Dry","categories":["Exercise","Hard stuff","Luxury","Metal stuff","Stone stuff"],"icon":"411.png"},"tyrunt":{"name":"Tyrunt","num":276,"habitat":"Dry","categories":["Exercise","Hard stuff","Lots of fire","Luxury","Stone stuff"],"icon":"696.png"},"tyrantrum":{"name":"Tyrantrum","num":277,"habitat":"Dry","categories":["Exercise","Hard stuff","Lots of fire","Luxury","Stone stuff"],"icon":"697.png"},"entei":{"name":"Entei","num":291,"habitat":"Warm","categories":["Exercise","Lots of fire","Luxury","Stone stuff","Symbols"],"icon":"244.png"},"hoothoot":{"name":"Hoothoot","num":48,"habitat":"Dark","categories":["Fabric","Nice breezes","Soft stuff","Watching stuff","Wobbly stuff"],"icon":"163.png"},"chansey":{"name":"Chansey","num":101,"habitat":"Bright","categories":["Fabric","Group Activities","Healing","Round stuff","Soft stuff"],"icon":"113.png"},"blissey":{"name":"Blissey","num":102,"habitat":"Bright","categories":["Fabric","Group Activities","Healing","Round stuff","Soft stuff"],"icon":"242.png"},"mosslax":{"name":"Mosslax","num":108,"habitat":"Bright","categories":["Fabric","Looks like food","Soft stuff","Strange stuff","Watching stuff"],"icon":"143-mosslax.png"},"snorlax":{"name":"Snorlax","num":108,"habitat":"Warm","categories":["Fabric","Looks like food","Rides","Soft stuff","Wobbly stuff"],"icon":"143.png"},"murkrow":{"name":"Murkrow","num":167,"habitat":"Dark","categories":["Fabric","Group Activities","Luxury","Nice breezes","Shiny stuff"],"icon":"198.png"},"chatot":{"name":"Chatot","num":179,"habitat":"Warm","categories":["Fabric","Nice breezes","Noisy stuff","Play spaces","Slender objects"],"icon":"441.png"},"cyndaquil":{"name":"Cyndaquil","num":224,"habitat":"Warm","categories":["Fabric","Lots of fire","Metal stuff","Rides","Slender objects"],"icon":"155.png"},"quilava":{"name":"Quilava","num":225,"habitat":"Warm","categories":["Fabric","Lots of fire","Metal stuff","Rides","Slender objects"],"icon":"156.png"},"typhlosion":{"name":"Typhlosion","num":226,"habitat":"Warm","categories":["Fabric","Lots of fire","Metal stuff","Rides","Slender objects"],"icon":"157.png"},"duskull":{"name":"Duskull","num":242,"habitat":"Dark","categories":["Fabric","Glass stuff","Rides","Spooky stuff","Strange stuff"],"icon":"355.png"},"gloom":{"name":"Gloom","num":14,"habitat":"Humid","categories":["Garbage","Lots of dirt","Lots of nature","Pretty flowers","Soft stuff"],"icon":"044.png"},"crobat":{"name":"Crobat","num":83,"habitat":"Dark","categories":["Garbage","Nice breezes","Spooky stuff","Watching stuff","Wooden stuff"],"icon":"169.png"},"haunter":{"name":"Haunter","num":94,"habitat":"Dark","categories":["Garbage","Group Activities","Spooky stuff","Strange stuff","Wobbly stuff"],"icon":"093.png"},"gengar":{"name":"Gengar","num":95,"habitat":"Dark","categories":["Garbage","Group Activities","Rides","Spooky stuff","Strange stuff"],"icon":"094.png"},"ekans":{"name":"Ekans","num":146,"habitat":"Dark","categories":["Garbage","Lots of nature","Slender objects","Spinning stuff","Watching stuff"],"icon":"023.png"},"arbok":{"name":"Arbok","num":147,"habitat":"Dark","categories":["Garbage","Lots of nature","Slender objects","Spinning stuff","Watching stuff"],"icon":"024.png"},"tangela":{"name":"Tangela","num":40,"habitat":"Bright","categories":["Gatherings","Lots of nature","Lots of water","Pretty flowers","Slender objects"],"icon":"114.png"},"tangrowth":{"name":"Tangrowth","num":41,"habitat":"Humid","categories":["Gatherings","Lots of nature","Lots of water","Pretty flowers","Watching stuff"],"icon":"465.png"},"combee":{"name":"Combee","num":57,"habitat":"Bright","categories":["Gatherings","Group Activities","Lots of nature","Nice breezes","Wooden stuff"],"icon":"415.png"},"exeggcute":{"name":"Exeggcute","num":98,"habitat":"Bright","categories":["Gatherings","Group Activities","Lots of nature","Strange stuff","Watching stuff"],"icon":"102.png"},"exeggutor":{"name":"Exeggutor","num":99,"habitat":"Bright","categories":["Gatherings","Lots of nature","Strange stuff","Watching stuff","Wooden stuff"],"icon":"103.png"},"tatsugiricurlyform":{"name":"Tatsugiri Curly Form","num":145,"habitat":"Humid","categories":["Gatherings","Group Activities","Lots of water","Ocean vibes"],"icon":"978-tatsugiricurlyform.png"},"dugtrio":{"name":"Dugtrio","num":155,"habitat":"Dark","categories":["Gatherings","Group Activities","Lots of dirt","Play spaces","Slender objects"],"icon":"051.png"},"politoed":{"name":"Politoed","num":212,"habitat":"Humid","categories":["Gatherings","Group Activities","Lots of water","Noisy stuff","Play spaces"],"icon":"186.png"},"zoroark":{"name":"Zoroark","num":135,"habitat":"Dark","categories":["Glass stuff","Group Activities","Luxury","Shiny stuff","Strange stuff"],"icon":"571.png"},"honchkrow":{"name":"Honchkrow","num":168,"habitat":"Dark","categories":["Glass stuff","Letters and words","Nice breezes","Shiny stuff","Spooky stuff"],"icon":"430.png"},"kyogre":{"name":"Kyogre","num":289,"habitat":"Humid","categories":["Glass stuff","Lots of water","Luxury","Ocean vibes","Shiny stuff"],"icon":"382.png"},"magikarp":{"name":"Magikarp","num":45,"habitat":"Humid","categories":["Group Activities","Lots of water","Ocean vibes","Rides","Wobbly stuff"],"icon":"129.png"},"munchlax":{"name":"Munchlax","num":107,"habitat":"Warm","categories":["Group Activities","Looks like food","Lots of nature","Soft stuff","Wobbly stuff"],"icon":"446.png"},"scorbunny":{"name":"Scorbunny","num":188,"habitat":"Warm","categories":["Group Activities","Lots of fire","Sharp stuff","Soft stuff","Stone stuff"],"icon":"813.png"},"cinderace":{"name":"Cinderace","num":190,"habitat":"Warm","categories":["Group Activities","Lots of fire","Play spaces","Round stuff","Stone stuff"],"icon":"815.png"},"greedent":{"name":"Greedent","num":192,"habitat":"Warm","categories":["Group Activities","Looks like food","Luxury","Metal stuff","Soft stuff"],"icon":"820-cook.png"},"mismagius":{"name":"Mismagius","num":228,"habitat":"Dark","categories":["Group Activities","Noisy stuff","Spooky stuff","Strange stuff","Wobbly stuff"],"icon":"429.png"},"dreepy":{"name":"Dreepy","num":260,"habitat":"Humid","categories":["Group Activities","Lots of fire","Rides","Spooky stuff","Strange stuff"],"icon":"885.png"},"drakloak":{"name":"Drakloak","num":261,"habitat":"Humid","categories":["Group Activities","Lots of fire","Rides","Spooky stuff","Strange stuff"],"icon":"886.png"},"dragapult":{"name":"Dragapult","num":262,"habitat":"Humid","categories":["Group Activities","Lots of fire","Rides","Spooky stuff","Strange stuff"],"icon":"887.png"},"steelix":{"name":"Steelix","num":31,"habitat":"Dry","categories":["Hard stuff","Lots of dirt","Metal stuff","Slender objects","Stone stuff"],"icon":"208.png"},"axew":{"name":"Axew","num":71,"habitat":"Dark","categories":["Hard stuff","Lots of dirt","Lots of fire","Luxury","Sharp stuff"],"icon":"610.png"},"bonsly":{"name":"Bonsly","num":165,"habitat":"Dry","categories":["Hard stuff","Lots of nature","Round stuff","Stone stuff","Wooden stuff"],"icon":"438.png"},"sudowoodo":{"name":"Sudowoodo","num":166,"habitat":"Dry","categories":["Hard stuff","Lots of nature","Stone stuff","Watching stuff","Wooden stuff"],"icon":"185.png"},"pupitar":{"name":"Pupitar","num":170,"habitat":"Dark","categories":["Hard stuff","Luxury","Shiny stuff","Stone stuff","Watching stuff"],"icon":"247.png"},"torkoal":{"name":"Torkoal","num":176,"habitat":"Warm","categories":["Hard stuff","Lots of fire","Metal stuff","Stone stuff","Watching stuff"],"icon":"324.png"},"rolycoly":{"name":"Rolycoly","num":193,"habitat":"Warm","categories":["Hard stuff","Lots of fire","Metal stuff","Rides","Stone stuff"],"icon":"837.png"},"carkol":{"name":"Carkol","num":194,"habitat":"Warm","categories":["Hard stuff","Lots of fire","Metal stuff","Rides","Stone stuff"],"icon":"838.png"},"coalossal":{"name":"Coalossal","num":195,"habitat":"Warm","categories":["Hard stuff","Lots of fire","Metal stuff","Rides","Stone stuff"],"icon":"839.png"},"aerodactyl":{"name":"Aerodactyl","num":271,"habitat":"Dry","categories":["Hard stuff","Nice breezes","Shiny stuff","Spinning stuff","Stone stuff"],"icon":"142.png"},"shieldon":{"name":"Shieldon","num":274,"habitat":"Dry","categories":["Hard stuff","Luxury","Metal stuff","Round stuff","Stone stuff"],"icon":"410.png"},"aurorus":{"name":"Aurorus","num":279,"habitat":"Cool","categories":["Hard stuff","Noisy stuff","Shiny stuff","Stone stuff","Symbols"],"icon":"699.png"},"gardevoir":{"name":"Gardevoir","num":233,"habitat":"Bright","categories":["Healing","Luxury","Strange stuff","Symbols","Watching stuff"],"icon":"282.png"},"growlithe":{"name":"Growlithe","num":88,"habitat":"Warm","categories":["Letters and words","Lots of fire","Nice breezes","Pretty flowers","Stone stuff"],"icon":"058.png"},"volcarona":{"name":"Volcarona","num":184,"habitat":"Dry","categories":["Letters and words","Lots of fire","Lots of nature","Symbols","Wooden stuff"],"icon":"637.png"},"decidueye":{"name":"Decidueye","num":187,"habitat":"Dark","categories":["Letters and words","Lots of nature","Nice breezes","Spooky stuff","Wooden stuff"],"icon":"724.png"},"alakazam":{"name":"Alakazam","num":215,"habitat":"Dark","categories":["Letters and words","Metal stuff","Strange stuff","Watching stuff","Wobbly stuff"],"icon":"065.png"},"pidgeotto":{"name":"Pidgeotto","num":11,"habitat":"Bright","categories":["Looks like food","Lots of nature","Nice breezes","Soft stuff","Watching stuff"],"icon":"017.png"},"paras":{"name":"Paras","num":17,"habitat":"Humid","categories":["Looks like food","Lots of dirt","Lots of nature","Watching stuff","Wooden stuff"],"icon":"046.png"},"cramorant":{"name":"Cramorant","num":77,"habitat":"Humid","categories":["Looks like food","Lots of water","Nice breezes","Ocean vibes","Slender objects"],"icon":"845.png"},"larvitar":{"name":"Larvitar","num":169,"habitat":"Dark","categories":["Looks like food","Lots of dirt","Luxury","Shiny stuff","Stone stuff"],"icon":"246.png"},"skwovet":{"name":"Skwovet","num":191,"habitat":"Warm","categories":["Looks like food","Round stuff","Soft stuff","Watching stuff","Wooden stuff"],"icon":"819.png"},"noibat":{"name":"Noibat","num":255,"habitat":"Dark","categories":["Looks like food","Lots of fire","Luxury","Nice breezes","Watching stuff"],"icon":"714.png"},"noivern":{"name":"Noivern","num":256,"habitat":"Dark","categories":["Looks like food","Lots of fire","Nice breezes","Play spaces","Watching stuff"],"icon":"715.png"},"sableye":{"name":"Sableye","num":4,"habitat":"Dark","categories":["Looks like food","Luxury","Shiny stuff","Spooky stuff","Watching stuff"],"icon":"302.png"},"oddish":{"name":"Oddish","num":13,"habitat":"Humid","categories":["Lots of dirt","Lots of nature","Lots of water","Pretty flowers","Soft stuff"],"icon":"043.png"},"parasect":{"name":"Parasect","num":18,"habitat":"Humid","categories":["Lots of dirt","Lots of nature","Strange stuff","Watching stuff","Wooden stuff"],"icon":"047.png"},"bellsprout":{"name":"Bellsprout","num":21,"habitat":"Humid","categories":["Lots of dirt","Lots of nature","Lots of water","Pretty flowers","Wooden stuff"],"icon":"069.png"},"drilbur":{"name":"Drilbur","num":63,"habitat":"Dark","categories":["Lots of dirt","Lots of nature","Sharp stuff","Stone stuff","Watching stuff"],"icon":"529.png"},"vibrava":{"name":"Vibrava","num":238,"habitat":"Dry","categories":["Lots of dirt","Lots of fire","Lots of nature","Luxury","Noisy stuff"],"icon":"329.png"},"flygon":{"name":"Flygon","num":239,"habitat":"Dry","categories":["Lots of dirt","Lots of fire","Lots of nature","Stone stuff","Wooden stuff"],"icon":"330.png"},"chandelure":{"name":"Chandelure","num":70,"habitat":"Warm","categories":["Lots of fire","Spooky stuff","Strange stuff","Watching stuff","Wobbly stuff"],"icon":"609.png"},"arcanine":{"name":"Arcanine","num":89,"habitat":"Warm","categories":["Lots of fire","Nice breezes","Stone stuff","Symbols","Watching stuff"],"icon":"059.png"},"larvesta":{"name":"Larvesta","num":183,"habitat":"Dry","categories":["Lots of fire","Lots of nature","Sharp stuff","Symbols","Wooden stuff"],"icon":"636.png"},"ceruledge":{"name":"Ceruledge","num":202,"habitat":"Warm","categories":["Lots of fire","Luxury","Spooky stuff","Stone stuff","Strange stuff"],"icon":"937.png"},"ninetales":{"name":"Ninetales","num":208,"habitat":"Warm","categories":["Lots of fire","Luxury","Pretty flowers","Soft stuff","Watching stuff"],"icon":"038.png"},"moltres":{"name":"Moltres","num":296,"habitat":"Warm","categories":["Lots of fire","Luxury","Nice breezes","Stone stuff","Symbols"],"icon":"146.png"},"ho-oh":{"name":"Ho-Oh","num":298,"habitat":"Warm","categories":["Lots of fire","Lots of nature","Nice breezes","Symbols","Wooden stuff"],"icon":"250.png"},"pidgey":{"name":"Pidgey","num":10,"habitat":"Bright","categories":["Lots of nature","Nice breezes","Play spaces","Soft stuff","Watching stuff"],"icon":"016.png"},"pidgeot":{"name":"Pidgeot","num":12,"habitat":"Bright","categories":["Lots of nature","Luxury","Nice breezes","Soft stuff","Wooden stuff"],"icon":"018.png"},"venomoth":{"name":"Venomoth","num":20,"habitat":"Bright","categories":["Lots of nature","Nice breezes","Pretty flowers","Watching stuff","Wooden stuff"],"icon":"049.png"},"cacturne":{"name":"Cacturne","num":56,"habitat":"Dry","categories":["Lots of nature","Luxury","Nice breezes","Sharp stuff","Shiny stuff"],"icon":"332.png"},"snivy":{"name":"Snivy","num":248,"habitat":"Humid","categories":["Lots of nature","Lots of water","Shiny stuff","Wobbly stuff","Wooden stuff"],"icon":"495.png"},"hoppip":{"name":"Hoppip","num":1,"habitat":"Bright","categories":["Lots of nature","Nice breezes","Pretty flowers","Soft stuff","Wobbly stuff"],"icon":"187.png"},"skiploom":{"name":"Skiploom","num":2,"habitat":"Bright","categories":["Lots of nature","Nice breezes","Pretty flowers","Soft stuff","Spinning stuff"],"icon":"188.png"},"jumpluff":{"name":"Jumpluff","num":3,"habitat":"Bright","categories":["Lots of nature","Nice breezes","Pretty flowers","Round stuff","Soft stuff"],"icon":"189.png"},"articuno":{"name":"Articuno","num":294,"habitat":"Cool","categories":["Lots of water","Luxury","Nice breezes","Shiny stuff","Symbols"],"icon":"144.png"},"lugia":{"name":"Lugia","num":297,"habitat":"Humid","categories":["Lots of water","Nice breezes","Ocean vibes","Strange stuff","Symbols"],"icon":"249.png"},"abra":{"name":"Abra","num":213,"habitat":"Dark","categories":["Metal stuff","Soft stuff","Strange stuff","Watching stuff","Wobbly stuff"],"icon":"063.png"},"drifblim":{"name":"Drifblim","num":62,"habitat":"Warm","categories":["Nice breezes","Spinning stuff","Spooky stuff","Strange stuff","Wobbly stuff"],"icon":"426.png"},"girafarig":{"name":"Girafarig","num":229,"habitat":"Warm","categories":["Rides","Slender objects","Soft stuff","Strange stuff","Watching stuff"],"icon":"203.png"},"farigiraf":{"name":"Farigiraf","num":230,"habitat":"Warm","categories":["Rides","Slender objects","Soft stuff","Strange stuff","Watching stuff"],"icon":"981.png"}},"itemIcons":{"Wall storage box":"wallstoragebox","Plain chest":"plainchest","Office cabinet":"officecabinet","Antique chest":"antiquechest","Plain closet":"plaincloset","Office locker":"officelocker","Antique closet":"antiquecloset","Office shelf":"officeshelf","Plain stand":"plainstand","Iron stand":"ironstand","Wooden stool":"woodenstool","Iron chair":"ironchair","Public seat":"publicseat","Soft seat":"softseat","Box Sofa":"boxsofa","Log Bed":"logbed","Mini plain bed":"miniplainbed","Wall mirror":"wallmirror","Large mirror":"largemirror","Picnic basket":"picnicbasket","Sandwiches":"sandwiches","Berry basket":"berrybasket","Letter":"letter","Notepad":"notepad","Book":"book","Open Book":"openbook","Papers":"papers","Newspaper":"newspaper","Photo frame":"photoframe","Wall photo frame":"wallphotoframe","Corkboard":"corkboard","Mini bookcase":"minibookcase","Bookcase":"bookcase","Stone fireplace":"stonefireplace","Modern sink":"modernsink","Cooking stove":"cookingstove","Microwave oven":"microwaveoven","Refrigerator":"refrigerator","Washing machine":"washingmachine","Sink":"sink","Tablet":"tablet","Cell phone":"cellphone","Laptop":"laptop","Television":"television","Wall monitor":"wallmonitor","Arcade machine":"arcademachine","Game Boy system":"gameboysystem","Speaker":"speaker","Boo-in-the-box":"boo-in-the-box","Cardboard boxes":"cardboardboxes","Whiteboard":"whiteboard","Control unit":"controlunit","Wall Calendar":"wallcalendar","Hanging scroll":"hangingscroll","Sandbox":"sandbox","Vending machine":"vendingmachine","Chansey plant":"chanseyplant","Inflatable boat":"inflatableboat","Menu board":"menuboard","Worn wooden crate":"wornwoodencrate","Wooden crate":"woodencrate","Large ventilation fan":"largeventilationfan","Frame":"frame","Mini generator":"minigenerator","Wall light":"walllight","Town map":"townmap","Team Rocket Wall Hanging":"teamrocketwallhanging","Waterproof seat":"waterproofseat","Toilet":"toilet","Towel rack":"towelrack","Bathtime set":"bathtimeset","Cleaning supplies":"cleaningsupplies","Shower":"shower","Bathtub":"bathtub","Bouncy blue bathtub":"bouncybluebathtub","Water basin":"waterbasin","Pok&eacute;metal":"pokemetal","Red paint":"redpaint","Blue paint":"bluepaint","Green paint":"greenpaint","Yellow paint":"yellowpaint","Pink paint":"pinkpaint","Cyan paint":"cyanpaint","White paint":"whitepaint","Black paint":"blackpaint","Gaming fridge":"gamingfridge","Stylish stool":"stylishstool","Antique chair":"antiquechair","Pop art chair":"popartchair","Gaming chair":"gamingchair","Antique sofa":"antiquesofa","Pop art sofa":"popartsofa","Pikachu sofa":"pikachusofa","Gaming bed":"gamingbed","Pizza":"pizza","Fried potatoes":"friedpotatoes","Soda float":"sodafloat","Afternoon tea set":"afternoonteaset","Chocolate cookies":"chocolatecookies","Shaved ice":"shavedice","Ribbon cake":"ribboncake","CD rack":"cdrack","Magazine rack":"magazinerack","Gaming PC":"gamingpc","Pinwheels":"pinwheels","Knitting supplies":"knittingsupplies","First aid kit":"firstaidkit","Balloons":"balloons","Punching game":"punchinggame","Hanging banner":"hangingbanner","Party bunting":"partybunting","Berry wall decoration":"berrywalldecoration","Wall-mounted flowers":"wall-mountedflowers","Garden flowers":"gardenflowers","Painting (landscape)":"painting(landscape)","Painting (portrait)":"painting(portrait)","Painting (still life)":"painting(stilllife)","Raichu sign":"raichusign","Photo cutout board":"photocutoutboard","Pok&eacute; Ball light":"pokeballlight","Model planet":"modelplanet","Gaming light":"gaminglight","Paint balloon (white)":"paintballoon(white)","Paint balloon (red)":"paintballoon(red)","Paint balloon (yellow)":"paintballoon(yellow)","Paint balloon (green)":"paintballoon(green)","Paint balloon (rose)":"paintballoon(rose)","Paint balloon (pink)":"paintballoon(pink)","Paint balloon (orange)":"paintballoon(orange)","Paint balloon (purple)":"paintballoon(purple)","Paint balloon (brown)":"paintballoon(brown)","Paint balloon (beige)":"paintballoon(beige)","Paint balloon (black)":"paintballoon(black)","Paint balloon (lime)":"paintballoon(lime)","Paint balloon (plum)":"paintballoon(plum)","Paint balloon (navy)":"paintballoon(navy)","Paint balloon (blue)":"paintballoon(blue)","Paint balloon (cyan)":"paintballoon(cyan)","Paint balloon (gray)":"paintballoon(gray)","Paint balloon (aquamarine)":"paintballoon(aquamarine)","Flowery table setting":"flowerytablesetting","Lunch box":"lunchbox","Hoppip water bottle":"hoppipwaterbottle","Juice trio":"juicetrio","Flower garland":"flowergarland","Jewel wall decoration":"jewelwalldecoration","Treasure":"treasure","Pencil holder":"pencilholder","Fancy pen":"fancypen","Printer":"printer","Computer":"computer","Microscope":"microscope","Science experiment":"scienceexperiment","Jumbled cords":"jumbledcords","Audio mixer":"audiomixer","Spacesuit":"spacesuit","Antique clock":"antiqueclock","Rowlet clock":"rowletclock","Grubby letter":"grubbyletter","Grubby notepad":"grubbynotepad","Grubby book":"grubbybook","Grubby papers":"grubbypapers","Grubby newspaper":"grubbynewspaper","Bike":"bike","Signpost":"signpost","Information board":"informationboard","Cash register":"cashregister","Card reader":"cardreader","Digital camera":"digitalcamera","Sandbags":"sandbags","Metal drum":"metaldrum","Construction supplies":"constructionsupplies","Iron pipes":"ironpipes","Wheelbarrow":"wheelbarrow","Iron-scaffold plank":"iron-scaffoldplank","Iron scaffold":"ironscaffold","Pok&eacute; Ball Chest":"pokeballchest","Berry case":"berrycase","Polygonal Shelf":"polygonalshelf","Luxury dresser":"luxurydresser","Cute dresser":"cutedresser","Mug":"mug","Tea set":"teaset","Small vase":"smallvase","Leafy plant":"leafyplant","Pitcher-plant pot":"pitcher-plantpot","Extravagant flowers":"extravagantflowers","Tall potted plant":"tallpottedplant","Flat-leaf plant":"flat-leafplant","Twisted potted plant":"twistedpottedplant","Small garbage can":"smallgarbagecan","Munna bank":"munnabank","Dining cabinet":"diningcabinet","Wooden birdhouse":"woodenbirdhouse","Mailbox":"mailbox","Barrel":"barrel","Garbage bin":"garbagebin","Recycling bin":"recyclingbin","Flower backpack":"flowerbackpack","Adventure kit":"adventurekit","Oil lantern":"oillantern","Cute table":"cutetable","Pop art table":"poparttable","Berry chair":"berrychair","Cute chair":"cutechair","Cute sofa":"cutesofa","Pop art bed":"popartbed","Berry bed":"berrybed","Cute bed":"cutebed","Wiggly mirror":"wigglymirror","Wobbuffet Wobbler":"wobbuffetwobbler","Berry clock":"berryclock","Castform weather charm":"castformweathercharm","Eevee doll":"eeveedoll","Pikachu doll":"pikachudoll","Clefairy doll":"clefairydoll","Arcanine doll":"arcaninedoll","Dragonite doll":"dragonitedoll","Ditto doll":"dittodoll","Substitute doll":"substitutedoll","Eerie candle":"eeriecandle","Berry table lamp":"berrytablelamp","Cute lamp":"cutelamp","Red meteor lamp":"redmeteorlamp","Orange meteor lamp":"orangemeteorlamp","Yellow meteor lamp":"yellowmeteorlamp","Green meteor lamp":"greenmeteorlamp","Blue meteor lamp":"bluemeteorlamp","Indigo meteor lamp":"indigometeorlamp","Violet meteor lamp":"violetmeteorlamp","Luxury lamp":"luxurylamp","Shell lamp":"shelllamp","Berry hanging lamp":"berryhanginglamp","Cute flower":"cuteflower","Heart Scale":"heartscale","Fairy Feather":"fairyfeather","Flower cushion":"flowercushion","Fan":"fan","Air conditioner":"airconditioner","Humidifier":"humidifier","CD player":"cdplayer","Tabletop mic":"tabletopmic","Standing mic":"standingmic","Cool electric guitar":"coolelectricguitar","Cool bass guitar":"coolbassguitar","Ceiling fan":"ceilingfan","Utility pole":"utilitypole","Wireless power-transmitter switch":"wirelesspower-transmitterswitch","Wireless power transmitter":"wirelesspowertransmitter","Floor switch":"floorswitch","Wall switch":"wallswitch","Laser sensor":"lasersensor","Security camera":"securitycamera","Town streetlight":"townstreetlight","Harbor streetlight":"harborstreetlight","Chic streetlight":"chicstreetlight","Double streetlight":"doublestreetlight","Mushroom lamp":"mushroomlamp","Plain lamp":"plainlamp","Desk light":"desklight","Pok&eacute; Ball lamp":"pokeballlamp","Garden light":"gardenlight","Lantern":"lantern","Seedot Lamp":"seedotlamp","Mirror ball":"mirrorball","Fluorescent light":"fluorescentlight","Resort light":"resortlight","String lights":"stringlights","Pop art lamp":"popartlamp","Surface light":"surfacelight","Spotlight":"spotlight","Antique chandelier":"antiquechandelier","Punching bag":"punchingbag","Fluff":"fluff","Simple cushion":"simplecushion","Plain stool":"plainstool","Resort stool":"resortstool","Plain chair":"plainchair","Resort chair":"resortchair","Chic chair":"chicchair","Fancy chair":"fancychair","Office chair":"officechair","Plain sofa":"plainsofa","Resort sofa":"resortsofa","Chic sofa":"chicsofa","Luxury sofa":"luxurysofa","Resort bed":"resortbed","Iron bed":"ironbed","Beach chair":"beachchair","Pok&eacute; Ball bed":"pokeballbed","Plain bed":"plainbed","Resort hammock":"resorthammock","Guest-room bed":"guest-roombed","Antique bed":"antiquebed","Industrial bed":"industrialbed","Table setting":"tablesetting","Crystal ball":"crystalball","Blank canvas":"blankcanvas","Beach parasol":"beachparasol","Silk Scarf":"silkscarf","Room Service":"roomservice","Camping chair":"campingchair","Sleeping bag":"sleepingbag","Nonburnable garbage":"nonburnablegarbage","Wastepaper":"wastepaper","Grubby tablet":"grubbytablet","Grubby cell phone":"grubbycellphone","Garbage bags":"garbagebags","Nonburnable garbage (outdoor)":"nonburnablegarbage(outdoor)","Paper Party cups":"paperpartycups","Toy blocks":"toyblocks","Decorative bookshelf":"decorativebookshelf","Decorative storage shelf":"decorativestorageshelf","Decorative plant shelf":"decorativeplantshelf","Garden ornament":"gardenornament","Tires":"tires","Sea glass fragments":"seaglassfragments","Crystal fragment":"crystalfragment","Glass":"glass","Antique dresser":"antiquedresser","Alarm Clock":"alarmclock","Spaceship":"spaceship","Clear Amulet":"clearamulet","Modern door":"moderndoor","Glass window":"glasswindow","Window pane":"windowpane","Stained-glass window (upper)":"stained-glasswindow(upper)","Stained-glass window (middle)":"stained-glasswindow(middle)","Stained-glass window (lower)":"stained-glasswindow(lower)","Sash window":"sashwindow","Water pillar quarter":"waterpillarquarter","Red crystal fragment":"redcrystalfragment","Wooden bench":"woodenbench","Stone bench":"stonebench","Iron bench":"ironbench","Industrial bench":"industrialbench","Garden bench":"gardenbench","Pok&eacute; Ball Sofa":"pokeballsofa","Wooden Bed":"woodenbed","Luxury bed":"luxurybed","Campfire":"campfire","Firepit":"firepit","Bonfire":"bonfire","Tire toy":"tiretoy","Slide":"slide","Small stage":"smallstage","Canoe":"canoe","Map and compass":"mapandcompass","Stone":"stone","Iron table":"irontable","Iron rack":"ironrack","Stone table":"stonetable","Strength rock":"strengthrock","Stone tiling (wallpaper)":"stonetiling(wallpaper)","Stone flooring (wallpaper)":"stoneflooring(wallpaper)","Stone brick wall (wallpaper)":"stonebrickwall(wallpaper)","Iron Ball":"ironball","Lagging Tail":"laggingtail","Skull Fossil":"skullfossil","Armor Fossil":"armorfossil","Jaw Fossil":"jawfossil","Sail Fossil":"sailfossil","Wing Fossil (head)":"wingfossil(head)","Wing Fossil (right wing)":"wingfossil(rightwing)","Wing Fossil (left wing)":"wingfossil(leftwing)","Wing fossil (body)":"wingfossil(body)","Wing Fossil (tail)":"wingfossil(tail)","Headbutt Fossil (head)":"headbuttfossil(head)","Headbutt Fossil (body)":"headbuttfossil(body)","Headbutt Fossil (tail)":"headbuttfossil(tail)","Shield Fossil (Head)":"shieldfossil(head)","Shield Fossil (body)":"shieldfossil(body)","Shield Fossil (tail)":"shieldfossil(tail)","Despot Fossil (head)":"despotfossil(head)","Despot Fossil (body)":"despotfossil(body)","Despot Fossil (legs)":"despotfossil(legs)","Despot Fossil (tail)":"despotfossil(tail)","Tundra Fossil (head)":"tundrafossil(head)","Tundra Fossil (body)":"tundrafossil(body)","Tundra Fossil (tail)":"tundrafossil(tail)","Stone brick wall":"stonebrickwall","Stone pillar (upper)":"stonepillar(upper)","Stone pillar (middle)":"stonepillar(middle)","Stone pillar (lower)":"stonepillar(lower)","Stone flooring":"stoneflooring","Stone tiling":"stonetiling","Stone steps":"stonesteps","Stone hipped roof":"stonehippedroof","Stone roof valley":"stoneroofvalley","Stone roof decoration":"stoneroofdecoration","Stone debris":"stonedebris","Metal Debris":"metaldebris","Gravestone":"gravestone","Arrow sign":"arrowsign","Sign":"sign","Weakness Policy":"weaknesspolicy","Berry table":"berrytable","Berry print (wallpaper)":"berryprint(wallpaper)","Leftovers":"leftovers","Berry print":"berryprint","Mud":"mud","Fiery Magby statue":"fierymagbystatue","Torch":"torch","Slender candle":"slendercandle","Wall torch":"walltorch","Smelting furnace":"smeltingfurnace","Metallic smelting furnace":"metallicsmeltingfurnace","Charcoal":"charcoal","Straw table":"strawtable","Log table":"logtable","Garden table":"gardentable","Log chair":"logchair","Garden chair":"gardenchair","Straw bed":"strawbed","Vine wall decoration":"vinewalldecoration","Miracle Seed":"miracleseed","Silver Powder":"silverpowder","Big Root":"bigroot","Funky diffuser":"funkydiffuser","Horsea fountain":"horseafountain","Fire hydrant":"firehydrant","Sprinkler":"sprinkler","Mystic Water":"mysticwater","Antique table":"antiquetable","Chic table":"chictable","Luxury table":"luxurytable","Luxury chair":"luxurychair","Auspicious Armor":"auspiciousarmor","Malicious Armor":"maliciousarmor","Copper ore":"copperore","Iron ore":"ironore","Gold ore":"goldore","Pok&eacute;metal fragment":"pokemetalfragment","Rare Pok&eacute;metal fragment":"rarepokemetalfragment","Copper ingot":"copperingot","Iron ingot":"ironingot","Gold ingot":"goldingot","Industrial desk":"industrialdesk","Office desk":"officedesk","Industrial chair":"industrialchair","Spectator chair":"spectatorchair","Folding chair":"foldingchair","Gold Teeth":"goldteeth","Big Nugget":"bignugget","Step stool":"stepstool","Model space shuttle":"modelspaceshuttle","Weather vane":"weathervane","Cannon":"cannon","Bell":"bell","Fishing rod":"fishingrod","Excavation tools":"excavationtools","Iron-plate flooring (wallpaper)":"iron-plateflooring(wallpaper)","Iron wall":"ironwall","Iron-plate flooring":"iron-plateflooring","Iron deposit":"irondeposit","Iron steps":"ironsteps","Iron ladder":"ironladder","Metal chain":"metalchain","Iron door":"irondoor","Iron gate":"irongate","Corrugated metal":"corrugatedmetal","Metal fragments":"metalfragments","Tidal Bell":"tidalbell","Clear Bell":"clearbell","Music mat (low do)":"musicmat(lowdo)","Music mat (Re)":"musicmat(re)","Music mat (Mi)":"musicmat(mi)","Music mat (Fa)":"musicmat(fa)","Music mat (Sol)":"musicmat(sol)","Music mat (La)":"musicmat(la)","Music mat (Ti)":"musicmat(ti)","Music mat (High do)":"musicmat(highdo)","Deck chair":"deckchair","Ship's Wheel":"ship'swheel","Wildflowers":"wildflowers","Seashore flowers":"seashoreflowers","Mountain flowers":"mountainflowers","Skyland flowers":"skylandflowers","Beautiful flower":"beautifulflower","Elegant flower":"elegantflower","Robust flower":"robustflower","Wildflowers (orange)":"wildflowers(orange)","Wildflowers (purple)":"wildflowers(purple)","Wildflowers (red)":"wildflowers(red)","Wildflowers (blue)":"wildflowers(blue)","Seashore flowers (blue)":"seashoreflowers(blue)","Seashore flowers (orange)":"seashoreflowers(orange)","Seashore flowers (white)":"seashoreflowers(white)","Seashore flowers (yellow)":"seashoreflowers(yellow)","Mountain flowers (pink)":"mountainflowers(pink)","Mountain flowers (purple)":"mountainflowers(purple)","Mountain flowers (red)":"mountainflowers(red)","Mountain flowers (white)":"mountainflowers(white)","Skyland flowers (blue)":"skylandflowers(blue)","Skyland flowers (orange)":"skylandflowers(orange)","Skyland flowers (pink)":"skylandflowers(pink)","Skyland flowers (yellow)":"skylandflowers(yellow)","Beautiful flower (pink)":"beautifulflower(pink)","Beautiful flower (purple)":"beautifulflower(purple)","Beautiful flower (white)":"beautifulflower(white)","Beautiful flower (yellow)":"beautifulflower(yellow)","Cute flower (blue)":"cuteflower(blue)","Cute flower (pink)":"cuteflower(pink)","Cute flower (white)":"cuteflower(white)","Cute flower (yellow)":"cuteflower(yellow)","Elegant flower (orange)":"elegantflower(orange)","Elegant flower (pink)":"elegantflower(pink)","Elegant flower (red)":"elegantflower(red)","Elegant flower (yellow)":"elegantflower(yellow)","Robust flower (blue)":"robustflower(blue)","Robust flower (orange)":"robustflower(orange)","Robust flower (purple)":"robustflower(purple)","Robust flower (white)":"robustflower(white)","Handcar":"handcar","Big drum":"bigdrum","Wreath":"wreath","Concrete pipe":"concretepipe","Firework (white)":"firework(white)","Firework (red)":"firework(red)","Firework (green)":"firework(green)","Firework (yellow)":"firework(yellow)","Firework (blue)":"firework(blue)","Title Screen":"titlescreen","Pallet Town":"pallettown","Oak's Lab":"oak'slab","Road to Viridian City":"roadtoviridiancity","Pewter City Theme":"pewtercitytheme","Pok&eacute;mon Center":"pokemoncenter","Caves of Mt. Moon":"cavesofmt.moon","Road to Cerulean City":"roadtoceruleancity","Fuchsia City Theme":"fuchsiacitytheme","Pok&eacute;mon Gym":"pokemongym","Road to Bill":"roadtobill","Vermilion City Theme":"vermilioncitytheme","The S.S. Anne":"thes.s.anne","Rocket Hideout":"rockethideout","Silph Co.":"silphco.","Battle! (Gym Leader Battle)":"battle!(gymleaderbattle)","Union Cave":"unioncave","Ecruteak City":"ecruteakcity","Bell Tower":"belltower","Fortree City":"fortreecity","Sootopolis City":"sootopoliscity","Route 209 (Day)":"route209(day)","Mt. Coronet":"mt.coronet","Game Corner":"gamecorner","Driftveil City":"driftveilcity","Route 10 (Unova)":"route10(unova)","Dress Up With Props":"dressupwithprops","Snowbelle City":"snowbellecity","Boutique":"boutique","Super Training!":"supertraining!","Contest Spectacular":"contestspectacular","Hau'oli City (Day)":"hau'olicity(day)","Aether Paradise":"aetherparadise","Ultra Ruin":"ultraruin","Wild Area (North)":"wildarea(north)","Wyndon":"wyndon","Rose Tower":"rosetower","Battle! (Gym Leader) 1":"battle!(gymleader)1","Jubilife Village":"jubilifevillage","South Province":"southprovince","The Academy":"theacademy","Area Zero":"areazero","Battle! (Gym Leader) 2":"battle!(gymleader)2","Nugget":"nugget","Silver Bottle Cap":"silverbottlecap","Gold Bottle Cap":"goldbottlecap","Lucky Egg":"luckyegg","Life Orb":"lifeorb","Adrenaline Orb":"adrenalineorb","Flame Orb":"flameorb","Ring Target":"ringtarget","Stardust":"stardust","Gym emblem statue":"gymemblemstatue","Mushroom streetlight":"mushroomstreetlight","Star Piece":"starpiece","Metal Powder":"metalpowder","Rainbow Feather":"rainbowfeather","Silver Feather":"silverfeather","Vine rope":"vinerope","Twine":"twine","Wire":"wire","Rope":"rope","Broken streetlight":"brokenstreetlight","Inflatable Sudowoodo":"inflatablesudowoodo","Squishy clay":"squishyclay","Straw stool":"strawstool","Naptime bed":"naptimebed","Soft Sand":"softsand","Light Clay":"lightclay","Cotton Spores":"cottonspores","Mysterious statue":"mysteriousstatue","Spell Tag":"spelltag","Ditto Flag":"dittoflag","Armor fragment":"armorfragment","Repel":"repel","Large Lost Relic":"largelostrelic","Small Lost Relic":"smalllostrelic","Twisted Spoon":"twistedspoon","Storage box":"storagebox","Big storage box":"bigstoragebox","Food counter":"foodcounter","Plain table":"plaintable","Study desk":"studydesk","Wooden plate":"woodenplate","Cutting board":"cuttingboard","Stone fragments":"stonefragments"}};
+
+const POKEMON = DATA.pokemon;
+const CATEGORIES = DATA.categories;
+const ITEM_ICONS = DATA.itemIcons;
+
+const STRINGS = {
+  en: {
+    eyebrow: 'Pokémon Pokopia · Gift finder',
+    h1: 'What each<br><span class="accent">Pokémon likes</span>',
+    lede: "Type a Pokémon's name and see all the items it likes, grouped by category. Items that appear in multiple categories at once make the perfect gifts.",
+    search_placeholder: 'Search Pokémon… (Lucario, Onix, Eevee…)',
+    try_label: 'Try:',
+    items_total: 'items total',
+    multi_cat: 'in 2+ categories',
+    categories: 'categories',
+    best_gifts: 'Best gifts',
+    best_gifts_pill: 'TOP GIFTS',
+    best_gifts_sub: 'These items appear in multiple categories at once, so they count double (or more).',
+    all_by_cat: 'All, by category',
+    all_by_cat_sub: 'Items marked with ★ appear in more than one of this Pokémon\'s liked categories.',
+    habitat: 'Ideal habitat:',
+    item: n => `${n} item${n === 1 ? '' : 's'}`,
+    cats_x: n => `${n}× categories`,
+    also_in: cats => `+ ${cats}`,
+    goes_well_with: 'Goes well with',
+    placeholder_msg: 'Choose a Pokémon above ✿',
+    placeholder_sub: '308 Pokémon · 608 items · 43 categories',
+  },
+  es: {
+    eyebrow: 'Pokémon Pokopia · Buscador',
+    h1: 'Qué le gusta a<br><span class="accent">cada Pokémon</span>',
+    lede: 'Escribí el nombre de un Pokémon y mirá todos los objetos que le gustan, agrupados por categoría. Los objetos que están en varias categorías a la vez son los regalos perfectos.',
+    search_placeholder: 'Buscá un Pokémon… (Lucario, Onix, Eevee…)',
+    try_label: 'Prueba:',
+    items_total: 'objetos en total',
+    multi_cat: 'en 2+ categorías',
+    categories: 'categorías',
+    best_gifts: 'Los mejores regalos',
+    best_gifts_pill: 'REGALOS TOP',
+    best_gifts_sub: 'Estos objetos aparecen en varias categorías a la vez, así que cuentan doble (o más).',
+    all_by_cat: 'Todo, por categoría',
+    all_by_cat_sub: 'Los objetos marcados con ★ están en más de una de las categorías que le gustan.',
+    habitat: 'Hábitat ideal:',
+    item: n => `${n} objeto${n === 1 ? '' : 's'}`,
+    cats_x: n => `${n}× categorías`,
+    also_in: cats => `+ ${cats}`,
+    goes_well_with: 'Le cae bien con',
+    placeholder_msg: 'Elegí un Pokémon arriba ✿',
+    placeholder_sub: '308 Pokémon · 608 objetos · 43 categorías',
+  },
+};
+
+let lang = localStorage.getItem('pokopia-lang') ?? 'en';
+let currentSlug = null;
+
+function t(key) { return STRINGS[lang][key]; }
+
+function applyLang() {
+  document.getElementById('eyebrow').textContent = t('eyebrow');
+  document.getElementById('main-h1').innerHTML = t('h1');
+  document.getElementById('lede').textContent = t('lede');
+  searchEl.placeholder = t('search_placeholder');
+  document.getElementById('shortcuts-label').textContent = t('try_label');
+  document.getElementById('lang-toggle').textContent = lang === 'en' ? 'ES' : 'EN';
+  const pmsg = document.getElementById('placeholder-msg');
+  if (pmsg) {
+    pmsg.childNodes[0].textContent = t('placeholder_msg') + ' ';
+    document.getElementById('placeholder-sub').textContent = t('placeholder_sub');
+  }
+  if (currentSlug) renderPokemon(currentSlug, POKEMON[currentSlug]);
+}
+
+function renderGoesWellWith(slug, p) {
+  const sameHabitat = POKEMON_LIST.filter(q => q.habitat === p.habitat && q.slug !== slug);
+  const seenNums = new Set();
+  const deduped = sameHabitat.filter(q => {
+    if (seenNums.has(q.num)) return false;
+    seenNums.add(q.num);
+    return true;
+  });
+  const picks = deduped.sort(() => Math.random() - 0.5).slice(0, 6);
+  if (picks.length === 0) return '';
+  return `<div class="gww-section">
+    <div class="section-title">${t('goes_well_with')} <span class="pill">${escapeHtml(p.habitat)}</span></div>
+    <div class="gww-grid">
+      ${picks.map(q => `
+        <button class="gww-card" data-slug="${escapeAttr(q.slug)}">
+          <div class="gww-icon">${imgTag(pkmnIconUrl(q), q.name)}</div>
+          <div class="gww-num">#${String(q.num).padStart(3, '0')}</div>
+          <div class="gww-name">${escapeHtml(q.name)}</div>
+        </button>
+      `).join('')}
+    </div>
+  </div>`;
+}
+
+const PKMN_ICON_BASE = 'icons/pokemon/';
+const ITEM_ICON_BASE = 'icons/items/';
+
+const POKEMON_LIST = Object.entries(POKEMON)
+  .map(([slug, p]) => ({slug, ...p}))
+  .sort((a, b) => a.num - b.num);
+
+const searchEl = document.getElementById('search');
+const suggestionsEl = document.getElementById('suggestions');
+const outputEl = document.getElementById('output');
+
+let activeIdx = -1;
+let currentMatches = [];
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+}
+
+function escapeAttr(s) {
+  return escapeHtml(s);
+}
+
+function normalize(s) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function pkmnIconUrl(p) {
+  return PKMN_ICON_BASE + p.icon;
+}
+
+function itemIconUrl(itemName) {
+  const slug = ITEM_ICONS[itemName];
+  return slug ? ITEM_ICON_BASE + slug + '.png' : null;
+}
+
+function imgTag(url, alt, cls) {
+  if (!url) return `<div class="icon-fallback">·</div>`;
+  return `<img src="${escapeAttr(url)}" alt="${escapeAttr(alt)}" class="${(cls || '') + ' img-icon'}" loading="lazy" data-fallback="1" />`;
+}
+
+// Attach fallback handler to broken images (delegated via container)
+function attachImageFallbacks(container) {
+  container.querySelectorAll('img.img-icon[data-fallback="1"]').forEach(img => {
+    img.addEventListener('error', function handleErr() {
+      img.removeEventListener('error', handleErr);
+      const span = document.createElement('div');
+      span.className = 'icon-fallback';
+      span.textContent = '·';
+      // Copy classes (minus img-icon) to keep sizing consistent
+      img.classList.forEach(c => {
+        if (c !== 'img-icon') span.classList.add(c);
+      });
+      img.replaceWith(span);
+    }, { once: true });
+  });
+}
+
+function searchPokemon(q) {
+  const nq = normalize(q.trim());
+  if (!nq) return [];
+  const prefix = [];
+  const contains = [];
+  for (const p of POKEMON_LIST) {
+    const nName = normalize(p.name);
+    if (nName.startsWith(nq)) prefix.push(p);
+    else if (nName.includes(nq)) contains.push(p);
+  }
+  return [...prefix, ...contains].slice(0, 12);
+}
+
+function renderSuggestions(matches) {
+  currentMatches = matches;
+  activeIdx = matches.length > 0 ? 0 : -1;
+  if (matches.length === 0) {
+    suggestionsEl.classList.remove('open');
+    return;
+  }
+  suggestionsEl.innerHTML = matches.map((p, i) => `
+    <div class="suggestion ${i === activeIdx ? 'active' : ''}" data-slug="${escapeAttr(p.slug)}">
+      ${imgTag(pkmnIconUrl(p), p.name, 'suggestion-icon')}
+      <span class="suggestion-num">#${String(p.num).padStart(3, '0')}</span>
+      <span class="suggestion-name">${escapeHtml(p.name)}</span>
+      <span class="suggestion-meta">${p.categories.length} cats</span>
+    </div>
+  `).join('');
+  suggestionsEl.classList.add('open');
+  attachImageFallbacks(suggestionsEl);
+  suggestionsEl.querySelectorAll('.suggestion').forEach(el => {
+    el.addEventListener('mousedown', e => {
+      e.preventDefault();
+      selectPokemon(el.dataset.slug);
+    });
+  });
+}
+
+function selectPokemon(slug) {
+  const p = POKEMON[slug];
+  if (!p) return;
+  currentSlug = slug;
+  searchEl.value = p.name;
+  suggestionsEl.classList.remove('open');
+  renderPokemon(slug, p);
+  window.scrollTo({ top: outputEl.offsetTop - 20, behavior: 'smooth' });
+}
+
+function renderPokemon(slug, p) {
+  const itemToCats = {};
+  for (const cat of p.categories) {
+    const items = CATEGORIES[cat] || [];
+    for (const item of items) {
+      if (!itemToCats[item]) itemToCats[item] = [];
+      itemToCats[item].push(cat);
+    }
+  }
+
+  const allItems = Object.entries(itemToCats);
+  const sharedItems = allItems.filter(([, cats]) => cats.length >= 2);
+  sharedItems.sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+
+  let html = '<div class="card">';
+
+  // Pokemon header WITH icon
+  html += `<div class="pkmn-head">
+    <div class="pkmn-portrait">
+      ${imgTag(pkmnIconUrl(p), p.name)}
+    </div>
+    <div class="pkmn-info">
+      <div class="pkmn-num">N.º ${String(p.num).padStart(3, '0')}</div>
+      <div class="pkmn-name">${escapeHtml(p.name)}</div>
+      <div class="pkmn-meta">${t('habitat')} <span class="habitat-tag">${escapeHtml(p.habitat)}</span></div>
+      <div class="pkmn-cats">
+        ${p.categories.map(c => `<span class="pkmn-cat-tag">${escapeHtml(c)}</span>`).join('')}
+      </div>
+    </div>
+  </div>`;
+
+  html += `<div class="summary-strip">
+    <div class="stat-box">
+      <div class="stat-num">${allItems.length}</div>
+      <div class="stat-label">${t('items_total')}</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">${sharedItems.length}</div>
+      <div class="stat-label">${t('multi_cat')}</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">${p.categories.length}</div>
+      <div class="stat-label">${t('categories')}</div>
+    </div>
+  </div>`;
+
+  if (sharedItems.length > 0) {
+    html += `<div class="section-title">
+      ${t('best_gifts')}
+      <span class="pill">${t('best_gifts_pill')}</span>
+    </div>
+    <p class="section-sub">${t('best_gifts_sub')}</p>
+    <div class="best-grid">`;
+    for (const [item, cats] of sharedItems) {
+      const isElite = cats.length >= 3;
+      html += `<div class="best-item ${isElite ? 'elite' : ''}">
+        <div class="best-item-badge">${t('cats_x')(cats.length)}</div>
+        <div class="best-item-icon">${imgTag(itemIconUrl(item), item)}</div>
+        <div class="best-item-body">
+          <div class="best-item-name">${escapeHtml(item)}</div>
+          <div class="best-item-cats">${cats.map(escapeHtml).join(' · ')}</div>
+        </div>
+      </div>`;
+    }
+    html += `</div>`;
+  }
+
+  html += `<div class="section-title">${t('all_by_cat')}</div>
+    <p class="section-sub">${t('all_by_cat_sub')}</p>`;
+  for (const cat of p.categories) {
+    const items = CATEGORIES[cat] || [];
+    html += `<div class="cat-block">
+      <div class="cat-head">
+        <span class="cat-name">${escapeHtml(cat)}</span>
+        <span class="cat-count">${t('item')(items.length)}</span>
+      </div>
+      <div class="cat-items">`;
+    for (const item of items) {
+      const cats = itemToCats[item] || [];
+      const isShared = cats.length >= 2;
+      const otherCats = cats.filter(c => c !== cat);
+      html += `<div class="cat-item ${isShared ? 'shared' : ''}">
+        <div class="cat-item-icon">${imgTag(itemIconUrl(item), item)}</div>
+        <div class="cat-item-body">
+          <div class="cat-item-name">${escapeHtml(item)}</div>
+          ${isShared ? `<div class="cat-item-cats">${t('also_in')(otherCats.map(escapeHtml).join(', '))}</div>` : ''}
+        </div>
+      </div>`;
+    }
+    html += `</div></div>`;
+  }
+
+  html += renderGoesWellWith(slug, p);
+  html += '</div>';
+  outputEl.innerHTML = html;
+  attachImageFallbacks(outputEl);
+  outputEl.querySelectorAll('.gww-card').forEach(btn => {
+    btn.addEventListener('click', () => selectPokemon(btn.dataset.slug));
+  });
+}
+
+searchEl.addEventListener('input', e => {
+  const matches = searchPokemon(e.target.value);
+  renderSuggestions(matches);
+});
+
+searchEl.addEventListener('focus', e => {
+  if (e.target.value.trim()) {
+    const matches = searchPokemon(e.target.value);
+    renderSuggestions(matches);
+  }
+});
+
+searchEl.addEventListener('blur', () => {
+  setTimeout(() => suggestionsEl.classList.remove('open'), 150);
+});
+
+searchEl.addEventListener('keydown', e => {
+  if (!suggestionsEl.classList.contains('open')) return;
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    activeIdx = Math.min(activeIdx + 1, currentMatches.length - 1);
+    updateActiveSuggestion();
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    activeIdx = Math.max(activeIdx - 1, 0);
+    updateActiveSuggestion();
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (activeIdx >= 0 && currentMatches[activeIdx]) {
+      selectPokemon(currentMatches[activeIdx].slug);
+    }
+  } else if (e.key === 'Escape') {
+    suggestionsEl.classList.remove('open');
+  }
+});
+
+function updateActiveSuggestion() {
+  suggestionsEl.querySelectorAll('.suggestion').forEach((el, i) => {
+    el.classList.toggle('active', i === activeIdx);
+  });
+}
+
+document.querySelectorAll('.shortcut').forEach(btn => {
+  btn.addEventListener('click', () => selectPokemon(btn.dataset.slug));
+});
+
+document.getElementById('lang-toggle').addEventListener('click', () => {
+  lang = lang === 'en' ? 'es' : 'en';
+  localStorage.setItem('pokopia-lang', lang);
+  applyLang();
+});
+
+applyLang();
+</script>
+</body>
+</html>
