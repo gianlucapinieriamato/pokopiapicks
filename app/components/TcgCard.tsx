@@ -173,18 +173,28 @@ export default function TcgCard({
         {/* ── Category chips ──────────────────────────────────── */}
         <div style={{
           padding: isLg ? "6px 10px 4px" : "4px 6px 3px",
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 3,
           flexShrink: 0,
         }}>
-          {p.categories.slice(0, isSm ? 2 : isLg ? undefined : 3).map((c) => (
-            <span key={c} className="pkmn-cat-tag" style={{
-              fontSize: isSm ? 8 : 9,
-              padding: isSm ? "2px 6px" : "2px 8px",
-              lineHeight: 1.4,
-            }}>{c}</span>
-          ))}
+          {!isSm && (
+            <div style={{
+              fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
+              fontSize: isLg ? 8 : 7,
+              color: "var(--ink-fade)",
+              letterSpacing: "0.07em",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              marginBottom: 3,
+            }}>Likes</div>
+          )}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+            {p.categories.slice(0, isSm ? 2 : isLg ? undefined : 3).map((c) => (
+              <span key={c} className="pkmn-cat-tag" style={{
+                fontSize: isSm ? 8 : 9,
+                padding: isSm ? "2px 6px" : "2px 8px",
+                lineHeight: 1.4,
+              }}>{c}</span>
+            ))}
+          </div>
         </div>
 
         {/* ── Footer bar ─────────────────────────────────────── */}
@@ -211,7 +221,7 @@ export default function TcgCard({
             color: r.sparkles ? "var(--accent)" : "var(--ink-fade)",
             letterSpacing: "0.06em",
             fontWeight: 600,
-          }}>{r.rarityLabel}</span>
+          }}>{r.sparkles ? "LEGENDARY" : (p.flavor ?? p.habitat).toUpperCase()}</span>
         </div>
 
         {/* Holo sweep */}
