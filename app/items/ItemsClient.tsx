@@ -2,16 +2,37 @@
 import Link from "next/link";
 import { useState, useMemo } from "react";
 import type { ItemEntry, CategoryEntry } from "@/app/lib/types";
+import { useLang } from "@/app/lib/lang";
 
 const PAGE_SIZE = 60;
 
-export default function ItemsClient({
-  items,
-  categories,
-}: {
-  items: ItemEntry[];
-  categories: CategoryEntry[];
-}) {
+const STRINGS = {
+  en: {
+    searchPlaceholder: "Search items…",
+    filterByCategory: "Filter by category",
+    clearFilters: "Clear filters",
+    noResults: "No items match your filters.",
+    prev: "Prev",
+    next: "Next",
+    page: "Page",
+    of: "/",
+  },
+  es: {
+    searchPlaceholder: "Buscar objetos…",
+    filterByCategory: "Filtrar por categoría",
+    clearFilters: "Borrar filtros",
+    noResults: "Ningún objeto coincide con tus filtros.",
+    prev: "Ant.",
+    next: "Sig.",
+    page: "Página",
+    of: "/",
+  },
+} as const;
+
+export default function ItemsClient({ items, categories }: { items: ItemEntry[]; categories: CategoryEntry[] }) {
+  const lang = useLang();
+  const t = STRINGS[lang];
+
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState<string[]>([]);
   const [page, setPage] = useState(1);
@@ -38,39 +59,35 @@ export default function ItemsClient({
 
   return (
     <>
-      <div className="detail-meta mb-4">{filtered.length} / {items.length} items</div>
+      <div className="detail-meta mb-4">{filtered.length} / {items.length}</div>
 
       <div className="card mb-4">
         <input
           type="text"
           className="search-input mb-3.5"
-          placeholder="Search items…"
-          aria-label="Search items"
+          placeholder={t.searchPlaceholder}
+          aria-label={t.searchPlaceholder}
           value={search}
           onChange={(e) => { setSearch(e.target.value); setPage(1); }}
         />
-        <div className="stat-label mb-1.5">Filter by category</div>
+        <div className="stat-label mb-1.5">{t.filterByCategory}</div>
         <div className="flex flex-wrap gap-1.5">
           {categories.map((c) => (
-            <button
-              key={c.slug}
-              className={`shortcut${catFilter.includes(c.slug) ? " shortcut--on" : ""}`}
-              onClick={() => toggleCat(c.slug)}
-            >
+            <button key={c.slug} className={`shortcut${catFilter.includes(c.slug) ? " shortcut--on" : ""}`} onClick={() => toggleCat(c.slug)}>
               {c.name} <span className="opacity-55 text-[10px]">({c.items.length})</span>
             </button>
           ))}
         </div>
         {(search || catFilter.length > 0) && (
           <button className="shortcut mt-2.5" onClick={() => { setSearch(""); setCatFilter([]); setPage(1); }}>
-            Clear filters
+            {t.clearFilters}
           </button>
         )}
       </div>
 
       <div className="card">
         {paginated.length === 0 ? (
-          <p className="detail-meta">No items match your filters.</p>
+          <p className="detail-meta">{t.noResults}</p>
         ) : (
           <div className="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-2">
             {paginated.map((item) => (
@@ -80,20 +97,17 @@ export default function ItemsClient({
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={item.icon} alt="" className="w-7 h-7 object-contain [image-rendering:pixelated] shrink-0" />
                   )}
-                  <span className="font-outfit font-semibold text-xs text-ink leading-[1.3] line-clamp-2">
-                    {item.name}
-                  </span>
+                  <span className="font-outfit font-semibold text-xs text-ink leading-[1.3] line-clamp-2">{item.name}</span>
                 </div>
               </Link>
             ))}
           </div>
         )}
-
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
-            {page > 1 && <button className="pkmn-nav-btn" onClick={() => setPage(page - 1)}>◀ Prev</button>}
-            <span className="detail-meta self-center">Page {page} / {pages}</span>
-            {page < pages && <button className="pkmn-nav-btn" onClick={() => setPage(page + 1)}>Next ▶</button>}
+            {page > 1 && <button className="pkmn-nav-btn" onClick={() => setPage(page - 1)}>◀ {t.prev}</button>}
+            <span className="detail-meta self-center">{t.page} {page} {t.of} {pages}</span>
+            {page < pages && <button className="pkmn-nav-btn" onClick={() => setPage(page + 1)}>{t.next} ▶</button>}
           </div>
         )}
       </div>
