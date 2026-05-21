@@ -47,17 +47,16 @@ export default function LookupPage() {
 
       <div className="card">
         {[
-          { label: "Ideal Habitat", vals: HABITATS, active: habitatFilter, set: setHabitatFilter },
-          { label: "Flavor", vals: FLAVORS, active: flavorFilter, set: setFlavorFilter },
+          { label: "Ideal Habitat", vals: HABITATS, active: habitatFilter, set: setHabitatFilter, mod: "" },
+          { label: "Flavor", vals: FLAVORS, active: flavorFilter, set: setFlavorFilter, mod: "" },
         ].map(({ label, vals, active, set }) => (
-          <div key={label} style={{ marginBottom: 16 }}>
-            <div className="stat-label" style={{ marginBottom: 6 }}>{label}</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+          <div key={label} className="mb-4">
+            <div className="stat-label mb-1.5">{label}</div>
+            <div className="flex flex-wrap gap-1.5">
               {vals.map((v) => (
                 <button
                   key={v}
-                  className="shortcut"
-                  style={active.includes(v) ? { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" } : {}}
+                  className={`shortcut${active.includes(v) ? " shortcut--on" : ""}`}
                   onClick={() => toggle(active, v, set)}
                 >{v}</button>
               ))}
@@ -65,42 +64,39 @@ export default function LookupPage() {
           </div>
         ))}
 
-        <div style={{ marginBottom: 16 }}>
-          <div className="stat-label" style={{ marginBottom: 6 }}>Specialty</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+        <div className="mb-4">
+          <div className="stat-label mb-1.5">Specialty</div>
+          <div className="flex flex-wrap gap-1.5">
             {allSpecialties.map((s) => (
               <button
                 key={s.slug}
-                className="shortcut"
-                style={specialtyFilter.includes(s.slug) ? { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" } : {}}
+                className={`shortcut${specialtyFilter.includes(s.slug) ? " shortcut--on" : ""}`}
                 onClick={() => toggle(specialtyFilter, s.slug, setSpecialtyFilter)}
               >{s.name}</button>
             ))}
           </div>
         </div>
 
-        <div style={{ marginBottom: 16 }}>
-          <div className="stat-label" style={{ marginBottom: 6 }}>Favorite category (all must match)</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+        <div className="mb-4">
+          <div className="stat-label mb-1.5">Favorite category (all must match)</div>
+          <div className="flex flex-wrap gap-1.5">
             {allCategories.map((c) => (
               <button
                 key={c.slug}
-                className="shortcut"
-                style={catFilter.includes(c.slug) ? { background: "var(--accent)", color: "var(--paper)", borderColor: "var(--accent)" } : {}}
+                className={`shortcut${catFilter.includes(c.slug) ? " shortcut--on-accent" : ""}`}
                 onClick={() => toggle(catFilter, c.slug, setCatFilter)}
               >{c.name}</button>
             ))}
           </div>
         </div>
 
-        <div style={{ marginBottom: 16 }}>
-          <div className="stat-label" style={{ marginBottom: 6 }}>Location (any)</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+        <div className="mb-4">
+          <div className="stat-label mb-1.5">Location (any)</div>
+          <div className="flex flex-wrap gap-1.5">
             {allLocations.map((l) => (
               <button
                 key={l.slug}
-                className="shortcut"
-                style={locFilter.includes(l.slug) ? { background: "var(--leaf)", color: "var(--paper)", borderColor: "var(--leaf)" } : {}}
+                className={`shortcut${locFilter.includes(l.slug) ? " shortcut--on-leaf" : ""}`}
                 onClick={() => toggle(locFilter, l.slug, setLocFilter)}
               >{l.name}</button>
             ))}
@@ -112,7 +108,6 @@ export default function LookupPage() {
         )}
       </div>
 
-      {/* Results */}
       <div className="card">
         <div className="section-title">
           Results{" "}
@@ -125,19 +120,19 @@ export default function LookupPage() {
           <p className="detail-meta">No Pokémon match all selected filters.</p>
         )}
         {results.length > 50 && (
-          <p className="section-sub" style={{ color: "var(--accent)" }}>Showing {results.length} matches — add more filters to narrow down.</p>
+          <p className="section-sub text-accent">Showing {results.length} matches — add more filters to narrow down.</p>
         )}
         {results.length > 0 && (
-          <div className="pkmn-grid" style={{ marginTop: 12 }}>
+          <div className="pkmn-grid mt-3">
             {results.map((p) => (
               <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
                 <div className="pkmn-grid-icon">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
+                  <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
                 </div>
                 <div className="pkmn-grid-num">#{dexNum(p)}</div>
                 <div className="pkmn-grid-name">{p.name}</div>
-                <div style={{ fontSize: 10, fontFamily: "'DM Mono', monospace", color: "var(--ink-fade)" }}>{p.habitat}</div>
+                <div className="font-mono text-[10px] text-ink-fade">{p.habitat}</div>
               </Link>
             ))}
           </div>

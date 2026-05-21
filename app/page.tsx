@@ -8,8 +8,6 @@ import type { PokemonEntry } from "@/app/lib/types";
 import PkmnIcon from "@/app/components/PkmnIcon";
 import TcgCard from "@/app/components/TcgCard";
 
-// ── i18n ──────────────────────────────────────────────────────────────────────
-
 type Lang = "en" | "es";
 
 const STRINGS = {
@@ -35,13 +33,9 @@ const STRINGS = {
   },
 } as const;
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
-
 function normalize(s: string) {
   return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 }
-
-// ── Main page ─────────────────────────────────────────────────────────────────
 
 export default function Home() {
   const router = useRouter();
@@ -133,7 +127,7 @@ export default function Home() {
           )}
           {noResults && (
             <div className="suggestions open">
-              <div className="suggestion" style={{ color: "var(--ink-fade)", fontStyle: "italic", cursor: "default" }}>
+              <div className="suggestion text-ink-fade italic cursor-default">
                 No Pokémon found for &quot;{query}&quot;
               </div>
             </div>
@@ -142,7 +136,7 @@ export default function Home() {
         <div className="shortcuts">
           <span className="shortcuts-label">{s.try_label}</span>
           {(["lucario", "onix", "eevee", "pikachu", "snorlax"] as const).map((slug) => (
-            <Link key={slug} href={`/pokemon/${slug}`} className="shortcut" style={{ textDecoration: "none" }}>
+            <Link key={slug} href={`/pokemon/${slug}`} className="shortcut no-underline">
               {POKEMON[slug]?.name ?? slug}
             </Link>
           ))}
@@ -150,7 +144,7 @@ export default function Home() {
       </section>
 
       <div className="card">
-        <div className="section-title" style={{ marginBottom: 20 }}>{s.all_pokemon}</div>
+        <div className="section-title mb-5">{s.all_pokemon}</div>
         <div className="pkmn-tcg-grid">
           {POKEMON_LIST.map((p) => (
             <Link key={p.slug} href={`/pokemon/${p.slug}`} className="tcg-card-wrap" aria-label={p.name}>

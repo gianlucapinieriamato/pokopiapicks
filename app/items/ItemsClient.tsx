@@ -38,33 +38,31 @@ export default function ItemsClient({
 
   return (
     <>
-      <div className="detail-meta" style={{ marginBottom: 16 }}>{filtered.length} / {items.length} items</div>
+      <div className="detail-meta mb-4">{filtered.length} / {items.length} items</div>
 
-      <div className="card" style={{ marginBottom: 16 }}>
+      <div className="card mb-4">
         <input
           type="text"
-          className="search-input"
+          className="search-input mb-3.5"
           placeholder="Search items…"
           aria-label="Search items"
           value={search}
           onChange={(e) => { setSearch(e.target.value); setPage(1); }}
-          style={{ marginBottom: 14 }}
         />
-        <div className="stat-label" style={{ marginBottom: 6 }}>Filter by category</div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+        <div className="stat-label mb-1.5">Filter by category</div>
+        <div className="flex flex-wrap gap-1.5">
           {categories.map((c) => (
             <button
               key={c.slug}
-              className="shortcut"
-              style={catFilter.includes(c.slug) ? { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" } : {}}
+              className={`shortcut${catFilter.includes(c.slug) ? " shortcut--on" : ""}`}
               onClick={() => toggleCat(c.slug)}
             >
-              {c.name} <span style={{ opacity: 0.55, fontSize: 10 }}>({c.items.length})</span>
+              {c.name} <span className="opacity-55 text-[10px]">({c.items.length})</span>
             </button>
           ))}
         </div>
         {(search || catFilter.length > 0) && (
-          <button className="shortcut" style={{ marginTop: 10 }} onClick={() => { setSearch(""); setCatFilter([]); setPage(1); }}>
+          <button className="shortcut mt-2.5" onClick={() => { setSearch(""); setCatFilter([]); setPage(1); }}>
             Clear filters
           </button>
         )}
@@ -74,25 +72,17 @@ export default function ItemsClient({
         {paginated.length === 0 ? (
           <p className="detail-meta">No items match your filters.</p>
         ) : (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 8 }}>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-2">
             {paginated.map((item) => (
-              <Link key={item.slug} href={`/item/${item.slug}`} style={{ textDecoration: "none" }}>
-                <div className="hover-tile" style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px" }}>
+              <Link key={item.slug} href={`/item/${item.slug}`} className="no-underline">
+                <div className="hover-tile flex items-center gap-2.5 py-2 px-2.5">
                   {item.icon && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={item.icon} alt="" style={{ width: 28, height: 28, objectFit: "contain", imageRendering: "pixelated", flexShrink: 0 }} />
+                    <img src={item.icon} alt="" className="w-7 h-7 object-contain [image-rendering:pixelated] shrink-0" />
                   )}
-                  <span style={{
-                    fontFamily: "'Outfit', sans-serif",
-                    fontWeight: 600,
-                    fontSize: 12,
-                    color: "var(--ink)",
-                    lineHeight: 1.3,
-                    overflow: "hidden",
-                    display: "-webkit-box",
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: "vertical",
-                  }}>{item.name}</span>
+                  <span className="font-outfit font-semibold text-xs text-ink leading-[1.3] line-clamp-2">
+                    {item.name}
+                  </span>
                 </div>
               </Link>
             ))}
@@ -100,9 +90,9 @@ export default function ItemsClient({
         )}
 
         {pages > 1 && (
-          <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 20 }}>
+          <div className="flex justify-center gap-2 mt-5">
             {page > 1 && <button className="pkmn-nav-btn" onClick={() => setPage(page - 1)}>◀ Prev</button>}
-            <span className="detail-meta" style={{ alignSelf: "center" }}>Page {page} / {pages}</span>
+            <span className="detail-meta self-center">Page {page} / {pages}</span>
             {page < pages && <button className="pkmn-nav-btn" onClick={() => setPage(page + 1)}>Next ▶</button>}
           </div>
         )}

@@ -10,7 +10,6 @@ const ALL_SPECIALTIES = Object.values(SPECIALTIES).sort((a, b) => a.name.localeC
 
 const PAGE_SIZE = 60;
 
-// Pre-computed unfiltered counts — stable reference, never changes
 const HABITAT_COUNTS: Record<string, number> = {};
 const FLAVOR_COUNTS: Record<string, number> = {};
 for (const p of POKEMON_LIST) {
@@ -57,68 +56,68 @@ export default function PokedexPage() {
         <div className="detail-meta">{filtered.length} / {POKEMON_LIST.length} Pokémon</div>
       </div>
 
-      {/* Filters */}
-      <div className="card" style={{ marginBottom: 16 }}>
+      <div className="card mb-4">
         <input
           type="text"
-          className="search-input"
+          className="search-input mb-4"
           placeholder="Search Pokémon…"
           aria-label="Search Pokémon"
           value={search}
           onChange={(e) => { setSearch(e.target.value); setPage(1); }}
-          style={{ marginBottom: 16 }}
         />
 
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+        <div className="flex flex-wrap gap-3">
           <div>
-            <div className="stat-label" style={{ marginBottom: 6 }}>Ideal Habitat</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            <div className="stat-label mb-1.5">Ideal Habitat</div>
+            <div className="flex flex-wrap gap-1.5">
               {HABITATS.map((h) => (
                 <button
                   key={h}
-                  className="shortcut"
-                  style={habitatFilter.includes(h) ? { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" } : {}}
+                  className={`shortcut${habitatFilter.includes(h) ? " shortcut--on" : ""}`}
                   onClick={() => toggle(habitatFilter, h, setHabitatFilter)}
-                >{h} <span style={{ opacity: 0.55, fontSize: 10 }}>({HABITAT_COUNTS[h] ?? 0})</span></button>
+                >
+                  {h} <span className="opacity-55 text-[10px]">({HABITAT_COUNTS[h] ?? 0})</span>
+                </button>
               ))}
             </div>
           </div>
           <div>
-            <div className="stat-label" style={{ marginBottom: 6 }}>Flavor</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            <div className="stat-label mb-1.5">Flavor</div>
+            <div className="flex flex-wrap gap-1.5">
               {FLAVORS.map((f) => (
                 <button
                   key={f}
-                  className="shortcut"
-                  style={flavorFilter.includes(f) ? { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" } : {}}
+                  className={`shortcut${flavorFilter.includes(f) ? " shortcut--on" : ""}`}
                   onClick={() => toggle(flavorFilter, f, setFlavorFilter)}
-                >{f} <span style={{ opacity: 0.55, fontSize: 10 }}>({FLAVOR_COUNTS[f] ?? 0})</span></button>
+                >
+                  {f} <span className="opacity-55 text-[10px]">({FLAVOR_COUNTS[f] ?? 0})</span>
+                </button>
               ))}
             </div>
           </div>
           <div>
-            <div className="stat-label" style={{ marginBottom: 6 }}>Specialty</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            <div className="stat-label mb-1.5">Specialty</div>
+            <div className="flex flex-wrap gap-1.5">
               {ALL_SPECIALTIES.map((s) => (
                 <button
                   key={s.slug}
-                  className="shortcut"
-                  style={specialtyFilter.includes(s.slug) ? { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" } : {}}
+                  className={`shortcut${specialtyFilter.includes(s.slug) ? " shortcut--on" : ""}`}
                   onClick={() => toggle(specialtyFilter, s.slug, setSpecialtyFilter)}
-                >{s.name}</button>
+                >
+                  {s.name}
+                </button>
               ))}
             </div>
           </div>
         </div>
 
         {(habitatFilter.length || flavorFilter.length || specialtyFilter.length || search) ? (
-          <button className="shortcut" style={{ marginTop: 12 }} onClick={() => { setHabitatFilter([]); setFlavorFilter([]); setSpecialtyFilter([]); setSearch(""); setPage(1); }}>
+          <button className="shortcut mt-3" onClick={() => { setHabitatFilter([]); setFlavorFilter([]); setSpecialtyFilter([]); setSearch(""); setPage(1); }}>
             Clear filters
           </button>
         ) : null}
       </div>
 
-      {/* Grid */}
       <div className="card">
         {paginated.length === 0 ? (
           <p className="detail-meta">No Pokémon match your filters.</p>
@@ -132,11 +131,10 @@ export default function PokedexPage() {
           </div>
         )}
 
-        {/* Pagination */}
         {pages > 1 && (
-          <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 20 }}>
+          <div className="flex justify-center gap-2 mt-5">
             {page > 1 && <button className="pkmn-nav-btn" onClick={() => setPage(page - 1)}>◀ Prev</button>}
-            <span className="detail-meta" style={{ alignSelf: "center" }}>Page {page} / {pages}</span>
+            <span className="detail-meta self-center">Page {page} / {pages}</span>
             {page < pages && <button className="pkmn-nav-btn" onClick={() => setPage(page + 1)}>Next ▶</button>}
           </div>
         )}

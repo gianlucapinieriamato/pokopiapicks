@@ -3,7 +3,6 @@ import { CATEGORIES, POKEMON } from "@/app/lib/data";
 
 const ALL_CATS = Object.values(CATEGORIES).sort((a, b) => a.name.localeCompare(b.name));
 
-// Pre-compute Pokémon count per category
 const pkmnCountByCat: Record<string, number> = {};
 for (const p of Object.values(POKEMON)) {
   for (const cat of p.categories) {
@@ -24,23 +23,12 @@ export default function CategoriesPage() {
       </div>
 
       <div className="card">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 8 }}>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-2">
           {ALL_CATS.map((cat) => (
-            <Link key={cat.slug} href={`/category/${cat.slug}`} style={{ textDecoration: "none" }}>
-              <div className="hover-tile" style={{ padding: "12px 14px" }}>
-                <div style={{
-                  fontFamily: "'Outfit', sans-serif",
-                  fontWeight: 700,
-                  fontSize: 14,
-                  color: "var(--ink)",
-                  marginBottom: 4,
-                }}>{cat.name}</div>
-                <div style={{
-                  fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
-                  fontSize: 10,
-                  color: "var(--ink-fade)",
-                  letterSpacing: "0.04em",
-                }}>
+            <Link key={cat.slug} href={`/category/${cat.slug}`} className="no-underline">
+              <div className="hover-tile py-3 px-3.5">
+                <div className="font-outfit font-bold text-sm text-ink mb-1">{cat.name}</div>
+                <div className="font-mono text-[10px] text-ink-fade tracking-[0.04em]">
                   {cat.items.length} items · {pkmnCountByCat[cat.slug] ?? 0} Pokémon
                 </div>
               </div>

@@ -1,22 +1,47 @@
 @import "tailwindcss";
 
-/* ── Cream Foil palette ────────────────────────────────────────────────────── */
+/* ── Design tokens ─────────────────────────────────────────────────────────── */
+/* @theme exposes these as Tailwind utilities: bg-ink, text-accent, font-mono… */
+@theme {
+  --color-surface-0:   #f6efde;
+  --color-surface-1:   #fbf6e8;
+  --color-surface-2:   #ede2c5;
+  --color-chrome:      #f9efd5;
+  --color-ink:         #2d2418;
+  --color-ink-soft:    #6b5a45;
+  --color-ink-fade:    #a89678;
+  --color-paper:       #fffaf0;
+  --color-paper-edge:  #e8d5b3;
+  --color-accent:      #c9952b;
+  --color-accent-deep: #8a6919;
+  --color-accent-soft: #f0d68a;
+  --color-leaf:        #7a9b6e;
+  --color-leaf-soft:   #c5d4a8;
+
+  --font-outfit: 'Outfit', system-ui, sans-serif;
+  --font-mono:   'JetBrains Mono', 'DM Mono', monospace;
+}
+
+/* Backward-compat aliases — existing CSS classes still reference these names */
 :root {
-  --bg-0:          #f6efde;
-  --bg-1:          #fbf6e8;
-  --bg-2:          #ede2c5;
-  --chrome:        #f9efd5;
-  --ink:           #2d2418;
-  --ink-soft:      #6b5a45;
-  --ink-fade:      #a89678;
-  --paper:         #fffaf0;
-  --paper-edge:    #e8d5b3;
-  --accent:        #c9952b;
-  --accent-deep:   #8a6919;
-  --accent-soft:   #f0d68a;
-  --accent2:       #7a9b6e;
-  --accent2-soft:  #c5d4a8;
-  --shadow:        rgba(45, 36, 24, 0.14);
+  --bg-0:        var(--color-surface-0);
+  --bg-1:        var(--color-surface-1);
+  --bg-2:        var(--color-surface-2);
+  --chrome:      var(--color-chrome);
+  --ink:         var(--color-ink);
+  --ink-soft:    var(--color-ink-soft);
+  --ink-fade:    var(--color-ink-fade);
+  --paper:       var(--color-paper);
+  --paper-edge:  var(--color-paper-edge);
+  --accent:      var(--color-accent);
+  --accent-deep: var(--color-accent-deep);
+  --accent-soft: var(--color-accent-soft);
+  --accent2:     var(--color-leaf);
+  --accent2-soft: var(--color-leaf-soft);
+  --leaf:        var(--color-leaf);
+  --sun:         var(--color-accent);
+  --sun-soft:    var(--color-accent-soft);
+  --shadow:      rgba(45, 36, 24, 0.14);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -455,6 +480,9 @@ h1 .accent {
   letter-spacing: 0.02em;
 }
 .shortcut:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.shortcut--on { background: var(--ink);    color: var(--paper); border-color: var(--ink); }
+.shortcut--on-accent { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.shortcut--on-leaf   { background: var(--leaf);   color: var(--paper); border-color: var(--leaf); }
 
 /* ── Lang toggle ───────────────────────────────────────────────────────────── */
 .lang-toggle {

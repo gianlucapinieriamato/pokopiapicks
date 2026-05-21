@@ -20,7 +20,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-
 export default async function PokemonPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const p = POKEMON[slug];
@@ -30,7 +29,6 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
   const prev = idx > 0 ? POKEMON_LIST[idx - 1] : null;
   const next = idx < POKEMON_LIST.length - 1 ? POKEMON_LIST[idx + 1] : null;
 
-  // item → categories map
   const itemToCats: Record<string, string[]> = {};
   for (const catRef of p.categories) {
     for (const item of getCatItems(catRef)) {
@@ -43,7 +41,6 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
     .filter(([, cats]) => cats.length >= 2)
     .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
 
-  // Category slug for linking
   const catSlug = (catRef: string) => {
     if (CATEGORIES[catRef]) return catRef;
     return catRef.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -68,8 +65,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
       </div>
 
       <div className="pkmn-head">
-        {/* TCG card hero — standalone, not nested inside a card */}
-        <div style={{ flexShrink: 0, width: 260 }}>
+        <div className="shrink-0 w-[260px]">
           <TcgCard p={{ ...p, slug }} size="md" giftCount={sharedItems.length > 0 ? sharedItems.length : null} />
         </div>
         <div className="pkmn-info">
@@ -79,33 +75,33 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
             {" "}<span className="info-tip" data-tip="Pokémon with the same habitat can share a living space in Pokopia." aria-label="Pokémon with the same habitat can share a living space in Pokopia.">i</span>
             {p.flavor && <>
-              {" · "}Flavor: <span style={{ color: "var(--accent2)" }}>{p.flavor}</span>
+              {" · "}Flavor: <span className="text-leaf font-semibold">{p.flavor}</span>
               {" "}<span className="info-tip" data-tip="The berry flavor this Pokémon prefers. Pokémon that share a flavor tend to like the same gift items." aria-label="The berry flavor this Pokémon prefers.">i</span>
             </>}
           </div>
           {p.specialties && p.specialties.length > 0 && (
-            <div style={{ marginTop: 10 }}>
-              <p className="detail-meta" style={{ marginBottom: 4, fontSize: 11, display: "flex", alignItems: "center", gap: 6 }}>
+            <div className="mt-2.5">
+              <p className="detail-meta mb-1 text-[11px] flex items-center gap-1.5">
                 Specialty
                 {" "}<span className="info-tip" data-tip="Specialties determine bonus effects when this Pokémon helps with certain Pokopia activities." aria-label="Specialty bonus activities.">i</span>
               </p>
               <div className="pkmn-cats">
                 {p.specialties.map((s) => (
-                  <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag" style={{ textDecoration: "none", color: "var(--accent-deep)", borderColor: "var(--accent)" }}>
+                  <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag no-underline text-accent-deep border-accent">
                     {SPECIALTIES[s]?.name ?? s}
                   </Link>
                 ))}
               </div>
             </div>
           )}
-          <div style={{ marginTop: 10 }}>
-            <p className="detail-meta" style={{ marginBottom: 4, fontSize: 11, display: "flex", alignItems: "center", gap: 6 }}>
+          <div className="mt-2.5">
+            <p className="detail-meta mb-1 text-[11px] flex items-center gap-1.5">
               Favorite categories
               {" "}<span className="info-tip" data-tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} aria-label={`Gift items in these categories earn extra happiness with ${p.name}.`}>i</span>
             </p>
             <div className="pkmn-cats">
               {p.categories.map((c) => (
-                <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>
+                <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag no-underline">
                   {catDisplayName(c)}
                 </Link>
               ))}
@@ -130,11 +126,11 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                 const isElite = cats.length >= 3;
                 const itemEntry = ITEMS[item];
                 return (
-                  <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} style={{ textDecoration: "none" }}>
+                  <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
                     <div className={`best-item${isElite ? " elite" : ""}`}>
                       <div className="best-item-badge">{cats.length}× categories</div>
                       <div className="best-item-icon">
-                        {itemEntry?.icon && <img src={itemEntry.icon} alt={item} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />}
+                        {itemEntry?.icon && <img src={itemEntry.icon} alt={item} className="w-full h-full object-contain [image-rendering:pixelated]" />}
                       </div>
                       <div className="best-item-body">
                         <div className="best-item-name">{item}</div>
@@ -161,10 +157,10 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                   const otherCats = cats.filter((c) => c !== catRef);
                   const itemEntry = ITEMS[item];
                   return (
-                    <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} style={{ textDecoration: "none" }}>
+                    <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
                       <div className={`cat-item${isShared ? " shared" : ""}`}>
                         <div className="cat-item-icon">
-                          {itemEntry?.icon && <img src={itemEntry.icon} alt={item} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />}
+                          {itemEntry?.icon && <img src={itemEntry.icon} alt={item} className="w-full h-full object-contain [image-rendering:pixelated]" />}
                         </div>
                         <div className="cat-item-body">
                           <div className="cat-item-name">{item}</div>
@@ -181,26 +177,26 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
 
         {p.habitatList && p.habitatList.length > 0 && (
           <>
-            <div className="section-title" style={{ marginTop: 24 }}>Where to find</div>
+            <div className="section-title mt-6">Where to find</div>
             {p.habitatList.map((entry, i) => (
               <div key={i} className="cat-block">
                 <div className="cat-head">
-                  <Link href={`/habitat/${entry.habitatSlug}`} className="cat-name" style={{ textDecoration: "none", color: "inherit" }}>
+                  <Link href={`/habitat/${entry.habitatSlug}`} className="cat-name no-underline text-inherit">
                     {HABITATS[entry.habitatSlug]?.name ?? entry.habitatSlug}
                   </Link>
                   {entry.rarity && <span className="cat-count">{entry.rarity}</span>}
                 </div>
-                <div style={{ padding: "0 4px 8px", fontSize: 12, fontFamily: "'JetBrains Mono', 'DM Mono', monospace", color: "var(--ink-soft)" }}>
+                <div className="px-1 pb-2 text-xs font-mono text-ink-soft">
                   {entry.locations.map((loc, j) => (
                     <span key={loc}>
                       {j > 0 && " · "}
-                      <Link href={`/location/${loc}`} style={{ color: "var(--accent2)", textDecoration: "none" }}>
+                      <Link href={`/location/${loc}`} className="text-leaf no-underline">
                         {LOCATIONS[loc]?.name ?? loc}
                       </Link>
                     </span>
                   ))}
-                  {entry.time && <span style={{ marginLeft: 12 }}>🕐 {entry.time.join(", ")}</span>}
-                  {entry.weather && <span style={{ marginLeft: 12 }}>☁ {entry.weather.join(", ")}</span>}
+                  {entry.time && <span className="ml-3">🕐 {entry.time.join(", ")}</span>}
+                  {entry.weather && <span className="ml-3">☁ {entry.weather.join(", ")}</span>}
                 </div>
               </div>
             ))}
