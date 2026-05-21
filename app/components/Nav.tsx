@@ -29,19 +29,6 @@ export default function Nav() {
             </Link>
           ))}
         </div>
-        <div style={{
-          marginLeft: "auto",
-          fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
-          fontSize: 10, fontWeight: 600,
-          color: "var(--ink-fade)", letterSpacing: "0.1em",
-          display: "flex", gap: 8, alignItems: "center",
-        }}>
-          <span>308 PKM</span>
-          <span style={{ color: "var(--paper-edge)" }}>·</span>
-          <span>608 ITEMS</span>
-          <span style={{ color: "var(--paper-edge)" }}>·</span>
-          <span>43 CATS</span>
-        </div>
       </div>
     </nav>
   );
