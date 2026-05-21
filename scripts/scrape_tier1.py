@@ -212,6 +212,21 @@ LOCATION_SLUGS = [
 ]
 
 
+def extract_h2_section(html: str, heading_pattern: str) -> list[str]:
+    """Extract list items or td text from the section following an <h2> matching the pattern."""
+    m = re.search(
+        r'<h2[^>]*>[^<]*' + heading_pattern + r'[^<]*</h2>(.*?)(?=<h2|</body)',
+        html, re.IGNORECASE | re.DOTALL,
+    )
+    if not m:
+        return []
+    content = m.group(1)
+    items = [clean_text(li) for li in re.findall(r'<li[^>]*>(.*?)</li>', content, re.IGNORECASE | re.DOTALL)]
+    if not items:
+        items = [clean_text(td) for td in re.findall(r'<td[^>]*>(.*?)</td>', content, re.IGNORECASE | re.DOTALL)]
+    return [t for t in items if 2 < len(t) < 100 and re.search(r'[a-zA-Z]', t)]
+
+
 def scrape_locations(use_cache: bool) -> None:
     print('Scraping locations...\n')
     results: dict = {}
@@ -227,53 +242,39 @@ def scrape_locations(use_cache: bool) -> None:
             failures.append(slug)
             continue
 
-        # Name from page title
-        name = slug.title()
+        page_stripped = re.sub(r'<(script|style)[^>]*>.*?</\1>', '', page, flags=re.DOTALL | re.IGNORECASE)
+
+        # Name: from page <title>, stripping " Locations - ..." suffix
+        name = slug.replace('-', ' ').title()
         title_m = re.search(r'<title[^>]*>([^<]+)</title>', page, re.IGNORECASE)
         if title_m:
-            parts = [p.strip() for p in re.split(r'[-|]', title_m.group(1)) if p.strip()]
-            parts = [p for p in parts if 'Serebii' not in p and 'Pokemon' not in p]
-            if parts:
-                name = clean_text(parts[0])
+            raw_title = clean_text(title_m.group(1))
+            # Strip trailing " Locations - Pokémon Pokopia" or similar
+            raw_title = re.sub(r'\s+Locations\s*[-–].*$', '', raw_title, flags=re.IGNORECASE).strip()
+            raw_title = re.sub(r'\s*[-–|].*$', '', raw_title).strip()
+            if raw_title:
+                name = raw_title
 
-        # Description: first longish sentence-like td in main content
+        # Description: first long td
         description = ''
-        page_stripped = re.sub(r'<(script|style)[^>]*>.*?</\1>', '', page, flags=re.DOTALL | re.IGNORECASE)
         for m in re.finditer(r'<td[^>]*>(.*?)</td>', page_stripped, re.DOTALL | re.IGNORECASE):
             t = clean_text(m.group(1))
             if len(t) > 40 and re.search(r'[a-z]{4}', t) and 'Serebii' not in t:
                 description = t
                 break
 
-        # Materials and blocks: look for table rows with text items
-        materials: list[str] = []
-        blocks_plants: list[str] = []
-        objective = ''
-
-        # Serebii location pages often have labeled sections
-        # We look for "Material" and "Objective" headers
-        obj_m = re.search(r'[Oo]bjective[^<]*<[^>]+>\s*([^<]{5,})', page)
-        if obj_m:
-            objective = clean_text(obj_m.group(1))
-
-        # Items in lists or tables — grab td text in main content area
-        all_tds = [clean_text(m.group(1)) for m in re.finditer(
-            r'<td[^>]*class="[^"]*fooinfo[^"]*"[^>]*>(.*?)</td>',
-            page, re.DOTALL | re.IGNORECASE,
-        )]
-        # Short items (<= 50 chars, no HTML artefacts) are likely material names
-        item_candidates = [t for t in all_tds if 5 < len(t) <= 60 and re.search(r'[a-zA-Z]', t)]
+        materials = extract_h2_section(page_stripped, r'Materials')
+        blocks_plants = extract_h2_section(page_stripped, r'Plants')
 
         results[slug] = {
             'slug': slug,
             'name': name,
             'description': description,
-            'objective': objective,
-            'materials': materials,       # to be enriched once we see page structure
+            'objective': '',
+            'materials': materials,
             'blocksAndPlants': blocks_plants,
-            '_rawItems': item_candidates, # temporary — remove after review
         }
-        print(f'OK')
+        print(f'OK — {len(materials)} materials, {len(blocks_plants)} plants/blocks')
 
     out = DATA_DIR / 'locations.json'
     out.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding='utf-8')
