@@ -1,0 +1,4619 @@
+{
+  "onix": {
+    "name": "Onix",
+    "num": 30,
+    "habitat": "Dry",
+    "categories": [
+      "Blocky stuff",
+      "Exercise",
+      "Lots of dirt",
+      "Slender objects",
+      "Stone stuff"
+    ],
+    "icon": "095.png",
+    "slug": "onix",
+    "nationalDexNum": 95
+  },
+  "timburr": {
+    "name": "Timburr",
+    "num": 65,
+    "habitat": "Bright",
+    "categories": [
+      "Blocky stuff",
+      "Construction",
+      "Exercise",
+      "Slender objects",
+      "Wooden stuff"
+    ],
+    "icon": "532.png",
+    "slug": "timburr",
+    "nationalDexNum": 532
+  },
+  "litwick": {
+    "name": "Litwick",
+    "num": 68,
+    "habitat": "Warm",
+    "categories": [
+      "Blocky stuff",
+      "Lots of fire",
+      "Spooky stuff",
+      "Strange stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "607.png",
+    "slug": "litwick",
+    "nationalDexNum": 607
+  },
+  "charjabug": {
+    "name": "Charjabug",
+    "num": 139,
+    "habitat": "Bright",
+    "categories": [
+      "Blocky stuff",
+      "Electronics",
+      "Glass stuff",
+      "Lots of nature",
+      "Watching stuff"
+    ],
+    "icon": "737.png",
+    "slug": "charjabug",
+    "nationalDexNum": 737
+  },
+  "tatsugiridroopyform": {
+    "name": "Tatsugiri Droopy Form",
+    "num": 145,
+    "habitat": "Humid",
+    "categories": [
+      "Blocky stuff",
+      "Group Activities",
+      "Lots of water",
+      "Ocean vibes",
+      "Spinning stuff"
+    ],
+    "icon": "978-tatsugiridroopyform.png",
+    "slug": "tatsugiridroopyform",
+    "nationalDexNum": null
+  },
+  "stereorotom": {
+    "name": "Stereo Rotom",
+    "num": 182,
+    "habitat": "Bright",
+    "categories": [
+      "Blocky stuff",
+      "Glass stuff",
+      "Group Activities",
+      "Noisy stuff",
+      "Shiny stuff"
+    ],
+    "icon": "479-stereorotom.png",
+    "slug": "stereorotom",
+    "nationalDexNum": null
+  },
+  "porygon": {
+    "name": "Porygon",
+    "num": 218,
+    "habitat": "Bright",
+    "categories": [
+      "Blocky stuff",
+      "Colorful stuff",
+      "Construction",
+      "Soft stuff",
+      "Strange stuff"
+    ],
+    "icon": "137.png",
+    "slug": "porygon",
+    "nationalDexNum": 137
+  },
+  "tinkaton": {
+    "name": "Tinkaton",
+    "num": 270,
+    "habitat": "Bright",
+    "categories": [
+      "Blocky stuff",
+      "Construction",
+      "Cute stuff",
+      "Exercise",
+      "Metal stuff"
+    ],
+    "icon": "959-tinkmeister.png",
+    "slug": "tinkaton",
+    "nationalDexNum": null
+  },
+  "squirtle": {
+    "name": "Squirtle",
+    "num": 7,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Cute stuff",
+      "Group Activities",
+      "Healing",
+      "Lots of water"
+    ],
+    "icon": "007.png",
+    "slug": "squirtle",
+    "nationalDexNum": 7
+  },
+  "wartortle": {
+    "name": "Wartortle",
+    "num": 8,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Exercise",
+      "Hard stuff",
+      "Healing",
+      "Lots of water"
+    ],
+    "icon": "008.png",
+    "slug": "wartortle",
+    "nationalDexNum": 8
+  },
+  "blastoise": {
+    "name": "Blastoise",
+    "num": 9,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Exercise",
+      "Healing",
+      "Lots of water",
+      "Luxury"
+    ],
+    "icon": "009.png",
+    "slug": "blastoise",
+    "nationalDexNum": 9
+  },
+  "slowpoke": {
+    "name": "Slowpoke",
+    "num": 24,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Healing",
+      "Lots of water",
+      "Soft stuff",
+      "Strange stuff"
+    ],
+    "icon": "079.png",
+    "slug": "slowpoke",
+    "nationalDexNum": 79
+  },
+  "slowbro": {
+    "name": "Slowbro",
+    "num": 25,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Group Activities",
+      "Healing",
+      "Lots of water",
+      "Strange stuff"
+    ],
+    "icon": "080.png",
+    "slug": "slowbro",
+    "nationalDexNum": 80
+  },
+  "slowking": {
+    "name": "Slowking",
+    "num": 26,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Group Activities",
+      "Healing",
+      "Lots of water",
+      "Strange stuff"
+    ],
+    "icon": "199.png",
+    "slug": "slowking",
+    "nationalDexNum": 199
+  },
+  "gyarados": {
+    "name": "Gyarados",
+    "num": 46,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Lots of water",
+      "Nice breezes",
+      "Ocean vibes",
+      "Slender objects"
+    ],
+    "icon": "130.png",
+    "slug": "gyarados",
+    "nationalDexNum": 130
+  },
+  "shellos": {
+    "name": "Shellos",
+    "num": 59,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Colorful stuff",
+      "Containers",
+      "Lots of water",
+      "Ocean vibes"
+    ],
+    "icon": "422.png",
+    "slug": "shellos",
+    "nationalDexNum": 422
+  },
+  "shelloseastsea": {
+    "name": "Shellos East Sea",
+    "num": 59,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Colorful stuff",
+      "Containers",
+      "Lots of water",
+      "Ocean vibes"
+    ],
+    "icon": "422-shelloseastsea.png",
+    "slug": "shelloseastsea",
+    "nationalDexNum": null
+  },
+  "gastrodon": {
+    "name": "Gastrodon",
+    "num": 60,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Containers",
+      "Lots of dirt",
+      "Lots of water",
+      "Ocean vibes"
+    ],
+    "icon": "423.png",
+    "slug": "gastrodon",
+    "nationalDexNum": 423
+  },
+  "gastrodoneastsea": {
+    "name": "Gastrodon East Sea",
+    "num": 60,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Containers",
+      "Lots of dirt",
+      "Lots of water",
+      "Ocean vibes"
+    ],
+    "icon": "423-gastrodoneastsea.png",
+    "slug": "gastrodoneastsea",
+    "nationalDexNum": null
+  },
+  "goomy": {
+    "name": "Goomy",
+    "num": 74,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Healing",
+      "Lots of nature",
+      "Lots of water",
+      "Luxury"
+    ],
+    "icon": "704.png",
+    "slug": "goomy",
+    "nationalDexNum": 704
+  },
+  "sliggoo": {
+    "name": "Sliggoo",
+    "num": 75,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Healing",
+      "Lots of water",
+      "Luxury",
+      "Soft stuff"
+    ],
+    "icon": "705.png",
+    "slug": "sliggoo",
+    "nationalDexNum": 705
+  },
+  "goodra": {
+    "name": "Goodra",
+    "num": 76,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Exercise",
+      "Healing",
+      "Lots of water",
+      "Luxury"
+    ],
+    "icon": "706.png",
+    "slug": "goodra",
+    "nationalDexNum": 706
+  },
+  "lapras": {
+    "name": "Lapras",
+    "num": 106,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Healing",
+      "Lots of water",
+      "Ocean vibes",
+      "Watching stuff"
+    ],
+    "icon": "131.png",
+    "slug": "lapras",
+    "nationalDexNum": 131
+  },
+  "azurill": {
+    "name": "Azurill",
+    "num": 114,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Cute stuff",
+      "Healing",
+      "Lots of water",
+      "Rides"
+    ],
+    "icon": "298.png",
+    "slug": "azurill",
+    "nationalDexNum": 298
+  },
+  "marill": {
+    "name": "Marill",
+    "num": 115,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Cute stuff",
+      "Lots of water",
+      "Round stuff",
+      "Symbols"
+    ],
+    "icon": "183.png",
+    "slug": "marill",
+    "nationalDexNum": 183
+  },
+  "paldeanwooper": {
+    "name": "Paldean Wooper",
+    "num": 117,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Garbage",
+      "Group Activities",
+      "Lots of dirt",
+      "Stone stuff"
+    ],
+    "icon": "194-p.png",
+    "slug": "paldeanwooper",
+    "nationalDexNum": null
+  },
+  "clodsire": {
+    "name": "Clodsire",
+    "num": 118,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Garbage",
+      "Lots of dirt",
+      "Lots of water",
+      "Round stuff"
+    ],
+    "icon": "980.png",
+    "slug": "clodsire",
+    "nationalDexNum": 980
+  },
+  "wingull": {
+    "name": "Wingull",
+    "num": 123,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Lots of water",
+      "Nice breezes",
+      "Ocean vibes",
+      "Watching stuff"
+    ],
+    "icon": "278.png",
+    "slug": "wingull",
+    "nationalDexNum": 278
+  },
+  "pelipper": {
+    "name": "Pelipper",
+    "num": 124,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Lots of water",
+      "Nice breezes",
+      "Ocean vibes",
+      "Watching stuff"
+    ],
+    "icon": "279.png",
+    "slug": "pelipper",
+    "nationalDexNum": 279
+  },
+  "piplup": {
+    "name": "Piplup",
+    "num": 128,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Containers",
+      "Lots of water",
+      "Nice breezes",
+      "Ocean vibes"
+    ],
+    "icon": "393.png",
+    "slug": "piplup",
+    "nationalDexNum": 393
+  },
+  "prinplup": {
+    "name": "Prinplup",
+    "num": 129,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Containers",
+      "Lots of water",
+      "Nice breezes",
+      "Ocean vibes"
+    ],
+    "icon": "394.png",
+    "slug": "prinplup",
+    "nationalDexNum": 394
+  },
+  "empoleon": {
+    "name": "Empoleon",
+    "num": 130,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Letters and words",
+      "Lots of water",
+      "Metal stuff",
+      "Ocean vibes"
+    ],
+    "icon": "395.png",
+    "slug": "empoleon",
+    "nationalDexNum": 395
+  },
+  "minccino": {
+    "name": "Minccino",
+    "num": 136,
+    "habitat": "Bright",
+    "categories": [
+      "Cleanliness",
+      "Cute stuff",
+      "Fabric",
+      "Rides",
+      "Soft stuff"
+    ],
+    "icon": "572.png",
+    "slug": "minccino",
+    "nationalDexNum": 572
+  },
+  "cinccino": {
+    "name": "Cinccino",
+    "num": 137,
+    "habitat": "Bright",
+    "categories": [
+      "Cleanliness",
+      "Cute stuff",
+      "Fabric",
+      "Rides",
+      "Soft stuff"
+    ],
+    "icon": "573.png",
+    "slug": "cinccino",
+    "nationalDexNum": 573
+  },
+  "lotad": {
+    "name": "Lotad",
+    "num": 172,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Containers",
+      "Lots of nature",
+      "Lots of water",
+      "Noisy stuff"
+    ],
+    "icon": "270.png",
+    "slug": "lotad",
+    "nationalDexNum": 270
+  },
+  "lombre": {
+    "name": "Lombre",
+    "num": 173,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Containers",
+      "Lots of nature",
+      "Lots of water",
+      "Noisy stuff"
+    ],
+    "icon": "271.png",
+    "slug": "lombre",
+    "nationalDexNum": 271
+  },
+  "dartrix": {
+    "name": "Dartrix",
+    "num": 186,
+    "habitat": "Dark",
+    "categories": [
+      "Cleanliness",
+      "Lots of nature",
+      "Nice breezes",
+      "Slender objects",
+      "Wooden stuff"
+    ],
+    "icon": "723.png",
+    "slug": "dartrix",
+    "nationalDexNum": 723
+  },
+  "poliwag": {
+    "name": "Poliwag",
+    "num": 209,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Lots of water",
+      "Rides",
+      "Round stuff",
+      "Spinning stuff"
+    ],
+    "icon": "060.png",
+    "slug": "poliwag",
+    "nationalDexNum": 60
+  },
+  "poliwhirl": {
+    "name": "Poliwhirl",
+    "num": 210,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Exercise",
+      "Lots of nature",
+      "Lots of water",
+      "Spinning stuff"
+    ],
+    "icon": "061.png",
+    "slug": "poliwhirl",
+    "nationalDexNum": 61
+  },
+  "poliwrath": {
+    "name": "Poliwrath",
+    "num": 211,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Construction",
+      "Exercise",
+      "Group Activities",
+      "Lots of water"
+    ],
+    "icon": "062.png",
+    "slug": "poliwrath",
+    "nationalDexNum": 62
+  },
+  "dratini": {
+    "name": "Dratini",
+    "num": 221,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Cute stuff",
+      "Lots of fire",
+      "Lots of water",
+      "Slender objects"
+    ],
+    "icon": "147.png",
+    "slug": "dratini",
+    "nationalDexNum": 147
+  },
+  "dragonair": {
+    "name": "Dragonair",
+    "num": 222,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Glass stuff",
+      "Lots of fire",
+      "Lots of water",
+      "Slender objects"
+    ],
+    "icon": "148.png",
+    "slug": "dragonair",
+    "nationalDexNum": 148
+  },
+  "dragonite": {
+    "name": "Dragonite",
+    "num": 223,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Lots of fire",
+      "Nice breezes",
+      "Pretty flowers",
+      "Symbols"
+    ],
+    "icon": "149.png",
+    "slug": "dragonite",
+    "nationalDexNum": 149
+  },
+  "swablu": {
+    "name": "Swablu",
+    "num": 240,
+    "habitat": "Bright",
+    "categories": [
+      "Cleanliness",
+      "Cute stuff",
+      "Nice breezes",
+      "Soft stuff",
+      "Watching stuff"
+    ],
+    "icon": "333.png",
+    "slug": "swablu",
+    "nationalDexNum": 333
+  },
+  "servine": {
+    "name": "Servine",
+    "num": 249,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Lots of nature",
+      "Lots of water",
+      "Shiny stuff",
+      "Wooden stuff"
+    ],
+    "icon": "496.png",
+    "slug": "servine",
+    "nationalDexNum": 496
+  },
+  "froakie": {
+    "name": "Froakie",
+    "num": 251,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Containers",
+      "Lots of water",
+      "Ocean vibes",
+      "Watching stuff"
+    ],
+    "icon": "656.png",
+    "slug": "froakie",
+    "nationalDexNum": 656
+  },
+  "frogadier": {
+    "name": "Frogadier",
+    "num": 252,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Exercise",
+      "Lots of water",
+      "Ocean vibes",
+      "Watching stuff"
+    ],
+    "icon": "657.png",
+    "slug": "frogadier",
+    "nationalDexNum": 657
+  },
+  "greninja": {
+    "name": "Greninja",
+    "num": 253,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Exercise",
+      "Lots of water",
+      "Ocean vibes",
+      "Shiny stuff"
+    ],
+    "icon": "658.png",
+    "slug": "greninja",
+    "nationalDexNum": 658
+  },
+  "vaporeon": {
+    "name": "Vaporeon",
+    "num": 281,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Cute stuff",
+      "Lots of water",
+      "Pretty flowers",
+      "Watching stuff"
+    ],
+    "icon": "134.png",
+    "slug": "vaporeon",
+    "nationalDexNum": 134
+  },
+  "suicune": {
+    "name": "Suicune",
+    "num": 292,
+    "habitat": "Humid",
+    "categories": [
+      "Cleanliness",
+      "Healing",
+      "Lots of water",
+      "Ocean vibes",
+      "Watching stuff"
+    ],
+    "icon": "245.png",
+    "slug": "suicune",
+    "nationalDexNum": 245
+  },
+  "ivysaur": {
+    "name": "Ivysaur",
+    "num": 2,
+    "habitat": "Bright",
+    "categories": [
+      "Colorful stuff",
+      "Cute stuff",
+      "Lots of nature",
+      "Pretty flowers",
+      "Soft stuff"
+    ],
+    "icon": "002.png",
+    "slug": "ivysaur",
+    "nationalDexNum": 2
+  },
+  "vileplume": {
+    "name": "Vileplume",
+    "num": 15,
+    "habitat": "Humid",
+    "categories": [
+      "Colorful stuff",
+      "Lots of dirt",
+      "Lots of nature",
+      "Pretty flowers",
+      "Soft stuff"
+    ],
+    "icon": "045.png",
+    "slug": "vileplume",
+    "nationalDexNum": 45
+  },
+  "weepinbell": {
+    "name": "Weepinbell",
+    "num": 22,
+    "habitat": "Humid",
+    "categories": [
+      "Colorful stuff",
+      "Lots of dirt",
+      "Lots of nature",
+      "Pretty flowers",
+      "Wooden stuff"
+    ],
+    "icon": "070.png",
+    "slug": "weepinbell",
+    "nationalDexNum": 70
+  },
+  "victreebel": {
+    "name": "Victreebel",
+    "num": 23,
+    "habitat": "Humid",
+    "categories": [
+      "Colorful stuff",
+      "Lots of dirt",
+      "Lots of nature",
+      "Pretty flowers",
+      "Wooden stuff"
+    ],
+    "icon": "071.png",
+    "slug": "victreebel",
+    "nationalDexNum": 71
+  },
+  "gulpin": {
+    "name": "Gulpin",
+    "num": 53,
+    "habitat": "Humid",
+    "categories": [
+      "Colorful stuff",
+      "Containers",
+      "Cute stuff",
+      "Looks like food",
+      "Round stuff"
+    ],
+    "icon": "316.png",
+    "slug": "gulpin",
+    "nationalDexNum": 316
+  },
+  "swalot": {
+    "name": "Swalot",
+    "num": 54,
+    "habitat": "Humid",
+    "categories": [
+      "Colorful stuff",
+      "Containers",
+      "Garbage",
+      "Looks like food",
+      "Round stuff"
+    ],
+    "icon": "317.png",
+    "slug": "swalot",
+    "nationalDexNum": 317
+  },
+  "muk": {
+    "name": "Muk",
+    "num": 92,
+    "habitat": "Dark",
+    "categories": [
+      "Colorful stuff",
+      "Garbage",
+      "Gatherings",
+      "Shiny stuff",
+      "Spooky stuff"
+    ],
+    "icon": "089.png",
+    "slug": "muk",
+    "nationalDexNum": 89
+  },
+  "voltorb": {
+    "name": "Voltorb",
+    "num": 96,
+    "habitat": "Bright",
+    "categories": [
+      "Colorful stuff",
+      "Electronics",
+      "Round stuff",
+      "Shiny stuff",
+      "Spinning stuff"
+    ],
+    "icon": "100.png",
+    "slug": "voltorb",
+    "nationalDexNum": 100
+  },
+  "spinarak": {
+    "name": "Spinarak",
+    "num": 109,
+    "habitat": "Humid",
+    "categories": [
+      "Colorful stuff",
+      "Garbage",
+      "Lots of nature",
+      "Rides",
+      "Wooden stuff"
+    ],
+    "icon": "167.png",
+    "slug": "spinarak",
+    "nationalDexNum": 167
+  },
+  "ariados": {
+    "name": "Ariados",
+    "num": 110,
+    "habitat": "Humid",
+    "categories": [
+      "Colorful stuff",
+      "Garbage",
+      "Lots of nature",
+      "Rides",
+      "Wooden stuff"
+    ],
+    "icon": "168.png",
+    "slug": "ariados",
+    "nationalDexNum": 168
+  },
+  "smeargle": {
+    "name": "Smeargle",
+    "num": 119,
+    "habitat": "Bright",
+    "categories": [
+      "Colorful stuff",
+      "Fabric",
+      "Shiny stuff",
+      "Soft stuff",
+      "Strange stuff"
+    ],
+    "icon": "235-smearguru.png",
+    "slug": "smeargle",
+    "nationalDexNum": null
+  },
+  "cleffa": {
+    "name": "Cleffa",
+    "num": 148,
+    "habitat": "Dark",
+    "categories": [
+      "Colorful stuff",
+      "Cute stuff",
+      "Healing",
+      "Rides",
+      "Round stuff"
+    ],
+    "icon": "173.png",
+    "slug": "cleffa",
+    "nationalDexNum": 173
+  },
+  "mawile": {
+    "name": "Mawile",
+    "num": 175,
+    "habitat": "Bright",
+    "categories": [
+      "Colorful stuff",
+      "Cute stuff",
+      "Group Activities",
+      "Looks like food",
+      "Metal stuff"
+    ],
+    "icon": "303.png",
+    "slug": "mawile",
+    "nationalDexNum": 303
+  },
+  "kricketot": {
+    "name": "Kricketot",
+    "num": 177,
+    "habitat": "Dark",
+    "categories": [
+      "Colorful stuff",
+      "Lots of nature",
+      "Noisy stuff",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "401.png",
+    "slug": "kricketot",
+    "nationalDexNum": 401
+  },
+  "kricketune": {
+    "name": "Kricketune",
+    "num": 178,
+    "habitat": "Dark",
+    "categories": [
+      "Colorful stuff",
+      "Lots of nature",
+      "Noisy stuff",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "402.png",
+    "slug": "kricketune",
+    "nationalDexNum": 402
+  },
+  "porygon2": {
+    "name": "Porygon2",
+    "num": 219,
+    "habitat": "Bright",
+    "categories": [
+      "Colorful stuff",
+      "Construction",
+      "Round stuff",
+      "Soft stuff",
+      "Strange stuff"
+    ],
+    "icon": "233.png",
+    "slug": "porygon2",
+    "nationalDexNum": 233
+  },
+  "porygon-z": {
+    "name": "Porygon-Z",
+    "num": 220,
+    "habitat": "Bright",
+    "categories": [
+      "Colorful stuff",
+      "Fabric",
+      "Soft stuff",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "474.png",
+    "slug": "porygon-z",
+    "nationalDexNum": 474
+  },
+  "misdreavus": {
+    "name": "Misdreavus",
+    "num": 227,
+    "habitat": "Dark",
+    "categories": [
+      "Colorful stuff",
+      "Shiny stuff",
+      "Spooky stuff",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "200.png",
+    "slug": "misdreavus",
+    "nationalDexNum": 200
+  },
+  "sprigatito": {
+    "name": "Sprigatito",
+    "num": 263,
+    "habitat": "Bright",
+    "categories": [
+      "Colorful stuff",
+      "Containers",
+      "Cute stuff",
+      "Lots of nature",
+      "Pretty flowers"
+    ],
+    "icon": "906.png",
+    "slug": "sprigatito",
+    "nationalDexNum": 906
+  },
+  "floragato": {
+    "name": "Floragato",
+    "num": 264,
+    "habitat": "Bright",
+    "categories": [
+      "Colorful stuff",
+      "Cute stuff",
+      "Lots of nature",
+      "Pretty flowers",
+      "Sharp stuff"
+    ],
+    "icon": "907.png",
+    "slug": "floragato",
+    "nationalDexNum": 907
+  },
+  "venonat": {
+    "name": "Venonat",
+    "num": 19,
+    "habitat": "Bright",
+    "categories": [
+      "Complicated stuff",
+      "Letters and words",
+      "Lots of nature",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "048.png",
+    "slug": "venonat",
+    "nationalDexNum": 48
+  },
+  "koffing": {
+    "name": "Koffing",
+    "num": 38,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Garbage",
+      "Gatherings",
+      "Soft stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "109.png",
+    "slug": "koffing",
+    "nationalDexNum": 109
+  },
+  "weezing": {
+    "name": "Weezing",
+    "num": 39,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Garbage",
+      "Gatherings",
+      "Soft stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "110.png",
+    "slug": "weezing",
+    "nationalDexNum": 110
+  },
+  "professortangrowth": {
+    "name": "Professor Tangrowth",
+    "num": 41,
+    "habitat": "Humid",
+    "categories": [
+      "Complicated stuff",
+      "Group Activities",
+      "Letters and words",
+      "Lots of nature",
+      "Strange stuff"
+    ],
+    "icon": "465-professortangrowth.png",
+    "slug": "professortangrowth",
+    "nationalDexNum": null
+  },
+  "vespiquen": {
+    "name": "Vespiquen",
+    "num": 58,
+    "habitat": "Bright",
+    "categories": [
+      "Complicated stuff",
+      "Gatherings",
+      "Lots of nature",
+      "Nice breezes",
+      "Wooden stuff"
+    ],
+    "icon": "416.png",
+    "slug": "vespiquen",
+    "nationalDexNum": 416
+  },
+  "zubat": {
+    "name": "Zubat",
+    "num": 81,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Nice breezes",
+      "Spooky stuff",
+      "Wooden stuff"
+    ],
+    "icon": "041.png",
+    "slug": "zubat",
+    "nationalDexNum": 41
+  },
+  "golbat": {
+    "name": "Golbat",
+    "num": 82,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Nice breezes",
+      "Spooky stuff",
+      "Wooden stuff"
+    ],
+    "icon": "042.png",
+    "slug": "golbat",
+    "nationalDexNum": 42
+  },
+  "psyduck": {
+    "name": "Psyduck",
+    "num": 86,
+    "habitat": "Humid",
+    "categories": [
+      "Complicated stuff",
+      "Healing",
+      "Lots of water",
+      "Ocean vibes",
+      "Strange stuff"
+    ],
+    "icon": "054.png",
+    "slug": "psyduck",
+    "nationalDexNum": 54
+  },
+  "golduck": {
+    "name": "Golduck",
+    "num": 87,
+    "habitat": "Humid",
+    "categories": [
+      "Complicated stuff",
+      "Lots of water",
+      "Ocean vibes",
+      "Sharp stuff",
+      "Strange stuff"
+    ],
+    "icon": "055.png",
+    "slug": "golduck",
+    "nationalDexNum": 55
+  },
+  "absol": {
+    "name": "Absol",
+    "num": 127,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Exercise",
+      "Letters and words",
+      "Nice breezes",
+      "Soft stuff"
+    ],
+    "icon": "359.png",
+    "slug": "absol",
+    "nationalDexNum": 359
+  },
+  "trubbish": {
+    "name": "Trubbish",
+    "num": 132,
+    "habitat": "Humid",
+    "categories": [
+      "Complicated stuff",
+      "Construction",
+      "Garbage",
+      "Gatherings",
+      "Shiny stuff"
+    ],
+    "icon": "568.png",
+    "slug": "trubbish",
+    "nationalDexNum": 568
+  },
+  "garbodor": {
+    "name": "Garbodor",
+    "num": 133,
+    "habitat": "Humid",
+    "categories": [
+      "Complicated stuff",
+      "Containers",
+      "Garbage",
+      "Gatherings",
+      "Shiny stuff"
+    ],
+    "icon": "569.png",
+    "slug": "garbodor",
+    "nationalDexNum": 569
+  },
+  "lucario": {
+    "name": "Lucario",
+    "num": 181,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Construction",
+      "Exercise",
+      "Healing",
+      "Metal stuff"
+    ],
+    "icon": "448.png",
+    "slug": "lucario",
+    "nationalDexNum": 448
+  },
+  "glimmet": {
+    "name": "Glimmet",
+    "num": 203,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Garbage",
+      "Hard stuff",
+      "Shiny stuff",
+      "Stone stuff"
+    ],
+    "icon": "969.png",
+    "slug": "glimmet",
+    "nationalDexNum": 969
+  },
+  "glimmora": {
+    "name": "Glimmora",
+    "num": 204,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Garbage",
+      "Hard stuff",
+      "Shiny stuff",
+      "Stone stuff"
+    ],
+    "icon": "970.png",
+    "slug": "glimmora",
+    "nationalDexNum": 970
+  },
+  "gimmighoul": {
+    "name": "Gimmighoul",
+    "num": 205,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Metal stuff",
+      "Shiny stuff",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "999.png",
+    "slug": "gimmighoul",
+    "nationalDexNum": 999
+  },
+  "gholdengo": {
+    "name": "Gholdengo",
+    "num": 206,
+    "habitat": "Bright",
+    "categories": [
+      "Complicated stuff",
+      "Metal stuff",
+      "Shiny stuff",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "1000.png",
+    "slug": "gholdengo",
+    "nationalDexNum": 1000
+  },
+  "beldum": {
+    "name": "Beldum",
+    "num": 245,
+    "habitat": "Cool",
+    "categories": [
+      "Complicated stuff",
+      "Hard stuff",
+      "Metal stuff",
+      "Stone stuff",
+      "Strange stuff"
+    ],
+    "icon": "374.png",
+    "slug": "beldum",
+    "nationalDexNum": 374
+  },
+  "metang": {
+    "name": "Metang",
+    "num": 246,
+    "habitat": "Cool",
+    "categories": [
+      "Complicated stuff",
+      "Hard stuff",
+      "Metal stuff",
+      "Stone stuff",
+      "Strange stuff"
+    ],
+    "icon": "375.png",
+    "slug": "metang",
+    "nationalDexNum": 375
+  },
+  "wattrel": {
+    "name": "Wattrel",
+    "num": 266,
+    "habitat": "Bright",
+    "categories": [
+      "Complicated stuff",
+      "Electronics",
+      "Gatherings",
+      "Nice breezes",
+      "Ocean vibes"
+    ],
+    "icon": "940.png",
+    "slug": "wattrel",
+    "nationalDexNum": 940
+  },
+  "espeon": {
+    "name": "Espeon",
+    "num": 284,
+    "habitat": "Bright",
+    "categories": [
+      "Complicated stuff",
+      "Cute stuff",
+      "Nice breezes",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "196.png",
+    "slug": "espeon",
+    "nationalDexNum": 196
+  },
+  "mewtwo": {
+    "name": "Mewtwo",
+    "num": 299,
+    "habitat": "Dark",
+    "categories": [
+      "Complicated stuff",
+      "Letters and words",
+      "Stone stuff",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "150.png",
+    "slug": "mewtwo",
+    "nationalDexNum": 150
+  },
+  "mew": {
+    "name": "Mew",
+    "num": 300,
+    "habitat": "Warm",
+    "categories": [
+      "Complicated stuff",
+      "Luxury",
+      "Play spaces",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "151.png",
+    "slug": "mew",
+    "nationalDexNum": 151
+  },
+  "cubone": {
+    "name": "Cubone",
+    "num": 32,
+    "habitat": "Dry",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Group Activities",
+      "Lots of dirt",
+      "Slender objects"
+    ],
+    "icon": "104.png",
+    "slug": "cubone",
+    "nationalDexNum": 104
+  },
+  "marowak": {
+    "name": "Marowak",
+    "num": 33,
+    "habitat": "Dry",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Lots of dirt",
+      "Luxury",
+      "Slender objects"
+    ],
+    "icon": "105.png",
+    "slug": "marowak",
+    "nationalDexNum": 105
+  },
+  "gurdurr": {
+    "name": "Gurdurr",
+    "num": 66,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Group Activities",
+      "Metal stuff",
+      "Slender objects"
+    ],
+    "icon": "533.png",
+    "slug": "gurdurr",
+    "nationalDexNum": 533
+  },
+  "conkeldurr": {
+    "name": "Conkeldurr",
+    "num": 67,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Group Activities",
+      "Slender objects",
+      "Stone stuff"
+    ],
+    "icon": "534.png",
+    "slug": "conkeldurr",
+    "nationalDexNum": 534
+  },
+  "azumarill": {
+    "name": "Azumarill",
+    "num": 116,
+    "habitat": "Humid",
+    "categories": [
+      "Construction",
+      "Cute stuff",
+      "Lots of water",
+      "Symbols",
+      "Wobbly stuff"
+    ],
+    "icon": "184.png",
+    "slug": "azumarill",
+    "nationalDexNum": 184
+  },
+  "combusken": {
+    "name": "Combusken",
+    "num": 121,
+    "habitat": "Warm",
+    "categories": [
+      "Construction",
+      "Containers",
+      "Exercise",
+      "Lots of fire",
+      "Stone stuff"
+    ],
+    "icon": "256.png",
+    "slug": "combusken",
+    "nationalDexNum": 256
+  },
+  "blaziken": {
+    "name": "Blaziken",
+    "num": 122,
+    "habitat": "Warm",
+    "categories": [
+      "Construction",
+      "Containers",
+      "Exercise",
+      "Lots of fire",
+      "Luxury"
+    ],
+    "icon": "257.png",
+    "slug": "blaziken",
+    "nationalDexNum": 257
+  },
+  "makuhita": {
+    "name": "Makuhita",
+    "num": 125,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Fabric",
+      "Round stuff",
+      "Wooden stuff"
+    ],
+    "icon": "296.png",
+    "slug": "makuhita",
+    "nationalDexNum": 296
+  },
+  "hariyama": {
+    "name": "Hariyama",
+    "num": 126,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Fabric",
+      "Rides",
+      "Round stuff"
+    ],
+    "icon": "297.png",
+    "slug": "hariyama",
+    "nationalDexNum": 297
+  },
+  "machop": {
+    "name": "Machop",
+    "num": 156,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Group Activities",
+      "Hard stuff",
+      "Stone stuff"
+    ],
+    "icon": "066.png",
+    "slug": "machop",
+    "nationalDexNum": 66
+  },
+  "machoke": {
+    "name": "Machoke",
+    "num": 157,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Group Activities",
+      "Hard stuff",
+      "Stone stuff"
+    ],
+    "icon": "067.png",
+    "slug": "machoke",
+    "nationalDexNum": 67
+  },
+  "machamp": {
+    "name": "Machamp",
+    "num": 158,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Group Activities",
+      "Hard stuff",
+      "Stone stuff"
+    ],
+    "icon": "068.png",
+    "slug": "machamp",
+    "nationalDexNum": 68
+  },
+  "riolu": {
+    "name": "Riolu",
+    "num": 180,
+    "habitat": "Dark",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Fabric",
+      "Gatherings",
+      "Watching stuff"
+    ],
+    "icon": "447.png",
+    "slug": "riolu",
+    "nationalDexNum": 447
+  },
+  "gallade": {
+    "name": "Gallade",
+    "num": 234,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Exercise",
+      "Fabric",
+      "Healing",
+      "Strange stuff"
+    ],
+    "icon": "475.png",
+    "slug": "gallade",
+    "nationalDexNum": 475
+  },
+  "tinkatink": {
+    "name": "Tinkatink",
+    "num": 268,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Cute stuff",
+      "Exercise",
+      "Looks like food",
+      "Metal stuff"
+    ],
+    "icon": "957.png",
+    "slug": "tinkatink",
+    "nationalDexNum": 957
+  },
+  "tinkatuff": {
+    "name": "Tinkatuff",
+    "num": 269,
+    "habitat": "Bright",
+    "categories": [
+      "Construction",
+      "Cute stuff",
+      "Exercise",
+      "Group Activities",
+      "Metal stuff"
+    ],
+    "icon": "958.png",
+    "slug": "tinkatuff",
+    "nationalDexNum": 958
+  },
+  "noctowl": {
+    "name": "Noctowl",
+    "num": 49,
+    "habitat": "Dark",
+    "categories": [
+      "Containers",
+      "Letters and words",
+      "Nice breezes",
+      "Soft stuff",
+      "Watching stuff"
+    ],
+    "icon": "164.png",
+    "slug": "noctowl",
+    "nationalDexNum": 164
+  },
+  "lampent": {
+    "name": "Lampent",
+    "num": 69,
+    "habitat": "Warm",
+    "categories": [
+      "Containers",
+      "Lots of fire",
+      "Spooky stuff",
+      "Strange stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "608.png",
+    "slug": "lampent",
+    "nationalDexNum": 608
+  },
+  "meowth": {
+    "name": "Meowth",
+    "num": 84,
+    "habitat": "Cool",
+    "categories": [
+      "Containers",
+      "Glass stuff",
+      "Group Activities",
+      "Luxury",
+      "Shiny stuff"
+    ],
+    "icon": "052.png",
+    "slug": "meowth",
+    "nationalDexNum": 52
+  },
+  "persian": {
+    "name": "Persian",
+    "num": 85,
+    "habitat": "Cool",
+    "categories": [
+      "Containers",
+      "Group Activities",
+      "Luxury",
+      "Shiny stuff",
+      "Watching stuff"
+    ],
+    "icon": "053.png",
+    "slug": "persian",
+    "nationalDexNum": 53
+  },
+  "grimer": {
+    "name": "Grimer",
+    "num": 91,
+    "habitat": "Dark",
+    "categories": [
+      "Containers",
+      "Garbage",
+      "Gatherings",
+      "Shiny stuff",
+      "Spooky stuff"
+    ],
+    "icon": "088.png",
+    "slug": "grimer",
+    "nationalDexNum": 88
+  },
+  "gastly": {
+    "name": "Gastly",
+    "num": 93,
+    "habitat": "Dark",
+    "categories": [
+      "Containers",
+      "Garbage",
+      "Group Activities",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "092.png",
+    "slug": "gastly",
+    "nationalDexNum": 92
+  },
+  "happiny": {
+    "name": "Happiny",
+    "num": 100,
+    "habitat": "Bright",
+    "categories": [
+      "Containers",
+      "Fabric",
+      "Healing",
+      "Round stuff",
+      "Soft stuff"
+    ],
+    "icon": "440.png",
+    "slug": "happiny",
+    "nationalDexNum": 440
+  },
+  "torchic": {
+    "name": "Torchic",
+    "num": 120,
+    "habitat": "Warm",
+    "categories": [
+      "Containers",
+      "Cute stuff",
+      "Lots of fire",
+      "Pretty flowers",
+      "Stone stuff"
+    ],
+    "icon": "255.png",
+    "slug": "torchic",
+    "nationalDexNum": 255
+  },
+  "grubbin": {
+    "name": "Grubbin",
+    "num": 138,
+    "habitat": "Bright",
+    "categories": [
+      "Containers",
+      "Electronics",
+      "Lots of dirt",
+      "Lots of nature",
+      "Watching stuff"
+    ],
+    "icon": "736.png",
+    "slug": "grubbin",
+    "nationalDexNum": 736
+  },
+  "tatsugiristretchyform": {
+    "name": "Tatsugiri Stretchy Form",
+    "num": 145,
+    "habitat": "Humid",
+    "categories": [
+      "Containers",
+      "Group Activities",
+      "Letters and words",
+      "Lots of water",
+      "Ocean vibes"
+    ],
+    "icon": "978-tatsugiristretchyform.png",
+    "slug": "tatsugiristretchyform",
+    "nationalDexNum": null
+  },
+  "ludicolo": {
+    "name": "Ludicolo",
+    "num": 174,
+    "habitat": "Humid",
+    "categories": [
+      "Containers",
+      "Lots of nature",
+      "Lots of water",
+      "Noisy stuff",
+      "Play spaces"
+    ],
+    "icon": "272.png",
+    "slug": "ludicolo",
+    "nationalDexNum": 272
+  },
+  "rowlet": {
+    "name": "Rowlet",
+    "num": 185,
+    "habitat": "Dark",
+    "categories": [
+      "Containers",
+      "Lots of nature",
+      "Nice breezes",
+      "Spinning stuff",
+      "Wooden stuff"
+    ],
+    "icon": "722.png",
+    "slug": "rowlet",
+    "nationalDexNum": 722
+  },
+  "raboot": {
+    "name": "Raboot",
+    "num": 189,
+    "habitat": "Warm",
+    "categories": [
+      "Containers",
+      "Group Activities",
+      "Lots of fire",
+      "Play spaces",
+      "Stone stuff"
+    ],
+    "icon": "814.png",
+    "slug": "raboot",
+    "nationalDexNum": 814
+  },
+  "kadabra": {
+    "name": "Kadabra",
+    "num": 214,
+    "habitat": "Dark",
+    "categories": [
+      "Containers",
+      "Metal stuff",
+      "Strange stuff",
+      "Watching stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "064.png",
+    "slug": "kadabra",
+    "nationalDexNum": 64
+  },
+  "dusclops": {
+    "name": "Dusclops",
+    "num": 243,
+    "habitat": "Dark",
+    "categories": [
+      "Containers",
+      "Rides",
+      "Soft stuff",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "356.png",
+    "slug": "dusclops",
+    "nationalDexNum": 356
+  },
+  "dusknoir": {
+    "name": "Dusknoir",
+    "num": 244,
+    "habitat": "Dark",
+    "categories": [
+      "Containers",
+      "Group Activities",
+      "Rides",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "477.png",
+    "slug": "dusknoir",
+    "nationalDexNum": 477
+  },
+  "serperior": {
+    "name": "Serperior",
+    "num": 250,
+    "habitat": "Humid",
+    "categories": [
+      "Containers",
+      "Lots of nature",
+      "Lots of water",
+      "Slender objects",
+      "Wooden stuff"
+    ],
+    "icon": "497.png",
+    "slug": "serperior",
+    "nationalDexNum": 497
+  },
+  "rookidee": {
+    "name": "Rookidee",
+    "num": 257,
+    "habitat": "Bright",
+    "categories": [
+      "Containers",
+      "Nice breezes",
+      "Shiny stuff",
+      "Slender objects",
+      "Wooden stuff"
+    ],
+    "icon": "821.png",
+    "slug": "rookidee",
+    "nationalDexNum": 821
+  },
+  "corvisquire": {
+    "name": "Corvisquire",
+    "num": 258,
+    "habitat": "Bright",
+    "categories": [
+      "Containers",
+      "Nice breezes",
+      "Shiny stuff",
+      "Slender objects",
+      "Wooden stuff"
+    ],
+    "icon": "822.png",
+    "slug": "corvisquire",
+    "nationalDexNum": 822
+  },
+  "corviknight": {
+    "name": "Corviknight",
+    "num": 259,
+    "habitat": "Bright",
+    "categories": [
+      "Containers",
+      "Metal stuff",
+      "Nice breezes",
+      "Shiny stuff",
+      "Wooden stuff"
+    ],
+    "icon": "823.png",
+    "slug": "corviknight",
+    "nationalDexNum": 823
+  },
+  "amaura": {
+    "name": "Amaura",
+    "num": 278,
+    "habitat": "Cool",
+    "categories": [
+      "Containers",
+      "Group Activities",
+      "Hard stuff",
+      "Shiny stuff",
+      "Stone stuff"
+    ],
+    "icon": "698.png",
+    "slug": "amaura",
+    "nationalDexNum": 698
+  },
+  "volcanion": {
+    "name": "Volcanion",
+    "num": 293,
+    "habitat": "Warm",
+    "categories": [
+      "Containers",
+      "Lots of fire",
+      "Lots of water",
+      "Stone stuff",
+      "Symbols"
+    ],
+    "icon": "721.png",
+    "slug": "volcanion",
+    "nationalDexNum": 721
+  },
+  "bulbasaur": {
+    "name": "Bulbasaur",
+    "num": 1,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Group Activities",
+      "Lots of nature",
+      "Lots of water",
+      "Soft stuff"
+    ],
+    "icon": "001.png",
+    "slug": "bulbasaur",
+    "nationalDexNum": 1
+  },
+  "venusaur": {
+    "name": "Venusaur",
+    "num": 3,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Lots of nature",
+      "Luxury",
+      "Pretty flowers",
+      "Soft stuff"
+    ],
+    "icon": "003.png",
+    "slug": "venusaur",
+    "nationalDexNum": 3
+  },
+  "bellossom": {
+    "name": "Bellossom",
+    "num": 16,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Lots of nature",
+      "Noisy stuff",
+      "Play spaces",
+      "Pretty flowers"
+    ],
+    "icon": "182.png",
+    "slug": "bellossom",
+    "nationalDexNum": 182
+  },
+  "volbeat": {
+    "name": "Volbeat",
+    "num": 51,
+    "habitat": "Dark",
+    "categories": [
+      "Cute stuff",
+      "Group Activities",
+      "Lots of nature",
+      "Shiny stuff",
+      "Wooden stuff"
+    ],
+    "icon": "313.png",
+    "slug": "volbeat",
+    "nationalDexNum": 313
+  },
+  "illumise": {
+    "name": "Illumise",
+    "num": 52,
+    "habitat": "Dark",
+    "categories": [
+      "Cute stuff",
+      "Group Activities",
+      "Lots of nature",
+      "Shiny stuff",
+      "Wooden stuff"
+    ],
+    "icon": "314.png",
+    "slug": "illumise",
+    "nationalDexNum": 314
+  },
+  "cacnea": {
+    "name": "Cacnea",
+    "num": 55,
+    "habitat": "Dry",
+    "categories": [
+      "Cute stuff",
+      "Lots of nature",
+      "Pretty flowers",
+      "Round stuff",
+      "Sharp stuff"
+    ],
+    "icon": "331.png",
+    "slug": "cacnea",
+    "nationalDexNum": 331
+  },
+  "drifloon": {
+    "name": "Drifloon",
+    "num": 61,
+    "habitat": "Warm",
+    "categories": [
+      "Cute stuff",
+      "Nice breezes",
+      "Round stuff",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "425.png",
+    "slug": "drifloon",
+    "nationalDexNum": 425
+  },
+  "pichu": {
+    "name": "Pichu",
+    "num": 78,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Fabric",
+      "Glass stuff",
+      "Pretty flowers"
+    ],
+    "icon": "172.png",
+    "slug": "pichu",
+    "nationalDexNum": 172
+  },
+  "peakychu": {
+    "name": "Peakychu",
+    "num": 79,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Glass stuff",
+      "Healing",
+      "Letters and words"
+    ],
+    "icon": "025-peakychu.png",
+    "slug": "peakychu",
+    "nationalDexNum": null
+  },
+  "elekid": {
+    "name": "Elekid",
+    "num": 103,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Glass stuff",
+      "Round stuff",
+      "Spinning stuff"
+    ],
+    "icon": "239.png",
+    "slug": "elekid",
+    "nationalDexNum": 239
+  },
+  "mareep": {
+    "name": "Mareep",
+    "num": 111,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Fabric",
+      "Glass stuff",
+      "Shiny stuff"
+    ],
+    "icon": "179.png",
+    "slug": "mareep",
+    "nationalDexNum": 179
+  },
+  "flaaffy": {
+    "name": "Flaaffy",
+    "num": 112,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Glass stuff",
+      "Rides",
+      "Shiny stuff"
+    ],
+    "icon": "180.png",
+    "slug": "flaaffy",
+    "nationalDexNum": 180
+  },
+  "ampharos": {
+    "name": "Ampharos",
+    "num": 113,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Glass stuff",
+      "Pretty flowers",
+      "Shiny stuff"
+    ],
+    "icon": "181.png",
+    "slug": "ampharos",
+    "nationalDexNum": 181
+  },
+  "audino": {
+    "name": "Audino",
+    "num": 131,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Fabric",
+      "Healing",
+      "Round stuff",
+      "Soft stuff"
+    ],
+    "icon": "531.png",
+    "slug": "audino",
+    "nationalDexNum": 531
+  },
+  "zorua": {
+    "name": "Zorua",
+    "num": 134,
+    "habitat": "Dark",
+    "categories": [
+      "Cute stuff",
+      "Glass stuff",
+      "Group Activities",
+      "Luxury",
+      "Shiny stuff"
+    ],
+    "icon": "570.png",
+    "slug": "zorua",
+    "nationalDexNum": 570
+  },
+  "mimikyu": {
+    "name": "Mimikyu",
+    "num": 141,
+    "habitat": "Dark",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Fabric",
+      "Group Activities",
+      "Spooky stuff"
+    ],
+    "icon": "778.png",
+    "slug": "mimikyu",
+    "nationalDexNum": 778
+  },
+  "pawmi": {
+    "name": "Pawmi",
+    "num": 142,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Glass stuff",
+      "Group Activities",
+      "Shiny stuff"
+    ],
+    "icon": "921.png",
+    "slug": "pawmi",
+    "nationalDexNum": 921
+  },
+  "clefairy": {
+    "name": "Clefairy",
+    "num": 149,
+    "habitat": "Dark",
+    "categories": [
+      "Cute stuff",
+      "Group Activities",
+      "Healing",
+      "Play spaces",
+      "Pretty flowers"
+    ],
+    "icon": "035.png",
+    "slug": "clefairy",
+    "nationalDexNum": 35
+  },
+  "clefable": {
+    "name": "Clefable",
+    "num": 150,
+    "habitat": "Dark",
+    "categories": [
+      "Cute stuff",
+      "Group Activities",
+      "Healing",
+      "Play spaces",
+      "Pretty flowers"
+    ],
+    "icon": "036.png",
+    "slug": "clefable",
+    "nationalDexNum": 36
+  },
+  "igglybuff": {
+    "name": "Igglybuff",
+    "num": 151,
+    "habitat": "Warm",
+    "categories": [
+      "Cute stuff",
+      "Healing",
+      "Noisy stuff",
+      "Play spaces",
+      "Soft stuff"
+    ],
+    "icon": "174.png",
+    "slug": "igglybuff",
+    "nationalDexNum": 174
+  },
+  "jigglypuff": {
+    "name": "Jigglypuff",
+    "num": 152,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Healing",
+      "Play spaces",
+      "Soft stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "039.png",
+    "slug": "jigglypuff",
+    "nationalDexNum": 39
+  },
+  "wigglytuff": {
+    "name": "Wigglytuff",
+    "num": 153,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Group Activities",
+      "Healing",
+      "Play spaces",
+      "Soft stuff"
+    ],
+    "icon": "040.png",
+    "slug": "wigglytuff",
+    "nationalDexNum": 40
+  },
+  "diglett": {
+    "name": "Diglett",
+    "num": 154,
+    "habitat": "Dark",
+    "categories": [
+      "Cute stuff",
+      "Group Activities",
+      "Lots of dirt",
+      "Play spaces",
+      "Slender objects"
+    ],
+    "icon": "050.png",
+    "slug": "diglett",
+    "nationalDexNum": 50
+  },
+  "magby": {
+    "name": "Magby",
+    "num": 162,
+    "habitat": "Warm",
+    "categories": [
+      "Cute stuff",
+      "Lots of fire",
+      "Stone stuff",
+      "Watching stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "240.png",
+    "slug": "magby",
+    "nationalDexNum": 240
+  },
+  "fidough": {
+    "name": "Fidough",
+    "num": 198,
+    "habitat": "Warm",
+    "categories": [
+      "Cute stuff",
+      "Letters and words",
+      "Lots of fire",
+      "Soft stuff",
+      "Watching stuff"
+    ],
+    "icon": "926.png",
+    "slug": "fidough",
+    "nationalDexNum": 926
+  },
+  "dachsbun": {
+    "name": "Dachsbun",
+    "num": 199,
+    "habitat": "Warm",
+    "categories": [
+      "Cute stuff",
+      "Group Activities",
+      "Looks like food",
+      "Lots of fire",
+      "Watching stuff"
+    ],
+    "icon": "927.png",
+    "slug": "dachsbun",
+    "nationalDexNum": 927
+  },
+  "vulpix": {
+    "name": "Vulpix",
+    "num": 207,
+    "habitat": "Warm",
+    "categories": [
+      "Cute stuff",
+      "Lots of fire",
+      "Pretty flowers",
+      "Round stuff",
+      "Soft stuff"
+    ],
+    "icon": "037.png",
+    "slug": "vulpix",
+    "nationalDexNum": 37
+  },
+  "ralts": {
+    "name": "Ralts",
+    "num": 231,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Healing",
+      "Strange stuff",
+      "Symbols",
+      "Watching stuff"
+    ],
+    "icon": "280.png",
+    "slug": "ralts",
+    "nationalDexNum": 280
+  },
+  "kirlia": {
+    "name": "Kirlia",
+    "num": 232,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Healing",
+      "Strange stuff",
+      "Symbols",
+      "Watching stuff"
+    ],
+    "icon": "281.png",
+    "slug": "kirlia",
+    "nationalDexNum": 281
+  },
+  "plusle": {
+    "name": "Plusle",
+    "num": 235,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Glass stuff",
+      "Group Activities",
+      "Soft stuff"
+    ],
+    "icon": "311.png",
+    "slug": "plusle",
+    "nationalDexNum": 311
+  },
+  "minun": {
+    "name": "Minun",
+    "num": 236,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Glass stuff",
+      "Group Activities",
+      "Soft stuff"
+    ],
+    "icon": "312.png",
+    "slug": "minun",
+    "nationalDexNum": 312
+  },
+  "altaria": {
+    "name": "Altaria",
+    "num": 241,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Nice breezes",
+      "Noisy stuff",
+      "Soft stuff",
+      "Watching stuff"
+    ],
+    "icon": "334.png",
+    "slug": "altaria",
+    "nationalDexNum": 334
+  },
+  "dedenne": {
+    "name": "Dedenne",
+    "num": 254,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Group Activities",
+      "Looks like food",
+      "Watching stuff"
+    ],
+    "icon": "702.png",
+    "slug": "dedenne",
+    "nationalDexNum": 702
+  },
+  "meowscarada": {
+    "name": "Meowscarada",
+    "num": 265,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Lots of nature",
+      "Luxury",
+      "Pretty flowers",
+      "Shiny stuff"
+    ],
+    "icon": "908.png",
+    "slug": "meowscarada",
+    "nationalDexNum": 908
+  },
+  "eevee": {
+    "name": "Eevee",
+    "num": 280,
+    "habitat": "Warm",
+    "categories": [
+      "Cute stuff",
+      "Group Activities",
+      "Letters and words",
+      "Soft stuff",
+      "Stone stuff"
+    ],
+    "icon": "133.png",
+    "slug": "eevee",
+    "nationalDexNum": 133
+  },
+  "jolteon": {
+    "name": "Jolteon",
+    "num": 282,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Electronics",
+      "Glass stuff",
+      "Sharp stuff",
+      "Shiny stuff"
+    ],
+    "icon": "135.png",
+    "slug": "jolteon",
+    "nationalDexNum": 135
+  },
+  "flareon": {
+    "name": "Flareon",
+    "num": 283,
+    "habitat": "Warm",
+    "categories": [
+      "Cute stuff",
+      "Lots of fire",
+      "Metal stuff",
+      "Rides",
+      "Wooden stuff"
+    ],
+    "icon": "136.png",
+    "slug": "flareon",
+    "nationalDexNum": 136
+  },
+  "umbreon": {
+    "name": "Umbreon",
+    "num": 285,
+    "habitat": "Dark",
+    "categories": [
+      "Cute stuff",
+      "Letters and words",
+      "Luxury",
+      "Shiny stuff",
+      "Watching stuff"
+    ],
+    "icon": "197.png",
+    "slug": "umbreon",
+    "nationalDexNum": 197
+  },
+  "leafeon": {
+    "name": "Leafeon",
+    "num": 286,
+    "habitat": "Bright",
+    "categories": [
+      "Cute stuff",
+      "Fabric",
+      "Healing",
+      "Lots of nature",
+      "Pretty flowers"
+    ],
+    "icon": "470.png",
+    "slug": "leafeon",
+    "nationalDexNum": 470
+  },
+  "glaceon": {
+    "name": "Glaceon",
+    "num": 287,
+    "habitat": "Cool",
+    "categories": [
+      "Cute stuff",
+      "Glass stuff",
+      "Group Activities",
+      "Lots of water",
+      "Shiny stuff"
+    ],
+    "icon": "471.png",
+    "slug": "glaceon",
+    "nationalDexNum": 471
+  },
+  "sylveon": {
+    "name": "Sylveon",
+    "num": 288,
+    "habitat": "Warm",
+    "categories": [
+      "Cute stuff",
+      "Fabric",
+      "Lots of nature",
+      "Noisy stuff",
+      "Round stuff"
+    ],
+    "icon": "700.png",
+    "slug": "sylveon",
+    "nationalDexNum": 700
+  },
+  "magnemite": {
+    "name": "Magnemite",
+    "num": 27,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Group Activities",
+      "Hard stuff",
+      "Metal stuff",
+      "Shiny stuff"
+    ],
+    "icon": "081.png",
+    "slug": "magnemite",
+    "nationalDexNum": 81
+  },
+  "magneton": {
+    "name": "Magneton",
+    "num": 28,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Gatherings",
+      "Group Activities",
+      "Metal stuff",
+      "Shiny stuff"
+    ],
+    "icon": "082.png",
+    "slug": "magneton",
+    "nationalDexNum": 82
+  },
+  "magnezone": {
+    "name": "Magnezone",
+    "num": 29,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Gatherings",
+      "Hard stuff",
+      "Luxury",
+      "Metal stuff"
+    ],
+    "icon": "462.png",
+    "slug": "magnezone",
+    "nationalDexNum": 462
+  },
+  "pikachu": {
+    "name": "Pikachu",
+    "num": 79,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Glass stuff",
+      "Group Activities",
+      "Rides",
+      "Round stuff"
+    ],
+    "icon": "025.png",
+    "slug": "pikachu",
+    "nationalDexNum": 25
+  },
+  "raichu": {
+    "name": "Raichu",
+    "num": 80,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Glass stuff",
+      "Group Activities",
+      "Play spaces",
+      "Round stuff"
+    ],
+    "icon": "026.png",
+    "slug": "raichu",
+    "nationalDexNum": 26
+  },
+  "electrode": {
+    "name": "Electrode",
+    "num": 97,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Play spaces",
+      "Round stuff",
+      "Shiny stuff",
+      "Spinning stuff"
+    ],
+    "icon": "101.png",
+    "slug": "electrode",
+    "nationalDexNum": 101
+  },
+  "electabuzz": {
+    "name": "Electabuzz",
+    "num": 104,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Exercise",
+      "Glass stuff",
+      "Lots of fire",
+      "Sharp stuff"
+    ],
+    "icon": "125.png",
+    "slug": "electabuzz",
+    "nationalDexNum": 125
+  },
+  "electivire": {
+    "name": "Electivire",
+    "num": 105,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Exercise",
+      "Glass stuff",
+      "Hard stuff",
+      "Lots of fire"
+    ],
+    "icon": "466.png",
+    "slug": "electivire",
+    "nationalDexNum": 466
+  },
+  "vikavolt": {
+    "name": "Vikavolt",
+    "num": 140,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Exercise",
+      "Glass stuff",
+      "Lots of nature",
+      "Nice breezes"
+    ],
+    "icon": "738.png",
+    "slug": "vikavolt",
+    "nationalDexNum": 738
+  },
+  "pawmo": {
+    "name": "Pawmo",
+    "num": 143,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Exercise",
+      "Glass stuff",
+      "Group Activities",
+      "Shiny stuff"
+    ],
+    "icon": "922.png",
+    "slug": "pawmo",
+    "nationalDexNum": 922
+  },
+  "pawmot": {
+    "name": "Pawmot",
+    "num": 144,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Exercise",
+      "Group Activities",
+      "Healing",
+      "Shiny stuff"
+    ],
+    "icon": "923.png",
+    "slug": "pawmot",
+    "nationalDexNum": 923
+  },
+  "magmar": {
+    "name": "Magmar",
+    "num": 163,
+    "habitat": "Warm",
+    "categories": [
+      "Electronics",
+      "Exercise",
+      "Hard stuff",
+      "Lots of fire",
+      "Stone stuff"
+    ],
+    "icon": "126.png",
+    "slug": "magmar",
+    "nationalDexNum": 126
+  },
+  "magmortar": {
+    "name": "Magmortar",
+    "num": 164,
+    "habitat": "Warm",
+    "categories": [
+      "Electronics",
+      "Exercise",
+      "Hard stuff",
+      "Lots of fire",
+      "Stone stuff"
+    ],
+    "icon": "467.png",
+    "slug": "magmortar",
+    "nationalDexNum": 467
+  },
+  "toxel": {
+    "name": "Toxel",
+    "num": 196,
+    "habitat": "Humid",
+    "categories": [
+      "Electronics",
+      "Garbage",
+      "Glass stuff",
+      "Noisy stuff",
+      "Shiny stuff"
+    ],
+    "icon": "848.png",
+    "slug": "toxel",
+    "nationalDexNum": 848
+  },
+  "toxtricityampedform": {
+    "name": "Toxtricity Amped Form",
+    "num": 197,
+    "habitat": "Humid",
+    "categories": [
+      "Electronics",
+      "Noisy stuff",
+      "Play spaces",
+      "Sharp stuff",
+      "Slender objects"
+    ],
+    "icon": "849-toxtricityampedform.png",
+    "slug": "toxtricityampedform",
+    "nationalDexNum": null
+  },
+  "toxtricitylowkeyform": {
+    "name": "Toxtricity Low Key Form",
+    "num": 197,
+    "habitat": "Humid",
+    "categories": [
+      "Electronics",
+      "Noisy stuff",
+      "Play spaces",
+      "Sharp stuff",
+      "Slender objects"
+    ],
+    "icon": "849-toxtricitylowkeyform.png",
+    "slug": "toxtricitylowkeyform",
+    "nationalDexNum": null
+  },
+  "kilowattrel": {
+    "name": "Kilowattrel",
+    "num": 267,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Gatherings",
+      "Nice breezes",
+      "Ocean vibes",
+      "Slender objects"
+    ],
+    "icon": "941.png",
+    "slug": "kilowattrel",
+    "nationalDexNum": 941
+  },
+  "raikou": {
+    "name": "Raikou",
+    "num": 290,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Glass stuff",
+      "Luxury",
+      "Nice breezes",
+      "Shiny stuff"
+    ],
+    "icon": "243.png",
+    "slug": "raikou",
+    "nationalDexNum": 243
+  },
+  "zapdos": {
+    "name": "Zapdos",
+    "num": 295,
+    "habitat": "Bright",
+    "categories": [
+      "Electronics",
+      "Glass stuff",
+      "Luxury",
+      "Nice breezes",
+      "Symbols"
+    ],
+    "icon": "145.png",
+    "slug": "zapdos",
+    "nationalDexNum": 145
+  },
+  "charmander": {
+    "name": "Charmander",
+    "num": 4,
+    "habitat": "Warm",
+    "categories": [
+      "Exercise",
+      "Group Activities",
+      "Hard stuff",
+      "Lots of fire",
+      "Wooden stuff"
+    ],
+    "icon": "004.png",
+    "slug": "charmander",
+    "nationalDexNum": 4
+  },
+  "charmeleon": {
+    "name": "Charmeleon",
+    "num": 5,
+    "habitat": "Warm",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Lots of fire",
+      "Rides",
+      "Wooden stuff"
+    ],
+    "icon": "005.png",
+    "slug": "charmeleon",
+    "nationalDexNum": 5
+  },
+  "charizard": {
+    "name": "Charizard",
+    "num": 6,
+    "habitat": "Warm",
+    "categories": [
+      "Exercise",
+      "Lots of fire",
+      "Luxury",
+      "Nice breezes",
+      "Wooden stuff"
+    ],
+    "icon": "006.png",
+    "slug": "charizard",
+    "nationalDexNum": 6
+  },
+  "tyrogue": {
+    "name": "Tyrogue",
+    "num": 34,
+    "habitat": "Bright",
+    "categories": [
+      "Exercise",
+      "Fabric",
+      "Group Activities",
+      "Round stuff",
+      "Stone stuff"
+    ],
+    "icon": "236.png",
+    "slug": "tyrogue",
+    "nationalDexNum": 236
+  },
+  "hitmonlee": {
+    "name": "Hitmonlee",
+    "num": 35,
+    "habitat": "Bright",
+    "categories": [
+      "Exercise",
+      "Fabric",
+      "Group Activities",
+      "Round stuff",
+      "Stone stuff"
+    ],
+    "icon": "106.png",
+    "slug": "hitmonlee",
+    "nationalDexNum": 106
+  },
+  "hitmonchan": {
+    "name": "Hitmonchan",
+    "num": 36,
+    "habitat": "Bright",
+    "categories": [
+      "Exercise",
+      "Fabric",
+      "Group Activities",
+      "Round stuff",
+      "Stone stuff"
+    ],
+    "icon": "107.png",
+    "slug": "hitmonchan",
+    "nationalDexNum": 107
+  },
+  "hitmontop": {
+    "name": "Hitmontop",
+    "num": 37,
+    "habitat": "Bright",
+    "categories": [
+      "Exercise",
+      "Fabric",
+      "Group Activities",
+      "Round stuff",
+      "Stone stuff"
+    ],
+    "icon": "237.png",
+    "slug": "hitmontop",
+    "nationalDexNum": 237
+  },
+  "scyther": {
+    "name": "Scyther",
+    "num": 42,
+    "habitat": "Bright",
+    "categories": [
+      "Exercise",
+      "Lots of nature",
+      "Nice breezes",
+      "Sharp stuff",
+      "Wooden stuff"
+    ],
+    "icon": "123.png",
+    "slug": "scyther",
+    "nationalDexNum": 123
+  },
+  "scizor": {
+    "name": "Scizor",
+    "num": 43,
+    "habitat": "Bright",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Lots of nature",
+      "Metal stuff",
+      "Wooden stuff"
+    ],
+    "icon": "212.png",
+    "slug": "scizor",
+    "nationalDexNum": 212
+  },
+  "pinsir": {
+    "name": "Pinsir",
+    "num": 44,
+    "habitat": "Bright",
+    "categories": [
+      "Exercise",
+      "Lots of nature",
+      "Pretty flowers",
+      "Sharp stuff",
+      "Wooden stuff"
+    ],
+    "icon": "127.png",
+    "slug": "pinsir",
+    "nationalDexNum": 127
+  },
+  "heracross": {
+    "name": "Heracross",
+    "num": 50,
+    "habitat": "Bright",
+    "categories": [
+      "Exercise",
+      "Looks like food",
+      "Lots of nature",
+      "Pretty flowers",
+      "Wooden stuff"
+    ],
+    "icon": "214.png",
+    "slug": "heracross",
+    "nationalDexNum": 214
+  },
+  "excadrill": {
+    "name": "Excadrill",
+    "num": 64,
+    "habitat": "Dark",
+    "categories": [
+      "Exercise",
+      "Lots of dirt",
+      "Metal stuff",
+      "Sharp stuff",
+      "Watching stuff"
+    ],
+    "icon": "530.png",
+    "slug": "excadrill",
+    "nationalDexNum": 530
+  },
+  "fraxure": {
+    "name": "Fraxure",
+    "num": 72,
+    "habitat": "Dark",
+    "categories": [
+      "Exercise",
+      "Lots of dirt",
+      "Lots of fire",
+      "Luxury",
+      "Sharp stuff"
+    ],
+    "icon": "611.png",
+    "slug": "fraxure",
+    "nationalDexNum": 611
+  },
+  "haxorus": {
+    "name": "Haxorus",
+    "num": 73,
+    "habitat": "Dark",
+    "categories": [
+      "Exercise",
+      "Lots of dirt",
+      "Lots of fire",
+      "Luxury",
+      "Sharp stuff"
+    ],
+    "icon": "612.png",
+    "slug": "haxorus",
+    "nationalDexNum": 612
+  },
+  "geodude": {
+    "name": "Geodude",
+    "num": 159,
+    "habitat": "Dark",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Round stuff",
+      "Spinning stuff",
+      "Stone stuff"
+    ],
+    "icon": "074.png",
+    "slug": "geodude",
+    "nationalDexNum": 74
+  },
+  "graveler": {
+    "name": "Graveler",
+    "num": 160,
+    "habitat": "Dark",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Round stuff",
+      "Spinning stuff",
+      "Stone stuff"
+    ],
+    "icon": "075.png",
+    "slug": "graveler",
+    "nationalDexNum": 75
+  },
+  "golem": {
+    "name": "Golem",
+    "num": 161,
+    "habitat": "Dark",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Round stuff",
+      "Spinning stuff",
+      "Stone stuff"
+    ],
+    "icon": "076.png",
+    "slug": "golem",
+    "nationalDexNum": 76
+  },
+  "tyranitar": {
+    "name": "Tyranitar",
+    "num": 171,
+    "habitat": "Dark",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Luxury",
+      "Shiny stuff",
+      "Stone stuff"
+    ],
+    "icon": "248.png",
+    "slug": "tyranitar",
+    "nationalDexNum": 248
+  },
+  "charcadet": {
+    "name": "Charcadet",
+    "num": 200,
+    "habitat": "Warm",
+    "categories": [
+      "Exercise",
+      "Lots of fire",
+      "Luxury",
+      "Stone stuff",
+      "Strange stuff"
+    ],
+    "icon": "935.png",
+    "slug": "charcadet",
+    "nationalDexNum": 935
+  },
+  "armarouge": {
+    "name": "Armarouge",
+    "num": 201,
+    "habitat": "Warm",
+    "categories": [
+      "Exercise",
+      "Lots of fire",
+      "Luxury",
+      "Stone stuff",
+      "Strange stuff"
+    ],
+    "icon": "936.png",
+    "slug": "armarouge",
+    "nationalDexNum": 936
+  },
+  "trapinch": {
+    "name": "Trapinch",
+    "num": 237,
+    "habitat": "Dry",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Lots of dirt",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "328.png",
+    "slug": "trapinch",
+    "nationalDexNum": 328
+  },
+  "metagross": {
+    "name": "Metagross",
+    "num": 247,
+    "habitat": "Cool",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Luxury",
+      "Metal stuff",
+      "Strange stuff"
+    ],
+    "icon": "376.png",
+    "slug": "metagross",
+    "nationalDexNum": 376
+  },
+  "cranidos": {
+    "name": "Cranidos",
+    "num": 272,
+    "habitat": "Dry",
+    "categories": [
+      "Exercise",
+      "Group Activities",
+      "Hard stuff",
+      "Stone stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "408.png",
+    "slug": "cranidos",
+    "nationalDexNum": 408
+  },
+  "rampardos": {
+    "name": "Rampardos",
+    "num": 273,
+    "habitat": "Dry",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Luxury",
+      "Metal stuff",
+      "Stone stuff"
+    ],
+    "icon": "409.png",
+    "slug": "rampardos",
+    "nationalDexNum": 409
+  },
+  "bastiodon": {
+    "name": "Bastiodon",
+    "num": 275,
+    "habitat": "Dry",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Luxury",
+      "Metal stuff",
+      "Stone stuff"
+    ],
+    "icon": "411.png",
+    "slug": "bastiodon",
+    "nationalDexNum": 411
+  },
+  "tyrunt": {
+    "name": "Tyrunt",
+    "num": 276,
+    "habitat": "Dry",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Lots of fire",
+      "Luxury",
+      "Stone stuff"
+    ],
+    "icon": "696.png",
+    "slug": "tyrunt",
+    "nationalDexNum": 696
+  },
+  "tyrantrum": {
+    "name": "Tyrantrum",
+    "num": 277,
+    "habitat": "Dry",
+    "categories": [
+      "Exercise",
+      "Hard stuff",
+      "Lots of fire",
+      "Luxury",
+      "Stone stuff"
+    ],
+    "icon": "697.png",
+    "slug": "tyrantrum",
+    "nationalDexNum": 697
+  },
+  "entei": {
+    "name": "Entei",
+    "num": 291,
+    "habitat": "Warm",
+    "categories": [
+      "Exercise",
+      "Lots of fire",
+      "Luxury",
+      "Stone stuff",
+      "Symbols"
+    ],
+    "icon": "244.png",
+    "slug": "entei",
+    "nationalDexNum": 244
+  },
+  "hoothoot": {
+    "name": "Hoothoot",
+    "num": 48,
+    "habitat": "Dark",
+    "categories": [
+      "Fabric",
+      "Nice breezes",
+      "Soft stuff",
+      "Watching stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "163.png",
+    "slug": "hoothoot",
+    "nationalDexNum": 163
+  },
+  "chansey": {
+    "name": "Chansey",
+    "num": 101,
+    "habitat": "Bright",
+    "categories": [
+      "Fabric",
+      "Group Activities",
+      "Healing",
+      "Round stuff",
+      "Soft stuff"
+    ],
+    "icon": "113.png",
+    "slug": "chansey",
+    "nationalDexNum": 113
+  },
+  "blissey": {
+    "name": "Blissey",
+    "num": 102,
+    "habitat": "Bright",
+    "categories": [
+      "Fabric",
+      "Group Activities",
+      "Healing",
+      "Round stuff",
+      "Soft stuff"
+    ],
+    "icon": "242.png",
+    "slug": "blissey",
+    "nationalDexNum": 242
+  },
+  "mosslax": {
+    "name": "Mosslax",
+    "num": 108,
+    "habitat": "Bright",
+    "categories": [
+      "Fabric",
+      "Looks like food",
+      "Soft stuff",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "143-mosslax.png",
+    "slug": "mosslax",
+    "nationalDexNum": null
+  },
+  "snorlax": {
+    "name": "Snorlax",
+    "num": 108,
+    "habitat": "Warm",
+    "categories": [
+      "Fabric",
+      "Looks like food",
+      "Rides",
+      "Soft stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "143.png",
+    "slug": "snorlax",
+    "nationalDexNum": 143
+  },
+  "murkrow": {
+    "name": "Murkrow",
+    "num": 167,
+    "habitat": "Dark",
+    "categories": [
+      "Fabric",
+      "Group Activities",
+      "Luxury",
+      "Nice breezes",
+      "Shiny stuff"
+    ],
+    "icon": "198.png",
+    "slug": "murkrow",
+    "nationalDexNum": 198
+  },
+  "chatot": {
+    "name": "Chatot",
+    "num": 179,
+    "habitat": "Warm",
+    "categories": [
+      "Fabric",
+      "Nice breezes",
+      "Noisy stuff",
+      "Play spaces",
+      "Slender objects"
+    ],
+    "icon": "441.png",
+    "slug": "chatot",
+    "nationalDexNum": 441
+  },
+  "cyndaquil": {
+    "name": "Cyndaquil",
+    "num": 224,
+    "habitat": "Warm",
+    "categories": [
+      "Fabric",
+      "Lots of fire",
+      "Metal stuff",
+      "Rides",
+      "Slender objects"
+    ],
+    "icon": "155.png",
+    "slug": "cyndaquil",
+    "nationalDexNum": 155
+  },
+  "quilava": {
+    "name": "Quilava",
+    "num": 225,
+    "habitat": "Warm",
+    "categories": [
+      "Fabric",
+      "Lots of fire",
+      "Metal stuff",
+      "Rides",
+      "Slender objects"
+    ],
+    "icon": "156.png",
+    "slug": "quilava",
+    "nationalDexNum": 156
+  },
+  "typhlosion": {
+    "name": "Typhlosion",
+    "num": 226,
+    "habitat": "Warm",
+    "categories": [
+      "Fabric",
+      "Lots of fire",
+      "Metal stuff",
+      "Rides",
+      "Slender objects"
+    ],
+    "icon": "157.png",
+    "slug": "typhlosion",
+    "nationalDexNum": 157
+  },
+  "duskull": {
+    "name": "Duskull",
+    "num": 242,
+    "habitat": "Dark",
+    "categories": [
+      "Fabric",
+      "Glass stuff",
+      "Rides",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "355.png",
+    "slug": "duskull",
+    "nationalDexNum": 355
+  },
+  "gloom": {
+    "name": "Gloom",
+    "num": 14,
+    "habitat": "Humid",
+    "categories": [
+      "Garbage",
+      "Lots of dirt",
+      "Lots of nature",
+      "Pretty flowers",
+      "Soft stuff"
+    ],
+    "icon": "044.png",
+    "slug": "gloom",
+    "nationalDexNum": 44
+  },
+  "crobat": {
+    "name": "Crobat",
+    "num": 83,
+    "habitat": "Dark",
+    "categories": [
+      "Garbage",
+      "Nice breezes",
+      "Spooky stuff",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "169.png",
+    "slug": "crobat",
+    "nationalDexNum": 169
+  },
+  "haunter": {
+    "name": "Haunter",
+    "num": 94,
+    "habitat": "Dark",
+    "categories": [
+      "Garbage",
+      "Group Activities",
+      "Spooky stuff",
+      "Strange stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "093.png",
+    "slug": "haunter",
+    "nationalDexNum": 93
+  },
+  "gengar": {
+    "name": "Gengar",
+    "num": 95,
+    "habitat": "Dark",
+    "categories": [
+      "Garbage",
+      "Group Activities",
+      "Rides",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "094.png",
+    "slug": "gengar",
+    "nationalDexNum": 94
+  },
+  "ekans": {
+    "name": "Ekans",
+    "num": 146,
+    "habitat": "Dark",
+    "categories": [
+      "Garbage",
+      "Lots of nature",
+      "Slender objects",
+      "Spinning stuff",
+      "Watching stuff"
+    ],
+    "icon": "023.png",
+    "slug": "ekans",
+    "nationalDexNum": 23
+  },
+  "arbok": {
+    "name": "Arbok",
+    "num": 147,
+    "habitat": "Dark",
+    "categories": [
+      "Garbage",
+      "Lots of nature",
+      "Slender objects",
+      "Spinning stuff",
+      "Watching stuff"
+    ],
+    "icon": "024.png",
+    "slug": "arbok",
+    "nationalDexNum": 24
+  },
+  "tangela": {
+    "name": "Tangela",
+    "num": 40,
+    "habitat": "Bright",
+    "categories": [
+      "Gatherings",
+      "Lots of nature",
+      "Lots of water",
+      "Pretty flowers",
+      "Slender objects"
+    ],
+    "icon": "114.png",
+    "slug": "tangela",
+    "nationalDexNum": 114
+  },
+  "tangrowth": {
+    "name": "Tangrowth",
+    "num": 41,
+    "habitat": "Humid",
+    "categories": [
+      "Gatherings",
+      "Lots of nature",
+      "Lots of water",
+      "Pretty flowers",
+      "Watching stuff"
+    ],
+    "icon": "465.png",
+    "slug": "tangrowth",
+    "nationalDexNum": 465
+  },
+  "combee": {
+    "name": "Combee",
+    "num": 57,
+    "habitat": "Bright",
+    "categories": [
+      "Gatherings",
+      "Group Activities",
+      "Lots of nature",
+      "Nice breezes",
+      "Wooden stuff"
+    ],
+    "icon": "415.png",
+    "slug": "combee",
+    "nationalDexNum": 415
+  },
+  "exeggcute": {
+    "name": "Exeggcute",
+    "num": 98,
+    "habitat": "Bright",
+    "categories": [
+      "Gatherings",
+      "Group Activities",
+      "Lots of nature",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "102.png",
+    "slug": "exeggcute",
+    "nationalDexNum": 102
+  },
+  "exeggutor": {
+    "name": "Exeggutor",
+    "num": 99,
+    "habitat": "Bright",
+    "categories": [
+      "Gatherings",
+      "Lots of nature",
+      "Strange stuff",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "103.png",
+    "slug": "exeggutor",
+    "nationalDexNum": 103
+  },
+  "tatsugiricurlyform": {
+    "name": "Tatsugiri Curly Form",
+    "num": 145,
+    "habitat": "Humid",
+    "categories": [
+      "Gatherings",
+      "Group Activities",
+      "Lots of water",
+      "Ocean vibes"
+    ],
+    "icon": "978-tatsugiricurlyform.png",
+    "slug": "tatsugiricurlyform",
+    "nationalDexNum": null
+  },
+  "dugtrio": {
+    "name": "Dugtrio",
+    "num": 155,
+    "habitat": "Dark",
+    "categories": [
+      "Gatherings",
+      "Group Activities",
+      "Lots of dirt",
+      "Play spaces",
+      "Slender objects"
+    ],
+    "icon": "051.png",
+    "slug": "dugtrio",
+    "nationalDexNum": 51
+  },
+  "politoed": {
+    "name": "Politoed",
+    "num": 212,
+    "habitat": "Humid",
+    "categories": [
+      "Gatherings",
+      "Group Activities",
+      "Lots of water",
+      "Noisy stuff",
+      "Play spaces"
+    ],
+    "icon": "186.png",
+    "slug": "politoed",
+    "nationalDexNum": 186
+  },
+  "zoroark": {
+    "name": "Zoroark",
+    "num": 135,
+    "habitat": "Dark",
+    "categories": [
+      "Glass stuff",
+      "Group Activities",
+      "Luxury",
+      "Shiny stuff",
+      "Strange stuff"
+    ],
+    "icon": "571.png",
+    "slug": "zoroark",
+    "nationalDexNum": 571
+  },
+  "honchkrow": {
+    "name": "Honchkrow",
+    "num": 168,
+    "habitat": "Dark",
+    "categories": [
+      "Glass stuff",
+      "Letters and words",
+      "Nice breezes",
+      "Shiny stuff",
+      "Spooky stuff"
+    ],
+    "icon": "430.png",
+    "slug": "honchkrow",
+    "nationalDexNum": 430
+  },
+  "kyogre": {
+    "name": "Kyogre",
+    "num": 289,
+    "habitat": "Humid",
+    "categories": [
+      "Glass stuff",
+      "Lots of water",
+      "Luxury",
+      "Ocean vibes",
+      "Shiny stuff"
+    ],
+    "icon": "382.png",
+    "slug": "kyogre",
+    "nationalDexNum": 382
+  },
+  "magikarp": {
+    "name": "Magikarp",
+    "num": 45,
+    "habitat": "Humid",
+    "categories": [
+      "Group Activities",
+      "Lots of water",
+      "Ocean vibes",
+      "Rides",
+      "Wobbly stuff"
+    ],
+    "icon": "129.png",
+    "slug": "magikarp",
+    "nationalDexNum": 129
+  },
+  "munchlax": {
+    "name": "Munchlax",
+    "num": 107,
+    "habitat": "Warm",
+    "categories": [
+      "Group Activities",
+      "Looks like food",
+      "Lots of nature",
+      "Soft stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "446.png",
+    "slug": "munchlax",
+    "nationalDexNum": 446
+  },
+  "scorbunny": {
+    "name": "Scorbunny",
+    "num": 188,
+    "habitat": "Warm",
+    "categories": [
+      "Group Activities",
+      "Lots of fire",
+      "Sharp stuff",
+      "Soft stuff",
+      "Stone stuff"
+    ],
+    "icon": "813.png",
+    "slug": "scorbunny",
+    "nationalDexNum": 813
+  },
+  "cinderace": {
+    "name": "Cinderace",
+    "num": 190,
+    "habitat": "Warm",
+    "categories": [
+      "Group Activities",
+      "Lots of fire",
+      "Play spaces",
+      "Round stuff",
+      "Stone stuff"
+    ],
+    "icon": "815.png",
+    "slug": "cinderace",
+    "nationalDexNum": 815
+  },
+  "greedent": {
+    "name": "Greedent",
+    "num": 192,
+    "habitat": "Warm",
+    "categories": [
+      "Group Activities",
+      "Looks like food",
+      "Luxury",
+      "Metal stuff",
+      "Soft stuff"
+    ],
+    "icon": "820-cook.png",
+    "slug": "greedent",
+    "nationalDexNum": null
+  },
+  "mismagius": {
+    "name": "Mismagius",
+    "num": 228,
+    "habitat": "Dark",
+    "categories": [
+      "Group Activities",
+      "Noisy stuff",
+      "Spooky stuff",
+      "Strange stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "429.png",
+    "slug": "mismagius",
+    "nationalDexNum": 429
+  },
+  "dreepy": {
+    "name": "Dreepy",
+    "num": 260,
+    "habitat": "Humid",
+    "categories": [
+      "Group Activities",
+      "Lots of fire",
+      "Rides",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "885.png",
+    "slug": "dreepy",
+    "nationalDexNum": 885
+  },
+  "drakloak": {
+    "name": "Drakloak",
+    "num": 261,
+    "habitat": "Humid",
+    "categories": [
+      "Group Activities",
+      "Lots of fire",
+      "Rides",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "886.png",
+    "slug": "drakloak",
+    "nationalDexNum": 886
+  },
+  "dragapult": {
+    "name": "Dragapult",
+    "num": 262,
+    "habitat": "Humid",
+    "categories": [
+      "Group Activities",
+      "Lots of fire",
+      "Rides",
+      "Spooky stuff",
+      "Strange stuff"
+    ],
+    "icon": "887.png",
+    "slug": "dragapult",
+    "nationalDexNum": 887
+  },
+  "steelix": {
+    "name": "Steelix",
+    "num": 31,
+    "habitat": "Dry",
+    "categories": [
+      "Hard stuff",
+      "Lots of dirt",
+      "Metal stuff",
+      "Slender objects",
+      "Stone stuff"
+    ],
+    "icon": "208.png",
+    "slug": "steelix",
+    "nationalDexNum": 208
+  },
+  "axew": {
+    "name": "Axew",
+    "num": 71,
+    "habitat": "Dark",
+    "categories": [
+      "Hard stuff",
+      "Lots of dirt",
+      "Lots of fire",
+      "Luxury",
+      "Sharp stuff"
+    ],
+    "icon": "610.png",
+    "slug": "axew",
+    "nationalDexNum": 610
+  },
+  "bonsly": {
+    "name": "Bonsly",
+    "num": 165,
+    "habitat": "Dry",
+    "categories": [
+      "Hard stuff",
+      "Lots of nature",
+      "Round stuff",
+      "Stone stuff",
+      "Wooden stuff"
+    ],
+    "icon": "438.png",
+    "slug": "bonsly",
+    "nationalDexNum": 438
+  },
+  "sudowoodo": {
+    "name": "Sudowoodo",
+    "num": 166,
+    "habitat": "Dry",
+    "categories": [
+      "Hard stuff",
+      "Lots of nature",
+      "Stone stuff",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "185.png",
+    "slug": "sudowoodo",
+    "nationalDexNum": 185
+  },
+  "pupitar": {
+    "name": "Pupitar",
+    "num": 170,
+    "habitat": "Dark",
+    "categories": [
+      "Hard stuff",
+      "Luxury",
+      "Shiny stuff",
+      "Stone stuff",
+      "Watching stuff"
+    ],
+    "icon": "247.png",
+    "slug": "pupitar",
+    "nationalDexNum": 247
+  },
+  "torkoal": {
+    "name": "Torkoal",
+    "num": 176,
+    "habitat": "Warm",
+    "categories": [
+      "Hard stuff",
+      "Lots of fire",
+      "Metal stuff",
+      "Stone stuff",
+      "Watching stuff"
+    ],
+    "icon": "324.png",
+    "slug": "torkoal",
+    "nationalDexNum": 324
+  },
+  "rolycoly": {
+    "name": "Rolycoly",
+    "num": 193,
+    "habitat": "Warm",
+    "categories": [
+      "Hard stuff",
+      "Lots of fire",
+      "Metal stuff",
+      "Rides",
+      "Stone stuff"
+    ],
+    "icon": "837.png",
+    "slug": "rolycoly",
+    "nationalDexNum": 837
+  },
+  "carkol": {
+    "name": "Carkol",
+    "num": 194,
+    "habitat": "Warm",
+    "categories": [
+      "Hard stuff",
+      "Lots of fire",
+      "Metal stuff",
+      "Rides",
+      "Stone stuff"
+    ],
+    "icon": "838.png",
+    "slug": "carkol",
+    "nationalDexNum": 838
+  },
+  "coalossal": {
+    "name": "Coalossal",
+    "num": 195,
+    "habitat": "Warm",
+    "categories": [
+      "Hard stuff",
+      "Lots of fire",
+      "Metal stuff",
+      "Rides",
+      "Stone stuff"
+    ],
+    "icon": "839.png",
+    "slug": "coalossal",
+    "nationalDexNum": 839
+  },
+  "aerodactyl": {
+    "name": "Aerodactyl",
+    "num": 271,
+    "habitat": "Dry",
+    "categories": [
+      "Hard stuff",
+      "Nice breezes",
+      "Shiny stuff",
+      "Spinning stuff",
+      "Stone stuff"
+    ],
+    "icon": "142.png",
+    "slug": "aerodactyl",
+    "nationalDexNum": 142
+  },
+  "shieldon": {
+    "name": "Shieldon",
+    "num": 274,
+    "habitat": "Dry",
+    "categories": [
+      "Hard stuff",
+      "Luxury",
+      "Metal stuff",
+      "Round stuff",
+      "Stone stuff"
+    ],
+    "icon": "410.png",
+    "slug": "shieldon",
+    "nationalDexNum": 410
+  },
+  "aurorus": {
+    "name": "Aurorus",
+    "num": 279,
+    "habitat": "Cool",
+    "categories": [
+      "Hard stuff",
+      "Noisy stuff",
+      "Shiny stuff",
+      "Stone stuff",
+      "Symbols"
+    ],
+    "icon": "699.png",
+    "slug": "aurorus",
+    "nationalDexNum": 699
+  },
+  "gardevoir": {
+    "name": "Gardevoir",
+    "num": 233,
+    "habitat": "Bright",
+    "categories": [
+      "Healing",
+      "Luxury",
+      "Strange stuff",
+      "Symbols",
+      "Watching stuff"
+    ],
+    "icon": "282.png",
+    "slug": "gardevoir",
+    "nationalDexNum": 282
+  },
+  "growlithe": {
+    "name": "Growlithe",
+    "num": 88,
+    "habitat": "Warm",
+    "categories": [
+      "Letters and words",
+      "Lots of fire",
+      "Nice breezes",
+      "Pretty flowers",
+      "Stone stuff"
+    ],
+    "icon": "058.png",
+    "slug": "growlithe",
+    "nationalDexNum": 58
+  },
+  "volcarona": {
+    "name": "Volcarona",
+    "num": 184,
+    "habitat": "Dry",
+    "categories": [
+      "Letters and words",
+      "Lots of fire",
+      "Lots of nature",
+      "Symbols",
+      "Wooden stuff"
+    ],
+    "icon": "637.png",
+    "slug": "volcarona",
+    "nationalDexNum": 637
+  },
+  "decidueye": {
+    "name": "Decidueye",
+    "num": 187,
+    "habitat": "Dark",
+    "categories": [
+      "Letters and words",
+      "Lots of nature",
+      "Nice breezes",
+      "Spooky stuff",
+      "Wooden stuff"
+    ],
+    "icon": "724.png",
+    "slug": "decidueye",
+    "nationalDexNum": 724
+  },
+  "alakazam": {
+    "name": "Alakazam",
+    "num": 215,
+    "habitat": "Dark",
+    "categories": [
+      "Letters and words",
+      "Metal stuff",
+      "Strange stuff",
+      "Watching stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "065.png",
+    "slug": "alakazam",
+    "nationalDexNum": 65
+  },
+  "pidgeotto": {
+    "name": "Pidgeotto",
+    "num": 11,
+    "habitat": "Bright",
+    "categories": [
+      "Looks like food",
+      "Lots of nature",
+      "Nice breezes",
+      "Soft stuff",
+      "Watching stuff"
+    ],
+    "icon": "017.png",
+    "slug": "pidgeotto",
+    "nationalDexNum": 17
+  },
+  "paras": {
+    "name": "Paras",
+    "num": 17,
+    "habitat": "Humid",
+    "categories": [
+      "Looks like food",
+      "Lots of dirt",
+      "Lots of nature",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "046.png",
+    "slug": "paras",
+    "nationalDexNum": 46
+  },
+  "cramorant": {
+    "name": "Cramorant",
+    "num": 77,
+    "habitat": "Humid",
+    "categories": [
+      "Looks like food",
+      "Lots of water",
+      "Nice breezes",
+      "Ocean vibes",
+      "Slender objects"
+    ],
+    "icon": "845.png",
+    "slug": "cramorant",
+    "nationalDexNum": 845
+  },
+  "larvitar": {
+    "name": "Larvitar",
+    "num": 169,
+    "habitat": "Dark",
+    "categories": [
+      "Looks like food",
+      "Lots of dirt",
+      "Luxury",
+      "Shiny stuff",
+      "Stone stuff"
+    ],
+    "icon": "246.png",
+    "slug": "larvitar",
+    "nationalDexNum": 246
+  },
+  "skwovet": {
+    "name": "Skwovet",
+    "num": 191,
+    "habitat": "Warm",
+    "categories": [
+      "Looks like food",
+      "Round stuff",
+      "Soft stuff",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "819.png",
+    "slug": "skwovet",
+    "nationalDexNum": 819
+  },
+  "noibat": {
+    "name": "Noibat",
+    "num": 255,
+    "habitat": "Dark",
+    "categories": [
+      "Looks like food",
+      "Lots of fire",
+      "Luxury",
+      "Nice breezes",
+      "Watching stuff"
+    ],
+    "icon": "714.png",
+    "slug": "noibat",
+    "nationalDexNum": 714
+  },
+  "noivern": {
+    "name": "Noivern",
+    "num": 256,
+    "habitat": "Dark",
+    "categories": [
+      "Looks like food",
+      "Lots of fire",
+      "Nice breezes",
+      "Play spaces",
+      "Watching stuff"
+    ],
+    "icon": "715.png",
+    "slug": "noivern",
+    "nationalDexNum": 715
+  },
+  "sableye": {
+    "name": "Sableye",
+    "num": 4,
+    "habitat": "Dark",
+    "categories": [
+      "Looks like food",
+      "Luxury",
+      "Shiny stuff",
+      "Spooky stuff",
+      "Watching stuff"
+    ],
+    "icon": "302.png",
+    "slug": "sableye",
+    "nationalDexNum": 302
+  },
+  "oddish": {
+    "name": "Oddish",
+    "num": 13,
+    "habitat": "Humid",
+    "categories": [
+      "Lots of dirt",
+      "Lots of nature",
+      "Lots of water",
+      "Pretty flowers",
+      "Soft stuff"
+    ],
+    "icon": "043.png",
+    "slug": "oddish",
+    "nationalDexNum": 43
+  },
+  "parasect": {
+    "name": "Parasect",
+    "num": 18,
+    "habitat": "Humid",
+    "categories": [
+      "Lots of dirt",
+      "Lots of nature",
+      "Strange stuff",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "047.png",
+    "slug": "parasect",
+    "nationalDexNum": 47
+  },
+  "bellsprout": {
+    "name": "Bellsprout",
+    "num": 21,
+    "habitat": "Humid",
+    "categories": [
+      "Lots of dirt",
+      "Lots of nature",
+      "Lots of water",
+      "Pretty flowers",
+      "Wooden stuff"
+    ],
+    "icon": "069.png",
+    "slug": "bellsprout",
+    "nationalDexNum": 69
+  },
+  "drilbur": {
+    "name": "Drilbur",
+    "num": 63,
+    "habitat": "Dark",
+    "categories": [
+      "Lots of dirt",
+      "Lots of nature",
+      "Sharp stuff",
+      "Stone stuff",
+      "Watching stuff"
+    ],
+    "icon": "529.png",
+    "slug": "drilbur",
+    "nationalDexNum": 529
+  },
+  "vibrava": {
+    "name": "Vibrava",
+    "num": 238,
+    "habitat": "Dry",
+    "categories": [
+      "Lots of dirt",
+      "Lots of fire",
+      "Lots of nature",
+      "Luxury",
+      "Noisy stuff"
+    ],
+    "icon": "329.png",
+    "slug": "vibrava",
+    "nationalDexNum": 329
+  },
+  "flygon": {
+    "name": "Flygon",
+    "num": 239,
+    "habitat": "Dry",
+    "categories": [
+      "Lots of dirt",
+      "Lots of fire",
+      "Lots of nature",
+      "Stone stuff",
+      "Wooden stuff"
+    ],
+    "icon": "330.png",
+    "slug": "flygon",
+    "nationalDexNum": 330
+  },
+  "chandelure": {
+    "name": "Chandelure",
+    "num": 70,
+    "habitat": "Warm",
+    "categories": [
+      "Lots of fire",
+      "Spooky stuff",
+      "Strange stuff",
+      "Watching stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "609.png",
+    "slug": "chandelure",
+    "nationalDexNum": 609
+  },
+  "arcanine": {
+    "name": "Arcanine",
+    "num": 89,
+    "habitat": "Warm",
+    "categories": [
+      "Lots of fire",
+      "Nice breezes",
+      "Stone stuff",
+      "Symbols",
+      "Watching stuff"
+    ],
+    "icon": "059.png",
+    "slug": "arcanine",
+    "nationalDexNum": 59
+  },
+  "larvesta": {
+    "name": "Larvesta",
+    "num": 183,
+    "habitat": "Dry",
+    "categories": [
+      "Lots of fire",
+      "Lots of nature",
+      "Sharp stuff",
+      "Symbols",
+      "Wooden stuff"
+    ],
+    "icon": "636.png",
+    "slug": "larvesta",
+    "nationalDexNum": 636
+  },
+  "ceruledge": {
+    "name": "Ceruledge",
+    "num": 202,
+    "habitat": "Warm",
+    "categories": [
+      "Lots of fire",
+      "Luxury",
+      "Spooky stuff",
+      "Stone stuff",
+      "Strange stuff"
+    ],
+    "icon": "937.png",
+    "slug": "ceruledge",
+    "nationalDexNum": 937
+  },
+  "ninetales": {
+    "name": "Ninetales",
+    "num": 208,
+    "habitat": "Warm",
+    "categories": [
+      "Lots of fire",
+      "Luxury",
+      "Pretty flowers",
+      "Soft stuff",
+      "Watching stuff"
+    ],
+    "icon": "038.png",
+    "slug": "ninetales",
+    "nationalDexNum": 38
+  },
+  "moltres": {
+    "name": "Moltres",
+    "num": 296,
+    "habitat": "Warm",
+    "categories": [
+      "Lots of fire",
+      "Luxury",
+      "Nice breezes",
+      "Stone stuff",
+      "Symbols"
+    ],
+    "icon": "146.png",
+    "slug": "moltres",
+    "nationalDexNum": 146
+  },
+  "ho-oh": {
+    "name": "Ho-Oh",
+    "num": 298,
+    "habitat": "Warm",
+    "categories": [
+      "Lots of fire",
+      "Lots of nature",
+      "Nice breezes",
+      "Symbols",
+      "Wooden stuff"
+    ],
+    "icon": "250.png",
+    "slug": "ho-oh",
+    "nationalDexNum": 250
+  },
+  "pidgey": {
+    "name": "Pidgey",
+    "num": 10,
+    "habitat": "Bright",
+    "categories": [
+      "Lots of nature",
+      "Nice breezes",
+      "Play spaces",
+      "Soft stuff",
+      "Watching stuff"
+    ],
+    "icon": "016.png",
+    "slug": "pidgey",
+    "nationalDexNum": 16
+  },
+  "pidgeot": {
+    "name": "Pidgeot",
+    "num": 12,
+    "habitat": "Bright",
+    "categories": [
+      "Lots of nature",
+      "Luxury",
+      "Nice breezes",
+      "Soft stuff",
+      "Wooden stuff"
+    ],
+    "icon": "018.png",
+    "slug": "pidgeot",
+    "nationalDexNum": 18
+  },
+  "venomoth": {
+    "name": "Venomoth",
+    "num": 20,
+    "habitat": "Bright",
+    "categories": [
+      "Lots of nature",
+      "Nice breezes",
+      "Pretty flowers",
+      "Watching stuff",
+      "Wooden stuff"
+    ],
+    "icon": "049.png",
+    "slug": "venomoth",
+    "nationalDexNum": 49
+  },
+  "cacturne": {
+    "name": "Cacturne",
+    "num": 56,
+    "habitat": "Dry",
+    "categories": [
+      "Lots of nature",
+      "Luxury",
+      "Nice breezes",
+      "Sharp stuff",
+      "Shiny stuff"
+    ],
+    "icon": "332.png",
+    "slug": "cacturne",
+    "nationalDexNum": 332
+  },
+  "snivy": {
+    "name": "Snivy",
+    "num": 248,
+    "habitat": "Humid",
+    "categories": [
+      "Lots of nature",
+      "Lots of water",
+      "Shiny stuff",
+      "Wobbly stuff",
+      "Wooden stuff"
+    ],
+    "icon": "495.png",
+    "slug": "snivy",
+    "nationalDexNum": 495
+  },
+  "hoppip": {
+    "name": "Hoppip",
+    "num": 1,
+    "habitat": "Bright",
+    "categories": [
+      "Lots of nature",
+      "Nice breezes",
+      "Pretty flowers",
+      "Soft stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "187.png",
+    "slug": "hoppip",
+    "nationalDexNum": 187
+  },
+  "skiploom": {
+    "name": "Skiploom",
+    "num": 2,
+    "habitat": "Bright",
+    "categories": [
+      "Lots of nature",
+      "Nice breezes",
+      "Pretty flowers",
+      "Soft stuff",
+      "Spinning stuff"
+    ],
+    "icon": "188.png",
+    "slug": "skiploom",
+    "nationalDexNum": 188
+  },
+  "jumpluff": {
+    "name": "Jumpluff",
+    "num": 3,
+    "habitat": "Bright",
+    "categories": [
+      "Lots of nature",
+      "Nice breezes",
+      "Pretty flowers",
+      "Round stuff",
+      "Soft stuff"
+    ],
+    "icon": "189.png",
+    "slug": "jumpluff",
+    "nationalDexNum": 189
+  },
+  "articuno": {
+    "name": "Articuno",
+    "num": 294,
+    "habitat": "Cool",
+    "categories": [
+      "Lots of water",
+      "Luxury",
+      "Nice breezes",
+      "Shiny stuff",
+      "Symbols"
+    ],
+    "icon": "144.png",
+    "slug": "articuno",
+    "nationalDexNum": 144
+  },
+  "lugia": {
+    "name": "Lugia",
+    "num": 297,
+    "habitat": "Humid",
+    "categories": [
+      "Lots of water",
+      "Nice breezes",
+      "Ocean vibes",
+      "Strange stuff",
+      "Symbols"
+    ],
+    "icon": "249.png",
+    "slug": "lugia",
+    "nationalDexNum": 249
+  },
+  "abra": {
+    "name": "Abra",
+    "num": 213,
+    "habitat": "Dark",
+    "categories": [
+      "Metal stuff",
+      "Soft stuff",
+      "Strange stuff",
+      "Watching stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "063.png",
+    "slug": "abra",
+    "nationalDexNum": 63
+  },
+  "drifblim": {
+    "name": "Drifblim",
+    "num": 62,
+    "habitat": "Warm",
+    "categories": [
+      "Nice breezes",
+      "Spinning stuff",
+      "Spooky stuff",
+      "Strange stuff",
+      "Wobbly stuff"
+    ],
+    "icon": "426.png",
+    "slug": "drifblim",
+    "nationalDexNum": 426
+  },
+  "girafarig": {
+    "name": "Girafarig",
+    "num": 229,
+    "habitat": "Warm",
+    "categories": [
+      "Rides",
+      "Slender objects",
+      "Soft stuff",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "203.png",
+    "slug": "girafarig",
+    "nationalDexNum": 203
+  },
+  "farigiraf": {
+    "name": "Farigiraf",
+    "num": 230,
+    "habitat": "Warm",
+    "categories": [
+      "Rides",
+      "Slender objects",
+      "Soft stuff",
+      "Strange stuff",
+      "Watching stuff"
+    ],
+    "icon": "981.png",
+    "slug": "farigiraf",
+    "nationalDexNum": 981
+  }
+}
