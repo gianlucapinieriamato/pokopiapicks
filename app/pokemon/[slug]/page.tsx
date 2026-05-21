@@ -78,28 +78,39 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           <div className="pkmn-meta">
             Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
             {" "}<span className="info-tip" data-tip="Pokémon with the same habitat can share a living space in Pokopia." aria-label="Pokémon with the same habitat can share a living space in Pokopia.">i</span>
-            {p.flavor && <> · Flavor: <span style={{ color: "var(--accent2)" }}>{p.flavor}</span></>}
+            {p.flavor && <>
+              {" · "}Flavor: <span style={{ color: "var(--accent2)" }}>{p.flavor}</span>
+              {" "}<span className="info-tip" data-tip="The berry flavor this Pokémon prefers. Pokémon that share a flavor tend to like the same gift items." aria-label="The berry flavor this Pokémon prefers.">i</span>
+            </>}
           </div>
           {p.specialties && p.specialties.length > 0 && (
-            <div className="pkmn-cats" style={{ marginTop: 8 }}>
-              {p.specialties.map((s) => (
-                <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag" style={{ textDecoration: "none", color: "var(--accent-deep)", borderColor: "var(--accent)" }}>
-                  {SPECIALTIES[s]?.name ?? s}
+            <div style={{ marginTop: 10 }}>
+              <p className="detail-meta" style={{ marginBottom: 4, fontSize: 11, display: "flex", alignItems: "center", gap: 6 }}>
+                Specialty
+                {" "}<span className="info-tip" data-tip="Specialties determine bonus effects when this Pokémon helps with certain Pokopia activities." aria-label="Specialty bonus activities.">i</span>
+              </p>
+              <div className="pkmn-cats">
+                {p.specialties.map((s) => (
+                  <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag" style={{ textDecoration: "none", color: "var(--accent-deep)", borderColor: "var(--accent)" }}>
+                    {SPECIALTIES[s]?.name ?? s}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+          <div style={{ marginTop: 10 }}>
+            <p className="detail-meta" style={{ marginBottom: 4, fontSize: 11, display: "flex", alignItems: "center", gap: 6 }}>
+              Favorite categories
+              {" "}<span className="info-tip" data-tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} aria-label={`Gift items in these categories earn extra happiness with ${p.name}.`}>i</span>
+            </p>
+            <div className="pkmn-cats">
+              {p.categories.map((c) => (
+                <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>
+                  {catDisplayName(c)}
                 </Link>
               ))}
             </div>
-          )}
-          <div className="pkmn-cats">
-            {p.categories.map((c) => (
-              <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>
-                {catDisplayName(c)}
-              </Link>
-            ))}
           </div>
-          <p className="detail-meta" style={{ marginTop: 8, fontSize: 11, display: "flex", alignItems: "center", gap: 6 }}>
-            Favorite categories
-            {" "}<span className="info-tip" data-tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} aria-label={`Gift items in these categories earn extra happiness with ${p.name}.`}>i</span>
-          </p>
         </div>
       </div>
 
