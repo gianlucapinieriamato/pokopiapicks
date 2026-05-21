@@ -87,11 +87,16 @@ export default function Home() {
   const noResults = query.trim().length > 1 && matches.length === 0;
 
   return (
-    <div className="wrap">
-      <header>
-        <span className="eyebrow">{s.eyebrow}</span>
-        <h1>{s.h1_1}<br /><span className="accent">{s.h1_accent}</span></h1>
-        <p className="lede">{s.lede}</p>
+    <div className="max-w-[1080px] mx-auto px-5 pt-8 pb-20 relative z-[1]">
+      <header className="text-center mb-7 pt-6 pb-2 px-5">
+        <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-accent-deep inline-block px-3 py-1 bg-chrome rounded-full border border-paper-edge font-semibold">
+          {s.eyebrow}
+        </span>
+        <h1 className="font-outfit font-extrabold text-[clamp(2rem,5vw,3.4rem)] leading-none tracking-[-0.025em] mt-4 mb-2">
+          {s.h1_1}<br />
+          <span className="italic text-accent-deep font-bold">{s.h1_accent}</span>
+        </h1>
+        <p className="max-w-[560px] mx-auto text-ink-soft text-[15px] leading-[1.55]">{s.lede}</p>
       </header>
 
       <section className="card">

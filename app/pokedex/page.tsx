@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useMemo } from "react";
-import { POKEMON_LIST, SPECIALTIES, dexNum } from "@/app/lib/data";
-import { useLang } from "@/app/lib/lang";
+import { POKEMON_LIST, SPECIALTIES } from "@/app/lib/data";
 import TcgCard from "@/app/components/TcgCard";
 
 const HABITATS = ["Dry", "Bright", "Warm", "Cool", "Dark", "Humid"];
@@ -17,39 +16,7 @@ for (const p of POKEMON_LIST) {
   if (p.flavor) FLAVOR_COUNTS[p.flavor] = (FLAVOR_COUNTS[p.flavor] ?? 0) + 1;
 }
 
-const STRINGS = {
-  en: {
-    title: "Pokédex",
-    searchPlaceholder: "Search Pokémon…",
-    habitat: "Ideal Habitat",
-    flavor: "Flavor",
-    specialty: "Specialty",
-    clearFilters: "Clear filters",
-    noResults: "No Pokémon match your filters.",
-    prev: "Prev",
-    next: "Next",
-    page: "Page",
-    of: "/",
-  },
-  es: {
-    title: "Pokédex",
-    searchPlaceholder: "Buscar Pokémon…",
-    habitat: "Hábitat ideal",
-    flavor: "Sabor",
-    specialty: "Especialidad",
-    clearFilters: "Borrar filtros",
-    noResults: "Ningún Pokémon coincide con tus filtros.",
-    prev: "Ant.",
-    next: "Sig.",
-    page: "Página",
-    of: "/",
-  },
-} as const;
-
 export default function PokedexPage() {
-  const lang = useLang();
-  const t = STRINGS[lang];
-
   const [habitatFilter, setHabitatFilter] = useState<string[]>([]);
   const [flavorFilter, setFlavorFilter] = useState<string[]>([]);
   const [specialtyFilter, setSpecialtyFilter] = useState<string[]>([]);
@@ -81,10 +48,10 @@ export default function PokedexPage() {
   return (
     <div className="detail-wrap">
       <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>{t.title}</span>
+        <Link href="/">Home</Link><span>›</span><span>Pokédex</span>
       </div>
       <div className="detail-header">
-        <div className="detail-title">{t.title}</div>
+        <div className="detail-title">Pokédex</div>
         <div className="detail-meta">{filtered.length} / {POKEMON_LIST.length} Pokémon</div>
       </div>
 
@@ -92,15 +59,14 @@ export default function PokedexPage() {
         <input
           type="text"
           className="search-input mb-4"
-          placeholder={t.searchPlaceholder}
-          aria-label={t.searchPlaceholder}
+          placeholder="Search Pokémon…"
+          aria-label="Search Pokémon"
           value={search}
           onChange={(e) => { setSearch(e.target.value); setPage(1); }}
         />
-
         <div className="flex flex-wrap gap-3">
           <div>
-            <div className="stat-label mb-1.5">{t.habitat}</div>
+            <div className="stat-label mb-1.5">Ideal Habitat</div>
             <div className="flex flex-wrap gap-1.5">
               {HABITATS.map((h) => (
                 <button key={h} className={`shortcut${habitatFilter.includes(h) ? " shortcut--on" : ""}`} onClick={() => toggle(habitatFilter, h, setHabitatFilter)}>
@@ -110,7 +76,7 @@ export default function PokedexPage() {
             </div>
           </div>
           <div>
-            <div className="stat-label mb-1.5">{t.flavor}</div>
+            <div className="stat-label mb-1.5">Flavor</div>
             <div className="flex flex-wrap gap-1.5">
               {FLAVORS.map((f) => (
                 <button key={f} className={`shortcut${flavorFilter.includes(f) ? " shortcut--on" : ""}`} onClick={() => toggle(flavorFilter, f, setFlavorFilter)}>
@@ -120,7 +86,7 @@ export default function PokedexPage() {
             </div>
           </div>
           <div>
-            <div className="stat-label mb-1.5">{t.specialty}</div>
+            <div className="stat-label mb-1.5">Specialty</div>
             <div className="flex flex-wrap gap-1.5">
               {ALL_SPECIALTIES.map((s) => (
                 <button key={s.slug} className={`shortcut${specialtyFilter.includes(s.slug) ? " shortcut--on" : ""}`} onClick={() => toggle(specialtyFilter, s.slug, setSpecialtyFilter)}>
@@ -130,17 +96,16 @@ export default function PokedexPage() {
             </div>
           </div>
         </div>
-
         {(habitatFilter.length || flavorFilter.length || specialtyFilter.length || search) ? (
           <button className="shortcut mt-3" onClick={() => { setHabitatFilter([]); setFlavorFilter([]); setSpecialtyFilter([]); setSearch(""); setPage(1); }}>
-            {t.clearFilters}
+            Clear filters
           </button>
         ) : null}
       </div>
 
       <div className="card">
         {paginated.length === 0 ? (
-          <p className="detail-meta">{t.noResults}</p>
+          <p className="detail-meta">No Pokémon match your filters.</p>
         ) : (
           <div className="pkmn-tcg-grid">
             {paginated.map((p) => (
@@ -152,9 +117,9 @@ export default function PokedexPage() {
         )}
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
-            {page > 1 && <button className="pkmn-nav-btn" onClick={() => setPage(page - 1)}>◀ {t.prev}</button>}
-            <span className="detail-meta self-center">{t.page} {page} {t.of} {pages}</span>
-            {page < pages && <button className="pkmn-nav-btn" onClick={() => setPage(page + 1)}>{t.next} ▶</button>}
+            {page > 1 && <button className="pkmn-nav-btn" onClick={() => setPage(page - 1)}>◀ Prev</button>}
+            <span className="detail-meta self-center">Page {page} / {pages}</span>
+            {page < pages && <button className="pkmn-nav-btn" onClick={() => setPage(page + 1)}>Next ▶</button>}
           </div>
         )}
       </div>

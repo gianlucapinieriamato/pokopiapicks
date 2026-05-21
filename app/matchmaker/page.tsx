@@ -2,52 +2,6 @@
 import Link from "next/link";
 import { useState, useMemo, useCallback } from "react";
 import { POKEMON, POKEMON_LIST, SPECIALTIES, pkmnIconUrl, dexNum, getCatItems, catDisplayName } from "@/app/lib/data";
-import { useLang } from "@/app/lib/lang";
-
-const STRINGS = {
-  en: {
-    title: "Matchmaker",
-    description: "Pick an anchor Pokémon to find the best roommates. Same habitat required — shared items are bonus points.",
-    searchPlaceholder: "Search anchor Pokémon…",
-    anchorBadge: "Anchor",
-    habitatLabel: "Habitat:",
-    topRoommates: "Top roommates",
-    bestMatchPill: "BEST MATCH",
-    rankDesc: "Ranked by shared items. Complementary specialties add a 50% bonus.",
-    noSameHabitat: (h: string) => `No Pokémon found in the same habitat (${h}).`,
-    sharedItems: (n: number) => `${n} shared items`,
-    noSpecialty: "no specialty",
-    complementary: "complementary",
-    sideBySide: (a: string, b: string) => `Side-by-side: ${a} vs ${b}`,
-    itemsInCommon: (n: number) => `${n} items in common`,
-    sharedItemsLabel: "Shared items",
-    bestGroup: "Best group of 4",
-    teamPill: "TEAM",
-    groupDesc: "Greedy algorithm: each Pokémon maximizes shared items with the current group.",
-    anchorLabel: "ANCHOR",
-  },
-  es: {
-    title: "Matchmaker",
-    description: "Elige un Pokémon ancla para encontrar los mejores compañeros. Se requiere el mismo hábitat — los objetos compartidos son puntos extra.",
-    searchPlaceholder: "Buscar Pokémon ancla…",
-    anchorBadge: "Ancla",
-    habitatLabel: "Hábitat:",
-    topRoommates: "Mejores compañeros",
-    bestMatchPill: "MEJOR MATCH",
-    rankDesc: "Ordenado por objetos compartidos. Las especialidades complementarias añaden un 50% de bonificación.",
-    noSameHabitat: (h: string) => `No se encontraron Pokémon en el mismo hábitat (${h}).`,
-    sharedItems: (n: number) => `${n} objetos compartidos`,
-    noSpecialty: "sin especialidad",
-    complementary: "complementario",
-    sideBySide: (a: string, b: string) => `Comparación: ${a} vs ${b}`,
-    itemsInCommon: (n: number) => `${n} objetos en común`,
-    sharedItemsLabel: "Objetos compartidos",
-    bestGroup: "Mejor grupo de 4",
-    teamPill: "EQUIPO",
-    groupDesc: "Algoritmo greedy: cada Pokémon maximiza los objetos compartidos con el grupo actual.",
-    anchorLabel: "ANCLA",
-  },
-} as const;
 
 function sharedItemCount(a: string[], b: string[]): number {
   const setA = new Set<string>();
@@ -83,9 +37,6 @@ function buildGroup(anchor: typeof POKEMON_LIST[0], size: number): typeof POKEMO
 }
 
 export default function MatchmakerPage() {
-  const lang = useLang();
-  const t = STRINGS[lang];
-
   const [anchorSlug, setAnchorSlug] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -136,11 +87,11 @@ export default function MatchmakerPage() {
   return (
     <div className="detail-wrap">
       <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>{t.title}</span>
+        <Link href="/">Home</Link><span>›</span><span>Matchmaker</span>
       </div>
       <div className="detail-header">
-        <div className="detail-title">{t.title}</div>
-        <p className="section-sub">{t.description}</p>
+        <div className="detail-title">Matchmaker</div>
+        <p className="section-sub">Pick an anchor Pokémon to find the best roommates. Same habitat required — shared items are bonus points.</p>
       </div>
 
       <div className="card">
@@ -149,7 +100,7 @@ export default function MatchmakerPage() {
           <input
             type="text"
             className="search-input"
-            placeholder={t.searchPlaceholder}
+            placeholder="Search anchor Pokémon…"
             value={query}
             onChange={(e) => { setQuery(e.target.value); setShowSuggestions(true); }}
             onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
@@ -176,9 +127,9 @@ export default function MatchmakerPage() {
               <img src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.name} className="w-full h-full object-contain" />
             </div>
             <div className="pkmn-info">
-              <div className="pkmn-num">{t.anchorBadge} · #{dexNum(anchor)}</div>
+              <div className="pkmn-num">Anchor · #{dexNum(anchor)}</div>
               <div className="pkmn-name">{anchor.name}</div>
-              <div className="pkmn-meta">{t.habitatLabel} <span className="habitat-tag">{anchor.habitat}</span></div>
+              <div className="pkmn-meta">Habitat: <span className="habitat-tag">{anchor.habitat}</span></div>
               <div className="pkmn-cats mt-2">
                 {anchor.categories.map((c) => <span key={c} className="pkmn-cat-tag">{catDisplayName(c)}</span>)}
               </div>
@@ -188,13 +139,13 @@ export default function MatchmakerPage() {
       </div>
 
       {anchor && recommendations.length === 0 && (
-        <div className="card"><p className="detail-meta">{t.noSameHabitat(anchor.habitat)}</p></div>
+        <div className="card"><p className="detail-meta">No Pokémon found in the same habitat ({anchor.habitat}).</p></div>
       )}
 
       {recommendations.length > 0 && (
         <div className="card">
-          <div className="section-title">{t.topRoommates} <span className="pill">{t.bestMatchPill}</span></div>
-          <p className="section-sub">{t.rankDesc}</p>
+          <div className="section-title">Top roommates <span className="pill">BEST MATCH</span></div>
+          <p className="section-sub">Ranked by shared items. Complementary specialties add a 50% bonus.</p>
           {recommendations.map(({ pokemon: p, score: s, shared }) => {
             const anchorSpecs = new Set(anchor!.specialties ?? []);
             const candSpecs = p.specialties ?? [];
@@ -211,8 +162,8 @@ export default function MatchmakerPage() {
                     <Link href={`/pokemon/${p.slug}`} className="text-inherit no-underline" onClick={(e) => e.stopPropagation()}>{p.name}</Link>
                   </div>
                   <div className="best-item-cats">
-                    {t.sharedItems(shared)} · {p.specialties?.map((s) => SPECIALTIES[s]?.name ?? s).join(", ") || t.noSpecialty}
-                    {isComplementary && ` · ${t.complementary} ⚡`}
+                    {shared} shared items · {p.specialties?.map((s) => SPECIALTIES[s]?.name ?? s).join(", ") || "no specialty"}
+                    {isComplementary && " · complementary ⚡"}
                   </div>
                 </div>
               </div>
@@ -223,10 +174,10 @@ export default function MatchmakerPage() {
 
       {anchor && compareTarget && (
         <div className="card">
-          <div className="section-title">{t.sideBySide(anchor.name, compareTarget.name)}</div>
-          <p className="section-sub">{t.itemsInCommon(compareShared.length)}</p>
+          <div className="section-title">Side-by-side: {anchor.name} vs {compareTarget.name}</div>
+          <p className="section-sub">{compareShared.length} items in common</p>
           <div className="grid grid-cols-2 gap-4">
-            {[{ p: anchor, label: t.anchorBadge }, { p: compareTarget, label: lang === "en" ? "Candidate" : "Candidato" }].map(({ p, label }) => (
+            {[{ p: anchor, label: "Anchor" }, { p: compareTarget, label: "Candidate" }].map(({ p, label }) => (
               <div key={p.slug}>
                 <div className="detail-meta mb-2">{label}: {p.name}</div>
                 <div className="pkmn-cats">
@@ -239,7 +190,7 @@ export default function MatchmakerPage() {
           </div>
           {compareShared.length > 0 && (
             <div className="mt-4">
-              <div className="stat-label mb-2">{t.sharedItemsLabel}</div>
+              <div className="stat-label mb-2">Shared items</div>
               <div className="flex flex-wrap gap-1.5">
                 {compareShared.map((item) => (
                   <span key={item} className="pkmn-cat-tag" style={{ background: "var(--sun-soft)", borderColor: "var(--sun)" }}>{item}</span>
@@ -252,12 +203,12 @@ export default function MatchmakerPage() {
 
       {anchor && group.length > 1 && (
         <div className="card">
-          <div className="section-title">{t.bestGroup} <span className="pill">{t.teamPill}</span></div>
-          <p className="section-sub">{t.groupDesc}</p>
+          <div className="section-title">Best group of 4 <span className="pill">TEAM</span></div>
+          <p className="section-sub">Greedy algorithm: each Pokémon maximizes shared items with the current group.</p>
           <div className="pkmn-grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))]">
             {group.map((p, i) => (
               <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
-                {i === 0 && <div className="font-mono text-[10px] text-accent mb-1">{t.anchorLabel}</div>}
+                {i === 0 && <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>}
                 <div className="pkmn-grid-icon">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />

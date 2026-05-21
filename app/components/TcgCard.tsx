@@ -178,38 +178,62 @@ export default function TcgCard({
 
           {/* ── Category + specialty + flavor chips ─────────────── */}
           <div style={{ padding: isLg ? "6px 10px 4px" : "4px 6px 3px", flexShrink: 0 }}>
-            {!isSm && (
-              <div style={{
-                fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
-                fontSize: isLg ? 8 : 7,
-                color: "var(--ink-fade)",
-                letterSpacing: "0.07em",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                marginBottom: 3,
-              }}>Likes</div>
-            )}
+            <div style={{
+              fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
+              fontSize: isLg ? 8 : 7,
+              color: "var(--ink-fade)",
+              letterSpacing: "0.07em",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              marginBottom: 3,
+            }}>Likes</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
               {p.categories.slice(0, isSm ? 2 : isLg ? undefined : 3).map((c) => (
                 <span key={c} className="pkmn-cat-tag" style={{ fontSize: isSm ? 8 : 9, padding: isSm ? "2px 6px" : "2px 8px", lineHeight: 1.4 }}>{c}</span>
               ))}
             </div>
-            {p.specialties && p.specialties.length > 0 && (
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 3, marginTop: 3 }}>
-                {p.specialties.map((s) => (
-                  <span key={s} className="pkmn-cat-tag" style={{
-                    fontSize: isSm ? 8 : 9, padding: isSm ? "2px 6px" : "2px 8px", lineHeight: 1.4,
-                    color: "var(--accent-deep)", borderColor: "var(--accent)", background: "var(--accent-soft)",
-                  }}>{SPECIALTIES[s]?.name ?? s}</span>
-                ))}
-              </div>
-            )}
-            {p.flavor && (
-              <div style={{ marginTop: 3 }}>
-                <span className="pkmn-cat-tag" style={{
-                  fontSize: isSm ? 8 : 9, padding: isSm ? "2px 6px" : "2px 8px", lineHeight: 1.4,
-                  color: "var(--accent2)", borderColor: "var(--accent2)", background: "var(--accent2-soft)",
-                }}>{p.flavor}</span>
+
+            {/* Specialty + Flavor side by side */}
+            {(p.specialties && p.specialties.length > 0 || p.flavor) && (
+              <div style={{ display: "flex", gap: 6, marginTop: 4, alignItems: "flex-start" }}>
+                {p.specialties && p.specialties.length > 0 && (
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{
+                      fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
+                      fontSize: isLg ? 8 : 7,
+                      color: "var(--accent-deep)",
+                      letterSpacing: "0.07em",
+                      fontWeight: 600,
+                      textTransform: "uppercase",
+                      marginBottom: 3,
+                    }}>Specialty</div>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+                      {p.specialties.map((s) => (
+                        <span key={s} className="pkmn-cat-tag" style={{
+                          fontSize: isSm ? 8 : 9, padding: isSm ? "2px 6px" : "2px 8px", lineHeight: 1.4,
+                          color: "var(--accent-deep)", borderColor: "var(--accent)", background: "var(--accent-soft)",
+                        }}>{SPECIALTIES[s]?.name ?? s}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {p.flavor && (
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{
+                      fontFamily: "'JetBrains Mono', 'DM Mono', monospace",
+                      fontSize: isLg ? 8 : 7,
+                      color: "var(--accent2)",
+                      letterSpacing: "0.07em",
+                      fontWeight: 600,
+                      textTransform: "uppercase",
+                      marginBottom: 3,
+                    }}>Flavor</div>
+                    <span className="pkmn-cat-tag" style={{
+                      fontSize: isSm ? 8 : 9, padding: isSm ? "2px 6px" : "2px 8px", lineHeight: 1.4,
+                      color: "var(--accent2)", borderColor: "var(--accent2)", background: "var(--accent2-soft)",
+                    }}>{p.flavor}</span>
+                  </div>
+                )}
               </div>
             )}
           </div>

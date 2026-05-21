@@ -5,6 +5,8 @@ import CollapsibleSection from "@/app/components/CollapsibleSection";
 import GoesWellWith from "@/app/components/GoesWellWith";
 import ArrowKeyNav from "@/app/components/ArrowKeyNav";
 import TcgCard from "@/app/components/TcgCard";
+import StatBox from "@/app/components/StatBox";
+import BestGiftItem from "@/app/components/BestGiftItem";
 
 export function generateStaticParams() {
   return Object.keys(POKEMON).map((slug) => ({ slug }));
@@ -64,7 +66,8 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         ) : <span />}
       </div>
 
-      <div className="pkmn-head">
+      {/* ── Hero: card + info ── */}
+      <div className="flex items-start gap-7 mb-5 pb-5 border-b border-paper-edge max-md:flex-col max-md:items-center max-md:text-center max-md:gap-4">
         <div className="shrink-0 w-[260px]">
           <TcgCard p={{ ...p, slug }} size="md" giftCount={sharedItems.length > 0 ? sharedItems.length : null} />
         </div>
@@ -80,7 +83,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             </>}
           </div>
           {p.specialties && p.specialties.length > 0 && (
-            <div className="mt-2.5">
+            <div className="mt-3">
               <p className="detail-meta mb-1 text-[11px] flex items-center gap-1.5">
                 Specialty
                 {" "}<span className="info-tip" data-tip="Specialties determine bonus effects when this Pokémon helps with certain Pokopia activities." aria-label="Specialty bonus activities.">i</span>
@@ -94,7 +97,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
           )}
-          <div className="mt-2.5">
+          <div className="mt-3">
             <p className="detail-meta mb-1 text-[11px] flex items-center gap-1.5">
               Favorite categories
               {" "}<span className="info-tip" data-tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} aria-label={`Gift items in these categories earn extra happiness with ${p.name}.`}>i</span>
@@ -107,37 +110,33 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
               ))}
             </div>
           </div>
+
+          <GoesWellWith slug={slug} habitat={p.habitat} />
         </div>
       </div>
 
+      {/* ── Gift data ── */}
       <div className="card">
-        <div className="summary-strip">
-          <div className="stat-box"><div className="stat-num">{allItems.length}</div><div className="stat-label">items total</div></div>
-          <div className="stat-box"><div className="stat-num">{sharedItems.length}</div><div className="stat-label">in 2+ categories</div></div>
-          <div className="stat-box"><div className="stat-num">{p.categories.length}</div><div className="stat-label">categories</div></div>
+        <div className="flex gap-3 mb-6 flex-wrap">
+          <StatBox value={allItems.length} label="items total" />
+          <StatBox value={sharedItems.length} label="in 2+ categories" />
         </div>
 
         {sharedItems.length > 0 && (
           <>
             <div className="section-title">Best gifts <span className="pill">TOP GIFTS</span></div>
             <p className="section-sub">These items appear in multiple categories — they count double (or more).</p>
-            <div className="best-grid">
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-3 mb-7 max-md:grid-cols-1">
               {sharedItems.map(([item, cats]) => {
-                const isElite = cats.length >= 3;
                 const itemEntry = ITEMS[item];
                 return (
-                  <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
-                    <div className={`best-item${isElite ? " elite" : ""}`}>
-                      <div className="best-item-badge">{cats.length}× categories</div>
-                      <div className="best-item-icon">
-                        {itemEntry?.icon && <img src={itemEntry.icon} alt={item} className="w-full h-full object-contain [image-rendering:pixelated]" />}
-                      </div>
-                      <div className="best-item-body">
-                        <div className="best-item-name">{item}</div>
-                        <div className="best-item-cats">{cats.map((c) => catDisplayName(c)).join(" · ")}</div>
-                      </div>
-                    </div>
-                  </Link>
+                  <BestGiftItem
+                    key={item}
+                    item={item}
+                    cats={cats.map((c) => catDisplayName(c))}
+                    href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                    iconSrc={itemEntry?.icon ?? undefined}
+                  />
                 );
               })}
             </div>
@@ -150,7 +149,8 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           const items = getCatItems(catRef);
           return (
             <CollapsibleSection key={catRef} title={catDisplayName(catRef)} count={`${items.length} items`} defaultOpen={true}>
-              <div className="cat-items">
+              {/* Items grid */}
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 px-1 mb-2 max-md:grid-cols-1">
                 {items.map((item) => {
                   const cats = itemToCats[item] ?? [];
                   const isShared = cats.length >= 2;
@@ -158,13 +158,16 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                   const itemEntry = ITEMS[item];
                   return (
                     <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
-                      <div className={`cat-item${isShared ? " shared" : ""}`}>
-                        <div className="cat-item-icon">
+                      <div className={`text-[13px] px-[10px] py-[6px] rounded-lg border transition-all flex items-center gap-2 min-h-[44px] hover:border-accent hover:bg-surface-1 ${isShared ? "bg-accent-soft border-accent font-bold" : "bg-paper border-surface-2 text-ink"}`}>
+                        <div className="w-8 h-8 shrink-0 flex items-center justify-center">
                           {itemEntry?.icon && <img src={itemEntry.icon} alt={item} className="w-full h-full object-contain [image-rendering:pixelated]" />}
                         </div>
-                        <div className="cat-item-body">
-                          <div className="cat-item-name">{item}</div>
-                          {isShared && <div className="cat-item-cats">+ {otherCats.map((c) => catDisplayName(c)).join(", ")}</div>}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-1">
+                            {isShared && <span className="text-accent text-[11px]">★</span>}
+                            <span>{item}</span>
+                          </div>
+                          {isShared && <div className="font-mono text-[9px] text-ink-soft mt-[2px] leading-tight">+ {otherCats.map((c) => catDisplayName(c)).join(", ")}</div>}
                         </div>
                       </div>
                     </Link>
@@ -179,12 +182,12 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           <>
             <div className="section-title mt-6">Where to find</div>
             {p.habitatList.map((entry, i) => (
-              <div key={i} className="cat-block">
-                <div className="cat-head">
-                  <Link href={`/habitat/${entry.habitatSlug}`} className="cat-name no-underline text-inherit">
+              <div key={i} className="mb-4">
+                <div className="flex items-baseline gap-2 mb-2 px-[14px] py-2 bg-chrome rounded-[10px] border border-paper-edge">
+                  <Link href={`/habitat/${entry.habitatSlug}`} className="font-outfit font-bold text-[16px] no-underline text-inherit">
                     {HABITATS[entry.habitatSlug]?.name ?? entry.habitatSlug}
                   </Link>
-                  {entry.rarity && <span className="cat-count">{entry.rarity}</span>}
+                  {entry.rarity && <span className="font-mono text-[11px] text-ink-soft ml-auto font-medium">{entry.rarity}</span>}
                 </div>
                 <div className="px-1 pb-2 text-xs font-mono text-ink-soft">
                   {entry.locations.map((loc, j) => (
@@ -203,8 +206,6 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           </>
         )}
       </div>
-
-      <GoesWellWith slug={slug} habitat={p.habitat} />
     </div>
   );
 }

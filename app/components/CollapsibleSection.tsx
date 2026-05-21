@@ -14,16 +14,15 @@ export default function CollapsibleSection({
 }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="cat-block">
+    <div className="mb-4">
       <button
-        className="cat-head"
+        className="w-full text-left flex items-baseline gap-2 mb-2 px-[14px] py-2 bg-chrome rounded-[10px] border border-paper-edge cursor-pointer transition-colors hover:bg-surface-2"
         onClick={() => setOpen((prev) => !prev)}
-        style={{ width: "100%", textAlign: "left", cursor: "pointer", background: "none", border: "none", padding: 0 }}
         aria-expanded={open}
       >
-        <span className="cat-name">{title}</span>
-        {count && <span className="cat-count">{count}</span>}
-        <span style={{ marginLeft: "auto", paddingLeft: 8, fontFamily: "'DM Mono', monospace", fontSize: 11, color: "var(--ink-fade)" }}>
+        <span className="font-outfit font-bold text-[16px]">{title}</span>
+        {count && <span className="font-mono text-[11px] text-ink-soft ml-auto font-medium">{count}</span>}
+        <span className="font-mono text-[11px] text-ink-fade pl-2">
           {open ? "▲" : "▼"}
         </span>
       </button>

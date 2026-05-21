@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { CATEGORIES, POKEMON } from "@/app/lib/data";
-import { useLang } from "@/app/lib/lang";
 
 const ALL_CATS = Object.values(CATEGORIES).sort((a, b) => a.name.localeCompare(b.name));
 
@@ -13,23 +12,15 @@ for (const p of Object.values(POKEMON)) {
   }
 }
 
-const STRINGS = {
-  en: { title: "Gift Categories", items: "items", pokemon: "Pokémon" },
-  es: { title: "Categorías de regalos", items: "objetos", pokemon: "Pokémon" },
-} as const;
-
 export default function CategoriesPage() {
-  const lang = useLang();
-  const t = STRINGS[lang];
-
   return (
     <div className="detail-wrap">
       <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>{t.title}</span>
+        <Link href="/">Home</Link><span>›</span><span>Gift Categories</span>
       </div>
       <div className="detail-header">
-        <div className="detail-title">{t.title}</div>
-        <div className="detail-meta">{ALL_CATS.length}</div>
+        <div className="detail-title">Gift Categories</div>
+        <div className="detail-meta">{ALL_CATS.length} categories</div>
       </div>
 
       <div className="card">
@@ -39,7 +30,7 @@ export default function CategoriesPage() {
               <div className="hover-tile py-3 px-3.5">
                 <div className="font-outfit font-bold text-sm text-ink mb-1">{cat.name}</div>
                 <div className="font-mono text-[10px] text-ink-fade tracking-[0.04em]">
-                  {cat.items.length} {t.items} · {pkmnCountByCat[cat.slug] ?? 0} {t.pokemon}
+                  {cat.items.length} items · {pkmnCountByCat[cat.slug] ?? 0} Pokémon
                 </div>
               </div>
             </Link>
