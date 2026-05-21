@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { CATEGORIES, POKEMON } from "@/app/lib/data";
 
