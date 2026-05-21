@@ -7,6 +7,7 @@ export type PokemonEntry = {
   slug: string;
   nationalDexNum: number | null;
   spriteHq: string | null;
+  types?: string[];
   specialties?: string[];
   flavor?: string | null;
   primaryLocation?: string | null;

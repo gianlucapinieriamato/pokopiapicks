@@ -44,7 +44,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/onix.png"
+    "spriteHq": "/icons/sprites-hq/onix.png",
+    "types": [
+      "Rock",
+      "Ground"
+    ]
   },
   "timburr": {
     "name": "Timburr",
@@ -91,7 +95,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/timburr.png"
+    "spriteHq": "/icons/sprites-hq/timburr.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "litwick": {
     "name": "Litwick",
@@ -138,7 +145,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/litwick.png"
+    "spriteHq": "/icons/sprites-hq/litwick.png",
+    "types": [
+      "Ghost",
+      "Fire"
+    ]
   },
   "charjabug": {
     "name": "Charjabug",
@@ -185,7 +196,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/charjabug.png"
+    "spriteHq": "/icons/sprites-hq/charjabug.png",
+    "types": [
+      "Bug",
+      "Electric"
+    ]
   },
   "tatsugiridroopyform": {
     "name": "Tatsugiri Droopy Form",
@@ -232,7 +247,11 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/tatsugiridroopyform.png"
+    "spriteHq": "/icons/sprites-hq/tatsugiridroopyform.png",
+    "types": [
+      "Dragon",
+      "Water"
+    ]
   },
   "stereorotom": {
     "name": "Stereo Rotom",
@@ -279,7 +298,11 @@
     "specialties": [
       "dj"
     ],
-    "spriteHq": "/icons/sprites-hq/stereorotom.png"
+    "spriteHq": "/icons/sprites-hq/stereorotom.png",
+    "types": [
+      "Electric",
+      "Ghost"
+    ]
   },
   "porygon": {
     "name": "Porygon",
@@ -301,7 +324,10 @@
     "specialties": [
       "recycle"
     ],
-    "spriteHq": "/icons/sprites-hq/porygon.png"
+    "spriteHq": "/icons/sprites-hq/porygon.png",
+    "types": [
+      "Normal"
+    ]
   },
   "tinkaton": {
     "name": "Tinkaton",
@@ -348,7 +374,11 @@
     "specialties": [
       "engineer"
     ],
-    "spriteHq": "/icons/sprites-hq/tinkaton.png"
+    "spriteHq": "/icons/sprites-hq/tinkaton.png",
+    "types": [
+      "Fairy",
+      "Steel"
+    ]
   },
   "squirtle": {
     "name": "Squirtle",
@@ -395,7 +425,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/squirtle.png"
+    "spriteHq": "/icons/sprites-hq/squirtle.png",
+    "types": [
+      "Water"
+    ]
   },
   "wartortle": {
     "name": "Wartortle",
@@ -442,7 +475,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/wartortle.png"
+    "spriteHq": "/icons/sprites-hq/wartortle.png",
+    "types": [
+      "Water"
+    ]
   },
   "blastoise": {
     "name": "Blastoise",
@@ -489,7 +525,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/blastoise.png"
+    "spriteHq": "/icons/sprites-hq/blastoise.png",
+    "types": [
+      "Water"
+    ]
   },
   "slowpoke": {
     "name": "Slowpoke",
@@ -536,7 +575,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/slowpoke.png"
+    "spriteHq": "/icons/sprites-hq/slowpoke.png",
+    "types": [
+      "Water",
+      "Psychic"
+    ]
   },
   "slowbro": {
     "name": "Slowbro",
@@ -583,7 +626,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/slowbro.png"
+    "spriteHq": "/icons/sprites-hq/slowbro.png",
+    "types": [
+      "Water",
+      "Psychic"
+    ]
   },
   "slowking": {
     "name": "Slowking",
@@ -630,7 +677,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/slowking.png"
+    "spriteHq": "/icons/sprites-hq/slowking.png",
+    "types": [
+      "Water",
+      "Psychic"
+    ]
   },
   "gyarados": {
     "name": "Gyarados",
@@ -673,7 +724,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/gyarados.png"
+    "spriteHq": "/icons/sprites-hq/gyarados.png",
+    "types": [
+      "Water",
+      "Flying"
+    ]
   },
   "shellos": {
     "name": "Shellos",
@@ -720,7 +775,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/shellos.png"
+    "spriteHq": "/icons/sprites-hq/shellos.png",
+    "types": [
+      "Water"
+    ]
   },
   "shelloseastsea": {
     "name": "Shellos East Sea",
@@ -767,7 +825,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/shelloseastsea.png"
+    "spriteHq": "/icons/sprites-hq/shelloseastsea.png",
+    "types": [
+      "Water"
+    ]
   },
   "gastrodon": {
     "name": "Gastrodon",
@@ -814,7 +875,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/gastrodon.png"
+    "spriteHq": "/icons/sprites-hq/gastrodon.png",
+    "types": [
+      "Water",
+      "Ground"
+    ]
   },
   "gastrodoneastsea": {
     "name": "Gastrodon East Sea",
@@ -861,7 +926,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/gastrodoneastsea.png"
+    "spriteHq": "/icons/sprites-hq/gastrodoneastsea.png",
+    "types": [
+      "Water",
+      "Ground"
+    ]
   },
   "goomy": {
     "name": "Goomy",
@@ -907,7 +976,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/goomy.png"
+    "spriteHq": "/icons/sprites-hq/goomy.png",
+    "types": [
+      "Dragon"
+    ]
   },
   "sliggoo": {
     "name": "Sliggoo",
@@ -953,7 +1025,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/sliggoo.png"
+    "spriteHq": "/icons/sprites-hq/sliggoo.png",
+    "types": [
+      "Dragon"
+    ]
   },
   "goodra": {
     "name": "Goodra",
@@ -999,7 +1074,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/goodra.png"
+    "spriteHq": "/icons/sprites-hq/goodra.png",
+    "types": [
+      "Dragon"
+    ]
   },
   "lapras": {
     "name": "Lapras",
@@ -1046,7 +1124,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/lapras.png"
+    "spriteHq": "/icons/sprites-hq/lapras.png",
+    "types": [
+      "Water",
+      "Ice"
+    ]
   },
   "azurill": {
     "name": "Azurill",
@@ -1093,7 +1175,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/azurill.png"
+    "spriteHq": "/icons/sprites-hq/azurill.png",
+    "types": [
+      "Normal",
+      "Fairy"
+    ]
   },
   "marill": {
     "name": "Marill",
@@ -1140,7 +1226,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/marill.png"
+    "spriteHq": "/icons/sprites-hq/marill.png",
+    "types": [
+      "Water",
+      "Fairy"
+    ]
   },
   "paldeanwooper": {
     "name": "Paldean Wooper",
@@ -1183,7 +1273,11 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/paldeanwooper.png"
+    "spriteHq": "/icons/sprites-hq/paldeanwooper.png",
+    "types": [
+      "Water",
+      "Ground"
+    ]
   },
   "clodsire": {
     "name": "Clodsire",
@@ -1230,7 +1324,11 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/clodsire.png"
+    "spriteHq": "/icons/sprites-hq/clodsire.png",
+    "types": [
+      "Poison",
+      "Ground"
+    ]
   },
   "wingull": {
     "name": "Wingull",
@@ -1276,7 +1374,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/wingull.png"
+    "spriteHq": "/icons/sprites-hq/wingull.png",
+    "types": [
+      "Water",
+      "Flying"
+    ]
   },
   "pelipper": {
     "name": "Pelipper",
@@ -1322,7 +1424,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/pelipper.png"
+    "spriteHq": "/icons/sprites-hq/pelipper.png",
+    "types": [
+      "Water",
+      "Flying"
+    ]
   },
   "piplup": {
     "name": "Piplup",
@@ -1369,7 +1475,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/piplup.png"
+    "spriteHq": "/icons/sprites-hq/piplup.png",
+    "types": [
+      "Water"
+    ]
   },
   "prinplup": {
     "name": "Prinplup",
@@ -1416,7 +1525,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/prinplup.png"
+    "spriteHq": "/icons/sprites-hq/prinplup.png",
+    "types": [
+      "Water"
+    ]
   },
   "empoleon": {
     "name": "Empoleon",
@@ -1462,7 +1574,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/empoleon.png"
+    "spriteHq": "/icons/sprites-hq/empoleon.png",
+    "types": [
+      "Water",
+      "Steel"
+    ]
   },
   "minccino": {
     "name": "Minccino",
@@ -1509,7 +1625,10 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/minccino.png"
+    "spriteHq": "/icons/sprites-hq/minccino.png",
+    "types": [
+      "Normal"
+    ]
   },
   "cinccino": {
     "name": "Cinccino",
@@ -1556,7 +1675,10 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/cinccino.png"
+    "spriteHq": "/icons/sprites-hq/cinccino.png",
+    "types": [
+      "Normal"
+    ]
   },
   "lotad": {
     "name": "Lotad",
@@ -1603,7 +1725,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/lotad.png"
+    "spriteHq": "/icons/sprites-hq/lotad.png",
+    "types": [
+      "Water",
+      "Grass"
+    ]
   },
   "lombre": {
     "name": "Lombre",
@@ -1650,7 +1776,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/lombre.png"
+    "spriteHq": "/icons/sprites-hq/lombre.png",
+    "types": [
+      "Water",
+      "Grass"
+    ]
   },
   "dartrix": {
     "name": "Dartrix",
@@ -1697,7 +1827,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/dartrix.png"
+    "spriteHq": "/icons/sprites-hq/dartrix.png",
+    "types": [
+      "Grass",
+      "Flying"
+    ]
   },
   "poliwag": {
     "name": "Poliwag",
@@ -1744,7 +1878,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/poliwag.png"
+    "spriteHq": "/icons/sprites-hq/poliwag.png",
+    "types": [
+      "Water"
+    ]
   },
   "poliwhirl": {
     "name": "Poliwhirl",
@@ -1791,7 +1928,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/poliwhirl.png"
+    "spriteHq": "/icons/sprites-hq/poliwhirl.png",
+    "types": [
+      "Water"
+    ]
   },
   "poliwrath": {
     "name": "Poliwrath",
@@ -1838,7 +1978,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/poliwrath.png"
+    "spriteHq": "/icons/sprites-hq/poliwrath.png",
+    "types": [
+      "Water",
+      "Fighting"
+    ]
   },
   "dratini": {
     "name": "Dratini",
@@ -1885,7 +2029,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/dratini.png"
+    "spriteHq": "/icons/sprites-hq/dratini.png",
+    "types": [
+      "Dragon"
+    ]
   },
   "dragonair": {
     "name": "Dragonair",
@@ -1932,7 +2079,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/dragonair.png"
+    "spriteHq": "/icons/sprites-hq/dragonair.png",
+    "types": [
+      "Dragon"
+    ]
   },
   "dragonite": {
     "name": "Dragonite",
@@ -1979,7 +2129,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/dragonite.png"
+    "spriteHq": "/icons/sprites-hq/dragonite.png",
+    "types": [
+      "Dragon",
+      "Flying"
+    ]
   },
   "swablu": {
     "name": "Swablu",
@@ -2026,7 +2180,11 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/swablu.png"
+    "spriteHq": "/icons/sprites-hq/swablu.png",
+    "types": [
+      "Normal",
+      "Flying"
+    ]
   },
   "servine": {
     "name": "Servine",
@@ -2073,7 +2231,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/servine.png"
+    "spriteHq": "/icons/sprites-hq/servine.png",
+    "types": [
+      "Grass"
+    ]
   },
   "froakie": {
     "name": "Froakie",
@@ -2120,7 +2281,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/froakie.png"
+    "spriteHq": "/icons/sprites-hq/froakie.png",
+    "types": [
+      "Water"
+    ]
   },
   "frogadier": {
     "name": "Frogadier",
@@ -2167,7 +2331,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/frogadier.png"
+    "spriteHq": "/icons/sprites-hq/frogadier.png",
+    "types": [
+      "Water"
+    ]
   },
   "greninja": {
     "name": "Greninja",
@@ -2214,7 +2381,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/greninja.png"
+    "spriteHq": "/icons/sprites-hq/greninja.png",
+    "types": [
+      "Water",
+      "Dark"
+    ]
   },
   "vaporeon": {
     "name": "Vaporeon",
@@ -2257,7 +2428,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/vaporeon.png"
+    "spriteHq": "/icons/sprites-hq/vaporeon.png",
+    "types": [
+      "Water"
+    ]
   },
   "suicune": {
     "name": "Suicune",
@@ -2279,7 +2453,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/suicune.png"
+    "spriteHq": "/icons/sprites-hq/suicune.png",
+    "types": [
+      "Water"
+    ]
   },
   "ivysaur": {
     "name": "Ivysaur",
@@ -2326,7 +2503,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/ivysaur.png"
+    "spriteHq": "/icons/sprites-hq/ivysaur.png",
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   "vileplume": {
     "name": "Vileplume",
@@ -2373,7 +2554,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/vileplume.png"
+    "spriteHq": "/icons/sprites-hq/vileplume.png",
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   "weepinbell": {
     "name": "Weepinbell",
@@ -2420,7 +2605,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/weepinbell.png"
+    "spriteHq": "/icons/sprites-hq/weepinbell.png",
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   "victreebel": {
     "name": "Victreebel",
@@ -2467,7 +2656,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/victreebel.png"
+    "spriteHq": "/icons/sprites-hq/victreebel.png",
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   "gulpin": {
     "name": "Gulpin",
@@ -2510,7 +2703,10 @@
     "specialties": [
       "storage"
     ],
-    "spriteHq": "/icons/sprites-hq/gulpin.png"
+    "spriteHq": "/icons/sprites-hq/gulpin.png",
+    "types": [
+      "Poison"
+    ]
   },
   "swalot": {
     "name": "Swalot",
@@ -2557,7 +2753,10 @@
     "specialties": [
       "storage"
     ],
-    "spriteHq": "/icons/sprites-hq/swalot.png"
+    "spriteHq": "/icons/sprites-hq/swalot.png",
+    "types": [
+      "Poison"
+    ]
   },
   "muk": {
     "name": "Muk",
@@ -2604,7 +2803,10 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/muk.png"
+    "spriteHq": "/icons/sprites-hq/muk.png",
+    "types": [
+      "Poison"
+    ]
   },
   "voltorb": {
     "name": "Voltorb",
@@ -2651,7 +2853,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/voltorb.png"
+    "spriteHq": "/icons/sprites-hq/voltorb.png",
+    "types": [
+      "Electric"
+    ]
   },
   "spinarak": {
     "name": "Spinarak",
@@ -2698,7 +2903,11 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/spinarak.png"
+    "spriteHq": "/icons/sprites-hq/spinarak.png",
+    "types": [
+      "Bug",
+      "Poison"
+    ]
   },
   "ariados": {
     "name": "Ariados",
@@ -2745,7 +2954,11 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/ariados.png"
+    "spriteHq": "/icons/sprites-hq/ariados.png",
+    "types": [
+      "Bug",
+      "Poison"
+    ]
   },
   "smeargle": {
     "name": "Smeargle",
@@ -2792,7 +3005,10 @@
     "specialties": [
       "paint"
     ],
-    "spriteHq": "/icons/sprites-hq/smeargle.png"
+    "spriteHq": "/icons/sprites-hq/smeargle.png",
+    "types": [
+      "Normal"
+    ]
   },
   "cleffa": {
     "name": "Cleffa",
@@ -2836,7 +3052,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/cleffa.png"
+    "spriteHq": "/icons/sprites-hq/cleffa.png",
+    "types": [
+      "Fairy"
+    ]
   },
   "mawile": {
     "name": "Mawile",
@@ -2879,7 +3098,11 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/mawile.png"
+    "spriteHq": "/icons/sprites-hq/mawile.png",
+    "types": [
+      "Steel",
+      "Fairy"
+    ]
   },
   "kricketot": {
     "name": "Kricketot",
@@ -2926,7 +3149,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/kricketot.png"
+    "spriteHq": "/icons/sprites-hq/kricketot.png",
+    "types": [
+      "Bug"
+    ]
   },
   "kricketune": {
     "name": "Kricketune",
@@ -2973,7 +3199,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/kricketune.png"
+    "spriteHq": "/icons/sprites-hq/kricketune.png",
+    "types": [
+      "Bug"
+    ]
   },
   "porygon2": {
     "name": "Porygon2",
@@ -3020,7 +3249,10 @@
     "specialties": [
       "recycle"
     ],
-    "spriteHq": "/icons/sprites-hq/porygon2.png"
+    "spriteHq": "/icons/sprites-hq/porygon2.png",
+    "types": [
+      "Normal"
+    ]
   },
   "porygon-z": {
     "name": "Porygon-Z",
@@ -3067,7 +3299,10 @@
     "specialties": [
       "rarify"
     ],
-    "spriteHq": "/icons/sprites-hq/porygon-z.png"
+    "spriteHq": "/icons/sprites-hq/porygon-z.png",
+    "types": [
+      "Normal"
+    ]
   },
   "misdreavus": {
     "name": "Misdreavus",
@@ -3111,7 +3346,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/misdreavus.png"
+    "spriteHq": "/icons/sprites-hq/misdreavus.png",
+    "types": [
+      "Ghost"
+    ]
   },
   "sprigatito": {
     "name": "Sprigatito",
@@ -3158,7 +3396,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/sprigatito.png"
+    "spriteHq": "/icons/sprites-hq/sprigatito.png",
+    "types": [
+      "Grass"
+    ]
   },
   "floragato": {
     "name": "Floragato",
@@ -3205,7 +3446,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/floragato.png"
+    "spriteHq": "/icons/sprites-hq/floragato.png",
+    "types": [
+      "Grass"
+    ]
   },
   "venonat": {
     "name": "Venonat",
@@ -3249,7 +3493,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/venonat.png"
+    "spriteHq": "/icons/sprites-hq/venonat.png",
+    "types": [
+      "Bug",
+      "Poison"
+    ]
   },
   "koffing": {
     "name": "Koffing",
@@ -3292,7 +3540,10 @@
     "specialties": [
       "recycle"
     ],
-    "spriteHq": "/icons/sprites-hq/koffing.png"
+    "spriteHq": "/icons/sprites-hq/koffing.png",
+    "types": [
+      "Poison"
+    ]
   },
   "weezing": {
     "name": "Weezing",
@@ -3335,7 +3586,10 @@
     "specialties": [
       "recycle"
     ],
-    "spriteHq": "/icons/sprites-hq/weezing.png"
+    "spriteHq": "/icons/sprites-hq/weezing.png",
+    "types": [
+      "Poison"
+    ]
   },
   "professortangrowth": {
     "name": "Professor Tangrowth",
@@ -3357,7 +3611,10 @@
     "specialties": [
       "appraise"
     ],
-    "spriteHq": "/icons/sprites-hq/professortangrowth.png"
+    "spriteHq": "/icons/sprites-hq/professortangrowth.png",
+    "types": [
+      "Grass"
+    ]
   },
   "vespiquen": {
     "name": "Vespiquen",
@@ -3404,7 +3661,11 @@
     "specialties": [
       "gatherhoney"
     ],
-    "spriteHq": "/icons/sprites-hq/vespiquen.png"
+    "spriteHq": "/icons/sprites-hq/vespiquen.png",
+    "types": [
+      "Bug",
+      "Flying"
+    ]
   },
   "zubat": {
     "name": "Zubat",
@@ -3447,7 +3708,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/zubat.png"
+    "spriteHq": "/icons/sprites-hq/zubat.png",
+    "types": [
+      "Poison",
+      "Flying"
+    ]
   },
   "golbat": {
     "name": "Golbat",
@@ -3490,7 +3755,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/golbat.png"
+    "spriteHq": "/icons/sprites-hq/golbat.png",
+    "types": [
+      "Poison",
+      "Flying"
+    ]
   },
   "psyduck": {
     "name": "Psyduck",
@@ -3537,7 +3806,10 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/psyduck.png"
+    "spriteHq": "/icons/sprites-hq/psyduck.png",
+    "types": [
+      "Water"
+    ]
   },
   "golduck": {
     "name": "Golduck",
@@ -3584,7 +3856,10 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/golduck.png"
+    "spriteHq": "/icons/sprites-hq/golduck.png",
+    "types": [
+      "Water"
+    ]
   },
   "absol": {
     "name": "Absol",
@@ -3631,7 +3906,10 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/absol.png"
+    "spriteHq": "/icons/sprites-hq/absol.png",
+    "types": [
+      "Dark"
+    ]
   },
   "trubbish": {
     "name": "Trubbish",
@@ -3678,7 +3956,10 @@
     "specialties": [
       "recycle"
     ],
-    "spriteHq": "/icons/sprites-hq/trubbish.png"
+    "spriteHq": "/icons/sprites-hq/trubbish.png",
+    "types": [
+      "Poison"
+    ]
   },
   "garbodor": {
     "name": "Garbodor",
@@ -3725,7 +4006,10 @@
     "specialties": [
       "recycle"
     ],
-    "spriteHq": "/icons/sprites-hq/garbodor.png"
+    "spriteHq": "/icons/sprites-hq/garbodor.png",
+    "types": [
+      "Poison"
+    ]
   },
   "lucario": {
     "name": "Lucario",
@@ -3772,7 +4056,11 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/lucario.png"
+    "spriteHq": "/icons/sprites-hq/lucario.png",
+    "types": [
+      "Fighting",
+      "Steel"
+    ]
   },
   "glimmet": {
     "name": "Glimmet",
@@ -3819,7 +4107,11 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/glimmet.png"
+    "spriteHq": "/icons/sprites-hq/glimmet.png",
+    "types": [
+      "Rock",
+      "Poison"
+    ]
   },
   "glimmora": {
     "name": "Glimmora",
@@ -3866,7 +4158,11 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/glimmora.png"
+    "spriteHq": "/icons/sprites-hq/glimmora.png",
+    "types": [
+      "Rock",
+      "Poison"
+    ]
   },
   "gimmighoul": {
     "name": "Gimmighoul",
@@ -3913,7 +4209,10 @@
     "specialties": [
       "collect"
     ],
-    "spriteHq": "/icons/sprites-hq/gimmighoul.png"
+    "spriteHq": "/icons/sprites-hq/gimmighoul.png",
+    "types": [
+      "Ghost"
+    ]
   },
   "gholdengo": {
     "name": "Gholdengo",
@@ -3960,7 +4259,11 @@
     "specialties": [
       "collect"
     ],
-    "spriteHq": "/icons/sprites-hq/gholdengo.png"
+    "spriteHq": "/icons/sprites-hq/gholdengo.png",
+    "types": [
+      "Steel",
+      "Ghost"
+    ]
   },
   "beldum": {
     "name": "Beldum",
@@ -4007,7 +4310,11 @@
     "specialties": [
       "recycle"
     ],
-    "spriteHq": "/icons/sprites-hq/beldum.png"
+    "spriteHq": "/icons/sprites-hq/beldum.png",
+    "types": [
+      "Steel",
+      "Psychic"
+    ]
   },
   "metang": {
     "name": "Metang",
@@ -4029,7 +4336,11 @@
     "specialties": [
       "recycle"
     ],
-    "spriteHq": "/icons/sprites-hq/metang.png"
+    "spriteHq": "/icons/sprites-hq/metang.png",
+    "types": [
+      "Steel",
+      "Psychic"
+    ]
   },
   "wattrel": {
     "name": "Wattrel",
@@ -4076,7 +4387,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/wattrel.png"
+    "spriteHq": "/icons/sprites-hq/wattrel.png",
+    "types": [
+      "Electric",
+      "Flying"
+    ]
   },
   "espeon": {
     "name": "Espeon",
@@ -4119,7 +4434,10 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/espeon.png"
+    "spriteHq": "/icons/sprites-hq/espeon.png",
+    "types": [
+      "Psychic"
+    ]
   },
   "mewtwo": {
     "name": "Mewtwo",
@@ -4141,7 +4459,10 @@
     "specialties": [
       "teleport"
     ],
-    "spriteHq": "/icons/sprites-hq/mewtwo.png"
+    "spriteHq": "/icons/sprites-hq/mewtwo.png",
+    "types": [
+      "Psychic"
+    ]
   },
   "mew": {
     "name": "Mew",
@@ -4163,7 +4484,10 @@
     "specialties": [
       "teleport"
     ],
-    "spriteHq": "/icons/sprites-hq/mew.png"
+    "spriteHq": "/icons/sprites-hq/mew.png",
+    "types": [
+      "Psychic"
+    ]
   },
   "cubone": {
     "name": "Cubone",
@@ -4210,7 +4534,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/cubone.png"
+    "spriteHq": "/icons/sprites-hq/cubone.png",
+    "types": [
+      "Ground"
+    ]
   },
   "marowak": {
     "name": "Marowak",
@@ -4257,7 +4584,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/marowak.png"
+    "spriteHq": "/icons/sprites-hq/marowak.png",
+    "types": [
+      "Ground"
+    ]
   },
   "gurdurr": {
     "name": "Gurdurr",
@@ -4304,7 +4634,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/gurdurr.png"
+    "spriteHq": "/icons/sprites-hq/gurdurr.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "conkeldurr": {
     "name": "Conkeldurr",
@@ -4351,7 +4684,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/conkeldurr.png"
+    "spriteHq": "/icons/sprites-hq/conkeldurr.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "azumarill": {
     "name": "Azumarill",
@@ -4397,7 +4733,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/azumarill.png"
+    "spriteHq": "/icons/sprites-hq/azumarill.png",
+    "types": [
+      "Water",
+      "Fairy"
+    ]
   },
   "combusken": {
     "name": "Combusken",
@@ -4444,7 +4784,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/combusken.png"
+    "spriteHq": "/icons/sprites-hq/combusken.png",
+    "types": [
+      "Fire",
+      "Fighting"
+    ]
   },
   "blaziken": {
     "name": "Blaziken",
@@ -4491,7 +4835,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/blaziken.png"
+    "spriteHq": "/icons/sprites-hq/blaziken.png",
+    "types": [
+      "Fire",
+      "Fighting"
+    ]
   },
   "makuhita": {
     "name": "Makuhita",
@@ -4538,7 +4886,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/makuhita.png"
+    "spriteHq": "/icons/sprites-hq/makuhita.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "hariyama": {
     "name": "Hariyama",
@@ -4585,7 +4936,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/hariyama.png"
+    "spriteHq": "/icons/sprites-hq/hariyama.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "machop": {
     "name": "Machop",
@@ -4628,7 +4982,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/machop.png"
+    "spriteHq": "/icons/sprites-hq/machop.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "machoke": {
     "name": "Machoke",
@@ -4675,7 +5032,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/machoke.png"
+    "spriteHq": "/icons/sprites-hq/machoke.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "machamp": {
     "name": "Machamp",
@@ -4722,7 +5082,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/machamp.png"
+    "spriteHq": "/icons/sprites-hq/machamp.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "riolu": {
     "name": "Riolu",
@@ -4769,7 +5132,10 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/riolu.png"
+    "spriteHq": "/icons/sprites-hq/riolu.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "gallade": {
     "name": "Gallade",
@@ -4816,7 +5182,11 @@
     "specialties": [
       "teleport"
     ],
-    "spriteHq": "/icons/sprites-hq/gallade.png"
+    "spriteHq": "/icons/sprites-hq/gallade.png",
+    "types": [
+      "Psychic",
+      "Fighting"
+    ]
   },
   "tinkatink": {
     "name": "Tinkatink",
@@ -4859,7 +5229,11 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/tinkatink.png"
+    "spriteHq": "/icons/sprites-hq/tinkatink.png",
+    "types": [
+      "Fairy",
+      "Steel"
+    ]
   },
   "tinkatuff": {
     "name": "Tinkatuff",
@@ -4906,7 +5280,11 @@
     "specialties": [
       "build"
     ],
-    "spriteHq": "/icons/sprites-hq/tinkatuff.png"
+    "spriteHq": "/icons/sprites-hq/tinkatuff.png",
+    "types": [
+      "Fairy",
+      "Steel"
+    ]
   },
   "noctowl": {
     "name": "Noctowl",
@@ -4950,7 +5328,11 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/noctowl.png"
+    "spriteHq": "/icons/sprites-hq/noctowl.png",
+    "types": [
+      "Normal",
+      "Flying"
+    ]
   },
   "lampent": {
     "name": "Lampent",
@@ -4997,7 +5379,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/lampent.png"
+    "spriteHq": "/icons/sprites-hq/lampent.png",
+    "types": [
+      "Ghost",
+      "Fire"
+    ]
   },
   "meowth": {
     "name": "Meowth",
@@ -5044,7 +5430,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/meowth.png"
+    "spriteHq": "/icons/sprites-hq/meowth.png",
+    "types": [
+      "Normal"
+    ]
   },
   "persian": {
     "name": "Persian",
@@ -5091,7 +5480,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/persian.png"
+    "spriteHq": "/icons/sprites-hq/persian.png",
+    "types": [
+      "Normal"
+    ]
   },
   "grimer": {
     "name": "Grimer",
@@ -5138,7 +5530,10 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/grimer.png"
+    "spriteHq": "/icons/sprites-hq/grimer.png",
+    "types": [
+      "Poison"
+    ]
   },
   "gastly": {
     "name": "Gastly",
@@ -5182,7 +5577,11 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/gastly.png"
+    "spriteHq": "/icons/sprites-hq/gastly.png",
+    "types": [
+      "Ghost",
+      "Poison"
+    ]
   },
   "happiny": {
     "name": "Happiny",
@@ -5229,7 +5628,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/happiny.png"
+    "spriteHq": "/icons/sprites-hq/happiny.png",
+    "types": [
+      "Normal"
+    ]
   },
   "torchic": {
     "name": "Torchic",
@@ -5276,7 +5678,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/torchic.png"
+    "spriteHq": "/icons/sprites-hq/torchic.png",
+    "types": [
+      "Fire"
+    ]
   },
   "grubbin": {
     "name": "Grubbin",
@@ -5323,7 +5728,10 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/grubbin.png"
+    "spriteHq": "/icons/sprites-hq/grubbin.png",
+    "types": [
+      "Bug"
+    ]
   },
   "tatsugiristretchyform": {
     "name": "Tatsugiri Stretchy Form",
@@ -5370,7 +5778,11 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/tatsugiristretchyform.png"
+    "spriteHq": "/icons/sprites-hq/tatsugiristretchyform.png",
+    "types": [
+      "Dragon",
+      "Water"
+    ]
   },
   "ludicolo": {
     "name": "Ludicolo",
@@ -5417,7 +5829,11 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/ludicolo.png"
+    "spriteHq": "/icons/sprites-hq/ludicolo.png",
+    "types": [
+      "Water",
+      "Grass"
+    ]
   },
   "rowlet": {
     "name": "Rowlet",
@@ -5460,7 +5876,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/rowlet.png"
+    "spriteHq": "/icons/sprites-hq/rowlet.png",
+    "types": [
+      "Grass",
+      "Flying"
+    ]
   },
   "raboot": {
     "name": "Raboot",
@@ -5507,7 +5927,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/raboot.png"
+    "spriteHq": "/icons/sprites-hq/raboot.png",
+    "types": [
+      "Fire"
+    ]
   },
   "kadabra": {
     "name": "Kadabra",
@@ -5529,7 +5952,10 @@
     "specialties": [
       "teleport"
     ],
-    "spriteHq": "/icons/sprites-hq/kadabra.png"
+    "spriteHq": "/icons/sprites-hq/kadabra.png",
+    "types": [
+      "Psychic"
+    ]
   },
   "dusclops": {
     "name": "Dusclops",
@@ -5573,7 +5999,10 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/dusclops.png"
+    "spriteHq": "/icons/sprites-hq/dusclops.png",
+    "types": [
+      "Ghost"
+    ]
   },
   "dusknoir": {
     "name": "Dusknoir",
@@ -5617,7 +6046,10 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/dusknoir.png"
+    "spriteHq": "/icons/sprites-hq/dusknoir.png",
+    "types": [
+      "Ghost"
+    ]
   },
   "serperior": {
     "name": "Serperior",
@@ -5664,7 +6096,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/serperior.png"
+    "spriteHq": "/icons/sprites-hq/serperior.png",
+    "types": [
+      "Grass"
+    ]
   },
   "rookidee": {
     "name": "Rookidee",
@@ -5711,7 +6146,10 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/rookidee.png"
+    "spriteHq": "/icons/sprites-hq/rookidee.png",
+    "types": [
+      "Flying"
+    ]
   },
   "corvisquire": {
     "name": "Corvisquire",
@@ -5758,7 +6196,10 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/corvisquire.png"
+    "spriteHq": "/icons/sprites-hq/corvisquire.png",
+    "types": [
+      "Flying"
+    ]
   },
   "corviknight": {
     "name": "Corviknight",
@@ -5805,7 +6246,11 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/corviknight.png"
+    "spriteHq": "/icons/sprites-hq/corviknight.png",
+    "types": [
+      "Flying",
+      "Steel"
+    ]
   },
   "amaura": {
     "name": "Amaura",
@@ -5852,7 +6297,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/amaura.png"
+    "spriteHq": "/icons/sprites-hq/amaura.png",
+    "types": [
+      "Rock",
+      "Ice"
+    ]
   },
   "volcanion": {
     "name": "Volcanion",
@@ -5874,7 +6323,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/volcanion.png"
+    "spriteHq": "/icons/sprites-hq/volcanion.png",
+    "types": [
+      "Fire",
+      "Water"
+    ]
   },
   "bulbasaur": {
     "name": "Bulbasaur",
@@ -5921,7 +6374,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/bulbasaur.png"
+    "spriteHq": "/icons/sprites-hq/bulbasaur.png",
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   "venusaur": {
     "name": "Venusaur",
@@ -5968,7 +6425,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/venusaur.png"
+    "spriteHq": "/icons/sprites-hq/venusaur.png",
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   "bellossom": {
     "name": "Bellossom",
@@ -6015,7 +6476,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/bellossom.png"
+    "spriteHq": "/icons/sprites-hq/bellossom.png",
+    "types": [
+      "Grass"
+    ]
   },
   "volbeat": {
     "name": "Volbeat",
@@ -6062,7 +6526,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/volbeat.png"
+    "spriteHq": "/icons/sprites-hq/volbeat.png",
+    "types": [
+      "Bug"
+    ]
   },
   "illumise": {
     "name": "Illumise",
@@ -6109,7 +6576,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/illumise.png"
+    "spriteHq": "/icons/sprites-hq/illumise.png",
+    "types": [
+      "Bug"
+    ]
   },
   "cacnea": {
     "name": "Cacnea",
@@ -6155,7 +6625,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/cacnea.png"
+    "spriteHq": "/icons/sprites-hq/cacnea.png",
+    "types": [
+      "Grass"
+    ]
   },
   "drifloon": {
     "name": "Drifloon",
@@ -6202,7 +6675,11 @@
     "specialties": [
       "dreamisland"
     ],
-    "spriteHq": "/icons/sprites-hq/drifloon.png"
+    "spriteHq": "/icons/sprites-hq/drifloon.png",
+    "types": [
+      "Ghost",
+      "Flying"
+    ]
   },
   "pichu": {
     "name": "Pichu",
@@ -6245,7 +6722,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/pichu.png"
+    "spriteHq": "/icons/sprites-hq/pichu.png",
+    "types": [
+      "Electric"
+    ]
   },
   "peakychu": {
     "name": "Peakychu",
@@ -6292,7 +6772,10 @@
     "specialties": [
       "illuminate"
     ],
-    "spriteHq": "/icons/sprites-hq/peakychu.png"
+    "spriteHq": "/icons/sprites-hq/peakychu.png",
+    "types": [
+      "Electric"
+    ]
   },
   "elekid": {
     "name": "Elekid",
@@ -6339,7 +6822,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/elekid.png"
+    "spriteHq": "/icons/sprites-hq/elekid.png",
+    "types": [
+      "Electric"
+    ]
   },
   "mareep": {
     "name": "Mareep",
@@ -6386,7 +6872,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/mareep.png"
+    "spriteHq": "/icons/sprites-hq/mareep.png",
+    "types": [
+      "Electric"
+    ]
   },
   "flaaffy": {
     "name": "Flaaffy",
@@ -6433,7 +6922,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/flaaffy.png"
+    "spriteHq": "/icons/sprites-hq/flaaffy.png",
+    "types": [
+      "Electric"
+    ]
   },
   "ampharos": {
     "name": "Ampharos",
@@ -6480,7 +6972,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/ampharos.png"
+    "spriteHq": "/icons/sprites-hq/ampharos.png",
+    "types": [
+      "Electric"
+    ]
   },
   "audino": {
     "name": "Audino",
@@ -6527,7 +7022,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/audino.png"
+    "spriteHq": "/icons/sprites-hq/audino.png",
+    "types": [
+      "Normal"
+    ]
   },
   "zorua": {
     "name": "Zorua",
@@ -6574,7 +7072,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/zorua.png"
+    "spriteHq": "/icons/sprites-hq/zorua.png",
+    "types": [
+      "Dark"
+    ]
   },
   "mimikyu": {
     "name": "Mimikyu",
@@ -6621,7 +7122,11 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/mimikyu.png"
+    "spriteHq": "/icons/sprites-hq/mimikyu.png",
+    "types": [
+      "Ghost",
+      "Fairy"
+    ]
   },
   "pawmi": {
     "name": "Pawmi",
@@ -6668,7 +7173,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/pawmi.png"
+    "spriteHq": "/icons/sprites-hq/pawmi.png",
+    "types": [
+      "Electric"
+    ]
   },
   "clefairy": {
     "name": "Clefairy",
@@ -6712,7 +7220,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/clefairy.png"
+    "spriteHq": "/icons/sprites-hq/clefairy.png",
+    "types": [
+      "Fairy"
+    ]
   },
   "clefable": {
     "name": "Clefable",
@@ -6756,7 +7267,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/clefable.png"
+    "spriteHq": "/icons/sprites-hq/clefable.png",
+    "types": [
+      "Fairy"
+    ]
   },
   "igglybuff": {
     "name": "Igglybuff",
@@ -6803,7 +7317,11 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/igglybuff.png"
+    "spriteHq": "/icons/sprites-hq/igglybuff.png",
+    "types": [
+      "Normal",
+      "Fairy"
+    ]
   },
   "jigglypuff": {
     "name": "Jigglypuff",
@@ -6850,7 +7368,11 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/jigglypuff.png"
+    "spriteHq": "/icons/sprites-hq/jigglypuff.png",
+    "types": [
+      "Normal",
+      "Fairy"
+    ]
   },
   "wigglytuff": {
     "name": "Wigglytuff",
@@ -6897,7 +7419,11 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/wigglytuff.png"
+    "spriteHq": "/icons/sprites-hq/wigglytuff.png",
+    "types": [
+      "Normal",
+      "Fairy"
+    ]
   },
   "diglett": {
     "name": "Diglett",
@@ -6944,7 +7470,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/diglett.png"
+    "spriteHq": "/icons/sprites-hq/diglett.png",
+    "types": [
+      "Ground"
+    ]
   },
   "magby": {
     "name": "Magby",
@@ -6987,7 +7516,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/magby.png"
+    "spriteHq": "/icons/sprites-hq/magby.png",
+    "types": [
+      "Fire"
+    ]
   },
   "fidough": {
     "name": "Fidough",
@@ -7033,7 +7565,10 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/fidough.png"
+    "spriteHq": "/icons/sprites-hq/fidough.png",
+    "types": [
+      "Fairy"
+    ]
   },
   "dachsbun": {
     "name": "Dachsbun",
@@ -7079,7 +7614,10 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/dachsbun.png"
+    "spriteHq": "/icons/sprites-hq/dachsbun.png",
+    "types": [
+      "Fairy"
+    ]
   },
   "vulpix": {
     "name": "Vulpix",
@@ -7126,7 +7664,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/vulpix.png"
+    "spriteHq": "/icons/sprites-hq/vulpix.png",
+    "types": [
+      "Fire"
+    ]
   },
   "ralts": {
     "name": "Ralts",
@@ -7173,7 +7714,11 @@
     "specialties": [
       "teleport"
     ],
-    "spriteHq": "/icons/sprites-hq/ralts.png"
+    "spriteHq": "/icons/sprites-hq/ralts.png",
+    "types": [
+      "Psychic",
+      "Fairy"
+    ]
   },
   "kirlia": {
     "name": "Kirlia",
@@ -7220,7 +7765,11 @@
     "specialties": [
       "teleport"
     ],
-    "spriteHq": "/icons/sprites-hq/kirlia.png"
+    "spriteHq": "/icons/sprites-hq/kirlia.png",
+    "types": [
+      "Psychic",
+      "Fairy"
+    ]
   },
   "plusle": {
     "name": "Plusle",
@@ -7267,7 +7816,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/plusle.png"
+    "spriteHq": "/icons/sprites-hq/plusle.png",
+    "types": [
+      "Electric"
+    ]
   },
   "minun": {
     "name": "Minun",
@@ -7314,7 +7866,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/minun.png"
+    "spriteHq": "/icons/sprites-hq/minun.png",
+    "types": [
+      "Electric"
+    ]
   },
   "altaria": {
     "name": "Altaria",
@@ -7361,7 +7916,11 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/altaria.png"
+    "spriteHq": "/icons/sprites-hq/altaria.png",
+    "types": [
+      "Dragon",
+      "Flying"
+    ]
   },
   "dedenne": {
     "name": "Dedenne",
@@ -7404,7 +7963,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/dedenne.png"
+    "spriteHq": "/icons/sprites-hq/dedenne.png",
+    "types": [
+      "Electric",
+      "Fairy"
+    ]
   },
   "meowscarada": {
     "name": "Meowscarada",
@@ -7451,7 +8014,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/meowscarada.png"
+    "spriteHq": "/icons/sprites-hq/meowscarada.png",
+    "types": [
+      "Grass",
+      "Dark"
+    ]
   },
   "eevee": {
     "name": "Eevee",
@@ -7498,7 +8065,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/eevee.png"
+    "spriteHq": "/icons/sprites-hq/eevee.png",
+    "types": [
+      "Normal"
+    ]
   },
   "jolteon": {
     "name": "Jolteon",
@@ -7541,7 +8111,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/jolteon.png"
+    "spriteHq": "/icons/sprites-hq/jolteon.png",
+    "types": [
+      "Electric"
+    ]
   },
   "flareon": {
     "name": "Flareon",
@@ -7584,7 +8157,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/flareon.png"
+    "spriteHq": "/icons/sprites-hq/flareon.png",
+    "types": [
+      "Fire"
+    ]
   },
   "umbreon": {
     "name": "Umbreon",
@@ -7627,7 +8203,10 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/umbreon.png"
+    "spriteHq": "/icons/sprites-hq/umbreon.png",
+    "types": [
+      "Dark"
+    ]
   },
   "leafeon": {
     "name": "Leafeon",
@@ -7670,7 +8249,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/leafeon.png"
+    "spriteHq": "/icons/sprites-hq/leafeon.png",
+    "types": [
+      "Grass"
+    ]
   },
   "glaceon": {
     "name": "Glaceon",
@@ -7713,7 +8295,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/glaceon.png"
+    "spriteHq": "/icons/sprites-hq/glaceon.png",
+    "types": [
+      "Ice"
+    ]
   },
   "sylveon": {
     "name": "Sylveon",
@@ -7756,7 +8341,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/sylveon.png"
+    "spriteHq": "/icons/sprites-hq/sylveon.png",
+    "types": [
+      "Fairy"
+    ]
   },
   "magnemite": {
     "name": "Magnemite",
@@ -7803,7 +8391,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/magnemite.png"
+    "spriteHq": "/icons/sprites-hq/magnemite.png",
+    "types": [
+      "Electric",
+      "Steel"
+    ]
   },
   "magneton": {
     "name": "Magneton",
@@ -7850,7 +8442,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/magneton.png"
+    "spriteHq": "/icons/sprites-hq/magneton.png",
+    "types": [
+      "Electric",
+      "Steel"
+    ]
   },
   "magnezone": {
     "name": "Magnezone",
@@ -7897,7 +8493,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/magnezone.png"
+    "spriteHq": "/icons/sprites-hq/magnezone.png",
+    "types": [
+      "Electric",
+      "Steel"
+    ]
   },
   "pikachu": {
     "name": "Pikachu",
@@ -7940,7 +8540,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/pikachu.png"
+    "spriteHq": "/icons/sprites-hq/pikachu.png",
+    "types": [
+      "Electric"
+    ]
   },
   "raichu": {
     "name": "Raichu",
@@ -7962,7 +8565,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/raichu.png"
+    "spriteHq": "/icons/sprites-hq/raichu.png",
+    "types": [
+      "Electric"
+    ]
   },
   "electrode": {
     "name": "Electrode",
@@ -8009,7 +8615,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/electrode.png"
+    "spriteHq": "/icons/sprites-hq/electrode.png",
+    "types": [
+      "Electric"
+    ]
   },
   "electabuzz": {
     "name": "Electabuzz",
@@ -8056,7 +8665,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/electabuzz.png"
+    "spriteHq": "/icons/sprites-hq/electabuzz.png",
+    "types": [
+      "Electric"
+    ]
   },
   "electivire": {
     "name": "Electivire",
@@ -8103,7 +8715,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/electivire.png"
+    "spriteHq": "/icons/sprites-hq/electivire.png",
+    "types": [
+      "Electric"
+    ]
   },
   "vikavolt": {
     "name": "Vikavolt",
@@ -8146,7 +8761,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/vikavolt.png"
+    "spriteHq": "/icons/sprites-hq/vikavolt.png",
+    "types": [
+      "Bug",
+      "Electric"
+    ]
   },
   "pawmo": {
     "name": "Pawmo",
@@ -8193,7 +8812,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/pawmo.png"
+    "spriteHq": "/icons/sprites-hq/pawmo.png",
+    "types": [
+      "Electric",
+      "Fighting"
+    ]
   },
   "pawmot": {
     "name": "Pawmot",
@@ -8240,7 +8863,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/pawmot.png"
+    "spriteHq": "/icons/sprites-hq/pawmot.png",
+    "types": [
+      "Electric",
+      "Fighting"
+    ]
   },
   "magmar": {
     "name": "Magmar",
@@ -8287,7 +8914,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/magmar.png"
+    "spriteHq": "/icons/sprites-hq/magmar.png",
+    "types": [
+      "Fire"
+    ]
   },
   "magmortar": {
     "name": "Magmortar",
@@ -8334,7 +8964,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/magmortar.png"
+    "spriteHq": "/icons/sprites-hq/magmortar.png",
+    "types": [
+      "Fire"
+    ]
   },
   "toxel": {
     "name": "Toxel",
@@ -8377,7 +9010,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/toxel.png"
+    "spriteHq": "/icons/sprites-hq/toxel.png",
+    "types": [
+      "Electric",
+      "Poison"
+    ]
   },
   "toxtricityampedform": {
     "name": "Toxtricity Amped Form",
@@ -8424,7 +9061,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/toxtricityampedform.png"
+    "spriteHq": "/icons/sprites-hq/toxtricityampedform.png",
+    "types": [
+      "Electric",
+      "Poison"
+    ]
   },
   "toxtricitylowkeyform": {
     "name": "Toxtricity Low Key Form",
@@ -8471,7 +9112,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/toxtricitylowkeyform.png"
+    "spriteHq": "/icons/sprites-hq/toxtricitylowkeyform.png",
+    "types": [
+      "Electric",
+      "Poison"
+    ]
   },
   "kilowattrel": {
     "name": "Kilowattrel",
@@ -8518,7 +9163,11 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/kilowattrel.png"
+    "spriteHq": "/icons/sprites-hq/kilowattrel.png",
+    "types": [
+      "Electric",
+      "Flying"
+    ]
   },
   "raikou": {
     "name": "Raikou",
@@ -8540,7 +9189,10 @@
     "specialties": [
       "generate"
     ],
-    "spriteHq": "/icons/sprites-hq/raikou.png"
+    "spriteHq": "/icons/sprites-hq/raikou.png",
+    "types": [
+      "Electric"
+    ]
   },
   "zapdos": {
     "name": "Zapdos",
@@ -8562,7 +9214,11 @@
     "specialties": [
       "fly"
     ],
-    "spriteHq": "/icons/sprites-hq/zapdos.png"
+    "spriteHq": "/icons/sprites-hq/zapdos.png",
+    "types": [
+      "Electric",
+      "Flying"
+    ]
   },
   "charmander": {
     "name": "Charmander",
@@ -8609,7 +9265,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/charmander.png"
+    "spriteHq": "/icons/sprites-hq/charmander.png",
+    "types": [
+      "Fire"
+    ]
   },
   "charmeleon": {
     "name": "Charmeleon",
@@ -8656,7 +9315,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/charmeleon.png"
+    "spriteHq": "/icons/sprites-hq/charmeleon.png",
+    "types": [
+      "Fire"
+    ]
   },
   "charizard": {
     "name": "Charizard",
@@ -8702,7 +9364,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/charizard.png"
+    "spriteHq": "/icons/sprites-hq/charizard.png",
+    "types": [
+      "Fire",
+      "Flying"
+    ]
   },
   "tyrogue": {
     "name": "Tyrogue",
@@ -8749,7 +9415,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/tyrogue.png"
+    "spriteHq": "/icons/sprites-hq/tyrogue.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "hitmonlee": {
     "name": "Hitmonlee",
@@ -8796,7 +9465,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/hitmonlee.png"
+    "spriteHq": "/icons/sprites-hq/hitmonlee.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "hitmonchan": {
     "name": "Hitmonchan",
@@ -8843,7 +9515,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/hitmonchan.png"
+    "spriteHq": "/icons/sprites-hq/hitmonchan.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "hitmontop": {
     "name": "Hitmontop",
@@ -8890,7 +9565,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/hitmontop.png"
+    "spriteHq": "/icons/sprites-hq/hitmontop.png",
+    "types": [
+      "Fighting"
+    ]
   },
   "scyther": {
     "name": "Scyther",
@@ -8937,7 +9615,11 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/scyther.png"
+    "spriteHq": "/icons/sprites-hq/scyther.png",
+    "types": [
+      "Bug",
+      "Flying"
+    ]
   },
   "scizor": {
     "name": "Scizor",
@@ -8980,7 +9662,11 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/scizor.png"
+    "spriteHq": "/icons/sprites-hq/scizor.png",
+    "types": [
+      "Bug",
+      "Steel"
+    ]
   },
   "pinsir": {
     "name": "Pinsir",
@@ -9027,7 +9713,10 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/pinsir.png"
+    "spriteHq": "/icons/sprites-hq/pinsir.png",
+    "types": [
+      "Bug"
+    ]
   },
   "heracross": {
     "name": "Heracross",
@@ -9074,7 +9763,11 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/heracross.png"
+    "spriteHq": "/icons/sprites-hq/heracross.png",
+    "types": [
+      "Bug",
+      "Fighting"
+    ]
   },
   "excadrill": {
     "name": "Excadrill",
@@ -9121,7 +9814,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/excadrill.png"
+    "spriteHq": "/icons/sprites-hq/excadrill.png",
+    "types": [
+      "Ground",
+      "Steel"
+    ]
   },
   "fraxure": {
     "name": "Fraxure",
@@ -9168,7 +9865,10 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/fraxure.png"
+    "spriteHq": "/icons/sprites-hq/fraxure.png",
+    "types": [
+      "Dragon"
+    ]
   },
   "haxorus": {
     "name": "Haxorus",
@@ -9215,7 +9915,10 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/haxorus.png"
+    "spriteHq": "/icons/sprites-hq/haxorus.png",
+    "types": [
+      "Dragon"
+    ]
   },
   "geodude": {
     "name": "Geodude",
@@ -9258,7 +9961,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/geodude.png"
+    "spriteHq": "/icons/sprites-hq/geodude.png",
+    "types": [
+      "Rock",
+      "Ground"
+    ]
   },
   "graveler": {
     "name": "Graveler",
@@ -9305,7 +10012,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/graveler.png"
+    "spriteHq": "/icons/sprites-hq/graveler.png",
+    "types": [
+      "Rock",
+      "Ground"
+    ]
   },
   "golem": {
     "name": "Golem",
@@ -9352,7 +10063,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/golem.png"
+    "spriteHq": "/icons/sprites-hq/golem.png",
+    "types": [
+      "Rock",
+      "Ground"
+    ]
   },
   "tyranitar": {
     "name": "Tyranitar",
@@ -9399,7 +10114,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/tyranitar.png"
+    "spriteHq": "/icons/sprites-hq/tyranitar.png",
+    "types": [
+      "Rock",
+      "Dark"
+    ]
   },
   "charcadet": {
     "name": "Charcadet",
@@ -9446,7 +10165,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/charcadet.png"
+    "spriteHq": "/icons/sprites-hq/charcadet.png",
+    "types": [
+      "Fire"
+    ]
   },
   "armarouge": {
     "name": "Armarouge",
@@ -9468,7 +10190,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/armarouge.png"
+    "spriteHq": "/icons/sprites-hq/armarouge.png",
+    "types": [
+      "Fire",
+      "Psychic"
+    ]
   },
   "trapinch": {
     "name": "Trapinch",
@@ -9515,7 +10241,10 @@
     "specialties": [
       "bulldoze"
     ],
-    "spriteHq": "/icons/sprites-hq/trapinch.png"
+    "spriteHq": "/icons/sprites-hq/trapinch.png",
+    "types": [
+      "Ground"
+    ]
   },
   "metagross": {
     "name": "Metagross",
@@ -9537,7 +10266,11 @@
     "specialties": [
       "recycle"
     ],
-    "spriteHq": "/icons/sprites-hq/metagross.png"
+    "spriteHq": "/icons/sprites-hq/metagross.png",
+    "types": [
+      "Steel",
+      "Psychic"
+    ]
   },
   "cranidos": {
     "name": "Cranidos",
@@ -9584,7 +10317,10 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/cranidos.png"
+    "spriteHq": "/icons/sprites-hq/cranidos.png",
+    "types": [
+      "Rock"
+    ]
   },
   "rampardos": {
     "name": "Rampardos",
@@ -9631,7 +10367,10 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/rampardos.png"
+    "spriteHq": "/icons/sprites-hq/rampardos.png",
+    "types": [
+      "Rock"
+    ]
   },
   "bastiodon": {
     "name": "Bastiodon",
@@ -9678,7 +10417,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/bastiodon.png"
+    "spriteHq": "/icons/sprites-hq/bastiodon.png",
+    "types": [
+      "Rock",
+      "Steel"
+    ]
   },
   "tyrunt": {
     "name": "Tyrunt",
@@ -9725,7 +10468,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/tyrunt.png"
+    "spriteHq": "/icons/sprites-hq/tyrunt.png",
+    "types": [
+      "Rock",
+      "Dragon"
+    ]
   },
   "tyrantrum": {
     "name": "Tyrantrum",
@@ -9772,7 +10519,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/tyrantrum.png"
+    "spriteHq": "/icons/sprites-hq/tyrantrum.png",
+    "types": [
+      "Rock",
+      "Dragon"
+    ]
   },
   "entei": {
     "name": "Entei",
@@ -9794,7 +10545,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/entei.png"
+    "spriteHq": "/icons/sprites-hq/entei.png",
+    "types": [
+      "Fire"
+    ]
   },
   "hoothoot": {
     "name": "Hoothoot",
@@ -9838,7 +10592,11 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/hoothoot.png"
+    "spriteHq": "/icons/sprites-hq/hoothoot.png",
+    "types": [
+      "Normal",
+      "Flying"
+    ]
   },
   "chansey": {
     "name": "Chansey",
@@ -9885,7 +10643,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/chansey.png"
+    "spriteHq": "/icons/sprites-hq/chansey.png",
+    "types": [
+      "Normal"
+    ]
   },
   "blissey": {
     "name": "Blissey",
@@ -9932,7 +10693,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/blissey.png"
+    "spriteHq": "/icons/sprites-hq/blissey.png",
+    "types": [
+      "Normal"
+    ]
   },
   "mosslax": {
     "name": "Mosslax",
@@ -9954,7 +10718,10 @@
     "specialties": [
       "eat"
     ],
-    "spriteHq": "/icons/sprites-hq/mosslax.png"
+    "spriteHq": "/icons/sprites-hq/mosslax.png",
+    "types": [
+      "Normal"
+    ]
   },
   "snorlax": {
     "name": "Snorlax",
@@ -9997,7 +10764,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/snorlax.png"
+    "spriteHq": "/icons/sprites-hq/snorlax.png",
+    "types": [
+      "Normal"
+    ]
   },
   "murkrow": {
     "name": "Murkrow",
@@ -10041,7 +10811,11 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/murkrow.png"
+    "spriteHq": "/icons/sprites-hq/murkrow.png",
+    "types": [
+      "Dark",
+      "Flying"
+    ]
   },
   "chatot": {
     "name": "Chatot",
@@ -10087,7 +10861,11 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/chatot.png"
+    "spriteHq": "/icons/sprites-hq/chatot.png",
+    "types": [
+      "Normal",
+      "Flying"
+    ]
   },
   "cyndaquil": {
     "name": "Cyndaquil",
@@ -10134,7 +10912,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/cyndaquil.png"
+    "spriteHq": "/icons/sprites-hq/cyndaquil.png",
+    "types": [
+      "Fire"
+    ]
   },
   "quilava": {
     "name": "Quilava",
@@ -10181,7 +10962,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/quilava.png"
+    "spriteHq": "/icons/sprites-hq/quilava.png",
+    "types": [
+      "Fire"
+    ]
   },
   "typhlosion": {
     "name": "Typhlosion",
@@ -10228,7 +11012,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/typhlosion.png"
+    "spriteHq": "/icons/sprites-hq/typhlosion.png",
+    "types": [
+      "Fire"
+    ]
   },
   "duskull": {
     "name": "Duskull",
@@ -10272,7 +11059,10 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/duskull.png"
+    "spriteHq": "/icons/sprites-hq/duskull.png",
+    "types": [
+      "Ghost"
+    ]
   },
   "gloom": {
     "name": "Gloom",
@@ -10319,7 +11109,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/gloom.png"
+    "spriteHq": "/icons/sprites-hq/gloom.png",
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   "crobat": {
     "name": "Crobat",
@@ -10363,7 +11157,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/crobat.png"
+    "spriteHq": "/icons/sprites-hq/crobat.png",
+    "types": [
+      "Poison",
+      "Flying"
+    ]
   },
   "haunter": {
     "name": "Haunter",
@@ -10407,7 +11205,11 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/haunter.png"
+    "spriteHq": "/icons/sprites-hq/haunter.png",
+    "types": [
+      "Ghost",
+      "Poison"
+    ]
   },
   "gengar": {
     "name": "Gengar",
@@ -10451,7 +11253,11 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/gengar.png"
+    "spriteHq": "/icons/sprites-hq/gengar.png",
+    "types": [
+      "Ghost",
+      "Poison"
+    ]
   },
   "ekans": {
     "name": "Ekans",
@@ -10498,7 +11304,10 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/ekans.png"
+    "spriteHq": "/icons/sprites-hq/ekans.png",
+    "types": [
+      "Poison"
+    ]
   },
   "arbok": {
     "name": "Arbok",
@@ -10545,7 +11354,10 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/arbok.png"
+    "spriteHq": "/icons/sprites-hq/arbok.png",
+    "types": [
+      "Poison"
+    ]
   },
   "tangela": {
     "name": "Tangela",
@@ -10567,7 +11379,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/tangela.png"
+    "spriteHq": "/icons/sprites-hq/tangela.png",
+    "types": [
+      "Grass"
+    ]
   },
   "tangrowth": {
     "name": "Tangrowth",
@@ -10609,7 +11424,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/tangrowth.png"
+    "spriteHq": "/icons/sprites-hq/tangrowth.png",
+    "types": [
+      "Grass"
+    ]
   },
   "combee": {
     "name": "Combee",
@@ -10656,7 +11474,11 @@
     "specialties": [
       "litter"
     ],
-    "spriteHq": "/icons/sprites-hq/combee.png"
+    "spriteHq": "/icons/sprites-hq/combee.png",
+    "types": [
+      "Bug",
+      "Flying"
+    ]
   },
   "exeggcute": {
     "name": "Exeggcute",
@@ -10703,7 +11525,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/exeggcute.png"
+    "spriteHq": "/icons/sprites-hq/exeggcute.png",
+    "types": [
+      "Grass",
+      "Psychic"
+    ]
   },
   "exeggutor": {
     "name": "Exeggutor",
@@ -10750,7 +11576,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/exeggutor.png"
+    "spriteHq": "/icons/sprites-hq/exeggutor.png",
+    "types": [
+      "Grass",
+      "Psychic"
+    ]
   },
   "tatsugiricurlyform": {
     "name": "Tatsugiri Curly Form",
@@ -10796,7 +11626,11 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/tatsugiricurlyform.png"
+    "spriteHq": "/icons/sprites-hq/tatsugiricurlyform.png",
+    "types": [
+      "Dragon",
+      "Water"
+    ]
   },
   "dugtrio": {
     "name": "Dugtrio",
@@ -10843,7 +11677,10 @@
     "specialties": [
       "hype"
     ],
-    "spriteHq": "/icons/sprites-hq/dugtrio.png"
+    "spriteHq": "/icons/sprites-hq/dugtrio.png",
+    "types": [
+      "Ground"
+    ]
   },
   "politoed": {
     "name": "Politoed",
@@ -10890,7 +11727,10 @@
     "specialties": [
       "water"
     ],
-    "spriteHq": "/icons/sprites-hq/politoed.png"
+    "spriteHq": "/icons/sprites-hq/politoed.png",
+    "types": [
+      "Water"
+    ]
   },
   "zoroark": {
     "name": "Zoroark",
@@ -10937,7 +11777,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/zoroark.png"
+    "spriteHq": "/icons/sprites-hq/zoroark.png",
+    "types": [
+      "Dark"
+    ]
   },
   "honchkrow": {
     "name": "Honchkrow",
@@ -10983,7 +11826,11 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/honchkrow.png"
+    "spriteHq": "/icons/sprites-hq/honchkrow.png",
+    "types": [
+      "Dark",
+      "Flying"
+    ]
   },
   "kyogre": {
     "name": "Kyogre",
@@ -11003,7 +11850,10 @@
     "habitatList": [],
     "primaryLocation": null,
     "specialties": [],
-    "spriteHq": "/icons/sprites-hq/kyogre.png"
+    "spriteHq": "/icons/sprites-hq/kyogre.png",
+    "types": [
+      "Water"
+    ]
   },
   "magikarp": {
     "name": "Magikarp",
@@ -11048,7 +11898,10 @@
     ],
     "primaryLocation": "witheredwastelands",
     "specialties": [],
-    "spriteHq": "/icons/sprites-hq/magikarp.png"
+    "spriteHq": "/icons/sprites-hq/magikarp.png",
+    "types": [
+      "Water"
+    ]
   },
   "munchlax": {
     "name": "Munchlax",
@@ -11091,7 +11944,10 @@
     "specialties": [
       "bulldoze"
     ],
-    "spriteHq": "/icons/sprites-hq/munchlax.png"
+    "spriteHq": "/icons/sprites-hq/munchlax.png",
+    "types": [
+      "Normal"
+    ]
   },
   "scorbunny": {
     "name": "Scorbunny",
@@ -11138,7 +11994,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/scorbunny.png"
+    "spriteHq": "/icons/sprites-hq/scorbunny.png",
+    "types": [
+      "Fire"
+    ]
   },
   "cinderace": {
     "name": "Cinderace",
@@ -11185,7 +12044,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/cinderace.png"
+    "spriteHq": "/icons/sprites-hq/cinderace.png",
+    "types": [
+      "Fire"
+    ]
   },
   "greedent": {
     "name": "Greedent",
@@ -11207,7 +12069,10 @@
     "specialties": [
       "party"
     ],
-    "spriteHq": "/icons/sprites-hq/greedent.png"
+    "spriteHq": "/icons/sprites-hq/greedent.png",
+    "types": [
+      "Normal"
+    ]
   },
   "mismagius": {
     "name": "Mismagius",
@@ -11251,7 +12116,10 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/mismagius.png"
+    "spriteHq": "/icons/sprites-hq/mismagius.png",
+    "types": [
+      "Ghost"
+    ]
   },
   "dreepy": {
     "name": "Dreepy",
@@ -11298,7 +12166,11 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/dreepy.png"
+    "spriteHq": "/icons/sprites-hq/dreepy.png",
+    "types": [
+      "Dragon",
+      "Ghost"
+    ]
   },
   "drakloak": {
     "name": "Drakloak",
@@ -11345,7 +12217,11 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/drakloak.png"
+    "spriteHq": "/icons/sprites-hq/drakloak.png",
+    "types": [
+      "Dragon",
+      "Ghost"
+    ]
   },
   "dragapult": {
     "name": "Dragapult",
@@ -11392,7 +12268,11 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/dragapult.png"
+    "spriteHq": "/icons/sprites-hq/dragapult.png",
+    "types": [
+      "Dragon",
+      "Ghost"
+    ]
   },
   "steelix": {
     "name": "Steelix",
@@ -11439,7 +12319,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/steelix.png"
+    "spriteHq": "/icons/sprites-hq/steelix.png",
+    "types": [
+      "Steel",
+      "Ground"
+    ]
   },
   "axew": {
     "name": "Axew",
@@ -11486,7 +12370,10 @@
     "specialties": [
       "chop"
     ],
-    "spriteHq": "/icons/sprites-hq/axew.png"
+    "spriteHq": "/icons/sprites-hq/axew.png",
+    "types": [
+      "Dragon"
+    ]
   },
   "bonsly": {
     "name": "Bonsly",
@@ -11533,7 +12420,10 @@
     "specialties": [
       "bulldoze"
     ],
-    "spriteHq": "/icons/sprites-hq/bonsly.png"
+    "spriteHq": "/icons/sprites-hq/bonsly.png",
+    "types": [
+      "Rock"
+    ]
   },
   "sudowoodo": {
     "name": "Sudowoodo",
@@ -11580,7 +12470,10 @@
     "specialties": [
       "trade"
     ],
-    "spriteHq": "/icons/sprites-hq/sudowoodo.png"
+    "spriteHq": "/icons/sprites-hq/sudowoodo.png",
+    "types": [
+      "Rock"
+    ]
   },
   "pupitar": {
     "name": "Pupitar",
@@ -11627,7 +12520,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/pupitar.png"
+    "spriteHq": "/icons/sprites-hq/pupitar.png",
+    "types": [
+      "Rock",
+      "Ground"
+    ]
   },
   "torkoal": {
     "name": "Torkoal",
@@ -11674,7 +12571,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/torkoal.png"
+    "spriteHq": "/icons/sprites-hq/torkoal.png",
+    "types": [
+      "Fire"
+    ]
   },
   "rolycoly": {
     "name": "Rolycoly",
@@ -11721,7 +12621,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/rolycoly.png"
+    "spriteHq": "/icons/sprites-hq/rolycoly.png",
+    "types": [
+      "Rock"
+    ]
   },
   "carkol": {
     "name": "Carkol",
@@ -11768,7 +12671,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/carkol.png"
+    "spriteHq": "/icons/sprites-hq/carkol.png",
+    "types": [
+      "Rock",
+      "Fire"
+    ]
   },
   "coalossal": {
     "name": "Coalossal",
@@ -11815,7 +12722,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/coalossal.png"
+    "spriteHq": "/icons/sprites-hq/coalossal.png",
+    "types": [
+      "Rock",
+      "Fire"
+    ]
   },
   "aerodactyl": {
     "name": "Aerodactyl",
@@ -11862,7 +12773,11 @@
     "specialties": [
       "fly"
     ],
-    "spriteHq": "/icons/sprites-hq/aerodactyl.png"
+    "spriteHq": "/icons/sprites-hq/aerodactyl.png",
+    "types": [
+      "Rock",
+      "Flying"
+    ]
   },
   "shieldon": {
     "name": "Shieldon",
@@ -11909,7 +12824,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/shieldon.png"
+    "spriteHq": "/icons/sprites-hq/shieldon.png",
+    "types": [
+      "Rock",
+      "Steel"
+    ]
   },
   "aurorus": {
     "name": "Aurorus",
@@ -11956,7 +12875,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/aurorus.png"
+    "spriteHq": "/icons/sprites-hq/aurorus.png",
+    "types": [
+      "Rock",
+      "Ice"
+    ]
   },
   "gardevoir": {
     "name": "Gardevoir",
@@ -12003,7 +12926,11 @@
     "specialties": [
       "teleport"
     ],
-    "spriteHq": "/icons/sprites-hq/gardevoir.png"
+    "spriteHq": "/icons/sprites-hq/gardevoir.png",
+    "types": [
+      "Psychic",
+      "Fairy"
+    ]
   },
   "growlithe": {
     "name": "Growlithe",
@@ -12050,7 +12977,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/growlithe.png"
+    "spriteHq": "/icons/sprites-hq/growlithe.png",
+    "types": [
+      "Fire"
+    ]
   },
   "volcarona": {
     "name": "Volcarona",
@@ -12097,7 +13027,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/volcarona.png"
+    "spriteHq": "/icons/sprites-hq/volcarona.png",
+    "types": [
+      "Bug",
+      "Fire"
+    ]
   },
   "decidueye": {
     "name": "Decidueye",
@@ -12144,7 +13078,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/decidueye.png"
+    "spriteHq": "/icons/sprites-hq/decidueye.png",
+    "types": [
+      "Grass",
+      "Ghost"
+    ]
   },
   "alakazam": {
     "name": "Alakazam",
@@ -12187,7 +13125,10 @@
     "specialties": [
       "teleport"
     ],
-    "spriteHq": "/icons/sprites-hq/alakazam.png"
+    "spriteHq": "/icons/sprites-hq/alakazam.png",
+    "types": [
+      "Psychic"
+    ]
   },
   "pidgeotto": {
     "name": "Pidgeotto",
@@ -12233,7 +13174,11 @@
     "specialties": [
       "fly"
     ],
-    "spriteHq": "/icons/sprites-hq/pidgeotto.png"
+    "spriteHq": "/icons/sprites-hq/pidgeotto.png",
+    "types": [
+      "Normal",
+      "Flying"
+    ]
   },
   "paras": {
     "name": "Paras",
@@ -12280,7 +13225,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/paras.png"
+    "spriteHq": "/icons/sprites-hq/paras.png",
+    "types": [
+      "Bug",
+      "Grass"
+    ]
   },
   "cramorant": {
     "name": "Cramorant",
@@ -12323,7 +13272,11 @@
     "specialties": [
       "fly"
     ],
-    "spriteHq": "/icons/sprites-hq/cramorant.png"
+    "spriteHq": "/icons/sprites-hq/cramorant.png",
+    "types": [
+      "Flying",
+      "Water"
+    ]
   },
   "larvitar": {
     "name": "Larvitar",
@@ -12370,7 +13323,11 @@
     "specialties": [
       "crush"
     ],
-    "spriteHq": "/icons/sprites-hq/larvitar.png"
+    "spriteHq": "/icons/sprites-hq/larvitar.png",
+    "types": [
+      "Rock",
+      "Ground"
+    ]
   },
   "skwovet": {
     "name": "Skwovet",
@@ -12413,7 +13370,10 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/skwovet.png"
+    "spriteHq": "/icons/sprites-hq/skwovet.png",
+    "types": [
+      "Normal"
+    ]
   },
   "noibat": {
     "name": "Noibat",
@@ -12460,7 +13420,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/noibat.png"
+    "spriteHq": "/icons/sprites-hq/noibat.png",
+    "types": [
+      "Flying",
+      "Dragon"
+    ]
   },
   "noivern": {
     "name": "Noivern",
@@ -12507,7 +13471,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/noivern.png"
+    "spriteHq": "/icons/sprites-hq/noivern.png",
+    "types": [
+      "Flying",
+      "Dragon"
+    ]
   },
   "sableye": {
     "name": "Sableye",
@@ -12554,7 +13522,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/sableye.png"
+    "spriteHq": "/icons/sprites-hq/sableye.png",
+    "types": [
+      "Dark",
+      "Ghost"
+    ]
   },
   "oddish": {
     "name": "Oddish",
@@ -12598,7 +13570,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/oddish.png"
+    "spriteHq": "/icons/sprites-hq/oddish.png",
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   "parasect": {
     "name": "Parasect",
@@ -12645,7 +13621,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/parasect.png"
+    "spriteHq": "/icons/sprites-hq/parasect.png",
+    "types": [
+      "Bug",
+      "Grass"
+    ]
   },
   "bellsprout": {
     "name": "Bellsprout",
@@ -12692,7 +13672,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/bellsprout.png"
+    "spriteHq": "/icons/sprites-hq/bellsprout.png",
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   "drilbur": {
     "name": "Drilbur",
@@ -12739,7 +13723,10 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/drilbur.png"
+    "spriteHq": "/icons/sprites-hq/drilbur.png",
+    "types": [
+      "Ground"
+    ]
   },
   "vibrava": {
     "name": "Vibrava",
@@ -12786,7 +13773,11 @@
     "specialties": [
       "bulldoze"
     ],
-    "spriteHq": "/icons/sprites-hq/vibrava.png"
+    "spriteHq": "/icons/sprites-hq/vibrava.png",
+    "types": [
+      "Ground",
+      "Dragon"
+    ]
   },
   "flygon": {
     "name": "Flygon",
@@ -12833,7 +13824,11 @@
     "specialties": [
       "bulldoze"
     ],
-    "spriteHq": "/icons/sprites-hq/flygon.png"
+    "spriteHq": "/icons/sprites-hq/flygon.png",
+    "types": [
+      "Ground",
+      "Dragon"
+    ]
   },
   "chandelure": {
     "name": "Chandelure",
@@ -12880,7 +13875,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/chandelure.png"
+    "spriteHq": "/icons/sprites-hq/chandelure.png",
+    "types": [
+      "Ghost",
+      "Fire"
+    ]
   },
   "arcanine": {
     "name": "Arcanine",
@@ -12927,7 +13926,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/arcanine.png"
+    "spriteHq": "/icons/sprites-hq/arcanine.png",
+    "types": [
+      "Fire"
+    ]
   },
   "larvesta": {
     "name": "Larvesta",
@@ -12974,7 +13976,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/larvesta.png"
+    "spriteHq": "/icons/sprites-hq/larvesta.png",
+    "types": [
+      "Bug",
+      "Fire"
+    ]
   },
   "ceruledge": {
     "name": "Ceruledge",
@@ -12996,7 +14002,11 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/ceruledge.png"
+    "spriteHq": "/icons/sprites-hq/ceruledge.png",
+    "types": [
+      "Fire",
+      "Ghost"
+    ]
   },
   "ninetales": {
     "name": "Ninetales",
@@ -13043,7 +14053,10 @@
     "specialties": [
       "burn"
     ],
-    "spriteHq": "/icons/sprites-hq/ninetales.png"
+    "spriteHq": "/icons/sprites-hq/ninetales.png",
+    "types": [
+      "Fire"
+    ]
   },
   "moltres": {
     "name": "Moltres",
@@ -13065,7 +14078,11 @@
     "specialties": [
       "fly"
     ],
-    "spriteHq": "/icons/sprites-hq/moltres.png"
+    "spriteHq": "/icons/sprites-hq/moltres.png",
+    "types": [
+      "Fire",
+      "Flying"
+    ]
   },
   "ho-oh": {
     "name": "Ho-Oh",
@@ -13085,7 +14102,11 @@
     "habitatList": [],
     "primaryLocation": null,
     "specialties": [],
-    "spriteHq": "/icons/sprites-hq/ho-oh.png"
+    "spriteHq": "/icons/sprites-hq/ho-oh.png",
+    "types": [
+      "Fire",
+      "Flying"
+    ]
   },
   "pidgey": {
     "name": "Pidgey",
@@ -13131,7 +14152,11 @@
     "specialties": [
       "fly"
     ],
-    "spriteHq": "/icons/sprites-hq/pidgey.png"
+    "spriteHq": "/icons/sprites-hq/pidgey.png",
+    "types": [
+      "Normal",
+      "Flying"
+    ]
   },
   "pidgeot": {
     "name": "Pidgeot",
@@ -13177,7 +14202,11 @@
     "specialties": [
       "fly"
     ],
-    "spriteHq": "/icons/sprites-hq/pidgeot.png"
+    "spriteHq": "/icons/sprites-hq/pidgeot.png",
+    "types": [
+      "Normal",
+      "Flying"
+    ]
   },
   "venomoth": {
     "name": "Venomoth",
@@ -13221,7 +14250,11 @@
     "specialties": [
       "search"
     ],
-    "spriteHq": "/icons/sprites-hq/venomoth.png"
+    "spriteHq": "/icons/sprites-hq/venomoth.png",
+    "types": [
+      "Bug",
+      "Poison"
+    ]
   },
   "cacturne": {
     "name": "Cacturne",
@@ -13265,7 +14298,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/cacturne.png"
+    "spriteHq": "/icons/sprites-hq/cacturne.png",
+    "types": [
+      "Grass",
+      "Dark"
+    ]
   },
   "snivy": {
     "name": "Snivy",
@@ -13312,7 +14349,10 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/snivy.png"
+    "spriteHq": "/icons/sprites-hq/snivy.png",
+    "types": [
+      "Grass"
+    ]
   },
   "hoppip": {
     "name": "Hoppip",
@@ -13359,7 +14399,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/hoppip.png"
+    "spriteHq": "/icons/sprites-hq/hoppip.png",
+    "types": [
+      "Grass",
+      "Flying"
+    ]
   },
   "skiploom": {
     "name": "Skiploom",
@@ -13406,7 +14450,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/skiploom.png"
+    "spriteHq": "/icons/sprites-hq/skiploom.png",
+    "types": [
+      "Grass",
+      "Flying"
+    ]
   },
   "jumpluff": {
     "name": "Jumpluff",
@@ -13453,7 +14501,11 @@
     "specialties": [
       "grow"
     ],
-    "spriteHq": "/icons/sprites-hq/jumpluff.png"
+    "spriteHq": "/icons/sprites-hq/jumpluff.png",
+    "types": [
+      "Grass",
+      "Flying"
+    ]
   },
   "articuno": {
     "name": "Articuno",
@@ -13475,7 +14527,11 @@
     "specialties": [
       "fly"
     ],
-    "spriteHq": "/icons/sprites-hq/articuno.png"
+    "spriteHq": "/icons/sprites-hq/articuno.png",
+    "types": [
+      "Ice",
+      "Flying"
+    ]
   },
   "lugia": {
     "name": "Lugia",
@@ -13495,7 +14551,11 @@
     "habitatList": [],
     "primaryLocation": null,
     "specialties": [],
-    "spriteHq": "/icons/sprites-hq/lugia.png"
+    "spriteHq": "/icons/sprites-hq/lugia.png",
+    "types": [
+      "Psychic",
+      "Flying"
+    ]
   },
   "abra": {
     "name": "Abra",
@@ -13542,7 +14602,10 @@
     "specialties": [
       "teleport"
     ],
-    "spriteHq": "/icons/sprites-hq/abra.png"
+    "spriteHq": "/icons/sprites-hq/abra.png",
+    "types": [
+      "Psychic"
+    ]
   },
   "drifblim": {
     "name": "Drifblim",
@@ -13589,7 +14652,11 @@
     "specialties": [
       "fly"
     ],
-    "spriteHq": "/icons/sprites-hq/drifblim.png"
+    "spriteHq": "/icons/sprites-hq/drifblim.png",
+    "types": [
+      "Ghost",
+      "Flying"
+    ]
   },
   "girafarig": {
     "name": "Girafarig",
@@ -13636,7 +14703,11 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/girafarig.png"
+    "spriteHq": "/icons/sprites-hq/girafarig.png",
+    "types": [
+      "Normal",
+      "Psychic"
+    ]
   },
   "farigiraf": {
     "name": "Farigiraf",
@@ -13683,6 +14754,10 @@
     "specialties": [
       "gather"
     ],
-    "spriteHq": "/icons/sprites-hq/farigiraf.png"
+    "spriteHq": "/icons/sprites-hq/farigiraf.png",
+    "types": [
+      "Normal",
+      "Psychic"
+    ]
   }
 }

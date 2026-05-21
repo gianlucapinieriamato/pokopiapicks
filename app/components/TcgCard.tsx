@@ -221,7 +221,7 @@ export default function TcgCard({
             color: r.sparkles ? "var(--accent)" : "var(--ink-fade)",
             letterSpacing: "0.06em",
             fontWeight: 600,
-          }}>{r.sparkles ? "LEGENDARY" : (p.flavor ?? p.habitat).toUpperCase()}</span>
+          }}>{r.sparkles ? "LEGENDARY" : (p.types?.[0] ?? p.flavor ?? p.habitat).toUpperCase()}</span>
         </div>
 
         {/* Holo sweep */}
