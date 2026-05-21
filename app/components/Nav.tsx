@@ -18,7 +18,10 @@ export default function Nav() {
     <nav className="site-nav">
       <div className="site-nav-inner">
         <Link href="/" className="site-nav-logo">
-          <div className="site-nav-logo-mark">P</div>
+          <div className="site-nav-logo-mark">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icon-192.png" alt="" style={{ width: 22, height: 22, objectFit: "contain" }} />
+          </div>
           POKOPIA <span>PICKS</span>
         </Link>
         <div className="site-nav-links">

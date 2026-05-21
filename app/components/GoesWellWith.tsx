@@ -20,16 +20,16 @@ export default function GoesWellWith({ slug, habitat }: { slug: string; habitat:
 
   return (
     <div className="gww-section">
-      <div className="section-title" style={{ gap: 8 }}>
+      <div className="section-title gap-2">
         Goes well with <span className="pill">{habitat}</span>
-        <span className="info-tip" data-tip="Pokémon with the same habitat can share a living space in Pokopia." aria-label="Pokémon with the same habitat can share a living space in Pokopia." style={{ fontSize: 11 }}>i</span>
+        <span className="info-tip text-[11px]" data-tip="Pokémon with the same habitat can share a living space in Pokopia." aria-label="Pokémon with the same habitat can share a living space in Pokopia.">i</span>
       </div>
       <div className="gww-grid">
         {picks.map((q) => (
-          <Link key={q.slug} href={`/pokemon/${q.slug}`} className="gww-card" style={{ textDecoration: "none" }}>
+          <Link key={q.slug} href={`/pokemon/${q.slug}`} className="gww-card no-underline">
             <div className="gww-icon">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={pkmnIconUrl(q)} alt={q.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
+              <img src={pkmnIconUrl(q)} alt={q.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
             </div>
             <div className="gww-num">#{dexNum(q)}</div>
             <div className="gww-name">{q.name}</div>

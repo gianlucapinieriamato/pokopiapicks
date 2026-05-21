@@ -110,11 +110,12 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         </div>
       </div>
 
+      <GoesWellWith slug={slug} habitat={p.habitat} />
+
       <div className="card">
         <div className="summary-strip">
           <div className="stat-box"><div className="stat-num">{allItems.length}</div><div className="stat-label">items total</div></div>
           <div className="stat-box"><div className="stat-num">{sharedItems.length}</div><div className="stat-label">in 2+ categories</div></div>
-          <div className="stat-box"><div className="stat-num">{p.categories.length}</div><div className="stat-label">categories</div></div>
         </div>
 
         {sharedItems.length > 0 && (
@@ -204,7 +205,6 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         )}
       </div>
 
-      <GoesWellWith slug={slug} habitat={p.habitat} />
     </div>
   );
 }

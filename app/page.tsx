@@ -13,9 +13,9 @@ type Lang = "en" | "es";
 const STRINGS = {
   en: {
     eyebrow: "Gift finder · Pokopia",
-    h1_1: "What each",
-    h1_accent: "Pokémon likes",
-    lede: "Search a Pokémon or browse the collection below. Click any card to see the full gift breakdown.",
+    h1_1: "The gift guide for",
+    h1_accent: "Pokémon Pokopia",
+    lede: "Search a Pokémon or browse the full collection. Click any card to see its gift breakdown, best roommates, and more.",
     search_placeholder: "Search Pokémon… (Lucario, Onix, Eevee…)",
     try_label: "Try:",
     all_pokemon: "All Pokémon",
@@ -23,9 +23,9 @@ const STRINGS = {
   },
   es: {
     eyebrow: "Buscador · Pokopia",
-    h1_1: "Qué le gusta a",
-    h1_accent: "cada Pokémon",
-    lede: "Buscá un Pokémon o explorá la colección abajo. Hacé click en cualquier carta para ver el desglose de regalos.",
+    h1_1: "La guía de regalos de",
+    h1_accent: "Pokémon Pokopia",
+    lede: "Buscá un Pokémon o explorá la colección. Hacé click en cualquier carta para ver su desglose de regalos, mejores compañeros y más.",
     search_placeholder: "Buscá un Pokémon… (Lucario, Onix, Eevee…)",
     try_label: "Prueba:",
     all_pokemon: "Todos los Pokémon",
