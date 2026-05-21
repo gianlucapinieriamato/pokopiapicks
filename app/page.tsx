@@ -161,7 +161,7 @@ function GoesWellWith({ slug, p, onSelect, s }: {
         {picks.map((q) => (
           <button key={q.slug} className="gww-card" onClick={() => onSelect(q.slug)}>
             <div className="gww-icon"><PkmnIcon src={pkmnIconUrl(q)} alt={q.name} /></div>
-            <div className="gww-num">#{String(q.num).padStart(3, "0")}</div>
+            <div className="gww-num">#{q.nationalDexNum ?? q.num}</div>
             <div className="gww-name">{q.name}</div>
           </button>
         ))}

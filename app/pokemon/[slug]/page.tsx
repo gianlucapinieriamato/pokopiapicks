@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const p = POKEMON[slug];
   if (!p) return { title: "Not found" };
   return {
-    title: `${p.name} (#${String(p.num).padStart(3, "0")})`,
+    title: `${p.name} (#${p.nationalDexNum ?? p.num})`,
     description: `${p.name} — ${p.habitat} habitat, ${p.categories.length} favorite categories.`,
   };
 }
@@ -59,10 +59,10 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
 
       <div className="pkmn-nav">
         {prev ? (
-          <Link href={`/pokemon/${prev.slug}`} className="pkmn-nav-btn">◀ #{String(prev.num).padStart(3, "0")} {prev.name}</Link>
+          <Link href={`/pokemon/${prev.slug}`} className="pkmn-nav-btn">◀ #{prev.nationalDexNum ?? prev.num} {prev.name}</Link>
         ) : <span />}
         {next ? (
-          <Link href={`/pokemon/${next.slug}`} className="pkmn-nav-btn">{next.name} #{String(next.num).padStart(3, "0")} ▶</Link>
+          <Link href={`/pokemon/${next.slug}`} className="pkmn-nav-btn">{next.name} #{next.nationalDexNum ?? next.num} ▶</Link>
         ) : <span />}
       </div>
 

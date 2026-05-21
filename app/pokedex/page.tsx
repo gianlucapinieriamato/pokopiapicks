@@ -7,6 +7,13 @@ const HABITATS = ["Dry", "Bright", "Warm", "Cool", "Dark", "Humid"];
 const FLAVORS = ["Dry", "Sour", "Spicy", "Sweet", "Bitter"];
 const ALL_SPECIALTIES = Object.values(SPECIALTIES).sort((a, b) => a.name.localeCompare(b.name));
 
+// Sort by national dex number for display; entries without nationalDexNum go last
+const POKEDEX_ORDER = [...POKEMON_LIST].sort((a, b) => {
+  const na = a.nationalDexNum ?? 99999;
+  const nb = b.nationalDexNum ?? 99999;
+  return na - nb;
+});
+
 const PAGE_SIZE = 60;
 
 export default function PokedexPage() {
@@ -17,7 +24,7 @@ export default function PokedexPage() {
   const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
-    let list = POKEMON_LIST;
+    let list = POKEDEX_ORDER;
     if (search.trim()) {
       const q = search.toLowerCase();
       list = list.filter((p) => p.name.toLowerCase().includes(q));
@@ -120,7 +127,7 @@ export default function PokedexPage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
                 </div>
-                <div className="pkmn-grid-num">#{String(p.num).padStart(3, "0")}</div>
+                <div className="pkmn-grid-num">#{p.nationalDexNum ?? p.num}</div>
                 <div className="pkmn-grid-name">{p.name}</div>
                 <div style={{ fontSize: 10, fontFamily: "'DM Mono', monospace", color: "var(--ink-fade)" }}>{p.habitat}</div>
               </Link>
