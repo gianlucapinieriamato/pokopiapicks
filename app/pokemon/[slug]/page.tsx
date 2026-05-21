@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { POKEMON, POKEMON_LIST, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS, pkmnIconUrl, catName } from "@/app/lib/data";
+import ArrowKeyNav from "@/app/components/ArrowKeyNav";
 
 export function generateStaticParams() {
   return Object.keys(POKEMON).map((slug) => ({ slug }));
@@ -38,6 +39,7 @@ export default function PokemonPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="detail-wrap">
+      <ArrowKeyNav prevSlug={prev?.slug ?? null} nextSlug={next?.slug ?? null} />
       {/* Breadcrumb */}
       <div className="breadcrumb">
         <Link href="/">Home</Link>
