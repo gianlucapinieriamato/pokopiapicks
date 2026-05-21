@@ -38,10 +38,10 @@ export default function LookupPage() {
   return (
     <div className="detail-wrap">
       <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>Filter Search</span>
+        <Link href="/">Home</Link><span>›</span><span>Filter</span>
       </div>
       <div className="detail-header">
-        <div className="detail-title">Filter Search</div>
+        <div className="detail-title">Filter</div>
         <div className="detail-meta">Find Pokémon matching ALL selected criteria simultaneously — different from the Pokédex which just browses and searches by name.</div>
       </div>
 
