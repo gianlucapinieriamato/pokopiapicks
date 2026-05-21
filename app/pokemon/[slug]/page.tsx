@@ -4,6 +4,7 @@ import { POKEMON, POKEMON_LIST, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATI
 import CollapsibleSection from "@/app/components/CollapsibleSection";
 import GoesWellWith from "@/app/components/GoesWellWith";
 import ArrowKeyNav from "@/app/components/ArrowKeyNav";
+import TcgCard from "@/app/components/TcgCard";
 
 export function generateStaticParams() {
   return Object.keys(POKEMON).map((slug) => ({ slug }));
@@ -68,26 +69,21 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
 
       <div className="card">
         <div className="pkmn-head">
-          <div className="pkmn-portrait">
-            {p.spriteHq ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={p.spriteHq} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
-            ) : (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
-            )}
+          {/* TCG card hero */}
+          <div style={{ flexShrink: 0 }}>
+            <TcgCard p={{ ...p, slug }} size="md" giftCount={sharedItems.length > 0 ? sharedItems.length : null} />
           </div>
           <div className="pkmn-info">
-            <div className="pkmn-num">#{p.nationalDexNum ?? String(p.num).padStart(3, "0")}</div>
+            <div className="pkmn-num">#{dexNum(p)}</div>
             <div className="pkmn-name">{p.name}</div>
             <div className="pkmn-meta">
               Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
-              {p.flavor && <> · Flavor: <span style={{ color: "var(--leaf)" }}>{p.flavor}</span></>}
+              {p.flavor && <> · Flavor: <span style={{ color: "var(--accent2)" }}>{p.flavor}</span></>}
             </div>
             {p.specialties && p.specialties.length > 0 && (
               <div className="pkmn-cats" style={{ marginTop: 8 }}>
                 {p.specialties.map((s) => (
-                  <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag" style={{ textDecoration: "none", color: "var(--accent)" }}>
+                  <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag" style={{ textDecoration: "none", color: "var(--accent-deep)", borderColor: "var(--accent)" }}>
                     {SPECIALTIES[s]?.name ?? s}
                   </Link>
                 ))}

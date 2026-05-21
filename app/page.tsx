@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { POKEMON, POKEMON_LIST, ITEMS, getCatItems, pkmnIconUrl, dexNum, catDisplayName } from "@/app/lib/data";
 import type { PokemonEntry } from "@/app/lib/types";
 import PkmnIcon from "@/app/components/PkmnIcon";
+import TcgCard from "@/app/components/TcgCard";
 
 // ── i18n ──────────────────────────────────────────────────────────────────────
 
@@ -291,7 +292,7 @@ export default function Home() {
           <span className="eyebrow">{s.eyebrow}</span>
           <h1>{s.h1_1}<br /><span className="accent">{s.h1_accent}</span></h1>
           <p className="lede">{s.lede}</p>
-          <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">{s.lang_btn}</button>
+          <button className="header-lang-btn" onClick={toggleLang} aria-label="Toggle language">{s.lang_btn}</button>
         </header>
 
         <section className="card">
@@ -346,21 +347,22 @@ export default function Home() {
                   <small className="block mt-1 text-sm text-[var(--ink-fade)]">{s.placeholder_sub}</small>
                 </div>
               </div>
+              {/* Ad: native in-feed */}
+              <div className="ad-slot" style={{ height: 90, marginBottom: 16 }}>
+                <span>AD · NATIVE / IN-FEED</span>
+                <small>970×90 — above Pokémon grid</small>
+              </div>
               <div className="card">
-                <div className="section-title" style={{ marginBottom: 12 }}>All Pokémon</div>
-                <div className="pkmn-grid">
+                <div className="section-title" style={{ marginBottom: 20 }}>All Pokémon</div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(175px, 1fr))", gap: 16 }}>
                   {POKEMON_LIST.map((p) => (
                     <button
                       key={p.slug}
-                      className="pkmn-grid-card"
-                      style={{ background: "none", border: "1.5px solid var(--paper-edge)", cursor: "pointer" }}
+                      className="tcg-card-wrap"
                       onClick={() => selectPokemon(p.slug)}
+                      aria-label={`View ${p.name}`}
                     >
-                      <div className="pkmn-grid-icon">
-                        <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} />
-                      </div>
-                      <div className="pkmn-grid-num">#{dexNum(p)}</div>
-                      <div className="pkmn-grid-name">{p.name}</div>
+                      <TcgCard p={p} size="sm" />
                     </button>
                   ))}
                 </div>
