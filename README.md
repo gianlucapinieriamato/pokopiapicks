@@ -1,4 +1,4 @@
-# Pokopia Wiki
+# Pokopia Picks
 
 Gift finder and wiki for **Pokémon Pokopia** (Nintendo Switch 2). Find what items each Pokémon likes, plan housing by habitat, look up locations and specialties.
 

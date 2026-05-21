@@ -1,0 +1,32 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/pokedex", label: "Pokédex" },
+  { href: "/lookup", label: "Lookup" },
+  { href: "/matchmaker", label: "Matchmaker" },
+];
+
+export default function Nav() {
+  const pathname = usePathname();
+  return (
+    <nav className="site-nav">
+      <div className="site-nav-inner">
+        <Link href="/" className="site-nav-logo">Pokopia Picks</Link>
+        <div className="site-nav-links">
+          {LINKS.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`site-nav-link${pathname === href ? " active" : ""}`}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+}

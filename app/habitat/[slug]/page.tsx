@@ -1,0 +1,56 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { HABITATS, POKEMON, pkmnIconUrl } from "@/app/lib/data";
+
+export function generateStaticParams() {
+  return Object.keys(HABITATS).map((slug) => ({ slug }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const h = HABITATS[params.slug];
+  if (!h) return { title: "Not found" };
+  return { title: h.name, description: h.description };
+}
+
+export default function HabitatPage({ params }: { params: { slug: string } }) {
+  const h = HABITATS[params.slug];
+  if (!h) return <div className="detail-wrap"><p>Habitat not found.</p></div>;
+
+  const pokemonHere = h.pokemon
+    .map((s) => POKEMON[s])
+    .filter(Boolean)
+    .sort((a, b) => a!.num - b!.num) as NonNullable<typeof POKEMON[string]>[];
+
+  return (
+    <div className="detail-wrap">
+      <div className="breadcrumb">
+        <Link href="/">Home</Link><span>›</span>
+        <span>Habitats</span><span>›</span>
+        <span>{h.name}</span>
+      </div>
+      <div className="detail-header">
+        <div className="detail-title">{h.name}</div>
+        {h.description && <p className="section-sub">{h.description}</p>}
+        <div className="detail-meta">{pokemonHere.length} Pokémon spawn here</div>
+      </div>
+      {pokemonHere.length > 0 ? (
+        <div className="card">
+          <div className="pkmn-grid">
+            {pokemonHere.map((p) => (
+              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
+                <div className="pkmn-grid-icon">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
+                </div>
+                <div className="pkmn-grid-num">#{String(p.num).padStart(3, "0")}</div>
+                <div className="pkmn-grid-name">{p.name}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="card"><p className="detail-meta">No Pokémon data for this habitat yet.</p></div>
+      )}
+    </div>
+  );
+}
