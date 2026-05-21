@@ -574,5 +574,13 @@
       "Iron ore",
       "Gold ore"
     ]
+  },
+  "cloudisland": {
+    "slug": "cloudisland",
+    "name": "Cloud Island",
+    "description": "Cloud Islands are unique islands stored on the server that allow for you to start fresh. It contains all main materials and terrain blocks, as well as its own Mysterious Slate board",
+    "objective": "",
+    "materials": [],
+    "blocksAndPlants": []
   }
 }

@@ -209,7 +209,18 @@ LOCATION_SLUGS = [
     'rockyridges',
     'sparklingskylands',
     'palettetown',
+    'cloudisland',
 ]
+
+# Map from display-name fragments (lowercase) to slug
+LOCATION_DISPLAY = {
+    'withered wastelands': 'witheredwastelands',
+    'bleak beach':         'bleakbeach',
+    'rocky ridges':        'rockyridges',
+    'sparkling skylands':  'sparklingskylands',
+    'palette town':        'palettetown',
+    'cloud island':        'cloudisland',
+}
 
 
 def extract_h2_section(html: str, heading_pattern: str) -> list[str]:
@@ -371,11 +382,19 @@ def scrape_habitats(use_cache: bool) -> None:
 FLAVOR_RE   = re.compile(r'\b(Dry|Sour|Spicy|Sweet|Bitter)\b\s+[Ff]lavor', re.IGNORECASE)
 FLAVOR_NORM = {'dry': 'Dry', 'sour': 'Sour', 'spicy': 'Spicy', 'sweet': 'Sweet', 'bitter': 'Bitter'}
 
-TIME_TOKENS    = {'morning', 'day', 'evening', 'night'}
-WEATHER_TOKENS = {'sun', 'cloud', 'rain', 'cloudy', 'sunny', 'rainy'}
-WEATHER_NORM   = {'cloudy': 'Cloud', 'sunny': 'Sun', 'rainy': 'Rain',
-                  'cloud': 'Cloud', 'sun': 'Sun', 'rain': 'Rain'}
-RARITY_RE      = re.compile(r'\b(common|rare)\b', re.IGNORECASE)
+TIME_WORDS    = ['Morning', 'Day', 'Evening', 'Night']
+WEATHER_WORDS = ['Sun', 'Cloud', 'Rain']
+RARITY_RE     = re.compile(r'Rarity:\s*(Common|Rare)', re.IGNORECASE)
+
+
+def _locations_from_text(text: str) -> list[str]:
+    """Map display-name fragments to location slugs found in text."""
+    lower = text.lower()
+    found = []
+    for display, slug in LOCATION_DISPLAY.items():
+        if display in lower:
+            found.append(slug)
+    return found
 
 
 def parse_pkmn_page(html: str, slug: str) -> dict:
@@ -385,38 +404,94 @@ def parse_pkmn_page(html: str, slug: str) -> dict:
     if m:
         flavor = FLAVOR_NORM.get(m.group(1).lower())
 
-    # Habitat list
+    # Find "Habitats & Locations" table and parse it block-by-block.
+    # Structure (one block per habitat):
+    #   row: <td> habitat name with habitatdex link </td>
+    #   row: (optional empty / image row)
+    #   row: Location: Withered WastelandsBleak Beach...
+    #   row: Rarity: Common|Rare
+    #   row: TimeWeather  (header)
+    #   row: Morning Day Evening Night  Sun Cloud Rain
     habitat_list: list[dict] = []
-    rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.IGNORECASE | re.DOTALL)
-    for row in rows:
-        cells = [clean_text(c) for c in re.findall(
-            r'<td[^>]*>(.*?)</td>', row, re.IGNORECASE | re.DOTALL,
-        )]
-        row_text = ' '.join(cells).lower()
 
-        locs_found = [loc for loc in LOCATION_SLUGS if loc in row_text]
-        if not locs_found and not RARITY_RE.search(row_text):
-            continue
+    # Extract all rows from the habitats table
+    hab_section_m = re.search(
+        r'Habitats\s*(?:&amp;|&)\s*Locations(.*?)(?=<h\d|</table>)',
+        html, re.IGNORECASE | re.DOTALL,
+    )
+    if not hab_section_m:
+        # Fallback: search whole page
+        section_html = html
+    else:
+        section_html = hab_section_m.group(1)
 
+    rows = re.findall(r'<tr[^>]*>(.*?)</tr>', section_html, re.IGNORECASE | re.DOTALL)
+
+    i = 0
+    last_hab_slug = None
+    while i < len(rows):
+        row = rows[i]
         hab_links = re.findall(r'/pokemonpokopia/habitatdex/([a-z0-9\-]+)\.shtml', row, re.IGNORECASE)
         if not hab_links:
+            i += 1
             continue
 
-        rarity_m = RARITY_RE.search(row_text)
-        rarity   = rarity_m.group(1).capitalize() if rarity_m else None
-        times    = sorted(t.capitalize() for t in TIME_TOKENS if t in row_text)
-        weather  = list(dict.fromkeys(WEATHER_NORM[w] for w in WEATHER_TOKENS if w in row_text))
+        hab_slug = hab_links[0].lower()
+
+        # Skip duplicate hab rows (image icon rows re-link the same habitat)
+        if hab_slug == last_hab_slug:
+            i += 1
+            continue
+        last_hab_slug = hab_slug
+
+        # Collect the next handful of rows for this block (until next new hab link or end)
+        block_rows = []
+        j = i + 1
+        while j < len(rows) and j < i + 10:
+            next_habs = re.findall(r'/pokemonpokopia/habitatdex/([a-z0-9\-]+)\.shtml', rows[j], re.IGNORECASE)
+            if next_habs and next_habs[0].lower() != hab_slug:
+                break
+            block_rows.append(clean_text(rows[j]))
+            j += 1
+
+        block_text = ' '.join(block_rows)
+
+        # Locations
+        locs = _locations_from_text(block_text)
+        is_cloud = 'cloudisland' in locs
+
+        # Rarity
+        rarity = None
+        rm = RARITY_RE.search(block_text)
+        if rm:
+            rarity = rm.group(1).capitalize()
+
+        # Time
+        times = [t for t in TIME_WORDS if t.lower() in block_text.lower()]
+
+        # Weather
+        weather = [w for w in WEATHER_WORDS if w.lower() in block_text.lower()]
 
         habitat_list.append({
-            'habitatSlug': hab_links[0].lower(),
-            'locations':   locs_found,
-            'rarity':      rarity,
-            'time':        times or None,
-            'weather':     weather or None,
-            'isCloudIsland': bool(re.search(r'cloud\s*island', row_text, re.IGNORECASE)),
+            'habitatSlug':   hab_slug,
+            'locations':     locs,
+            'rarity':        rarity,
+            'time':          times or None,
+            'weather':       weather or None,
+            'isCloudIsland': is_cloud,
         })
 
-    primary = next((loc for loc in LOCATION_SLUGS if loc in html.lower()), None)
+        i = j
+
+    # Primary location: first non-cloud location found, or first found
+    primary = None
+    for entry in habitat_list:
+        for loc in entry['locations']:
+            if loc != 'cloudisland':
+                primary = loc
+                break
+        if primary:
+            break
 
     return {
         'flavor':          flavor,
