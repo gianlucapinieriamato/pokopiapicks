@@ -1,0 +1,527 @@
+{
+  "appraise": {
+    "slug": "appraise",
+    "name": "Appraise",
+    "description": "You can show lost relics you've found to Professor Tangrowth, who will appraise them for you",
+    "pokemon": [
+      "professortangrowth"
+    ]
+  },
+  "build": {
+    "slug": "build",
+    "name": "Build",
+    "description": "Pokemon with the Build specialty will lead your building projects",
+    "pokemon": [
+      "cubone",
+      "marowak",
+      "timburr",
+      "gurdurr",
+      "conkeldurr",
+      "makuhita",
+      "hariyama",
+      "machop",
+      "machoke",
+      "machamp",
+      "riolu",
+      "lucario",
+      "tinkatink",
+      "tinkatuff"
+    ]
+  },
+  "bulldoze": {
+    "slug": "bulldoze",
+    "name": "Bulldoze",
+    "description": "Pokemon with the Bulldoze specialty can lead your demolition, rebuilding or relocation projects",
+    "pokemon": [
+      "munchlax",
+      "bonsly",
+      "trapinch",
+      "vibrava",
+      "flygon"
+    ]
+  },
+  "burn": {
+    "slug": "burn",
+    "name": "Burn",
+    "description": "Pokemon with the Burn specialty can set fire to Flammable objects. They can also turn Squish clay into Brick",
+    "pokemon": [
+      "charmander",
+      "charmeleon",
+      "charizard",
+      "litwick",
+      "lampent",
+      "chandelure",
+      "growlithe",
+      "arcanine",
+      "torchic",
+      "combusken",
+      "blaziken",
+      "magby",
+      "magmar",
+      "magmortar",
+      "torkoal",
+      "larvesta",
+      "volcarona",
+      "scorbunny",
+      "raboot",
+      "cinderace",
+      "rolycoly",
+      "carkol",
+      "coalossal",
+      "charcadet",
+      "armarouge",
+      "ceruledge",
+      "vulpix",
+      "ninetales",
+      "cyndaquil",
+      "quilava",
+      "typhlosion",
+      "flareon",
+      "entei",
+      "volcanion"
+    ]
+  },
+  "chop": {
+    "slug": "chop",
+    "name": "Chop",
+    "description": "Pokemon with the Chop specialty can process small logs into lumber",
+    "pokemon": [
+      "scyther",
+      "scizor",
+      "pinsir",
+      "heracross",
+      "axew",
+      "fraxure",
+      "haxorus",
+      "absol",
+      "grubbin",
+      "rookidee",
+      "corvisquire",
+      "corviknight"
+    ]
+  },
+  "collect": {
+    "slug": "collect",
+    "name": "Collect",
+    "description": "Pokemon with the Collect specialty will trade you rare things for certain items",
+    "pokemon": [
+      "gimmighoul",
+      "gholdengo"
+    ]
+  },
+  "crush": {
+    "slug": "crush",
+    "name": "Crush",
+    "description": "Pokemon with the Crush specialty can mash materials into different things",
+    "pokemon": [
+      "onix",
+      "steelix",
+      "geodude",
+      "graveler",
+      "golem",
+      "larvitar",
+      "pupitar",
+      "tyranitar",
+      "cranidos",
+      "rampardos",
+      "shieldon",
+      "bastiodon",
+      "tyrunt",
+      "tyrantrum",
+      "amaura",
+      "aurorus"
+    ]
+  },
+  "dj": {
+    "slug": "dj",
+    "name": "DJ",
+    "description": "DJ Rotom can use the DJ specialty to play music CDs for you",
+    "pokemon": [
+      "stereorotom"
+    ]
+  },
+  "dreamisland": {
+    "slug": "dreamisland",
+    "name": "Dream Island",
+    "description": "Pokemon with the Dream Island specialty can transport you to a Dream Island",
+    "pokemon": [
+      "drifloon"
+    ]
+  },
+  "eat": {
+    "slug": "eat",
+    "name": "Eat",
+    "description": "Mosslax has the Eat specialty. Something good may happen if you offer them food",
+    "pokemon": [
+      "mosslax"
+    ]
+  },
+  "engineer": {
+    "slug": "engineer",
+    "name": "Engineer",
+    "description": "Tinkmaster has the Engineer specialty and can lead huge building projects",
+    "pokemon": [
+      "tinkaton"
+    ]
+  },
+  "explode": {
+    "slug": "explode",
+    "name": "Explode",
+    "description": "Pokemon with the Explode specialty can be fired out of a cannon, destroying everything around them on impact",
+    "pokemon": [
+      "voltorb",
+      "electrode"
+    ]
+  },
+  "fly": {
+    "slug": "fly",
+    "name": "Fly",
+    "description": "Pokemon with the Fly spceialty can fly you to a Pokemon you're searching fo",
+    "pokemon": [
+      "pidgey",
+      "pidgeotto",
+      "pidgeot",
+      "drifblim",
+      "cramorant",
+      "aerodactyl",
+      "articuno",
+      "zapdos",
+      "moltres"
+    ]
+  },
+  "gather": {
+    "slug": "gather",
+    "name": "Gather",
+    "description": "Pokemon with the Gather specialty will pick up items on the ground and put them inside a community box",
+    "pokemon": [
+      "gastly",
+      "haunter",
+      "gengar",
+      "minccino",
+      "cinccino",
+      "mismagius",
+      "girafarig",
+      "farigiraf",
+      "duskull",
+      "dusclops",
+      "dusknoir",
+      "dreepy",
+      "drakloak",
+      "dragapult",
+      "espeon"
+    ]
+  },
+  "gatherhoney": {
+    "slug": "gatherhoney",
+    "name": "Gather Honey",
+    "description": "Pokemon with the Gather Honey specialty will give you special furniture if you bring them honey",
+    "pokemon": [
+      "vespiquen"
+    ]
+  },
+  "generate": {
+    "slug": "generate",
+    "name": "Generate",
+    "description": "Pokemon with the Generate specialty can power machines with electricty",
+    "pokemon": [
+      "magnemite",
+      "magneton",
+      "magnezone",
+      "pichu",
+      "pikachu",
+      "raichu",
+      "voltorb",
+      "electrode",
+      "elekid",
+      "electabuzz",
+      "electivire",
+      "mareep",
+      "flaaffy",
+      "ampharos",
+      "charjabug",
+      "vikavolt",
+      "pawmi",
+      "pawmo",
+      "pawmot",
+      "toxel",
+      "toxtricityampedform",
+      "toxtricitylowkeyform",
+      "plusle",
+      "minun",
+      "wattrel",
+      "kilowattrel",
+      "jolteon",
+      "raikou"
+    ]
+  },
+  "grow": {
+    "slug": "grow",
+    "name": "Grow",
+    "description": "Pokemon with the Grow specialty can make plants grow faster",
+    "pokemon": [
+      "bulbasaur",
+      "ivysaur",
+      "venusaur",
+      "oddish",
+      "gloom",
+      "vileplume",
+      "bellossom",
+      "bellsprout",
+      "weepinbell",
+      "victreebel",
+      "tangela",
+      "tangrowth",
+      "cacnea",
+      "cacturne",
+      "exeggcute",
+      "exeggutor",
+      "rowlet",
+      "dartrix",
+      "decidueye",
+      "snivy",
+      "servine",
+      "serperior",
+      "sprigatito",
+      "floragato",
+      "meowscarada",
+      "leafeon",
+      "hoppip",
+      "skiploom",
+      "jumpluff"
+    ]
+  },
+  "hype": {
+    "slug": "hype",
+    "name": "Hype",
+    "description": "Pokemon with the Hype specialty will start dancing when they hear music, improving the mood",
+    "pokemon": [
+      "volbeat",
+      "illumise",
+      "cleffa",
+      "clefairy",
+      "clefable",
+      "igglybuff",
+      "jigglypuff",
+      "wigglytuff",
+      "diglett",
+      "dugtrio",
+      "kricketot",
+      "kricketune",
+      "chatot",
+      "sylveon"
+    ]
+  },
+  "illuminate": {
+    "slug": "illuminate",
+    "name": "Illuminate",
+    "description": "Peakychu can use the Illuminate specialty to light up the whole town for you",
+    "pokemon": [
+      "peakychu"
+    ]
+  },
+  "litter": {
+    "slug": "litter",
+    "name": "Litter",
+    "description": "Pokemon with the Litter specialty will drop useful materials near their homes",
+    "pokemon": [
+      "combee",
+      "grimer",
+      "muk",
+      "spinarak",
+      "ariados",
+      "paldeanwooper",
+      "clodsire",
+      "glimmet",
+      "glimmora",
+      "swablu",
+      "altaria"
+    ]
+  },
+  "paint": {
+    "slug": "paint",
+    "name": "Paint",
+    "description": "Smearguru has the Paint specialty and can recolor certain items, such as furniture",
+    "pokemon": [
+      "smeargle"
+    ]
+  },
+  "party": {
+    "slug": "party",
+    "name": "Party",
+    "description": "Chef Dente can use the Party specialty to help you prepare food for parties",
+    "pokemon": [
+      "greedent"
+    ]
+  },
+  "rarify": {
+    "slug": "rarify",
+    "name": "Rarify",
+    "description": "Pokemon with the Rarify specialty can turn Star Pieces into rare Pokemetal",
+    "pokemon": [
+      "porygon-z"
+    ]
+  },
+  "recycle": {
+    "slug": "recycle",
+    "name": "Recycle",
+    "description": "Pokemon with the Recycle specialty can process nonburnable garbage into iron ore and wastepaper into paper",
+    "pokemon": [
+      "koffing",
+      "weezing",
+      "trubbish",
+      "garbodor",
+      "porygon",
+      "porygon2",
+      "beldum",
+      "metang",
+      "metagross"
+    ]
+  },
+  "search": {
+    "slug": "search",
+    "name": "Search",
+    "description": "Pokemon with the Search specialty can help you find buried items",
+    "pokemon": [
+      "paras",
+      "parasect",
+      "venonat",
+      "venomoth",
+      "drilbur",
+      "excadrill",
+      "zubat",
+      "golbat",
+      "crobat",
+      "psyduck",
+      "golduck",
+      "ekans",
+      "arbok",
+      "skwovet",
+      "fidough",
+      "dachsbun",
+      "dedenne",
+      "noibat",
+      "noivern",
+      "umbreon",
+      "sableye"
+    ]
+  },
+  "storage": {
+    "slug": "storage",
+    "name": "Storage",
+    "description": "Pokémon with the Storage specialty can hold on to your items for you",
+    "pokemon": [
+      "gulpin",
+      "swalot"
+    ]
+  },
+  "teleport": {
+    "slug": "teleport",
+    "name": "Teleport",
+    "description": "Pokemon with the Teleport specialty can instantly take you to a Pokemon you're searching for",
+    "pokemon": [
+      "abra",
+      "kadabra",
+      "alakazam",
+      "ralts",
+      "kirlia",
+      "gardevoir",
+      "gallade",
+      "mewtwo",
+      "mew"
+    ]
+  },
+  "trade": {
+    "slug": "trade",
+    "name": "Trade",
+    "description": "Pokemon with the Trade speicalty can exchange items with you at a cash register",
+    "pokemon": [
+      "tyrogue",
+      "hitmonlee",
+      "hitmonchan",
+      "hitmontop",
+      "hoothoot",
+      "noctowl",
+      "meowth",
+      "persian",
+      "happiny",
+      "chansey",
+      "blissey",
+      "snorlax",
+      "audino",
+      "zorua",
+      "zoroark",
+      "mimikyu",
+      "tatsugiricurlyform",
+      "tatsugiridroopyform",
+      "tatsugiristretchyform",
+      "sudowoodo",
+      "murkrow",
+      "honchkrow",
+      "mawile",
+      "misdreavus",
+      "eevee",
+      "glaceon"
+    ]
+  },
+  "transform": {
+    "slug": "transform",
+    "name": "Transform",
+    "description": "Ditto can improve its moves by using Transform",
+    "pokemon": [
+      "ditto"
+    ]
+  },
+  "water": {
+    "slug": "water",
+    "name": "Water",
+    "description": "Pokemon with the Water specialty can use a full water basin to spray water on nearby fields and plants",
+    "pokemon": [
+      "squirtle",
+      "wartortle",
+      "blastoise",
+      "slowpoke",
+      "slowbro",
+      "slowking",
+      "gyarados",
+      "shellos",
+      "shelloseastsea",
+      "gastrodon",
+      "gastrodoneastsea",
+      "goomy",
+      "sliggoo",
+      "goodra",
+      "lapras",
+      "azurill",
+      "marill",
+      "azumarill",
+      "wingull",
+      "pelipper",
+      "piplup",
+      "prinplup",
+      "empoleon",
+      "lotad",
+      "lombre",
+      "ludicolo",
+      "poliwag",
+      "poliwhirl",
+      "poliwrath",
+      "politoed",
+      "dratini",
+      "dragonair",
+      "dragonite",
+      "froakie",
+      "frogadier",
+      "greninja",
+      "vaporeon",
+      "suicune"
+    ]
+  },
+  "yawn": {
+    "slug": "yawn",
+    "name": "Yawn",
+    "description": "Pokemon with the Yawn specialty can tell you how humid it is",
+    "pokemon": [
+      "slowpoke"
+    ]
+  }
+}
