@@ -69,7 +69,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
 
       <div className="pkmn-head">
         {/* TCG card hero — standalone, not nested inside a card */}
-        <div style={{ flexShrink: 0 }}>
+        <div style={{ flexShrink: 0, width: 260 }}>
           <TcgCard p={{ ...p, slug }} size="md" giftCount={sharedItems.length > 0 ? sharedItems.length : null} />
         </div>
         <div className="pkmn-info">
