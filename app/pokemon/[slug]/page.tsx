@@ -67,42 +67,42 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         ) : <span />}
       </div>
 
-      <div className="card">
-        <div className="pkmn-head">
-          {/* TCG card hero */}
-          <div style={{ flexShrink: 0 }}>
-            <TcgCard p={{ ...p, slug }} size="md" giftCount={sharedItems.length > 0 ? sharedItems.length : null} />
+      <div className="pkmn-head">
+        {/* TCG card hero — standalone, not nested inside a card */}
+        <div style={{ flexShrink: 0 }}>
+          <TcgCard p={{ ...p, slug }} size="md" giftCount={sharedItems.length > 0 ? sharedItems.length : null} />
+        </div>
+        <div className="pkmn-info">
+          <div className="pkmn-num">#{dexNum(p)}</div>
+          <div className="pkmn-name">{p.name}</div>
+          <div className="pkmn-meta">
+            Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
+            <span style={{ color: "var(--ink-fade)", fontSize: 11 }}> · same habitat = can share a room</span>
+            {p.flavor && <> · Flavor: <span style={{ color: "var(--accent2)" }}>{p.flavor}</span></>}
           </div>
-          <div className="pkmn-info">
-            <div className="pkmn-num">#{dexNum(p)}</div>
-            <div className="pkmn-name">{p.name}</div>
-            <div className="pkmn-meta">
-              Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
-              <span style={{ color: "var(--ink-fade)", fontSize: 11 }}> · same habitat = can share a room</span>
-              {p.flavor && <> · Flavor: <span style={{ color: "var(--accent2)" }}>{p.flavor}</span></>}
-            </div>
-            {p.specialties && p.specialties.length > 0 && (
-              <div className="pkmn-cats" style={{ marginTop: 8 }}>
-                {p.specialties.map((s) => (
-                  <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag" style={{ textDecoration: "none", color: "var(--accent-deep)", borderColor: "var(--accent)" }}>
-                    {SPECIALTIES[s]?.name ?? s}
-                  </Link>
-                ))}
-              </div>
-            )}
-            <div className="pkmn-cats">
-              {p.categories.map((c) => (
-                <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>
-                  {catDisplayName(c)}
+          {p.specialties && p.specialties.length > 0 && (
+            <div className="pkmn-cats" style={{ marginTop: 8 }}>
+              {p.specialties.map((s) => (
+                <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag" style={{ textDecoration: "none", color: "var(--accent-deep)", borderColor: "var(--accent)" }}>
+                  {SPECIALTIES[s]?.name ?? s}
                 </Link>
               ))}
             </div>
-            <p className="detail-meta" style={{ marginTop: 8, fontSize: 11, fontStyle: "italic" }}>
-              Gift items in each category below will earn extra happiness with {p.name}.
-            </p>
+          )}
+          <div className="pkmn-cats">
+            {p.categories.map((c) => (
+              <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>
+                {catDisplayName(c)}
+              </Link>
+            ))}
           </div>
+          <p className="detail-meta" style={{ marginTop: 8, fontSize: 11, fontStyle: "italic" }}>
+            Gift items in each category below will earn extra happiness with {p.name}.
+          </p>
         </div>
+      </div>
 
+      <div className="card">
         <div className="summary-strip">
           <div className="stat-box"><div className="stat-num">{allItems.length}</div><div className="stat-label">items total</div></div>
           <div className="stat-box"><div className="stat-num">{sharedItems.length}</div><div className="stat-label">in 2+ categories</div></div>

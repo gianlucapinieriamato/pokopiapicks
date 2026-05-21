@@ -109,6 +109,9 @@ function GoesWellWith({ slug, p, onSelect, s }: {
   return (
     <div className="gww-section">
       <div className="section-title">{s.goes_well_with} <span className="pill">{p.habitat}</span></div>
+      <p className="section-sub" style={{ marginTop: 4, marginBottom: 8 }}>
+        Pokémon from the same habitat can share a living space in Pokopia.
+      </p>
       <div className="gww-grid">
         {picks.map((q) => (
           <button key={q.slug} className="gww-card" onClick={() => onSelect(q.slug)}>
@@ -240,12 +243,6 @@ export default function Home() {
     if (stored === "en" || stored === "es") setLang(stored as Lang);
   }, []);
 
-  const toggleLang = () => {
-    const next: Lang = lang === "en" ? "es" : "en";
-    setLang(next);
-    localStorage.setItem("pokopia-lang", next);
-  };
-
   const doSearch = useCallback((q: string) => {
     const nq = normalize(q.trim());
     if (!nq) return [];
@@ -300,7 +297,7 @@ export default function Home() {
               type="text"
               className="search-input"
               placeholder={s.search_placeholder}
-              autoComplete="off"
+              autoComplete="new-password"
               value={query}
               onChange={(e) => handleInput(e.target.value)}
               onKeyDown={handleKeyDown}
