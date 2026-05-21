@@ -11,7 +11,7 @@ type Lang = "en" | "es";
 
 const STRINGS = {
   en: {
-    eyebrow: "Pokopia Picks · Gift finder",
+    eyebrow: "Gift finder · Pokopia",
     h1_1: "What each",
     h1_accent: "Pokémon likes",
     lede: "Type a Pokémon's name and see all the items it likes, grouped by category. Items that appear in multiple categories at once make the perfect gifts.",
@@ -35,7 +35,7 @@ const STRINGS = {
     lang_btn: "ES",
   },
   es: {
-    eyebrow: "Pokopia Picks · Buscador",
+    eyebrow: "Buscador · Pokopia",
     h1_1: "Qué le gusta a",
     h1_accent: "cada Pokémon",
     lede: "Escribí el nombre de un Pokémon y mirá todos los objetos que le gustan, agrupados por categoría. Los objetos que están en varias categorías a la vez son los regalos perfectos.",
@@ -79,7 +79,7 @@ function CollapsibleCat({ name, count, children }: { name: string; count: string
       >
         <span className="cat-name">{name}</span>
         <span className="cat-count">{count}</span>
-        <span style={{ marginLeft: 8, fontFamily: "'DM Mono', monospace", fontSize: 11, color: "var(--ink-fade)" }}>
+        <span style={{ marginLeft: 8, fontFamily: "'JetBrains Mono', 'DM Mono', monospace", fontSize: 11, color: "var(--ink-fade)" }}>
           {open ? "▲" : "▼"}
         </span>
       </button>
@@ -298,6 +298,7 @@ export default function Home() {
               className="search-input"
               placeholder={s.search_placeholder}
               autoComplete="new-password"
+              aria-label={s.search_placeholder}
               value={query}
               onChange={(e) => handleInput(e.target.value)}
               onKeyDown={handleKeyDown}

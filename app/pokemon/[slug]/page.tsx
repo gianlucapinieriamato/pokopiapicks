@@ -60,10 +60,10 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
 
       <div className="pkmn-nav">
         {prev ? (
-          <Link href={`/pokemon/${prev.slug}`} className="pkmn-nav-btn">◀ #{dexNum(prev)} {prev.name}</Link>
+          <Link href={`/pokemon/${prev.slug}`} className="pkmn-nav-btn" title="Previous Pokémon (← key)">◀ #{dexNum(prev)} {prev.name}</Link>
         ) : <span />}
         {next ? (
-          <Link href={`/pokemon/${next.slug}`} className="pkmn-nav-btn">{next.name} #{dexNum(next)} ▶</Link>
+          <Link href={`/pokemon/${next.slug}`} className="pkmn-nav-btn" title="Next Pokémon (→ key)">{next.name} #{dexNum(next)} ▶</Link>
         ) : <span />}
       </div>
 
@@ -77,9 +77,11 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           <div className="pkmn-name">{p.name}</div>
           <div className="pkmn-meta">
             Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
-            <span style={{ color: "var(--ink-fade)", fontSize: 11 }}> · same habitat = can share a room</span>
             {p.flavor && <> · Flavor: <span style={{ color: "var(--accent2)" }}>{p.flavor}</span></>}
           </div>
+          <p className="detail-meta" style={{ fontSize: 11, marginTop: 4 }}>
+            Same habitat = can share a room in Pokopia.
+          </p>
           {p.specialties && p.specialties.length > 0 && (
             <div className="pkmn-cats" style={{ marginTop: 8 }}>
               {p.specialties.map((s) => (
@@ -178,11 +180,11 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                   </Link>
                   {entry.rarity && <span className="cat-count">{entry.rarity}</span>}
                 </div>
-                <div style={{ padding: "0 4px 8px", fontSize: 12, fontFamily: "'DM Mono', monospace", color: "var(--ink-soft)" }}>
+                <div style={{ padding: "0 4px 8px", fontSize: 12, fontFamily: "'JetBrains Mono', 'DM Mono', monospace", color: "var(--ink-soft)" }}>
                   {entry.locations.map((loc, j) => (
                     <span key={loc}>
                       {j > 0 && " · "}
-                      <Link href={`/location/${loc}`} style={{ color: "var(--leaf)", textDecoration: "none" }}>
+                      <Link href={`/location/${loc}`} style={{ color: "var(--accent2)", textDecoration: "none" }}>
                         {LOCATIONS[loc]?.name ?? loc}
                       </Link>
                     </span>

@@ -124,7 +124,7 @@ export default function TcgCard({
             background: "rgba(255,255,255,0.82)", color: "var(--ink)",
             fontFamily: "'Outfit', sans-serif", fontWeight: 700,
             fontSize: isLg ? 11 : 9, letterSpacing: "0.04em",
-            backdropFilter: "blur(4px)",
+
           }}>{p.habitat}</div>
           {/* Badge: LEGENDARY or gift count */}
           {(giftCount !== null || r.sparkles) && (

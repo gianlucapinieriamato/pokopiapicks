@@ -116,10 +116,10 @@ export default function MatchmakerPage() {
   return (
     <div className="detail-wrap">
       <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>Roommate Matchmaker</span>
+        <Link href="/">Home</Link><span>›</span><span>Matchmaker</span>
       </div>
       <div className="detail-header">
-        <div className="detail-title">Roommate Matchmaker</div>
+        <div className="detail-title">Matchmaker</div>
         <p className="section-sub">Pick an anchor Pokémon to find the best roommates. Same habitat required — shared items are bonus points.</p>
       </div>
 

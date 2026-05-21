@@ -10,6 +10,14 @@ const ALL_SPECIALTIES = Object.values(SPECIALTIES).sort((a, b) => a.name.localeC
 
 const PAGE_SIZE = 60;
 
+// Pre-computed unfiltered counts — stable reference, never changes
+const HABITAT_COUNTS: Record<string, number> = {};
+const FLAVOR_COUNTS: Record<string, number> = {};
+for (const p of POKEMON_LIST) {
+  HABITAT_COUNTS[p.habitat] = (HABITAT_COUNTS[p.habitat] ?? 0) + 1;
+  if (p.flavor) FLAVOR_COUNTS[p.flavor] = (FLAVOR_COUNTS[p.flavor] ?? 0) + 1;
+}
+
 export default function PokedexPage() {
   const [habitatFilter, setHabitatFilter] = useState<string[]>([]);
   const [flavorFilter, setFlavorFilter] = useState<string[]>([]);
@@ -55,6 +63,7 @@ export default function PokedexPage() {
           type="text"
           className="search-input"
           placeholder="Search Pokémon…"
+          aria-label="Search Pokémon"
           value={search}
           onChange={(e) => { setSearch(e.target.value); setPage(1); }}
           style={{ marginBottom: 16 }}
@@ -70,7 +79,7 @@ export default function PokedexPage() {
                   className="shortcut"
                   style={habitatFilter.includes(h) ? { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" } : {}}
                   onClick={() => toggle(habitatFilter, h, setHabitatFilter)}
-                >{h}</button>
+                >{h} <span style={{ opacity: 0.55, fontSize: 10 }}>({HABITAT_COUNTS[h] ?? 0})</span></button>
               ))}
             </div>
           </div>
@@ -83,7 +92,7 @@ export default function PokedexPage() {
                   className="shortcut"
                   style={flavorFilter.includes(f) ? { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" } : {}}
                   onClick={() => toggle(flavorFilter, f, setFlavorFilter)}
-                >{f}</button>
+                >{f} <span style={{ opacity: 0.55, fontSize: 10 }}>({FLAVOR_COUNTS[f] ?? 0})</span></button>
               ))}
             </div>
           </div>
@@ -114,9 +123,9 @@ export default function PokedexPage() {
         {paginated.length === 0 ? (
           <p className="detail-meta">No Pokémon match your filters.</p>
         ) : (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(175px, 1fr))", gap: 16 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 16 }}>
             {paginated.map((p) => (
-              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="tcg-card-wrap">
+              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="tcg-card-wrap" aria-label={p.name}>
                 <TcgCard p={p} size="sm" />
               </Link>
             ))}
