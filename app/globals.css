@@ -145,24 +145,9 @@ body::before {
     @apply font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft mt-1 font-semibold;
   }
 
-  /* ── Pokémon shared (detail page + matchmaker) ── */
-  .pkmn-num  { @apply font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] mb-[2px]; }
-  .pkmn-name { @apply font-outfit font-extrabold text-[36px] tracking-[-0.02em] leading-[1.05] mb-2; }
-  .pkmn-meta { @apply font-mono text-[12px] text-ink-soft tracking-[0.04em]; }
-  .pkmn-info { @apply flex-1 min-w-0; }
-  .pkmn-cats { @apply flex flex-wrap gap-2 mt-2; }
-  .habitat-tag { @apply text-leaf font-semibold; }
   .pkmn-cat-tag {
     @apply font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em];
   }
-
-  /* ── Prev/next nav ── */
-  .pkmn-nav { @apply flex justify-between mb-5; }
-  .pkmn-nav-btn {
-    @apply font-outfit font-bold text-[13px] px-4 py-2 bg-paper border border-[1.5px] border-accent rounded-full text-ink-soft no-underline flex items-center gap-[6px] transition-all cursor-pointer;
-    box-shadow: 0 2px 0 var(--accent-deep);
-  }
-  .pkmn-nav-btn:hover { @apply bg-accent text-paper border-accent-deep; }
 
   /* ── Pokémon grids ── */
   .pkmn-grid {
@@ -380,8 +365,5 @@ body::before {
   .site-nav-burger { display: flex; align-items: center; justify-content: center; }
   .lang-toggle     { top: 12px; right: 12px; padding: 5px 12px; font-size: 10px; }
   .card            { padding: 20px 12px; }
-  .pkmn-name       { font-size: 26px; }
-  .pkmn-nav        { gap: 8px; }
-  .pkmn-nav-btn    { font-size: 11px; padding: 6px 10px; }
   .pkmn-grid       { gap: 10px; }
 }

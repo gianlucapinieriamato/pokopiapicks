@@ -48,7 +48,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
 
       <div className="card">
         <div className="section-title">Favorite categories</div>
-        <div className="pkmn-cats mb-4">
+        <div className="flex flex-wrap gap-2 mt-2 mb-4">
           {item.categories.map((c) => (
             <Link key={c} href={`/category/${c}`} className="pkmn-cat-tag no-underline">{catDisplayName(c)}</Link>
           ))}

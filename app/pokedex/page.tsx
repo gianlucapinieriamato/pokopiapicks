@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useMemo } from "react";
 import { POKEMON_LIST, SPECIALTIES } from "@/app/lib/data";
 import TcgCard from "@/app/components/TcgCard";
+import NavBtn from "@/app/components/NavBtn";
 
 const HABITATS = ["Dry", "Bright", "Warm", "Cool", "Dark", "Humid"];
 const FLAVORS = ["Dry", "Sour", "Spicy", "Sweet", "Bitter"];
@@ -117,9 +118,9 @@ export default function PokedexPage() {
         )}
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
-            {page > 1 && <button className="pkmn-nav-btn" onClick={() => setPage(page - 1)}>◀ Prev</button>}
+            {page > 1 && <NavBtn onClick={() => setPage(page - 1)}>◀ Prev</NavBtn>}
             <span className="detail-meta self-center">Page {page} / {pages}</span>
-            {page < pages && <button className="pkmn-nav-btn" onClick={() => setPage(page + 1)}>Next ▶</button>}
+            {page < pages && <NavBtn onClick={() => setPage(page + 1)}>Next ▶</NavBtn>}
           </div>
         )}
       </div>

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useMemo } from "react";
 import type { ItemEntry, CategoryEntry } from "@/app/lib/types";
+import NavBtn from "@/app/components/NavBtn";
 
 const PAGE_SIZE = 60;
 
@@ -78,9 +79,9 @@ export default function ItemsClient({ items, categories }: { items: ItemEntry[];
         )}
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
-            {page > 1 && <button className="pkmn-nav-btn" onClick={() => setPage(page - 1)}>◀ Prev</button>}
+            {page > 1 && <NavBtn onClick={() => setPage(page - 1)}>◀ Prev</NavBtn>}
             <span className="detail-meta self-center">Page {page} / {pages}</span>
-            {page < pages && <button className="pkmn-nav-btn" onClick={() => setPage(page + 1)}>Next ▶</button>}
+            {page < pages && <NavBtn onClick={() => setPage(page + 1)}>Next ▶</NavBtn>}
           </div>
         )}
       </div>

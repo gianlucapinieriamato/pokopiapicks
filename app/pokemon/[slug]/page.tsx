@@ -7,6 +7,7 @@ import ArrowKeyNav from "@/app/components/ArrowKeyNav";
 import TcgCard from "@/app/components/TcgCard";
 import StatBox from "@/app/components/StatBox";
 import BestGiftItem from "@/app/components/BestGiftItem";
+import NavBtn from "@/app/components/NavBtn";
 
 export function generateStaticParams() {
   return Object.keys(POKEMON).map((slug) => ({ slug }));
@@ -57,12 +58,12 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         <span>{p.name}</span>
       </div>
 
-      <div className="pkmn-nav">
+      <div className="flex justify-between mb-5 max-md:gap-2">
         {prev ? (
-          <Link href={`/pokemon/${prev.slug}`} className="pkmn-nav-btn" title="Previous Pokémon (← key)">◀ #{dexNum(prev)} {prev.name}</Link>
+          <NavBtn href={`/pokemon/${prev.slug}`} title="Previous Pokémon (← key)">◀ #{dexNum(prev)} {prev.name}</NavBtn>
         ) : <span />}
         {next ? (
-          <Link href={`/pokemon/${next.slug}`} className="pkmn-nav-btn" title="Next Pokémon (→ key)">{next.name} #{dexNum(next)} ▶</Link>
+          <NavBtn href={`/pokemon/${next.slug}`} title="Next Pokémon (→ key)">{next.name} #{dexNum(next)} ▶</NavBtn>
         ) : <span />}
       </div>
 
@@ -71,11 +72,11 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         <div className="shrink-0 w-[260px]">
           <TcgCard p={{ ...p, slug }} size="md" giftCount={sharedItems.length > 0 ? sharedItems.length : null} />
         </div>
-        <div className="pkmn-info">
-          <div className="pkmn-num">#{dexNum(p)}</div>
-          <div className="pkmn-name">{p.name}</div>
-          <div className="pkmn-meta">
-            Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
+        <div className="flex-1 min-w-0">
+          <div className="font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] mb-[2px]">#{dexNum(p)}</div>
+          <div className="font-outfit font-extrabold text-[36px] tracking-[-0.02em] leading-[1.05] mb-2 max-md:text-[26px]">{p.name}</div>
+          <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em]">
+            Ideal habitat: <span className="text-leaf font-semibold">{p.habitat}</span>
             {" "}<span className="info-tip" data-tip="Pokémon with the same habitat can share a living space in Pokopia." aria-label="Pokémon with the same habitat can share a living space in Pokopia.">i</span>
             {p.flavor && <>
               {" · "}Flavor: <span className="text-leaf font-semibold">{p.flavor}</span>
@@ -88,7 +89,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                 Specialty
                 {" "}<span className="info-tip" data-tip="Specialties determine bonus effects when this Pokémon helps with certain Pokopia activities." aria-label="Specialty bonus activities.">i</span>
               </p>
-              <div className="pkmn-cats">
+              <div className="flex flex-wrap gap-2 mt-2">
                 {p.specialties.map((s) => (
                   <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag no-underline text-accent-deep border-accent">
                     {SPECIALTIES[s]?.name ?? s}
@@ -102,7 +103,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
               Favorite categories
               {" "}<span className="info-tip" data-tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} aria-label={`Gift items in these categories earn extra happiness with ${p.name}.`}>i</span>
             </p>
-            <div className="pkmn-cats">
+            <div className="flex flex-wrap gap-2 mt-2">
               {p.categories.map((c) => (
                 <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag no-underline">
                   {catDisplayName(c)}

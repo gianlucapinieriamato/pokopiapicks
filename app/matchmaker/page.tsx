@@ -126,11 +126,11 @@ export default function MatchmakerPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
             </div>
-            <div className="pkmn-info">
-              <div className="pkmn-num">Anchor · #{dexNum(anchor)}</div>
-              <div className="pkmn-name">{anchor.name}</div>
-              <div className="pkmn-meta">Habitat: <span className="habitat-tag">{anchor.habitat}</span></div>
-              <div className="pkmn-cats mt-2">
+            <div className="flex-1 min-w-0">
+              <div className="font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] mb-[2px]">Anchor · #{dexNum(anchor)}</div>
+              <div className="font-outfit font-extrabold text-[36px] tracking-[-0.02em] leading-[1.05] mb-2">{anchor.name}</div>
+              <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em]">Habitat: <span className="text-leaf font-semibold">{anchor.habitat}</span></div>
+              <div className="flex flex-wrap gap-2 mt-2">
                 {anchor.categories.map((c) => <span key={c} className="pkmn-cat-tag">{catDisplayName(c)}</span>)}
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function MatchmakerPage() {
             {[{ p: anchor, label: "Anchor" }, { p: compareTarget, label: "Candidate" }].map(({ p, label }) => (
               <div key={p.slug}>
                 <div className="detail-meta mb-2">{label}: {p.name}</div>
-                <div className="pkmn-cats">
+                <div className="flex flex-wrap gap-2 mt-2">
                   {p.categories.map((c) => (
                     <span
                       key={c}
