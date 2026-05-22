@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HABITATS } from "@/app/lib/data";
+import JsonLd from "@/app/components/JsonLd";
+import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import Card from "@/app/components/Card";
@@ -18,6 +20,13 @@ const ALL_HABITATS = Object.values(HABITATS);
 export default function HabitatsPage() {
   return (
     <PageWrap>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Pokopia Habitats",
+        description: "Browse all Pokemon Pokopia habitats and see which Pokemon spawn there.",
+        url: `${SITE_URL}/habitats`,
+      }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Habitats" }]} />
       <PageHeader title="Habitats" meta={`${ALL_HABITATS.length} habitats`} />
 

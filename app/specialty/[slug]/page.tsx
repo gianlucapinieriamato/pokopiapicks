@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { SPECIALTIES, POKEMON } from "@/app/lib/data";
+import JsonLd from "@/app/components/JsonLd";
+import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import Card from "@/app/components/Card";
@@ -29,7 +31,15 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ slug
 
   return (
     <PageWrap>
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Specialties", href: "/specialties" }, { label: s.name }]} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: s.name, item: `${SITE_URL}/specialty/${slug}` },
+        ],
+      }} />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: s.name }]} />
       <PageHeader title={s.name} meta={pokemonWith.length + " Pokemon"}>
         {s.description && <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">{s.description}</p>}
       </PageHeader>

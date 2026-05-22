@@ -19,7 +19,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const item = Object.values(ITEMS).find((i) => i.slug === slug);
   if (!item) return { title: "Not found" };
-  return { title: item.name, description: `${item.name} — appears in ${item.categories.length} favorite categories.` };
+  const desc = item.categories.length > 0
+    ? `${item.name} is a gift item in Pokemon Pokopia, appearing in ${item.categories.length} favorite ${item.categories.length === 1 ? "category" : "categories"}. Give it to Pokemon that like these categories to earn happiness.`
+    : `${item.name} — a naturally occurring material in Pokemon Pokopia. Found in locations across the game.`;
+  return { title: item.name, description: desc };
 }
 
 export default async function ItemPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -1,12 +1,12 @@
 type ActiveVariant = "on" | "on-accent" | "on-leaf";
 
+const BASE = "font-outfit font-bold text-[12px] px-3 py-[5px] border border-[1.5px] border-accent rounded-full transition-all tracking-[0.02em]";
+const INACTIVE = "bg-paper text-ink-soft hover:bg-accent hover:text-paper hover:border-accent";
 const ACTIVE_CLASSES: Record<ActiveVariant, string> = {
-  "on":       "bg-ink text-paper border-ink",
-  "on-accent":"bg-accent text-paper border-accent",
+  "on":       "bg-accent-soft text-accent-deep border-accent",
+  "on-accent":"bg-accent text-paper border-accent-deep",
   "on-leaf":  "bg-leaf text-paper border-leaf",
 };
-
-const BASE = "font-outfit font-bold text-[12px] px-3 py-[5px] bg-paper border border-[1.5px] border-accent rounded-full text-ink-soft transition-all tracking-[0.02em] hover:bg-accent hover:text-paper hover:border-accent";
 
 export default function Shortcut({
   active,
@@ -23,7 +23,7 @@ export default function Shortcut({
 }) {
   return (
     <button
-      className={`${BASE} ${active ? ACTIVE_CLASSES[variant] : ""} ${className}`}
+      className={`${BASE} ${active ? ACTIVE_CLASSES[variant] : INACTIVE} ${className}`}
       onClick={onClick}
     >
       {children}
