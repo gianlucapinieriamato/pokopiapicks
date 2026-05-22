@@ -105,7 +105,7 @@ export default function PokedexPage() {
         {paginated.length === 0 ? (
           <p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No Pokemon match your filters.</p>
         ) : (
-          <div className="grid grid-cols-1 min-[430px]:grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(175px,1fr))] gap-2 sm:gap-3">
+          <div className="grid grid-cols-1 min-[400px]:grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(175px,1fr))] gap-2 sm:gap-3 max-w-[220px] min-[400px]:max-w-none mx-auto min-[400px]:mx-0">
             {paginated.map((p) => (
               <Link key={p.slug} href={`/pokemon/${p.slug}`} className="group cursor-pointer border-none bg-transparent p-0 text-left flex no-underline text-inherit transition-transform duration-150 hover:-translate-y-1 hover:scale-[1.02]" aria-label={p.name}>
                 <TcgCard p={p} size="sm" />
