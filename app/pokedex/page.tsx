@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useMemo, useReducer } from "react";
 import { POKEMON_LIST, SPECIALTIES } from "@/app/lib/data";
 import TcgCard from "@/app/components/TcgCard";
 import Shortcut from "@/app/components/Shortcut";
@@ -23,13 +23,38 @@ for (const p of POKEMON_LIST) {
   if (p.flavor) FLAVOR_COUNTS[p.flavor] = (FLAVOR_COUNTS[p.flavor] ?? 0) + 1;
 }
 
+type FilterState = {
+  habitatFilter: string[];
+  flavorFilter: string[];
+  specialtyFilter: string[];
+  search: string;
+  page: number;
+};
+
+type FilterAction =
+  | { type: "TOGGLE"; key: "habitatFilter" | "flavorFilter" | "specialtyFilter"; val: string }
+  | { type: "SET_SEARCH"; val: string }
+  | { type: "SET_PAGE"; val: number }
+  | { type: "CLEAR" };
+
+const INIT_STATE: FilterState = { habitatFilter: [], flavorFilter: [], specialtyFilter: [], search: "", page: 1 };
+
+function filterReducer(state: FilterState, action: FilterAction): FilterState {
+  switch (action.type) {
+    case "TOGGLE": {
+      const arr = state[action.key];
+      const next = arr.includes(action.val) ? arr.filter((x) => x !== action.val) : [...arr, action.val];
+      return { ...state, [action.key]: next, page: 1 };
+    }
+    case "SET_SEARCH": return { ...state, search: action.val, page: 1 };
+    case "SET_PAGE": return { ...state, page: action.val };
+    case "CLEAR": return INIT_STATE;
+  }
+}
 
 export default function PokedexPage() {
-  const [habitatFilter, setHabitatFilter] = useState<string[]>([]);
-  const [flavorFilter, setFlavorFilter] = useState<string[]>([]);
-  const [specialtyFilter, setSpecialtyFilter] = useState<string[]>([]);
-  const [search, setSearch] = useState("");
-  const [page, setPage] = useState(1);
+  const [state, dispatch] = useReducer(filterReducer, INIT_STATE);
+  const { habitatFilter, flavorFilter, specialtyFilter, search, page } = state;
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -45,11 +70,6 @@ export default function PokedexPage() {
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
-  const toggle = (val: string, set: (fn: (prev: string[]) => string[]) => void) => {
-    set((prev) => prev.includes(val) ? prev.filter((x) => x !== val) : [...prev, val]);
-    setPage(1);
-  };
-
   return (
     <PageWrap>
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Pokédex" }]} />
@@ -58,7 +78,7 @@ export default function PokedexPage() {
       <Card className="mb-4">
         <SearchInput
           value={search}
-          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+          onChange={(e) => dispatch({ type: "SET_SEARCH", val: e.target.value })}
           placeholder="Search Pokemon…"
           className="mb-4"
         />
@@ -67,7 +87,7 @@ export default function PokedexPage() {
             <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Ideal Habitat</div>
             <div className="flex flex-wrap gap-1.5">
               {HABITATS.map((h) => (
-                <Shortcut key={h} active={habitatFilter.includes(h)} onClick={() => toggle(h, setHabitatFilter)}>
+                <Shortcut key={h} active={habitatFilter.includes(h)} onClick={() => dispatch({ type: "TOGGLE", key: "habitatFilter", val: h })}>
                   {h} <span className="opacity-55 text-[10px]">({HABITAT_COUNTS[h] ?? 0})</span>
                 </Shortcut>
               ))}
@@ -77,7 +97,7 @@ export default function PokedexPage() {
             <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Flavor</div>
             <div className="flex flex-wrap gap-1.5">
               {FLAVORS.map((f) => (
-                <Shortcut key={f} active={flavorFilter.includes(f)} onClick={() => toggle(f, setFlavorFilter)}>
+                <Shortcut key={f} active={flavorFilter.includes(f)} onClick={() => dispatch({ type: "TOGGLE", key: "flavorFilter", val: f })}>
                   {f} <span className="opacity-55 text-[10px]">({FLAVOR_COUNTS[f] ?? 0})</span>
                 </Shortcut>
               ))}
@@ -87,7 +107,7 @@ export default function PokedexPage() {
             <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Specialty</div>
             <div className="flex flex-wrap gap-1.5">
               {ALL_SPECIALTIES.map((s) => (
-                <Shortcut key={s.slug} active={specialtyFilter.includes(s.slug)} onClick={() => toggle(s.slug, setSpecialtyFilter)}>
+                <Shortcut key={s.slug} active={specialtyFilter.includes(s.slug)} onClick={() => dispatch({ type: "TOGGLE", key: "specialtyFilter", val: s.slug })}>
                   {s.name}
                 </Shortcut>
               ))}
@@ -95,7 +115,7 @@ export default function PokedexPage() {
           </div>
         </div>
         {(habitatFilter.length || flavorFilter.length || specialtyFilter.length || search) ? (
-          <Shortcut className="mt-3" onClick={() => { setHabitatFilter([]); setFlavorFilter([]); setSpecialtyFilter([]); setSearch(""); setPage(1); }}>
+          <Shortcut className="mt-3" onClick={() => dispatch({ type: "CLEAR" })}>
             Clear filters
           </Shortcut>
         ) : null}
@@ -115,9 +135,9 @@ export default function PokedexPage() {
         )}
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
-            {page > 1 && <NavBtn onClick={() => setPage((p) => p - 1)}>◀ Prev</NavBtn>}
+            {page > 1 && <NavBtn onClick={() => dispatch({ type: "SET_PAGE", val: page - 1 })}>◀ Prev</NavBtn>}
             <span className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium self-center">Page {page} / {pages}</span>
-            {page < pages && <NavBtn onClick={() => setPage((p) => p + 1)}>Next ▶</NavBtn>}
+            {page < pages && <NavBtn onClick={() => dispatch({ type: "SET_PAGE", val: page + 1 })}>Next ▶</NavBtn>}
           </div>
         )}
       </Card>

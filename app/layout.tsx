@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
+import { Outfit, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import Nav from "@/app/components/Nav";
 import JsonLd from "@/app/components/JsonLd";
+import { AdSlot } from "@/app/components/AdSlot";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/config";
+
+const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700", "800"], variable: "--font-outfit", display: "swap" });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -34,13 +40,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`h-full ${outfit.variable} ${jetbrainsMono.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6028271541011678"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
         <JsonLd data={{
           "@context": "https://schema.org",
@@ -57,9 +63,15 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <Nav />
+        <div className="max-w-[1080px] mx-auto px-5 py-2">
+          <AdSlot slot="8403578120" format="horizontal" />
+        </div>
         <main className="flex-1">
           {children}
         </main>
+        <div className="max-w-[1080px] mx-auto px-5 py-2">
+          <AdSlot slot="2178978334" format="horizontal" />
+        </div>
         <footer className="text-center py-6 px-5 font-mono text-[10px] text-ink-fade tracking-[0.04em] font-medium border-t border-paper-edge bg-chrome">
           Pokopia Picks
         </footer>
