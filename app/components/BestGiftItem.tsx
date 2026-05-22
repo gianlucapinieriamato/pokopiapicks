@@ -18,7 +18,7 @@ export default function BestGiftItem({
         <div className={`absolute -top-2 right-3 font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full text-paper tracking-[0.06em] ${isElite ? "bg-accent-deep" : "bg-accent"}`}>
           {cats.length}× categories
         </div>
-        <div className="w-14 h-14 shrink-0 bg-white/70 rounded-[10px] flex items-center justify-center p-1">
+        <div className="size-14 shrink-0 bg-white/70 rounded-[10px] flex items-center justify-center p-1">
           {iconSrc && <img src={iconSrc} alt={item} className="w-full h-full object-contain [image-rendering:pixelated]" />}
         </div>
         <div className="flex-1 min-w-0">

@@ -18,16 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return { title: loc.name, description: loc.description };
 }
 
-export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const loc = LOCATIONS[slug];
-  if (!loc) return <PageWrap><p>Location not found.</p></PageWrap>;
-
-  const pokemonHere = Object.values(POKEMON)
-    .filter((p) => p.habitatList?.some((h) => h.locations.includes(slug)))
-    .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
-
-  const ItemGrid = ({ items }: { items: string[] }) => (
+function ItemGrid({ items }: { items: string[] }) {
+  return (
     <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 px-1 mt-3">
       {items.map((m) => (
         <div key={m} className="text-[13px] px-[10px] py-[6px] rounded-lg bg-paper border border-surface-2 text-ink flex items-center gap-2 min-h-[44px]">
@@ -36,6 +28,16 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       ))}
     </div>
   );
+}
+
+export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const loc = LOCATIONS[slug];
+  if (!loc) return <PageWrap><p>Location not found.</p></PageWrap>;
+
+  const pokemonHere = Object.values(POKEMON)
+    .filter((p) => p.habitatList?.some((h) => h.locations.includes(slug)))
+    .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   return (
     <PageWrap>

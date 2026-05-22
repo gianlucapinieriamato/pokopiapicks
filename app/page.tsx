@@ -40,7 +40,7 @@ function normalize(s: string) {
 }
 
 export default function Home() {
-  const router = useRouter();
+  const { push } = useRouter();
   const [lang, setLang] = useState<Lang>("en");
   const [query, setQuery] = useState("");
   const [matches, setMatches] = useState<PokemonEntry[]>([]);
@@ -67,8 +67,8 @@ export default function Home() {
   }, []);
 
   const navigateTo = useCallback((slug: string) => {
-    router.push(`/pokemon/${slug}`);
-  }, [router]);
+    push(`/pokemon/${slug}`);
+  }, [push]);
 
   const handleInput = (v: string) => {
     setQuery(v);

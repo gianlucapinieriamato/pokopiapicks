@@ -38,7 +38,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
       <div className="mb-6">
         <div className="flex items-center gap-4 mb-2">
           {item.icon && (
-            <div className="w-16 h-16 bg-surface-1 rounded-[10px] flex items-center justify-center p-[6px] shrink-0">
+            <div className="size-16 bg-surface-1 rounded-[10px] flex items-center justify-center p-[6px] shrink-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={item.icon} alt={item.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
             </div>

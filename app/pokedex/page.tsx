@@ -117,9 +117,9 @@ export default function PokedexPage() {
         )}
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
-            {page > 1 && <NavBtn onClick={() => setPage(page - 1)}>◀ Prev</NavBtn>}
+            {page > 1 && <NavBtn onClick={() => setPage((p) => p - 1)}>◀ Prev</NavBtn>}
             <span className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium self-center">Page {page} / {pages}</span>
-            {page < pages && <NavBtn onClick={() => setPage(page + 1)}>Next ▶</NavBtn>}
+            {page < pages && <NavBtn onClick={() => setPage((p) => p + 1)}>Next ▶</NavBtn>}
           </div>
         )}
       </Card>

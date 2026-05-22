@@ -160,7 +160,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                   return (
                     <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
                       <div className={`text-[13px] px-[10px] py-[6px] rounded-lg border transition-all flex items-center gap-2 min-h-[44px] hover:border-accent hover:bg-surface-1 ${isShared ? "bg-accent-soft border-accent font-bold" : "bg-paper border-surface-2 text-ink"}`}>
-                        <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+                        <div className="size-8 shrink-0 flex items-center justify-center">
                           {itemEntry?.icon && <img src={itemEntry.icon} alt={item} className="w-full h-full object-contain [image-rendering:pixelated]" />}
                         </div>
                         <div className="flex-1 min-w-0">
@@ -182,8 +182,8 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         {p.habitatList && p.habitatList.length > 0 && (
           <>
             <SectionTitle className="mt-6">Where to find</SectionTitle>
-            {p.habitatList.map((entry, i) => (
-              <div key={i} className="mb-4">
+            {p.habitatList.map((entry) => (
+              <div key={entry.habitatSlug} className="mb-4">
                 <div className="flex items-baseline gap-2 mb-2 px-[14px] py-2 bg-chrome rounded-[10px] border border-paper-edge">
                   <Link href={`/habitat/${entry.habitatSlug}`} className="font-outfit font-bold text-[16px] no-underline text-inherit">
                     {HABITATS[entry.habitatSlug]?.name ?? entry.habitatSlug}

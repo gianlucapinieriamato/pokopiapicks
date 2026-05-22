@@ -21,7 +21,7 @@ export default function CollapsibleSection({
         aria-expanded={open}
       >
         <span className="font-outfit font-bold text-[16px]">{title}</span>
-        {count && <span className="font-mono text-[11px] text-ink-soft ml-auto font-medium">{count}</span>}
+        {count !== undefined && <span className="font-mono text-[11px] text-ink-soft ml-auto font-medium">{count}</span>}
         <span className="font-mono text-[11px] text-ink-fade pl-2">
           {open ? "▲" : "▼"}
         </span>

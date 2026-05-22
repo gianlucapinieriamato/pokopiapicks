@@ -23,9 +23,8 @@ export default async function HabitatPage({ params }: { params: Promise<{ slug: 
   if (!h) return <PageWrap><p>Habitat not found.</p></PageWrap>;
 
   const pokemonHere = h.pokemon
-    .map((s) => POKEMON[s])
-    .filter(Boolean)
-    .sort((a, b) => (a!.nationalDexNum ?? 99999) - (b!.nationalDexNum ?? 99999)) as NonNullable<typeof POKEMON[string]>[];
+    .flatMap((s) => POKEMON[s] ? [POKEMON[s]] : [])
+    .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   return (
     <PageWrap>

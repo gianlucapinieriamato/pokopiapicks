@@ -23,9 +23,8 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ slug
   if (!s) return <PageWrap><p>Specialty not found.</p></PageWrap>;
 
   const pokemonWith = s.pokemon
-    .map((pSlug) => POKEMON[pSlug])
-    .filter(Boolean)
-    .sort((a, b) => (a!.nationalDexNum ?? 99999) - (b!.nationalDexNum ?? 99999)) as NonNullable<typeof POKEMON[string]>[];
+    .flatMap((pSlug) => POKEMON[pSlug] ? [POKEMON[pSlug]] : [])
+    .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   return (
     <PageWrap>

@@ -125,7 +125,7 @@ export default function MatchmakerPage() {
 
         {anchor && (
           <div className="flex items-start gap-7 mt-5">
-            <div className="w-[110px] h-[110px] shrink-0 bg-[var(--portrait-bg)] rounded-[14px] border-2 border-paper-edge flex items-center justify-center p-2 shadow-[0_4px_12px_-4px_var(--shadow)]">
+            <div className="size-[110px] shrink-0 bg-[var(--portrait-bg)] rounded-[14px] border-2 border-paper-edge flex items-center justify-center p-2 shadow-[0_4px_12px_-4px_var(--shadow)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
             </div>
@@ -156,13 +156,16 @@ export default function MatchmakerPage() {
             return (
               <div
                 key={p.slug}
+                role="button"
+                tabIndex={0}
                 className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] mb-2.5 cursor-pointer"
                 onClick={() => setCompareSlug(compareSlug === p.slug ? null : p.slug)}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setCompareSlug(compareSlug === p.slug ? null : p.slug); }}
               >
                 <div className="absolute -top-2 right-3 font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
                   {s} pts{isComplementary ? " ⚡" : ""}
                 </div>
-                <div className="w-14 h-14 shrink-0 bg-white/70 rounded-[10px] flex items-center justify-center p-1">
+                <div className="size-14 shrink-0 bg-white/70 rounded-[10px] flex items-center justify-center p-1">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
                 </div>

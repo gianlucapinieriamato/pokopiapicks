@@ -41,7 +41,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             return (
               <Link key={itemName} href={`/item/${item?.slug ?? itemName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
                 <div className="text-[13px] px-[10px] py-[6px] rounded-lg bg-paper border border-surface-2 text-ink transition-all flex items-center gap-2 min-h-[44px] hover:border-accent hover:bg-surface-1">
-                  <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <div className="size-8 shrink-0 flex items-center justify-center">
                     {item?.icon && <img src={item.icon} alt={itemName} className="w-full h-full object-contain [image-rendering:pixelated]" />}
                   </div>
                   <div className="flex-1 min-w-0">{itemName}</div>

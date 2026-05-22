@@ -70,7 +70,7 @@ export default function ItemsClient({ items, categories }: { items: ItemEntry[];
                 <div className="hover-tile flex items-center gap-2.5 py-2 px-2.5">
                   {item.icon && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={item.icon} alt="" className="w-7 h-7 object-contain [image-rendering:pixelated] shrink-0" />
+                    <img src={item.icon} alt="" className="size-7 object-contain [image-rendering:pixelated] shrink-0" />
                   )}
                   <span className="font-outfit font-semibold text-xs text-ink leading-[1.3] line-clamp-2">{item.name}</span>
                 </div>
@@ -80,9 +80,9 @@ export default function ItemsClient({ items, categories }: { items: ItemEntry[];
         )}
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
-            {page > 1 && <NavBtn onClick={() => setPage(page - 1)}>◀ Prev</NavBtn>}
+            {page > 1 && <NavBtn onClick={() => setPage((p) => p - 1)}>◀ Prev</NavBtn>}
             <span className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium self-center">Page {page} / {pages}</span>
-            {page < pages && <NavBtn onClick={() => setPage(page + 1)}>Next ▶</NavBtn>}
+            {page < pages && <NavBtn onClick={() => setPage((p) => p + 1)}>Next ▶</NavBtn>}
           </div>
         )}
       </Card>
