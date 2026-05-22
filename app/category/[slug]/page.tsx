@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { CATEGORIES, ITEMS, POKEMON, pkmnIconUrl, dexNum } from "@/app/lib/data";
+import JsonLd from "@/app/components/JsonLd";
+import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import Card from "@/app/components/Card";
@@ -18,7 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const c = CATEGORIES[slug];
   if (!c) return { title: "Not found" };
-  return { title: `${c.name} category`, description: `${c.items.length} items in the ${c.name} favorite category.` };
+  return {
+    title: `${c.name} — Gift Category`,
+    description: `${c.name} items in Pokemon Pokopia: ${c.items.length} gifts that earn happiness with Pokemon that like this category.`,
+  };
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -32,6 +37,15 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
   return (
     <PageWrap>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Items", item: `${SITE_URL}/items` },
+          { "@type": "ListItem", position: 3, name: cat.name, item: `${SITE_URL}/category/${slug}` },
+        ],
+      }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Items", href: "/items" }, { label: cat.name }]} />
       <PageHeader title={cat.name} meta={`${cat.items.length} items · ${pokemonWhoLike.length} Pokemon`} />
 
