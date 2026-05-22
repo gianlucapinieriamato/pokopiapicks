@@ -57,4 +57,24 @@ export type LocationEntry = {
   objective: string;
   materials: string[];
   blocksAndPlants: string[];
+  itemsInArea?: string[];
+  itemsInPokeballs?: string[];
+  treasure?: string[];
+  shopItems?: { name: string; level: number }[];
+};
+
+export type HabitatRequirement = {
+  name: string;
+  qty: number;
+};
+
+export type CraftingIngredient = {
+  name: string;
+  qty: number;
+};
+
+export type CraftingRecipe = {
+  category: string;
+  unlock: string;
+  materials: CraftingIngredient[];
 };
