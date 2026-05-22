@@ -131,7 +131,7 @@ export default function Home() {
 
       <Card>
         <SectionTitle className="mb-5">All Pokemon</SectionTitle>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(175px,1fr))] gap-3 max-sm:grid-cols-2 max-sm:gap-2 max-[420px]:grid-cols-1">
+        <div className="grid grid-cols-1 min-[430px]:grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(175px,1fr))] gap-2 sm:gap-3">
           {POKEMON_LIST.map((p) => (
             <Link key={p.slug} href={`/pokemon/${p.slug}`} className="group cursor-pointer border-none bg-transparent p-0 text-left flex no-underline text-inherit transition-transform duration-150 hover:-translate-y-1 hover:scale-[1.02]" aria-label={p.name}>
               <TcgCard p={p} size="sm" />
