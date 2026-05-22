@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { pkmnIconUrl, dexNum, getRarity, SPECIALTIES } from "@/app/lib/data";
 import type { PokemonEntry } from "@/app/lib/types";
 
@@ -89,19 +90,25 @@ export default function TcgCard({
   const v = VARIANTS[size];
   const [h1, h2] = HABITAT_COLORS[p.habitat] ?? ["#d8ccb8", "#a89070"];
 
-  // CSS custom properties are the Tailwind-recommended pattern for runtime float values
-  const holoVars = { "--holo-opacity": r.holoIntensity / 100, "--sweep-opacity": r.sparkles ? (r.holoIntensity / 100) * 0.65 : 0 } as React.CSSProperties;
+  const holoOpacity = r.holoIntensity / 100;
+  const sweepOpacity = r.sparkles ? holoOpacity * 0.65 : 0;
 
   return (
-    <div className={`relative w-full ${v.wrapper} aspect-[100/142]`}>
+    <div className={`relative w-full ${v.wrapper} aspect-[100/155]`}>
       {/* Gold frame */}
-      <div className={`absolute inset-0 ${v.frameRound} bg-[var(--card-frame)] ${r.sparkles ? v.legendShadow : v.frameShadow}`}>
+      <div
+        className={`absolute inset-0 ${v.frameRound} ${r.sparkles ? v.legendShadow : v.frameShadow}`}
+        style={{ background: 'linear-gradient(135deg, var(--accent-soft) 0%, var(--accent) 30%, var(--accent-soft) 60%, var(--accent-deep) 100%)' }}
+      >
 
         {/* Inner card face */}
         <div className={`absolute ${v.inset} ${v.innerRound} bg-paper border border-[1.5px] border-[rgba(138,105,25,0.28)] overflow-hidden flex flex-col`}>
 
           {/* Header: name + dex */}
-          <div className={`${v.headerPad} bg-[var(--card-header)] flex items-center justify-between border-b border-[1.5px] border-accent shrink-0 gap-1`}>
+          <div
+            className={`${v.headerPad} flex items-center justify-between border-b border-accent shrink-0 gap-1`}
+            style={{ background: 'linear-gradient(180deg, var(--color-surface-2) 0%, var(--color-chrome) 100%)' }}
+          >
             <div className={`font-outfit font-extrabold ${v.name} tracking-[-0.01em] leading-none text-ink whitespace-nowrap overflow-hidden text-ellipsis min-w-0`}>
               {p.name}
               {r.sparkles && (
@@ -117,12 +124,12 @@ export default function TcgCard({
             style={{ "--h1": h1, "--h2": h2 } as React.CSSProperties}
           >
             {r.sparkles && (
-              <div className="absolute inset-0 pointer-events-none bg-[var(--sparkle-dots)]" />
+              <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'var(--sparkle-dots)' }} />
             )}
             {/* Holo shimmer overlay */}
             <div
-              className="absolute inset-0 pointer-events-none bg-[var(--holo-gradient)] mix-blend-screen opacity-[var(--holo-opacity)]"
-              style={holoVars}
+              className="absolute inset-0 pointer-events-none mix-blend-screen"
+              style={{ backgroundImage: 'var(--holo-gradient)', opacity: holoOpacity }}
             />
             {/* Habitat pill */}
             <div className={`absolute top-[5px] left-[5px] ${v.artLabel} px-[7px] py-[2px] rounded-full bg-white/85 text-ink font-outfit font-bold tracking-[0.03em]`}>
@@ -134,12 +141,9 @@ export default function TcgCard({
                 {r.sparkles ? "LEGENDARY" : `${giftCount} GIFTS`}
               </div>
             )}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={pkmnIconUrl(p)}
-              alt={p.name}
-              className="w-[75%] h-[88%] object-contain [image-rendering:pixelated] drop-shadow-[0_4px_0_rgba(45,36,24,0.20)] relative z-[1] -mb-0.5"
-            />
+            <div className="relative w-[75%] h-[88%] z-[1] -mb-0.5 drop-shadow-[0_4px_0_rgba(45,36,24,0.20)]">
+              <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="200px" />
+            </div>
           </div>
 
           {/* Chips: Likes / Specialty / Flavor */}
@@ -155,7 +159,7 @@ export default function TcgCard({
               <div className="flex gap-[6px] mt-1 items-start">
                 {p.specialties && p.specialties.length > 0 && (
                   <div className="flex-1 min-w-0">
-                    <div className={`font-mono ${v.chipLabel} text-accent-deep tracking-[0.07em] font-semibold uppercase mb-[3px]`}>Specialty</div>
+                    <div className={`font-mono ${v.chipLabel} text-accent-deep tracking-[0.07em] font-semibold uppercase mb-[3px]`}><span>Specialty</span></div>
                     <div className="flex flex-wrap gap-[3px]">
                       {p.specialties.map((s) => (
                         <span key={s} className={`${CHIP_BASE} ${v.chipSm} text-accent-deep border-accent bg-accent-soft`}>
@@ -167,8 +171,10 @@ export default function TcgCard({
                 )}
                 {p.flavor && (
                   <div className="flex-1 min-w-0">
-                    <div className={`font-mono ${v.chipLabel} text-leaf tracking-[0.07em] font-semibold uppercase mb-[3px]`}>Flavor</div>
-                    <span className={`${CHIP_BASE} ${v.chipSm} text-leaf border-leaf bg-leaf-soft`}>{p.flavor}</span>
+                    <div className={`font-mono ${v.chipLabel} text-leaf tracking-[0.07em] font-semibold uppercase mb-[3px]`}><span>Flavor</span></div>
+                    <div className="flex flex-wrap gap-[3px]">
+                      <span className={`${CHIP_BASE} ${v.chipSm} text-leaf border-leaf bg-leaf-soft`}>{p.flavor}</span>
+                    </div>
                   </div>
                 )}
               </div>
@@ -176,17 +182,20 @@ export default function TcgCard({
           </div>
 
           {/* Footer bar */}
-          <div className={`mt-auto ${v.footerPad} flex justify-between items-center bg-[var(--card-footer)] border-t border-paper-edge shrink-0`}>
+          <div
+            className={`mt-auto ${v.footerPad} flex justify-between items-center border-t border-paper-edge shrink-0`}
+            style={{ background: 'linear-gradient(180deg, transparent, var(--color-chrome))' }}
+          >
             <span className={`font-mono ${v.footer} text-ink-fade tracking-[0.08em] font-semibold`}>POKOPIA · PICKS</span>
             <span className={`font-mono ${v.footer} ${r.sparkles ? "text-accent" : "text-ink-fade"} tracking-[0.06em] font-semibold`}>
-              {r.sparkles ? "LEGENDARY" : (p.types?.[0] ?? p.flavor ?? p.habitat).toUpperCase()}
+              {p.types?.[0]?.toUpperCase() ?? ""}
             </span>
           </div>
 
           {/* Holo sweep (legendary only) */}
           <div
-            className="tcg-holo-sweep absolute inset-0 pointer-events-none bg-[var(--holo-gradient)] mix-blend-soft-light opacity-[var(--sweep-opacity)]"
-            style={holoVars}
+            className="transition-opacity duration-300 group-hover:opacity-[0.18] absolute inset-0 pointer-events-none mix-blend-soft-light"
+            style={{ backgroundImage: 'var(--holo-gradient)', opacity: sweepOpacity }}
           />
         </div>
       </div>

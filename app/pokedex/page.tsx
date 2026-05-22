@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useState, useMemo } from "react";
 import { POKEMON_LIST, SPECIALTIES } from "@/app/lib/data";
 import TcgCard from "@/app/components/TcgCard";
+import Shortcut from "@/app/components/Shortcut";
+import SearchInput from "@/app/components/SearchInput";
 import NavBtn from "@/app/components/NavBtn";
 import PageWrap from "@/app/components/PageWrap";
 import Breadcrumb from "@/app/components/Breadcrumb";
@@ -11,7 +13,7 @@ import PageHeader from "@/app/components/PageHeader";
 
 const HABITATS = ["Dry", "Bright", "Warm", "Cool", "Dark", "Humid"];
 const FLAVORS = ["Dry", "Sour", "Spicy", "Sweet", "Bitter"];
-const ALL_SPECIALTIES = Object.values(SPECIALTIES).sort((a, b) => a.name.localeCompare(b.name));
+const ALL_SPECIALTIES = Object.values(SPECIALTIES);
 const PAGE_SIZE = 60;
 
 const HABITAT_COUNTS: Record<string, number> = {};
@@ -21,6 +23,7 @@ for (const p of POKEMON_LIST) {
   if (p.flavor) FLAVOR_COUNTS[p.flavor] = (FLAVOR_COUNTS[p.flavor] ?? 0) + 1;
 }
 
+
 export default function PokedexPage() {
   const [habitatFilter, setHabitatFilter] = useState<string[]>([]);
   const [flavorFilter, setFlavorFilter] = useState<string[]>([]);
@@ -29,49 +32,44 @@ export default function PokedexPage() {
   const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
-    let list = POKEMON_LIST;
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      list = list.filter((p) => p.name.toLowerCase().includes(q));
-    }
-    if (habitatFilter.length) list = list.filter((p) => habitatFilter.includes(p.habitat));
-    if (flavorFilter.length) list = list.filter((p) => p.flavor && flavorFilter.includes(p.flavor));
-    if (specialtyFilter.length) list = list.filter((p) =>
-      p.specialties?.some((s) => specialtyFilter.includes(s))
-    );
-    return list;
+    const q = search.trim().toLowerCase();
+    return POKEMON_LIST.filter((p) => {
+      if (q && !p.name.toLowerCase().includes(q)) return false;
+      if (habitatFilter.length && !habitatFilter.includes(p.habitat)) return false;
+      if (flavorFilter.length && (!p.flavor || !flavorFilter.includes(p.flavor))) return false;
+      if (specialtyFilter.length && !p.specialties?.some((s) => specialtyFilter.includes(s))) return false;
+      return true;
+    });
   }, [search, habitatFilter, flavorFilter, specialtyFilter]);
 
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
-  const toggle = (arr: string[], val: string, set: (v: string[]) => void) => {
-    set(arr.includes(val) ? arr.filter((x) => x !== val) : [...arr, val]);
+  const toggle = (val: string, set: (fn: (prev: string[]) => string[]) => void) => {
+    set((prev) => prev.includes(val) ? prev.filter((x) => x !== val) : [...prev, val]);
     setPage(1);
   };
 
   return (
     <PageWrap>
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Pokédex" }]} />
-      <PageHeader title="Pokédex" meta={`${filtered.length} / ${POKEMON_LIST.length} Pokémon`} />
+      <PageHeader title="Pokédex" meta={`${filtered.length} / ${POKEMON_LIST.length} Pokemon`} />
 
       <Card className="mb-4">
-        <input
-          type="text"
-          className="search-input mb-4"
-          placeholder="Search Pokémon…"
-          aria-label="Search Pokémon"
+        <SearchInput
           value={search}
           onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+          placeholder="Search Pokemon…"
+          className="mb-4"
         />
         <div className="flex flex-wrap gap-3">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Ideal Habitat</div>
             <div className="flex flex-wrap gap-1.5">
               {HABITATS.map((h) => (
-                <button key={h} className={`shortcut${habitatFilter.includes(h) ? " shortcut--on" : ""}`} onClick={() => toggle(habitatFilter, h, setHabitatFilter)}>
+                <Shortcut key={h} active={habitatFilter.includes(h)} onClick={() => toggle(h, setHabitatFilter)}>
                   {h} <span className="opacity-55 text-[10px]">({HABITAT_COUNTS[h] ?? 0})</span>
-                </button>
+                </Shortcut>
               ))}
             </div>
           </div>
@@ -79,9 +77,9 @@ export default function PokedexPage() {
             <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Flavor</div>
             <div className="flex flex-wrap gap-1.5">
               {FLAVORS.map((f) => (
-                <button key={f} className={`shortcut${flavorFilter.includes(f) ? " shortcut--on" : ""}`} onClick={() => toggle(flavorFilter, f, setFlavorFilter)}>
+                <Shortcut key={f} active={flavorFilter.includes(f)} onClick={() => toggle(f, setFlavorFilter)}>
                   {f} <span className="opacity-55 text-[10px]">({FLAVOR_COUNTS[f] ?? 0})</span>
-                </button>
+                </Shortcut>
               ))}
             </div>
           </div>
@@ -89,27 +87,27 @@ export default function PokedexPage() {
             <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Specialty</div>
             <div className="flex flex-wrap gap-1.5">
               {ALL_SPECIALTIES.map((s) => (
-                <button key={s.slug} className={`shortcut${specialtyFilter.includes(s.slug) ? " shortcut--on" : ""}`} onClick={() => toggle(specialtyFilter, s.slug, setSpecialtyFilter)}>
+                <Shortcut key={s.slug} active={specialtyFilter.includes(s.slug)} onClick={() => toggle(s.slug, setSpecialtyFilter)}>
                   {s.name}
-                </button>
+                </Shortcut>
               ))}
             </div>
           </div>
         </div>
         {(habitatFilter.length || flavorFilter.length || specialtyFilter.length || search) ? (
-          <button className="shortcut mt-3" onClick={() => { setHabitatFilter([]); setFlavorFilter([]); setSpecialtyFilter([]); setSearch(""); setPage(1); }}>
+          <Shortcut className="mt-3" onClick={() => { setHabitatFilter([]); setFlavorFilter([]); setSpecialtyFilter([]); setSearch(""); setPage(1); }}>
             Clear filters
-          </button>
+          </Shortcut>
         ) : null}
       </Card>
 
       <Card>
         {paginated.length === 0 ? (
-          <p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No Pokémon match your filters.</p>
+          <p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No Pokemon match your filters.</p>
         ) : (
-          <div className="pkmn-tcg-grid">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(175px,1fr))] gap-3 max-sm:grid-cols-2 max-sm:gap-2 max-[420px]:grid-cols-1">
             {paginated.map((p) => (
-              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="tcg-card-wrap" aria-label={p.name}>
+              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="group cursor-pointer border-none bg-transparent p-0 text-left flex no-underline text-inherit transition-transform duration-150 hover:-translate-y-1 hover:scale-[1.02]" aria-label={p.name}>
                 <TcgCard p={p} size="sm" />
               </Link>
             ))}

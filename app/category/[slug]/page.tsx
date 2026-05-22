@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { CATEGORIES, ITEMS, POKEMON, pkmnIconUrl, dexNum } from "@/app/lib/data";
 import PageWrap from "@/app/components/PageWrap";
@@ -7,6 +8,7 @@ import Card from "@/app/components/Card";
 import PageHeader from "@/app/components/PageHeader";
 import SectionTitle from "@/app/components/SectionTitle";
 import PokemonGridCard from "@/app/components/PokemonGridCard";
+import PokemonGrid from "@/app/components/PokemonGrid";
 
 export function generateStaticParams() {
   return Object.keys(CATEGORIES).map((slug) => ({ slug }));
@@ -30,8 +32,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
   return (
     <PageWrap>
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Categories", href: "/categories" }, { label: cat.name }]} />
-      <PageHeader title={cat.name} meta={`${cat.items.length} items · ${pokemonWhoLike.length} Pokémon`} />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Items", href: "/items" }, { label: cat.name }]} />
+      <PageHeader title={cat.name} meta={`${cat.items.length} items · ${pokemonWhoLike.length} Pokemon`} />
 
       <Card>
         <SectionTitle>Items in this category</SectionTitle>
@@ -41,8 +43,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             return (
               <Link key={itemName} href={`/item/${item?.slug ?? itemName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
                 <div className="text-[13px] px-[10px] py-[6px] rounded-lg bg-paper border border-surface-2 text-ink transition-all flex items-center gap-2 min-h-[44px] hover:border-accent hover:bg-surface-1">
-                  <div className="size-8 shrink-0 flex items-center justify-center">
-                    {item?.icon && <img src={item.icon} alt={itemName} className="w-full h-full object-contain [image-rendering:pixelated]" />}
+                  <div className="relative size-8 shrink-0">
+                    {item?.icon && <Image fill src={item.icon} alt={itemName} className="object-contain [image-rendering:pixelated]" sizes="32px" />}
                   </div>
                   <div className="flex-1 min-w-0">{itemName}</div>
                 </div>
@@ -54,12 +56,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
       {pokemonWhoLike.length > 0 && (
         <Card>
-          <SectionTitle>Pokémon that like this category</SectionTitle>
-          <div className="pkmn-grid mt-3">
+          <SectionTitle>Pokemon that like this category</SectionTitle>
+          <PokemonGrid className="mt-3">
             {pokemonWhoLike.map((p) => (
               <PokemonGridCard key={p.slug} p={p} />
             ))}
-          </div>
+          </PokemonGrid>
         </Card>
       )}
     </PageWrap>

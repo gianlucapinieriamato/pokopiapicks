@@ -1,6 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { POKEMON, POKEMON_LIST, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS, pkmnIconUrl, dexNum, getCatItems, catDisplayName, catSlug as toCatSlug } from "@/app/lib/data";
+import JsonLd from "@/app/components/JsonLd";
+import InfoTip from "@/app/components/InfoTip";
+import { SITE_URL } from "@/app/lib/config";
 import CollapsibleSection from "@/app/components/CollapsibleSection";
 import GoesWellWith from "@/app/components/GoesWellWith";
 import ArrowKeyNav from "@/app/components/ArrowKeyNav";
@@ -30,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function PokemonPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const p = POKEMON[slug];
-  if (!p) return <PageWrap><p>Pokémon not found.</p></PageWrap>;
+  if (!p) return <PageWrap><p>Pokemon not found.</p></PageWrap>;
 
   const idx = POKEMON_LIST.findIndex((q) => q.slug === slug);
   const prev = idx > 0 ? POKEMON_LIST[idx - 1] : null;
@@ -56,14 +60,33 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
   return (
     <PageWrap>
       <ArrowKeyNav prevSlug={prev?.slug ?? null} nextSlug={next?.slug ?? null} />
+      <JsonLd data={[
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Pokédex", item: `${SITE_URL}/pokedex` },
+            { "@type": "ListItem", position: 3, name: p.name, item: `${SITE_URL}/pokemon/${slug}` },
+          ],
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Thing",
+          name: p.name,
+          description: `${p.name} — ${p.habitat} habitat. Favorite items: ${p.categories.slice(0, 3).join(", ")}.`,
+          image: pkmnIconUrl(p),
+          url: `${SITE_URL}/pokemon/${slug}`,
+        },
+      ]} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Pokédex", href: "/pokedex" }, { label: p.name }]} />
 
       <div className="flex justify-between mb-5 max-md:gap-2">
         {prev ? (
-          <NavBtn href={`/pokemon/${prev.slug}`} title="Previous Pokémon (← key)">◀ #{dexNum(prev)} {prev.name}</NavBtn>
+          <NavBtn href={`/pokemon/${prev.slug}`} title="Previous Pokemon (← key)">◀ #{dexNum(prev)} {prev.name}</NavBtn>
         ) : <span />}
         {next ? (
-          <NavBtn href={`/pokemon/${next.slug}`} title="Next Pokémon (→ key)">{next.name} #{dexNum(next)} ▶</NavBtn>
+          <NavBtn href={`/pokemon/${next.slug}`} title="Next Pokemon (→ key)">{next.name} #{dexNum(next)} ▶</NavBtn>
         ) : <span />}
       </div>
 
@@ -75,23 +98,27 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         <div className="flex-1 min-w-0">
           <div className="font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] mb-[2px]">#{dexNum(p)}</div>
           <div className="font-outfit font-extrabold text-[36px] tracking-[-0.02em] leading-[1.05] mb-2 max-md:text-[26px]">{p.name}</div>
-          <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em]">
-            Ideal habitat: <span className="text-leaf font-semibold">{p.habitat}</span>
-            {" "}<span className="info-tip" data-tip="Pokémon with the same habitat can share a living space in Pokopia." aria-label="Pokémon with the same habitat can share a living space in Pokopia.">i</span>
-            {p.flavor && <>
-              {" · "}Flavor: <span className="text-leaf font-semibold">{p.flavor}</span>
-              {" "}<span className="info-tip" data-tip="The berry flavor this Pokémon prefers. Pokémon that share a flavor tend to like the same gift items." aria-label="The berry flavor this Pokémon prefers.">i</span>
-            </>}
+          <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>
+              <span>Ideal habitat: </span><span className="text-leaf font-semibold">{p.habitat}</span>
+              <InfoTip tip="Pokemon with the same habitat can share a living space in Pokopia." />
+            </span>
+            {p.flavor && (
+              <span>
+                <span>Flavor: </span><span className="text-leaf font-semibold">{p.flavor}</span>
+                <InfoTip tip="The berry flavor this Pokemon prefers. Pokemon that share a flavor tend to like the same gift items." />
+              </span>
+            )}
           </div>
           {p.specialties && p.specialties.length > 0 && (
             <div className="mt-3">
               <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
                 Specialty
-                {" "}<span className="info-tip" data-tip="Specialties determine bonus effects when this Pokémon helps with certain Pokopia activities." aria-label="Specialty bonus activities.">i</span>
+                <InfoTip tip="Specialties determine bonus effects when this Pokemon helps with certain Pokopia activities." />
               </p>
               <div className="flex flex-wrap gap-2 mt-2">
                 {p.specialties.map((s) => (
-                  <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag no-underline text-accent-deep border-accent">
+                  <Link key={s} href={`/specialty/${s}`} className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-accent-deep border border-[1.5px] border-accent tracking-[0.04em] no-underline">
                     {SPECIALTIES[s]?.name ?? s}
                   </Link>
                 ))}
@@ -101,11 +128,11 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           <div className="mt-3">
             <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
               Favorite categories
-              {" "}<span className="info-tip" data-tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} aria-label={`Gift items in these categories earn extra happiness with ${p.name}.`}>i</span>
+              <InfoTip tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} />
             </p>
             <div className="flex flex-wrap gap-2 mt-2">
               {p.categories.map((c) => (
-                <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag no-underline">
+                <Link key={c} href={`/category/${toCatSlug(c)}`} className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em] no-underline">
                   {catDisplayName(c)}
                 </Link>
               ))}
@@ -145,7 +172,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         )}
 
         <SectionTitle>All, by category</SectionTitle>
-        <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">Items marked with ★ appear in more than one of this Pokémon&apos;s liked categories. Click a category name to collapse it.</p>
+        <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">Items marked with ★ appear in more than one of this Pokemon&apos;s liked categories. Click a category name to collapse it.</p>
         {p.categories.map((catRef) => {
           const items = getCatItems(catRef);
           return (
@@ -160,8 +187,8 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                   return (
                     <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
                       <div className={`text-[13px] px-[10px] py-[6px] rounded-lg border transition-all flex items-center gap-2 min-h-[44px] hover:border-accent hover:bg-surface-1 ${isShared ? "bg-accent-soft border-accent font-bold" : "bg-paper border-surface-2 text-ink"}`}>
-                        <div className="size-8 shrink-0 flex items-center justify-center">
-                          {itemEntry?.icon && <img src={itemEntry.icon} alt={item} className="w-full h-full object-contain [image-rendering:pixelated]" />}
+                        <div className="relative size-8 shrink-0">
+                          {itemEntry?.icon && <Image fill src={itemEntry.icon} alt={item} className="object-contain [image-rendering:pixelated]" sizes="32px" />}
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-1">
