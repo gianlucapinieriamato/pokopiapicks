@@ -1,15 +1,31 @@
 import type { Metadata } from "next";
 import Nav from "@/app/components/Nav";
-import LangToggle from "@/app/components/LangToggle";
+import JsonLd from "@/app/components/JsonLd";
 import "./globals.css";
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/config";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Pokopia Picks · What each Pokémon likes",
-    template: "%s | Pokopia Picks",
+    default: `${SITE_NAME} · What each Pokemon likes`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description: "Gift finder and wiki for Pokémon Pokopia — see what items each Pokémon likes, explore habitats, locations, and specialties.",
+  description: SITE_DESCRIPTION,
   manifest: "/manifest.json",
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} · What each Pokemon likes`,
+    description: SITE_DESCRIPTION,
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} · What each Pokemon likes`,
+    description: SITE_DESCRIPTION,
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({
@@ -26,14 +42,25 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: SITE_NAME,
+          url: SITE_URL,
+          description: SITE_DESCRIPTION,
+          potentialAction: {
+            "@type": "SearchAction",
+            target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/pokedex?q={search_term_string}` },
+            "query-input": "required name=search_term_string",
+          },
+        }} />
       </head>
       <body className="min-h-full flex flex-col">
-        <LangToggle />
         <Nav />
         <main className="flex-1">
           {children}
         </main>
-        <footer className="site-footer">
+        <footer className="text-center py-6 px-5 font-mono text-[10px] text-ink-fade tracking-[0.04em] font-medium border-t border-paper-edge bg-chrome">
           Pokopia Picks
         </footer>
       </body>

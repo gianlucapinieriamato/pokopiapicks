@@ -1,5 +1,4 @@
-"use client";
-import { useState } from "react";
+import Image from "next/image";
 
 export default function PkmnIcon({
   src,
@@ -10,20 +9,10 @@ export default function PkmnIcon({
   alt: string;
   className?: string;
 }) {
-  const [failed, setFailed] = useState(false);
-  if (!src || failed) {
-    return (
-      <div className={`icon-fallback ${className ?? ""}`}>·</div>
-    );
-  }
+  if (!src) return <div className={`flex items-center justify-center text-ink-fade ${className ?? ""}`}>·</div>;
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt={alt}
-      className={`img-icon ${className ?? ""}`}
-      loading="lazy"
-      onError={() => setFailed(true)}
-    />
+    <div className={`relative ${className ?? ""}`}>
+      <Image fill src={src} alt={alt} className="object-contain [image-rendering:pixelated]" sizes="44px" />
+    </div>
   );
 }

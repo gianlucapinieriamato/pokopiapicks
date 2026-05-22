@@ -1,20 +1,32 @@
-import Link from "next/link";
-import { ITEMS, CATEGORIES } from "@/app/lib/data";
-import ItemsClient from "./ItemsClient";
+import type { Metadata } from "next";
+import { ITEMS, CATEGORIES, POKEMON_LIST, catSlug } from "@/app/lib/data";
 
-const ALL_ITEMS = Object.values(ITEMS).sort((a, b) => a.name.localeCompare(b.name));
-const ALL_CATS = Object.values(CATEGORIES).sort((a, b) => a.name.localeCompare(b.name));
+export const metadata: Metadata = {
+  title: "Items & Gift Categories",
+  description: `Browse all gift items and categories in Pokemon Pokopia. Filter by category to find the perfect item for any Pokemon.`,
+};
+import ItemsClient from "./ItemsClient";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import PageHeader from "@/app/components/PageHeader";
+
+const ALL_ITEMS = Object.values(ITEMS);
+const ALL_CATS = Object.values(CATEGORIES);
+
+const pkmnCountByCat: Record<string, number> = {};
+for (const p of POKEMON_LIST) {
+  for (const cat of p.categories) {
+    const s = catSlug(cat);
+    pkmnCountByCat[s] = (pkmnCountByCat[s] ?? 0) + 1;
+  }
+}
 
 export default function ItemsPage() {
   return (
-    <div className="detail-wrap">
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>Items</span>
-      </div>
-      <div className="detail-header">
-        <div className="detail-title">Items</div>
-      </div>
-      <ItemsClient items={ALL_ITEMS} categories={ALL_CATS} />
-    </div>
+    <PageWrap>
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Items" }]} />
+      <PageHeader title="Items" />
+      <ItemsClient items={ALL_ITEMS} categories={ALL_CATS} pkmnCountByCat={pkmnCountByCat} />
+    </PageWrap>
   );
 }

@@ -1,10 +1,21 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { POKEMON, POKEMON_LIST, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS, pkmnIconUrl, dexNum, getCatItems, catDisplayName, catSlug as toCatSlug } from "@/app/lib/data";
+import JsonLd from "@/app/components/JsonLd";
+import InfoTip from "@/app/components/InfoTip";
+import { SITE_URL } from "@/app/lib/config";
 import CollapsibleSection from "@/app/components/CollapsibleSection";
 import GoesWellWith from "@/app/components/GoesWellWith";
 import ArrowKeyNav from "@/app/components/ArrowKeyNav";
 import TcgCard from "@/app/components/TcgCard";
+import StatBox from "@/app/components/StatBox";
+import BestGiftItem from "@/app/components/BestGiftItem";
+import NavBtn from "@/app/components/NavBtn";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import Card from "@/app/components/Card";
+import SectionTitle from "@/app/components/SectionTitle";
 
 export function generateStaticParams() {
   return Object.keys(POKEMON).map((slug) => ({ slug }));
@@ -23,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function PokemonPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const p = POKEMON[slug];
-  if (!p) return <div className="detail-wrap"><p>Pokémon not found.</p></div>;
+  if (!p) return <PageWrap><p>Pokemon not found.</p></PageWrap>;
 
   const idx = POKEMON_LIST.findIndex((q) => q.slug === slug);
   const prev = idx > 0 ? POKEMON_LIST[idx - 1] : null;
@@ -47,110 +58,127 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
   };
 
   return (
-    <div className="detail-wrap">
+    <PageWrap>
       <ArrowKeyNav prevSlug={prev?.slug ?? null} nextSlug={next?.slug ?? null} />
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span>
-        <Link href="/pokedex">Pokédex</Link><span>›</span>
-        <span>{p.name}</span>
-      </div>
+      <JsonLd data={[
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Pokédex", item: `${SITE_URL}/pokedex` },
+            { "@type": "ListItem", position: 3, name: p.name, item: `${SITE_URL}/pokemon/${slug}` },
+          ],
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Thing",
+          name: p.name,
+          description: `${p.name} — ${p.habitat} habitat. Favorite items: ${p.categories.slice(0, 3).join(", ")}.`,
+          image: pkmnIconUrl(p),
+          url: `${SITE_URL}/pokemon/${slug}`,
+        },
+      ]} />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Pokédex", href: "/pokedex" }, { label: p.name }]} />
 
-      <div className="pkmn-nav">
+      <div className="flex justify-between mb-5 max-md:gap-2">
         {prev ? (
-          <Link href={`/pokemon/${prev.slug}`} className="pkmn-nav-btn" title="Previous Pokémon (← key)">◀ #{dexNum(prev)} {prev.name}</Link>
+          <NavBtn href={`/pokemon/${prev.slug}`} title="Previous Pokemon (← key)">◀ #{dexNum(prev)} {prev.name}</NavBtn>
         ) : <span />}
         {next ? (
-          <Link href={`/pokemon/${next.slug}`} className="pkmn-nav-btn" title="Next Pokémon (→ key)">{next.name} #{dexNum(next)} ▶</Link>
+          <NavBtn href={`/pokemon/${next.slug}`} title="Next Pokemon (→ key)">{next.name} #{dexNum(next)} ▶</NavBtn>
         ) : <span />}
       </div>
 
-      <div className="pkmn-head">
+      {/* ── Hero: card + info ── */}
+      <div className="flex items-start gap-7 mb-5 pb-5 border-b border-paper-edge max-md:flex-col max-md:items-center max-md:text-center max-md:gap-4">
         <div className="shrink-0 w-[260px]">
           <TcgCard p={{ ...p, slug }} size="md" giftCount={sharedItems.length > 0 ? sharedItems.length : null} />
         </div>
-        <div className="pkmn-info">
-          <div className="pkmn-num">#{dexNum(p)}</div>
-          <div className="pkmn-name">{p.name}</div>
-          <div className="pkmn-meta">
-            Ideal habitat: <span className="habitat-tag">{p.habitat}</span>
-            {" "}<span className="info-tip" data-tip="Pokémon with the same habitat can share a living space in Pokopia." aria-label="Pokémon with the same habitat can share a living space in Pokopia.">i</span>
-            {p.flavor && <>
-              {" · "}Flavor: <span className="text-leaf font-semibold">{p.flavor}</span>
-              {" "}<span className="info-tip" data-tip="The berry flavor this Pokémon prefers. Pokémon that share a flavor tend to like the same gift items." aria-label="The berry flavor this Pokémon prefers.">i</span>
-            </>}
+        <div className="flex-1 min-w-0">
+          <div className="font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] mb-[2px]">#{dexNum(p)}</div>
+          <div className="font-outfit font-extrabold text-[36px] tracking-[-0.02em] leading-[1.05] mb-2 max-md:text-[26px]">{p.name}</div>
+          <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>
+              <span>Ideal habitat: </span><span className="text-leaf font-semibold">{p.habitat}</span>
+              <InfoTip tip="Pokemon with the same habitat can share a living space in Pokopia." />
+            </span>
+            {p.flavor && (
+              <span>
+                <span>Flavor: </span><span className="text-leaf font-semibold">{p.flavor}</span>
+                <InfoTip tip="The berry flavor this Pokemon prefers. Pokemon that share a flavor tend to like the same gift items." />
+              </span>
+            )}
           </div>
           {p.specialties && p.specialties.length > 0 && (
-            <div className="mt-2.5">
-              <p className="detail-meta mb-1 text-[11px] flex items-center gap-1.5">
+            <div className="mt-3">
+              <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
                 Specialty
-                {" "}<span className="info-tip" data-tip="Specialties determine bonus effects when this Pokémon helps with certain Pokopia activities." aria-label="Specialty bonus activities.">i</span>
+                <InfoTip tip="Specialties determine bonus effects when this Pokemon helps with certain Pokopia activities." />
               </p>
-              <div className="pkmn-cats">
+              <div className="flex flex-wrap gap-2 mt-2">
                 {p.specialties.map((s) => (
-                  <Link key={s} href={`/specialty/${s}`} className="pkmn-cat-tag no-underline text-accent-deep border-accent">
+                  <Link key={s} href={`/specialty/${s}`} className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-accent-deep border border-[1.5px] border-accent tracking-[0.04em] no-underline">
                     {SPECIALTIES[s]?.name ?? s}
                   </Link>
                 ))}
               </div>
             </div>
           )}
-          <div className="mt-2.5">
-            <p className="detail-meta mb-1 text-[11px] flex items-center gap-1.5">
+          <div className="mt-3">
+            <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
               Favorite categories
-              {" "}<span className="info-tip" data-tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} aria-label={`Gift items in these categories earn extra happiness with ${p.name}.`}>i</span>
+              <InfoTip tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} />
             </p>
-            <div className="pkmn-cats">
+            <div className="flex flex-wrap gap-2 mt-2">
               {p.categories.map((c) => (
-                <Link key={c} href={`/category/${toCatSlug(c)}`} className="pkmn-cat-tag no-underline">
+                <Link key={c} href={`/category/${toCatSlug(c)}`} className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em] no-underline">
                   {catDisplayName(c)}
                 </Link>
               ))}
             </div>
           </div>
+
+          <GoesWellWith slug={slug} habitat={p.habitat} />
         </div>
       </div>
 
-      <div className="card">
-        <div className="summary-strip">
-          <div className="stat-box"><div className="stat-num">{allItems.length}</div><div className="stat-label">items total</div></div>
-          <div className="stat-box"><div className="stat-num">{sharedItems.length}</div><div className="stat-label">in 2+ categories</div></div>
-          <div className="stat-box"><div className="stat-num">{p.categories.length}</div><div className="stat-label">categories</div></div>
+      {/* ── Gift data ── */}
+      <Card>
+        <div className="flex gap-3 mb-6 flex-wrap">
+          <StatBox value={allItems.length} label="items total" />
+          <StatBox value={sharedItems.length} label="in 2+ categories" />
         </div>
 
         {sharedItems.length > 0 && (
           <>
-            <div className="section-title">Best gifts <span className="pill">TOP GIFTS</span></div>
-            <p className="section-sub">These items appear in multiple categories — they count double (or more).</p>
-            <div className="best-grid">
+            <SectionTitle pill="TOP GIFTS">Best gifts</SectionTitle>
+            <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">These items appear in multiple categories — they count double (or more).</p>
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-3 mb-7 max-md:grid-cols-1">
               {sharedItems.map(([item, cats]) => {
-                const isElite = cats.length >= 3;
                 const itemEntry = ITEMS[item];
                 return (
-                  <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
-                    <div className={`best-item${isElite ? " elite" : ""}`}>
-                      <div className="best-item-badge">{cats.length}× categories</div>
-                      <div className="best-item-icon">
-                        {itemEntry?.icon && <img src={itemEntry.icon} alt={item} className="w-full h-full object-contain [image-rendering:pixelated]" />}
-                      </div>
-                      <div className="best-item-body">
-                        <div className="best-item-name">{item}</div>
-                        <div className="best-item-cats">{cats.map((c) => catDisplayName(c)).join(" · ")}</div>
-                      </div>
-                    </div>
-                  </Link>
+                  <BestGiftItem
+                    key={item}
+                    item={item}
+                    cats={cats.map((c) => catDisplayName(c))}
+                    href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                    iconSrc={itemEntry?.icon ?? undefined}
+                  />
                 );
               })}
             </div>
           </>
         )}
 
-        <div className="section-title">All, by category</div>
-        <p className="section-sub">Items marked with ★ appear in more than one of this Pokémon&apos;s liked categories. Click a category name to collapse it.</p>
+        <SectionTitle>All, by category</SectionTitle>
+        <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">Items marked with ★ appear in more than one of this Pokemon&apos;s liked categories. Click a category name to collapse it.</p>
         {p.categories.map((catRef) => {
           const items = getCatItems(catRef);
           return (
             <CollapsibleSection key={catRef} title={catDisplayName(catRef)} count={`${items.length} items`} defaultOpen={true}>
-              <div className="cat-items">
+              {/* Items grid */}
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 px-1 mb-2 max-md:grid-cols-1">
                 {items.map((item) => {
                   const cats = itemToCats[item] ?? [];
                   const isShared = cats.length >= 2;
@@ -158,13 +186,16 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                   const itemEntry = ITEMS[item];
                   return (
                     <Link key={item} href={`/item/${itemEntry?.slug ?? item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="no-underline">
-                      <div className={`cat-item${isShared ? " shared" : ""}`}>
-                        <div className="cat-item-icon">
-                          {itemEntry?.icon && <img src={itemEntry.icon} alt={item} className="w-full h-full object-contain [image-rendering:pixelated]" />}
+                      <div className={`text-[13px] px-[10px] py-[6px] rounded-lg border transition-all flex items-center gap-2 min-h-[44px] hover:border-accent hover:bg-surface-1 ${isShared ? "bg-accent-soft border-accent font-bold" : "bg-paper border-surface-2 text-ink"}`}>
+                        <div className="relative size-8 shrink-0">
+                          {itemEntry?.icon && <Image fill src={itemEntry.icon} alt={item} className="object-contain [image-rendering:pixelated]" sizes="32px" />}
                         </div>
-                        <div className="cat-item-body">
-                          <div className="cat-item-name">{item}</div>
-                          {isShared && <div className="cat-item-cats">+ {otherCats.map((c) => catDisplayName(c)).join(", ")}</div>}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-1">
+                            {isShared && <span className="text-accent text-[11px]">★</span>}
+                            <span>{item}</span>
+                          </div>
+                          {isShared && <div className="font-mono text-[9px] text-ink-soft mt-[2px] leading-tight">+ {otherCats.map((c) => catDisplayName(c)).join(", ")}</div>}
                         </div>
                       </div>
                     </Link>
@@ -177,14 +208,14 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
 
         {p.habitatList && p.habitatList.length > 0 && (
           <>
-            <div className="section-title mt-6">Where to find</div>
-            {p.habitatList.map((entry, i) => (
-              <div key={i} className="cat-block">
-                <div className="cat-head">
-                  <Link href={`/habitat/${entry.habitatSlug}`} className="cat-name no-underline text-inherit">
+            <SectionTitle className="mt-6">Where to find</SectionTitle>
+            {p.habitatList.map((entry) => (
+              <div key={entry.habitatSlug} className="mb-4">
+                <div className="flex items-baseline gap-2 mb-2 px-[14px] py-2 bg-chrome rounded-[10px] border border-paper-edge">
+                  <Link href={`/habitat/${entry.habitatSlug}`} className="font-outfit font-bold text-[16px] no-underline text-inherit">
                     {HABITATS[entry.habitatSlug]?.name ?? entry.habitatSlug}
                   </Link>
-                  {entry.rarity && <span className="cat-count">{entry.rarity}</span>}
+                  {entry.rarity && <span className="font-mono text-[11px] text-ink-soft ml-auto font-medium">{entry.rarity}</span>}
                 </div>
                 <div className="px-1 pb-2 text-xs font-mono text-ink-soft">
                   {entry.locations.map((loc, j) => (
@@ -202,9 +233,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             ))}
           </>
         )}
-      </div>
-
-      <GoesWellWith slug={slug} habitat={p.habitat} />
-    </div>
+      </Card>
+    </PageWrap>
   );
 }

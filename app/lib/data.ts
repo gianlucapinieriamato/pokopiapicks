@@ -1,23 +1,14 @@
-import type {
-  PokemonEntry, CategoryEntry, ItemEntry,
-  SpecialtyEntry, HabitatEntry, LocationEntry,
-} from "./types";
+import type { PokemonEntry, CategoryEntry } from "./types";
+import { POKEMON } from "./data/pokemon";
+import { CATEGORIES } from "./data/categories";
+import { ITEMS } from "./data/items";
+import { SPECIALTIES } from "./data/specialties";
+import { HABITATS } from "./data/habitats";
+import { LOCATIONS } from "./data/locations";
 
-import pokemonRaw from "@/data/pokemon.json";
-import categoriesRaw from "@/data/favorite-categories.json";
-import itemsRaw from "@/data/items.json";
-import specialtiesRaw from "@/data/specialties.json";
-import habitatsRaw from "@/data/habitats.json";
-import locationsRaw from "@/data/locations.json";
+export { POKEMON, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS };
 
-export const POKEMON = pokemonRaw as Record<string, PokemonEntry>;
-export const CATEGORIES = categoriesRaw as Record<string, CategoryEntry>;
-export const ITEMS = itemsRaw as Record<string, ItemEntry>;
-export const SPECIALTIES = specialtiesRaw as Record<string, SpecialtyEntry>;
-export const HABITATS = habitatsRaw as Record<string, HabitatEntry>;
-export const LOCATIONS = locationsRaw as Record<string, LocationEntry>;
-
-// Sort by national dex number; game-exclusive Pokémon (null nationalDexNum) go last
+// Sort by national dex number; game-exclusive Pokemon (null nationalDexNum) go last
 export const POKEMON_LIST: PokemonEntry[] = Object.entries(POKEMON)
   .map(([slug, p]) => ({ ...p, slug }))
   .sort((a, b) => {
