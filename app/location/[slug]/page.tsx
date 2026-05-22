@@ -1,6 +1,11 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { LOCATIONS, POKEMON, pkmnIconUrl, dexNum } from "@/app/lib/data";
+import { LOCATIONS, POKEMON } from "@/app/lib/data";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import Card from "@/app/components/Card";
+import PageHeader from "@/app/components/PageHeader";
+import SectionTitle from "@/app/components/SectionTitle";
+import PokemonGridCard from "@/app/components/PokemonGridCard";
 
 export function generateStaticParams() {
   return Object.keys(LOCATIONS).map((slug) => ({ slug }));
@@ -16,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const loc = LOCATIONS[slug];
-  if (!loc) return <div className="detail-wrap"><p>Location not found.</p></div>;
+  if (!loc) return <PageWrap><p>Location not found.</p></PageWrap>;
 
   const pokemonHere = Object.values(POKEMON)
     .filter((p) => p.habitatList?.some((h) => h.locations.includes(slug)))
@@ -33,48 +38,36 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   );
 
   return (
-    <div className="detail-wrap">
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span>
-        <span>Locations</span><span>›</span>
-        <span>{loc.name}</span>
-      </div>
-      <div className="detail-header">
-        <div className="detail-title">{loc.name}</div>
-        {loc.description && <p className="section-sub">{loc.description}</p>}
-      </div>
+    <PageWrap>
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations" }, { label: loc.name }]} />
+      <PageHeader title={loc.name}>
+        {loc.description && <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">{loc.description}</p>}
+      </PageHeader>
 
       {loc.materials.length > 0 && (
-        <div className="card">
-          <div className="section-title">Naturally occurring materials</div>
+        <Card>
+          <SectionTitle>Naturally occurring materials</SectionTitle>
           <ItemGrid items={loc.materials} />
-        </div>
+        </Card>
       )}
 
       {loc.blocksAndPlants.length > 0 && (
-        <div className="card">
-          <div className="section-title">Naturally occurring plants & blocks</div>
+        <Card>
+          <SectionTitle>Naturally occurring plants & blocks</SectionTitle>
           <ItemGrid items={loc.blocksAndPlants} />
-        </div>
+        </Card>
       )}
 
       {pokemonHere.length > 0 && (
-        <div className="card">
-          <div className="section-title">Pokémon that appear here</div>
+        <Card>
+          <SectionTitle>Pokémon that appear here</SectionTitle>
           <div className="pkmn-grid mt-3">
             {pokemonHere.map((p) => (
-              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
-                <div className="pkmn-grid-icon">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
-                </div>
-                <div className="pkmn-grid-num">#{dexNum(p)}</div>
-                <div className="pkmn-grid-name">{p.name}</div>
-              </Link>
+              <PokemonGridCard key={p.slug} p={p} />
             ))}
           </div>
-        </div>
+        </Card>
       )}
-    </div>
+    </PageWrap>
   );
 }

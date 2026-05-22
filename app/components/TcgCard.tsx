@@ -93,10 +93,7 @@ export default function TcgCard({
   const holoVars = { "--holo-opacity": r.holoIntensity / 100, "--sweep-opacity": r.sparkles ? (r.holoIntensity / 100) * 0.65 : 0 } as React.CSSProperties;
 
   return (
-    <div className={`relative w-full ${v.wrapper}`}>
-      {/* Aspect-ratio spacer */}
-      <div className="pb-[142%] pointer-events-none" />
-
+    <div className={`relative w-full ${v.wrapper} aspect-[100/142]`}>
       {/* Gold frame */}
       <div className={`absolute inset-0 ${v.frameRound} bg-[var(--card-frame)] ${r.sparkles ? v.legendShadow : v.frameShadow}`}>
 

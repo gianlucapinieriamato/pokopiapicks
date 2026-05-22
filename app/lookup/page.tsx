@@ -1,7 +1,12 @@
 "use client";
-import Link from "next/link";
 import { useState, useMemo } from "react";
-import { POKEMON_LIST, CATEGORIES, SPECIALTIES, LOCATIONS, pkmnIconUrl, dexNum } from "@/app/lib/data";
+import { POKEMON_LIST, CATEGORIES, SPECIALTIES, LOCATIONS } from "@/app/lib/data";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import Card from "@/app/components/Card";
+import PageHeader from "@/app/components/PageHeader";
+import SectionTitle from "@/app/components/SectionTitle";
+import PokemonGridCard from "@/app/components/PokemonGridCard";
 
 const HABITATS = ["Dry", "Bright", "Warm", "Cool", "Dark", "Humid"];
 const FLAVORS = ["Dry", "Sour", "Spicy", "Sweet", "Bitter"];
@@ -36,22 +41,17 @@ export default function LookupPage() {
   const allLocations = Object.values(LOCATIONS).sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <div className="detail-wrap">
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>Filter</span>
-      </div>
-      <div className="detail-header">
-        <div className="detail-title">Filter</div>
-        <div className="detail-meta">Find Pokémon matching ALL selected criteria simultaneously — different from the Pokédex which just browses and searches by name.</div>
-      </div>
+    <PageWrap>
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Filter" }]} />
+      <PageHeader title="Filter" meta="Find Pokémon matching ALL selected criteria simultaneously — different from the Pokédex which just browses and searches by name." />
 
-      <div className="card">
+      <Card>
         {[
           { label: "Ideal Habitat", vals: HABITATS, active: habitatFilter, set: setHabitatFilter },
           { label: "Flavor", vals: FLAVORS, active: flavorFilter, set: setFlavorFilter },
         ].map(({ label, vals, active, set }) => (
           <div key={label} className="mb-4">
-            <div className="stat-label mb-1.5">{label}</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">{label}</div>
             <div className="flex flex-wrap gap-1.5">
               {vals.map((v) => (
                 <button key={v} className={`shortcut${active.includes(v) ? " shortcut--on" : ""}`} onClick={() => toggle(active, v, set)}>{v}</button>
@@ -61,7 +61,7 @@ export default function LookupPage() {
         ))}
 
         <div className="mb-4">
-          <div className="stat-label mb-1.5">Specialty</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Specialty</div>
           <div className="flex flex-wrap gap-1.5">
             {allSpecialties.map((s) => (
               <button key={s.slug} className={`shortcut${specialtyFilter.includes(s.slug) ? " shortcut--on" : ""}`} onClick={() => toggle(specialtyFilter, s.slug, setSpecialtyFilter)}>{s.name}</button>
@@ -70,7 +70,7 @@ export default function LookupPage() {
         </div>
 
         <div className="mb-4">
-          <div className="stat-label mb-1.5">Favorite category (all must match)</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Favorite category (all must match)</div>
           <div className="flex flex-wrap gap-1.5">
             {allCategories.map((c) => (
               <button key={c.slug} className={`shortcut${catFilter.includes(c.slug) ? " shortcut--on-accent" : ""}`} onClick={() => toggle(catFilter, c.slug, setCatFilter)}>{c.name}</button>
@@ -79,7 +79,7 @@ export default function LookupPage() {
         </div>
 
         <div className="mb-4">
-          <div className="stat-label mb-1.5">Location (any)</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Location (any)</div>
           <div className="flex flex-wrap gap-1.5">
             {allLocations.map((l) => (
               <button key={l.slug} className={`shortcut${locFilter.includes(l.slug) ? " shortcut--on-leaf" : ""}`} onClick={() => toggle(locFilter, l.slug, setLocFilter)}>{l.name}</button>
@@ -88,31 +88,23 @@ export default function LookupPage() {
         </div>
 
         {hasFilters && <button className="shortcut" onClick={clearAll}>Clear all filters</button>}
-      </div>
+      </Card>
 
-      <div className="card">
-        <div className="section-title">
-          Results <span className="pill">{results.length} Pokémon</span>
-        </div>
-        {!hasFilters && <p className="section-sub">Select at least one filter above to narrow results.</p>}
-        {hasFilters && results.length === 0 && <p className="detail-meta">No Pokémon match all selected filters.</p>}
-        {results.length > 50 && <p className="section-sub text-accent">Showing {results.length} matches — add more filters to narrow down.</p>}
+      <Card>
+        <SectionTitle pill={results.length + " Pokémon"}>Results</SectionTitle>
+        {!hasFilters && <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">Select at least one filter above to narrow results.</p>}
+        {hasFilters && results.length === 0 && <p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No Pokémon match all selected filters.</p>}
+        {results.length > 50 && <p className="text-[13px] text-ink-soft mb-4 leading-relaxed text-accent">Showing {results.length} matches — add more filters to narrow down.</p>}
         {results.length > 0 && (
           <div className="pkmn-grid mt-3">
             {results.map((p) => (
-              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
-                <div className="pkmn-grid-icon">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
-                </div>
-                <div className="pkmn-grid-num">#{dexNum(p)}</div>
-                <div className="pkmn-grid-name">{p.name}</div>
+              <PokemonGridCard key={p.slug} p={p}>
                 <div className="font-mono text-[10px] text-ink-fade">{p.habitat}</div>
-              </Link>
+              </PokemonGridCard>
             ))}
           </div>
         )}
-      </div>
-    </div>
+      </Card>
+    </PageWrap>
   );
 }

@@ -105,46 +105,6 @@ body::before {
 /* ── Shared component classes ──────────────────────────────────────────────── */
 @layer components {
 
-  /* ── Layout ── */
-  .detail-wrap {
-    @apply max-w-[1080px] mx-auto px-5 pt-7 pb-20 relative z-[1];
-  }
-  .detail-header { @apply mb-6; }
-  .detail-title {
-    @apply font-outfit font-extrabold leading-[1.05] tracking-[-0.025em] mb-2;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-  }
-  .detail-meta {
-    @apply font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium;
-  }
-
-  /* ── Card ── */
-  .card {
-    @apply bg-paper rounded-[22px] px-7 py-6 mb-5;
-    box-shadow:
-      0 1px 0 rgba(255, 255, 255, 0.9) inset,
-      0 2px 0 var(--paper-edge),
-      0 14px 32px -10px var(--shadow);
-  }
-
-  /* ── Breadcrumb ── */
-  .breadcrumb {
-    @apply font-mono text-[11px] text-ink-fade tracking-[0.04em] mb-4 flex items-center gap-2 font-medium;
-  }
-  .breadcrumb a { @apply text-ink-soft no-underline hover:text-accent-deep; }
-
-  /* ── Section titles ── */
-  .section-title {
-    @apply font-outfit font-extrabold text-xl tracking-[-0.01em] mb-2 flex items-baseline gap-2;
-  }
-  .section-sub { @apply text-[13px] text-ink-soft mb-4 leading-relaxed; }
-  .pill {
-    @apply font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full tracking-[0.06em] bg-accent text-paper;
-  }
-  .stat-label {
-    @apply font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft mt-1 font-semibold;
-  }
-
   .pkmn-cat-tag {
     @apply font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em];
   }
@@ -154,17 +114,6 @@ body::before {
     @apply grid gap-2;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
-  .pkmn-grid-card {
-    @apply bg-chrome border border-[1.5px] border-paper-edge rounded-[14px] p-3 text-center no-underline text-ink flex flex-col items-center gap-1 transition-all;
-  }
-  .pkmn-grid-card:hover {
-    @apply bg-paper border-accent -translate-y-0.5;
-    box-shadow: 0 6px 16px -6px var(--shadow);
-  }
-  .pkmn-grid-icon { @apply w-16 h-16 flex items-center justify-center; }
-  .pkmn-grid-icon img { @apply w-full h-full object-contain [image-rendering:pixelated]; }
-  .pkmn-grid-num  { @apply font-mono text-[10px] text-ink-fade font-medium; }
-  .pkmn-grid-name { @apply font-bold text-[12px] leading-tight; }
 
   .pkmn-tcg-grid {
     @apply grid gap-3;
@@ -364,6 +313,5 @@ body::before {
   .site-nav-links  { display: none; }
   .site-nav-burger { display: flex; align-items: center; justify-content: center; }
   .lang-toggle     { top: 12px; right: 12px; padding: 5px 12px; font-size: 10px; }
-  .card            { padding: 20px 12px; }
   .pkmn-grid       { gap: 10px; }
 }

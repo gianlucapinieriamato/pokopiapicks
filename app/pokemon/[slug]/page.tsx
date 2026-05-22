@@ -8,6 +8,10 @@ import TcgCard from "@/app/components/TcgCard";
 import StatBox from "@/app/components/StatBox";
 import BestGiftItem from "@/app/components/BestGiftItem";
 import NavBtn from "@/app/components/NavBtn";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import Card from "@/app/components/Card";
+import SectionTitle from "@/app/components/SectionTitle";
 
 export function generateStaticParams() {
   return Object.keys(POKEMON).map((slug) => ({ slug }));
@@ -26,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function PokemonPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const p = POKEMON[slug];
-  if (!p) return <div className="detail-wrap"><p>Pokémon not found.</p></div>;
+  if (!p) return <PageWrap><p>Pokémon not found.</p></PageWrap>;
 
   const idx = POKEMON_LIST.findIndex((q) => q.slug === slug);
   const prev = idx > 0 ? POKEMON_LIST[idx - 1] : null;
@@ -50,13 +54,9 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
   };
 
   return (
-    <div className="detail-wrap">
+    <PageWrap>
       <ArrowKeyNav prevSlug={prev?.slug ?? null} nextSlug={next?.slug ?? null} />
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span>
-        <Link href="/pokedex">Pokédex</Link><span>›</span>
-        <span>{p.name}</span>
-      </div>
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Pokédex", href: "/pokedex" }, { label: p.name }]} />
 
       <div className="flex justify-between mb-5 max-md:gap-2">
         {prev ? (
@@ -85,7 +85,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           </div>
           {p.specialties && p.specialties.length > 0 && (
             <div className="mt-3">
-              <p className="detail-meta mb-1 text-[11px] flex items-center gap-1.5">
+              <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
                 Specialty
                 {" "}<span className="info-tip" data-tip="Specialties determine bonus effects when this Pokémon helps with certain Pokopia activities." aria-label="Specialty bonus activities.">i</span>
               </p>
@@ -99,7 +99,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             </div>
           )}
           <div className="mt-3">
-            <p className="detail-meta mb-1 text-[11px] flex items-center gap-1.5">
+            <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
               Favorite categories
               {" "}<span className="info-tip" data-tip={`Gift items in these categories will earn extra happiness with ${p.name}.`} aria-label={`Gift items in these categories earn extra happiness with ${p.name}.`}>i</span>
             </p>
@@ -117,7 +117,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
       </div>
 
       {/* ── Gift data ── */}
-      <div className="card">
+      <Card>
         <div className="flex gap-3 mb-6 flex-wrap">
           <StatBox value={allItems.length} label="items total" />
           <StatBox value={sharedItems.length} label="in 2+ categories" />
@@ -125,8 +125,8 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
 
         {sharedItems.length > 0 && (
           <>
-            <div className="section-title">Best gifts <span className="pill">TOP GIFTS</span></div>
-            <p className="section-sub">These items appear in multiple categories — they count double (or more).</p>
+            <SectionTitle pill="TOP GIFTS">Best gifts</SectionTitle>
+            <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">These items appear in multiple categories — they count double (or more).</p>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-3 mb-7 max-md:grid-cols-1">
               {sharedItems.map(([item, cats]) => {
                 const itemEntry = ITEMS[item];
@@ -144,8 +144,8 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           </>
         )}
 
-        <div className="section-title">All, by category</div>
-        <p className="section-sub">Items marked with ★ appear in more than one of this Pokémon&apos;s liked categories. Click a category name to collapse it.</p>
+        <SectionTitle>All, by category</SectionTitle>
+        <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">Items marked with ★ appear in more than one of this Pokémon&apos;s liked categories. Click a category name to collapse it.</p>
         {p.categories.map((catRef) => {
           const items = getCatItems(catRef);
           return (
@@ -181,7 +181,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
 
         {p.habitatList && p.habitatList.length > 0 && (
           <>
-            <div className="section-title mt-6">Where to find</div>
+            <SectionTitle className="mt-6">Where to find</SectionTitle>
             {p.habitatList.map((entry, i) => (
               <div key={i} className="mb-4">
                 <div className="flex items-baseline gap-2 mb-2 px-[14px] py-2 bg-chrome rounded-[10px] border border-paper-edge">
@@ -206,7 +206,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             ))}
           </>
         )}
-      </div>
-    </div>
+      </Card>
+    </PageWrap>
   );
 }

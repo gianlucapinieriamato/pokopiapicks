@@ -2,6 +2,12 @@
 import Link from "next/link";
 import { useState, useMemo, useCallback } from "react";
 import { POKEMON, POKEMON_LIST, SPECIALTIES, pkmnIconUrl, dexNum, getCatItems, catDisplayName } from "@/app/lib/data";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import Card from "@/app/components/Card";
+import PageHeader from "@/app/components/PageHeader";
+import SectionTitle from "@/app/components/SectionTitle";
+import PokemonGridCard from "@/app/components/PokemonGridCard";
 
 function sharedItemCount(a: string[], b: string[]): number {
   const setA = new Set<string>();
@@ -85,16 +91,13 @@ export default function MatchmakerPage() {
     : [];
 
   return (
-    <div className="detail-wrap">
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>Matchmaker</span>
-      </div>
-      <div className="detail-header">
-        <div className="detail-title">Matchmaker</div>
-        <p className="section-sub">Pick an anchor Pokémon to find the best roommates. Same habitat required — shared items are bonus points.</p>
-      </div>
+    <PageWrap>
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Matchmaker" }]} />
+      <PageHeader title="Matchmaker">
+        <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">Pick an anchor Pokémon to find the best roommates. Same habitat required — shared items are bonus points.</p>
+      </PageHeader>
 
-      <div className="card">
+      <Card>
         <div className="search-wrap">
           <span className="search-icon">⚲</span>
           <input
@@ -136,16 +139,16 @@ export default function MatchmakerPage() {
             </div>
           </div>
         )}
-      </div>
+      </Card>
 
       {anchor && recommendations.length === 0 && (
-        <div className="card"><p className="detail-meta">No Pokémon found in the same habitat ({anchor.habitat}).</p></div>
+        <Card><p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No Pokémon found in the same habitat ({anchor.habitat}).</p></Card>
       )}
 
       {recommendations.length > 0 && (
-        <div className="card">
-          <div className="section-title">Top roommates <span className="pill">BEST MATCH</span></div>
-          <p className="section-sub">Ranked by shared items. Complementary specialties add a 50% bonus.</p>
+        <Card>
+          <SectionTitle pill="BEST MATCH">Top roommates</SectionTitle>
+          <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">Ranked by shared items. Complementary specialties add a 50% bonus.</p>
           {recommendations.map(({ pokemon: p, score: s, shared }) => {
             const anchorSpecs = new Set(anchor!.specialties ?? []);
             const candSpecs = p.specialties ?? [];
@@ -175,17 +178,17 @@ export default function MatchmakerPage() {
               </div>
             );
           })}
-        </div>
+        </Card>
       )}
 
       {anchor && compareTarget && (
-        <div className="card">
-          <div className="section-title">Side-by-side: {anchor.name} vs {compareTarget.name}</div>
-          <p className="section-sub">{compareShared.length} items in common</p>
+        <Card>
+          <SectionTitle>Side-by-side: {anchor.name} vs {compareTarget.name}</SectionTitle>
+          <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">{compareShared.length} items in common</p>
           <div className="grid grid-cols-2 gap-4">
             {[{ p: anchor, label: "Anchor" }, { p: compareTarget, label: "Candidate" }].map(({ p, label }) => (
               <div key={p.slug}>
-                <div className="detail-meta mb-2">{label}: {p.name}</div>
+                <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium mb-2">{label}: {p.name}</div>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {p.categories.map((c) => (
                     <span
@@ -201,7 +204,7 @@ export default function MatchmakerPage() {
           </div>
           {compareShared.length > 0 && (
             <div className="mt-4">
-              <div className="stat-label mb-2">Shared items</div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-2">Shared items</div>
               <div className="flex flex-wrap gap-1.5">
                 {compareShared.map((item) => (
                   <span key={item} className="pkmn-cat-tag bg-accent-soft border-accent">{item}</span>
@@ -209,28 +212,24 @@ export default function MatchmakerPage() {
               </div>
             </div>
           )}
-        </div>
+        </Card>
       )}
 
       {anchor && group.length > 1 && (
-        <div className="card">
-          <div className="section-title">Best group of 4 <span className="pill">TEAM</span></div>
-          <p className="section-sub">Greedy algorithm: each Pokémon maximizes shared items with the current group.</p>
+        <Card>
+          <SectionTitle pill="TEAM">Best group of 4</SectionTitle>
+          <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">Greedy algorithm: each Pokémon maximizes shared items with the current group.</p>
           <div className="pkmn-grid">
             {group.map((p, i) => (
-              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
-                {i === 0 && <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>}
-                <div className="pkmn-grid-icon">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
-                </div>
-                <div className="pkmn-grid-num">#{dexNum(p)}</div>
-                <div className="pkmn-grid-name">{p.name}</div>
-              </Link>
+              <PokemonGridCard
+                key={p.slug}
+                p={p}
+                prefix={i === 0 ? <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div> : undefined}
+              />
             ))}
           </div>
-        </div>
+        </Card>
       )}
-    </div>
+    </PageWrap>
   );
 }

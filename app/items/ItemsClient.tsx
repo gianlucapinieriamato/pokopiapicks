@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useMemo } from "react";
 import type { ItemEntry, CategoryEntry } from "@/app/lib/types";
 import NavBtn from "@/app/components/NavBtn";
+import Card from "@/app/components/Card";
 
 const PAGE_SIZE = 60;
 
@@ -33,9 +34,9 @@ export default function ItemsClient({ items, categories }: { items: ItemEntry[];
 
   return (
     <>
-      <div className="detail-meta mb-4">{filtered.length} / {items.length} items</div>
+      <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium mb-4">{filtered.length} / {items.length} items</div>
 
-      <div className="card mb-4">
+      <Card className="mb-4">
         <input
           type="text"
           className="search-input mb-3.5"
@@ -44,7 +45,7 @@ export default function ItemsClient({ items, categories }: { items: ItemEntry[];
           value={search}
           onChange={(e) => { setSearch(e.target.value); setPage(1); }}
         />
-        <div className="stat-label mb-1.5">Filter by category</div>
+        <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Filter by category</div>
         <div className="flex flex-wrap gap-1.5">
           {categories.map((c) => (
             <button key={c.slug} className={`shortcut${catFilter.includes(c.slug) ? " shortcut--on" : ""}`} onClick={() => toggleCat(c.slug)}>
@@ -57,11 +58,11 @@ export default function ItemsClient({ items, categories }: { items: ItemEntry[];
             Clear filters
           </button>
         )}
-      </div>
+      </Card>
 
-      <div className="card">
+      <Card>
         {paginated.length === 0 ? (
-          <p className="detail-meta">No items match your filters.</p>
+          <p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No items match your filters.</p>
         ) : (
           <div className="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-2">
             {paginated.map((item) => (
@@ -80,11 +81,11 @@ export default function ItemsClient({ items, categories }: { items: ItemEntry[];
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
             {page > 1 && <NavBtn onClick={() => setPage(page - 1)}>◀ Prev</NavBtn>}
-            <span className="detail-meta self-center">Page {page} / {pages}</span>
+            <span className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium self-center">Page {page} / {pages}</span>
             {page < pages && <NavBtn onClick={() => setPage(page + 1)}>Next ▶</NavBtn>}
           </div>
         )}
-      </div>
+      </Card>
     </>
   );
 }

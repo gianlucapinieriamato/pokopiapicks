@@ -1,6 +1,10 @@
 "use client";
 import Link from "next/link";
 import { CATEGORIES, POKEMON } from "@/app/lib/data";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import Card from "@/app/components/Card";
+import PageHeader from "@/app/components/PageHeader";
 
 const ALL_CATS = Object.values(CATEGORIES).sort((a, b) => a.name.localeCompare(b.name));
 
@@ -14,16 +18,11 @@ for (const p of Object.values(POKEMON)) {
 
 export default function CategoriesPage() {
   return (
-    <div className="detail-wrap">
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>Gift Categories</span>
-      </div>
-      <div className="detail-header">
-        <div className="detail-title">Gift Categories</div>
-        <div className="detail-meta">{ALL_CATS.length} categories</div>
-      </div>
+    <PageWrap>
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Gift Categories" }]} />
+      <PageHeader title="Gift Categories" meta={`${ALL_CATS.length} categories`} />
 
-      <div className="card">
+      <Card>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-2">
           {ALL_CATS.map((cat) => (
             <Link key={cat.slug} href={`/category/${cat.slug}`} className="no-underline">
@@ -36,7 +35,7 @@ export default function CategoriesPage() {
             </Link>
           ))}
         </div>
-      </div>
-    </div>
+      </Card>
+    </PageWrap>
   );
 }

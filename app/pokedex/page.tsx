@@ -4,6 +4,10 @@ import { useState, useMemo } from "react";
 import { POKEMON_LIST, SPECIALTIES } from "@/app/lib/data";
 import TcgCard from "@/app/components/TcgCard";
 import NavBtn from "@/app/components/NavBtn";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import Card from "@/app/components/Card";
+import PageHeader from "@/app/components/PageHeader";
 
 const HABITATS = ["Dry", "Bright", "Warm", "Cool", "Dark", "Humid"];
 const FLAVORS = ["Dry", "Sour", "Spicy", "Sweet", "Bitter"];
@@ -47,16 +51,11 @@ export default function PokedexPage() {
   };
 
   return (
-    <div className="detail-wrap">
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span><span>Pokédex</span>
-      </div>
-      <div className="detail-header">
-        <div className="detail-title">Pokédex</div>
-        <div className="detail-meta">{filtered.length} / {POKEMON_LIST.length} Pokémon</div>
-      </div>
+    <PageWrap>
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Pokédex" }]} />
+      <PageHeader title="Pokédex" meta={`${filtered.length} / ${POKEMON_LIST.length} Pokémon`} />
 
-      <div className="card mb-4">
+      <Card className="mb-4">
         <input
           type="text"
           className="search-input mb-4"
@@ -67,7 +66,7 @@ export default function PokedexPage() {
         />
         <div className="flex flex-wrap gap-3">
           <div>
-            <div className="stat-label mb-1.5">Ideal Habitat</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Ideal Habitat</div>
             <div className="flex flex-wrap gap-1.5">
               {HABITATS.map((h) => (
                 <button key={h} className={`shortcut${habitatFilter.includes(h) ? " shortcut--on" : ""}`} onClick={() => toggle(habitatFilter, h, setHabitatFilter)}>
@@ -77,7 +76,7 @@ export default function PokedexPage() {
             </div>
           </div>
           <div>
-            <div className="stat-label mb-1.5">Flavor</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Flavor</div>
             <div className="flex flex-wrap gap-1.5">
               {FLAVORS.map((f) => (
                 <button key={f} className={`shortcut${flavorFilter.includes(f) ? " shortcut--on" : ""}`} onClick={() => toggle(flavorFilter, f, setFlavorFilter)}>
@@ -87,7 +86,7 @@ export default function PokedexPage() {
             </div>
           </div>
           <div>
-            <div className="stat-label mb-1.5">Specialty</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Specialty</div>
             <div className="flex flex-wrap gap-1.5">
               {ALL_SPECIALTIES.map((s) => (
                 <button key={s.slug} className={`shortcut${specialtyFilter.includes(s.slug) ? " shortcut--on" : ""}`} onClick={() => toggle(specialtyFilter, s.slug, setSpecialtyFilter)}>
@@ -102,11 +101,11 @@ export default function PokedexPage() {
             Clear filters
           </button>
         ) : null}
-      </div>
+      </Card>
 
-      <div className="card">
+      <Card>
         {paginated.length === 0 ? (
-          <p className="detail-meta">No Pokémon match your filters.</p>
+          <p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No Pokémon match your filters.</p>
         ) : (
           <div className="pkmn-tcg-grid">
             {paginated.map((p) => (
@@ -119,11 +118,11 @@ export default function PokedexPage() {
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
             {page > 1 && <NavBtn onClick={() => setPage(page - 1)}>◀ Prev</NavBtn>}
-            <span className="detail-meta self-center">Page {page} / {pages}</span>
+            <span className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium self-center">Page {page} / {pages}</span>
             {page < pages && <NavBtn onClick={() => setPage(page + 1)}>Next ▶</NavBtn>}
           </div>
         )}
-      </div>
-    </div>
+      </Card>
+    </PageWrap>
   );
 }

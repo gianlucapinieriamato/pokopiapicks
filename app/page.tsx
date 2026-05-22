@@ -7,6 +7,8 @@ import { POKEMON, POKEMON_LIST, pkmnIconUrl, dexNum } from "@/app/lib/data";
 import type { PokemonEntry } from "@/app/lib/types";
 import PkmnIcon from "@/app/components/PkmnIcon";
 import TcgCard from "@/app/components/TcgCard";
+import Card from "@/app/components/Card";
+import SectionTitle from "@/app/components/SectionTitle";
 
 type Lang = "en" | "es";
 
@@ -99,7 +101,7 @@ export default function Home() {
         <p className="max-w-[560px] mx-auto text-ink-soft text-[15px] leading-[1.55]">{s.lede}</p>
       </header>
 
-      <section className="card">
+      <Card>
         <div className="search-wrap">
           <span className="search-icon">⚲</span>
           <input
@@ -146,10 +148,10 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      </section>
+      </Card>
 
-      <div className="card">
-        <div className="section-title mb-5">{s.all_pokemon}</div>
+      <Card>
+        <SectionTitle className="mb-5">{s.all_pokemon}</SectionTitle>
         <div className="pkmn-tcg-grid">
           {POKEMON_LIST.map((p) => (
             <Link key={p.slug} href={`/pokemon/${p.slug}`} className="tcg-card-wrap" aria-label={p.name}>
@@ -157,7 +159,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      </div>
+      </Card>
     </div>
   );
 }

@@ -1,6 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CATEGORIES, ITEMS, POKEMON, pkmnIconUrl, dexNum } from "@/app/lib/data";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import Card from "@/app/components/Card";
+import PageHeader from "@/app/components/PageHeader";
+import SectionTitle from "@/app/components/SectionTitle";
+import PokemonGridCard from "@/app/components/PokemonGridCard";
 
 export function generateStaticParams() {
   return Object.keys(CATEGORIES).map((slug) => ({ slug }));
@@ -16,26 +22,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const cat = CATEGORIES[slug];
-  if (!cat) return <div className="detail-wrap"><p>Category not found.</p></div>;
+  if (!cat) return <PageWrap><p>Category not found.</p></PageWrap>;
 
   const pokemonWhoLike = Object.values(POKEMON)
     .filter((p) => p.categories.includes(cat.name) || p.categories.includes(slug))
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   return (
-    <div className="detail-wrap">
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span>
-        <span>Categories</span><span>›</span>
-        <span>{cat.name}</span>
-      </div>
-      <div className="detail-header">
-        <div className="detail-title">{cat.name}</div>
-        <div className="detail-meta">{cat.items.length} items · {pokemonWhoLike.length} Pokémon</div>
-      </div>
+    <PageWrap>
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Categories", href: "/categories" }, { label: cat.name }]} />
+      <PageHeader title={cat.name} meta={`${cat.items.length} items · ${pokemonWhoLike.length} Pokémon`} />
 
-      <div className="card">
-        <div className="section-title">Items in this category</div>
+      <Card>
+        <SectionTitle>Items in this category</SectionTitle>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 px-1 mt-3">
           {cat.items.map((itemName) => {
             const item = ITEMS[itemName];
@@ -51,25 +50,18 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             );
           })}
         </div>
-      </div>
+      </Card>
 
       {pokemonWhoLike.length > 0 && (
-        <div className="card">
-          <div className="section-title">Pokémon that like this category</div>
+        <Card>
+          <SectionTitle>Pokémon that like this category</SectionTitle>
           <div className="pkmn-grid mt-3">
             {pokemonWhoLike.map((p) => (
-              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
-                <div className="pkmn-grid-icon">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
-                </div>
-                <div className="pkmn-grid-num">#{dexNum(p)}</div>
-                <div className="pkmn-grid-name">{p.name}</div>
-              </Link>
+              <PokemonGridCard key={p.slug} p={p} />
             ))}
           </div>
-        </div>
+        </Card>
       )}
-    </div>
+    </PageWrap>
   );
 }

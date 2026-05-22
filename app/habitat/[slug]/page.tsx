@@ -1,6 +1,10 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { HABITATS, POKEMON, pkmnIconUrl, dexNum } from "@/app/lib/data";
+import { HABITATS, POKEMON } from "@/app/lib/data";
+import PageWrap from "@/app/components/PageWrap";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import Card from "@/app/components/Card";
+import PageHeader from "@/app/components/PageHeader";
+import PokemonGridCard from "@/app/components/PokemonGridCard";
 
 export function generateStaticParams() {
   return Object.keys(HABITATS).map((slug) => ({ slug }));
@@ -16,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function HabitatPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const h = HABITATS[slug];
-  if (!h) return <div className="detail-wrap"><p>Habitat not found.</p></div>;
+  if (!h) return <PageWrap><p>Habitat not found.</p></PageWrap>;
 
   const pokemonHere = h.pokemon
     .map((s) => POKEMON[s])
@@ -24,35 +28,22 @@ export default async function HabitatPage({ params }: { params: Promise<{ slug: 
     .sort((a, b) => (a!.nationalDexNum ?? 99999) - (b!.nationalDexNum ?? 99999)) as NonNullable<typeof POKEMON[string]>[];
 
   return (
-    <div className="detail-wrap">
-      <div className="breadcrumb">
-        <Link href="/">Home</Link><span>›</span>
-        <span>Habitats</span><span>›</span>
-        <span>{h.name}</span>
-      </div>
-      <div className="detail-header">
-        <div className="detail-title">{h.name}</div>
-        {h.description && <p className="section-sub">{h.description}</p>}
-        <div className="detail-meta">{pokemonHere.length} Pokémon spawn here</div>
-      </div>
+    <PageWrap>
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Habitats", href: "/habitats" }, { label: h.name }]} />
+      <PageHeader title={h.name} meta={pokemonHere.length + " Pokémon spawn here"}>
+        {h.description && <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">{h.description}</p>}
+      </PageHeader>
       {pokemonHere.length > 0 ? (
-        <div className="card">
+        <Card>
           <div className="pkmn-grid">
             {pokemonHere.map((p) => (
-              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
-                <div className="pkmn-grid-icon">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
-                </div>
-                <div className="pkmn-grid-num">#{dexNum(p)}</div>
-                <div className="pkmn-grid-name">{p.name}</div>
-              </Link>
+              <PokemonGridCard key={p.slug} p={p} />
             ))}
           </div>
-        </div>
+        </Card>
       ) : (
-        <div className="card"><p className="detail-meta">No Pokémon data for this habitat yet.</p></div>
+        <Card><p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No Pokémon data for this habitat yet.</p></Card>
       )}
-    </div>
+    </PageWrap>
   );
 }
