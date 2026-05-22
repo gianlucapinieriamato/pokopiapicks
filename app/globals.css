@@ -21,6 +21,33 @@
   --font-mono:   'JetBrains Mono', 'DM Mono', monospace;
 }
 
+/* Complex gradient constants — referenced via bg-[var(--...)] in Tailwind */
+:root {
+  --holo-gradient: linear-gradient(125deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,200,255,0.30) 20%,
+    rgba(200,255,240,0.35) 35%,
+    rgba(255,250,180,0.40) 50%,
+    rgba(200,220,255,0.35) 65%,
+    rgba(255,200,220,0.38) 80%,
+    rgba(255,255,255,0) 100%);
+  --sparkle-dots:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,0.95) 1.2px, transparent 2.5px),
+    radial-gradient(circle at 72% 30%, rgba(255,255,255,0.85) 1px, transparent 2px),
+    radial-gradient(circle at 30% 65%, rgba(255,255,255,0.90) 1.4px, transparent 3px),
+    radial-gradient(circle at 85% 70%, rgba(255,255,255,0.80) 1px, transparent 2px),
+    radial-gradient(circle at 50% 88%, rgba(255,255,255,0.95) 1.2px, transparent 2.5px);
+  --card-frame: linear-gradient(135deg, var(--accent-soft) 0%, var(--accent) 30%, var(--accent-soft) 60%, var(--accent-deep) 100%);
+  --card-header: linear-gradient(180deg, var(--bg-2) 0%, var(--chrome) 100%);
+  --card-footer: linear-gradient(180deg, transparent, var(--chrome));
+  --portrait-bg:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.7), transparent 60%),
+    linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-2) 100%);
+  /* Runtime-set by TcgCard for habitat art window */
+  --h1: #d8ccb8;
+  --h2: #a89070;
+}
+
 /* Backward-compat aliases */
 :root {
   --bg-0:        var(--color-surface-0);
@@ -158,6 +185,9 @@ body::before {
     @apply grid gap-3;
     grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   }
+  /* ── TcgCard art window — habitat colors set via --h1/--h2 CSS custom props ── */
+  .habitat-art { background: linear-gradient(160deg, var(--h1) 0%, var(--h2) 100%); }
+
   .tcg-card-wrap {
     @apply cursor-pointer border-none bg-transparent p-0 text-left flex no-underline text-inherit transition-transform duration-150;
   }

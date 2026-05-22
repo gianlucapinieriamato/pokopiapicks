@@ -22,6 +22,16 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     .filter((p) => p.habitatList?.some((h) => h.locations.includes(slug)))
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
+  const ItemGrid = ({ items }: { items: string[] }) => (
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 px-1 mt-3">
+      {items.map((m) => (
+        <div key={m} className="text-[13px] px-[10px] py-[6px] rounded-lg bg-paper border border-surface-2 text-ink flex items-center gap-2 min-h-[44px]">
+          <div className="flex-1 min-w-0">{m}</div>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <div className="detail-wrap">
       <div className="breadcrumb">
@@ -37,34 +47,26 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       {loc.materials.length > 0 && (
         <div className="card">
           <div className="section-title">Naturally occurring materials</div>
-          <div className="cat-items" style={{ marginTop: 10 }}>
-            {loc.materials.map((m) => (
-              <div key={m} className="cat-item"><div className="cat-item-body"><div className="cat-item-name">{m}</div></div></div>
-            ))}
-          </div>
+          <ItemGrid items={loc.materials} />
         </div>
       )}
 
       {loc.blocksAndPlants.length > 0 && (
         <div className="card">
           <div className="section-title">Naturally occurring plants & blocks</div>
-          <div className="cat-items" style={{ marginTop: 10 }}>
-            {loc.blocksAndPlants.map((b) => (
-              <div key={b} className="cat-item"><div className="cat-item-body"><div className="cat-item-name">{b}</div></div></div>
-            ))}
-          </div>
+          <ItemGrid items={loc.blocksAndPlants} />
         </div>
       )}
 
       {pokemonHere.length > 0 && (
         <div className="card">
           <div className="section-title">Pokémon that appear here</div>
-          <div className="pkmn-grid" style={{ marginTop: 12 }}>
+          <div className="pkmn-grid mt-3">
             {pokemonHere.map((p) => (
               <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
                 <div className="pkmn-grid-icon">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
+                  <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
                 </div>
                 <div className="pkmn-grid-num">#{dexNum(p)}</div>
                 <div className="pkmn-grid-name">{p.name}</div>

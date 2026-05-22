@@ -121,10 +121,10 @@ export default function MatchmakerPage() {
         </div>
 
         {anchor && (
-          <div className="pkmn-head mt-5" style={{ borderBottom: "none", paddingBottom: 0 }}>
-            <div className="pkmn-portrait">
+          <div className="flex items-start gap-7 mt-5">
+            <div className="w-[110px] h-[110px] shrink-0 bg-[var(--portrait-bg)] rounded-[14px] border-2 border-paper-edge flex items-center justify-center p-2 shadow-[0_4px_12px_-4px_var(--shadow)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.name} className="w-full h-full object-contain" />
+              <img src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
             </div>
             <div className="pkmn-info">
               <div className="pkmn-num">Anchor · #{dexNum(anchor)}</div>
@@ -151,17 +151,23 @@ export default function MatchmakerPage() {
             const candSpecs = p.specialties ?? [];
             const isComplementary = candSpecs.length > 0 && !candSpecs.some((sp) => anchorSpecs.has(sp));
             return (
-              <div key={p.slug} className="best-item mb-2.5 cursor-pointer" onClick={() => setCompareSlug(compareSlug === p.slug ? null : p.slug)}>
-                <div className="best-item-badge">{s} pts{isComplementary ? " ⚡" : ""}</div>
-                <div className="best-item-icon">
+              <div
+                key={p.slug}
+                className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] mb-2.5 cursor-pointer"
+                onClick={() => setCompareSlug(compareSlug === p.slug ? null : p.slug)}
+              >
+                <div className="absolute -top-2 right-3 font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
+                  {s} pts{isComplementary ? " ⚡" : ""}
+                </div>
+                <div className="w-14 h-14 shrink-0 bg-white/70 rounded-[10px] flex items-center justify-center p-1">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
                 </div>
-                <div className="best-item-body">
-                  <div className="best-item-name">
+                <div className="flex-1 min-w-0">
+                  <div className="font-extrabold text-[14px] mb-1 text-ink leading-tight">
                     <Link href={`/pokemon/${p.slug}`} className="text-inherit no-underline" onClick={(e) => e.stopPropagation()}>{p.name}</Link>
                   </div>
-                  <div className="best-item-cats">
+                  <div className="font-mono text-[10px] text-ink-soft tracking-[0.02em] leading-snug">
                     {shared} shared items · {p.specialties?.map((s) => SPECIALTIES[s]?.name ?? s).join(", ") || "no specialty"}
                     {isComplementary && " · complementary ⚡"}
                   </div>
@@ -182,7 +188,12 @@ export default function MatchmakerPage() {
                 <div className="detail-meta mb-2">{label}: {p.name}</div>
                 <div className="pkmn-cats">
                   {p.categories.map((c) => (
-                    <span key={c} className="pkmn-cat-tag" style={compareTarget.categories.includes(c) && anchor!.categories.includes(c) ? { background: "var(--sun-soft)", borderColor: "var(--sun)" } : {}}>{catDisplayName(c)}</span>
+                    <span
+                      key={c}
+                      className={`pkmn-cat-tag ${compareTarget.categories.includes(c) && anchor!.categories.includes(c) ? "bg-accent-soft border-accent" : ""}`}
+                    >
+                      {catDisplayName(c)}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -193,7 +204,7 @@ export default function MatchmakerPage() {
               <div className="stat-label mb-2">Shared items</div>
               <div className="flex flex-wrap gap-1.5">
                 {compareShared.map((item) => (
-                  <span key={item} className="pkmn-cat-tag" style={{ background: "var(--sun-soft)", borderColor: "var(--sun)" }}>{item}</span>
+                  <span key={item} className="pkmn-cat-tag bg-accent-soft border-accent">{item}</span>
                 ))}
               </div>
             </div>
@@ -205,7 +216,7 @@ export default function MatchmakerPage() {
         <div className="card">
           <div className="section-title">Best group of 4 <span className="pill">TEAM</span></div>
           <p className="section-sub">Greedy algorithm: each Pokémon maximizes shared items with the current group.</p>
-          <div className="pkmn-grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))]">
+          <div className="pkmn-grid">
             {group.map((p, i) => (
               <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
                 {i === 0 && <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>}

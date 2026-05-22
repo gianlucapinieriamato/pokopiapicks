@@ -42,7 +42,7 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ slug
               <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
                 <div className="pkmn-grid-icon">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
+                  <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
                 </div>
                 <div className="pkmn-grid-num">#{dexNum(p)}</div>
                 <div className="pkmn-grid-name">{p.name}</div>

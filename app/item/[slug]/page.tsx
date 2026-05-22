@@ -18,13 +18,11 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
   const item = Object.values(ITEMS).find((i) => i.slug === slug);
   if (!item) return <div className="detail-wrap"><p>Item not found.</p></div>;
 
-
   const pokemonWhoLike = Object.values(POKEMON)
     .filter((p) => {
-      // categories in pokemon.json are display names; convert to slugs for comparison
       return item.categories.some((catSlug) => {
-        const catDisplayName = CATEGORIES[catSlug]?.name ?? catSlug;
-        return p.categories.includes(catDisplayName) || p.categories.includes(catSlug);
+        const catDisplay = CATEGORIES[catSlug]?.name ?? catSlug;
+        return p.categories.includes(catDisplay) || p.categories.includes(catSlug);
       });
     })
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
@@ -37,11 +35,11 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
         <span>{item.name}</span>
       </div>
       <div className="detail-header">
-        <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 8 }}>
+        <div className="flex items-center gap-4 mb-2">
           {item.icon && (
-            <div style={{ width: 64, height: 64, background: "var(--bg-1)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", padding: 6 }}>
+            <div className="w-16 h-16 bg-surface-1 rounded-[10px] flex items-center justify-center p-[6px] shrink-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={item.icon} alt={item.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
+              <img src={item.icon} alt={item.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
             </div>
           )}
           <div className="detail-title">{item.name}</div>
@@ -50,21 +48,21 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
 
       <div className="card">
         <div className="section-title">Favorite categories</div>
-        <div className="pkmn-cats" style={{ marginTop: 10, marginBottom: 16 }}>
+        <div className="pkmn-cats mb-4">
           {item.categories.map((c) => (
-            <Link key={c} href={`/category/${c}`} className="pkmn-cat-tag" style={{ textDecoration: "none" }}>{catDisplayName(c)}</Link>
+            <Link key={c} href={`/category/${c}`} className="pkmn-cat-tag no-underline">{catDisplayName(c)}</Link>
           ))}
         </div>
 
         <div className="section-title">Pokémon that like this item</div>
-        <div className="detail-meta" style={{ marginBottom: 12 }}>{pokemonWhoLike.length} Pokémon</div>
+        <div className="detail-meta mb-3">{pokemonWhoLike.length} Pokémon</div>
         {pokemonWhoLike.length > 0 && (
           <div className="pkmn-grid">
             {pokemonWhoLike.map((p) => (
               <Link key={p.slug} href={`/pokemon/${p.slug}`} className="pkmn-grid-card">
                 <div className="pkmn-grid-icon">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={pkmnIconUrl(p)} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "pixelated" }} />
+                  <img src={pkmnIconUrl(p)} alt={p.name} className="w-full h-full object-contain [image-rendering:pixelated]" />
                 </div>
                 <div className="pkmn-grid-num">#{dexNum(p)}</div>
                 <div className="pkmn-grid-name">{p.name}</div>
