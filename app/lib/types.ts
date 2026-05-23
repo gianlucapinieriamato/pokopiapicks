@@ -78,3 +78,9 @@ export type CraftingRecipe = {
   unlock: string;
   materials: CraftingIngredient[];
 };
+
+export type ResolvedItem = {
+  displayName: string;
+  slug: string | undefined;
+  icon: string | null;
+};
