@@ -66,12 +66,6 @@ export const POKEMON_CATEGORIES_SORTED: Record<string, readonly CategoryConst[]>
 const VARIANT_ICON_RE = /^\d{3}-.+\.png$/;
 
 /**
- * National dex numbers that have at least one non-base form.
- * Populated during variant map build below.
- */
-const VARIANT_DEX_NUMS = new Set<number>();
-
-/**
  * Map from base-form slug → array of variant Pokemon.
  * Only populated for Pokemon that ARE base forms with at least one variant.
  */
@@ -88,7 +82,6 @@ for (const p of POKEMON_LIST) {
   if (!VARIANT_ICON_RE.test(p.icon)) continue;
   const dexNum_ = p.nationalDexNum;
   if (dexNum_ == null) continue;
-  VARIANT_DEX_NUMS.add(dexNum_);
   const base = POKEMON_LIST.find(
     (q) => q.nationalDexNum === dexNum_ && !VARIANT_ICON_RE.test(q.icon),
   );
@@ -96,3 +89,6 @@ for (const p of POKEMON_LIST) {
   (POKEMON_VARIANTS_BY_BASE[base.slug] ??= []).push(p);
   POKEMON_BASE_BY_VARIANT[p.slug] = base;
 }
+
+Object.freeze(POKEMON_VARIANTS_BY_BASE);
+Object.freeze(POKEMON_BASE_BY_VARIANT);
