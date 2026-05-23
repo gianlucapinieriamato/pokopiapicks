@@ -62,55 +62,55 @@ const specialties = Object.values(SPECIALTIES).map((s) => ({
   key: toPascalCase(s.name),
 }));
 
-// 5. PokemonHabitat — distinct values of pokemon.habitat (display name)
-// The constant value IS the display name (e.g. PokemonHabitat.Dry = "Dry")
-const pokemonHabitatSet = new Map<string, string>(); // displayName → key
+// Helper: display name → slug ("Bright light" → "bright-light", "Dry" → "dry")
+const toSlug = (v: string) => v.toLowerCase().replace(/\s+/g, "-");
+
+// 5. PokemonHabitat — derived from distinct pokemon.habitat display names, stored as slugs
+const pokemonHabitatSet = new Set<string>();
 for (const p of Object.values(POKEMON) as any[]) {
-  if (p.habitat && !pokemonHabitatSet.has(p.habitat as string)) {
-    pokemonHabitatSet.set(p.habitat as string, toPascalCase(p.habitat as string));
-  }
+  if (p.habitat) pokemonHabitatSet.add(p.habitat as string);
 }
-const pokemonHabitats = [...pokemonHabitatSet.entries()]
-  .sort(([a], [b]) => a.localeCompare(b))
-  .map(([displayName, key]) => ({
-    slug: displayName, // value stored in const IS the display name
+const pokemonHabitats = [...pokemonHabitatSet]
+  .sort()
+  .map((displayName) => ({
+    slug: toSlug(displayName), // "dry", "bright", etc.
     name: displayName,
-    key,
+    key: toPascalCase(displayName),
   }));
 
-// 6. Weather — distinct values from habitatList[].weather
+// 6. Weather — slugified values (e.g. "Sun" → "sun")
 const weatherSet = new Set<string>();
 for (const p of Object.values(POKEMON) as any[]) {
   for (const h of p.habitatList ?? []) {
     for (const w of h.weather ?? []) weatherSet.add(w);
   }
 }
-const weatherEntries = [...weatherSet].sort().map((v) => ({ slug: v, name: v, key: toPascalCase(v) }));
+const weatherEntries = [...weatherSet].sort().map((v) => ({ slug: toSlug(v), name: v, key: toPascalCase(v) }));
 
-// 7. Time — distinct values from habitatList[].time
+// 7. Time — slugified values (e.g. "Morning" → "morning")
 const timeSet = new Set<string>();
 for (const p of Object.values(POKEMON) as any[]) {
   for (const h of p.habitatList ?? []) {
     for (const t of h.time ?? []) timeSet.add(t);
   }
 }
-const timeEntries = [...timeSet].sort().map((v) => ({ slug: v, name: v, key: toPascalCase(v) }));
+const timeEntries = [...timeSet].sort().map((v) => ({ slug: toSlug(v), name: v, key: toPascalCase(v) }));
 
-// 8. Rarity — distinct values from habitatList[].rarity
+// 8. Rarity — slugified values (e.g. "Common" → "common")
 const raritySet = new Set<string>();
 for (const p of Object.values(POKEMON) as any[]) {
   for (const h of p.habitatList ?? []) {
     if (h.rarity) raritySet.add(h.rarity);
   }
 }
-const rarityEntries = [...raritySet].sort().map((v) => ({ slug: v, name: v, key: toPascalCase(v) }));
+const rarityEntries = [...raritySet].sort().map((v) => ({ slug: toSlug(v), name: v, key: toPascalCase(v) }));
 
-// 9. Flavor — distinct values from pokemon.flavor
+// 9. Flavor — slugified values (e.g. "Dry" → "dry")
 const flavorSet = new Set<string>();
 for (const p of Object.values(POKEMON) as any[]) {
   if (p.flavor) flavorSet.add(p.flavor);
 }
-const flavorEntries = [...flavorSet].sort().map((v) => ({ slug: v, name: v, key: toPascalCase(v) }));
+const flavorEntries = [...flavorSet].sort().map((v) => ({ slug: toSlug(v), name: v, key: toPascalCase(v) }));
 
 // 10. Items (878) — slug → name lookup
 const itemEntriesRaw = Object.values(ITEMS).map((i) => ({
