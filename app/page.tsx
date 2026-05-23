@@ -25,7 +25,8 @@ export default function Home() {
     <div className="max-w-[1080px] mx-auto px-5 pt-8 pb-20 relative z-[1]">
       <header className="text-center mb-5 pt-6 pb-2 px-5">
         <h1 className="font-outfit font-semibold text-[clamp(2rem,5vw,3.4rem)] leading-none tracking-[-0.025em] mb-2 uppercase whitespace-nowrap">
-          Pokopia <span className="italic text-accent-deep font-bold">Picks</span>
+          Pokémon Pokopia Gift Guide
+          <span className="block text-[0.6em] font-medium normal-case text-ink-soft mt-1">by Pokopia <span className="italic text-accent-deep font-bold">Picks</span></span>
         </h1>
         <p className="max-w-[560px] mx-auto text-ink-soft text-[15px] leading-[1.55]">
           Search a Pokemon or browse the collection below. Click any card to see the full breakdown.

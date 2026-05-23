@@ -30,8 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const catList = p.categories.slice(0, 3).join(", ");
   return {
     title: `${p.name} — gifts, habitat & specialties`,
-    description: `What does ${p.name} like in Pokemon Pokopia? ${p.habitat} habitat${specNames ? `, ${specNames} specialty` : ""}${catList ? `. Loves: ${catList}` : ""}. Find the best gift items and roommates.`,
+    description: `What does ${p.name} like in Pokémon Pokopia? ${p.habitat} habitat${specNames ? `, ${specNames} specialty` : ""}${catList ? `. Loves: ${catList}` : ""}. Find the best gift items and roommates in Pokémon Pokopia.`,
     openGraph: {
+      url: `${SITE_URL}/pokemon/${slug}/`,
       images: [{ url: p.spriteHq ?? `/icons/pokemon/${p.icon}`, width: 480, height: 480, alt: p.name }],
     },
   };
@@ -75,9 +76,13 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           "@context": "https://schema.org",
           "@type": "VideoGameCharacter",
           name: p.name,
+          isPartOf: {
+            "@type": "VideoGame",
+            name: "Pokémon Pokopia",
+          },
           description: `${p.name} — ${p.habitat} habitat. Favorite items: ${p.categories.slice(0, 3).join(", ")}.`,
           image: p.spriteHq ?? `/icons/pokemon/${p.icon}`,
-          url: `${SITE_URL}/pokemon/${slug}`,
+          url: `${SITE_URL}/pokemon/${slug}/`,
         },
       ]} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Pokédex", href: "/pokedex" }, { label: p.name }]} />

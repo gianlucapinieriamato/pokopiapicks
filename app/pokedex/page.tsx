@@ -5,7 +5,7 @@ import JsonLd from "@/app/components/JsonLd";
 import PokedexClient from "./PokedexClient";
 
 export const metadata: Metadata = {
-  title: "Pokédex",
+  title: "Pokémon Pokopia Pokédex — Filter by Habitat, Flavor & Specialty",
   description: `Browse all ${POKEMON_LIST.length} Pokemon in Pokemon Pokopia. Filter by habitat, flavor, specialty, favorite category, and location to find the perfect roommate.`,
 };
 
@@ -19,7 +19,7 @@ export default function PokedexPage() {
           name: "Pokémon Pokopia Pokédex",
           url: `${SITE_URL}/pokedex/`,
           numberOfItems: POKEMON_LIST.length,
-          itemListElement: POKEMON_LIST.slice(0, 20).map((p, i) => ({
+          itemListElement: POKEMON_LIST.slice(0, 50).map((p, i) => ({
             "@type": "ListItem",
             position: i + 1,
             url: `${SITE_URL}/pokemon/${p.slug}/`,

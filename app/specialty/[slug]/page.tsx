@@ -24,6 +24,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${s.name} Specialty — Pokémon List | Pokopia Picks`,
     description,
+    openGraph: {
+      url: `${SITE_URL}/specialty/${slug}/`,
+    },
   };
 }
 
