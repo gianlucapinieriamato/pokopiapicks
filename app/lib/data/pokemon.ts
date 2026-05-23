@@ -6,7 +6,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
   "onix": {
     "name": "Onix",
     "num": 30,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.BlockyStuff,
       Category.Exercise,
@@ -54,12 +54,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "timburr": {
     "name": "Timburr",
     "num": 65,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.BlockyStuff,
       Category.Construction,
@@ -105,12 +104,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "litwick": {
     "name": "Litwick",
     "num": 68,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.BlockyStuff,
       Category.LotsOfFire,
@@ -157,12 +155,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ghost",
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "charjabug": {
     "name": "Charjabug",
     "num": 139,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.BlockyStuff,
       Category.Electronics,
@@ -210,12 +207,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "tatsugiridroopyform": {
     "name": "Tatsugiri Droopy Form",
     "num": 145,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.BlockyStuff,
       Category.GroupActivities,
@@ -262,12 +258,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dragon",
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "stereorotom": {
     "name": "Stereo Rotom",
     "num": 182,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.BlockyStuff,
       Category.GlassStuff,
@@ -314,12 +309,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "porygon": {
     "name": "Porygon",
     "num": 218,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.BlockyStuff,
       Category.ColorfulStuff,
@@ -340,12 +334,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "tinkaton": {
     "name": "Tinkaton",
     "num": 270,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.BlockyStuff,
       Category.Construction,
@@ -392,12 +385,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fairy",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "squirtle": {
     "name": "Squirtle",
     "num": 7,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.CuteStuff,
@@ -443,12 +435,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "wartortle": {
     "name": "Wartortle",
     "num": 8,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Exercise,
@@ -494,12 +485,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "blastoise": {
     "name": "Blastoise",
     "num": 9,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Exercise,
@@ -546,12 +536,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "slowpoke": {
     "name": "Slowpoke",
     "num": 24,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Healing,
@@ -599,12 +588,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "slowbro": {
     "name": "Slowbro",
     "num": 25,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.GroupActivities,
@@ -652,12 +640,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "slowking": {
     "name": "Slowking",
     "num": 26,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.GroupActivities,
@@ -705,12 +692,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "gyarados": {
     "name": "Gyarados",
     "num": 46,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.LotsOfWater,
@@ -753,12 +739,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "shellos": {
     "name": "Shellos",
     "num": 59,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.ColorfulStuff,
@@ -804,12 +789,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "shelloseastsea": {
     "name": "Shellos East Sea",
     "num": 59,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.ColorfulStuff,
@@ -855,12 +839,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "gastrodon": {
     "name": "Gastrodon",
     "num": 60,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Containers,
@@ -908,12 +891,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "gastrodoneastsea": {
     "name": "Gastrodon East Sea",
     "num": 60,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Containers,
@@ -961,12 +943,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "goomy": {
     "name": "Goomy",
     "num": 74,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Healing,
@@ -1011,12 +992,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "sliggoo": {
     "name": "Sliggoo",
     "num": 75,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Healing,
@@ -1061,12 +1041,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "goodra": {
     "name": "Goodra",
     "num": 76,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Exercise,
@@ -1112,12 +1091,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "lapras": {
     "name": "Lapras",
     "num": 106,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Healing,
@@ -1164,12 +1142,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Ice"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "azurill": {
     "name": "Azurill",
     "num": 114,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.CuteStuff,
@@ -1217,12 +1194,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "marill": {
     "name": "Marill",
     "num": 115,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.CuteStuff,
@@ -1270,12 +1246,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "paldeanwooper": {
     "name": "Paldean Wooper",
     "num": 117,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Garbage,
@@ -1318,12 +1293,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "clodsire": {
     "name": "Clodsire",
     "num": 118,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Garbage,
@@ -1371,12 +1345,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Poison",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "wingull": {
     "name": "Wingull",
     "num": 123,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.LotsOfWater,
@@ -1423,12 +1396,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "pelipper": {
     "name": "Pelipper",
     "num": 124,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.LotsOfWater,
@@ -1475,12 +1447,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "piplup": {
     "name": "Piplup",
     "num": 128,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Containers,
@@ -1526,12 +1497,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "prinplup": {
     "name": "Prinplup",
     "num": 129,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Containers,
@@ -1578,12 +1548,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "empoleon": {
     "name": "Empoleon",
     "num": 130,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.LettersAndWords,
@@ -1630,12 +1599,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "minccino": {
     "name": "Minccino",
     "num": 136,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Cleanliness,
       Category.CuteStuff,
@@ -1681,12 +1649,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "cinccino": {
     "name": "Cinccino",
     "num": 137,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Cleanliness,
       Category.CuteStuff,
@@ -1733,12 +1700,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "lotad": {
     "name": "Lotad",
     "num": 172,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Containers,
@@ -1785,12 +1751,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "lombre": {
     "name": "Lombre",
     "num": 173,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Containers,
@@ -1837,12 +1802,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "dartrix": {
     "name": "Dartrix",
     "num": 186,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Cleanliness,
       Category.LotsOfNature,
@@ -1890,12 +1854,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "poliwag": {
     "name": "Poliwag",
     "num": 209,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.LotsOfWater,
@@ -1941,12 +1904,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "poliwhirl": {
     "name": "Poliwhirl",
     "num": 210,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Exercise,
@@ -1992,12 +1954,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "poliwrath": {
     "name": "Poliwrath",
     "num": 211,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Construction,
@@ -2045,12 +2006,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "dratini": {
     "name": "Dratini",
     "num": 221,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.CuteStuff,
@@ -2096,12 +2056,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "dragonair": {
     "name": "Dragonair",
     "num": 222,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.GlassStuff,
@@ -2147,12 +2106,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "dragonite": {
     "name": "Dragonite",
     "num": 223,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.LotsOfFire,
@@ -2200,12 +2158,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dragon",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "swablu": {
     "name": "Swablu",
     "num": 240,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Cleanliness,
       Category.CuteStuff,
@@ -2252,12 +2209,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "servine": {
     "name": "Servine",
     "num": 249,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.LotsOfNature,
@@ -2304,12 +2260,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "froakie": {
     "name": "Froakie",
     "num": 251,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Containers,
@@ -2355,12 +2310,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "frogadier": {
     "name": "Frogadier",
     "num": 252,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Exercise,
@@ -2406,12 +2360,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "greninja": {
     "name": "Greninja",
     "num": 253,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Exercise,
@@ -2459,12 +2412,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Dark"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "vaporeon": {
     "name": "Vaporeon",
     "num": 281,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.CuteStuff,
@@ -2506,12 +2458,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "suicune": {
     "name": "Suicune",
     "num": 292,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Cleanliness,
       Category.Healing,
@@ -2532,12 +2483,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "ivysaur": {
     "name": "Ivysaur",
     "num": 2,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ColorfulStuff,
       Category.CuteStuff,
@@ -2584,12 +2534,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "vileplume": {
     "name": "Vileplume",
     "num": 15,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ColorfulStuff,
       Category.LotsOfDirt,
@@ -2637,12 +2586,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "weepinbell": {
     "name": "Weepinbell",
     "num": 22,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ColorfulStuff,
       Category.LotsOfDirt,
@@ -2690,12 +2638,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "victreebel": {
     "name": "Victreebel",
     "num": 23,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ColorfulStuff,
       Category.LotsOfDirt,
@@ -2743,12 +2690,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "gulpin": {
     "name": "Gulpin",
     "num": 53,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ColorfulStuff,
       Category.Containers,
@@ -2790,12 +2736,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "swalot": {
     "name": "Swalot",
     "num": 54,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ColorfulStuff,
       Category.Containers,
@@ -2841,12 +2786,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "muk": {
     "name": "Muk",
     "num": 92,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ColorfulStuff,
       Category.Garbage,
@@ -2892,12 +2836,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "voltorb": {
     "name": "Voltorb",
     "num": 96,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ColorfulStuff,
       Category.Electronics,
@@ -2944,12 +2887,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "spinarak": {
     "name": "Spinarak",
     "num": 109,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ColorfulStuff,
       Category.Garbage,
@@ -2996,12 +2938,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "ariados": {
     "name": "Ariados",
     "num": 110,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ColorfulStuff,
       Category.Garbage,
@@ -3048,12 +2989,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "smeargle": {
     "name": "Smeargle",
     "num": 119,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ColorfulStuff,
       Category.Fabric,
@@ -3099,12 +3039,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "cleffa": {
     "name": "Cleffa",
     "num": 148,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ColorfulStuff,
       Category.CuteStuff,
@@ -3147,12 +3086,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "mawile": {
     "name": "Mawile",
     "num": 175,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ColorfulStuff,
       Category.CuteStuff,
@@ -3196,12 +3134,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Steel",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "kricketot": {
     "name": "Kricketot",
     "num": 177,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ColorfulStuff,
       Category.LotsOfNature,
@@ -3247,12 +3184,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Bug"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "kricketune": {
     "name": "Kricketune",
     "num": 178,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ColorfulStuff,
       Category.LotsOfNature,
@@ -3298,12 +3234,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Bug"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "porygon2": {
     "name": "Porygon2",
     "num": 219,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ColorfulStuff,
       Category.Construction,
@@ -3349,12 +3284,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "porygon-z": {
     "name": "Porygon-Z",
     "num": 220,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ColorfulStuff,
       Category.Fabric,
@@ -3400,12 +3334,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "misdreavus": {
     "name": "Misdreavus",
     "num": 227,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ColorfulStuff,
       Category.ShinyStuff,
@@ -3448,12 +3381,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "sprigatito": {
     "name": "Sprigatito",
     "num": 263,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ColorfulStuff,
       Category.Containers,
@@ -3499,12 +3431,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "floragato": {
     "name": "Floragato",
     "num": 264,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ColorfulStuff,
       Category.CuteStuff,
@@ -3550,12 +3481,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "venonat": {
     "name": "Venonat",
     "num": 19,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ComplicatedStuff,
       Category.LettersAndWords,
@@ -3599,12 +3529,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "koffing": {
     "name": "Koffing",
     "num": 38,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.Garbage,
@@ -3646,12 +3575,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "weezing": {
     "name": "Weezing",
     "num": 39,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.Garbage,
@@ -3693,12 +3621,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "professortangrowth": {
     "name": "Professor Tangrowth",
     "num": 41,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ComplicatedStuff,
       Category.GroupActivities,
@@ -3719,12 +3646,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "vespiquen": {
     "name": "Vespiquen",
     "num": 58,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ComplicatedStuff,
       Category.Gatherings,
@@ -3772,12 +3698,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "zubat": {
     "name": "Zubat",
     "num": 81,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.NiceBreezes,
@@ -3820,12 +3745,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Poison",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "golbat": {
     "name": "Golbat",
     "num": 82,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.NiceBreezes,
@@ -3868,12 +3792,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Poison",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "psyduck": {
     "name": "Psyduck",
     "num": 86,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ComplicatedStuff,
       Category.Healing,
@@ -3919,12 +3842,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "golduck": {
     "name": "Golduck",
     "num": 87,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ComplicatedStuff,
       Category.LotsOfWater,
@@ -3970,12 +3892,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "absol": {
     "name": "Absol",
     "num": 127,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.Exercise,
@@ -4021,12 +3942,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dark"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "trubbish": {
     "name": "Trubbish",
     "num": 132,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ComplicatedStuff,
       Category.Construction,
@@ -4072,12 +3992,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "garbodor": {
     "name": "Garbodor",
     "num": 133,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.ComplicatedStuff,
       Category.Containers,
@@ -4124,12 +4043,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "lucario": {
     "name": "Lucario",
     "num": 181,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.Construction,
@@ -4176,12 +4094,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fighting",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "glimmet": {
     "name": "Glimmet",
     "num": 203,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.Garbage,
@@ -4228,12 +4145,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "glimmora": {
     "name": "Glimmora",
     "num": 204,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.Garbage,
@@ -4280,12 +4196,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "gimmighoul": {
     "name": "Gimmighoul",
     "num": 205,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.MetalStuff,
@@ -4331,12 +4246,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "gholdengo": {
     "name": "Gholdengo",
     "num": 206,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ComplicatedStuff,
       Category.MetalStuff,
@@ -4383,12 +4297,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Steel",
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "beldum": {
     "name": "Beldum",
     "num": 245,
-    "habitat": "Cool",
+    "habitat": PokemonHabitat.Cool,
     "categories": [
       Category.ComplicatedStuff,
       Category.HardStuff,
@@ -4435,12 +4348,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Steel",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Cool
   },
   "metang": {
     "name": "Metang",
     "num": 246,
-    "habitat": "Cool",
+    "habitat": PokemonHabitat.Cool,
     "categories": [
       Category.ComplicatedStuff,
       Category.HardStuff,
@@ -4462,12 +4374,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Steel",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Cool
   },
   "wattrel": {
     "name": "Wattrel",
     "num": 266,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ComplicatedStuff,
       Category.Electronics,
@@ -4514,12 +4425,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "espeon": {
     "name": "Espeon",
     "num": 284,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.ComplicatedStuff,
       Category.CuteStuff,
@@ -4561,12 +4471,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "mewtwo": {
     "name": "Mewtwo",
     "num": 299,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.ComplicatedStuff,
       Category.LettersAndWords,
@@ -4587,12 +4496,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "mew": {
     "name": "Mew",
     "num": 300,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.ComplicatedStuff,
       Category.Luxury,
@@ -4613,12 +4521,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "cubone": {
     "name": "Cubone",
     "num": 32,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -4664,12 +4571,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "marowak": {
     "name": "Marowak",
     "num": 33,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -4715,12 +4621,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "gurdurr": {
     "name": "Gurdurr",
     "num": 66,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -4766,12 +4671,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "conkeldurr": {
     "name": "Conkeldurr",
     "num": 67,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -4818,12 +4722,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "azumarill": {
     "name": "Azumarill",
     "num": 116,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Construction,
       Category.CuteStuff,
@@ -4870,12 +4773,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "combusken": {
     "name": "Combusken",
     "num": 121,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Construction,
       Category.Containers,
@@ -4923,12 +4825,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fire",
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "blaziken": {
     "name": "Blaziken",
     "num": 122,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Construction,
       Category.Containers,
@@ -4976,12 +4877,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fire",
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "makuhita": {
     "name": "Makuhita",
     "num": 125,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -5028,12 +4928,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "hariyama": {
     "name": "Hariyama",
     "num": 126,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -5080,12 +4979,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "machop": {
     "name": "Machop",
     "num": 156,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -5128,12 +5026,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "machoke": {
     "name": "Machoke",
     "num": 157,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -5180,12 +5077,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "machamp": {
     "name": "Machamp",
     "num": 158,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -5232,12 +5128,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "riolu": {
     "name": "Riolu",
     "num": 180,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -5283,12 +5178,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "gallade": {
     "name": "Gallade",
     "num": 234,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.Exercise,
@@ -5336,12 +5230,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Psychic",
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "tinkatink": {
     "name": "Tinkatink",
     "num": 268,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.CuteStuff,
@@ -5384,12 +5277,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fairy",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "tinkatuff": {
     "name": "Tinkatuff",
     "num": 269,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Construction,
       Category.CuteStuff,
@@ -5436,12 +5328,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fairy",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "noctowl": {
     "name": "Noctowl",
     "num": 49,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Containers,
       Category.LettersAndWords,
@@ -5486,12 +5377,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "lampent": {
     "name": "Lampent",
     "num": 69,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Containers,
       Category.LotsOfFire,
@@ -5538,12 +5428,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ghost",
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "meowth": {
     "name": "Meowth",
     "num": 84,
-    "habitat": "Cool",
+    "habitat": PokemonHabitat.Cool,
     "categories": [
       Category.Containers,
       Category.GlassStuff,
@@ -5589,12 +5478,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Cool
   },
   "persian": {
     "name": "Persian",
     "num": 85,
-    "habitat": "Cool",
+    "habitat": PokemonHabitat.Cool,
     "categories": [
       Category.Containers,
       Category.GroupActivities,
@@ -5641,12 +5529,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Cool
   },
   "grimer": {
     "name": "Grimer",
     "num": 91,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Containers,
       Category.Garbage,
@@ -5692,12 +5579,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "gastly": {
     "name": "Gastly",
     "num": 93,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Containers,
       Category.Garbage,
@@ -5742,12 +5628,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ghost",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "happiny": {
     "name": "Happiny",
     "num": 100,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Containers,
       Category.Fabric,
@@ -5793,12 +5678,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "torchic": {
     "name": "Torchic",
     "num": 120,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Containers,
       Category.CuteStuff,
@@ -5844,12 +5728,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "grubbin": {
     "name": "Grubbin",
     "num": 138,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Containers,
       Category.Electronics,
@@ -5895,12 +5778,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Bug"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "tatsugiristretchyform": {
     "name": "Tatsugiri Stretchy Form",
     "num": 145,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Containers,
       Category.GroupActivities,
@@ -5947,12 +5829,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dragon",
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "ludicolo": {
     "name": "Ludicolo",
     "num": 174,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Containers,
       Category.LotsOfNature,
@@ -6000,12 +5881,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Water",
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "rowlet": {
     "name": "Rowlet",
     "num": 185,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Containers,
       Category.LotsOfNature,
@@ -6048,12 +5928,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "raboot": {
     "name": "Raboot",
     "num": 189,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Containers,
       Category.GroupActivities,
@@ -6099,12 +5978,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "kadabra": {
     "name": "Kadabra",
     "num": 214,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Containers,
       Category.MetalStuff,
@@ -6125,12 +6003,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "dusclops": {
     "name": "Dusclops",
     "num": 243,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Containers,
       Category.Rides,
@@ -6173,12 +6050,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "dusknoir": {
     "name": "Dusknoir",
     "num": 244,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Containers,
       Category.GroupActivities,
@@ -6222,12 +6098,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "serperior": {
     "name": "Serperior",
     "num": 250,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Containers,
       Category.LotsOfNature,
@@ -6274,12 +6149,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "rookidee": {
     "name": "Rookidee",
     "num": 257,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Containers,
       Category.NiceBreezes,
@@ -6325,12 +6199,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "corvisquire": {
     "name": "Corvisquire",
     "num": 258,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Containers,
       Category.NiceBreezes,
@@ -6376,12 +6249,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "corviknight": {
     "name": "Corviknight",
     "num": 259,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Containers,
       Category.MetalStuff,
@@ -6429,12 +6301,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Flying",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "amaura": {
     "name": "Amaura",
     "num": 278,
-    "habitat": "Cool",
+    "habitat": PokemonHabitat.Cool,
     "categories": [
       Category.Containers,
       Category.GroupActivities,
@@ -6481,12 +6352,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Ice"
     ],
-    "habitatSlug": PokemonHabitat.Cool
   },
   "volcanion": {
     "name": "Volcanion",
     "num": 293,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Containers,
       Category.LotsOfFire,
@@ -6508,12 +6378,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fire",
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "bulbasaur": {
     "name": "Bulbasaur",
     "num": 1,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.GroupActivities,
@@ -6560,12 +6429,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "venusaur": {
     "name": "Venusaur",
     "num": 3,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.LotsOfNature,
@@ -6613,12 +6481,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "bellossom": {
     "name": "Bellossom",
     "num": 16,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.LotsOfNature,
@@ -6665,12 +6532,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "volbeat": {
     "name": "Volbeat",
     "num": 51,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.CuteStuff,
       Category.GroupActivities,
@@ -6716,12 +6582,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Bug"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "illumise": {
     "name": "Illumise",
     "num": 52,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.CuteStuff,
       Category.GroupActivities,
@@ -6767,12 +6632,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Bug"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "cacnea": {
     "name": "Cacnea",
     "num": 55,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.CuteStuff,
       Category.LotsOfNature,
@@ -6817,12 +6681,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "drifloon": {
     "name": "Drifloon",
     "num": 61,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.CuteStuff,
       Category.NiceBreezes,
@@ -6869,12 +6732,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ghost",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "pichu": {
     "name": "Pichu",
     "num": 78,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -6916,12 +6778,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "peakychu": {
     "name": "Peakychu",
     "num": 79,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -6967,12 +6828,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "elekid": {
     "name": "Elekid",
     "num": 103,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -7018,12 +6878,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "mareep": {
     "name": "Mareep",
     "num": 111,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -7070,12 +6929,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "flaaffy": {
     "name": "Flaaffy",
     "num": 112,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -7122,12 +6980,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "ampharos": {
     "name": "Ampharos",
     "num": 113,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -7174,12 +7031,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "audino": {
     "name": "Audino",
     "num": 131,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Fabric,
@@ -7225,12 +7081,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "zorua": {
     "name": "Zorua",
     "num": 134,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.CuteStuff,
       Category.GlassStuff,
@@ -7276,12 +7131,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dark"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "mimikyu": {
     "name": "Mimikyu",
     "num": 141,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -7328,12 +7182,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ghost",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "pawmi": {
     "name": "Pawmi",
     "num": 142,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -7379,12 +7232,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "clefairy": {
     "name": "Clefairy",
     "num": 149,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.CuteStuff,
       Category.GroupActivities,
@@ -7427,12 +7279,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "clefable": {
     "name": "Clefable",
     "num": 150,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.CuteStuff,
       Category.GroupActivities,
@@ -7476,12 +7327,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "igglybuff": {
     "name": "Igglybuff",
     "num": 151,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.CuteStuff,
       Category.Healing,
@@ -7528,12 +7378,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "jigglypuff": {
     "name": "Jigglypuff",
     "num": 152,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Healing,
@@ -7580,12 +7429,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "wigglytuff": {
     "name": "Wigglytuff",
     "num": 153,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.GroupActivities,
@@ -7633,12 +7481,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "diglett": {
     "name": "Diglett",
     "num": 154,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.CuteStuff,
       Category.GroupActivities,
@@ -7684,12 +7531,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "magby": {
     "name": "Magby",
     "num": 162,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.CuteStuff,
       Category.LotsOfFire,
@@ -7731,12 +7577,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "fidough": {
     "name": "Fidough",
     "num": 198,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.CuteStuff,
       Category.LettersAndWords,
@@ -7781,12 +7626,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "dachsbun": {
     "name": "Dachsbun",
     "num": 199,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.CuteStuff,
       Category.GroupActivities,
@@ -7832,12 +7676,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "vulpix": {
     "name": "Vulpix",
     "num": 207,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.CuteStuff,
       Category.LotsOfFire,
@@ -7883,12 +7726,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "ralts": {
     "name": "Ralts",
     "num": 231,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Healing,
@@ -7935,12 +7777,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Psychic",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "kirlia": {
     "name": "Kirlia",
     "num": 232,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Healing,
@@ -7987,12 +7828,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Psychic",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "plusle": {
     "name": "Plusle",
     "num": 235,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -8038,12 +7878,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "minun": {
     "name": "Minun",
     "num": 236,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -8089,12 +7928,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "altaria": {
     "name": "Altaria",
     "num": 241,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.NiceBreezes,
@@ -8142,12 +7980,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dragon",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "dedenne": {
     "name": "Dedenne",
     "num": 254,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -8190,12 +8027,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "meowscarada": {
     "name": "Meowscarada",
     "num": 265,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.LotsOfNature,
@@ -8243,12 +8079,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Dark"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "eevee": {
     "name": "Eevee",
     "num": 280,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.CuteStuff,
       Category.GroupActivities,
@@ -8294,12 +8129,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "jolteon": {
     "name": "Jolteon",
     "num": 282,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Electronics,
@@ -8341,12 +8175,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "flareon": {
     "name": "Flareon",
     "num": 283,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.CuteStuff,
       Category.LotsOfFire,
@@ -8388,12 +8221,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "umbreon": {
     "name": "Umbreon",
     "num": 285,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.CuteStuff,
       Category.LettersAndWords,
@@ -8435,12 +8267,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dark"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "leafeon": {
     "name": "Leafeon",
     "num": 286,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.CuteStuff,
       Category.Fabric,
@@ -8482,12 +8313,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "glaceon": {
     "name": "Glaceon",
     "num": 287,
-    "habitat": "Cool",
+    "habitat": PokemonHabitat.Cool,
     "categories": [
       Category.CuteStuff,
       Category.GlassStuff,
@@ -8529,12 +8359,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ice"
     ],
-    "habitatSlug": PokemonHabitat.Cool
   },
   "sylveon": {
     "name": "Sylveon",
     "num": 288,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.CuteStuff,
       Category.Fabric,
@@ -8576,12 +8405,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "magnemite": {
     "name": "Magnemite",
     "num": 27,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.GroupActivities,
@@ -8628,12 +8456,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "magneton": {
     "name": "Magneton",
     "num": 28,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.Gatherings,
@@ -8680,12 +8507,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "magnezone": {
     "name": "Magnezone",
     "num": 29,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.Gatherings,
@@ -8733,12 +8559,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "pikachu": {
     "name": "Pikachu",
     "num": 79,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.GlassStuff,
@@ -8780,12 +8605,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "raichu": {
     "name": "Raichu",
     "num": 80,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.GlassStuff,
@@ -8807,12 +8631,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "electrode": {
     "name": "Electrode",
     "num": 97,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.PlaySpaces,
@@ -8859,12 +8682,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "electabuzz": {
     "name": "Electabuzz",
     "num": 104,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.Exercise,
@@ -8910,12 +8732,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "electivire": {
     "name": "Electivire",
     "num": 105,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.Exercise,
@@ -8962,12 +8783,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "vikavolt": {
     "name": "Vikavolt",
     "num": 140,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.Exercise,
@@ -9011,12 +8831,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "pawmo": {
     "name": "Pawmo",
     "num": 143,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.Exercise,
@@ -9064,12 +8883,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "pawmot": {
     "name": "Pawmot",
     "num": 144,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.Exercise,
@@ -9117,12 +8935,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "magmar": {
     "name": "Magmar",
     "num": 163,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Electronics,
       Category.Exercise,
@@ -9168,12 +8985,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "magmortar": {
     "name": "Magmortar",
     "num": 164,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Electronics,
       Category.Exercise,
@@ -9220,12 +9036,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "toxel": {
     "name": "Toxel",
     "num": 196,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Electronics,
       Category.Garbage,
@@ -9268,12 +9083,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "toxtricityampedform": {
     "name": "Toxtricity Amped Form",
     "num": 197,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Electronics,
       Category.NoisyStuff,
@@ -9321,12 +9135,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "toxtricitylowkeyform": {
     "name": "Toxtricity Low Key Form",
     "num": 197,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Electronics,
       Category.NoisyStuff,
@@ -9374,12 +9187,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "kilowattrel": {
     "name": "Kilowattrel",
     "num": 267,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.Gatherings,
@@ -9427,12 +9239,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "raikou": {
     "name": "Raikou",
     "num": 290,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.GlassStuff,
@@ -9453,12 +9264,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Electric"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "zapdos": {
     "name": "Zapdos",
     "num": 295,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Electronics,
       Category.GlassStuff,
@@ -9480,12 +9290,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Electric",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "charmander": {
     "name": "Charmander",
     "num": 4,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Exercise,
       Category.GroupActivities,
@@ -9531,12 +9340,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "charmeleon": {
     "name": "Charmeleon",
     "num": 5,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -9582,12 +9390,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "charizard": {
     "name": "Charizard",
     "num": 6,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Exercise,
       Category.LotsOfFire,
@@ -9634,12 +9441,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fire",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "tyrogue": {
     "name": "Tyrogue",
     "num": 34,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Exercise,
       Category.Fabric,
@@ -9685,12 +9491,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "hitmonlee": {
     "name": "Hitmonlee",
     "num": 35,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Exercise,
       Category.Fabric,
@@ -9736,12 +9541,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "hitmonchan": {
     "name": "Hitmonchan",
     "num": 36,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Exercise,
       Category.Fabric,
@@ -9787,12 +9591,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "hitmontop": {
     "name": "Hitmontop",
     "num": 37,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Exercise,
       Category.Fabric,
@@ -9838,12 +9641,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "scyther": {
     "name": "Scyther",
     "num": 42,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Exercise,
       Category.LotsOfNature,
@@ -9890,12 +9692,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "scizor": {
     "name": "Scizor",
     "num": 43,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -9938,12 +9739,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "pinsir": {
     "name": "Pinsir",
     "num": 44,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Exercise,
       Category.LotsOfNature,
@@ -9990,12 +9790,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Bug"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "heracross": {
     "name": "Heracross",
     "num": 50,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Exercise,
       Category.LooksLikeFood,
@@ -10043,12 +9842,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Fighting"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "excadrill": {
     "name": "Excadrill",
     "num": 64,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Exercise,
       Category.LotsOfDirt,
@@ -10096,12 +9894,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ground",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "fraxure": {
     "name": "Fraxure",
     "num": 72,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Exercise,
       Category.LotsOfDirt,
@@ -10147,12 +9944,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "haxorus": {
     "name": "Haxorus",
     "num": 73,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Exercise,
       Category.LotsOfDirt,
@@ -10199,12 +9995,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "geodude": {
     "name": "Geodude",
     "num": 159,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10247,12 +10042,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "graveler": {
     "name": "Graveler",
     "num": 160,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10299,12 +10093,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "golem": {
     "name": "Golem",
     "num": 161,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10352,12 +10145,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "tyranitar": {
     "name": "Tyranitar",
     "num": 171,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10405,12 +10197,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Dark"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "charcadet": {
     "name": "Charcadet",
     "num": 200,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Exercise,
       Category.LotsOfFire,
@@ -10456,12 +10247,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "armarouge": {
     "name": "Armarouge",
     "num": 201,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Exercise,
       Category.LotsOfFire,
@@ -10484,12 +10274,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fire",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "trapinch": {
     "name": "Trapinch",
     "num": 237,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10536,12 +10325,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "metagross": {
     "name": "Metagross",
     "num": 247,
-    "habitat": "Cool",
+    "habitat": PokemonHabitat.Cool,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10564,12 +10352,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Steel",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Cool
   },
   "cranidos": {
     "name": "Cranidos",
     "num": 272,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.Exercise,
       Category.GroupActivities,
@@ -10615,12 +10402,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Rock"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "rampardos": {
     "name": "Rampardos",
     "num": 273,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10667,12 +10453,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Rock"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "bastiodon": {
     "name": "Bastiodon",
     "num": 275,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10720,12 +10505,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "tyrunt": {
     "name": "Tyrunt",
     "num": 276,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10772,12 +10556,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "tyrantrum": {
     "name": "Tyrantrum",
     "num": 277,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.Exercise,
       Category.HardStuff,
@@ -10825,12 +10608,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "entei": {
     "name": "Entei",
     "num": 291,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Exercise,
       Category.LotsOfFire,
@@ -10851,12 +10633,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "hoothoot": {
     "name": "Hoothoot",
     "num": 48,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Fabric,
       Category.NiceBreezes,
@@ -10901,12 +10682,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "chansey": {
     "name": "Chansey",
     "num": 101,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Fabric,
       Category.GroupActivities,
@@ -10952,12 +10732,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "blissey": {
     "name": "Blissey",
     "num": 102,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Fabric,
       Category.GroupActivities,
@@ -11004,12 +10783,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "mosslax": {
     "name": "Mosslax",
     "num": 108,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Fabric,
       Category.LooksLikeFood,
@@ -11030,12 +10808,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "snorlax": {
     "name": "Snorlax",
     "num": 108,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Fabric,
       Category.LooksLikeFood,
@@ -11078,12 +10855,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "murkrow": {
     "name": "Murkrow",
     "num": 167,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Fabric,
       Category.GroupActivities,
@@ -11128,12 +10904,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dark",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "chatot": {
     "name": "Chatot",
     "num": 179,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Fabric,
       Category.NiceBreezes,
@@ -11180,12 +10955,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "cyndaquil": {
     "name": "Cyndaquil",
     "num": 224,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Fabric,
       Category.LotsOfFire,
@@ -11231,12 +11005,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "quilava": {
     "name": "Quilava",
     "num": 225,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Fabric,
       Category.LotsOfFire,
@@ -11282,12 +11055,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "typhlosion": {
     "name": "Typhlosion",
     "num": 226,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Fabric,
       Category.LotsOfFire,
@@ -11334,12 +11106,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "duskull": {
     "name": "Duskull",
     "num": 242,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Fabric,
       Category.GlassStuff,
@@ -11382,12 +11153,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "gloom": {
     "name": "Gloom",
     "num": 14,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Garbage,
       Category.LotsOfDirt,
@@ -11434,12 +11204,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "crobat": {
     "name": "Crobat",
     "num": 83,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Garbage,
       Category.NiceBreezes,
@@ -11484,12 +11253,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Poison",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "haunter": {
     "name": "Haunter",
     "num": 94,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Garbage,
       Category.GroupActivities,
@@ -11534,12 +11302,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ghost",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "gengar": {
     "name": "Gengar",
     "num": 95,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Garbage,
       Category.GroupActivities,
@@ -11584,12 +11351,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ghost",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "ekans": {
     "name": "Ekans",
     "num": 146,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Garbage,
       Category.LotsOfNature,
@@ -11635,12 +11401,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "arbok": {
     "name": "Arbok",
     "num": 147,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Garbage,
       Category.LotsOfNature,
@@ -11686,12 +11451,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "tangela": {
     "name": "Tangela",
     "num": 40,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Gatherings,
       Category.LotsOfNature,
@@ -11713,12 +11477,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "tangrowth": {
     "name": "Tangrowth",
     "num": 41,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Gatherings,
       Category.LotsOfNature,
@@ -11760,12 +11523,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "combee": {
     "name": "Combee",
     "num": 57,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Gatherings,
       Category.GroupActivities,
@@ -11812,12 +11574,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "exeggcute": {
     "name": "Exeggcute",
     "num": 98,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Gatherings,
       Category.GroupActivities,
@@ -11865,12 +11626,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "exeggutor": {
     "name": "Exeggutor",
     "num": 99,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Gatherings,
       Category.LotsOfNature,
@@ -11918,12 +11678,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "tatsugiricurlyform": {
     "name": "Tatsugiri Curly Form",
     "num": 145,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Gatherings,
       Category.GroupActivities,
@@ -11969,12 +11728,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dragon",
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "dugtrio": {
     "name": "Dugtrio",
     "num": 155,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.Gatherings,
       Category.GroupActivities,
@@ -12021,12 +11779,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "politoed": {
     "name": "Politoed",
     "num": 212,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.Gatherings,
       Category.GroupActivities,
@@ -12073,12 +11830,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "zoroark": {
     "name": "Zoroark",
     "num": 135,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.GlassStuff,
       Category.GroupActivities,
@@ -12125,12 +11881,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dark"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "honchkrow": {
     "name": "Honchkrow",
     "num": 168,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.GlassStuff,
       Category.LettersAndWords,
@@ -12177,12 +11932,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dark",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "kyogre": {
     "name": "Kyogre",
     "num": 289,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.GlassStuff,
       Category.LotsOfWater,
@@ -12201,12 +11955,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "magikarp": {
     "name": "Magikarp",
     "num": 45,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.GroupActivities,
       Category.LotsOfWater,
@@ -12250,12 +12003,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "munchlax": {
     "name": "Munchlax",
     "num": 107,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.GroupActivities,
       Category.LooksLikeFood,
@@ -12297,12 +12049,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "scorbunny": {
     "name": "Scorbunny",
     "num": 188,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.GroupActivities,
       Category.LotsOfFire,
@@ -12348,12 +12099,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "cinderace": {
     "name": "Cinderace",
     "num": 190,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.GroupActivities,
       Category.LotsOfFire,
@@ -12400,12 +12150,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "greedent": {
     "name": "Greedent",
     "num": 192,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.GroupActivities,
       Category.LooksLikeFood,
@@ -12426,12 +12175,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "mismagius": {
     "name": "Mismagius",
     "num": 228,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.GroupActivities,
       Category.NoisyStuff,
@@ -12475,12 +12223,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "dreepy": {
     "name": "Dreepy",
     "num": 260,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.GroupActivities,
       Category.LotsOfFire,
@@ -12528,12 +12275,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dragon",
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "drakloak": {
     "name": "Drakloak",
     "num": 261,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.GroupActivities,
       Category.LotsOfFire,
@@ -12581,12 +12327,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dragon",
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "dragapult": {
     "name": "Dragapult",
     "num": 262,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.GroupActivities,
       Category.LotsOfFire,
@@ -12634,12 +12379,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dragon",
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "steelix": {
     "name": "Steelix",
     "num": 31,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.HardStuff,
       Category.LotsOfDirt,
@@ -12687,12 +12431,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Steel",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "axew": {
     "name": "Axew",
     "num": 71,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.HardStuff,
       Category.LotsOfDirt,
@@ -12738,12 +12481,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "bonsly": {
     "name": "Bonsly",
     "num": 165,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.HardStuff,
       Category.LotsOfNature,
@@ -12789,12 +12531,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Rock"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "sudowoodo": {
     "name": "Sudowoodo",
     "num": 166,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.HardStuff,
       Category.LotsOfNature,
@@ -12840,12 +12581,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Rock"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "pupitar": {
     "name": "Pupitar",
     "num": 170,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.HardStuff,
       Category.Luxury,
@@ -12893,12 +12633,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "torkoal": {
     "name": "Torkoal",
     "num": 176,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.HardStuff,
       Category.LotsOfFire,
@@ -12944,12 +12683,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "rolycoly": {
     "name": "Rolycoly",
     "num": 193,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.HardStuff,
       Category.LotsOfFire,
@@ -12996,12 +12734,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Rock"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "carkol": {
     "name": "Carkol",
     "num": 194,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.HardStuff,
       Category.LotsOfFire,
@@ -13049,12 +12786,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "coalossal": {
     "name": "Coalossal",
     "num": 195,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.HardStuff,
       Category.LotsOfFire,
@@ -13102,12 +12838,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "aerodactyl": {
     "name": "Aerodactyl",
     "num": 271,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.HardStuff,
       Category.NiceBreezes,
@@ -13154,12 +12889,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "shieldon": {
     "name": "Shieldon",
     "num": 274,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.HardStuff,
       Category.Luxury,
@@ -13206,12 +12940,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Steel"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "aurorus": {
     "name": "Aurorus",
     "num": 279,
-    "habitat": "Cool",
+    "habitat": PokemonHabitat.Cool,
     "categories": [
       Category.HardStuff,
       Category.NoisyStuff,
@@ -13259,12 +12992,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Ice"
     ],
-    "habitatSlug": PokemonHabitat.Cool
   },
   "gardevoir": {
     "name": "Gardevoir",
     "num": 233,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.Healing,
       Category.Luxury,
@@ -13312,12 +13044,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Psychic",
       "Fairy"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "growlithe": {
     "name": "Growlithe",
     "num": 88,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.LettersAndWords,
       Category.LotsOfFire,
@@ -13364,12 +13095,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "volcarona": {
     "name": "Volcarona",
     "num": 184,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.LettersAndWords,
       Category.LotsOfFire,
@@ -13417,12 +13147,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "decidueye": {
     "name": "Decidueye",
     "num": 187,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.LettersAndWords,
       Category.LotsOfNature,
@@ -13470,12 +13199,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "alakazam": {
     "name": "Alakazam",
     "num": 215,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.LettersAndWords,
       Category.MetalStuff,
@@ -13518,12 +13246,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "pidgeotto": {
     "name": "Pidgeotto",
     "num": 11,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.LooksLikeFood,
       Category.LotsOfNature,
@@ -13570,12 +13297,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "paras": {
     "name": "Paras",
     "num": 17,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.LooksLikeFood,
       Category.LotsOfDirt,
@@ -13622,12 +13348,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "cramorant": {
     "name": "Cramorant",
     "num": 77,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.LooksLikeFood,
       Category.LotsOfWater,
@@ -13671,12 +13396,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Flying",
       "Water"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "larvitar": {
     "name": "Larvitar",
     "num": 169,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.LooksLikeFood,
       Category.LotsOfDirt,
@@ -13724,12 +13448,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Rock",
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "skwovet": {
     "name": "Skwovet",
     "num": 191,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.LooksLikeFood,
       Category.RoundStuff,
@@ -13772,12 +13495,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Normal"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "noibat": {
     "name": "Noibat",
     "num": 255,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.LooksLikeFood,
       Category.LotsOfFire,
@@ -13824,12 +13546,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Flying",
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "noivern": {
     "name": "Noivern",
     "num": 256,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.LooksLikeFood,
       Category.LotsOfFire,
@@ -13877,12 +13598,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Flying",
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "sableye": {
     "name": "Sableye",
     "num": 4,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.LooksLikeFood,
       Category.Luxury,
@@ -13929,12 +13649,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Dark",
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "oddish": {
     "name": "Oddish",
     "num": 13,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.LotsOfDirt,
       Category.LotsOfNature,
@@ -13978,12 +13697,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "parasect": {
     "name": "Parasect",
     "num": 18,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.LotsOfDirt,
       Category.LotsOfNature,
@@ -14030,12 +13748,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "bellsprout": {
     "name": "Bellsprout",
     "num": 21,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.LotsOfDirt,
       Category.LotsOfNature,
@@ -14083,12 +13800,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "drilbur": {
     "name": "Drilbur",
     "num": 63,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.LotsOfDirt,
       Category.LotsOfNature,
@@ -14134,12 +13850,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Ground"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "vibrava": {
     "name": "Vibrava",
     "num": 238,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.LotsOfDirt,
       Category.LotsOfFire,
@@ -14187,12 +13902,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ground",
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "flygon": {
     "name": "Flygon",
     "num": 239,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.LotsOfDirt,
       Category.LotsOfFire,
@@ -14240,12 +13954,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ground",
       "Dragon"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "chandelure": {
     "name": "Chandelure",
     "num": 70,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.LotsOfFire,
       Category.SpookyStuff,
@@ -14292,12 +14005,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ghost",
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "arcanine": {
     "name": "Arcanine",
     "num": 89,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.LotsOfFire,
       Category.NiceBreezes,
@@ -14344,12 +14056,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "larvesta": {
     "name": "Larvesta",
     "num": 183,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.LotsOfFire,
       Category.LotsOfNature,
@@ -14397,12 +14108,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "ceruledge": {
     "name": "Ceruledge",
     "num": 202,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.LotsOfFire,
       Category.Luxury,
@@ -14425,12 +14135,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fire",
       "Ghost"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "ninetales": {
     "name": "Ninetales",
     "num": 208,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.LotsOfFire,
       Category.Luxury,
@@ -14476,12 +14185,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Fire"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "moltres": {
     "name": "Moltres",
     "num": 296,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.LotsOfFire,
       Category.Luxury,
@@ -14503,12 +14211,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fire",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "ho-oh": {
     "name": "Ho-Oh",
     "num": 298,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.LotsOfFire,
       Category.LotsOfNature,
@@ -14528,12 +14235,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Fire",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "pidgey": {
     "name": "Pidgey",
     "num": 10,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.LotsOfNature,
       Category.NiceBreezes,
@@ -14580,12 +14286,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "pidgeot": {
     "name": "Pidgeot",
     "num": 12,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.LotsOfNature,
       Category.Luxury,
@@ -14632,12 +14337,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "venomoth": {
     "name": "Venomoth",
     "num": 20,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.LotsOfNature,
       Category.NiceBreezes,
@@ -14681,12 +14385,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Bug",
       "Poison"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "cacturne": {
     "name": "Cacturne",
     "num": 56,
-    "habitat": "Dry",
+    "habitat": PokemonHabitat.Dry,
     "categories": [
       Category.LotsOfNature,
       Category.Luxury,
@@ -14731,12 +14434,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Dark"
     ],
-    "habitatSlug": PokemonHabitat.Dry
   },
   "snivy": {
     "name": "Snivy",
     "num": 248,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.LotsOfNature,
       Category.LotsOfWater,
@@ -14783,12 +14485,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Grass"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "hoppip": {
     "name": "Hoppip",
     "num": 1,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.LotsOfNature,
       Category.NiceBreezes,
@@ -14835,12 +14536,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "skiploom": {
     "name": "Skiploom",
     "num": 2,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.LotsOfNature,
       Category.NiceBreezes,
@@ -14887,12 +14587,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "jumpluff": {
     "name": "Jumpluff",
     "num": 3,
-    "habitat": "Bright",
+    "habitat": PokemonHabitat.Bright,
     "categories": [
       Category.LotsOfNature,
       Category.NiceBreezes,
@@ -14940,12 +14639,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Grass",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Bright
   },
   "articuno": {
     "name": "Articuno",
     "num": 294,
-    "habitat": "Cool",
+    "habitat": PokemonHabitat.Cool,
     "categories": [
       Category.LotsOfWater,
       Category.Luxury,
@@ -14967,12 +14665,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ice",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Cool
   },
   "lugia": {
     "name": "Lugia",
     "num": 297,
-    "habitat": "Humid",
+    "habitat": PokemonHabitat.Humid,
     "categories": [
       Category.LotsOfWater,
       Category.NiceBreezes,
@@ -14992,12 +14689,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Psychic",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Humid
   },
   "abra": {
     "name": "Abra",
     "num": 213,
-    "habitat": "Dark",
+    "habitat": PokemonHabitat.Dark,
     "categories": [
       Category.MetalStuff,
       Category.SoftStuff,
@@ -15043,12 +14739,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "types": [
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Dark
   },
   "drifblim": {
     "name": "Drifblim",
     "num": 62,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.NiceBreezes,
       Category.SpinningStuff,
@@ -15096,12 +14791,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Ghost",
       "Flying"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "girafarig": {
     "name": "Girafarig",
     "num": 229,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Rides,
       Category.SlenderObjects,
@@ -15148,12 +14842,11 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   },
   "farigiraf": {
     "name": "Farigiraf",
     "num": 230,
-    "habitat": "Warm",
+    "habitat": PokemonHabitat.Warm,
     "categories": [
       Category.Rides,
       Category.SlenderObjects,
@@ -15201,6 +14894,5 @@ export const POKEMON: Record<string, PokemonEntry> = {
       "Normal",
       "Psychic"
     ],
-    "habitatSlug": PokemonHabitat.Warm
   }
 } as const;

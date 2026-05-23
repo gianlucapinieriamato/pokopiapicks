@@ -3,8 +3,7 @@ import type { CategorySlug, HabitatConfigSlug, LocationSlug, SpecialtySlug, Poke
 export type PokemonEntry = {
   name: string;
   num: number;
-  habitat: string;                          // display name (e.g. "Dry")
-  habitatSlug: PokemonHabitatSlug;          // typed slug (e.g. "dry")
+  habitat: PokemonHabitatSlug;              // display name constant (e.g. "Dry") — use PokemonHabitat.X
   categories: readonly CategorySlug[];      // typed category slugs
   icon: string;
   slug: string;

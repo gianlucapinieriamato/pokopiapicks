@@ -10,6 +10,7 @@ import { writeFileSync } from "fs";
 import { join } from "path";
 import { CATEGORIES } from "../app/lib/data/categories";
 import { HABITATS } from "../app/lib/data/habitats";
+import { ITEMS } from "../app/lib/data/items";
 import { LOCATIONS } from "../app/lib/data/locations";
 import { SPECIALTIES } from "../app/lib/data/specialties";
 import { POKEMON } from "../app/lib/data/pokemon";
@@ -61,21 +62,20 @@ const specialties = Object.values(SPECIALTIES).map((s) => ({
   key: toPascalCase(s.name),
 }));
 
-// 5. PokemonHabitat — distinct values of pokemon.habitatSlug
-// We need display names too; derive from pokemon.habitat (title-cased)
-const pokemonHabitatMap = new Map<string, string>(); // slug → display name
+// 5. PokemonHabitat — distinct values of pokemon.habitat (display name)
+// The constant value IS the display name (e.g. PokemonHabitat.Dry = "Dry")
+const pokemonHabitatSet = new Map<string, string>(); // displayName → key
 for (const p of Object.values(POKEMON) as any[]) {
-  if (p.habitatSlug && !pokemonHabitatMap.has(p.habitatSlug)) {
-    // habitat field holds the display name (e.g. "Dry")
-    pokemonHabitatMap.set(p.habitatSlug, p.habitat as string);
+  if (p.habitat && !pokemonHabitatSet.has(p.habitat as string)) {
+    pokemonHabitatSet.set(p.habitat as string, toPascalCase(p.habitat as string));
   }
 }
-const pokemonHabitats = [...pokemonHabitatMap.entries()]
+const pokemonHabitats = [...pokemonHabitatSet.entries()]
   .sort(([a], [b]) => a.localeCompare(b))
-  .map(([slug, name]) => ({
-    slug,
-    name,
-    key: toPascalCase(name),
+  .map(([displayName, key]) => ({
+    slug: displayName, // value stored in const IS the display name
+    name: displayName,
+    key,
   }));
 
 // 6. Weather — distinct values from habitatList[].weather
@@ -112,6 +112,20 @@ for (const p of Object.values(POKEMON) as any[]) {
 }
 const flavorEntries = [...flavorSet].sort().map((v) => ({ slug: v, name: v, key: toPascalCase(v) }));
 
+// 10. Items (878) — slug → name lookup
+const itemEntriesRaw = Object.values(ITEMS).map((i) => ({
+  slug: i.slug,
+  name: i.name,
+  key: toPascalCase(i.name),
+}));
+
+// 11. Pokemon (308) — slug → name lookup
+const pokemonEntriesRaw = Object.values(POKEMON).map((p) => ({
+  slug: p.slug,
+  name: p.name,
+  key: toPascalCase(p.name),
+}));
+
 // ---------------------------------------------------------------------------
 // De-duplicate keys within each group (in case two entries produce same key)
 // ---------------------------------------------------------------------------
@@ -135,6 +149,8 @@ const wxEntries = dedup(weatherEntries);
 const tmEntries = dedup(timeEntries);
 const rrEntries = dedup(rarityEntries);
 const flEntries = dedup(flavorEntries);
+const itemEntries = dedup(itemEntriesRaw);
+const pokemonEntries = dedup(pokemonEntriesRaw);
 
 // ---------------------------------------------------------------------------
 // Build the slug → "Group.Key" lookup map (consts-map.json)
@@ -168,6 +184,12 @@ for (const e of rrEntries) {
 }
 for (const e of flEntries) {
   constsMap[`Flavor::${e.slug}`] = `Flavor.${e.key}`;
+}
+for (const e of itemEntries) {
+  constsMap[`Item::${e.slug}`] = `Item.${e.key}`;
+}
+for (const e of pokemonEntries) {
+  constsMap[`Pokemon::${e.slug}`] = `Pokemon.${e.key}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -210,7 +232,7 @@ const constsTs =
   "\n" +
   buildConstBlock("Specialty",     "SpecialtySlug",     spEntries,  `Specialty slugs (${spEntries.length})`) +
   "\n" +
-  buildConstBlock("PokemonHabitat","PokemonHabitatSlug",phEntries,  `Top-level pokemon habitat-type slugs — pokemon.habitatSlug (${phEntries.length})`) +
+  buildConstBlock("PokemonHabitat","PokemonHabitatSlug",phEntries,  `Top-level pokemon habitat-type display names — pokemon.habitat (${phEntries.length})`) +
   "\n" +
   buildConstBlock("Weather",       "WeatherValue",      wxEntries,  `Weather conditions — habitatList[].weather (${wxEntries.length})`) +
   "\n" +
@@ -218,7 +240,11 @@ const constsTs =
   "\n" +
   buildConstBlock("Rarity",        "RarityValue",       rrEntries,  `Spawn rarity values — habitatList[].rarity (${rrEntries.length})`) +
   "\n" +
-  buildConstBlock("Flavor",        "FlavorValue",       flEntries,  `Pokemon flavor preferences — pokemon.flavor (${flEntries.length})`);
+  buildConstBlock("Flavor",        "FlavorValue",       flEntries,  `Pokemon flavor preferences — pokemon.flavor (${flEntries.length})`) +
+  "\n" +
+  buildConstBlock("Item",          "ItemSlug",          itemEntries,    `Item slugs (${itemEntries.length})`) +
+  "\n" +
+  buildConstBlock("Pokemon",       "PokemonSlug",       pokemonEntries, `Pokemon slugs (${pokemonEntries.length})`);
 
 // ---------------------------------------------------------------------------
 // Write files
@@ -244,3 +270,5 @@ console.log(`  Weather:        ${wxEntries.length} entries`);
 console.log(`  Time:           ${tmEntries.length} entries`);
 console.log(`  Rarity:         ${rrEntries.length} entries`);
 console.log(`  Flavor:         ${flEntries.length} entries`);
+console.log(`  Item:           ${itemEntries.length} entries`);
+console.log(`  Pokemon:        ${pokemonEntries.length} entries`);
