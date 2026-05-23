@@ -4,7 +4,7 @@ import { ITEMS } from "@/app/lib/data";
 import type { ResolvedItem } from "@/app/lib/types";
 
 // Scraped names that differ from canonical ITEMS keys or correct display names
-export const NAME_FIXES: Record<string, string> = {
+export const NAME_FIXES: Readonly<Record<string, string>> = {
   "Beautiful flower seeds": "Beautiful flower",
   "Elegant flower seed": "Elegant flower",
   "Wooden chair": "Wooden stool",
@@ -14,7 +14,7 @@ export const NAME_FIXES: Record<string, string> = {
 };
 
 // Items whose icon filename on Serebii differs from the name-derived path
-export const ICON_OVERRIDES: Record<string, string> = {
+export const ICON_OVERRIDES: Readonly<Record<string, string>> = {
   "Pecha tree seed": "/icons/items/pechaseeds.png",
   "Public chair": "/icons/items/publicseat.png",
   "Speakers": "/icons/items/speaker.png",

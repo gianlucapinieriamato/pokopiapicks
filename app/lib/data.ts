@@ -33,7 +33,7 @@ for (const [slug, cat] of Object.entries(CATEGORIES)) {
 }
 
 /** Resolve a category reference (display name OR slug) → items list */
-export function getCatItems(catRef: string): string[] {
+export function getCatItems(catRef: string): readonly string[] {
   // Direct slug lookup
   if (CATEGORIES[catRef]) return CATEGORIES[catRef].items;
   // Display name lookup

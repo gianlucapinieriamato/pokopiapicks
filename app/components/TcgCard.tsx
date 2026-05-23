@@ -89,7 +89,7 @@ function ChipRow({
   chipClass,
   badgeClass,
 }: {
-  items: string[];
+  items: readonly string[];
   max?: number;
   chipClass: string;
   badgeClass: string;

@@ -15,7 +15,7 @@ import SectionTitle from "@/app/components/SectionTitle";
 
 // ─── Pure helpers (outside component — no hooks, no side-effects) ──────────
 
-function sharedItemCount(a: string[], b: string[]): number {
+function sharedItemCount(a: readonly string[], b: readonly string[]): number {
   const setA = new Set<string>();
   for (const cat of a) for (const item of getCatItems(cat)) setA.add(item);
   let count = 0;
@@ -33,7 +33,10 @@ function calcScore(anchor: PokemonEntry, candidate: PokemonEntry): number {
   return Math.round(shared * multiplier);
 }
 
-function buildGroup(initialAnchors: PokemonEntry[], size: number): PokemonEntry[] {
+function buildGroup(
+  initialAnchors: PokemonEntry[], // candidates is consumed (spliced) during selection
+  size: number,
+): PokemonEntry[] {
   if (initialAnchors.length === 0) return [];
   const first = initialAnchors[0];
   if (!first) return [];
