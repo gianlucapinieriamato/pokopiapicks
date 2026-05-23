@@ -24,6 +24,8 @@ type ResolvedReq = {
   isAny: boolean;
 };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return Object.keys(HABITATS).map((slug) => ({ slug }));
 }

@@ -18,6 +18,8 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 import Card from "@/app/components/Card";
 import SectionTitle from "@/app/components/SectionTitle";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return Object.keys(POKEMON).map((slug) => ({ slug }));
 }
@@ -87,7 +89,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
       ]} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Pokédex", href: "/pokedex" }, { label: p.name }]} />
 
-      <div className="flex justify-between mb-5 max-md:gap-2">
+      <div className="flex justify-between gap-2 mb-5">
         {prev ? (
           <NavBtn href={`/pokemon/${prev.slug}`} title="Previous Pokemon (← key)">◀ #{dexNum(prev)} {prev.name}</NavBtn>
         ) : <span />}
@@ -97,13 +99,13 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
       </div>
 
       {/* ── Hero: card + info ── */}
-      <div className="flex items-start gap-7 mb-5 pb-5 border-b border-paper-edge max-md:flex-col max-md:items-center max-md:text-center max-md:gap-4">
-        <div className="shrink-0 w-[260px]">
+      <div className="flex flex-col items-center text-center gap-4 md:flex-row md:items-start md:text-left md:gap-7 mb-5 pb-5 border-b border-paper-edge">
+        <div className="shrink-0 w-[200px] md:w-[260px]">
           <TcgCard p={{ ...p, slug }} size="lg" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] mb-[2px]">#{dexNum(p)}</div>
-          <div className="font-outfit font-extrabold text-[36px] tracking-[-0.02em] leading-[1.05] mb-2 max-md:text-[26px]">{p.name}</div>
+          <div className="font-outfit font-extrabold text-[26px] md:text-[36px] tracking-[-0.02em] leading-[1.05] mb-2">{p.name}</div>
           <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] flex flex-wrap items-center gap-x-3 gap-y-1">
             <span className="inline-flex items-center gap-1.5">
               <span>Ideal habitat: </span><span className="text-leaf font-semibold">{p.habitat}</span>
@@ -160,7 +162,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           <>
             <SectionTitle pill="TOP GIFTS">Best gifts</SectionTitle>
             <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">These items appear in multiple categories: they count double (or more).</p>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-3 mb-7 max-md:grid-cols-1">
+            <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-3 mb-7">
               {sharedItems.map(([item, cats]) => {
                 const itemEntry = ITEMS[item];
                 return (
@@ -184,7 +186,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           return (
             <CollapsibleSection key={catRef} title={catDisplayName(catRef)} count={`${items.length} items`} defaultOpen={true}>
               {/* Items grid */}
-              <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 px-1 mb-2 max-md:grid-cols-1">
+              <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 px-1 mb-2">
                 {items.map((item) => {
                   const cats = itemToCats[item] ?? [];
                   const isShared = cats.length >= 2;

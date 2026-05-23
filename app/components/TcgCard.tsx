@@ -2,14 +2,14 @@ import Image from "next/image";
 import { pkmnIconUrl, dexNum, getRarity, SPECIALTIES } from "@/app/lib/data";
 import type { PokemonEntry } from "@/app/lib/types";
 
-const HABITAT_COLORS: Record<string, [string, string]> = {
-  Bright: ["#ffe9a0", "#d4a93a"],
-  Cool: ["#b8dff0", "#4a9abf"],
-  Dark: ["#c8b4d8", "#5a3878"],
-  Dry: ["#e8d4a0", "#b89050"],
-  Humid: ["#a8d4a0", "#4a8a4e"],
-  Warm: ["#f0b880", "#c86030"],
-};
+const HABITAT_COLORS = Object.freeze({
+  Bright: { h1: "#ffe9a0", h2: "#d4a93a" },
+  Cool:   { h1: "#b8dff0", h2: "#4a9abf" },
+  Dark:   { h1: "#c8b4d8", h2: "#5a3878" },
+  Dry:    { h1: "#e8d4a0", h2: "#b89050" },
+  Humid:  { h1: "#a8d4a0", h2: "#4a8a4e" },
+  Warm:   { h1: "#f0b880", h2: "#c86030" },
+} as const);
 
 const CHIP_BASE =
   "font-outfit font-bold rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em] leading-[1.4]";
@@ -118,7 +118,7 @@ export default function TcgCard({
   const r = getRarity(p);
   const isSm = size === "sm";
   const v = VARIANTS[size];
-  const [h1, h2] = HABITAT_COLORS[p.habitat] ?? ["#d8ccb8", "#a89070"];
+  const { h1, h2 } = HABITAT_COLORS[p.habitat as keyof typeof HABITAT_COLORS] ?? { h1: "#d8ccb8", h2: "#a89070" };
 
   const holoOpacity = r.holoIntensity / 100;
   const sweepOpacity = r.sparkles ? holoOpacity * 0.65 : 0;
@@ -128,10 +128,7 @@ export default function TcgCard({
       {/* Gold frame */}
       <div
         className={`absolute inset-0 ${v.frameRound} ${r.sparkles ? v.legendShadow : v.frameShadow}`}
-        style={{
-          background:
-            "linear-gradient(135deg, var(--accent-soft) 0%, var(--accent) 30%, var(--accent-soft) 60%, var(--accent-deep) 100%)",
-        }}
+        style={{ background: "var(--card-frame)" }}
       >
         {/* Inner card face */}
         <div
@@ -140,10 +137,7 @@ export default function TcgCard({
           {/* Header: name + dex */}
           <div
             className={`${v.headerPad} flex items-center justify-between border-b border-accent shrink-0 gap-1`}
-            style={{
-              background:
-                "linear-gradient(180deg, var(--color-surface-2) 0%, var(--color-chrome) 100%)",
-            }}
+            style={{ background: "var(--card-header)" }}
           >
             <div
               className={`font-outfit font-extrabold ${v.name} tracking-[-0.01em] leading-none text-ink whitespace-nowrap overflow-hidden text-ellipsis min-w-0`}
@@ -185,7 +179,7 @@ export default function TcgCard({
             />
             {/* Habitat pill */}
             <div
-              className={`absolute top-[5px] left-[5px] ${v.artLabel} px-[7px] py-[2px] rounded-full bg-white/85 text-ink font-outfit font-bold tracking-[0.03em]`}
+              className={`absolute top-[5px] left-[5px] ${v.artLabel} px-[7px] py-[2px] rounded-full bg-paper/85 text-ink font-outfit font-bold tracking-[0.03em]`}
             >
               {p.habitat}
             </div>
@@ -263,10 +257,7 @@ export default function TcgCard({
           {/* Footer bar */}
           <div
             className={`mt-auto ${v.footerPad} flex justify-between items-center border-t border-paper-edge shrink-0`}
-            style={{
-              background:
-                "linear-gradient(180deg, transparent, var(--color-chrome))",
-            }}
+            style={{ background: "var(--card-footer)" }}
           >
             <span
               className={`font-mono ${v.footer} text-ink-fade tracking-[0.08em] font-semibold`}

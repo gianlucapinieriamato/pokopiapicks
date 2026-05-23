@@ -10,6 +10,8 @@ import PageHeader from "@/app/components/PageHeader";
 import PokemonGridCard from "@/app/components/PokemonGridCard";
 import PokemonGrid from "@/app/components/PokemonGrid";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return Object.keys(SPECIALTIES).map((slug) => ({ slug }));
 }

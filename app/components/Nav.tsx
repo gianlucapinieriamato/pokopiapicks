@@ -37,17 +37,17 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 z-50 border-b backdrop-blur-[10px] bg-chrome border-[color:var(--color-accent)]/35 shadow-[0_2px_12px_-4px_var(--shadow)]">
-      <div className="max-w-[1080px] mx-auto px-5 h-14 flex items-center gap-[6px] max-md:h-[52px] max-md:px-[14px] max-md:gap-[10px]">
+      <div className="max-w-[1080px] mx-auto px-[14px] md:px-5 h-[52px] md:h-14 flex items-center gap-[10px] md:gap-[6px]">
         <Link
           href="/"
           className="font-outfit font-extrabold text-[17px] text-ink no-underline tracking-[-0.02em] flex items-center gap-2 mr-2 whitespace-nowrap uppercase"
           onClick={() => setOpen(false)}
         >
           <Image src="/icon-192.png" alt="Pokopia Picks" width={32} height={32} className="rounded-[7px] shrink-0" />
-          <span className="max-md:hidden">POKOPIA <span className="text-accent-deep italic">PICKS</span></span>
+          <span className="hidden md:inline">POKOPIA <span className="text-accent-deep italic">PICKS</span></span>
         </Link>
 
-        <div className="flex gap-[2px] max-md:hidden">
+        <div className="hidden md:flex gap-[2px]">
           {LINKS.map(({ href, label }) => (
             <Link key={href} href={href} className={`${linkBase}${isActive(href) ? ` ${linkActive}` : ""}`}>
               {label}
@@ -57,7 +57,7 @@ export default function Nav() {
 
         <button
           type="button"
-          className="hidden max-md:flex ml-auto bg-transparent border border-[1.5px] border-accent rounded-lg py-[5px] px-[10px] text-base leading-none text-ink transition-all shrink-0 hover:bg-accent hover:text-paper items-center justify-center"
+          className="flex md:hidden ml-auto bg-transparent border border-[1.5px] border-accent rounded-lg py-[5px] px-[10px] text-base leading-none text-ink transition-all shrink-0 hover:bg-accent hover:text-paper items-center justify-center"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}

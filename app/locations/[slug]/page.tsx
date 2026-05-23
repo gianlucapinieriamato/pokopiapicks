@@ -13,6 +13,8 @@ import CollapsibleSection from "@/app/components/CollapsibleSection";
 import PokemonGridCard from "@/app/components/PokemonGridCard";
 import PokemonGrid from "@/app/components/PokemonGrid";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return Object.keys(LOCATIONS).map((slug) => ({ slug }));
 }
