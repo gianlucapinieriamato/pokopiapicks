@@ -40,7 +40,7 @@ export default function LocationsPage() {
             const pkmnCount = pkmnCountByLocation[loc.slug] ?? 0;
             const matCount = loc.materials.length + loc.blocksAndPlants.length;
             return (
-              <Link key={loc.slug} href={`/location/${loc.slug}`} className="no-underline">
+              <Link key={loc.slug} href={`/locations/${loc.slug}`} className="no-underline">
                 <HoverTile className="py-3 px-3.5">
                   <div className="font-outfit font-bold text-sm text-ink mb-1">{loc.name}</div>
                   {loc.description && (

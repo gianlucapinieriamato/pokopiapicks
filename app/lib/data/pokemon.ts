@@ -43,9 +43,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["bulldoze", "crush"],
     "spriteHq": "/icons/sprites-hq/onix.png",
     "types": [
       "Rock",
@@ -94,9 +92,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build"],
     "spriteHq": "/icons/sprites-hq/timburr.png",
     "types": [
       "Fighting"
@@ -144,9 +140,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/litwick.png",
     "types": [
       "Ghost",
@@ -195,9 +189,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["chop", "generate"],
     "spriteHq": "/icons/sprites-hq/charjabug.png",
     "types": [
       "Bug",
@@ -246,9 +238,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/tatsugiridroopyform.png",
     "types": [
       "Dragon",
@@ -297,9 +287,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "dj"
-    ],
+    "specialties": ["dj"],
     "spriteHq": "/icons/sprites-hq/stereorotom.png",
     "types": [
       "Electric",
@@ -323,9 +311,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Bitter",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "recycle"
-    ],
+    "specialties": ["recycle"],
     "spriteHq": "/icons/sprites-hq/porygon.png",
     "types": [
       "Normal"
@@ -373,9 +359,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "engineer"
-    ],
+    "specialties": ["engineer"],
     "spriteHq": "/icons/sprites-hq/tinkaton.png",
     "types": [
       "Fairy",
@@ -424,9 +408,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/squirtle.png",
     "types": [
       "Water"
@@ -474,9 +456,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/wartortle.png",
     "types": [
       "Water"
@@ -524,9 +504,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["trade", "water"],
     "spriteHq": "/icons/sprites-hq/blastoise.png",
     "types": [
       "Water"
@@ -574,9 +552,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water", "yawn"],
     "spriteHq": "/icons/sprites-hq/slowpoke.png",
     "types": [
       "Water",
@@ -625,9 +601,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["trade", "water"],
     "spriteHq": "/icons/sprites-hq/slowbro.png",
     "types": [
       "Water",
@@ -676,9 +650,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["teleport", "water"],
     "spriteHq": "/icons/sprites-hq/slowking.png",
     "types": [
       "Water",
@@ -723,9 +695,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "sparklingskylands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/gyarados.png",
     "types": [
       "Water",
@@ -774,9 +744,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/shellos.png",
     "types": [
       "Water"
@@ -824,9 +792,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/shelloseastsea.png",
     "types": [
       "Water"
@@ -874,9 +840,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["trade", "water"],
     "spriteHq": "/icons/sprites-hq/gastrodon.png",
     "types": [
       "Water",
@@ -925,9 +889,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["trade", "water"],
     "spriteHq": "/icons/sprites-hq/gastrodoneastsea.png",
     "types": [
       "Water",
@@ -975,9 +937,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/goomy.png",
     "types": [
       "Dragon"
@@ -1024,9 +984,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/sliggoo.png",
     "types": [
       "Dragon"
@@ -1073,9 +1031,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["trade", "water"],
     "spriteHq": "/icons/sprites-hq/goodra.png",
     "types": [
       "Dragon"
@@ -1123,9 +1079,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/lapras.png",
     "types": [
       "Water",
@@ -1174,9 +1128,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["hype", "water"],
     "spriteHq": "/icons/sprites-hq/azurill.png",
     "types": [
       "Normal",
@@ -1225,9 +1177,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["hype", "water"],
     "spriteHq": "/icons/sprites-hq/marill.png",
     "types": [
       "Water",
@@ -1272,9 +1222,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "bleakbeach",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["litter"],
     "spriteHq": "/icons/sprites-hq/paldeanwooper.png",
     "types": [
       "Water",
@@ -1323,9 +1271,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["bulldoze", "litter"],
     "spriteHq": "/icons/sprites-hq/clodsire.png",
     "types": [
       "Poison",
@@ -1373,9 +1319,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["fly", "water"],
     "spriteHq": "/icons/sprites-hq/wingull.png",
     "types": [
       "Water",
@@ -1423,9 +1367,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["fly", "water"],
     "spriteHq": "/icons/sprites-hq/pelipper.png",
     "types": [
       "Water",
@@ -1474,9 +1416,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/piplup.png",
     "types": [
       "Water"
@@ -1524,9 +1464,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["trade", "water"],
     "spriteHq": "/icons/sprites-hq/prinplup.png",
     "types": [
       "Water"
@@ -1573,9 +1511,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["trade", "water"],
     "spriteHq": "/icons/sprites-hq/empoleon.png",
     "types": [
       "Water",
@@ -1624,9 +1560,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather"],
     "spriteHq": "/icons/sprites-hq/minccino.png",
     "types": [
       "Normal"
@@ -1674,9 +1608,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "recycle"],
     "spriteHq": "/icons/sprites-hq/cinccino.png",
     "types": [
       "Normal"
@@ -1724,9 +1656,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/lotad.png",
     "types": [
       "Water",
@@ -1775,9 +1705,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/lombre.png",
     "types": [
       "Water",
@@ -1826,9 +1754,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["chop", "grow"],
     "spriteHq": "/icons/sprites-hq/dartrix.png",
     "types": [
       "Grass",
@@ -1877,9 +1803,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/poliwag.png",
     "types": [
       "Water"
@@ -1927,9 +1851,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/poliwhirl.png",
     "types": [
       "Water"
@@ -1977,9 +1899,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["build", "water"],
     "spriteHq": "/icons/sprites-hq/poliwrath.png",
     "types": [
       "Water",
@@ -2028,9 +1948,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/dratini.png",
     "types": [
       "Dragon"
@@ -2078,9 +1996,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/dragonair.png",
     "types": [
       "Dragon"
@@ -2128,9 +2044,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["fly", "water"],
     "spriteHq": "/icons/sprites-hq/dragonite.png",
     "types": [
       "Dragon",
@@ -2179,9 +2093,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["litter"],
     "spriteHq": "/icons/sprites-hq/swablu.png",
     "types": [
       "Normal",
@@ -2230,9 +2142,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/servine.png",
     "types": [
       "Grass"
@@ -2280,9 +2190,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/froakie.png",
     "types": [
       "Water"
@@ -2330,9 +2238,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/frogadier.png",
     "types": [
       "Water"
@@ -2380,9 +2286,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["chop", "water"],
     "spriteHq": "/icons/sprites-hq/greninja.png",
     "types": [
       "Water",
@@ -2427,9 +2331,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/vaporeon.png",
     "types": [
       "Water"
@@ -2452,9 +2354,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Sour",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["water"],
     "spriteHq": "/icons/sprites-hq/suicune.png",
     "types": [
       "Water"
@@ -2502,9 +2402,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/ivysaur.png",
     "types": [
       "Grass",
@@ -2553,9 +2451,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/vileplume.png",
     "types": [
       "Grass",
@@ -2604,9 +2500,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/weepinbell.png",
     "types": [
       "Grass",
@@ -2655,9 +2549,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["chop", "grow"],
     "spriteHq": "/icons/sprites-hq/victreebel.png",
     "types": [
       "Grass",
@@ -2702,9 +2594,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "storage"
-    ],
+    "specialties": ["storage"],
     "spriteHq": "/icons/sprites-hq/gulpin.png",
     "types": [
       "Poison"
@@ -2752,9 +2642,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "storage"
-    ],
+    "specialties": ["storage"],
     "spriteHq": "/icons/sprites-hq/swalot.png",
     "types": [
       "Poison"
@@ -2802,9 +2690,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["litter"],
     "spriteHq": "/icons/sprites-hq/muk.png",
     "types": [
       "Poison"
@@ -2852,9 +2738,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["explode", "generate"],
     "spriteHq": "/icons/sprites-hq/voltorb.png",
     "types": [
       "Electric"
@@ -2902,9 +2786,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["litter"],
     "spriteHq": "/icons/sprites-hq/spinarak.png",
     "types": [
       "Bug",
@@ -2953,9 +2835,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["litter"],
     "spriteHq": "/icons/sprites-hq/ariados.png",
     "types": [
       "Bug",
@@ -3004,9 +2884,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "paint"
-    ],
+    "specialties": ["paint"],
     "spriteHq": "/icons/sprites-hq/smeargle.png",
     "types": [
       "Normal"
@@ -3051,9 +2929,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/cleffa.png",
     "types": [
       "Fairy"
@@ -3097,9 +2973,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["build", "trade"],
     "spriteHq": "/icons/sprites-hq/mawile.png",
     "types": [
       "Steel",
@@ -3148,9 +3022,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/kricketot.png",
     "types": [
       "Bug"
@@ -3198,9 +3070,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/kricketune.png",
     "types": [
       "Bug"
@@ -3248,9 +3118,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "recycle"
-    ],
+    "specialties": ["recycle"],
     "spriteHq": "/icons/sprites-hq/porygon2.png",
     "types": [
       "Normal"
@@ -3298,9 +3166,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "rarify"
-    ],
+    "specialties": ["rarify"],
     "spriteHq": "/icons/sprites-hq/porygon-z.png",
     "types": [
       "Normal"
@@ -3345,9 +3211,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/misdreavus.png",
     "types": [
       "Ghost"
@@ -3395,9 +3259,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/sprigatito.png",
     "types": [
       "Grass"
@@ -3445,9 +3307,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/floragato.png",
     "types": [
       "Grass"
@@ -3492,9 +3352,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/venonat.png",
     "types": [
       "Bug",
@@ -3539,9 +3397,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "recycle"
-    ],
+    "specialties": ["recycle"],
     "spriteHq": "/icons/sprites-hq/koffing.png",
     "types": [
       "Poison"
@@ -3585,9 +3441,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "recycle"
-    ],
+    "specialties": ["recycle"],
     "spriteHq": "/icons/sprites-hq/weezing.png",
     "types": [
       "Poison"
@@ -3610,9 +3464,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Dry",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "appraise"
-    ],
+    "specialties": ["appraise"],
     "spriteHq": "/icons/sprites-hq/professortangrowth.png",
     "types": [
       "Grass"
@@ -3660,9 +3512,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gatherhoney"
-    ],
+    "specialties": ["gatherhoney", "search"],
     "spriteHq": "/icons/sprites-hq/vespiquen.png",
     "types": [
       "Bug",
@@ -3707,9 +3557,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/zubat.png",
     "types": [
       "Poison",
@@ -3754,9 +3602,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/golbat.png",
     "types": [
       "Poison",
@@ -3805,9 +3651,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/psyduck.png",
     "types": [
       "Water"
@@ -3855,9 +3699,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/golduck.png",
     "types": [
       "Water"
@@ -3905,9 +3747,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop"],
     "spriteHq": "/icons/sprites-hq/absol.png",
     "types": [
       "Dark"
@@ -3955,9 +3795,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "recycle"
-    ],
+    "specialties": ["recycle"],
     "spriteHq": "/icons/sprites-hq/trubbish.png",
     "types": [
       "Poison"
@@ -4005,9 +3843,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "recycle"
-    ],
+    "specialties": ["litter", "recycle"],
     "spriteHq": "/icons/sprites-hq/garbodor.png",
     "types": [
       "Poison"
@@ -4055,9 +3891,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build"],
     "spriteHq": "/icons/sprites-hq/lucario.png",
     "types": [
       "Fighting",
@@ -4106,9 +3940,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["litter"],
     "spriteHq": "/icons/sprites-hq/glimmet.png",
     "types": [
       "Rock",
@@ -4157,9 +3989,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["litter"],
     "spriteHq": "/icons/sprites-hq/glimmora.png",
     "types": [
       "Rock",
@@ -4208,9 +4038,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "collect"
-    ],
+    "specialties": ["collect"],
     "spriteHq": "/icons/sprites-hq/gimmighoul.png",
     "types": [
       "Ghost"
@@ -4258,9 +4086,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "collect"
-    ],
+    "specialties": ["collect"],
     "spriteHq": "/icons/sprites-hq/gholdengo.png",
     "types": [
       "Steel",
@@ -4309,9 +4135,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "recycle"
-    ],
+    "specialties": ["recycle"],
     "spriteHq": "/icons/sprites-hq/beldum.png",
     "types": [
       "Steel",
@@ -4335,9 +4159,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Bitter",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "recycle"
-    ],
+    "specialties": ["recycle"],
     "spriteHq": "/icons/sprites-hq/metang.png",
     "types": [
       "Steel",
@@ -4386,9 +4208,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/wattrel.png",
     "types": [
       "Electric",
@@ -4433,9 +4253,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather"],
     "spriteHq": "/icons/sprites-hq/espeon.png",
     "types": [
       "Psychic"
@@ -4458,9 +4276,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Dry",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "teleport"
-    ],
+    "specialties": ["teleport"],
     "spriteHq": "/icons/sprites-hq/mewtwo.png",
     "types": [
       "Psychic"
@@ -4483,9 +4299,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Sweet",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "teleport"
-    ],
+    "specialties": ["teleport"],
     "spriteHq": "/icons/sprites-hq/mew.png",
     "types": [
       "Psychic"
@@ -4533,9 +4347,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build"],
     "spriteHq": "/icons/sprites-hq/cubone.png",
     "types": [
       "Ground"
@@ -4583,9 +4395,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build"],
     "spriteHq": "/icons/sprites-hq/marowak.png",
     "types": [
       "Ground"
@@ -4633,9 +4443,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build"],
     "spriteHq": "/icons/sprites-hq/gurdurr.png",
     "types": [
       "Fighting"
@@ -4683,9 +4491,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build", "crush"],
     "spriteHq": "/icons/sprites-hq/conkeldurr.png",
     "types": [
       "Fighting"
@@ -4732,9 +4538,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["build", "water"],
     "spriteHq": "/icons/sprites-hq/azumarill.png",
     "types": [
       "Water",
@@ -4783,9 +4587,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["build", "burn"],
     "spriteHq": "/icons/sprites-hq/combusken.png",
     "types": [
       "Fire",
@@ -4834,9 +4636,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["build", "burn"],
     "spriteHq": "/icons/sprites-hq/blaziken.png",
     "types": [
       "Fire",
@@ -4885,9 +4685,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build", "bulldoze"],
     "spriteHq": "/icons/sprites-hq/makuhita.png",
     "types": [
       "Fighting"
@@ -4935,9 +4733,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build", "bulldoze"],
     "spriteHq": "/icons/sprites-hq/hariyama.png",
     "types": [
       "Fighting"
@@ -4981,9 +4777,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build", "gather"],
     "spriteHq": "/icons/sprites-hq/machop.png",
     "types": [
       "Fighting"
@@ -5031,9 +4825,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build", "gather"],
     "spriteHq": "/icons/sprites-hq/machoke.png",
     "types": [
       "Fighting"
@@ -5081,9 +4873,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build", "gather"],
     "spriteHq": "/icons/sprites-hq/machamp.png",
     "types": [
       "Fighting"
@@ -5131,9 +4921,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build"],
     "spriteHq": "/icons/sprites-hq/riolu.png",
     "types": [
       "Fighting"
@@ -5181,9 +4969,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "teleport"
-    ],
+    "specialties": ["build", "teleport"],
     "spriteHq": "/icons/sprites-hq/gallade.png",
     "types": [
       "Psychic",
@@ -5228,9 +5014,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build"],
     "spriteHq": "/icons/sprites-hq/tinkatink.png",
     "types": [
       "Fairy",
@@ -5279,9 +5063,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "build"
-    ],
+    "specialties": ["build"],
     "spriteHq": "/icons/sprites-hq/tinkatuff.png",
     "types": [
       "Fairy",
@@ -5327,9 +5109,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["fly", "trade"],
     "spriteHq": "/icons/sprites-hq/noctowl.png",
     "types": [
       "Normal",
@@ -5378,9 +5158,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/lampent.png",
     "types": [
       "Ghost",
@@ -5429,9 +5207,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/meowth.png",
     "types": [
       "Normal"
@@ -5479,9 +5255,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["search", "trade"],
     "spriteHq": "/icons/sprites-hq/persian.png",
     "types": [
       "Normal"
@@ -5529,9 +5303,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["litter"],
     "spriteHq": "/icons/sprites-hq/grimer.png",
     "types": [
       "Poison"
@@ -5576,9 +5348,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "trade"],
     "spriteHq": "/icons/sprites-hq/gastly.png",
     "types": [
       "Ghost",
@@ -5627,9 +5397,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/happiny.png",
     "types": [
       "Normal"
@@ -5677,9 +5445,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/torchic.png",
     "types": [
       "Fire"
@@ -5727,9 +5493,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop"],
     "spriteHq": "/icons/sprites-hq/grubbin.png",
     "types": [
       "Bug"
@@ -5777,9 +5541,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/tatsugiristretchyform.png",
     "types": [
       "Dragon",
@@ -5828,9 +5590,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["hype", "water"],
     "spriteHq": "/icons/sprites-hq/ludicolo.png",
     "types": [
       "Water",
@@ -5875,9 +5635,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/rowlet.png",
     "types": [
       "Grass",
@@ -5926,9 +5684,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/raboot.png",
     "types": [
       "Fire"
@@ -5951,9 +5707,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Dry",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "teleport"
-    ],
+    "specialties": ["teleport"],
     "spriteHq": "/icons/sprites-hq/kadabra.png",
     "types": [
       "Psychic"
@@ -5998,9 +5752,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather"],
     "spriteHq": "/icons/sprites-hq/dusclops.png",
     "types": [
       "Ghost"
@@ -6045,9 +5797,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "trade"],
     "spriteHq": "/icons/sprites-hq/dusknoir.png",
     "types": [
       "Ghost"
@@ -6095,9 +5845,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/serperior.png",
     "types": [
       "Grass"
@@ -6145,9 +5893,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop"],
     "spriteHq": "/icons/sprites-hq/rookidee.png",
     "types": [
       "Flying"
@@ -6195,9 +5941,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop"],
     "spriteHq": "/icons/sprites-hq/corvisquire.png",
     "types": [
       "Flying"
@@ -6245,9 +5989,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop", "fly"],
     "spriteHq": "/icons/sprites-hq/corviknight.png",
     "types": [
       "Flying",
@@ -6296,9 +6038,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush"],
     "spriteHq": "/icons/sprites-hq/amaura.png",
     "types": [
       "Rock",
@@ -6322,9 +6062,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Spicy",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/volcanion.png",
     "types": [
       "Fire",
@@ -6373,9 +6111,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/bulbasaur.png",
     "types": [
       "Grass",
@@ -6424,9 +6160,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/venusaur.png",
     "types": [
       "Grass",
@@ -6475,9 +6209,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "hype"],
     "spriteHq": "/icons/sprites-hq/bellossom.png",
     "types": [
       "Grass"
@@ -6525,9 +6257,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/volbeat.png",
     "types": [
       "Bug"
@@ -6575,9 +6305,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/illumise.png",
     "types": [
       "Bug"
@@ -6624,9 +6352,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/cacnea.png",
     "types": [
       "Grass"
@@ -6674,9 +6400,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "dreamisland"
-    ],
+    "specialties": ["dreamisland"],
     "spriteHq": "/icons/sprites-hq/drifloon.png",
     "types": [
       "Ghost",
@@ -6721,9 +6445,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/pichu.png",
     "types": [
       "Electric"
@@ -6771,9 +6493,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "illuminate"
-    ],
+    "specialties": ["illuminate"],
     "spriteHq": "/icons/sprites-hq/peakychu.png",
     "types": [
       "Electric"
@@ -6821,9 +6541,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/elekid.png",
     "types": [
       "Electric"
@@ -6871,9 +6589,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate", "litter"],
     "spriteHq": "/icons/sprites-hq/mareep.png",
     "types": [
       "Electric"
@@ -6921,9 +6637,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate", "litter"],
     "spriteHq": "/icons/sprites-hq/flaaffy.png",
     "types": [
       "Electric"
@@ -6971,9 +6685,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate", "trade"],
     "spriteHq": "/icons/sprites-hq/ampharos.png",
     "types": [
       "Electric"
@@ -7021,9 +6733,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/audino.png",
     "types": [
       "Normal"
@@ -7071,9 +6781,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/zorua.png",
     "types": [
       "Dark"
@@ -7121,9 +6829,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/mimikyu.png",
     "types": [
       "Ghost",
@@ -7172,9 +6878,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/pawmi.png",
     "types": [
       "Electric"
@@ -7219,9 +6923,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/clefairy.png",
     "types": [
       "Fairy"
@@ -7266,9 +6968,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype", "trade"],
     "spriteHq": "/icons/sprites-hq/clefable.png",
     "types": [
       "Fairy"
@@ -7316,9 +7016,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/igglybuff.png",
     "types": [
       "Normal",
@@ -7367,9 +7065,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/jigglypuff.png",
     "types": [
       "Normal",
@@ -7418,9 +7114,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype", "trade"],
     "spriteHq": "/icons/sprites-hq/wigglytuff.png",
     "types": [
       "Normal",
@@ -7469,9 +7163,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/diglett.png",
     "types": [
       "Ground"
@@ -7515,9 +7207,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/magby.png",
     "types": [
       "Fire"
@@ -7564,9 +7254,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/fidough.png",
     "types": [
       "Fairy"
@@ -7613,9 +7301,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search", "trade"],
     "spriteHq": "/icons/sprites-hq/dachsbun.png",
     "types": [
       "Fairy"
@@ -7663,9 +7349,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/vulpix.png",
     "types": [
       "Fire"
@@ -7713,9 +7397,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "teleport"
-    ],
+    "specialties": ["teleport"],
     "spriteHq": "/icons/sprites-hq/ralts.png",
     "types": [
       "Psychic",
@@ -7764,9 +7446,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "teleport"
-    ],
+    "specialties": ["teleport"],
     "spriteHq": "/icons/sprites-hq/kirlia.png",
     "types": [
       "Psychic",
@@ -7815,9 +7495,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/plusle.png",
     "types": [
       "Electric"
@@ -7865,9 +7543,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/minun.png",
     "types": [
       "Electric"
@@ -7915,9 +7591,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["fly", "litter"],
     "spriteHq": "/icons/sprites-hq/altaria.png",
     "types": [
       "Dragon",
@@ -7962,9 +7636,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "sparklingskylands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/dedenne.png",
     "types": [
       "Electric",
@@ -8013,9 +7685,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "hype"],
     "spriteHq": "/icons/sprites-hq/meowscarada.png",
     "types": [
       "Grass",
@@ -8064,9 +7734,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/eevee.png",
     "types": [
       "Normal"
@@ -8110,9 +7778,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/jolteon.png",
     "types": [
       "Electric"
@@ -8156,9 +7822,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/flareon.png",
     "types": [
       "Fire"
@@ -8202,9 +7866,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/umbreon.png",
     "types": [
       "Dark"
@@ -8248,9 +7910,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/leafeon.png",
     "types": [
       "Grass"
@@ -8294,9 +7954,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/glaceon.png",
     "types": [
       "Ice"
@@ -8340,9 +7998,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["hype"],
     "spriteHq": "/icons/sprites-hq/sylveon.png",
     "types": [
       "Fairy"
@@ -8390,9 +8046,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/magnemite.png",
     "types": [
       "Electric",
@@ -8441,9 +8095,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/magneton.png",
     "types": [
       "Electric",
@@ -8492,9 +8144,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate", "recycle"],
     "spriteHq": "/icons/sprites-hq/magnezone.png",
     "types": [
       "Electric",
@@ -8539,9 +8189,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/pikachu.png",
     "types": [
       "Electric"
@@ -8564,9 +8212,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Sour",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate", "hype"],
     "spriteHq": "/icons/sprites-hq/raichu.png",
     "types": [
       "Electric"
@@ -8614,9 +8260,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["explode", "generate"],
     "spriteHq": "/icons/sprites-hq/electrode.png",
     "types": [
       "Electric"
@@ -8664,9 +8308,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/electabuzz.png",
     "types": [
       "Electric"
@@ -8714,9 +8356,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["crush", "generate"],
     "spriteHq": "/icons/sprites-hq/electivire.png",
     "types": [
       "Electric"
@@ -8760,9 +8400,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["chop", "generate"],
     "spriteHq": "/icons/sprites-hq/vikavolt.png",
     "types": [
       "Bug",
@@ -8811,9 +8449,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["crush", "generate"],
     "spriteHq": "/icons/sprites-hq/pawmo.png",
     "types": [
       "Electric",
@@ -8862,9 +8498,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["crush", "generate"],
     "spriteHq": "/icons/sprites-hq/pawmot.png",
     "types": [
       "Electric",
@@ -8913,9 +8547,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/magmar.png",
     "types": [
       "Fire"
@@ -8963,9 +8595,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "crush"],
     "spriteHq": "/icons/sprites-hq/magmortar.png",
     "types": [
       "Fire"
@@ -9009,9 +8639,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "rockyridges",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/toxel.png",
     "types": [
       "Electric",
@@ -9060,9 +8688,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate", "hype"],
     "spriteHq": "/icons/sprites-hq/toxtricityampedform.png",
     "types": [
       "Electric",
@@ -9111,9 +8737,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate", "hype"],
     "spriteHq": "/icons/sprites-hq/toxtricitylowkeyform.png",
     "types": [
       "Electric",
@@ -9162,9 +8786,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["fly", "generate"],
     "spriteHq": "/icons/sprites-hq/kilowattrel.png",
     "types": [
       "Electric",
@@ -9188,9 +8810,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Dry",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "generate"
-    ],
+    "specialties": ["generate"],
     "spriteHq": "/icons/sprites-hq/raikou.png",
     "types": [
       "Electric"
@@ -9213,9 +8833,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Spicy",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "fly"
-    ],
+    "specialties": ["fly"],
     "spriteHq": "/icons/sprites-hq/zapdos.png",
     "types": [
       "Electric",
@@ -9264,9 +8882,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/charmander.png",
     "types": [
       "Fire"
@@ -9314,9 +8930,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/charmeleon.png",
     "types": [
       "Fire"
@@ -9363,9 +8977,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "fly"],
     "spriteHq": "/icons/sprites-hq/charizard.png",
     "types": [
       "Fire",
@@ -9414,9 +9026,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/tyrogue.png",
     "types": [
       "Fighting"
@@ -9464,9 +9074,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/hitmonlee.png",
     "types": [
       "Fighting"
@@ -9514,9 +9122,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/hitmonchan.png",
     "types": [
       "Fighting"
@@ -9564,9 +9170,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/hitmontop.png",
     "types": [
       "Fighting"
@@ -9614,9 +9218,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop"],
     "spriteHq": "/icons/sprites-hq/scyther.png",
     "types": [
       "Bug",
@@ -9661,9 +9263,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop"],
     "spriteHq": "/icons/sprites-hq/scizor.png",
     "types": [
       "Bug",
@@ -9712,9 +9312,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["build", "chop"],
     "spriteHq": "/icons/sprites-hq/pinsir.png",
     "types": [
       "Bug"
@@ -9762,9 +9360,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["build", "chop"],
     "spriteHq": "/icons/sprites-hq/heracross.png",
     "types": [
       "Bug",
@@ -9813,9 +9409,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["chop", "search"],
     "spriteHq": "/icons/sprites-hq/excadrill.png",
     "types": [
       "Ground",
@@ -9864,9 +9458,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop"],
     "spriteHq": "/icons/sprites-hq/fraxure.png",
     "types": [
       "Dragon"
@@ -9914,9 +9506,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop", "litter"],
     "spriteHq": "/icons/sprites-hq/haxorus.png",
     "types": [
       "Dragon"
@@ -9960,9 +9550,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush"],
     "spriteHq": "/icons/sprites-hq/geodude.png",
     "types": [
       "Rock",
@@ -10011,9 +9599,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush"],
     "spriteHq": "/icons/sprites-hq/graveler.png",
     "types": [
       "Rock",
@@ -10062,9 +9648,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush", "trade"],
     "spriteHq": "/icons/sprites-hq/golem.png",
     "types": [
       "Rock",
@@ -10113,9 +9697,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["bulldoze", "crush"],
     "spriteHq": "/icons/sprites-hq/tyranitar.png",
     "types": [
       "Rock",
@@ -10164,9 +9746,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/charcadet.png",
     "types": [
       "Fire"
@@ -10189,9 +9769,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Spicy",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "trade"],
     "spriteHq": "/icons/sprites-hq/armarouge.png",
     "types": [
       "Fire",
@@ -10240,9 +9818,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "bulldoze"
-    ],
+    "specialties": ["bulldoze", "litter"],
     "spriteHq": "/icons/sprites-hq/trapinch.png",
     "types": [
       "Ground"
@@ -10265,9 +9841,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Dry",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "recycle"
-    ],
+    "specialties": ["crush", "recycle"],
     "spriteHq": "/icons/sprites-hq/metagross.png",
     "types": [
       "Steel",
@@ -10316,9 +9890,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush"],
     "spriteHq": "/icons/sprites-hq/cranidos.png",
     "types": [
       "Rock"
@@ -10366,9 +9938,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush", "litter"],
     "spriteHq": "/icons/sprites-hq/rampardos.png",
     "types": [
       "Rock"
@@ -10416,9 +9986,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush", "litter"],
     "spriteHq": "/icons/sprites-hq/bastiodon.png",
     "types": [
       "Rock",
@@ -10467,9 +10035,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush"],
     "spriteHq": "/icons/sprites-hq/tyrunt.png",
     "types": [
       "Rock",
@@ -10518,9 +10084,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush", "litter"],
     "spriteHq": "/icons/sprites-hq/tyrantrum.png",
     "types": [
       "Rock",
@@ -10544,9 +10108,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Bitter",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/entei.png",
     "types": [
       "Fire"
@@ -10591,9 +10153,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["fly", "trade"],
     "spriteHq": "/icons/sprites-hq/hoothoot.png",
     "types": [
       "Normal",
@@ -10642,9 +10202,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/chansey.png",
     "types": [
       "Normal"
@@ -10692,9 +10250,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["litter", "trade"],
     "spriteHq": "/icons/sprites-hq/blissey.png",
     "types": [
       "Normal"
@@ -10717,9 +10273,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Spicy",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "eat"
-    ],
+    "specialties": ["eat"],
     "spriteHq": "/icons/sprites-hq/mosslax.png",
     "types": [
       "Normal"
@@ -10763,9 +10317,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["bulldoze", "trade"],
     "spriteHq": "/icons/sprites-hq/snorlax.png",
     "types": [
       "Normal"
@@ -10810,9 +10362,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["fly", "trade"],
     "spriteHq": "/icons/sprites-hq/murkrow.png",
     "types": [
       "Dark",
@@ -10860,9 +10410,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["fly", "hype"],
     "spriteHq": "/icons/sprites-hq/chatot.png",
     "types": [
       "Normal",
@@ -10911,9 +10459,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/cyndaquil.png",
     "types": [
       "Fire"
@@ -10961,9 +10507,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/quilava.png",
     "types": [
       "Fire"
@@ -11011,9 +10555,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "trade"],
     "spriteHq": "/icons/sprites-hq/typhlosion.png",
     "types": [
       "Fire"
@@ -11058,9 +10600,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather"],
     "spriteHq": "/icons/sprites-hq/duskull.png",
     "types": [
       "Ghost"
@@ -11108,9 +10648,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/gloom.png",
     "types": [
       "Grass",
@@ -11156,9 +10694,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["chop", "search"],
     "spriteHq": "/icons/sprites-hq/crobat.png",
     "types": [
       "Poison",
@@ -11204,9 +10740,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "trade"],
     "spriteHq": "/icons/sprites-hq/haunter.png",
     "types": [
       "Ghost",
@@ -11252,9 +10786,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "trade"],
     "spriteHq": "/icons/sprites-hq/gengar.png",
     "types": [
       "Ghost",
@@ -11303,9 +10835,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/ekans.png",
     "types": [
       "Poison"
@@ -11353,9 +10883,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/arbok.png",
     "types": [
       "Poison"
@@ -11378,9 +10906,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Sour",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/tangela.png",
     "types": [
       "Grass"
@@ -11423,9 +10949,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": null,
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/tangrowth.png",
     "types": [
       "Grass"
@@ -11473,9 +10997,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "litter"
-    ],
+    "specialties": ["litter"],
     "spriteHq": "/icons/sprites-hq/combee.png",
     "types": [
       "Bug",
@@ -11524,9 +11046,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "teleport"],
     "spriteHq": "/icons/sprites-hq/exeggcute.png",
     "types": [
       "Grass",
@@ -11575,9 +11095,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "teleport"],
     "spriteHq": "/icons/sprites-hq/exeggutor.png",
     "types": [
       "Grass",
@@ -11625,9 +11143,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/tatsugiricurlyform.png",
     "types": [
       "Dragon",
@@ -11676,9 +11192,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "hype"
-    ],
+    "specialties": ["crush", "hype"],
     "spriteHq": "/icons/sprites-hq/dugtrio.png",
     "types": [
       "Ground"
@@ -11726,9 +11240,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "water"
-    ],
+    "specialties": ["hype", "water"],
     "spriteHq": "/icons/sprites-hq/politoed.png",
     "types": [
       "Water"
@@ -11776,9 +11288,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["chop", "trade"],
     "spriteHq": "/icons/sprites-hq/zoroark.png",
     "types": [
       "Dark"
@@ -11825,9 +11335,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["fly", "trade"],
     "spriteHq": "/icons/sprites-hq/honchkrow.png",
     "types": [
       "Dark",
@@ -11943,9 +11451,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "bulldoze"
-    ],
+    "specialties": ["bulldoze"],
     "spriteHq": "/icons/sprites-hq/munchlax.png",
     "types": [
       "Normal"
@@ -11993,9 +11499,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/scorbunny.png",
     "types": [
       "Fire"
@@ -12043,9 +11547,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "hype"],
     "spriteHq": "/icons/sprites-hq/cinderace.png",
     "types": [
       "Fire"
@@ -12068,9 +11570,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Sweet",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "party"
-    ],
+    "specialties": ["party"],
     "spriteHq": "/icons/sprites-hq/greedent.png",
     "types": [
       "Normal"
@@ -12115,9 +11615,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "trade"],
     "spriteHq": "/icons/sprites-hq/mismagius.png",
     "types": [
       "Ghost"
@@ -12165,9 +11663,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "search"],
     "spriteHq": "/icons/sprites-hq/dreepy.png",
     "types": [
       "Dragon",
@@ -12216,9 +11712,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "search"],
     "spriteHq": "/icons/sprites-hq/drakloak.png",
     "types": [
       "Dragon",
@@ -12267,9 +11761,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "trade"],
     "spriteHq": "/icons/sprites-hq/dragapult.png",
     "types": [
       "Dragon",
@@ -12318,9 +11810,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["bulldoze", "crush"],
     "spriteHq": "/icons/sprites-hq/steelix.png",
     "types": [
       "Steel",
@@ -12369,9 +11859,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "chop"
-    ],
+    "specialties": ["chop"],
     "spriteHq": "/icons/sprites-hq/axew.png",
     "types": [
       "Dragon"
@@ -12419,9 +11907,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "bulldoze"
-    ],
+    "specialties": ["bulldoze"],
     "spriteHq": "/icons/sprites-hq/bonsly.png",
     "types": [
       "Rock"
@@ -12469,9 +11955,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "trade"
-    ],
+    "specialties": ["trade"],
     "spriteHq": "/icons/sprites-hq/sudowoodo.png",
     "types": [
       "Rock"
@@ -12519,9 +12003,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["bulldoze", "crush"],
     "spriteHq": "/icons/sprites-hq/pupitar.png",
     "types": [
       "Rock",
@@ -12570,9 +12052,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/torkoal.png",
     "types": [
       "Fire"
@@ -12620,9 +12100,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "gather"],
     "spriteHq": "/icons/sprites-hq/rolycoly.png",
     "types": [
       "Rock"
@@ -12670,9 +12148,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "gather"],
     "spriteHq": "/icons/sprites-hq/carkol.png",
     "types": [
       "Rock",
@@ -12721,9 +12197,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "gather"],
     "spriteHq": "/icons/sprites-hq/coalossal.png",
     "types": [
       "Rock",
@@ -12772,9 +12246,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "fly"
-    ],
+    "specialties": ["fly"],
     "spriteHq": "/icons/sprites-hq/aerodactyl.png",
     "types": [
       "Rock",
@@ -12823,9 +12295,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush"],
     "spriteHq": "/icons/sprites-hq/shieldon.png",
     "types": [
       "Rock",
@@ -12874,9 +12344,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["crush", "litter"],
     "spriteHq": "/icons/sprites-hq/aurorus.png",
     "types": [
       "Rock",
@@ -12925,9 +12393,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "teleport"
-    ],
+    "specialties": ["teleport", "trade"],
     "spriteHq": "/icons/sprites-hq/gardevoir.png",
     "types": [
       "Psychic",
@@ -12976,9 +12442,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "search"],
     "spriteHq": "/icons/sprites-hq/growlithe.png",
     "types": [
       "Fire"
@@ -13026,9 +12490,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "litter"],
     "spriteHq": "/icons/sprites-hq/volcarona.png",
     "types": [
       "Bug",
@@ -13077,9 +12539,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["chop", "grow"],
     "spriteHq": "/icons/sprites-hq/decidueye.png",
     "types": [
       "Grass",
@@ -13124,9 +12584,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "sparklingskylands",
-    "specialties": [
-      "teleport"
-    ],
+    "specialties": ["teleport", "trade"],
     "spriteHq": "/icons/sprites-hq/alakazam.png",
     "types": [
       "Psychic"
@@ -13173,9 +12631,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "fly"
-    ],
+    "specialties": ["fly", "search"],
     "spriteHq": "/icons/sprites-hq/pidgeotto.png",
     "types": [
       "Normal",
@@ -13224,9 +12680,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/paras.png",
     "types": [
       "Bug",
@@ -13271,9 +12725,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "fly"
-    ],
+    "specialties": ["fly", "water"],
     "spriteHq": "/icons/sprites-hq/cramorant.png",
     "types": [
       "Flying",
@@ -13322,9 +12774,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "crush"
-    ],
+    "specialties": ["bulldoze", "crush"],
     "spriteHq": "/icons/sprites-hq/larvitar.png",
     "types": [
       "Rock",
@@ -13369,9 +12819,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "palettetown",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["hype", "search"],
     "spriteHq": "/icons/sprites-hq/skwovet.png",
     "types": [
       "Normal"
@@ -13419,9 +12867,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/noibat.png",
     "types": [
       "Flying",
@@ -13470,9 +12916,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["fly", "search"],
     "spriteHq": "/icons/sprites-hq/noivern.png",
     "types": [
       "Flying",
@@ -13521,9 +12965,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/sableye.png",
     "types": [
       "Dark",
@@ -13569,9 +13011,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/oddish.png",
     "types": [
       "Grass",
@@ -13620,9 +13060,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/parasect.png",
     "types": [
       "Bug",
@@ -13671,9 +13109,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/bellsprout.png",
     "types": [
       "Grass",
@@ -13722,9 +13158,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/drilbur.png",
     "types": [
       "Ground"
@@ -13772,9 +13206,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "bulldoze"
-    ],
+    "specialties": ["bulldoze", "fly"],
     "spriteHq": "/icons/sprites-hq/vibrava.png",
     "types": [
       "Ground",
@@ -13823,9 +13255,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "bulldoze"
-    ],
+    "specialties": ["bulldoze", "fly"],
     "spriteHq": "/icons/sprites-hq/flygon.png",
     "types": [
       "Ground",
@@ -13874,9 +13304,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/chandelure.png",
     "types": [
       "Ghost",
@@ -13925,9 +13353,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "search"],
     "spriteHq": "/icons/sprites-hq/arcanine.png",
     "types": [
       "Fire"
@@ -13975,9 +13401,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "litter"],
     "spriteHq": "/icons/sprites-hq/larvesta.png",
     "types": [
       "Bug",
@@ -14001,9 +13425,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Bitter",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn", "trade"],
     "spriteHq": "/icons/sprites-hq/ceruledge.png",
     "types": [
       "Fire",
@@ -14052,9 +13474,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "burn"
-    ],
+    "specialties": ["burn"],
     "spriteHq": "/icons/sprites-hq/ninetales.png",
     "types": [
       "Fire"
@@ -14077,9 +13497,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Spicy",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "fly"
-    ],
+    "specialties": ["fly"],
     "spriteHq": "/icons/sprites-hq/moltres.png",
     "types": [
       "Fire",
@@ -14151,9 +13569,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "fly"
-    ],
+    "specialties": ["fly", "search"],
     "spriteHq": "/icons/sprites-hq/pidgey.png",
     "types": [
       "Normal",
@@ -14201,9 +13617,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "fly"
-    ],
+    "specialties": ["chop", "fly"],
     "spriteHq": "/icons/sprites-hq/pidgeot.png",
     "types": [
       "Normal",
@@ -14249,9 +13663,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "search"
-    ],
+    "specialties": ["search"],
     "spriteHq": "/icons/sprites-hq/venomoth.png",
     "types": [
       "Bug",
@@ -14297,9 +13709,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/cacturne.png",
     "types": [
       "Grass",
@@ -14348,9 +13758,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/snivy.png",
     "types": [
       "Grass"
@@ -14398,9 +13806,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/hoppip.png",
     "types": [
       "Grass",
@@ -14449,9 +13855,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow"],
     "spriteHq": "/icons/sprites-hq/skiploom.png",
     "types": [
       "Grass",
@@ -14500,9 +13904,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "grow"
-    ],
+    "specialties": ["grow", "litter"],
     "spriteHq": "/icons/sprites-hq/jumpluff.png",
     "types": [
       "Grass",
@@ -14526,9 +13928,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
     "flavor": "Sour",
     "habitatList": [],
     "primaryLocation": null,
-    "specialties": [
-      "fly"
-    ],
+    "specialties": ["fly"],
     "spriteHq": "/icons/sprites-hq/articuno.png",
     "types": [
       "Ice",
@@ -14601,9 +14001,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "teleport"
-    ],
+    "specialties": ["teleport"],
     "spriteHq": "/icons/sprites-hq/abra.png",
     "types": [
       "Psychic"
@@ -14651,9 +14049,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "fly"
-    ],
+    "specialties": ["fly", "gather"],
     "spriteHq": "/icons/sprites-hq/drifblim.png",
     "types": [
       "Ghost",
@@ -14702,9 +14098,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather"],
     "spriteHq": "/icons/sprites-hq/girafarig.png",
     "types": [
       "Normal",
@@ -14753,9 +14147,7 @@ export const POKEMON: Record<string, PokemonEntry> = {
       }
     ],
     "primaryLocation": "witheredwastelands",
-    "specialties": [
-      "gather"
-    ],
+    "specialties": ["gather", "search"],
     "spriteHq": "/icons/sprites-hq/farigiraf.png",
     "types": [
       "Normal",

@@ -23,6 +23,7 @@ export default function Shortcut({
 }) {
   return (
     <button
+      type="button"
       className={`${BASE} ${active ? ACTIVE_CLASSES[variant] : INACTIVE} ${className}`}
       onClick={onClick}
     >

@@ -1764,12 +1764,6 @@ export const ITEMS: Record<string, ItemEntry> = {
     "icon": "/icons/items/dryfieldgrass.png",
     "categories": []
   },
-  "Dry field grass": {
-    "slug": "dry-field-grass",
-    "name": "Dry field grass",
-    "icon": "/icons/items/dryfieldgrass.png",
-    "categories": []
-  },
   "Dry green shoots": {
     "slug": "dry-green-shoots",
     "name": "Dry green shoots",
@@ -3289,12 +3283,6 @@ export const ITEMS: Record<string, ItemEntry> = {
     "icon": "/icons/items/leppatree.png",
     "categories": []
   },
-  "Leppa tree": {
-    "slug": "leppa-tree",
-    "name": "Leppa tree",
-    "icon": "/icons/items/leppatree.png",
-    "categories": []
-  },
   "Letter": {
     "slug": "letter",
     "name": "Letter",
@@ -3579,12 +3567,6 @@ export const ITEMS: Record<string, ItemEntry> = {
       "stone-stuff"
     ]
   },
-  "Metal debris": {
-    "slug": "metal-debris",
-    "name": "Metal debris",
-    "icon": "/icons/items/metaldebris.png",
-    "categories": []
-  },
   "Metal drum": {
     "slug": "metal-drum",
     "name": "Metal drum",
@@ -3781,12 +3763,6 @@ export const ITEMS: Record<string, ItemEntry> = {
     "icon": "/icons/items/mossysoil.png",
     "categories": []
   },
-  "Mossy soil": {
-    "slug": "mossy-soil",
-    "name": "Mossy soil",
-    "icon": "/icons/items/mossysoil.png",
-    "categories": []
-  },
   "Mossy Stone": {
     "slug": "mossy-stone",
     "name": "Mossy Stone",
@@ -3864,12 +3840,6 @@ export const ITEMS: Record<string, ItemEntry> = {
   "Muddy Tiling": {
     "slug": "muddy-tiling",
     "name": "Muddy Tiling",
-    "icon": "/icons/items/muddytiling.png",
-    "categories": []
-  },
-  "Muddy tiling": {
-    "slug": "muddy-tiling",
-    "name": "Muddy tiling",
     "icon": "/icons/items/muddytiling.png",
     "categories": []
   },
@@ -5362,9 +5332,9 @@ export const ITEMS: Record<string, ItemEntry> = {
     "icon": "/icons/items/seashellsoil.png",
     "categories": []
   },
-  "Seashore flowers": {
+  "seashore flowers": {
     "slug": "seashore-flowers",
-    "name": "Seashore flowers",
+    "name": "seashore flowers",
     "icon": "/icons/items/seashoreflowers.png",
     "categories": [
       "pretty-flowers"
@@ -6063,12 +6033,6 @@ export const ITEMS: Record<string, ItemEntry> = {
       "stone-stuff"
     ]
   },
-  "Stone Debris": {
-    "slug": "stone-debris",
-    "name": "Stone Debris",
-    "icon": "/icons/items/stonedebris.png",
-    "categories": []
-  },
   "Stone fireplace": {
     "slug": "stone-fireplace",
     "name": "Stone fireplace",
@@ -6333,12 +6297,6 @@ export const ITEMS: Record<string, ItemEntry> = {
     "icon": "/icons/items/stylishstoneflooring.png",
     "categories": []
   },
-  "Stylish stone flooring": {
-    "slug": "stylish-stone-flooring",
-    "name": "Stylish stone flooring",
-    "icon": "/icons/items/stylishstoneflooring.png",
-    "categories": []
-  },
   "Stylish stool": {
     "slug": "stylish-stool",
     "name": "Stylish stool",
@@ -6416,18 +6374,6 @@ export const ITEMS: Record<string, ItemEntry> = {
       "electronics",
       "shiny-stuff"
     ]
-  },
-  "Tall Grass": {
-    "slug": "tall-grass",
-    "name": "Tall Grass",
-    "icon": "/icons/items/tallgrass.png",
-    "categories": []
-  },
-  "Tall grass": {
-    "slug": "tall-grass",
-    "name": "Tall grass",
-    "icon": "/icons/items/tallgrass.png",
-    "categories": []
   },
   "Tall potted plant": {
     "slug": "tall-potted-plant",
@@ -6744,12 +6690,6 @@ export const ITEMS: Record<string, ItemEntry> = {
     "categories": [
       "slender-objects"
     ]
-  },
-  "Vine Rope": {
-    "slug": "vine-rope",
-    "name": "Vine Rope",
-    "icon": "/icons/items/vinerope.png",
-    "categories": []
   },
   "Vine wall decoration": {
     "slug": "vine-wall-decoration",
@@ -7317,16 +7257,292 @@ export const ITEMS: Record<string, ItemEntry> = {
     "icon": "/icons/items/yellowtallgrass.png",
     "categories": []
   },
-  "Yellow tall grass": {
-    "slug": "yellow-tall-grass",
-    "name": "Yellow tall grass",
-    "icon": "/icons/items/yellowtallgrass.png",
-    "categories": []
-  },
   "Yellow-green shoots": {
     "slug": "yellow-green-shoots",
     "name": "Yellow-green shoots",
     "icon": "/icons/items/yellow-greenshoots.png",
+    "categories": []
+  },
+  "Bread oven": {
+    "slug": "bread-oven",
+    "name": "Bread oven",
+    "icon": "/icons/items/breadoven.png",
+    "categories": []
+  },
+  "Brick": {
+    "slug": "brick",
+    "name": "Brick",
+    "icon": "/icons/items/brick.png",
+    "categories": []
+  },
+  "Canvas": {
+    "slug": "canvas",
+    "name": "Canvas",
+    "icon": "/icons/items/canvas.png",
+    "categories": []
+  },
+  "Cart": {
+    "slug": "cart",
+    "name": "Cart",
+    "icon": "/icons/items/cart.png",
+    "categories": []
+  },
+  "Castform weather charm (rain)": {
+    "slug": "castform-weather-charm-rain",
+    "name": "Castform weather charm (rain)",
+    "icon": "/icons/items/castformweathercharm(rain).png",
+    "categories": []
+  },
+  "Castform weather charm (sun)": {
+    "slug": "castform-weather-charm-sun",
+    "name": "Castform weather charm (sun)",
+    "icon": "/icons/items/castformweathercharm(sun).png",
+    "categories": []
+  },
+  "Concrete": {
+    "slug": "concrete",
+    "name": "Concrete",
+    "icon": "/icons/items/concrete.png",
+    "categories": []
+  },
+  "Counter": {
+    "slug": "counter",
+    "name": "Counter",
+    "icon": "/icons/items/counter.png",
+    "categories": []
+  },
+  "Crossing gate": {
+    "slug": "crossing-gate",
+    "name": "Crossing gate",
+    "icon": "/icons/items/crossinggate.png",
+    "categories": []
+  },
+  "Dandy flowers": {
+    "slug": "dandy-flowers",
+    "name": "Dandy flowers",
+    "icon": "/icons/items/dandyflowers.png",
+    "categories": []
+  },
+  "Dowsing Machine": {
+    "slug": "dowsing-machine",
+    "name": "Dowsing Machine",
+    "icon": "/icons/items/dowsingmachine.png",
+    "categories": []
+  },
+  "Duckweed": {
+    "slug": "duckweed",
+    "name": "Duckweed",
+    "icon": "/icons/items/duckweed.png",
+    "categories": []
+  },
+  "Frying pan": {
+    "slug": "frying-pan",
+    "name": "Frying pan",
+    "icon": "/icons/items/fryingpan.png",
+    "categories": []
+  },
+  "High-up Location": {
+    "slug": "high-up-location",
+    "name": "High-up Location",
+    "icon": "/icons/items/high-uplocation.png",
+    "categories": []
+  },
+  "Hot-spring Water": {
+    "slug": "hot-spring-water",
+    "name": "Hot-spring Water",
+    "icon": "/icons/items/hot-springwater.png",
+    "categories": []
+  },
+  "Hot-spring spout": {
+    "slug": "hot-spring-spout",
+    "name": "Hot-spring spout",
+    "icon": "/icons/items/hot-springspout.png",
+    "categories": []
+  },
+  "Iron ignot": {
+    "slug": "iron-ignot",
+    "name": "Iron ignot",
+    "icon": null,
+    "categories": []
+  },
+  "Kitchen table": {
+    "slug": "kitchen-table",
+    "name": "Kitchen table",
+    "icon": "/icons/items/kitchentable.png",
+    "categories": []
+  },
+  "Large tree": {
+    "slug": "large-tree",
+    "name": "Large tree",
+    "icon": "/icons/items/largetree.png",
+    "categories": []
+  },
+  "Lava": {
+    "slug": "lava",
+    "name": "Lava",
+    "icon": "/icons/items/lava.png",
+    "categories": []
+  },
+  "Linestone": {
+    "slug": "linestone",
+    "name": "Linestone",
+    "icon": null,
+    "categories": []
+  },
+  "Muddy Water": {
+    "slug": "muddy-water",
+    "name": "Muddy Water",
+    "icon": "/icons/items/muddywater.png",
+    "categories": []
+  },
+  "Ocean Water": {
+    "slug": "ocean-water",
+    "name": "Ocean Water",
+    "icon": "/icons/items/oceanwater.png",
+    "categories": []
+  },
+  "Paper": {
+    "slug": "paper",
+    "name": "Paper",
+    "icon": "/icons/items/paper.png",
+    "categories": []
+  },
+  "Party Platter": {
+    "slug": "party-platter",
+    "name": "Party Platter",
+    "icon": "/icons/items/partyplatter.png",
+    "categories": []
+  },
+  "Pedestal": {
+    "slug": "pedestal",
+    "name": "Pedestal",
+    "icon": "/icons/items/pedestal.png",
+    "categories": []
+  },
+  "Perch": {
+    "slug": "perch",
+    "name": "Perch",
+    "icon": "/icons/items/perch.png",
+    "categories": []
+  },
+  "Plated Food": {
+    "slug": "plated-food",
+    "name": "Plated Food",
+    "icon": "/icons/items/platedfood.png",
+    "categories": []
+  },
+  "Post": {
+    "slug": "post",
+    "name": "Post",
+    "icon": "/icons/items/post.png",
+    "categories": []
+  },
+  "Push cart": {
+    "slug": "push-cart",
+    "name": "Push cart",
+    "icon": "/icons/items/pushcart.png",
+    "categories": []
+  },
+  "Railway track": {
+    "slug": "railway-track",
+    "name": "Railway track",
+    "icon": "/icons/items/railwaytrack.png",
+    "categories": []
+  },
+  "Rare Pokemetal": {
+    "slug": "rare-pokemetal",
+    "name": "Rare Pokemetal",
+    "icon": "/icons/items/rarepokemetal.png",
+    "categories": []
+  },
+  "Red rock": {
+    "slug": "red-rock",
+    "name": "Red rock",
+    "icon": "/icons/items/redrock.png",
+    "categories": []
+  },
+  "Resort table": {
+    "slug": "resort-table",
+    "name": "Resort table",
+    "icon": "/icons/items/resorttable.png",
+    "categories": []
+  },
+  "Roserade Tea": {
+    "slug": "roserade-tea",
+    "name": "Roserade Tea",
+    "icon": "/icons/items/roseradetea.png",
+    "categories": []
+  },
+  "Sewer-hole cover": {
+    "slug": "sewer-hole-cover",
+    "name": "Sewer-hole cover",
+    "icon": "/icons/items/sewer-holecover.png",
+    "categories": []
+  },
+  "Side table": {
+    "slug": "side-table",
+    "name": "Side table",
+    "icon": "/icons/items/sidetable.png",
+    "categories": []
+  },
+  "Smooth Rock": {
+    "slug": "smooth-rock",
+    "name": "Smooth Rock",
+    "icon": "/icons/items/smoothrock.png",
+    "categories": []
+  },
+  "Stepping stones": {
+    "slug": "stepping-stones",
+    "name": "Stepping stones",
+    "icon": "/icons/items/steppingstones.png",
+    "categories": []
+  },
+  "Stones": {
+    "slug": "stones",
+    "name": "Stones",
+    "icon": null,
+    "categories": []
+  },
+  "Strange strings": {
+    "slug": "strange-strings",
+    "name": "Strange strings",
+    "icon": "/icons/items/strangestrings.png",
+    "categories": []
+  },
+  "Tinkagear": {
+    "slug": "tinkagear",
+    "name": "Tinkagear",
+    "icon": "/icons/items/tinkagear.png",
+    "categories": []
+  },
+  "Traffic cone": {
+    "slug": "traffic-cone",
+    "name": "Traffic cone",
+    "icon": "/icons/items/trafficcone.png",
+    "categories": []
+  },
+  "Walkway": {
+    "slug": "walkway",
+    "name": "Walkway",
+    "icon": "/icons/items/walkway.png",
+    "categories": []
+  },
+  "Waterfall": {
+    "slug": "waterfall",
+    "name": "Waterfall",
+    "icon": "/icons/items/waterfall.png",
+    "categories": []
+  },
+  "Waterwheel": {
+    "slug": "waterwheel",
+    "name": "Waterwheel",
+    "icon": "/icons/items/waterwheel.png",
+    "categories": []
+  },
+  "Wooden path": {
+    "slug": "wooden-path",
+    "name": "Wooden path",
+    "icon": "/icons/items/woodenpath.png",
     "categories": []
   }
 };

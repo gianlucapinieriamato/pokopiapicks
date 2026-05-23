@@ -16,6 +16,7 @@ export default function CollapsibleSection({
   return (
     <div className="mb-4">
       <button
+        type="button"
         className="w-full text-left flex items-baseline gap-2 mb-2 px-[14px] py-2 bg-chrome rounded-[10px] border border-paper-edge cursor-pointer transition-colors hover:bg-surface-2"
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}

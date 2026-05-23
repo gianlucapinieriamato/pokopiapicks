@@ -5,8 +5,10 @@ import { ITEMS } from "./data/items";
 import { SPECIALTIES } from "./data/specialties";
 import { HABITATS } from "./data/habitats";
 import { LOCATIONS } from "./data/locations";
+import { HABITAT_REQUIREMENTS } from "./data/habitat-requirements";
+import { ITEM_RECIPES } from "./data/crafting";
 
-export { POKEMON, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS };
+export { POKEMON, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS, HABITAT_REQUIREMENTS, ITEM_RECIPES };
 
 // Sort by national dex number; game-exclusive Pokemon (null nationalDexNum) go last
 export const POKEMON_LIST: PokemonEntry[] = Object.entries(POKEMON)

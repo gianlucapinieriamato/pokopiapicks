@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { ITEMS, CATEGORIES, POKEMON, pkmnIconUrl, dexNum, catDisplayName } from "@/app/lib/data";
+import { ITEMS, CATEGORIES, POKEMON, ITEM_RECIPES, pkmnIconUrl, dexNum, catDisplayName } from "@/app/lib/data";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
@@ -39,6 +39,8 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
     })
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
+  const recipe = ITEM_RECIPES[slug];
+
   return (
     <PageWrap>
       <JsonLd data={{
@@ -63,6 +65,38 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
           <div className="font-outfit font-extrabold leading-[1.05] tracking-[-0.025em] text-[clamp(1.8rem,4vw,2.8rem)]">{item.name}</div>
         </div>
       </div>
+
+      {recipe && (
+        <Card>
+          <SectionTitle>Crafting recipe</SectionTitle>
+          <div className="mt-3 space-y-2">
+            <div className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium uppercase mb-3">
+              Unlock: <span className="text-ink normal-case not-[uppercase] font-semibold">{recipe.unlock}</span>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {recipe.materials.map((mat, i) => {
+                const matItem = Object.values(ITEMS).find((it) => it.name.toLowerCase() === mat.name.toLowerCase());
+                const inner = (
+                  <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-1 border border-paper-edge">
+                    {matItem?.icon && (
+                      <div className="relative size-8 shrink-0">
+                        <Image fill src={matItem.icon} alt={mat.name} className="object-contain [image-rendering:pixelated]" sizes="32px" />
+                      </div>
+                    )}
+                    <div>
+                      <div className="font-outfit font-semibold text-[13px] text-ink leading-tight">{mat.name}</div>
+                      {mat.qty > 1 && <div className="font-mono text-[11px] text-ink-soft">×{mat.qty}</div>}
+                    </div>
+                  </div>
+                );
+                return matItem
+                  ? <Link key={i} href={`/item/${matItem.slug}`} className="no-underline">{inner}</Link>
+                  : <div key={i}>{inner}</div>;
+              })}
+            </div>
+          </div>
+        </Card>
+      )}
 
       <Card>
         <SectionTitle>Categories</SectionTitle>

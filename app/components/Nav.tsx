@@ -8,9 +8,9 @@ const LINKS = [
   { href: "/", label: "Home" },
   { href: "/pokedex", label: "Pokédex" },
   { href: "/items", label: "Items" },
+  { href: "/specialty", label: "Specialties" },
   { href: "/habitats", label: "Habitats" },
   { href: "/locations", label: "Locations" },
-  { href: "/lookup", label: "Filter" },
   { href: "/matchmaker", label: "Matchmaker" },
 ];
 
@@ -25,8 +25,9 @@ export default function Nav() {
       : pathname === href ||
         (href === "/pokedex" && pathname.startsWith("/pokemon")) ||
         (href === "/items" && (pathname.startsWith("/item/") || pathname.startsWith("/category"))) ||
-        (href === "/habitats" && pathname.startsWith("/habitat/")) ||
-        (href === "/locations" && pathname.startsWith("/location/"));
+        (href === "/specialty" && pathname.startsWith("/specialty/")) ||
+        (href === "/habitats" && pathname.startsWith("/habitats/")) ||
+        (href === "/locations" && pathname.startsWith("/locations/"));
 
   const linkBase = "font-outfit font-bold text-[12px] px-3 py-[6px] rounded-full text-ink-soft no-underline transition-all tracking-[0.02em] hover:bg-surface-1 hover:text-ink";
   const linkActive = "bg-accent text-paper border border-accent-deep shadow-[0_2px_0_var(--accent-deep)]";
@@ -55,6 +56,7 @@ export default function Nav() {
         </div>
 
         <button
+          type="button"
           className="hidden max-md:flex ml-auto bg-transparent border border-[1.5px] border-accent rounded-lg py-[5px] px-[10px] text-base leading-none text-ink transition-all shrink-0 hover:bg-accent hover:text-paper items-center justify-center"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Close menu" : "Open menu"}

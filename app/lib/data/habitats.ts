@@ -21,7 +21,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "allpackedup",
     "name": "All packed up",
     "description": "Let's pack some cardboard boxes full of stuff and stack them on top of a cart!",
-    "pokemon": []
+    "pokemon": [
+      "makuhita",
+      "hariyama"
+    ]
   },
   "ampedrockstage": {
     "slug": "ampedrockstage",
@@ -44,9 +47,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Beach Set",
     "description": "Lounge under this parasol, and bask in the tropical vibes. Pokemon might enjoy relaxing here.",
     "pokemon": [
+      "tatsugiricurlyform",
       "tatsugiridroopyform",
-      "tatsugiristretchyform",
-      "tatsugiricurlyform"
+      "tatsugiristretchyform"
     ]
   },
   "bedwithaplush": {
@@ -54,7 +57,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Bed with a plush",
     "description": "A bed with a cute doll. Small Pokemon would probably feel safe sleeping here",
     "pokemon": [
-      "munchlax"
+      "drifloon",
+      "slowbro",
+      "munchlax",
+      "slowking"
     ]
   },
   "benchwithgreenery": {
@@ -62,6 +68,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Bench with greenery",
     "description": "A bench near some hedges. Pokemon can rest here and bask in nature",
     "pokemon": [
+      "bulbasaur",
+      "ivysaur",
       "tangrowth"
     ]
   },
@@ -69,13 +77,18 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "berry-feastcampsite",
     "name": "Berry-feast Campsite",
     "description": "A cozy campfire underneat a clear sky. Prepare a big feast and have a good time!",
-    "pokemon": []
+    "pokemon": [
+      "charizard"
+    ]
   },
   "bestbreadbakery": {
     "slug": "bestbreadbakery",
     "name": "Best bread bakery",
     "description": "Prepare some side dishes while you wait for bread to finish baking.",
-    "pokemon": []
+    "pokemon": [
+      "fidough",
+      "dachsbun"
+    ]
   },
   "birdsonggarden": {
     "slug": "birdsonggarden",
@@ -91,8 +104,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "description": "tall grass near a large boulder. Perfect for hide-and-seek",
     "pokemon": [
       "timburr",
-      "gurdurr",
-      "machop"
+      "machop",
+      "gurdurr"
     ]
   },
   "boundlessbluebeverage": {
@@ -108,6 +121,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Box to the rhythm",
     "description": "Pokemon can feel the rhythm here and get pumped for a training session",
     "pokemon": [
+      "machoke",
+      "riolu",
       "lucario"
     ]
   },
@@ -116,8 +131,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Breezy flower bed",
     "description": "A bed of refreshing seashore flowers. Pokemon are drawn in by its gentle scent",
     "pokemon": [
-      "zorua",
       "pawmi",
+      "zorua",
       "zoroark"
     ]
   },
@@ -125,7 +140,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "bronzelandmark",
     "name": "Bronze landmark",
     "description": "A photoworthy bronze statue of three Pokemon. Their combined cuteness is sure to attract a crowd!",
-    "pokemon": []
+    "pokemon": [
+      "clefairy",
+      "clefable"
+    ]
   },
   "burning-hotspice": {
     "slug": "burning-hotspice",
@@ -140,6 +158,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Cafe space",
     "description": "Enjoy teatime while admiring the potted tree. Pokemon can feel refreshed here",
     "pokemon": [
+      "pawmo",
       "pawmot"
     ]
   },
@@ -181,22 +200,26 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Chirp-chirp meal",
     "description": "Bird Pokemon are sure to come and enjoy feasting on the plated food.",
     "pokemon": [
-      "blaziken",
-      "torchic"
+      "torchic",
+      "blaziken"
     ]
   },
   "chirpingrecital": {
     "slug": "chirpingrecital",
     "name": "Chirping recital",
     "description": "Bird Pokemon may swoop in and use the microphone to show off their singing skills",
-    "pokemon": []
+    "pokemon": [
+      "chatot",
+      "honchkrow"
+    ]
   },
   "clink-clangironconstruction": {
     "slug": "clink-clangironconstruction",
     "name": "Clink-clang iron construction",
     "description": "It looks like construction is underway. Some strong Pokemon might show up to help",
     "pokemon": [
-      "steelix"
+      "steelix",
+      "machamp"
     ]
   },
   "concretepipesecretbase": {
@@ -220,16 +243,20 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "containersnacking",
     "name": "Container snacking",
     "description": "Looks like someone snuck a snack by some storage containers. Pokemon might like a spot like this",
-    "pokemon": []
+    "pokemon": [
+      "diglett",
+      "glimmet",
+      "glimmora"
+    ]
   },
   "cozyloghandicrafts": {
     "slug": "cozyloghandicrafts",
     "name": "Cozy log handicrafts",
     "description": "This space is packed with wooden furniture. It feels almost like you're in a mountain cabin",
     "pokemon": [
+      "axew",
       "fraxure",
-      "haxorus",
-      "axew"
+      "haxorus"
     ]
   },
   "creepygraveoffering": {
@@ -237,6 +264,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Creepy grave offering",
     "description": "Light the candles by the gravestone to add some swaying blue flames for double the eeriness",
     "pokemon": [
+      "litwick",
+      "lampent",
       "chandelure"
     ]
   },
@@ -269,7 +298,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "dandelionlunchtime",
     "name": "Dandelion lunchtime",
     "description": "Lunch box? Check. Tableware? Check. Time for a picnic lunch break!",
-    "pokemon": []
+    "pokemon": [
+      "jumpluff"
+    ]
   },
   "dark-chocolatecookies": {
     "slug": "dark-chocolatecookies",
@@ -308,6 +339,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Dock",
     "description": "A cozy little dock on the beach. Swimming Pokemon might stop by now and then.",
     "pokemon": [
+      "marill",
       "azumarill"
     ]
   },
@@ -316,6 +348,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Dojo training",
     "description": "Once you emply the spirit of the warrior, you will be able to move even the heaviest of boulders",
     "pokemon": [
+      "poliwrath",
       "gallade"
     ]
   },
@@ -349,10 +382,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Elevated pink tall grass",
     "description": "Tall pink grass from way above the clouds. Even strong winds can't stop it from growing",
     "pokemon": [
-      "wattrel",
       "corvisquire",
-      "corviknight",
-      "kilowattrel"
+      "kilowattrel",
+      "wattrel",
+      "corviknight"
     ]
   },
   "elevatedredtallgrass": {
@@ -370,10 +403,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Elevated tall grass",
     "description": "Such a high elevation means this area is quite cool. The wind blows all the way through the tall grass",
     "pokemon": [
-      "noctowl",
-      "hoothoot",
+      "pidgey",
       "pidgeotto",
-      "pidgey"
+      "hoothoot",
+      "noctowl"
     ]
   },
   "elevatedyellowtallgrass": {
@@ -406,7 +439,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "experimentspace",
     "name": "Experiment Space",
     "description": "A space for conducting experiments. Someone may have left their research notes behind.",
-    "pokemon": []
+    "pokemon": [
+      "alakazam"
+    ]
   },
   "factorystorage": {
     "slug": "factorystorage",
@@ -421,8 +456,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Field of Flowers",
     "description": "A large field of flowers. Every petal emanates an ambrosial aroma",
     "pokemon": [
-      "ivysaur",
       "vespiquen",
+      "ivysaur",
       "venusaur"
     ]
   },
@@ -430,13 +465,16 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "field-tripfriends",
     "name": "Field-trip friends",
     "description": "Pack a lunch box and canteen inside your backpack, and you're all set for a field trip",
-    "pokemon": []
+    "pokemon": [
+      "skiploom"
+    ]
   },
   "fireplacenapspot": {
     "slug": "fireplacenapspot",
     "name": "Fireplace nap spot",
     "description": "If you're feeling chilly, you can sit by this fireplace and it will gently warm you.",
     "pokemon": [
+      "quilava",
       "typhlosion"
     ]
   },
@@ -444,19 +482,26 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "fishingpond",
     "name": "Fishing pond",
     "description": "Cast a line and wait patiently. Perhaps a Water-type Pokemon will appear!",
-    "pokemon": []
+    "pokemon": [
+      "slowking"
+    ]
   },
   "floatingintheshade": {
     "slug": "floatingintheshade",
     "name": "Floating in the shade",
     "description": "Have fun on the inflatable boat! If you get tired, you can take a break under the umbrella",
-    "pokemon": []
+    "pokemon": [
+      "blastoise"
+    ]
   },
   "flowergarden": {
     "slug": "flowergarden",
     "name": "Flower garden",
     "description": "Plant some hedges near blooming flowers, and you'll have a decent garden in no time flat",
-    "pokemon": []
+    "pokemon": [
+      "paras",
+      "parasect"
+    ]
   },
   "flowergardenstumpstage": {
     "slug": "flowergardenstumpstage",
@@ -464,7 +509,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "description": "A stage set up in a field of flowers. Hop on the stump to bathe in the spotlight and feel just like a star",
     "pokemon": [
       "igglybuff",
-      "jigglypuff"
+      "jigglypuff",
+      "politoed"
     ]
   },
   "flowerytable": {
@@ -481,10 +527,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Fluffy flower bed",
     "description": "A cute field full of lots of puffy skyland flowers",
     "pokemon": [
-      "misdreavus",
-      "rookidee",
       "vulpix",
+      "rookidee",
       "mismagius",
+      "misdreavus",
       "ninetales"
     ]
   },
@@ -493,9 +539,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Fresh Veggie Field",
     "description": "Vegetables growing in a nice, wild field. Seems likely to attact Pokemon who enjoy farming",
     "pokemon": [
+      "drilbur",
       "rowlet",
-      "excadrill",
-      "drilbur"
+      "excadrill"
     ]
   },
   "fullrecovery": {
@@ -503,15 +549,18 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Full recovery",
     "description": "Nothing like a good nap when you're feeling sick. A caring Pokemon might even come to check in!",
     "pokemon": [
-      "peakychu",
-      "chansey"
+      "chansey",
+      "peakychu"
     ]
   },
   "furnacespot": {
     "slug": "furnacespot",
     "name": "Furnace Spot",
     "description": "When you fuel this amazing contraption, it generates electricity with the power of fire",
-    "pokemon": []
+    "pokemon": [
+      "combusken",
+      "blaziken"
+    ]
   },
   "gamecornerbattlezone": {
     "slug": "gamecornerbattlezone",
@@ -525,20 +574,26 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "gardenterrace",
     "name": "Garden Terrace",
     "description": "Take a breather in a garden chair while looking at softly lit flowers",
-    "pokemon": []
+    "pokemon": [
+      "venusaur"
+    ]
   },
   "gentlylitbed": {
     "slug": "gentlylitbed",
     "name": "Gently lit bed",
     "description": "A bed bathed in gentle light. Pokemon could probably sleep peacefully here",
-    "pokemon": []
+    "pokemon": [
+      "hoothoot",
+      "noctowl"
+    ]
   },
   "goodold-fashionedantiques": {
     "slug": "goodold-fashionedantiques",
     "name": "Good old-fashioned antiques",
     "description": "Enjoy the retro vibe of this collection of wonderful antique furniture!",
     "pokemon": [
-      "weezing"
+      "weezing",
+      "snorlax"
     ]
   },
   "gracefulflowerbed": {
@@ -547,9 +602,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "description": "Numerous mountain flowers bloom to form an elegant and beautiful flower bed.",
     "pokemon": [
       "cleffa",
-      "clefairy",
-      "clefable",
       "fidough",
+      "clefable",
+      "clefairy",
       "dachsbun"
     ]
   },
@@ -592,7 +647,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "harmonioushotspring",
     "name": "Harmonious hot spring",
     "description": "Some Pokemon enjoy moving between the hot spring and the cold bath to feel light and refreshed",
-    "pokemon": []
+    "pokemon": [
+      "politoed"
+    ]
   },
   "headbuttfossildisplay": {
     "slug": "headbuttfossildisplay",
@@ -614,19 +671,26 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "heavyiron",
     "name": "Heavy iron",
     "description": "A monochromatic space with weighty furniture. Light the lantern to add another layer of calm",
-    "pokemon": []
+    "pokemon": [
+      "coalossal"
+    ]
   },
   "hometheater": {
     "slug": "hometheater",
     "name": "Home theater",
     "description": "Some big speakers and a TV make this space feel just likea movie theater",
-    "pokemon": []
+    "pokemon": [
+      "mismagius"
+    ]
   },
   "hot-springfishingspot": {
     "slug": "hot-springfishingspot",
     "name": "Hot-spring Fishing Spot",
     "description": "Pokemon enjoying a nice dip in the hot spring might be lure in with some bait.",
-    "pokemon": []
+    "pokemon": [
+      "lotad",
+      "lombre"
+    ]
   },
   "hot-springshower": {
     "slug": "hot-springshower",
@@ -641,7 +705,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "houseparty",
     "name": "House party",
     "description": "Help yourself to food and drinks, and have a total blast with all your friends",
-    "pokemon": []
+    "pokemon": [
+      "dugtrio",
+      "sudowoodo"
+    ]
   },
   "hydratedflowerbed": {
     "slug": "hydratedflowerbed",
@@ -657,8 +724,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Hydrated fluffy flower bed",
     "description": "Water can't diminish the gentle aroma wafting from these skyland flowers.",
     "pokemon": [
-      "poliwhirl",
       "dratini",
+      "poliwhirl",
       "dragonair"
     ]
   },
@@ -696,10 +763,11 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Hydrated tall grass",
     "description": "Tall grass along the water's edge. A habitat thriving with energy thanks to an abundance of water",
     "pokemon": [
-      "wartortle",
-      "blastoise",
+      "squirtle",
       "sliggoo",
-      "cramorant"
+      "blastoise",
+      "cramorant",
+      "wartortle"
     ]
   },
   "hydratedyellowtallgrass": {
@@ -717,7 +785,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "illuminatedbench",
     "name": "Illuminated bench",
     "description": "A bench illuminated by gentle light. Pokemon entranced by the light might stop by",
-    "pokemon": []
+    "pokemon": [
+      "venonat",
+      "venomoth"
+    ]
   },
   "illuminatedtallgrass": {
     "slug": "illuminatedtallgrass",
@@ -741,6 +812,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Interrogation desk",
     "description": "You and Arcanine, interrogating perps side by side… The tension in the air is palpable",
     "pokemon": [
+      "sprigatito",
       "floragato"
     ]
   },
@@ -748,7 +820,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "irresistiblescentandglow",
     "name": "Irresistible scent and glow",
     "description": "Pokemon may be lured here by the glow of the mushroom and the scent of the plant-shaped pot",
-    "pokemon": []
+    "pokemon": [
+      "weepinbell",
+      "victreebel"
+    ]
   },
   "jawfossildisplay": {
     "slug": "jawfossildisplay",
@@ -762,7 +837,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "knittingstation",
     "name": "Knitting station",
     "description": "Pokemon will be fascinated by the fluffy yarn and the adorable crafts that can be made from it",
-    "pokemon": []
+    "pokemon": [
+      "mareep",
+      "flaaffy"
+    ]
   },
   "largeluggagecarrier": {
     "slug": "largeluggagecarrier",
@@ -770,6 +848,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "description": "This long, wide cart can fit two large crates",
     "pokemon": [
       "tinkatink",
+      "gurdurr",
       "tinkatuff"
     ]
   },
@@ -794,6 +873,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Light-up stage",
     "description": "A stage bathed in dazzling light. It seems likely to attract attention-seeking Pokemon",
     "pokemon": [
+      "electabuzz",
       "electivire"
     ]
   },
@@ -825,15 +905,18 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "magmafishingspot",
     "name": "Magma fishing spot",
     "description": "Catch Pokemon by fishing in magma. Wait, how do you do that without the line melting?!",
-    "pokemon": []
+    "pokemon": [
+      "arcanine"
+    ]
   },
   "marshfishingspot": {
     "slug": "marshfishingspot",
     "name": "Marsh fishing spot",
     "description": "Pokemon live in marshlands too! Try casting your lin into some swampy water sometime",
     "pokemon": [
+      "grimer",
       "muk",
-      "grimer"
+      "clodsire"
     ]
   },
   "marshytallgrass": {
@@ -849,7 +932,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "minigamecorner",
     "name": "Mini Game Corner",
     "description": "When you're done playing arcade games, you can hit up the punching game to get your body moving!",
-    "pokemon": []
+    "pokemon": [
+      "magneton",
+      "magnezone"
+    ]
   },
   "minikitchen": {
     "slug": "minikitchen",
@@ -863,7 +949,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "minilibrary",
     "name": "Mini library",
     "description": "Light the lamp to peruse the books at your leisure, even in the dark ofnight",
-    "pokemon": []
+    "pokemon": [
+      "gardevoir"
+    ]
   },
   "minimuseum": {
     "slug": "minimuseum",
@@ -878,13 +966,16 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "modernliving",
     "name": "Modern living",
     "description": "Stylishly simple. The modern design gives off a sense of classiness",
-    "pokemon": []
+    "pokemon": [
+      "decidueye"
+    ]
   },
   "moisturizingmakeupstand": {
     "slug": "moisturizingmakeupstand",
     "name": "Moisturizing makeup stand",
     "description": "Making sure your skin is moisturized will ensure your makeup comes out even more perfectly than usual!",
     "pokemon": [
+      "kirlia",
       "gardevoir"
     ]
   },
@@ -910,7 +1001,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Mossy rest spot",
     "description": "All that nice, damp moss makes this a great location for Pokemon who love humid places",
     "pokemon": [
-      "larvitar"
+      "larvitar",
+      "tyranitar"
     ]
   },
   "musicandmagazines": {
@@ -918,6 +1010,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Music and magazines",
     "description": "Reading feels even more relaxing when you throw on some background music",
     "pokemon": [
+      "kricketot",
+      "kricketune",
       "stereorotom"
     ]
   },
@@ -933,16 +1027,18 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "nineflames",
     "name": "Nine flames",
     "description": "The gentle sway of these nine blazing flames gives their surroundings a subtly mystical ambeience",
-    "pokemon": []
+    "pokemon": [
+      "ninetales"
+    ]
   },
   "oceanfishingspot": {
     "slug": "oceanfishingspot",
     "name": "Ocean fishing spot",
     "description": "Ocean fishing can be fun! You may meet different species of Pokemon than you would in fresh water.",
     "pokemon": [
+      "magikarp",
       "gastrodon",
-      "gastrodoneastsea",
-      "magikarp"
+      "gastrodoneastsea"
     ]
   },
   "officestoreroom": {
@@ -950,6 +1046,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Office storeroom",
     "description": "Packed with old documents and unused equipment. Lost Pokemon sometimes wander inside.",
     "pokemon": [
+      "misdreavus",
+      "mismagius",
+      "drakloak",
       "dragapult"
     ]
   },
@@ -974,6 +1073,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Oversized dumping ground",
     "description": "A dumping ground where you can even throw away large items. Unwanted appliances can go here!",
     "pokemon": [
+      "tinkatink",
       "tinkaton"
     ]
   },
@@ -982,6 +1082,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Park bench",
     "description": "After eating a snack, put your trash in the trash can. …Think Pokemon can remember to do that?",
     "pokemon": [
+      "zubat",
       "voltorb",
       "electrode"
     ]
@@ -991,7 +1092,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Perpetual mess",
     "description": "Scattered toys and cardboard. Just when you think you're done tidying up, the mess somehow returns.",
     "pokemon": [
-      "growlithe"
+      "growlithe",
+      "azurill"
     ]
   },
   "picnicset": {
@@ -1025,10 +1127,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Pink tall grass",
     "description": "A small plot made up of four tufts of pink tall grass. Spots like this are often found in the skylands",
     "pokemon": [
-      "swablu",
       "trapinch",
       "duskull",
       "vibrava",
+      "swablu",
       "flygon"
     ]
   },
@@ -1037,7 +1139,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Piping-hot lava",
     "description": "Nothin' but piping-hot lava here! Fire-type Pokemon simply can't resist visiting",
     "pokemon": [
-      "charcadet"
+      "charcadet",
+      "volcarona"
     ]
   },
   "plainlife": {
@@ -1052,7 +1155,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "playingpirate",
     "name": "Playing pirate",
     "description": "Stand in front of the wheel or ight by the cannons, and you'll feel like you're sailing the open seas!",
-    "pokemon": []
+    "pokemon": [
+      "voltorb",
+      "electrode"
+    ]
   },
   "playland": {
     "slug": "playland",
@@ -1067,6 +1173,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Plush central",
     "description": "Some Pokemon might mistake all these dolls for the real things",
     "pokemon": [
+      "drifloon",
       "drifblim"
     ]
   },
@@ -1083,16 +1190,22 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "prankbutton",
     "name": "Prank button",
     "description": "A conspicuous button next to a boo-in-the-box. To press, or not to press, that is the questino.",
-    "pokemon": []
+    "pokemon": [
+      "frogadier",
+      "greninja"
+    ]
   },
   "prettyflowerbed": {
     "slug": "prettyflowerbed",
     "name": "Pretty flower bed",
     "description": "A beautiful bed of wildflowers. A faint, sweet aroma wafts about it.",
     "pokemon": [
-      "magby",
+      "pidgey",
+      "combee",
       "eevee",
-      "combee"
+      "hoothoot",
+      "magby",
+      "pidgeotto"
     ]
   },
   "privatemakeupstand": {
@@ -1100,6 +1213,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Private makeup stand",
     "description": "The partition helps keep prying eyes away before you're ready for the public",
     "pokemon": [
+      "minccino",
       "cinccino"
     ]
   },
@@ -1107,15 +1221,17 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "publicreadingmaterial",
     "name": "Public reading material",
     "description": "Anyone can freely pick up and enjoy the newspapers and magazines found here",
-    "pokemon": []
+    "pokemon": [
+      "serperior"
+    ]
   },
   "railroadcrossing": {
     "slug": "railroadcrossing",
     "name": "Railroad crossing",
     "description": "Absolutely no crossing while the bar is lowered! But…will Pokemon actually sotp and wait?",
     "pokemon": [
-      "rolycoly",
       "carkol",
+      "rolycoly",
       "coalossal"
     ]
   },
@@ -1123,13 +1239,16 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "raindancesite",
     "name": "Rain Dance site",
     "description": "Reminders of rain and a plate for offering food. The perfect spot to call for rainy weather",
-    "pokemon": []
+    "pokemon": [
+      "goomy"
+    ]
   },
   "recitalstage": {
     "slug": "recitalstage",
     "name": "Recital stage",
     "description": "This stage was made for just one thing-now get up there and SING!",
     "pokemon": [
+      "jigglypuff",
       "wigglytuff"
     ]
   },
@@ -1138,24 +1257,29 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Red tall grass",
     "description": "A small plot made up of four tufts of red tall grass. Spots like this are often found in valleys",
     "pokemon": [
-      "kricketot",
-      "kricketune",
-      "riolu",
       "scorbunny",
-      "cinderace"
+      "riolu",
+      "cinderace",
+      "kricketot",
+      "kricketune"
     ]
   },
   "refreshinglockerroom": {
     "slug": "refreshinglockerroom",
     "name": "Refreshing locker room",
     "description": "Even a simple locker room can have a refreshing atmosphere with the addition of a houseplant or two.",
-    "pokemon": []
+    "pokemon": [
+      "raboot",
+      "cinderace"
+    ]
   },
   "resortmealprep": {
     "slug": "resortmealprep",
     "name": "Resort meal prep",
     "description": "Sitting by a campfire underneat a palm tree…Let's kick back and cook some food",
     "pokemon": [
+      "growlithe",
+      "torchic",
       "combusken"
     ]
   },
@@ -1216,6 +1340,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Sewer hole inspection",
     "description": "Looks like repairs are being carried out here. Only workers are allowed in-no exceptions!",
     "pokemon": [
+      "tinkatuff",
+      "corviknight",
       "poliwrath"
     ]
   },
@@ -1223,7 +1349,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "shadedbeach",
     "name": "Shaded beach",
     "description": "The leaves of a palm tree serve as a parasol to Pokemon resting in the beach chair.",
-    "pokemon": []
+    "pokemon": [
+      "exeggcute",
+      "exeggutor"
+    ]
   },
   "shieldfossildisplay": {
     "slug": "shieldfossildisplay",
@@ -1237,7 +1366,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "simplebathroom",
     "name": "Simple bathroom",
     "description": "An ordinary bathroom. Pokemon might stop by to wash themselves.",
-    "pokemon": []
+    "pokemon": [
+      "dratini",
+      "dragonair"
+    ]
   },
   "skullfossildisplay": {
     "slug": "skullfossildisplay",
@@ -1260,7 +1392,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Spooky study",
     "description": "Light thre candle to read by firelight! This place feels spooky when night falls",
     "pokemon": [
-      "gastly"
+      "gastly",
+      "haunter"
     ]
   },
   "spotlesswashingstation": {
@@ -1299,8 +1432,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Surging psychic power",
     "description": "Sit in front of the crystal ball and focus to gain mastery over your psychic powers…maybe.",
     "pokemon": [
-      "alakazam",
-      "abra"
+      "abra",
+      "alakazam"
     ]
   },
   "surpriseinstore": {
@@ -1309,6 +1442,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "description": "A pop-art box surrounded by balloons. What's in the box? Open it and find out!",
     "pokemon": [
       "haunter",
+      "zoroark",
       "gengar"
     ]
   },
@@ -1325,12 +1459,12 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Tall Grass",
     "description": "Four tufts of tall grass bunched together in a plot. The perfect hiding place for small Pokemon",
     "pokemon": [
-      "squirtle",
       "bulbasaur",
       "charmander",
-      "charizard",
+      "squirtle",
       "geodude",
-      "oddish"
+      "oddish",
+      "charizard"
     ]
   },
   "tantalizingdiningset": {
@@ -1346,7 +1480,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Tantalizing restaurant",
     "description": "Dishes on a table. There's even a menu, so it's just like being in a restaurant.",
     "pokemon": [
-      "pawmo"
+      "pawmo",
+      "pawmi"
     ]
   },
   "tinyatelier": {
@@ -1377,7 +1512,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "toppop",
     "name": "Top pop",
     "description": "The colorful pop-art furniture gives off a cheerful atmosphere that'll lift your spirits in no time!",
-    "pokemon": []
+    "pokemon": [
+      "typhlosion"
+    ]
   },
   "trainingwaterfall": {
     "slug": "trainingwaterfall",
@@ -1393,8 +1530,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "description": "Trash cans put in place to prevent littering. You can sometimes find Pokemon inside them",
     "pokemon": [
       "magneton",
-      "magnezone",
-      "electabuzz"
+      "electabuzz",
+      "magnezone"
     ]
   },
   "trashcollectionsite": {
@@ -1402,8 +1539,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Trash collection site",
     "description": "A place to dump everyone's garbage. You might even spot some trash-hunting Pokemon here!",
     "pokemon": [
-      "koffing",
       "trubbish",
+      "koffing",
+      "weezing",
       "garbodor"
     ]
   },
@@ -1411,7 +1549,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "trashdisposalsite",
     "name": "Trash disposal site",
     "description": "Some trash left by a power pole. Its surroundings smell a little stinky",
-    "pokemon": []
+    "pokemon": [
+      "crobat"
+    ]
   },
   "trashsitetv": {
     "slug": "trashsitetv",
@@ -1436,8 +1576,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "description": "Beautifully blooming flowers beneath the shade ofa tree. Pokemon are attracted by the damp scent",
     "pokemon": [
       "goomy",
-      "vikavolt",
-      "cacturne"
+      "cacturne",
+      "vikavolt"
     ]
   },
   "tree-shadedfluffyflowerbed": {
@@ -1445,10 +1585,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Tree-shaded fluffy flower bed",
     "description": "Poofy skyland flowers bloom cutely-even in the cool shade of a tree",
     "pokemon": [
-      "servine",
-      "serperior",
       "girafarig",
-      "farigiraf"
+      "servine",
+      "farigiraf",
+      "serperior"
     ]
   },
   "tree-shadedgracefulflowerbed": {
@@ -1456,8 +1596,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Tree-shaded graceful flower bed",
     "description": "Tree-shaded graceful flower bed",
     "pokemon": [
-      "volcarona",
-      "larvesta"
+      "murkrow",
+      "larvesta",
+      "volcarona"
     ]
   },
   "tree-shadedpinktallgrass": {
@@ -1467,8 +1608,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "pokemon": [
       "sprigatito",
       "dreepy",
-      "drakloak",
-      "pupitar"
+      "pupitar",
+      "drakloak"
     ]
   },
   "tree-shadedredtallgrass": {
@@ -1487,6 +1628,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Tree-shaded snoozing Snorlax",
     "description": "Pokemon might come here mistakenly thinking that this is an actual sleeping Snorlax!",
     "pokemon": [
+      "munchlax",
       "snorlax"
     ]
   },
@@ -1498,9 +1640,9 @@ export const HABITATS: Record<string, HabitatEntry> = {
       "scyther",
       "scizor",
       "pinsir",
-      "heracross",
+      "bellsprout",
       "skwovet",
-      "bellsprout"
+      "heracross"
     ]
   },
   "tree-shadedyellowtallgrass": {
@@ -1545,6 +1687,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Uplifting duckweed",
     "description": "You can walk on top of the duckweed or jump into the water and float next to them",
     "pokemon": [
+      "lotad",
       "ludicolo"
     ]
   },
@@ -1561,6 +1704,7 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Vending machine break area",
     "description": "A long bench beside a vending machine. Pokemon might swing by to take a breather.",
     "pokemon": [
+      "grubbin",
       "charjabug"
     ]
   },
@@ -1569,7 +1713,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Vending machine set",
     "description": "A trash can beside a vending machine. Doesn't look like there are any empty cans inside",
     "pokemon": [
-      "elekid"
+      "elekid",
+      "electivire"
     ]
   },
   "very-berryspace": {
@@ -1592,7 +1737,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "waterwheelspot",
     "name": "Waterwheel Spot",
     "description": "This amazing facility generaes electriciy through the power of a waterfall",
-    "pokemon": []
+    "pokemon": [
+      "prinplup",
+      "empoleon"
+    ]
   },
   "welcomingresort": {
     "slug": "welcomingresort",
@@ -1606,7 +1754,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "slug": "windyflowerbed",
     "name": "Windy Flower Bed",
     "description": "A breeze whooshes over this cool flower bed. As the windmill turns, a floral aroma spreads far and wide.",
-    "pokemon": []
+    "pokemon": [
+      "wingull",
+      "pelipper"
+    ]
   },
   "wingfossildisplay": {
     "slug": "wingfossildisplay",
@@ -1629,8 +1780,10 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "name": "Working the register",
     "description": "Put a register on a table, power it on, and boom! You'll be ready for business in no time",
     "pokemon": [
-      "mawile",
-      "audino"
+      "meowth",
+      "audino",
+      "happiny",
+      "mawile"
     ]
   },
   "yellowcarpet": {
@@ -1649,8 +1802,8 @@ export const HABITATS: Record<string, HabitatEntry> = {
     "description": "A small plot made up of four tufts of yellow tall grass. Spots like this are often found in harbor towns",
     "pokemon": [
       "spinarak",
-      "ariados",
-      "grubbin"
+      "grubbin",
+      "ariados"
     ]
   }
 };

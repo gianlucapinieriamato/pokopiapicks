@@ -17,5 +17,5 @@ export default function NavBtn({
 }) {
   const cls = className ? `${CLS} ${className}` : CLS;
   if (href) return <Link href={href} className={cls} title={title}>{children}</Link>;
-  return <button className={cls} onClick={onClick} title={title}>{children}</button>;
+  return <button type="button" className={cls} onClick={onClick} title={title}>{children}</button>;
 }

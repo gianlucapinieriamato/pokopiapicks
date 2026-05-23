@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useMemo, useReducer } from "react";
-import { POKEMON_LIST, SPECIALTIES } from "@/app/lib/data";
+import { useMemo, useReducer, useState } from "react";
+import { POKEMON_LIST, SPECIALTIES, CATEGORIES, LOCATIONS } from "@/app/lib/data";
 import TcgCard from "@/app/components/TcgCard";
 import Shortcut from "@/app/components/Shortcut";
 import SearchInput from "@/app/components/SearchInput";
@@ -14,6 +14,8 @@ import PageHeader from "@/app/components/PageHeader";
 const HABITATS = ["Dry", "Bright", "Warm", "Cool", "Dark", "Humid"];
 const FLAVORS = ["Dry", "Sour", "Spicy", "Sweet", "Bitter"];
 const ALL_SPECIALTIES = Object.values(SPECIALTIES);
+const ALL_CATEGORIES = Object.values(CATEGORIES);
+const ALL_LOCATIONS = Object.values(LOCATIONS);
 const PAGE_SIZE = 60;
 
 const HABITAT_COUNTS: Record<string, number> = {};
@@ -27,17 +29,22 @@ type FilterState = {
   habitatFilter: string[];
   flavorFilter: string[];
   specialtyFilter: string[];
+  catFilter: string[];
+  locFilter: string[];
   search: string;
   page: number;
 };
 
 type FilterAction =
-  | { type: "TOGGLE"; key: "habitatFilter" | "flavorFilter" | "specialtyFilter"; val: string }
+  | { type: "TOGGLE"; key: "habitatFilter" | "flavorFilter" | "specialtyFilter" | "catFilter" | "locFilter"; val: string }
   | { type: "SET_SEARCH"; val: string }
   | { type: "SET_PAGE"; val: number }
   | { type: "CLEAR" };
 
-const INIT_STATE: FilterState = { habitatFilter: [], flavorFilter: [], specialtyFilter: [], search: "", page: 1 };
+const INIT_STATE: FilterState = {
+  habitatFilter: [], flavorFilter: [], specialtyFilter: [],
+  catFilter: [], locFilter: [], search: "", page: 1,
+};
 
 function filterReducer(state: FilterState, action: FilterAction): FilterState {
   switch (action.type) {
@@ -54,7 +61,12 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
 
 export default function PokedexPage() {
   const [state, dispatch] = useReducer(filterReducer, INIT_STATE);
-  const { habitatFilter, flavorFilter, specialtyFilter, search, page } = state;
+  const { habitatFilter, flavorFilter, specialtyFilter, catFilter, locFilter, search, page } = state;
+  const [habitatOpen, setHabitatOpen] = useState(false);
+  const [flavorOpen, setFlavorOpen] = useState(false);
+  const [specOpen, setSpecOpen] = useState(false);
+  const [catOpen, setCatOpen] = useState(false);
+  const [locOpen, setLocOpen] = useState(false);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -63,12 +75,15 @@ export default function PokedexPage() {
       if (habitatFilter.length && !habitatFilter.includes(p.habitat)) return false;
       if (flavorFilter.length && (!p.flavor || !flavorFilter.includes(p.flavor))) return false;
       if (specialtyFilter.length && !p.specialties?.some((s) => specialtyFilter.includes(s))) return false;
+      if (catFilter.length && !catFilter.every((c) => p.categories.includes(c))) return false;
+      if (locFilter.length && !locFilter.some((loc) => p.habitatList?.some((h) => h.locations.includes(loc)))) return false;
       return true;
     });
-  }, [search, habitatFilter, flavorFilter, specialtyFilter]);
+  }, [search, habitatFilter, flavorFilter, specialtyFilter, catFilter, locFilter]);
 
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const hasFilters = !!(search || habitatFilter.length || flavorFilter.length || specialtyFilter.length || catFilter.length || locFilter.length);
 
   return (
     <PageWrap>
@@ -80,45 +95,83 @@ export default function PokedexPage() {
           value={search}
           onChange={(e) => dispatch({ type: "SET_SEARCH", val: e.target.value })}
           placeholder="Search Pokemon…"
-          className="mb-4"
+          className="mb-3"
         />
-        <div className="flex flex-wrap gap-3">
-          <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Ideal Habitat</div>
-            <div className="flex flex-wrap gap-1.5">
-              {HABITATS.map((h) => (
-                <Shortcut key={h} active={habitatFilter.includes(h)} onClick={() => dispatch({ type: "TOGGLE", key: "habitatFilter", val: h })}>
-                  {h} <span className="opacity-55 text-[10px]">({HABITAT_COUNTS[h] ?? 0})</span>
-                </Shortcut>
-              ))}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+          {([
+            { label: "Ideal Habitat", vals: HABITATS, active: habitatFilter, key: "habitatFilter" as const, counts: HABITAT_COUNTS, open: habitatOpen, setOpen: setHabitatOpen },
+            { label: "Flavor", vals: FLAVORS, active: flavorFilter, key: "flavorFilter" as const, counts: FLAVOR_COUNTS, open: flavorOpen, setOpen: setFlavorOpen },
+          ] as const).map(({ label, vals, active, key, counts, open, setOpen }) => (
+            <div key={label} className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5">
+              <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpen((o) => !o)}>
+                <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">{label}</div>
+                <div className="flex items-center gap-1.5">
+                  {active.length > 0 && <span className="font-mono text-[9px] bg-ink text-paper px-1.5 py-[2px] rounded-full">{active.length}</span>}
+                  <span className="font-mono text-[10px] text-ink-fade">{open ? "▲" : "▼"}</span>
+                </div>
+              </button>
+              {open && (
+                <div className="flex flex-wrap gap-1.5 mt-3">
+                  {vals.map((v) => (
+                    <Shortcut key={v} active={active.includes(v)} onClick={() => dispatch({ type: "TOGGLE", key, val: v })}>
+                      {v} <span className="opacity-55 text-[10px]">({counts[v] ?? 0})</span>
+                    </Shortcut>
+                  ))}
+                </div>
+              )}
             </div>
-          </div>
-          <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Flavor</div>
-            <div className="flex flex-wrap gap-1.5">
-              {FLAVORS.map((f) => (
-                <Shortcut key={f} active={flavorFilter.includes(f)} onClick={() => dispatch({ type: "TOGGLE", key: "flavorFilter", val: f })}>
-                  {f} <span className="opacity-55 text-[10px]">({FLAVOR_COUNTS[f] ?? 0})</span>
-                </Shortcut>
-              ))}
-            </div>
-          </div>
-          <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft font-semibold mb-1.5">Specialty</div>
-            <div className="flex flex-wrap gap-1.5">
-              {ALL_SPECIALTIES.map((s) => (
-                <Shortcut key={s.slug} active={specialtyFilter.includes(s.slug)} onClick={() => dispatch({ type: "TOGGLE", key: "specialtyFilter", val: s.slug })}>
-                  {s.name}
-                </Shortcut>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
-        {(habitatFilter.length || flavorFilter.length || specialtyFilter.length || search) ? (
-          <Shortcut className="mt-3" onClick={() => dispatch({ type: "CLEAR" })}>
-            Clear filters
-          </Shortcut>
-        ) : null}
+
+        {([
+          { label: "Specialty", active: specialtyFilter, key: "specialtyFilter" as const, open: specOpen, setOpen: setSpecOpen, badge: "bg-ink", items: ALL_SPECIALTIES.map((s) => ({ val: s.slug, label: s.name })) },
+          { label: "Location", active: locFilter, key: "locFilter" as const, open: locOpen, setOpen: setLocOpen, badge: "bg-leaf", items: ALL_LOCATIONS.map((l) => ({ val: l.slug, label: l.name })) },
+        ] as const).map(({ label, active, key, open, setOpen, badge, items }) => (
+          <div key={label} className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mb-3">
+            <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpen((o) => !o)}>
+              <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">{label}</div>
+              <div className="flex items-center gap-1.5">
+                {active.length > 0 && <span className={`font-mono text-[9px] ${badge} text-paper px-1.5 py-[2px] rounded-full`}>{active.length}</span>}
+                <span className="font-mono text-[10px] text-ink-fade">{open ? "▲" : "▼"}</span>
+              </div>
+            </button>
+            {open && (
+              <div className="flex flex-wrap gap-1.5 mt-3">
+                {items.map((item) => (
+                  <Shortcut key={item.val} active={active.includes(item.val)} onClick={() => dispatch({ type: "TOGGLE", key, val: item.val })}>
+                    {item.label}
+                  </Shortcut>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+
+        <div className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mb-3">
+          <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setCatOpen((o) => !o)}>
+            <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">
+              Favorite category <span className="normal-case font-normal opacity-60">(all must match)</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              {catFilter.length > 0 && <span className="font-mono text-[9px] bg-accent text-paper px-1.5 py-[2px] rounded-full">{catFilter.length}</span>}
+              <span className="font-mono text-[10px] text-ink-fade">{catOpen ? "▲" : "▼"}</span>
+            </div>
+          </button>
+          {catOpen && (
+            <div className="flex flex-wrap gap-1.5 mt-3">
+              {ALL_CATEGORIES.map((c) => (
+                <Shortcut key={c.slug} active={catFilter.includes(c.slug)} variant="on-accent" onClick={() => dispatch({ type: "TOGGLE", key: "catFilter", val: c.slug })}>
+                  {c.name}
+                </Shortcut>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {hasFilters && (
+          <Shortcut onClick={() => dispatch({ type: "CLEAR" })}>Clear filters</Shortcut>
+        )}
       </Card>
 
       <Card>
@@ -127,7 +180,7 @@ export default function PokedexPage() {
         ) : (
           <div className="grid grid-cols-1 min-[400px]:grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(175px,1fr))] gap-2 sm:gap-3 max-w-[220px] min-[400px]:max-w-none mx-auto min-[400px]:mx-0">
             {paginated.map((p) => (
-              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="group cursor-pointer border-none bg-transparent p-0 text-left flex no-underline text-inherit transition-transform duration-150 hover:-translate-y-1 hover:scale-[1.02]" aria-label={p.name}>
+              <Link key={p.slug} href={`/pokemon/${p.slug}`} className="group cursor-pointer border-none bg-transparent p-0 text-left flex no-underline text-inherit transition-transform duration-150 hover:-translate-y-1 hover:scale-[1.02] min-h-[300px]" aria-label={p.name}>
                 <TcgCard p={p} size="sm" />
               </Link>
             ))}

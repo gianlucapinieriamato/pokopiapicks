@@ -10,9 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE_URL,                        lastModified: now, changeFrequency: "weekly",  priority: 1.0 },
     { url: `${SITE_URL}/pokedex`,           lastModified: now, changeFrequency: "weekly",  priority: 0.9 },
     { url: `${SITE_URL}/items`,             lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${SITE_URL}/specialty`,         lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/habitats`,          lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/locations`,         lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${SITE_URL}/lookup`,            lastModified: now, changeFrequency: "weekly",  priority: 0.7 },
     { url: `${SITE_URL}/matchmaker`,        lastModified: now, changeFrequency: "weekly",  priority: 0.7 },
   ];
 
@@ -37,12 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const habitatRoutes: MetadataRoute.Sitemap = Object.keys(HABITATS).map((slug) => ({
-    url: `${SITE_URL}/habitat/${slug}`,
+    url: `${SITE_URL}/habitats/${slug}`,
     lastModified: now, changeFrequency: "monthly", priority: 0.5,
   }));
 
   const locationRoutes: MetadataRoute.Sitemap = Object.keys(LOCATIONS).map((slug) => ({
-    url: `${SITE_URL}/location/${slug}`,
+    url: `${SITE_URL}/locations/${slug}`,
     lastModified: now, changeFrequency: "monthly", priority: 0.5,
   }));
 
