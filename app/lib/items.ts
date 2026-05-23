@@ -1,5 +1,3 @@
-import { existsSync } from "fs";
-import { join } from "path";
 import { Item } from "@/app/lib/const";
 
 export type ResolvedItem = {
@@ -41,10 +39,6 @@ export function resolveItem(name: string): ResolvedItem {
     (i) => i.label.toLowerCase() === baseName.toLowerCase()
   );
   if (baseEntry) return { icon: baseEntry.icon, slug: baseEntry.slug, displayName };
-
-  const derivedPath = `/icons/items/${baseName.toLowerCase().replace(/\s+/g, "")}.png`;
-  if (existsSync(join(process.cwd(), "public", derivedPath)))
-    return { icon: derivedPath, slug: undefined, displayName };
 
   return { icon: null, slug: undefined, displayName };
 }
