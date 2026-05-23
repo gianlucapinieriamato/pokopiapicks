@@ -18,12 +18,21 @@ const ALL_CATEGORIES = Object.values(CATEGORIES);
 const ALL_LOCATIONS = Object.values(LOCATIONS);
 const PAGE_SIZE = 60;
 
-const HABITAT_COUNTS: Record<string, number> = {};
-const FLAVOR_COUNTS: Record<string, number> = {};
-for (const p of POKEMON_LIST) {
-  HABITAT_COUNTS[p.habitat] = (HABITAT_COUNTS[p.habitat] ?? 0) + 1;
-  if (p.flavor) FLAVOR_COUNTS[p.flavor] = (FLAVOR_COUNTS[p.flavor] ?? 0) + 1;
-}
+const HABITAT_COUNTS = (() => {
+  const counts: Record<string, number> = {};
+  for (const p of POKEMON_LIST) {
+    counts[p.habitat] = (counts[p.habitat] ?? 0) + 1;
+  }
+  return counts;
+})() as Readonly<Record<string, number>>;
+
+const FLAVOR_COUNTS = (() => {
+  const counts: Record<string, number> = {};
+  for (const p of POKEMON_LIST) {
+    if (p.flavor) counts[p.flavor] = (counts[p.flavor] ?? 0) + 1;
+  }
+  return counts;
+})() as Readonly<Record<string, number>>;
 
 type FilterState = {
   habitatFilter: string[];
@@ -62,11 +71,7 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
 export default function PokedexClient() {
   const [state, dispatch] = useReducer(filterReducer, INIT_STATE);
   const { habitatFilter, flavorFilter, specialtyFilter, catFilter, locFilter, search, page } = state;
-  const [habitatOpen, setHabitatOpen] = useState(false);
-  const [flavorOpen, setFlavorOpen] = useState(false);
-  const [specOpen, setSpecOpen] = useState(false);
-  const [catOpen, setCatOpen] = useState(false);
-  const [locOpen, setLocOpen] = useState(false);
+  const [openPanel, setOpenPanel] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -100,18 +105,18 @@ export default function PokedexClient() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
           {([
-            { label: "Ideal Habitat", vals: HABITATS, active: habitatFilter, key: "habitatFilter" as const, counts: HABITAT_COUNTS, open: habitatOpen, setOpen: setHabitatOpen },
-            { label: "Flavor", vals: FLAVORS, active: flavorFilter, key: "flavorFilter" as const, counts: FLAVOR_COUNTS, open: flavorOpen, setOpen: setFlavorOpen },
-          ] as const).map(({ label, vals, active, key, counts, open, setOpen }) => (
-            <div key={label} className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5">
-              <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpen((o) => !o)}>
+            { id: "habitat", label: "Ideal Habitat", vals: HABITATS, active: habitatFilter, key: "habitatFilter" as const, counts: HABITAT_COUNTS },
+            { id: "flavor", label: "Flavor", vals: FLAVORS, active: flavorFilter, key: "flavorFilter" as const, counts: FLAVOR_COUNTS },
+          ] as const).map(({ id, label, vals, active, key, counts }) => (
+            <div key={id} className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5">
+              <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpenPanel(openPanel === id ? null : id)}>
                 <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">{label}</div>
                 <div className="flex items-center gap-1.5">
                   {active.length > 0 && <span className="font-mono text-[9px] bg-ink text-paper px-1.5 py-[2px] rounded-full">{active.length}</span>}
-                  <span className="font-mono text-[10px] text-ink-fade">{open ? "▲" : "▼"}</span>
+                  <span className="font-mono text-[10px] text-ink-fade">{openPanel === id ? "▲" : "▼"}</span>
                 </div>
               </button>
-              {open && (
+              {openPanel === id && (
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {vals.map((v) => (
                     <Shortcut key={v} active={active.includes(v)} onClick={() => dispatch({ type: "TOGGLE", key, val: v })}>
@@ -125,18 +130,18 @@ export default function PokedexClient() {
         </div>
 
         {([
-          { label: "Specialty", active: specialtyFilter, key: "specialtyFilter" as const, open: specOpen, setOpen: setSpecOpen, badge: "bg-ink", items: ALL_SPECIALTIES.map((s) => ({ val: s.slug, label: s.name })) },
-          { label: "Location", active: locFilter, key: "locFilter" as const, open: locOpen, setOpen: setLocOpen, badge: "bg-leaf", items: ALL_LOCATIONS.map((l) => ({ val: l.slug, label: l.name })) },
-        ] as const).map(({ label, active, key, open, setOpen, badge, items }) => (
-          <div key={label} className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mb-3">
-            <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpen((o) => !o)}>
+          { id: "specialty", label: "Specialty", active: specialtyFilter, key: "specialtyFilter" as const, badge: "bg-ink", items: ALL_SPECIALTIES.map((s) => ({ val: s.slug, label: s.name })) },
+          { id: "location", label: "Location", active: locFilter, key: "locFilter" as const, badge: "bg-leaf", items: ALL_LOCATIONS.map((l) => ({ val: l.slug, label: l.name })) },
+        ] as const).map(({ id, label, active, key, badge, items }) => (
+          <div key={id} className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mb-3">
+            <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpenPanel(openPanel === id ? null : id)}>
               <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">{label}</div>
               <div className="flex items-center gap-1.5">
                 {active.length > 0 && <span className={`font-mono text-[9px] ${badge} text-paper px-1.5 py-[2px] rounded-full`}>{active.length}</span>}
-                <span className="font-mono text-[10px] text-ink-fade">{open ? "▲" : "▼"}</span>
+                <span className="font-mono text-[10px] text-ink-fade">{openPanel === id ? "▲" : "▼"}</span>
               </div>
             </button>
-            {open && (
+            {openPanel === id && (
               <div className="flex flex-wrap gap-1.5 mt-3">
                 {items.map((item) => (
                   <Shortcut key={item.val} active={active.includes(item.val)} onClick={() => dispatch({ type: "TOGGLE", key, val: item.val })}>
@@ -149,16 +154,16 @@ export default function PokedexClient() {
         ))}
 
         <div className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mb-3">
-          <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setCatOpen((o) => !o)}>
+          <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpenPanel(openPanel === "category" ? null : "category")}>
             <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">
               Favorite category <span className="normal-case font-normal opacity-60">(all must match)</span>
             </div>
             <div className="flex items-center gap-1.5">
               {catFilter.length > 0 && <span className="font-mono text-[9px] bg-accent text-paper px-1.5 py-[2px] rounded-full">{catFilter.length}</span>}
-              <span className="font-mono text-[10px] text-ink-fade">{catOpen ? "▲" : "▼"}</span>
+              <span className="font-mono text-[10px] text-ink-fade">{openPanel === "category" ? "▲" : "▼"}</span>
             </div>
           </button>
-          {catOpen && (
+          {openPanel === "category" && (
             <div className="flex flex-wrap gap-1.5 mt-3">
               {ALL_CATEGORIES.map((c) => (
                 <Shortcut key={c.slug} active={catFilter.includes(c.slug)} variant="on-accent" onClick={() => dispatch({ type: "TOGGLE", key: "catFilter", val: c.slug })}>
