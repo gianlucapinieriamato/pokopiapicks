@@ -124,7 +124,7 @@ export default function TcgCard({
   const sweepOpacity = p.isLegendary ? holoOpacity * 0.65 : 0;
 
   return (
-    <div className={`relative w-full ${v.wrapper} aspect-[100/155]`}>
+    <div className={`relative w-full ${v.wrapper} aspect-[100/155] min-h-[300px]`}>
       {/* Gold frame */}
       <div
         className={`absolute inset-0 ${v.frameRound} ${p.isLegendary ? v.legendShadow : v.frameShadow}`}
