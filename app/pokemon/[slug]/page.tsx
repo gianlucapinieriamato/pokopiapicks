@@ -176,6 +176,12 @@ export default async function PokemonPage({
                 <InfoTip tip="The berry flavor this Pokemon prefers. Pokemon that share a flavor tend to like the same gift items." />
               </span>
             )}
+            {p.classification && (
+              <span className="inline-flex items-center gap-1.5">
+                <span>Classification: </span>
+                <span className="font-semibold text-ink">{p.classification}</span>
+              </span>
+            )}
           </div>
           {p.specialties.length > 0 && (
             <div className="mt-3">
@@ -194,6 +200,24 @@ export default async function PokemonPage({
                   </Link>
                 ))}
               </div>
+            </div>
+          )}
+          {(p.heightFt || p.weightLbs) && (
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1 font-mono text-[12px] text-ink-soft tracking-[0.04em]">
+              {p.heightFt && (
+                <span>
+                  <span>Height: </span>
+                  <span className="font-semibold text-ink">{p.heightFt}</span>
+                  {p.heightM && <span className="text-ink-fade ml-1">({p.heightM})</span>}
+                </span>
+              )}
+              {p.weightLbs && (
+                <span>
+                  <span>Weight: </span>
+                  <span className="font-semibold text-ink">{p.weightLbs}</span>
+                  {p.weightKg && <span className="text-ink-fade ml-1">({p.weightKg})</span>}
+                </span>
+              )}
             </div>
           )}
           <div className="mt-3">
