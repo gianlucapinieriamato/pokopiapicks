@@ -1,19 +1,19 @@
 import type { SpecialtyEntry } from "../types";
 
 export const SPECIALTIES: Record<string, SpecialtyEntry> = {
-  "appraise": {
-    "slug": "appraise",
-    "name": "Appraise",
-    "description": "You can show lost relics you've found to Professor Tangrowth, who will appraise them for you",
-    "pokemon": [
-      "professortangrowth"
-    ]
+  appraise: {
+    slug: "appraise",
+    name: "Appraise",
+    description:
+      "You can show lost relics you've found to Professor Tangrowth, who will appraise them for you",
+    pokemon: ["professortangrowth"],
   },
-  "build": {
-    "slug": "build",
-    "name": "Build",
-    "description": "Pokemon with the Build specialty will lead your building projects",
-    "pokemon": [
+  build: {
+    slug: "build",
+    name: "Build",
+    description:
+      "Pokemon with the Build specialty will lead your building projects",
+    pokemon: [
       "cubone",
       "marowak",
       "pinsir",
@@ -35,14 +35,15 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "poliwrath",
       "gallade",
       "tinkatink",
-      "tinkatuff"
-    ]
+      "tinkatuff",
+    ],
   },
-  "bulldoze": {
-    "slug": "bulldoze",
-    "name": "Bulldoze",
-    "description": "Pokemon with the Bulldoze specialty can lead your demolition, rebuilding or relocation projects",
-    "pokemon": [
+  bulldoze: {
+    slug: "bulldoze",
+    name: "Bulldoze",
+    description:
+      "Pokemon with the Bulldoze specialty can lead your demolition, rebuilding or relocation projects",
+    pokemon: [
       "onix",
       "steelix",
       "munchlax",
@@ -56,14 +57,15 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "tyranitar",
       "trapinch",
       "vibrava",
-      "flygon"
-    ]
+      "flygon",
+    ],
   },
-  "burn": {
-    "slug": "burn",
-    "name": "Burn",
-    "description": "Pokemon with the Burn specialty can set fire to Flammable objects. They can also turn Squish clay into Brick",
-    "pokemon": [
+  burn: {
+    slug: "burn",
+    name: "Burn",
+    description:
+      "Pokemon with the Burn specialty can set fire to Flammable objects. They can also turn Squish clay into Brick",
+    pokemon: [
       "charmander",
       "charmeleon",
       "charizard",
@@ -97,14 +99,15 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "typhlosion",
       "flareon",
       "entei",
-      "volcanion"
-    ]
+      "volcanion",
+    ],
   },
-  "chop": {
-    "slug": "chop",
-    "name": "Chop",
-    "description": "Pokemon with the Chop specialty can process small logs into lumber",
-    "pokemon": [
+  chop: {
+    slug: "chop",
+    name: "Chop",
+    description:
+      "Pokemon with the Chop specialty can process small logs into lumber",
+    pokemon: [
       "pidgeot",
       "victreebel",
       "scyther",
@@ -126,23 +129,22 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "greninja",
       "rookidee",
       "corvisquire",
-      "corviknight"
-    ]
+      "corviknight",
+    ],
   },
-  "collect": {
-    "slug": "collect",
-    "name": "Collect",
-    "description": "Pokemon with the Collect specialty will trade you rare things for certain items",
-    "pokemon": [
-      "gimmighoul",
-      "gholdengo"
-    ]
+  collect: {
+    slug: "collect",
+    name: "Collect",
+    description:
+      "Pokemon with the Collect specialty will trade you rare things for certain items",
+    pokemon: ["gimmighoul", "gholdengo"],
   },
-  "crush": {
-    "slug": "crush",
-    "name": "Crush",
-    "description": "Pokemon with the Crush specialty can mash materials into different things",
-    "pokemon": [
+  crush: {
+    slug: "crush",
+    name: "Crush",
+    description:
+      "Pokemon with the Crush specialty can mash materials into different things",
+    pokemon: [
       "onix",
       "steelix",
       "conkeldurr",
@@ -165,55 +167,49 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "tyrunt",
       "tyrantrum",
       "amaura",
-      "aurorus"
-    ]
+      "aurorus",
+    ],
   },
-  "dj": {
-    "slug": "dj",
-    "name": "DJ",
-    "description": "DJ Rotom can use the DJ specialty to play music CDs for you",
-    "pokemon": [
-      "stereorotom"
-    ]
+  dj: {
+    slug: "dj",
+    name: "DJ",
+    description: "DJ Rotom can use the DJ specialty to play music CDs for you",
+    pokemon: ["stereorotom"],
   },
-  "dreamisland": {
-    "slug": "dreamisland",
-    "name": "Dream Island",
-    "description": "Pokemon with the Dream Island specialty can transport you to a Dream Island",
-    "pokemon": [
-      "drifloon"
-    ]
+  dreamisland: {
+    slug: "dreamisland",
+    name: "Dream Island",
+    description:
+      "Pokemon with the Dream Island specialty can transport you to a Dream Island",
+    pokemon: ["drifloon"],
   },
-  "eat": {
-    "slug": "eat",
-    "name": "Eat",
-    "description": "Mosslax has the Eat specialty. Something good may happen if you offer them food",
-    "pokemon": [
-      "mosslax"
-    ]
+  eat: {
+    slug: "eat",
+    name: "Eat",
+    description:
+      "Mosslax has the Eat specialty. Something good may happen if you offer them food",
+    pokemon: ["mosslax"],
   },
-  "engineer": {
-    "slug": "engineer",
-    "name": "Engineer",
-    "description": "Tinkmaster has the Engineer specialty and can lead huge building projects",
-    "pokemon": [
-      "tinkaton"
-    ]
+  engineer: {
+    slug: "engineer",
+    name: "Engineer",
+    description:
+      "Tinkmaster has the Engineer specialty and can lead huge building projects",
+    pokemon: ["tinkaton"],
   },
-  "explode": {
-    "slug": "explode",
-    "name": "Explode",
-    "description": "Pokemon with the Explode specialty can be fired out of a cannon, destroying everything around them on impact",
-    "pokemon": [
-      "voltorb",
-      "electrode"
-    ]
+  explode: {
+    slug: "explode",
+    name: "Explode",
+    description:
+      "Pokemon with the Explode specialty can be fired out of a cannon, destroying everything around them on impact",
+    pokemon: ["voltorb", "electrode"],
   },
-  "fly": {
-    "slug": "fly",
-    "name": "Fly",
-    "description": "Pokemon with the Fly spceialty can fly you to a Pokemon you're searching fo",
-    "pokemon": [
+  fly: {
+    slug: "fly",
+    name: "Fly",
+    description:
+      "Pokemon with the Fly spceialty can fly you to a Pokemon you're searching fo",
+    pokemon: [
       "charizard",
       "pidgey",
       "pidgeotto",
@@ -237,14 +233,15 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "aerodactyl",
       "articuno",
       "zapdos",
-      "moltres"
-    ]
+      "moltres",
+    ],
   },
-  "gather": {
-    "slug": "gather",
-    "name": "Gather",
-    "description": "Pokemon with the Gather specialty will pick up items on the ground and put them inside a community box",
-    "pokemon": [
+  gather: {
+    slug: "gather",
+    name: "Gather",
+    description:
+      "Pokemon with the Gather specialty will pick up items on the ground and put them inside a community box",
+    pokemon: [
       "drifblim",
       "gastly",
       "haunter",
@@ -266,22 +263,22 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "dreepy",
       "drakloak",
       "dragapult",
-      "espeon"
-    ]
+      "espeon",
+    ],
   },
-  "gatherhoney": {
-    "slug": "gatherhoney",
-    "name": "Gather Honey",
-    "description": "Pokemon with the Gather Honey specialty will give you special furniture if you bring them honey",
-    "pokemon": [
-      "vespiquen"
-    ]
+  gatherhoney: {
+    slug: "gatherhoney",
+    name: "Gather Honey",
+    description:
+      "Pokemon with the Gather Honey specialty will give you special furniture if you bring them honey",
+    pokemon: ["vespiquen"],
   },
-  "generate": {
-    "slug": "generate",
-    "name": "Generate",
-    "description": "Pokemon with the Generate specialty can power machines with electricty",
-    "pokemon": [
+  generate: {
+    slug: "generate",
+    name: "Generate",
+    description:
+      "Pokemon with the Generate specialty can power machines with electricty",
+    pokemon: [
       "magnemite",
       "magneton",
       "magnezone",
@@ -309,14 +306,14 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "wattrel",
       "kilowattrel",
       "jolteon",
-      "raikou"
-    ]
+      "raikou",
+    ],
   },
-  "grow": {
-    "slug": "grow",
-    "name": "Grow",
-    "description": "Pokemon with the Grow specialty can make plants grow faster",
-    "pokemon": [
+  grow: {
+    slug: "grow",
+    name: "Grow",
+    description: "Pokemon with the Grow specialty can make plants grow faster",
+    pokemon: [
       "bulbasaur",
       "ivysaur",
       "venusaur",
@@ -345,14 +342,15 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "leafeon",
       "hoppip",
       "skiploom",
-      "jumpluff"
-    ]
+      "jumpluff",
+    ],
   },
-  "hype": {
-    "slug": "hype",
-    "name": "Hype",
-    "description": "Pokemon with the Hype specialty will start dancing when they hear music, improving the mood",
-    "pokemon": [
+  hype: {
+    slug: "hype",
+    name: "Hype",
+    description:
+      "Pokemon with the Hype specialty will start dancing when they hear music, improving the mood",
+    pokemon: [
       "bellossom",
       "volbeat",
       "illumise",
@@ -377,22 +375,22 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "toxtricitylowkeyform",
       "politoed",
       "meowscarada",
-      "sylveon"
-    ]
+      "sylveon",
+    ],
   },
-  "illuminate": {
-    "slug": "illuminate",
-    "name": "Illuminate",
-    "description": "Peakychu can use the Illuminate specialty to light up the whole town for you",
-    "pokemon": [
-      "peakychu"
-    ]
+  illuminate: {
+    slug: "illuminate",
+    name: "Illuminate",
+    description:
+      "Peakychu can use the Illuminate specialty to light up the whole town for you",
+    pokemon: ["peakychu"],
   },
-  "litter": {
-    "slug": "litter",
-    "name": "Litter",
-    "description": "Pokemon with the Litter specialty will drop useful materials near their homes",
-    "pokemon": [
+  litter: {
+    slug: "litter",
+    name: "Litter",
+    description:
+      "Pokemon with the Litter specialty will drop useful materials near their homes",
+    pokemon: [
       "venusaur",
       "vileplume",
       "bellsprout",
@@ -426,38 +424,36 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "bastiodon",
       "tyrantrum",
       "aurorus",
-      "jumpluff"
-    ]
+      "jumpluff",
+    ],
   },
-  "paint": {
-    "slug": "paint",
-    "name": "Paint",
-    "description": "Smearguru has the Paint specialty and can recolor certain items, such as furniture",
-    "pokemon": [
-      "smeargle"
-    ]
+  paint: {
+    slug: "paint",
+    name: "Paint",
+    description:
+      "Smearguru has the Paint specialty and can recolor certain items, such as furniture",
+    pokemon: ["smeargle"],
   },
-  "party": {
-    "slug": "party",
-    "name": "Party",
-    "description": "Chef Dente can use the Party specialty to help you prepare food for parties",
-    "pokemon": [
-      "greedent"
-    ]
+  party: {
+    slug: "party",
+    name: "Party",
+    description:
+      "Chef Dente can use the Party specialty to help you prepare food for parties",
+    pokemon: ["greedent"],
   },
-  "rarify": {
-    "slug": "rarify",
-    "name": "Rarify",
-    "description": "Pokemon with the Rarify specialty can turn Star Pieces into rare Pokemetal",
-    "pokemon": [
-      "porygon-z"
-    ]
+  rarify: {
+    slug: "rarify",
+    name: "Rarify",
+    description:
+      "Pokemon with the Rarify specialty can turn Star Pieces into rare Pokemetal",
+    pokemon: ["porygon-z"],
   },
-  "recycle": {
-    "slug": "recycle",
-    "name": "Recycle",
-    "description": "Pokemon with the Recycle specialty can process nonburnable garbage into iron ore and wastepaper into paper",
-    "pokemon": [
+  recycle: {
+    slug: "recycle",
+    name: "Recycle",
+    description:
+      "Pokemon with the Recycle specialty can process nonburnable garbage into iron ore and wastepaper into paper",
+    pokemon: [
       "magnezone",
       "koffing",
       "weezing",
@@ -468,14 +464,15 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "porygon2",
       "beldum",
       "metang",
-      "metagross"
-    ]
+      "metagross",
+    ],
   },
-  "search": {
-    "slug": "search",
-    "name": "Search",
-    "description": "Pokemon with the Search specialty can help you find buried items",
-    "pokemon": [
+  search: {
+    slug: "search",
+    name: "Search",
+    description:
+      "Pokemon with the Search specialty can help you find buried items",
+    pokemon: [
       "pidgey",
       "pidgeotto",
       "paras",
@@ -505,23 +502,22 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "dreepy",
       "drakloak",
       "umbreon",
-      "sableye"
-    ]
+      "sableye",
+    ],
   },
-  "storage": {
-    "slug": "storage",
-    "name": "Storage",
-    "description": "Pokémon with the Storage specialty can hold on to your items for you",
-    "pokemon": [
-      "gulpin",
-      "swalot"
-    ]
+  storage: {
+    slug: "storage",
+    name: "Storage",
+    description:
+      "Pokemon with the Storage specialty can hold on to your items for you",
+    pokemon: ["gulpin", "swalot"],
   },
-  "teleport": {
-    "slug": "teleport",
-    "name": "Teleport",
-    "description": "Pokemon with the Teleport specialty can instantly take you to a Pokemon you're searching for",
-    "pokemon": [
+  teleport: {
+    slug: "teleport",
+    name: "Teleport",
+    description:
+      "Pokemon with the Teleport specialty can instantly take you to a Pokemon you're searching for",
+    pokemon: [
       "slowking",
       "exeggcute",
       "exeggutor",
@@ -533,14 +529,15 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "gardevoir",
       "gallade",
       "mewtwo",
-      "mew"
-    ]
+      "mew",
+    ],
   },
-  "trade": {
-    "slug": "trade",
-    "name": "Trade",
-    "description": "Pokemon with the Trade speicalty can exchange items with you at a cash register",
-    "pokemon": [
+  trade: {
+    slug: "trade",
+    name: "Trade",
+    description:
+      "Pokemon with the Trade speicalty can exchange items with you at a cash register",
+    pokemon: [
       "blastoise",
       "slowbro",
       "tyrogue",
@@ -589,22 +586,21 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "dusknoir",
       "dragapult",
       "eevee",
-      "glaceon"
-    ]
+      "glaceon",
+    ],
   },
-  "transform": {
-    "slug": "transform",
-    "name": "Transform",
-    "description": "Ditto can improve its moves by using Transform",
-    "pokemon": [
-      "ditto"
-    ]
+  transform: {
+    slug: "transform",
+    name: "Transform",
+    description: "Ditto can improve its moves by using Transform",
+    pokemon: ["ditto"],
   },
-  "water": {
-    "slug": "water",
-    "name": "Water",
-    "description": "Pokemon with the Water specialty can use a full water basin to spray water on nearby fields and plants",
-    "pokemon": [
+  water: {
+    slug: "water",
+    name: "Water",
+    description:
+      "Pokemon with the Water specialty can use a full water basin to spray water on nearby fields and plants",
+    pokemon: [
       "squirtle",
       "wartortle",
       "blastoise",
@@ -643,15 +639,13 @@ export const SPECIALTIES: Record<string, SpecialtyEntry> = {
       "frogadier",
       "greninja",
       "vaporeon",
-      "suicune"
-    ]
+      "suicune",
+    ],
   },
-  "yawn": {
-    "slug": "yawn",
-    "name": "Yawn",
-    "description": "Pokemon with the Yawn specialty can tell you how humid it is",
-    "pokemon": [
-      "slowpoke"
-    ]
-  }
+  yawn: {
+    slug: "yawn",
+    name: "Yawn",
+    description: "Pokemon with the Yawn specialty can tell you how humid it is",
+    pokemon: ["slowpoke"],
+  },
 };

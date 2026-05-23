@@ -311,7 +311,7 @@ def scrape_locations(use_cache: bool) -> None:
         title_m = re.search(r'<title[^>]*>([^<]+)</title>', page, re.IGNORECASE)
         if title_m:
             raw_title = clean_text(title_m.group(1))
-            # Strip trailing " Locations - Pokémon Pokopia" or similar
+            # Strip trailing " Locations - Pokemon Pokopia" or similar
             raw_title = re.sub(r'\s+Locations\s*[-–].*$', '', raw_title, flags=re.IGNORECASE).strip()
             raw_title = re.sub(r'\s*[-–|].*$', '', raw_title).strip()
             if raw_title:

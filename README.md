@@ -1,6 +1,6 @@
 # Pokopia Picks
 
-Gift finder and wiki for **Pokémon Pokopia** (Nintendo Switch 2). Find what items each Pokémon likes, plan housing by habitat, look up locations and specialties.
+Gift finder and wiki for **Pokemon Pokopia** (Nintendo Switch 2). Find what items each Pokemon likes, plan housing by habitat, look up locations and specialties.
 
 ## Stack
 
@@ -20,16 +20,16 @@ npm run build    # generates out/ for static deployment
 
 All game data lives in `/data/*.json`:
 
-| File | Description |
-|------|-------------|
-| `pokemon.json` | 308 Pokémon — name, dex#, habitat, categories, specialties, habitatList, flavor |
-| `favorite-categories.json` | 43 gift categories with their item lists |
-| `items.json` | 608 items with icon paths and category refs |
-| `specialties.json` | 31 specialties with Pokémon reverse lookup |
-| `habitats.json` | 201 in-game habitat types with Pokémon reverse lookup |
-| `locations.json` | 6 locations with materials and plants/blocks |
+| File                       | Description                                                                     |
+| -------------------------- | ------------------------------------------------------------------------------- |
+| `pokemon.json`             | 308 Pokemon — name, dex#, habitat, categories, specialties, habitatList, flavor |
+| `favorite-categories.json` | 43 gift categories with their item lists                                        |
+| `items.json`               | 608 items with icon paths and category refs                                     |
+| `specialties.json`         | 31 specialties with Pokemon reverse lookup                                      |
+| `habitats.json`            | 201 in-game habitat types with Pokemon reverse lookup                           |
+| `locations.json`           | 6 locations with materials and plants/blocks                                    |
 
-Data scraped from [Serebii](https://www.serebii.net/pokemonpokopia/). HQ sprites from [PokéAPI sprites](https://github.com/PokeAPI/sprites) (BSD-3-Clause).
+Data scraped from [Serebii](https://www.serebii.net/pokemonpokopia/). HQ sprites from [PokeAPI sprites](https://github.com/PokeAPI/sprites) (BSD-3-Clause).
 
 ## Scraping
 

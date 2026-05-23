@@ -16,15 +16,19 @@ export function generateStaticParams() {
   return Object.keys(SPECIALTIES).map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
   const s = SPECIALTIES[slug];
   if (!s) return { title: "Not found" };
   const description = s.description?.trim()
     ? s.description.slice(0, 155)
-    : `${s.name} is a specialty in Pokémon Pokopia. ${s.pokemon.length} Pokémon have this specialty.`;
+    : `${s.name} is a specialty in Pokemon Pokopia. ${s.pokemon.length} Pokemon have this specialty.`;
   return {
-    title: `${s.name} Specialty — Pokémon List | Pokopia Picks`,
+    title: `${s.name} Specialty — Pokemon List | Pokopia Picks`,
     description,
     openGraph: {
       url: `${SITE_URL}/specialty/${slug}/`,
@@ -32,32 +36,58 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function SpecialtyPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function SpecialtyPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const s = SPECIALTIES[slug];
   if (!s) notFound();
   const description = s.description?.trim()
     ? s.description.slice(0, 155)
-    : `${s.name} is a specialty in Pokémon Pokopia. ${s.pokemon.length} Pokémon have this specialty.`;
+    : `${s.name} is a specialty in Pokemon Pokopia. ${s.pokemon.length} Pokemon have this specialty.`;
 
   const pokemonWith = s.pokemon
-    .flatMap((pSlug) => POKEMON[pSlug] ? [POKEMON[pSlug]] : [])
+    .flatMap((pSlug) => (POKEMON[pSlug] ? [POKEMON[pSlug]] : []))
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   return (
     <PageWrap>
-      <JsonLd data={{
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: "Specialties", item: `${SITE_URL}/specialty` },
-          { "@type": "ListItem", position: 3, name: s.name, item: `${SITE_URL}/specialty/${slug}` },
-        ],
-      }} />
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Specialties", href: "/specialty" }, { label: s.name }]} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Specialties",
+              item: `${SITE_URL}/specialty`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: s.name,
+              item: `${SITE_URL}/specialty/${slug}`,
+            },
+          ],
+        }}
+      />
+      <Breadcrumb
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Specialties", href: "/specialty" },
+          { label: s.name },
+        ]}
+      />
       <PageHeader title={s.name} meta={pokemonWith.length + " Pokemon"}>
-        {s.description && <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">{s.description}</p>}
+        {s.description && (
+          <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">
+            {s.description}
+          </p>
+        )}
       </PageHeader>
       <Card>
         {pokemonWith.length > 0 ? (
@@ -67,7 +97,9 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ slug
             ))}
           </PokemonGrid>
         ) : (
-          <p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No Pokemon data for this specialty yet.</p>
+          <p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">
+            No Pokemon data for this specialty yet.
+          </p>
         )}
       </Card>
     </PageWrap>

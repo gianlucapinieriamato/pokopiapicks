@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tier 2 — Download HQ official artwork sprites from PokéAPI.
+Tier 2 — Download HQ official artwork sprites from PokeAPI.
 
 Source: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{num}.png
 Target: /icons/sprites-hq/{slug}.png
@@ -67,7 +67,7 @@ def main() -> None:
         url = f'{BASE_URL}/{num}.png'
         print(f'  [{ok + len(failed) + 1}/{len(pokemon)}] {slug} (#{num})...', end=' ', flush=True)
 
-        # Form-specific URL overrides for PokéAPI alternate form sprites
+        # Form-specific URL overrides for PokeAPI alternate form sprites
         FORM_OVERRIDES = {
             'paldeanwooper':      f'{BASE_URL}/194-paldea.png',
             'shelloseastsea':     f'{BASE_URL}/422-east.png',

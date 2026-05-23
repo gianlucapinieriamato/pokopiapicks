@@ -19,13 +19,18 @@ export function generateStaticParams() {
   return Object.keys(LOCATIONS).map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
   const loc = LOCATIONS[slug];
   if (!loc) return { title: "Not found" };
-  const desc = `${loc.name} in Pokemon Pokopia — items, materials, shop items and Pokemon found in this location. ${loc.description ?? ""}`.trim();
+  const desc =
+    `${loc.name} in Pokemon Pokopia — items, materials, shop items and Pokemon found in this location. ${loc.description ?? ""}`.trim();
   return {
-    title: `${loc.name} — Items & Pokémon | Pokopia Picks`,
+    title: `${loc.name} — Items & Pokemon | Pokopia Picks`,
     description: desc.slice(0, 155),
     openGraph: {
       url: `${SITE_URL}/locations/${slug}/`,
@@ -39,13 +44,19 @@ function ItemGrid({ items }: { items: string[] }) {
     <div className="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-2 mt-3">
       {unique.map((name) => {
         const { icon, slug, displayName } = resolveItem(name);
-        return <ItemTile key={name} name={displayName} slug={slug} icon={icon} />;
+        return (
+          <ItemTile key={name} name={displayName} slug={slug} icon={icon} />
+        );
       })}
     </div>
   );
 }
 
-export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function LocationPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const loc = LOCATIONS[slug];
   if (!loc) notFound();
@@ -63,49 +74,89 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   return (
     <PageWrap>
-      <JsonLd data={{
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: "Locations", item: `${SITE_URL}/locations` },
-          { "@type": "ListItem", position: 3, name: loc.name, item: `${SITE_URL}/locations/${slug}` },
-        ],
-      }} />
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations" }, { label: loc.name }]} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Locations",
+              item: `${SITE_URL}/locations`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: loc.name,
+              item: `${SITE_URL}/locations/${slug}`,
+            },
+          ],
+        }}
+      />
+      <Breadcrumb
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Locations", href: "/locations" },
+          { label: loc.name },
+        ]}
+      />
       <PageHeader title={loc.name}>
-        {loc.description && <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">{loc.description}</p>}
+        {loc.description && (
+          <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">
+            {loc.description}
+          </p>
+        )}
       </PageHeader>
 
       {(uniqueMaterials.length > 0 || uniquePlants.length > 0) && (
         <Card>
           {uniqueMaterials.length > 0 && (
-            <CollapsibleSection title="Materials found here" count={`${uniqueMaterials.length}`} defaultOpen={true}>
+            <CollapsibleSection
+              title="Materials found here"
+              count={`${uniqueMaterials.length}`}
+              defaultOpen={true}
+            >
               <ItemGrid items={uniqueMaterials} />
             </CollapsibleSection>
           )}
           {uniquePlants.length > 0 && (
-            <CollapsibleSection title="Plants & blocks found here" count={`${uniquePlants.length}`}>
+            <CollapsibleSection
+              title="Plants & blocks found here"
+              count={`${uniquePlants.length}`}
+            >
               <ItemGrid items={uniquePlants} />
             </CollapsibleSection>
           )}
         </Card>
       )}
 
-      {(uniqueItemsInArea.length > 0 || uniqueItemsInPokeballs.length > 0 || uniqueTreasure.length > 0) && (
+      {(uniqueItemsInArea.length > 0 ||
+        uniqueItemsInPokeballs.length > 0 ||
+        uniqueTreasure.length > 0) && (
         <Card>
           {uniqueItemsInArea.length > 0 && (
-            <CollapsibleSection title="Items found in area" count={`${uniqueItemsInArea.length}`}>
+            <CollapsibleSection
+              title="Items found in area"
+              count={`${uniqueItemsInArea.length}`}
+            >
               <ItemGrid items={uniqueItemsInArea} />
             </CollapsibleSection>
           )}
           {uniqueItemsInPokeballs.length > 0 && (
-            <CollapsibleSection title="Items in Pokeballs" count={`${uniqueItemsInPokeballs.length}`}>
+            <CollapsibleSection
+              title="Items in Pokeballs"
+              count={`${uniqueItemsInPokeballs.length}`}
+            >
               <ItemGrid items={uniqueItemsInPokeballs} />
             </CollapsibleSection>
           )}
           {uniqueTreasure.length > 0 && (
-            <CollapsibleSection title="Treasure" count={`${uniqueTreasure.length}`}>
+            <CollapsibleSection
+              title="Treasure"
+              count={`${uniqueTreasure.length}`}
+            >
               <ItemGrid items={uniqueTreasure} />
             </CollapsibleSection>
           )}
@@ -121,7 +172,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 return (
                   <div key={s.name} className="relative">
                     <ItemTile name={displayName} slug={slug} icon={icon} />
-                    <span className="absolute top-1 right-1 font-mono text-[9px] font-semibold px-1.5 py-0.5 rounded-full bg-accent text-paper leading-none">Lv.{s.level}</span>
+                    <span className="absolute top-1 right-1 font-mono text-[9px] font-semibold px-1.5 py-0.5 rounded-full bg-accent text-paper leading-none">
+                      Lv.{s.level}
+                    </span>
                   </div>
                 );
               })}
@@ -134,7 +187,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         <Card>
           <div className="font-outfit font-extrabold text-xl tracking-[-0.01em] mb-2 flex items-center gap-2">
             Pokemon that appear here
-            <span className="ml-auto font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full tracking-[0.06em] bg-accent text-paper">{pokemonHere.length}</span>
+            <span className="ml-auto font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full tracking-[0.06em] bg-accent text-paper">
+              {pokemonHere.length}
+            </span>
           </div>
           <PokemonGrid className="mt-3">
             {pokemonHere.map((p) => (

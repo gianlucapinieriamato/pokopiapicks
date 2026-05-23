@@ -271,7 +271,7 @@ def parse_crafting_page(html: str) -> list[dict]:
         <tr>  ← item row (no closing </tr> before next item)
           <td class="cen"><a href="items/storagebox.shtml"><img alt="Storage Box"/></a></td>
           <td class="cen"><a href="items/storagebox.shtml">Storage Box</u></a></td>
-          <td class="fooinfo">Register 6 Pokémon</td>
+          <td class="fooinfo">Register 6 Pokemon</td>
           <td class="fooinfo">
             <table><tr>
               <td><img/></td>

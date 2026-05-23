@@ -1,5 +1,5 @@
 """
-Augments data/pokemon.json with Pokémon type data from PokéAPI.
+Augments data/pokemon.json with Pokemon type data from PokeAPI.
 Adds a `types` field (list of 1-2 capitalized type names, e.g. ["Rock", "Ground"]).
 Uses local cache in scripts/cache/types/ to avoid re-fetching.
 """

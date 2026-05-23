@@ -2,7 +2,7 @@
 
 ## What this is
 
-A static web app about the game Pokémon Pokopia (Nintendo Switch 2, released March 5 2026). Helps players figure out which items each Pokémon likes, plan housing, and look up game data.
+A static web app about the game Pokemon Pokopia (Nintendo Switch 2, released March 5 2026). Helps players figure out which items each Pokemon likes, plan housing, and look up game data.
 
 ## Stack
 
@@ -12,7 +12,7 @@ A static web app about the game Pokémon Pokopia (Nintendo Switch 2, released Ma
 ## Data sources
 
 - **Serebii** (https://www.serebii.net/pokemonpokopia/) — primary source for everything Pokopia-specific. Scrape with `requests` + regex, no BeautifulSoup. Crawl-delay 1.5–2s, never parallelize, always cache HTML locally in `/scripts/cache/` (gitignored).
-- **PokéAPI sprites** (https://github.com/PokeAPI/sprites, BSD-3-Clause) — high-quality official artwork by national dex number.
+- **PokeAPI sprites** (https://github.com/PokeAPI/sprites, BSD-3-Clause) — high-quality official artwork by national dex number.
 
 ## Hard rules
 
@@ -32,7 +32,7 @@ A static web app about the game Pokémon Pokopia (Nintendo Switch 2, released Ma
 /icons/                 mirrored from Serebii (Tier 0)
   pokemon/
   items/
-  sprites-hq/           (Tier 2) PokéAPI official artwork
+  sprites-hq/           (Tier 2) PokeAPI official artwork
 /app/                   Next.js App Router (after Phase 3)
 ```
 

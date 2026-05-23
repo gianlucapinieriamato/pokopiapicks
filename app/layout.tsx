@@ -7,8 +7,18 @@ import { AdSlot } from "@/app/components/AdSlot";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/config";
 
-const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700", "800"], variable: "--font-outfit", display: "swap" });
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-mono", display: "swap" });
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -25,7 +35,9 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} · What each Pokemon likes`,
     description: SITE_DESCRIPTION,
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: SITE_NAME }],
+    images: [
+      { url: "/opengraph-image.png", width: 1200, height: 630, alt: SITE_NAME },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -41,7 +53,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full ${outfit.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      className={`h-full ${outfit.variable} ${jetbrainsMono.variable}`}
+    >
       <body className="min-h-full flex flex-col">
         <Script
           async
@@ -49,30 +64,30 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-        <JsonLd data={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: SITE_NAME,
-          url: SITE_URL,
-          description: SITE_DESCRIPTION,
-          potentialAction: {
-            "@type": "SearchAction",
-            target: {
-              "@type": "EntryPoint",
-              urlTemplate: `${SITE_URL}/pokedex/?q={search_term_string}`,
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: SITE_NAME,
+            url: SITE_URL,
+            description: SITE_DESCRIPTION,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: `${SITE_URL}/pokedex/?q={search_term_string}`,
+              },
+              "query-input": "required name=search_term_string",
             },
-            "query-input": "required name=search_term_string",
-          },
-        }} />
+          }}
+        />
         <Nav />
         <AdSlot slot="8403578120" format="horizontal" />
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
         <AdSlot slot="2178978334" format="horizontal" />
         <footer className="mt-12 py-6 border-t border-paper-edge text-center">
           <p className="text-[13px] text-ink-soft">
-            Pokopia Picks — fan-made wiki for Pokémon Pokopia.{" "}
+            Pokopia Picks — fan-made wiki for Pokemon Pokopia.{" "}
             <a
               href="https://www.serebii.net/pokemonpokopia/"
               target="_blank"

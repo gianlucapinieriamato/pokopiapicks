@@ -4,7 +4,10 @@ import PkmnIcon from "@/app/components/PkmnIcon";
 import { pkmnIconUrl, dexNum } from "@/app/lib/data";
 import type { PokemonEntry } from "@/app/lib/types";
 
-type Option = Pick<PokemonEntry, "slug" | "name" | "icon" | "num" | "nationalDexNum" | "categories">;
+type Option = Pick<
+  PokemonEntry,
+  "slug" | "name" | "icon" | "num" | "nationalDexNum" | "categories"
+>;
 
 const SUGGESTION_ROW =
   "flex items-center gap-3 px-4 py-2 cursor-pointer border-b border-surface-1 transition-colors hover:bg-surface-1 last:border-b-0";
@@ -16,13 +19,18 @@ type Props = {
   onSelect: (option: Option) => void;
 };
 
-export function SuggestionDropdown({ id, options, activeIdx, onSelect }: Props) {
+export function SuggestionDropdown({
+  id,
+  options,
+  activeIdx,
+  onSelect,
+}: Props) {
   if (options.length === 0) return null;
   return (
     <ul
       id={id}
       role="listbox"
-      aria-label="Pokémon suggestions"
+      aria-label="Pokemon suggestions"
       className="absolute top-[calc(100%+6px)] left-0 right-0 bg-paper border border-[1.5px] border-paper-edge rounded-[14px] max-h-[360px] overflow-y-auto z-10 block shadow-[0_12px_28px_-8px_var(--shadow)]"
     >
       {options.map((opt, i) => (

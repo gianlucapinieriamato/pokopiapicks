@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const LINKS = [
   { href: "/", label: "Home" },
-  { href: "/pokedex", label: "Pokédex" },
+  { href: "/pokedex", label: "Pokedex" },
   { href: "/items", label: "Items" },
   { href: "/specialty", label: "Specialties" },
   { href: "/habitats", label: "Habitats" },
@@ -24,15 +24,20 @@ export default function Nav() {
       ? pathname === "/"
       : pathname === href ||
         (href === "/pokedex" && pathname.startsWith("/pokemon")) ||
-        (href === "/items" && (pathname.startsWith("/item/") || pathname.startsWith("/category"))) ||
+        (href === "/items" &&
+          (pathname.startsWith("/item/") ||
+            pathname.startsWith("/category"))) ||
         (href === "/specialty" && pathname.startsWith("/specialty/")) ||
         (href === "/habitats" && pathname.startsWith("/habitats/")) ||
         (href === "/locations" && pathname.startsWith("/locations/"));
 
-  const linkBase = "font-outfit font-bold text-[12px] px-3 py-[6px] rounded-full text-ink-soft no-underline transition-all tracking-[0.02em] hover:bg-surface-1 hover:text-ink";
-  const linkActive = "bg-accent text-paper border border-accent-deep shadow-[0_2px_0_var(--accent-deep)]";
+  const linkBase =
+    "font-outfit font-bold text-[12px] px-3 py-[6px] rounded-full text-ink-soft no-underline transition-all tracking-[0.02em] hover:bg-surface-1 hover:text-ink";
+  const linkActive =
+    "bg-accent text-paper border border-accent-deep shadow-[0_2px_0_var(--accent-deep)]";
 
-  const dropBase = "font-outfit font-bold text-[14px] px-[14px] py-[10px] rounded-[10px] text-ink-soft no-underline transition-all hover:bg-surface-1 hover:text-ink";
+  const dropBase =
+    "font-outfit font-bold text-[14px] px-[14px] py-[10px] rounded-[10px] text-ink-soft no-underline transition-all hover:bg-surface-1 hover:text-ink";
   const dropActive = "bg-accent text-paper";
 
   return (
@@ -43,13 +48,25 @@ export default function Nav() {
           className="font-outfit font-extrabold text-[17px] text-ink no-underline tracking-[-0.02em] flex items-center gap-2 mr-2 whitespace-nowrap uppercase"
           onClick={() => setOpen(false)}
         >
-          <Image src="/icon-192.png" alt="Pokopia Picks" width={32} height={32} className="rounded-[7px] shrink-0" />
-          <span className="hidden md:inline">POKOPIA <span className="text-accent-deep italic">PICKS</span></span>
+          <Image
+            src="/icon-192.png"
+            alt="Pokopia Picks"
+            width={32}
+            height={32}
+            className="rounded-[7px] shrink-0"
+          />
+          <span className="hidden md:inline">
+            POKOPIA <span className="text-accent-deep italic">PICKS</span>
+          </span>
         </Link>
 
         <div className="hidden md:flex gap-[2px]">
           {LINKS.map(({ href, label }) => (
-            <Link key={href} href={href} className={`${linkBase}${isActive(href) ? ` ${linkActive}` : ""}`}>
+            <Link
+              key={href}
+              href={href}
+              className={`${linkBase}${isActive(href) ? ` ${linkActive}` : ""}`}
+            >
               {label}
             </Link>
           ))}
