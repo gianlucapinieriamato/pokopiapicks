@@ -39,16 +39,19 @@ export function AdSlot({ slot, format = 'auto', className = '' }: AdSlotProps) {
   if (hidden) return null
 
   return (
-    <div className={`w-full text-center ${className}`} aria-hidden="true">
+    <aside
+      aria-label="Advertisement"
+      className={`min-h-[90px] flex items-center justify-center w-full max-w-[1080px] mx-auto px-5 py-2 ${className}`}
+    >
       <ins
         ref={insRef}
-        className="adsbygoogle"
+        className="adsbygoogle w-full text-center"
         style={{ display: 'block', width: '100%', minWidth: 0 }}
         data-ad-client="pub-6028271541011678"
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive="true"
       />
-    </div>
+    </aside>
   )
 }
