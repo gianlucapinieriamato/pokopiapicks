@@ -75,7 +75,8 @@ export default function MatchmakerClient() {
   // Fix 5: ref-tracked blur timer to avoid memory leak on unmount
   const blurTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
-    return () => { if (blurTimerRef.current) clearTimeout(blurTimerRef.current); };
+    const timerRef = blurTimerRef;
+    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
   }, []);
 
   // Fix 1: O(n²) TOP_STARTERS moved into useMemo (was module-scope IIFE)
@@ -131,23 +132,22 @@ export default function MatchmakerClient() {
 
   const recommendations = useMemo(() => {
     if (anchorSlugs.length === 0) return [];
-    // Fix 4: use Set for O(1) anchor-slug lookup instead of anchorSlugs.includes()
+    // Fix 3: use already-memoized `anchors` instead of re-calling resolveSlugs
     const anchorSet = new Set(anchorSlugs);
-    const anchorList = resolveSlugs(anchorSlugs);
-    const habitat = anchorList[0]?.habitat ?? null;
+    const habitat = anchors[0]?.habitat ?? null;
     if (!habitat) return [];
     const scored: PokemonRecommendation[] = [];
     for (const p of POKEMON_LIST) {
       if (anchorSet.has(p.slug) || p.habitat !== habitat) continue;
-      const scores = anchorList.map((a) => calcScore(a, p));
+      const scores = anchors.map((a) => calcScore(a, p));
       const avg = scores.reduce((acc, v) => acc + v, 0) / scores.length;
-      const shared = anchorList.reduce((sum, a) => sum + sharedItemCount(a.categories, p.categories), 0);
+      const shared = anchors.reduce((sum, a) => sum + sharedItemCount(a.categories, p.categories), 0);
       const pts = Math.round(avg);
       if (pts < 0) continue;
       scored.push({ pokemon: p, score: pts, shared });
     }
     return scored.sort((a, b) => b.score - a.score).slice(0, 10);
-  }, [anchorSlugs]);
+  }, [anchors, anchorSlugs]);
 
   const group = useMemo(() => {
     if (anchorSlugs.length === 0) return [];
@@ -321,53 +321,59 @@ export default function MatchmakerClient() {
           <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">
             Ranked by shared items{anchors.length > 1 ? ` across ${anchors.length} anchors` : ""}. Complementary specialties add a 50% bonus.
           </p>
-          {recommendations.map(({ pokemon: p, score: s, shared }) => {
+          {/* Fix 4: hoist allAnchorSpecs above map to avoid recomputing per row */}
+          {(() => {
             const allAnchorSpecs = new Set(anchors.flatMap((a) => a.specialties ?? []));
-            const candSpecs = p.specialties ?? [];
-            const isComplementary = candSpecs.length > 0 && !candSpecs.some((sp) => allAnchorSpecs.has(sp));
-            return (
-              <button
-                key={p.slug}
-                type="button"
-                onClick={() => selectAnchor(p.slug)}
-                className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 mb-2.5 cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] transition-all w-full text-left"
-              >
-                {/* Fix 9: replace ⚡ emoji with text labels */}
-                <div className="absolute -top-2 right-3 flex items-center gap-1">
-                  <span className="font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
-                    {s} pts
-                  </span>
-                  {isComplementary && (
-                    <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-leaf/20 text-leaf uppercase tracking-wide">
-                      COMPLEMENT
+            return recommendations.map(({ pokemon: p, score: s, shared }) => {
+              const candSpecs = p.specialties ?? [];
+              const isComplementary = candSpecs.length > 0 && !candSpecs.some((sp) => allAnchorSpecs.has(sp));
+              return (
+                // Fix 1: was <button> containing <Link> (a-in-button invalid HTML); now <div role="button">
+                <div
+                  key={p.slug}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => selectAnchor(p.slug)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectAnchor(p.slug); } }}
+                  className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 mb-2.5 cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] transition-all w-full text-left"
+                >
+                  {/* Fix 9: replace ⚡ emoji with text labels */}
+                  <div className="absolute -top-2 right-3 flex items-center gap-1">
+                    <span className="font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
+                      {s} pts
                     </span>
-                  )}
-                </div>
-                {/* Fix 7: bg-white/70 → bg-paper */}
-                <div className="size-14 shrink-0 bg-paper rounded-[10px] p-1">
-                  <div className="relative w-full h-full">
-                    <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="56px" />
+                    {isComplementary && (
+                      <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-leaf/20 text-leaf uppercase tracking-wide">
+                        COMPLEMENT
+                      </span>
+                    )}
+                  </div>
+                  {/* Fix 7: bg-white/70 → bg-paper */}
+                  <div className="size-14 shrink-0 bg-paper rounded-[10px] p-1">
+                    <div className="relative w-full h-full">
+                      <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="56px" />
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-extrabold text-[14px] text-ink leading-tight">{p.name}</span>
+                      <Link
+                        href={`/pokemon/${p.slug}`}
+                        className="font-mono text-[10px] text-ink-soft no-underline hover:text-accent shrink-0"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        view →
+                      </Link>
+                    </div>
+                    <div className="font-mono text-[10px] text-ink-soft tracking-[0.02em] leading-snug">
+                      {shared} shared items · {p.specialties?.map((sp) => SPECIALTIES[sp]?.name ?? sp).join(", ") || "no specialty"}
+                      {isComplementary && " · complementary"}
+                    </div>
                   </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="font-extrabold text-[14px] text-ink leading-tight">{p.name}</span>
-                    <Link
-                      href={`/pokemon/${p.slug}`}
-                      className="font-mono text-[10px] text-ink-soft no-underline hover:text-accent shrink-0"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      view →
-                    </Link>
-                  </div>
-                  <div className="font-mono text-[10px] text-ink-soft tracking-[0.02em] leading-snug">
-                    {shared} shared items · {p.specialties?.map((sp) => SPECIALTIES[sp]?.name ?? sp).join(", ") || "no specialty"}
-                    {isComplementary && " · complementary"}
-                  </div>
-                </div>
-              </button>
-            );
-          })}
+              );
+            });
+          })()}
         </Card>
       )}
 
@@ -379,10 +385,13 @@ export default function MatchmakerClient() {
             {group.map((p) => {
               const isAnchor = anchorSlugs.includes(p.slug);
               return (
-                <button
+                // Fix 1: was <button> containing <Link> (a-in-button invalid HTML); now <div role="button">
+                <div
                   key={p.slug}
-                  type="button"
+                  role="button"
+                  tabIndex={0}
                   onClick={() => selectAnchor(p.slug)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectAnchor(p.slug); } }}
                   className={`border border-[1.5px] rounded-[14px] p-3 text-center text-ink flex flex-col items-center gap-1 transition-all hover:-translate-y-0.5 hover:shadow-[0_6px_16px_-6px_var(--shadow)] w-full cursor-pointer ${isAnchor ? "bg-accent-soft border-accent" : "bg-chrome border-paper-edge hover:bg-paper hover:border-accent"}`}
                 >
                   {isAnchor && <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>}
@@ -398,7 +407,7 @@ export default function MatchmakerClient() {
                   >
                     view →
                   </Link>
-                </button>
+                </div>
               );
             })}
           </PokemonGrid>
