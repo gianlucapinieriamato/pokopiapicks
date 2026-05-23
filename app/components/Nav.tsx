@@ -36,7 +36,7 @@ export default function Nav() {
   const dropActive = "bg-accent text-paper";
 
   return (
-    <nav className="sticky top-0 z-50 border-b backdrop-blur-[10px] bg-chrome border-[rgba(201,149,43,0.35)] shadow-[0_2px_12px_-4px_var(--shadow)]">
+    <nav className="sticky top-0 z-50 border-b backdrop-blur-[10px] bg-chrome border-[color:var(--color-accent)]/35 shadow-[0_2px_12px_-4px_var(--shadow)]">
       <div className="max-w-[1080px] mx-auto px-5 h-14 flex items-center gap-[6px] max-md:h-[52px] max-md:px-[14px] max-md:gap-[10px]">
         <Link
           href="/"

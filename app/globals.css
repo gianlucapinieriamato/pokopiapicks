@@ -19,6 +19,9 @@
 
   --font-outfit: 'Outfit', system-ui, sans-serif;
   --font-mono:   'JetBrains Mono', 'DM Mono', monospace;
+
+  --shadow-card: 0 1px 0 rgba(255,255,255,0.9) inset, 0 2px 0 var(--color-paper-edge), 0 14px 32px -10px rgba(45, 36, 24, 0.14);
+  --shadow-accent: rgba(138, 105, 25, 0.35);
 }
 
 /* Complex gradient constants — referenced via bg-[var(--...)] in Tailwind */
@@ -37,12 +40,12 @@
     radial-gradient(circle at 30% 65%, rgba(255,255,255,0.90) 1.4px, transparent 3px),
     radial-gradient(circle at 85% 70%, rgba(255,255,255,0.80) 1px, transparent 2px),
     radial-gradient(circle at 50% 88%, rgba(255,255,255,0.95) 1.2px, transparent 2.5px);
-  --card-frame: linear-gradient(135deg, var(--accent-soft) 0%, var(--accent) 30%, var(--accent-soft) 60%, var(--accent-deep) 100%);
-  --card-header: linear-gradient(180deg, var(--bg-2) 0%, var(--chrome) 100%);
-  --card-footer: linear-gradient(180deg, transparent, var(--chrome));
+  --card-frame: linear-gradient(135deg, var(--color-accent-soft) 0%, var(--color-accent) 30%, var(--color-accent-soft) 60%, var(--color-accent-deep) 100%);
+  --card-header: linear-gradient(180deg, var(--color-surface-2) 0%, var(--color-chrome) 100%);
+  --card-footer: linear-gradient(180deg, transparent, var(--color-chrome));
   --portrait-bg:
     radial-gradient(circle at 30% 30%, rgba(255,255,255,0.7), transparent 60%),
-    linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-2) 100%);
+    linear-gradient(135deg, var(--color-accent-soft) 0%, var(--color-surface-2) 100%);
   /* Runtime-set by TcgCard for habitat art window */
   --h1: #d8ccb8;
   --h2: #a89070;
@@ -86,7 +89,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: 'Outfit', system-ui, sans-serif;
+  font-family: var(--font-outfit, 'Outfit'), system-ui, sans-serif;
   color: var(--ink);
   padding: 0;
   position: relative;
