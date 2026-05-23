@@ -217,7 +217,7 @@ export default function TcgCard({
             />
 
             {((p.specialties && p.specialties.length > 0) || p.flavor) && (
-              <div className="flex gap-[6px] mt-3 items-start">
+              <div className="flex gap-[6px] mt-2 items-start">
                 {p.specialties && p.specialties.length > 0 && (
                   <div className="flex-1 min-w-0">
                     <div
