@@ -36,8 +36,9 @@ export function HomeSearchBar() {
   const blurTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
+    const timerRef = blurTimerRef;
     return () => {
-      if (blurTimerRef.current) clearTimeout(blurTimerRef.current);
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, []);
 
