@@ -65,15 +65,15 @@ export default function RootLayout({
           },
         }} />
         <Nav />
-        <div className="min-h-[90px] flex items-center justify-center max-w-[1080px] mx-auto px-5 py-2 w-full" aria-hidden="true">
+        <aside aria-label="Advertisement" className="min-h-[90px] flex items-center justify-center max-w-[1080px] mx-auto px-5 py-2 w-full">
           <AdSlot slot="8403578120" format="horizontal" />
-        </div>
+        </aside>
         <main className="flex-1">
           {children}
         </main>
-        <div className="min-h-[90px] flex items-center justify-center max-w-[1080px] mx-auto px-5 py-2 w-full" aria-hidden="true">
+        <aside aria-label="Advertisement" className="min-h-[90px] flex items-center justify-center max-w-[1080px] mx-auto px-5 py-2 w-full">
           <AdSlot slot="2178978334" format="horizontal" />
-        </div>
+        </aside>
         <footer className="mt-12 py-6 border-t border-paper-edge text-center">
           <p className="text-[13px] text-ink-soft">
             Pokopia Picks — fan-made wiki for Pokémon Pokopia.{" "}

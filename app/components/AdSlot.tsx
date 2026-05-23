@@ -9,7 +9,10 @@ interface AdSlotProps {
 
 export function AdSlot({ slot, format = 'auto', className = '' }: AdSlotProps) {
   const insRef = useRef<HTMLModElement>(null)
-  const [hidden, setHidden] = useState(false)
+  // Lazy initializer: always false on first render (show slot by default).
+  // The effect below detects blocked/unfilled ads and sets hidden=true after
+  // the fact — this is intentional deferred behavior, not a stale-state bug.
+  const [hidden, setHidden] = useState<boolean>(() => false)
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

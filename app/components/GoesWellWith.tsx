@@ -15,7 +15,13 @@ export default function GoesWellWith({ slug, habitat }: { slug: string; habitat:
       seen.add(q.num);
       return true;
     });
-    return deduped.sort((a, b) => (a.num * 1009) % 307 - (b.num * 1009) % 307).slice(0, 6);
+    // Deterministic pseudo-shuffle: compute a stable sort key per item so the
+    // comparator is antisymmetric (compare(a,b) === -compare(b,a)) and produces
+    // consistent results across JS engines. The seed mixes all pool nums so the
+    // selection changes meaningfully between different habitats.
+    const seed = deduped.reduce((s, p) => s + p.num, 0);
+    const withKey = deduped.map((p) => ({ p, key: (p.num * 1009 + seed) % 307 }));
+    return withKey.sort((a, b) => a.key - b.key).map((x) => x.p).slice(0, 6);
   }, [slug, habitat]);
 
   if (picks.length === 0) return null;
