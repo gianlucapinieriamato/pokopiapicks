@@ -1,7 +1,7 @@
 export default function InfoTip({ tip }: { tip: string }) {
   return (
-    <span
-      tabIndex={0}
+    <button
+      type="button"
       className="group/tip relative inline-flex items-center justify-center size-4 rounded-full border-[1.5px] border-ink-fade text-ink-fade text-[10px] font-mono font-bold cursor-help align-middle shrink-0 leading-none transition-colors hover:border-accent-deep hover:text-accent-deep focus:outline-none focus:border-accent-deep focus:text-accent-deep"
       aria-label={tip}
     >
@@ -10,6 +10,6 @@ export default function InfoTip({ tip }: { tip: string }) {
         {tip}
         <span className="absolute top-full left-1/2 -translate-x-1/2 block size-0 border-x-[5px] border-x-transparent border-t-[5px] border-t-ink" />
       </span>
-    </span>
+    </button>
   );
 }

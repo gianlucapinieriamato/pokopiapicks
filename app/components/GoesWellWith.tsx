@@ -15,7 +15,7 @@ export default function GoesWellWith({ slug, habitat }: { slug: string; habitat:
       seen.add(q.num);
       return true;
     });
-    return deduped.sort(() => Math.random() - 0.5).slice(0, 6);
+    return deduped.sort((a, b) => (a.num * 1009) % 307 - (b.num * 1009) % 307).slice(0, 6);
   }, [slug, habitat]);
 
   if (picks.length === 0) return null;

@@ -36,7 +36,7 @@ export function AdSlot({ slot, format = 'auto', className = '' }: AdSlotProps) {
   if (hidden) return null
 
   return (
-    <div className={`w-full text-center ${className}`}>
+    <div className={`w-full text-center ${className}`} aria-hidden="true">
       <ins
         ref={insRef}
         className="adsbygoogle"
