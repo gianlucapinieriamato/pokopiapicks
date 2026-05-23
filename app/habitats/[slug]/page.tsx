@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { HABITATS, POKEMON, HABITAT_REQUIREMENTS, ITEMS } from "@/app/lib/data";
+import type { HabitatRequirement, ItemEntry } from "@/app/lib/types";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
@@ -15,6 +17,13 @@ import { existsSync } from "fs";
 import { join } from "path";
 import { ITEM_GROUPS } from "@/app/lib/data/item-groups";
 
+type ResolvedReq = {
+  req: HabitatRequirement;
+  item: ItemEntry | undefined;
+  isExact: boolean;
+  isAny: boolean;
+};
+
 export function generateStaticParams() {
   return Object.keys(HABITATS).map((slug) => ({ slug }));
 }
@@ -23,16 +32,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const h = HABITATS[slug];
   if (!h) return { title: "Not found" };
+  const desc = `${h.name} habitat in Pokemon Pokopia — ${h.pokemon.length} Pokemon spawn here. ${h.description ?? ""}`.trim();
   return {
-    title: `${h.name} — Habitat`,
-    description: `${h.name} habitat in Pokemon Pokopia — ${h.pokemon.length} Pokemon spawn here. ${h.description ? h.description.slice(0, 120) : ""}`.trim(),
+    title: `${h.name} Habitat — Build Guide | Pokopia Picks`,
+    description: desc.slice(0, 155),
   };
 }
 
 export default async function HabitatPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const h = HABITATS[slug];
-  if (!h) return <PageWrap><p>Habitat not found.</p></PageWrap>;
+  if (!h) notFound();
 
   const pokemonHere = h.pokemon
     .flatMap((s) => POKEMON[s] ? [POKEMON[s]] : [])
@@ -43,13 +53,6 @@ export default async function HabitatPage({ params }: { params: Promise<{ slug: 
   const allItems = Object.values(ITEMS);
 
   // For each requirement, resolve to: exact match, or best prefix match (for "any type" items)
-  type ResolvedReq = {
-    req: typeof requirements[0];
-    item: typeof allItems[0] | undefined;
-    isExact: boolean;
-    isAny: boolean; // true when name contains "(any)" or only a prefix match was found
-  };
-
   const resolved: ResolvedReq[] = requirements.map((req) => {
     const nameLower = req.name.toLowerCase();
     const baseName = nameLower.replace(/\s*\(any\)\s*$/, "").trim();

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { LOCATIONS, POKEMON, ITEMS } from "@/app/lib/data";
+import { notFound } from "next/navigation";
+import { LOCATIONS, POKEMON } from "@/app/lib/data";
+import { resolveItem } from "@/app/lib/items";
 import ItemTile from "@/app/components/ItemTile";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
@@ -10,8 +12,6 @@ import PageHeader from "@/app/components/PageHeader";
 import CollapsibleSection from "@/app/components/CollapsibleSection";
 import PokemonGridCard from "@/app/components/PokemonGridCard";
 import PokemonGrid from "@/app/components/PokemonGrid";
-import { existsSync } from "fs";
-import { join } from "path";
 
 export function generateStaticParams() {
   return Object.keys(LOCATIONS).map((slug) => ({ slug }));
@@ -21,46 +21,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const loc = LOCATIONS[slug];
   if (!loc) return { title: "Not found" };
+  const desc = `${loc.name} in Pokemon Pokopia — items, materials, shop items and Pokemon found in this location. ${loc.description ?? ""}`.trim();
   return {
-    title: `${loc.name} — Location`,
-    description: `${loc.name} in Pokemon Pokopia — items, materials, shop items and Pokemon found in this location. ${loc.description ? loc.description.slice(0, 100) : ""}`.trim(),
+    title: `${loc.name} — Items & Pokémon | Pokopia Picks`,
+    description: desc.slice(0, 155),
   };
-}
-
-// Scraped names that differ from canonical ITEMS keys or correct display names
-const NAME_FIXES: Record<string, string> = {
-  "Beautiful flower seeds": "Beautiful flower",
-  "Elegant flower seed": "Elegant flower",
-  "Wooden chair": "Wooden stool",
-  "Grubby rag": "Grubby rags",
-  "Speakers": "Speaker",
-  "Public chair": "Public Seat",
-};
-
-// Items whose icon filename on Serebii differs from the name-derived path
-const ICON_OVERRIDES: Record<string, string> = {
-  "Pecha tree seed": "/icons/items/pechaseeds.png",
-  "Public chair": "/icons/items/publicseat.png",
-  "Speakers": "/icons/items/speaker.png",
-  "PP Up": "/icons/items/ppup.png",
-};
-
-function resolveItem(name: string): { icon: string | null; slug: string | undefined; displayName: string } {
-  const displayName = NAME_FIXES[name] ?? name;
-  if (ICON_OVERRIDES[name]) return { icon: ICON_OVERRIDES[name], slug: undefined, displayName };
-
-  const canonical = NAME_FIXES[name] ?? name;
-  const entry = ITEMS[canonical] ?? ITEMS[name];
-  if (entry) return { icon: entry.icon, slug: entry.slug, displayName };
-
-  const baseName = name.endsWith(" Recipe") ? name.slice(0, -7) : name;
-  const baseEntry = ITEMS[baseName];
-  if (baseEntry) return { icon: baseEntry.icon, slug: baseEntry.slug, displayName };
-
-  const derivedPath = `/icons/items/${baseName.toLowerCase().replace(/\s+/g, "")}.png`;
-  if (existsSync(join(process.cwd(), "public", derivedPath))) return { icon: derivedPath, slug: undefined, displayName };
-
-  return { icon: null, slug: undefined, displayName };
 }
 
 function ItemGrid({ items }: { items: string[] }) {
@@ -78,7 +43,7 @@ function ItemGrid({ items }: { items: string[] }) {
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const loc = LOCATIONS[slug];
-  if (!loc) return <PageWrap><p>Location not found.</p></PageWrap>;
+  if (!loc) notFound();
 
   const pokemonHere = Object.values(POKEMON)
     .filter((p) => p.habitatList?.some((h) => h.locations.includes(slug)))
@@ -110,7 +75,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       {(uniqueMaterials.length > 0 || uniquePlants.length > 0) && (
         <Card>
           {uniqueMaterials.length > 0 && (
-            <CollapsibleSection title="Materials found here" count={`${uniqueMaterials.length}`}>
+            <CollapsibleSection title="Materials found here" count={`${uniqueMaterials.length}`} defaultOpen={true}>
               <ItemGrid items={uniqueMaterials} />
             </CollapsibleSection>
           )}

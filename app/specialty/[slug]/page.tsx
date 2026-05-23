@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { SPECIALTIES, POKEMON } from "@/app/lib/data";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
@@ -17,16 +18,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const s = SPECIALTIES[slug];
   if (!s) return { title: "Not found" };
+  const description = s.description?.trim()
+    ? s.description.slice(0, 155)
+    : `${s.name} is a specialty in Pokémon Pokopia. ${s.pokemon.length} Pokémon have this specialty.`;
   return {
-    title: `${s.name} — Specialty`,
-    description: `${s.pokemon.length} Pokemon have the ${s.name} specialty in Pokemon Pokopia. ${s.description ? s.description.slice(0, 130) : ""}`.trim(),
+    title: `${s.name} Specialty — Pokémon List | Pokopia Picks`,
+    description,
   };
 }
 
 export default async function SpecialtyPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const s = SPECIALTIES[slug];
-  if (!s) return <PageWrap><p>Specialty not found.</p></PageWrap>;
+  if (!s) notFound();
+  const description = s.description?.trim()
+    ? s.description.slice(0, 155)
+    : `${s.name} is a specialty in Pokémon Pokopia. ${s.pokemon.length} Pokémon have this specialty.`;
 
   const pokemonWith = s.pokemon
     .flatMap((pSlug) => POKEMON[pSlug] ? [POKEMON[pSlug]] : [])

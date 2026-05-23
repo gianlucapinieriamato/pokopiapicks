@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { POKEMON, POKEMON_LIST, CATEGORIES, ITEMS, SPECIALTIES, HABITATS, LOCATIONS, pkmnIconUrl, dexNum, getCatItems, catDisplayName, catSlug as toCatSlug } from "@/app/lib/data";
 import JsonLd from "@/app/components/JsonLd";
 import InfoTip from "@/app/components/InfoTip";
@@ -25,18 +26,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = POKEMON[slug];
   if (!p) return { title: "Not found" };
-  const specNames = p.specialties?.map((s) => SPECIALTIES[s]?.name).filter(Boolean).join(", ");
+  const specNames = p.specialties?.flatMap((s) => SPECIALTIES[s]?.name ? [SPECIALTIES[s].name] : []).join(", ");
   const catList = p.categories.slice(0, 3).join(", ");
   return {
     title: `${p.name} — gifts, habitat & specialties`,
     description: `What does ${p.name} like in Pokemon Pokopia? ${p.habitat} habitat${specNames ? `, ${specNames} specialty` : ""}${catList ? `. Loves: ${catList}` : ""}. Find the best gift items and roommates.`,
+    openGraph: {
+      images: [{ url: p.spriteHq ?? `/icons/pokemon/${p.icon}`, width: 480, height: 480, alt: p.name }],
+    },
   };
 }
 
 export default async function PokemonPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const p = POKEMON[slug];
-  if (!p) return <PageWrap><p>Pokemon not found.</p></PageWrap>;
+  if (!p) notFound();
 
   const idx = POKEMON_LIST.findIndex((q) => q.slug === slug);
   const prev = idx > 0 ? POKEMON_LIST[idx - 1] : null;
@@ -54,11 +58,6 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
     .filter(([, cats]) => cats.length >= 2)
     .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
 
-  const catSlug = (catRef: string) => {
-    if (CATEGORIES[catRef]) return catRef;
-    return catRef.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  };
-
   return (
     <PageWrap>
       <ArrowKeyNav prevSlug={prev?.slug ?? null} nextSlug={next?.slug ?? null} />
@@ -74,10 +73,10 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         },
         {
           "@context": "https://schema.org",
-          "@type": "Thing",
+          "@type": "VideoGameCharacter",
           name: p.name,
           description: `${p.name} — ${p.habitat} habitat. Favorite items: ${p.categories.slice(0, 3).join(", ")}.`,
-          image: pkmnIconUrl(p),
+          image: p.spriteHq ?? `/icons/pokemon/${p.icon}`,
           url: `${SITE_URL}/pokemon/${slug}`,
         },
       ]} />
