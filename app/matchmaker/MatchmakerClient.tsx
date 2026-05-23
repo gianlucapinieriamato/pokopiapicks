@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import { POKEMON, POKEMON_LIST, SPECIALTIES, pkmnIconUrl, dexNum, getCatItems, catDisplayName } from "@/app/lib/data";
-import type { PokemonEntry } from "@/app/lib/types";
+import type { PokemonEntry, PokemonRecommendation } from "@/app/lib/types";
 import PokemonGrid from "@/app/components/PokemonGrid";
 import SearchInput from "@/app/components/SearchInput";
 import { SuggestionDropdown } from "@/app/components/SuggestionDropdown";
@@ -136,7 +136,7 @@ export default function MatchmakerClient() {
     const anchorList = resolveSlugs(anchorSlugs);
     const habitat = anchorList[0]?.habitat ?? null;
     if (!habitat) return [];
-    const scored: Array<{ pokemon: PokemonEntry; score: number; shared: number }> = [];
+    const scored: PokemonRecommendation[] = [];
     for (const p of POKEMON_LIST) {
       if (anchorSet.has(p.slug) || p.habitat !== habitat) continue;
       const scores = anchorList.map((a) => calcScore(a, p));

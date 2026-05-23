@@ -84,3 +84,9 @@ export type ResolvedItem = {
   slug: string | undefined;
   icon: string | null;
 };
+
+export type PokemonRecommendation = {
+  pokemon: PokemonEntry;
+  score: number;
+  shared: number;
+};
