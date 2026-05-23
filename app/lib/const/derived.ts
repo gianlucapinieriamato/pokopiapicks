@@ -61,3 +61,38 @@ export const POKEMON_CATEGORIES_SORTED: Record<string, readonly CategoryConst[]>
       [...p.categories].sort((a, b) => a.label.length - b.label.length),
     ]),
   );
+
+/** Icons matching `\d{3}-suffix.png` are variant forms */
+const VARIANT_ICON_RE = /^\d{3}-.+\.png$/;
+
+/**
+ * National dex numbers that have at least one non-base form.
+ * Populated during variant map build below.
+ */
+const VARIANT_DEX_NUMS = new Set<number>();
+
+/**
+ * Map from base-form slug → array of variant Pokemon.
+ * Only populated for Pokemon that ARE base forms with at least one variant.
+ */
+export const POKEMON_VARIANTS_BY_BASE: Record<string, PokemonConst[]> = {};
+
+/**
+ * Map from variant slug → the base-form Pokemon.
+ * Only populated for Pokemon that are variants.
+ */
+export const POKEMON_BASE_BY_VARIANT: Record<string, PokemonConst> = {};
+
+// Build variant maps in one pass
+for (const p of POKEMON_LIST) {
+  if (!VARIANT_ICON_RE.test(p.icon)) continue;
+  const dexNum_ = p.nationalDexNum;
+  if (dexNum_ == null) continue;
+  VARIANT_DEX_NUMS.add(dexNum_);
+  const base = POKEMON_LIST.find(
+    (q) => q.nationalDexNum === dexNum_ && !VARIANT_ICON_RE.test(q.icon),
+  );
+  if (!base) continue;
+  (POKEMON_VARIANTS_BY_BASE[base.slug] ??= []).push(p);
+  POKEMON_BASE_BY_VARIANT[p.slug] = base;
+}
