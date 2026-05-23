@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { POKEMON, POKEMON_LIST } from "@/app/lib/data";
@@ -34,6 +34,12 @@ export function HomeSearchBar() {
   const [activeIdx, setActiveIdx] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const blurTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (blurTimerRef.current) clearTimeout(blurTimerRef.current);
+    };
+  }, []);
 
   const handleInput = (v: string) => {
     setQuery(v);
