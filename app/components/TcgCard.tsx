@@ -1,14 +1,14 @@
 import Image from "next/image";
-import { pkmnIconUrl, dexNum, getRarity, SPECIALTIES } from "@/app/lib/data";
-import type { PokemonEntry } from "@/app/lib/types";
+import { pkmnIconUrl, dexNum, getRarity } from "@/app/lib/data";
+import type { PokemonConst } from "@/app/lib/const";
 
 const HABITAT_COLORS = Object.freeze({
-  Bright: { h1: "#ffe9a0", h2: "#d4a93a" },
-  Cool:   { h1: "#b8dff0", h2: "#4a9abf" },
-  Dark:   { h1: "#c8b4d8", h2: "#5a3878" },
-  Dry:    { h1: "#e8d4a0", h2: "#b89050" },
-  Humid:  { h1: "#a8d4a0", h2: "#4a8a4e" },
-  Warm:   { h1: "#f0b880", h2: "#c86030" },
+  bright: { h1: "#ffe9a0", h2: "#d4a93a" },
+  cool:   { h1: "#b8dff0", h2: "#4a9abf" },
+  dark:   { h1: "#c8b4d8", h2: "#5a3878" },
+  dry:    { h1: "#e8d4a0", h2: "#b89050" },
+  humid:  { h1: "#a8d4a0", h2: "#4a8a4e" },
+  warm:   { h1: "#f0b880", h2: "#c86030" },
 } as const);
 
 const CHIP_BASE =
@@ -112,13 +112,14 @@ export default function TcgCard({
   p,
   size = "md",
 }: {
-  p: PokemonEntry;
+  p: PokemonConst;
   size?: "lg" | "md" | "sm";
 }) {
   const r = getRarity(p);
   const isSm = size === "sm";
   const v = VARIANTS[size];
-  const { h1, h2 } = HABITAT_COLORS[p.habitat as keyof typeof HABITAT_COLORS] ?? { h1: "#d8ccb8", h2: "#a89070" };
+  const habitatSlug = p.habitat.slug as keyof typeof HABITAT_COLORS;
+  const { h1, h2 } = HABITAT_COLORS[habitatSlug] ?? { h1: "#d8ccb8", h2: "#a89070" };
 
   const holoOpacity = r.holoIntensity / 100;
   const sweepOpacity = r.sparkles ? holoOpacity * 0.65 : 0;
@@ -142,7 +143,7 @@ export default function TcgCard({
             <div
               className={`font-outfit font-extrabold ${v.name} tracking-[-0.01em] leading-none text-ink whitespace-nowrap overflow-hidden text-ellipsis min-w-0`}
             >
-              {p.name}
+              {p.label}
               {r.sparkles && (
                 <span
                   className={`${v.star} text-accent drop-shadow-[0_0_3px_var(--accent)] ml-1`}
@@ -181,7 +182,7 @@ export default function TcgCard({
             <div
               className={`absolute top-[5px] left-[5px] ${v.artLabel} px-[7px] py-[2px] rounded-full bg-paper/85 text-ink font-outfit font-bold tracking-[0.03em]`}
             >
-              {p.habitat}
+              {p.habitat.label}
             </div>
             {/* Gift count / legendary badge */}
             {r.sparkles && (
@@ -195,7 +196,7 @@ export default function TcgCard({
               <Image
                 fill
                 src={pkmnIconUrl(p)}
-                alt={p.name}
+                alt={p.label}
                 className="object-contain [image-rendering:pixelated]"
                 sizes="200px"
               />
@@ -210,7 +211,7 @@ export default function TcgCard({
               Likes
             </div>
             <ChipRow
-              items={p.categories}
+              items={p.categories.map((c) => c.label)}
               max={size === "lg" ? 3 : 2}
               chipClass={`${CHIP_BASE} ${v.chip}`}
               badgeClass={`${CHIP_BASE} ${v.chip} text-ink-soft`}
@@ -226,9 +227,7 @@ export default function TcgCard({
                       Specialty
                     </div>
                     <ChipRow
-                      items={p.specialties.map(
-                        (s) => SPECIALTIES[s]?.name ?? s,
-                      )}
+                      items={p.specialties.map((s) => s.label)}
                       max={size === "lg" ? 3 : 1}
                       chipClass={`${CHIP_BASE} ${v.chipSm} text-accent-deep border-accent bg-accent-soft`}
                       badgeClass={`${CHIP_BASE} ${v.chipSm} text-accent-deep border-accent bg-accent-soft`}
@@ -243,7 +242,7 @@ export default function TcgCard({
                       Flavor
                     </div>
                     <ChipRow
-                      items={[p.flavor]}
+                      items={[p.flavor.label]}
                       max={2}
                       chipClass={`${CHIP_BASE} ${v.chipSm} text-leaf border-leaf bg-leaf-soft`}
                       badgeClass={`${CHIP_BASE} ${v.chipSm} text-leaf border-leaf bg-leaf-soft`}

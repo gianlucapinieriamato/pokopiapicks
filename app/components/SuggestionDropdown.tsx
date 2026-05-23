@@ -1,12 +1,12 @@
 "use client";
 
 import PkmnIcon from "@/app/components/PkmnIcon";
-import { pkmnIconUrl, dexNum } from "@/app/lib/data";
-import type { PokemonEntry } from "@/app/lib/types";
+import { pkmnIconUrl, dexNum } from "@/app/lib/const";
+import type { PokemonConst } from "@/app/lib/const";
 
 type Option = Pick<
-  PokemonEntry,
-  "slug" | "name" | "icon" | "num" | "nationalDexNum" | "categories"
+  PokemonConst,
+  "slug" | "label" | "icon" | "num" | "nationalDexNum" | "categories"
 >;
 
 const SUGGESTION_ROW =
@@ -46,14 +46,14 @@ export function SuggestionDropdown({
             }}
           >
             <PkmnIcon
-              src={pkmnIconUrl(opt as PokemonEntry)}
-              alt={opt.name}
+              src={pkmnIconUrl(opt as PokemonConst)}
+              alt={opt.label}
               className="size-11 object-contain shrink-0 [image-rendering:pixelated]"
             />
             <span className="font-mono text-[11px] text-ink-fade min-w-[38px] font-semibold">
-              #{dexNum(opt as PokemonEntry)}
+              #{dexNum(opt as PokemonConst)}
             </span>
-            <span className="font-bold text-[15px]">{opt.name}</span>
+            <span className="font-bold text-[15px]">{opt.label}</span>
             <span className="ml-auto font-mono text-[10px] text-ink-soft bg-surface-2 px-2 py-[3px] rounded-full font-semibold">
               {opt.categories.length} cats
             </span>

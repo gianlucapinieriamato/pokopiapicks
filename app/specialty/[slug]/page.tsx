@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SPECIALTIES, POKEMON } from "@/app/lib/data";
+import { Specialty, POKEMON_BY_SPECIALTY, POKEMON_LIST } from "@/app/lib/const";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
@@ -13,7 +13,7 @@ import PokemonGrid from "@/app/components/PokemonGrid";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return Object.keys(SPECIALTIES).map((slug) => ({ slug }));
+  return Object.values(Specialty).map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({
@@ -22,13 +22,14 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const s = SPECIALTIES[slug];
+  const s = Object.values(Specialty).find((sp) => sp.slug === slug);
   if (!s) return { title: "Not found" };
+  const pokemonWithIt = POKEMON_BY_SPECIALTY[slug] ?? [];
   const description = s.description?.trim()
     ? s.description.slice(0, 155)
-    : `${s.name} is a specialty in Pokemon Pokopia. ${s.pokemon.length} Pokemon have this specialty.`;
+    : `${s.label} is a specialty in Pokemon Pokopia. ${pokemonWithIt.length} Pokemon have this specialty.`;
   return {
-    title: `${s.name} Specialty — Pokemon List | Pokopia Picks`,
+    title: `${s.label} Specialty — Pokemon List | Pokopia Picks`,
     description,
     openGraph: {
       url: `${SITE_URL}/specialty/${slug}/`,
@@ -42,15 +43,16 @@ export default async function SpecialtyPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const s = SPECIALTIES[slug];
+  const s = Object.values(Specialty).find((sp) => sp.slug === slug);
   if (!s) notFound();
+
+  const pokemonWith = (POKEMON_BY_SPECIALTY[slug] ?? []).slice().sort(
+    (a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999)
+  );
+
   const description = s.description?.trim()
     ? s.description.slice(0, 155)
-    : `${s.name} is a specialty in Pokemon Pokopia. ${s.pokemon.length} Pokemon have this specialty.`;
-
-  const pokemonWith = s.pokemon
-    .flatMap((pSlug) => (POKEMON[pSlug] ? [POKEMON[pSlug]] : []))
-    .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
+    : `${s.label} is a specialty in Pokemon Pokopia. ${pokemonWith.length} Pokemon have this specialty.`;
 
   return (
     <PageWrap>
@@ -60,18 +62,8 @@ export default async function SpecialtyPage({
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Specialties",
-              item: `${SITE_URL}/specialty`,
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: s.name,
-              item: `${SITE_URL}/specialty/${slug}`,
-            },
+            { "@type": "ListItem", position: 2, name: "Specialties", item: `${SITE_URL}/specialty` },
+            { "@type": "ListItem", position: 3, name: s.label, item: `${SITE_URL}/specialty/${slug}` },
           ],
         }}
       />
@@ -79,10 +71,10 @@ export default async function SpecialtyPage({
         items={[
           { label: "Home", href: "/" },
           { label: "Specialties", href: "/specialty" },
-          { label: s.name },
+          { label: s.label },
         ]}
       />
-      <PageHeader title={s.name} meta={pokemonWith.length + " Pokemon"}>
+      <PageHeader title={s.label} meta={pokemonWith.length + " Pokemon"}>
         {s.description && (
           <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">
             {s.description}

@@ -23,7 +23,7 @@ export default function PokedexPage() {
             "@type": "ListItem",
             position: i + 1,
             url: `${SITE_URL}/pokemon/${p.slug}/`,
-            name: p.name,
+            name: p.label,
           })),
         }}
       />

@@ -77,7 +77,7 @@ export default function Home() {
               key={p.slug}
               href={`/pokemon/${p.slug}`}
               className="group cursor-pointer border-none bg-transparent p-0 text-left flex no-underline text-inherit transition-transform duration-150 hover:-translate-y-1 hover:scale-[1.02]"
-              aria-label={p.name}
+              aria-label={p.label}
             >
               <TcgCard p={p} size="sm" />
             </Link>
