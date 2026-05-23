@@ -12,6 +12,9 @@ export default function SearchInput({
   autoComplete,
   className = "",
   children,
+  "aria-expanded": ariaExpanded,
+  "aria-controls": ariaControls,
+  "aria-activedescendant": ariaActiveDescendant,
 }: {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -22,12 +25,16 @@ export default function SearchInput({
   autoComplete?: string;
   className?: string;
   children?: React.ReactNode;
+  "aria-expanded"?: boolean;
+  "aria-controls"?: string;
+  "aria-activedescendant"?: string;
 }) {
   return (
     <div className={`relative ${className}`}>
       <span className="absolute left-[18px] top-1/2 -translate-y-1/2 text-[20px] text-accent-deep pointer-events-none">⚲</span>
       <input
         type="text"
+        role="combobox"
         className={INPUT_CLS}
         value={value}
         onChange={onChange}
@@ -37,6 +44,10 @@ export default function SearchInput({
         placeholder={placeholder}
         autoComplete={autoComplete}
         aria-label={placeholder}
+        aria-autocomplete="list"
+        aria-expanded={ariaExpanded}
+        aria-controls={ariaControls}
+        aria-activedescendant={ariaActiveDescendant}
       />
       {children}
     </div>

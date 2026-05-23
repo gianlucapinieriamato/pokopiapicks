@@ -1,21 +1,17 @@
-"use client";
-
-import { useState } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { POKEMON, POKEMON_LIST, pkmnIconUrl, dexNum } from "@/app/lib/data";
-import type { PokemonEntry } from "@/app/lib/types";
-import PkmnIcon from "@/app/components/PkmnIcon";
-import TcgCard from "@/app/components/TcgCard";
-import Shortcut from "@/app/components/Shortcut";
-import SearchInput from "@/app/components/SearchInput";
+import { SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/config";
+import { POKEMON_LIST } from "@/app/lib/data";
 import HoverTile from "@/app/components/HoverTile";
+import TcgCard from "@/app/components/TcgCard";
 import Card from "@/app/components/Card";
 import SectionTitle from "@/app/components/SectionTitle";
+import { HomeSearchBar } from "@/app/components/HomeSearchBar";
 
-function normalize(s: string) {
-  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
-}
+export const metadata: Metadata = {
+  title: `${SITE_NAME} — Pokémon Pokopia Gift Guide & Wiki`,
+  description: SITE_DESCRIPTION,
+};
 
 const FEATURES = [
   { href: "/matchmaker", label: "Matchmaker", desc: "Find the best roommates for any Pokemon" },
@@ -24,45 +20,7 @@ const FEATURES = [
   { href: "/habitats", label: "Habitats", desc: "Explore where each Pokemon lives" },
 ] as const;
 
-const SUGGESTION_ROW = "flex items-center gap-3 px-4 py-2 cursor-pointer border-b border-surface-1 transition-colors hover:bg-surface-1 last:border-b-0";
-
-function searchPokemon(q: string): PokemonEntry[] {
-  const nq = normalize(q.trim());
-  if (!nq) return [];
-  const prefix: PokemonEntry[] = [], contains: PokemonEntry[] = [];
-  for (const p of POKEMON_LIST) {
-    const nName = normalize(p.name);
-    if (nName.startsWith(nq)) prefix.push(p);
-    else if (nName.includes(nq)) contains.push(p);
-  }
-  return [...prefix, ...contains].slice(0, 12);
-}
-
 export default function Home() {
-  const { push } = useRouter();
-  const [query, setQuery] = useState("");
-  const [matches, setMatches] = useState<PokemonEntry[]>([]);
-  const [activeIdx, setActiveIdx] = useState(-1);
-  const [showSuggestions, setShowSuggestions] = useState(false);
-
-  const handleInput = (v: string) => {
-    setQuery(v);
-    const results = searchPokemon(v);
-    setMatches(results);
-    setActiveIdx(results.length > 0 ? 0 : -1);
-    setShowSuggestions(results.length > 0);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!showSuggestions || matches.length === 0) return;
-    if (e.key === "ArrowDown") { e.preventDefault(); setActiveIdx((i) => Math.min(i + 1, matches.length - 1)); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); setActiveIdx((i) => Math.max(i - 1, 0)); }
-    else if (e.key === "Enter") { e.preventDefault(); if (activeIdx >= 0 && matches[activeIdx]) push(`/pokemon/${matches[activeIdx].slug}`); }
-    else if (e.key === "Escape") setShowSuggestions(false);
-  };
-
-  const noResults = query.trim().length > 1 && matches.length === 0;
-
   return (
     <div className="max-w-[1080px] mx-auto px-5 pt-8 pb-20 relative z-[1]">
       <header className="text-center mb-5 pt-6 pb-2 px-5">
@@ -86,48 +44,7 @@ export default function Home() {
       </div>
 
       <Card>
-        <SearchInput
-          value={query}
-          onChange={(e) => handleInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-          onFocus={() => { if (matches.length > 0) setShowSuggestions(true); }}
-          onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
-          placeholder="Search Pokemon… (Lucario, Onix, Eevee…)"
-          autoComplete="new-password"
-        >
-          {showSuggestions && matches.length > 0 && (
-            <div className="absolute top-[calc(100%+6px)] left-0 right-0 bg-paper border border-[1.5px] border-paper-edge rounded-[14px] max-h-[360px] overflow-y-auto z-10 block shadow-[0_12px_28px_-8px_var(--shadow)]">
-              {matches.map((p, i) => (
-                <button
-                  key={p.slug}
-                  type="button"
-                  className={`${SUGGESTION_ROW}${i === activeIdx ? " bg-surface-1" : ""}`}
-                  onMouseDown={(e) => { e.preventDefault(); push(`/pokemon/${p.slug}`); }}
-                >
-                  <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} className="size-11 object-contain shrink-0 [image-rendering:pixelated]" />
-                  <span className="font-mono text-[11px] text-ink-fade min-w-[38px] font-semibold">#{dexNum(p)}</span>
-                  <span className="font-bold text-[15px]">{p.name}</span>
-                  <span className="ml-auto font-mono text-[10px] text-ink-soft bg-surface-2 px-2 py-[3px] rounded-full font-semibold">{p.categories.length} cats</span>
-                </button>
-              ))}
-            </div>
-          )}
-          {noResults && (
-            <div className="absolute top-[calc(100%+6px)] left-0 right-0 bg-paper border border-[1.5px] border-paper-edge rounded-[14px] max-h-[360px] overflow-y-auto z-10 block shadow-[0_12px_28px_-8px_var(--shadow)]">
-              <div className={`${SUGGESTION_ROW} text-ink-fade italic cursor-default`}>
-                No Pokemon found for &quot;{query}&quot;
-              </div>
-            </div>
-          )}
-        </SearchInput>
-        <div className="mt-4 flex gap-2 flex-wrap items-center">
-          <span className="font-mono text-[11px] text-ink-fade tracking-[0.08em] font-semibold">Try:</span>
-          {(["lucario", "onix", "eevee", "pikachu", "snorlax"] as const).map((slug) => (
-            <Link key={slug} href={`/pokemon/${slug}`} className="no-underline">
-              <Shortcut>{POKEMON[slug]?.name ?? slug}</Shortcut>
-            </Link>
-          ))}
-        </div>
+        <HomeSearchBar />
       </Card>
 
       <Card>
