@@ -2,7 +2,8 @@ export type PokemonEntry = {
   name: string;
   num: number;
   habitat: string;
-  categories: readonly string[];
+  habitatSlug: string; // slug reference for cross-linking
+  categories: readonly string[]; // category slugs (e.g. "blocky-stuff")
   icon: string;
   slug: string;
   nationalDexNum: number | null;
@@ -26,7 +27,7 @@ export type HabitatListEntry = {
 export type CategoryEntry = {
   slug: string;
   name: string;
-  items: readonly string[];
+  items: readonly string[]; // item slugs (e.g. "antique-chest")
 };
 
 export type ItemEntry = {
@@ -37,7 +38,8 @@ export type ItemEntry = {
 };
 
 export type ShopItem = {
-  readonly name: string;
+  readonly slug: string; // item slug
+  readonly name: string; // display name (kept for UI)
   readonly level: number;
 };
 
@@ -60,21 +62,24 @@ export type LocationEntry = {
   name: string;
   description: string;
   objective: string;
-  materials: readonly string[];
-  blocksAndPlants: readonly string[];
-  itemsInArea?: readonly string[];
-  itemsInPokeballs?: readonly string[];
-  treasure?: readonly string[];
+  materials: readonly string[];       // item slugs
+  blocksAndPlants: readonly string[]; // item slugs
+  itemsInArea?: readonly string[];    // item slugs
+  itemsInPokeballs?: readonly string[]; // item slugs
+  treasure?: readonly string[];       // item slugs
   shopItems?: ShopItem[];
 };
 
 export type HabitatRequirement = {
-  name: string;
+  type: "item" | "group"; // "item" = specific item slug; "group" = item group key
+  value: string;          // item slug OR group key (e.g. "bed", "seat")
+  name: string;           // original display name (kept for UI, e.g. "Bed (any)")
   qty: number;
 };
 
 export type CraftingIngredient = {
-  name: string;
+  slug: string; // item slug (e.g. "lumber", "pokemetal")
+  name: string; // display name (kept for UI)
   qty: number;
 };
 
