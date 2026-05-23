@@ -18,21 +18,21 @@ const ALL_CATEGORIES = Object.values(CATEGORIES);
 const ALL_LOCATIONS = Object.values(LOCATIONS);
 const PAGE_SIZE = 60;
 
-const HABITAT_COUNTS = (() => {
-  const counts: Record<string, number> = {};
-  for (const p of POKEMON_LIST) {
-    counts[p.habitat] = (counts[p.habitat] ?? 0) + 1;
-  }
-  return counts;
-})() as Readonly<Record<string, number>>;
+const HABITAT_COUNTS = Object.freeze(
+  POKEMON_LIST.reduce<Record<string, number>>((acc, p) => {
+    acc[p.habitat] = (acc[p.habitat] ?? 0) + 1;
+    return acc;
+  }, {})
+);
 
-const FLAVOR_COUNTS = (() => {
-  const counts: Record<string, number> = {};
-  for (const p of POKEMON_LIST) {
-    if (p.flavor) counts[p.flavor] = (counts[p.flavor] ?? 0) + 1;
-  }
-  return counts;
-})() as Readonly<Record<string, number>>;
+const FLAVOR_COUNTS = Object.freeze(
+  POKEMON_LIST.reduce<Record<string, number>>((acc, p) => {
+    if (p.flavor) acc[p.flavor] = (acc[p.flavor] ?? 0) + 1;
+    return acc;
+  }, {})
+);
+
+type FilterPanel = "habitat" | "flavor" | "specialty" | "location" | "category";
 
 type FilterState = {
   habitatFilter: string[];
@@ -71,7 +71,7 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
 export default function PokedexClient() {
   const [state, dispatch] = useReducer(filterReducer, INIT_STATE);
   const { habitatFilter, flavorFilter, specialtyFilter, catFilter, locFilter, search, page } = state;
-  const [openPanel, setOpenPanel] = useState<string | null>(null);
+  const [openPanel, setOpenPanel] = useState<FilterPanel | null>(null);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -109,7 +109,7 @@ export default function PokedexClient() {
             { id: "flavor", label: "Flavor", vals: FLAVORS, active: flavorFilter, key: "flavorFilter" as const, counts: FLAVOR_COUNTS },
           ] as const).map(({ id, label, vals, active, key, counts }) => (
             <div key={id} className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5">
-              <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpenPanel(openPanel === id ? null : id)}>
+              <button type="button" aria-expanded={openPanel === id} aria-controls={`filter-panel-${id}`} className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpenPanel(openPanel === id ? null : id)}>
                 <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">{label}</div>
                 <div className="flex items-center gap-1.5">
                   {active.length > 0 && <span className="font-mono text-[9px] bg-ink text-paper px-1.5 py-[2px] rounded-full">{active.length}</span>}
@@ -117,7 +117,7 @@ export default function PokedexClient() {
                 </div>
               </button>
               {openPanel === id && (
-                <div className="flex flex-wrap gap-1.5 mt-3">
+                <div id={`filter-panel-${id}`} className="flex flex-wrap gap-1.5 mt-3">
                   {vals.map((v) => (
                     <Shortcut key={v} active={active.includes(v)} onClick={() => dispatch({ type: "TOGGLE", key, val: v })}>
                       {v} <span className="opacity-55 text-[10px]">({counts[v] ?? 0})</span>
@@ -134,7 +134,7 @@ export default function PokedexClient() {
           { id: "location", label: "Location", active: locFilter, key: "locFilter" as const, badge: "bg-leaf", items: ALL_LOCATIONS.map((l) => ({ val: l.slug, label: l.name })) },
         ] as const).map(({ id, label, active, key, badge, items }) => (
           <div key={id} className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mb-3">
-            <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpenPanel(openPanel === id ? null : id)}>
+            <button type="button" aria-expanded={openPanel === id} aria-controls={`filter-panel-${id}`} className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpenPanel(openPanel === id ? null : id)}>
               <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">{label}</div>
               <div className="flex items-center gap-1.5">
                 {active.length > 0 && <span className={`font-mono text-[9px] ${badge} text-paper px-1.5 py-[2px] rounded-full`}>{active.length}</span>}
@@ -142,7 +142,7 @@ export default function PokedexClient() {
               </div>
             </button>
             {openPanel === id && (
-              <div className="flex flex-wrap gap-1.5 mt-3">
+              <div id={`filter-panel-${id}`} className="flex flex-wrap gap-1.5 mt-3">
                 {items.map((item) => (
                   <Shortcut key={item.val} active={active.includes(item.val)} onClick={() => dispatch({ type: "TOGGLE", key, val: item.val })}>
                     {item.label}
@@ -154,7 +154,7 @@ export default function PokedexClient() {
         ))}
 
         <div className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mb-3">
-          <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpenPanel(openPanel === "category" ? null : "category")}>
+          <button type="button" aria-expanded={openPanel === "category"} aria-controls="filter-panel-category" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setOpenPanel(openPanel === "category" ? null : "category")}>
             <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">
               Favorite category <span className="normal-case font-normal opacity-60">(all must match)</span>
             </div>
@@ -164,7 +164,7 @@ export default function PokedexClient() {
             </div>
           </button>
           {openPanel === "category" && (
-            <div className="flex flex-wrap gap-1.5 mt-3">
+            <div id="filter-panel-category" className="flex flex-wrap gap-1.5 mt-3">
               {ALL_CATEGORIES.map((c) => (
                 <Shortcut key={c.slug} active={catFilter.includes(c.slug)} variant="on-accent" onClick={() => dispatch({ type: "TOGGLE", key: "catFilter", val: c.slug })}>
                   {c.name}
@@ -193,9 +193,9 @@ export default function PokedexClient() {
         )}
         {pages > 1 && (
           <div className="flex justify-center gap-2 mt-5">
-            {page > 1 && <NavBtn onClick={() => dispatch({ type: "SET_PAGE", val: page - 1 })}>◀ Prev</NavBtn>}
+            {page > 1 && <NavBtn onClick={() => { dispatch({ type: "SET_PAGE", val: page - 1 }); window.scrollTo({ top: 0, behavior: "smooth" }); }}>◀ Prev</NavBtn>}
             <span className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium self-center">Page {page} / {pages}</span>
-            {page < pages && <NavBtn onClick={() => dispatch({ type: "SET_PAGE", val: page + 1 })}>Next ▶</NavBtn>}
+            {page < pages && <NavBtn onClick={() => { dispatch({ type: "SET_PAGE", val: page + 1 }); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Next ▶</NavBtn>}
           </div>
         )}
       </Card>
