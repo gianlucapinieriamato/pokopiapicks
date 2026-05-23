@@ -34,6 +34,29 @@ export const Flavor = {
 } as const;
 export type FlavorConst = (typeof Flavor)[keyof typeof Flavor];
 
+/** Pokemon types */
+export const PokemonType = {
+  Bug:      { slug: "bug",      label: "Bug"      },
+  Dark:     { slug: "dark",     label: "Dark"     },
+  Dragon:   { slug: "dragon",   label: "Dragon"   },
+  Electric: { slug: "electric", label: "Electric" },
+  Fairy:    { slug: "fairy",    label: "Fairy"    },
+  Fighting: { slug: "fighting", label: "Fighting" },
+  Fire:     { slug: "fire",     label: "Fire"     },
+  Flying:   { slug: "flying",   label: "Flying"   },
+  Ghost:    { slug: "ghost",    label: "Ghost"    },
+  Grass:    { slug: "grass",    label: "Grass"    },
+  Ground:   { slug: "ground",   label: "Ground"   },
+  Ice:      { slug: "ice",      label: "Ice"      },
+  Normal:   { slug: "normal",   label: "Normal"   },
+  Poison:   { slug: "poison",   label: "Poison"   },
+  Psychic:  { slug: "psychic",  label: "Psychic"  },
+  Rock:     { slug: "rock",     label: "Rock"     },
+  Steel:    { slug: "steel",    label: "Steel"    },
+  Water:    { slug: "water",    label: "Water"    },
+} as const;
+export type PokemonTypeConst = (typeof PokemonType)[keyof typeof PokemonType];
+
 /** Pokemon top-level habitat types */
 export const PokemonHabitat = {
   Bright: { slug: "bright", label: "Bright" },

@@ -265,7 +265,7 @@ export default function TcgCard({
             <span
               className={`font-mono ${v.footer} ${p.isLegendary ? "text-accent" : "text-ink-fade"} tracking-[0.06em] font-semibold`}
             >
-              {p.types?.[0]?.toUpperCase() ?? ""}
+              {p.types[0]?.label ?? ""}
             </span>
           </div>
 
