@@ -312,3 +312,37 @@ export const PokemonHabitat = {
   Warm:    "warm",
 } as const;
 export type PokemonHabitatSlug = typeof PokemonHabitat[keyof typeof PokemonHabitat];
+
+/** Weather conditions — habitatList[].weather (3) */
+export const Weather = {
+  Cloud:  "Cloud",
+  Rain:   "Rain",
+  Sun:    "Sun",
+} as const;
+export type WeatherValue = typeof Weather[keyof typeof Weather];
+
+/** Time-of-day values — habitatList[].time (4) */
+export const Time = {
+  Day:      "Day",
+  Evening:  "Evening",
+  Morning:  "Morning",
+  Night:    "Night",
+} as const;
+export type TimeValue = typeof Time[keyof typeof Time];
+
+/** Spawn rarity values — habitatList[].rarity (2) */
+export const Rarity = {
+  Common:  "Common",
+  Rare:    "Rare",
+} as const;
+export type RarityValue = typeof Rarity[keyof typeof Rarity];
+
+/** Pokemon flavor preferences — pokemon.flavor (5) */
+export const Flavor = {
+  Bitter:  "Bitter",
+  Dry:     "Dry",
+  Sour:    "Sour",
+  Spicy:   "Spicy",
+  Sweet:   "Sweet",
+} as const;
+export type FlavorValue = typeof Flavor[keyof typeof Flavor];

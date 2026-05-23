@@ -285,5 +285,19 @@
   "PokemonHabitat::dark": "PokemonHabitat.Dark",
   "PokemonHabitat::dry": "PokemonHabitat.Dry",
   "PokemonHabitat::humid": "PokemonHabitat.Humid",
-  "PokemonHabitat::warm": "PokemonHabitat.Warm"
+  "PokemonHabitat::warm": "PokemonHabitat.Warm",
+  "Weather::Cloud": "Weather.Cloud",
+  "Weather::Rain": "Weather.Rain",
+  "Weather::Sun": "Weather.Sun",
+  "Time::Day": "Time.Day",
+  "Time::Evening": "Time.Evening",
+  "Time::Morning": "Time.Morning",
+  "Time::Night": "Time.Night",
+  "Rarity::Common": "Rarity.Common",
+  "Rarity::Rare": "Rarity.Rare",
+  "Flavor::Bitter": "Flavor.Bitter",
+  "Flavor::Dry": "Flavor.Dry",
+  "Flavor::Sour": "Flavor.Sour",
+  "Flavor::Spicy": "Flavor.Spicy",
+  "Flavor::Sweet": "Flavor.Sweet"
 }

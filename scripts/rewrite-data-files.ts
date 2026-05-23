@@ -28,27 +28,25 @@ const habitatConfigMap = new Map<string, string>();
 const locationMap = new Map<string, string>();
 const specialtyMap = new Map<string, string>();
 const pokemonHabitatMap = new Map<string, string>();
+const weatherMap = new Map<string, string>();
+const timeMap = new Map<string, string>();
+const rarityMap = new Map<string, string>();
+const flavorMap = new Map<string, string>();
 
 for (const [key, ref] of Object.entries(constsMap)) {
   const parts = key.split("::");
   const type = parts[0]!;
   const slug = parts[1]!;
   switch (type) {
-    case "Category":
-      categoryMap.set(slug, ref);
-      break;
-    case "HabitatConfig":
-      habitatConfigMap.set(slug, ref);
-      break;
-    case "Location":
-      locationMap.set(slug, ref);
-      break;
-    case "Specialty":
-      specialtyMap.set(slug, ref);
-      break;
-    case "PokemonHabitat":
-      pokemonHabitatMap.set(slug, ref);
-      break;
+    case "Category":       categoryMap.set(slug, ref); break;
+    case "HabitatConfig":  habitatConfigMap.set(slug, ref); break;
+    case "Location":       locationMap.set(slug, ref); break;
+    case "Specialty":      specialtyMap.set(slug, ref); break;
+    case "PokemonHabitat": pokemonHabitatMap.set(slug, ref); break;
+    case "Weather":        weatherMap.set(slug, ref); break;
+    case "Time":           timeMap.set(slug, ref); break;
+    case "Rarity":         rarityMap.set(slug, ref); break;
+    case "Flavor":         flavorMap.set(slug, ref); break;
   }
 }
 
@@ -126,14 +124,27 @@ function replaceInArrayField(
 src = replaceInArrayField(src, "categories", categoryMap);
 src = replaceInArrayField(src, "specialties", specialtyMap);
 src = replaceInArrayField(src, "locations", locationMap);
+src = replaceInArrayField(src, "weather", weatherMap);
+src = replaceInArrayField(src, "time", timeMap);
 
 // Replace "primaryLocation": "slug" (single-value field)
 src = src.replace(/"primaryLocation":\s*"([^"]+)"/g, (match, slug) => {
   const ref = locationMap.get(slug);
-  if (ref) {
-    replacementCount++;
-    return `"primaryLocation": ${ref}`;
-  }
+  if (ref) { replacementCount++; return `"primaryLocation": ${ref}`; }
+  return match;
+});
+
+// Replace "rarity": "value" (single-value field)
+src = src.replace(/"rarity":\s*"([^"]+)"/g, (match, val) => {
+  const ref = rarityMap.get(val);
+  if (ref) { replacementCount++; return `"rarity": ${ref}`; }
+  return match;
+});
+
+// Replace "flavor": "value" (single-value field)
+src = src.replace(/"flavor":\s*"([^"]+)"/g, (match, val) => {
+  const ref = flavorMap.get(val);
+  if (ref) { replacementCount++; return `"flavor": ${ref}`; }
   return match;
 });
 
@@ -162,7 +173,7 @@ src = src.replace(
 );
 
 // Add the import statement after existing import lines
-const newImport = `import { Category, HabitatConfig, Location, Specialty, PokemonHabitat } from "../consts";`;
+const newImport = `import { Category, HabitatConfig, Location, Specialty, PokemonHabitat, Weather, Time, Rarity, Flavor } from "./consts";`;
 src = src.replace(
   /^(import type \{ PokemonEntry \} from "\.\.\/types";)/m,
   `$1\n${newImport}`
