@@ -227,8 +227,8 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                       </Link>
                     </span>
                   ))}
-                  {entry.time && <span className="ml-3">🕐 {entry.time.join(", ")}</span>}
-                  {entry.weather && <span className="ml-3">☁ {entry.weather.join(", ")}</span>}
+                  {entry.time && <span className="ml-3"><span className="font-mono text-[10px] font-semibold text-accent">time:</span> {entry.time.join(", ")}</span>}
+                  {entry.weather && <span className="ml-3"><span className="font-mono text-[10px] font-semibold text-accent">weather:</span> {entry.weather.join(", ")}</span>}
                 </div>
               </div>
             ))}
