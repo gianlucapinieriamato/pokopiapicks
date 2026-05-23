@@ -1,15 +1,19 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import { POKEMON, POKEMON_LIST, SPECIALTIES, pkmnIconUrl, dexNum, getCatItems, catDisplayName } from "@/app/lib/data";
+import type { PokemonEntry } from "@/app/lib/types";
 import PokemonGrid from "@/app/components/PokemonGrid";
 import SearchInput from "@/app/components/SearchInput";
+import { SuggestionDropdown } from "@/app/components/SuggestionDropdown";
 import PageWrap from "@/app/components/PageWrap";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import Card from "@/app/components/Card";
 import PageHeader from "@/app/components/PageHeader";
 import SectionTitle from "@/app/components/SectionTitle";
+
+// ─── Pure helpers (outside component — no hooks, no side-effects) ──────────
 
 function sharedItemCount(a: string[], b: string[]): number {
   const setA = new Set<string>();
@@ -19,7 +23,7 @@ function sharedItemCount(a: string[], b: string[]): number {
   return count;
 }
 
-function score(anchor: typeof POKEMON_LIST[0], candidate: typeof POKEMON_LIST[0]): number {
+function calcScore(anchor: PokemonEntry, candidate: PokemonEntry): number {
   if (anchor.habitat !== candidate.habitat) return -1;
   const shared = sharedItemCount(anchor.categories, candidate.categories);
   const anchorSpecs = new Set(anchor.specialties ?? []);
@@ -29,54 +33,78 @@ function score(anchor: typeof POKEMON_LIST[0], candidate: typeof POKEMON_LIST[0]
   return Math.round(shared * multiplier);
 }
 
-function buildGroup(initialAnchors: typeof POKEMON_LIST, size: number): typeof POKEMON_LIST {
+function buildGroup(initialAnchors: PokemonEntry[], size: number): PokemonEntry[] {
   if (initialAnchors.length === 0) return [];
-  const habitat = initialAnchors[0].habitat;
+  const first = initialAnchors[0];
+  if (!first) return [];
+  const habitat = first.habitat;
   const anchorSlugSet = new Set(initialAnchors.map((a) => a.slug));
-  const group = [...initialAnchors];
+  const group: PokemonEntry[] = [...initialAnchors];
   const candidates = POKEMON_LIST.filter((p) => !anchorSlugSet.has(p.slug) && p.habitat === habitat);
   const target = Math.max(size, initialAnchors.length + 1);
   while (group.length < target && candidates.length > 0) {
     const groupCats = [...new Set(group.flatMap((m) => m.categories))];
     let bestIdx = 0, bestScore = -1;
     for (let i = 0; i < candidates.length; i++) {
-      const s = sharedItemCount(groupCats, candidates[i].categories);
+      const c = candidates[i];
+      if (!c) continue;
+      const s = sharedItemCount(groupCats, c.categories);
       if (s > bestScore) { bestScore = s; bestIdx = i; }
     }
-    group.push(candidates.splice(bestIdx, 1)[0]);
+    const picked = candidates.splice(bestIdx, 1)[0];
+    if (picked) group.push(picked);
   }
   return group;
 }
 
-const TOP_STARTERS = (() => {
-  const scored = POKEMON_LIST.map((p) => {
-    const peers = POKEMON_LIST.filter((q) => q.slug !== p.slug && q.habitat === p.habitat);
-    if (peers.length === 0) return { p, avg: 0 };
-    const total = peers.reduce((sum, q) => sum + Math.max(0, score(p, q)), 0);
-    return { p, avg: total / peers.length };
-  });
-  return scored
-    .sort((a, b) => b.avg - a.avg)
-    .slice(0, 6)
-    .map((x) => x.p);
-})();
-
-const EXAMPLE_ANCHOR = POKEMON_LIST.find((p) => p.slug === "bulbasaur") ?? TOP_STARTERS[0];
-const EXAMPLE_GROUP = EXAMPLE_ANCHOR ? buildGroup([EXAMPLE_ANCHOR], 4) : [];
-
-const MAX_ANCHORS = 3;
-
-function resolveSlugs(slugs: string[]) {
+function resolveSlugs(slugs: string[]): PokemonEntry[] {
   return slugs.flatMap((s) => { const p = POKEMON[s]; return p ? [p] : []; });
 }
+
+const MAX_ANCHORS = 3;
+const GROUP_SIZE = 4; // was unused state
+
+// ─── Component ────────────────────────────────────────────────────────────
 
 export default function MatchmakerClient() {
   const [anchorSlugs, setAnchorSlugs] = useState<string[]>([]);
   const [query, setQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [groupSize] = useState(4);
+  const [activeIdx, setActiveIdx] = useState(-1);
 
-  const anchors = resolveSlugs(anchorSlugs);
+  // Fix 5: ref-tracked blur timer to avoid memory leak on unmount
+  const blurTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    return () => { if (blurTimerRef.current) clearTimeout(blurTimerRef.current); };
+  }, []);
+
+  // Fix 1: O(n²) TOP_STARTERS moved into useMemo (was module-scope IIFE)
+  const TOP_STARTERS = useMemo(() => {
+    const scored = POKEMON_LIST.map((p) => {
+      const peers = POKEMON_LIST.filter((q) => q.slug !== p.slug && q.habitat === p.habitat);
+      if (peers.length === 0) return { p, avg: 0 };
+      const total = peers.reduce((sum, q) => sum + Math.max(0, calcScore(p, q)), 0);
+      return { p, avg: total / peers.length };
+    });
+    return scored
+      .sort((a, b) => b.avg - a.avg)
+      .slice(0, 6)
+      .map((x) => x.p);
+  }, []);
+
+  // Fix 1: EXAMPLE_GROUP also moved into useMemo (was module-scope)
+  const EXAMPLE_ANCHOR = useMemo(
+    () => POKEMON_LIST.find((p) => p.slug === "bulbasaur") ?? TOP_STARTERS[0] ?? null,
+    [TOP_STARTERS],
+  );
+  const EXAMPLE_GROUP = useMemo(
+    () => (EXAMPLE_ANCHOR ? buildGroup([EXAMPLE_ANCHOR], GROUP_SIZE) : []),
+    [EXAMPLE_ANCHOR],
+  );
+
+  // Fix 3: memoize resolveSlugs call — was called on every render
+  const anchors = useMemo(() => resolveSlugs(anchorSlugs), [anchorSlugs]);
+
   const primaryAnchor = anchors[0] ?? null;
   const anchorHabitat = primaryAnchor?.habitat ?? null;
 
@@ -94,6 +122,7 @@ export default function MatchmakerClient() {
     });
     setQuery("");
     setShowSuggestions(false);
+    setActiveIdx(-1);
   }, []);
 
   const removeAnchor = useCallback((slug: string) => {
@@ -102,13 +131,15 @@ export default function MatchmakerClient() {
 
   const recommendations = useMemo(() => {
     if (anchorSlugs.length === 0) return [];
+    // Fix 4: use Set for O(1) anchor-slug lookup instead of anchorSlugs.includes()
+    const anchorSet = new Set(anchorSlugs);
     const anchorList = resolveSlugs(anchorSlugs);
     const habitat = anchorList[0]?.habitat ?? null;
     if (!habitat) return [];
-    const scored: Array<{ pokemon: typeof POKEMON_LIST[0]; score: number; shared: number }> = [];
+    const scored: Array<{ pokemon: PokemonEntry; score: number; shared: number }> = [];
     for (const p of POKEMON_LIST) {
-      if (anchorSlugs.includes(p.slug) || p.habitat !== habitat) continue;
-      const scores = anchorList.map((a) => score(a, p));
+      if (anchorSet.has(p.slug) || p.habitat !== habitat) continue;
+      const scores = anchorList.map((a) => calcScore(a, p));
       const avg = scores.reduce((acc, v) => acc + v, 0) / scores.length;
       const shared = anchorList.reduce((sum, a) => sum + sharedItemCount(a.categories, p.categories), 0);
       const pts = Math.round(avg);
@@ -120,8 +151,8 @@ export default function MatchmakerClient() {
 
   const group = useMemo(() => {
     if (anchorSlugs.length === 0) return [];
-    return buildGroup(resolveSlugs(anchorSlugs), groupSize);
-  }, [anchorSlugs, groupSize]);
+    return buildGroup(resolveSlugs(anchorSlugs), GROUP_SIZE);
+  }, [anchorSlugs]);
 
   return (
     <PageWrap>
@@ -155,30 +186,31 @@ export default function MatchmakerClient() {
         )}
 
         {anchorSlugs.length < MAX_ANCHORS && (
+          // Fix 6: Use SuggestionDropdown component + ARIA combobox props on SearchInput
           <SearchInput
             value={query}
-            onChange={(e) => { setQuery(e.target.value); setShowSuggestions(true); }}
-            onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
+            onChange={(e) => { setQuery(e.target.value); setShowSuggestions(true); setActiveIdx(-1); }}
+            onFocus={() => { if (blurTimerRef.current) clearTimeout(blurTimerRef.current); }}
+            onBlur={() => {
+              blurTimerRef.current = setTimeout(() => setShowSuggestions(false), 150);
+            }}
             placeholder={anchorSlugs.length === 0 ? "Search Pokemon to add as anchor…" : "Add another anchor…"}
+            aria-expanded={showSuggestions && searchMatches.length > 0}
+            aria-controls="matchmaker-search-listbox"
+            aria-activedescendant={
+              activeIdx >= 0 && searchMatches[activeIdx] != null
+                ? `matchmaker-search-listbox-opt-${searchMatches[activeIdx]!.slug}`
+                : undefined
+            }
           >
-            {showSuggestions && searchMatches.length > 0 && (
-              <div className="absolute top-[calc(100%+6px)] left-0 right-0 bg-paper border border-[1.5px] border-paper-edge rounded-[14px] max-h-[360px] overflow-y-auto z-10 block shadow-[0_12px_28px_-8px_var(--shadow)]">
-                {searchMatches.map((p) => (
-                  <button
-                    key={p.slug}
-                    type="button"
-                    className={`flex items-center gap-3 px-4 py-2 cursor-pointer border-b border-surface-1 transition-colors hover:bg-surface-1 last:border-b-0 w-full text-left${anchorSlugs.includes(p.slug) ? " opacity-40" : ""}`}
-                    onMouseDown={(e) => { e.preventDefault(); selectAnchor(p.slug); }}
-                  >
-                    <div className="relative size-11 shrink-0">
-                      <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="44px" />
-                    </div>
-                    <span className="font-mono text-[11px] text-ink-fade min-w-[38px] font-semibold">#{dexNum(p)}</span>
-                    <span className="font-bold text-[15px]">{p.name}</span>
-                    <span className="ml-auto font-mono text-[10px] text-ink-soft bg-surface-2 px-2 py-[3px] rounded-full font-semibold">{p.habitat}</span>
-                  </button>
-                ))}
-              </div>
+            {/* Fix 6: replaced inline dropdown with shared SuggestionDropdown */}
+            {showSuggestions && (
+              <SuggestionDropdown
+                id="matchmaker-search-listbox"
+                options={searchMatches}
+                activeIdx={activeIdx}
+                onSelect={(opt) => selectAnchor(opt.slug)}
+              />
             )}
           </SearchInput>
         )}
@@ -230,7 +262,7 @@ export default function MatchmakerClient() {
                     onClick={() => selectAnchor(p.slug)}
                     className="bg-chrome border border-[1.5px] border-paper-edge rounded-[14px] p-3 text-center text-ink flex flex-col items-center gap-1 transition-all hover:bg-paper hover:border-accent hover:-translate-y-0.5 hover:shadow-[0_6px_16px_-6px_var(--shadow)] w-full cursor-pointer"
                   >
-                    {p.slug === EXAMPLE_ANCHOR.slug && (
+                    {EXAMPLE_ANCHOR && p.slug === EXAMPLE_ANCHOR.slug && (
                       <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>
                     )}
                     <div className="relative size-16">
@@ -265,8 +297,22 @@ export default function MatchmakerClient() {
         </Card>
       )}
 
-      {anchors.length > 0 && recommendations.length === 0 && (
-        <Card><p className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium">No Pokemon found in the same habitat ({anchorHabitat}).</p></Card>
+      {/* Fix 8: empty-state CTA when anchors produce 0 recommendations */}
+      {anchorSlugs.length > 0 && recommendations.length === 0 && (
+        <Card>
+          <div className="text-center py-6">
+            <p className="text-ink-soft mb-3 text-[13px]">
+              No Pokemon found in the same habitat{anchorHabitat ? ` (${anchorHabitat})` : ""}.
+            </p>
+            <button
+              type="button"
+              onClick={() => setAnchorSlugs([])}
+              className="px-4 py-2 rounded-lg bg-accent text-paper font-outfit font-semibold text-[14px]"
+            >
+              Clear anchors and try again
+            </button>
+          </div>
+        </Card>
       )}
 
       {recommendations.length > 0 && (
@@ -286,10 +332,19 @@ export default function MatchmakerClient() {
                 onClick={() => selectAnchor(p.slug)}
                 className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 mb-2.5 cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] transition-all w-full text-left"
               >
-                <div className="absolute -top-2 right-3 font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
-                  {s} pts{isComplementary ? " ⚡" : ""}
+                {/* Fix 9: replace ⚡ emoji with text labels */}
+                <div className="absolute -top-2 right-3 flex items-center gap-1">
+                  <span className="font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
+                    {s} pts
+                  </span>
+                  {isComplementary && (
+                    <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-leaf/20 text-leaf uppercase tracking-wide">
+                      COMPLEMENT
+                    </span>
+                  )}
                 </div>
-                <div className="size-14 shrink-0 bg-white/70 rounded-[10px] p-1">
+                {/* Fix 7: bg-white/70 → bg-paper */}
+                <div className="size-14 shrink-0 bg-paper rounded-[10px] p-1">
                   <div className="relative w-full h-full">
                     <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="56px" />
                   </div>
@@ -307,7 +362,7 @@ export default function MatchmakerClient() {
                   </div>
                   <div className="font-mono text-[10px] text-ink-soft tracking-[0.02em] leading-snug">
                     {shared} shared items · {p.specialties?.map((sp) => SPECIALTIES[sp]?.name ?? sp).join(", ") || "no specialty"}
-                    {isComplementary && " · complementary ⚡"}
+                    {isComplementary && " · complementary"}
                   </div>
                 </div>
               </button>
