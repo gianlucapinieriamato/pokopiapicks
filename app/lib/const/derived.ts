@@ -20,7 +20,7 @@ function groupBy<T, K extends string>(
 }
 
 /** All pokemon sorted by national dex number (game-exclusives last) */
-export const POKEMON_LIST: PokemonConst[] = ALL_POKEMON.sort((a, b) => {
+export const POKEMON_LIST: PokemonConst[] = ALL_POKEMON.slice().sort((a, b) => {
   const na = a.nationalDexNum ?? 99999;
   const nb = b.nationalDexNum ?? 99999;
   return na !== nb ? na - nb : a.num - b.num;
@@ -32,15 +32,15 @@ export const POKEMON_BY_SLUG: Record<string, PokemonConst> = Object.fromEntries(
 );
 
 /** Pokemon grouped by specialty slug */
-export const POKEMON_BY_SPECIALTY: Record<string, PokemonConst[]> = groupBy(
+export const POKEMON_BY_SPECIALTY: Record<string, PokemonConst[]> = groupBy<PokemonConst, string>(
   POKEMON_LIST,
-  (p) => p.specialties.map((s) => s.slug as string),
+  (p) => p.specialties.map((s) => s.slug),
 );
 
 /** Pokemon grouped by habitat config slug */
-export const POKEMON_BY_HABITAT_CONFIG: Record<string, PokemonConst[]> = groupBy(
+export const POKEMON_BY_HABITAT_CONFIG: Record<string, PokemonConst[]> = groupBy<PokemonConst, string>(
   POKEMON_LIST,
-  (p) => p.habitatList.map((h) => h.habitat.slug as string),
+  (p) => p.habitatList.map((h) => h.habitat.slug),
 );
 
 /** Zero-padded dex number for display */
