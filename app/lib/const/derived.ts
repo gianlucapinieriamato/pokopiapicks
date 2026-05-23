@@ -52,3 +52,12 @@ export function dexNum(p: { nationalDexNum: number | null; num: number }): strin
 export function pkmnIconUrl(p: PokemonConst): string {
   return `/icons/pokemon/${p.icon}`;
 }
+
+/** Categories per Pokemon sorted shortest-label-first — for chip row display */
+export const POKEMON_CATEGORIES_SORTED: Record<string, readonly CategoryConst[]> =
+  Object.fromEntries(
+    POKEMON_LIST.map((p) => [
+      p.slug,
+      [...p.categories].sort((a, b) => a.label.length - b.label.length),
+    ]),
+  );

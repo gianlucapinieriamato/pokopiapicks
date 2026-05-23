@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { pkmnIconUrl, dexNum } from "@/app/lib/const";
+import { pkmnIconUrl, dexNum, POKEMON_CATEGORIES_SORTED } from "@/app/lib/const";
 import type { PokemonConst } from "@/app/lib/const";
 
 const HABITAT_COLORS = Object.freeze({
@@ -210,7 +210,7 @@ export default function TcgCard({
               Likes
             </div>
             <ChipRow
-              items={p.categories.map((c) => c.label).sort((a, b) => a.length - b.length)}
+              items={(POKEMON_CATEGORIES_SORTED[p.slug] ?? p.categories).map((c) => c.label)}
               max={size === "lg" ? 3 : 2}
               chipClass={`${CHIP_BASE} ${v.chip}`}
               badgeClass={`${CHIP_BASE} ${v.chip} text-ink-soft`}
