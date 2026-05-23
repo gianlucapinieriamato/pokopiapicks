@@ -21,11 +21,8 @@ import SectionTitle from "@/app/components/SectionTitle";
 // ─── Pure helpers ──────────────────────────────────────────────────────────
 
 function sharedItemCount(a: PokemonConst, b: PokemonConst): number {
-  const setA = new Set<string>();
-  for (const cat of a.categories) for (const item of cat.items) setA.add(item.slug);
-  let count = 0;
-  for (const cat of b.categories) for (const item of cat.items) { if (setA.has(item.slug)) count++; }
-  return count;
+  const setA = new Set(a.categories.flatMap((cat) => cat.items.map((i) => i.slug)));
+  return b.categories.flatMap((cat) => cat.items).filter((i) => setA.has(i.slug)).length;
 }
 
 function calcScore(anchor: PokemonConst, candidate: PokemonConst): number {

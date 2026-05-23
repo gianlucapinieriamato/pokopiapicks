@@ -72,13 +72,11 @@ export default async function PokemonPage({
   const next = idx < POKEMON_LIST.length - 1 ? POKEMON_LIST[idx + 1] : null;
 
   // Build item → { item object, categories } map
-  const itemMap: Record<string, { item: ItemConst; cats: string[] }> = {};
-  for (const cat of p.categories) {
-    for (const item of cat.items) {
-      if (!itemMap[item.slug]) itemMap[item.slug] = { item, cats: [] };
-      itemMap[item.slug]!.cats.push(cat.slug);
-    }
-  }
+  const itemMap = p.categories.flatMap((cat) => cat.items.map((item) => ({ item, catSlug: cat.slug })))
+    .reduce<Record<string, { item: ItemConst; cats: string[] }>>((acc, { item, catSlug }) => {
+      (acc[item.slug] ??= { item, cats: [] }).cats.push(catSlug);
+      return acc;
+    }, {});
   const allItems = Object.values(itemMap);
   const sharedItems = allItems
     .filter(({ cats }) => cats.length >= 2)

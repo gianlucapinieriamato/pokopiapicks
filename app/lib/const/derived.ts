@@ -17,20 +17,16 @@ export const POKEMON_BY_SLUG: Record<string, PokemonConst> = Object.fromEntries(
 );
 
 /** Pokemon grouped by specialty slug */
-export const POKEMON_BY_SPECIALTY: Record<string, PokemonConst[]> = {};
-for (const p of POKEMON_LIST) {
-  for (const s of p.specialties) {
-    (POKEMON_BY_SPECIALTY[s.slug] ??= []).push(p);
-  }
-}
+export const POKEMON_BY_SPECIALTY: Record<string, PokemonConst[]> = POKEMON_LIST.reduce<Record<string, PokemonConst[]>>(
+  (acc, p) => { p.specialties.forEach((s) => (acc[s.slug] ??= []).push(p)); return acc; },
+  {},
+);
 
 /** Pokemon grouped by habitat config slug */
-export const POKEMON_BY_HABITAT_CONFIG: Record<string, PokemonConst[]> = {};
-for (const p of POKEMON_LIST) {
-  for (const h of p.habitatList) {
-    (POKEMON_BY_HABITAT_CONFIG[h.habitat.slug] ??= []).push(p);
-  }
-}
+export const POKEMON_BY_HABITAT_CONFIG: Record<string, PokemonConst[]> = POKEMON_LIST.reduce<Record<string, PokemonConst[]>>(
+  (acc, p) => { p.habitatList.forEach((h) => (acc[h.habitat.slug] ??= []).push(p)); return acc; },
+  {},
+);
 
 /** Zero-padded dex number for display */
 export function dexNum(p: {
