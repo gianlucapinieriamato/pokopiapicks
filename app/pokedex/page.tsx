@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { POKEMON_LIST } from "@/app/lib/data";
+import { POKEMON_LIST } from "@/app/lib/const";
 import { SITE_URL } from "@/app/lib/config";
 import JsonLd from "@/app/components/JsonLd";
 import PokedexClient from "./PokedexClient";

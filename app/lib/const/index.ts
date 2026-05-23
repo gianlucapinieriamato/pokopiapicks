@@ -8,3 +8,5 @@ export * from "./locations";
 export * from "./specialties";
 export * from "./pokemon";
 export * from "./derived";
+export * from "./item-groups";
+export * from "./crafting";

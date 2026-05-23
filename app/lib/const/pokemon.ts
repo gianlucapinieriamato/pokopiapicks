@@ -5,9 +5,16 @@ import { HabitatConfig, type HabitatConfigConst } from "./habitat-config";
 import { Location, type LocationConst } from "./locations";
 import { Specialty, type SpecialtyConst } from "./specialties";
 import {
-  PokemonHabitat, Flavor, Rarity, Time, Weather,
-  type PokemonHabitatConst, type FlavorConst, type RarityConst,
-  type TimeConst, type WeatherConst,
+  PokemonHabitat,
+  Flavor,
+  Rarity,
+  Time,
+  Weather,
+  type PokemonHabitatConst,
+  type FlavorConst,
+  type RarityConst,
+  type TimeConst,
+  type WeatherConst,
 } from "./enum";
 
 export type HabitatListConst = {
@@ -55,10 +62,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SlenderObjects,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -72,17 +76,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -104,9 +99,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SlenderObjects,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -120,17 +113,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -152,9 +136,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -168,17 +150,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -200,10 +173,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfNature,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -217,17 +187,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -249,9 +210,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.SpinningStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -265,17 +224,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -297,9 +247,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NoisyStuff,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.DJ,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.DJ] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -313,17 +261,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -345,12 +284,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Tinkaton: {
     slug: "tinkaton",
@@ -369,9 +305,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Exercise,
       Category.MetalStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Engineer,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Engineer] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -385,17 +319,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -417,9 +342,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Healing,
       Category.LotsOfWater,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -433,17 +356,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -465,9 +379,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Healing,
       Category.LotsOfWater,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -481,17 +393,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -513,10 +416,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.Luxury,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -530,17 +430,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -562,10 +453,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-      Specialty.Yawn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water, Specialty.Yawn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -579,17 +467,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -611,10 +490,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -628,17 +504,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -660,10 +527,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Teleport,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Teleport, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -677,17 +541,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -709,9 +564,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.SparklingSkylands,
     habitatList: [
       {
@@ -721,17 +574,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -753,9 +597,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -769,17 +611,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -801,9 +634,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -817,17 +648,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -849,10 +671,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -866,17 +685,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -898,10 +708,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -915,17 +722,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -947,9 +745,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.Luxury,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -963,16 +759,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -994,9 +782,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1010,16 +796,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1041,10 +819,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.Luxury,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1058,16 +833,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1089,9 +856,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1105,17 +870,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1137,10 +893,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.Rides,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1154,17 +907,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1186,10 +930,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.Symbols,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1203,17 +944,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1235,9 +967,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfDirt,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.BleakBeach,
     habitatList: [
       {
@@ -1247,17 +977,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1279,10 +1000,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.RoundStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1296,17 +1014,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1328,10 +1037,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1345,16 +1051,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1376,10 +1074,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1393,16 +1088,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1424,9 +1111,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1440,17 +1125,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1472,10 +1148,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1489,17 +1162,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1521,10 +1185,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.MetalStuff,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1538,16 +1199,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1569,9 +1222,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1585,17 +1236,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1617,10 +1259,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1634,17 +1273,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1666,9 +1296,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.NoisyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1682,17 +1310,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1714,9 +1333,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.NoisyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1730,17 +1347,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1762,10 +1370,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SlenderObjects,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1779,17 +1384,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1811,9 +1407,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.SpinningStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1827,17 +1421,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1859,9 +1444,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.SpinningStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1875,17 +1458,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1907,10 +1481,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.GroupActivities,
       Category.LotsOfWater,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1924,17 +1495,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -1956,9 +1518,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -1972,17 +1532,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2004,9 +1555,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2020,17 +1569,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2052,10 +1592,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.Symbols,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2069,17 +1606,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2101,9 +1629,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2117,17 +1643,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2149,10 +1666,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2166,17 +1680,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2198,9 +1703,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2214,17 +1717,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2246,9 +1740,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2262,17 +1754,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2294,10 +1777,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2311,17 +1791,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2343,9 +1814,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -2355,17 +1824,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2387,12 +1847,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Water] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Ivysaur: {
     slug: "ivysaur",
@@ -2411,9 +1868,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2427,17 +1882,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2459,10 +1905,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2476,17 +1919,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2508,10 +1942,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2525,17 +1956,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2557,10 +1979,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2574,17 +1993,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2606,9 +2016,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LooksLikeFood,
       Category.RoundStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Storage,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Storage] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2618,17 +2026,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: null,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2650,9 +2049,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LooksLikeFood,
       Category.RoundStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Storage,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Storage] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2666,17 +2063,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2698,9 +2086,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.SpookyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2714,17 +2100,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2746,10 +2123,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.SpinningStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Explode,
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Explode, Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2763,17 +2137,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2795,9 +2160,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2811,17 +2174,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2843,9 +2197,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2859,17 +2211,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2891,9 +2234,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Paint,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Paint] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2907,17 +2248,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2939,9 +2271,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.RoundStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -2955,14 +2285,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -2984,10 +2308,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LooksLikeFood,
       Category.MetalStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -2997,17 +2318,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3029,9 +2341,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3045,17 +2355,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3077,9 +2378,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3093,17 +2392,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3125,9 +2415,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3141,17 +2429,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3173,9 +2452,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Rarify,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Rarify] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3189,17 +2466,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3221,9 +2489,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3237,14 +2503,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3266,9 +2526,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfNature,
       Category.PrettyFlowers,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3282,17 +2540,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3314,9 +2563,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.SharpStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3330,17 +2577,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3362,9 +2600,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3378,14 +2614,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3407,9 +2637,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -3419,17 +2647,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3451,9 +2670,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -3463,17 +2680,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3495,12 +2703,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfNature,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Appraise,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Appraise] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Vespiquen: {
     slug: "vespiquen",
@@ -3519,10 +2724,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.GatherHoney,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.GatherHoney, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3536,17 +2738,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3567,9 +2760,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3583,14 +2774,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3611,9 +2796,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3627,14 +2810,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3656,9 +2833,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3672,17 +2847,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3704,9 +2870,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SharpStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3720,17 +2884,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3752,9 +2907,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3768,17 +2921,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3800,9 +2944,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Gatherings,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3816,17 +2958,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3848,10 +2981,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Gatherings,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter, Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3865,17 +2995,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3897,9 +3018,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Healing,
       Category.MetalStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3913,17 +3032,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3945,9 +3055,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -3961,17 +3069,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -3993,9 +3092,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4009,17 +3106,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4041,9 +3129,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Collect,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Collect] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4057,17 +3143,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4089,9 +3166,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Collect,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Collect] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4105,17 +3180,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4137,9 +3203,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4153,17 +3217,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4185,12 +3240,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Wattrel: {
     slug: "wattrel",
@@ -4209,9 +3261,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4225,17 +3275,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4257,9 +3298,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -4269,17 +3308,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4301,12 +3331,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Teleport,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Teleport] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Mew: {
     slug: "mew",
@@ -4325,12 +3352,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Teleport,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Teleport] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Cubone: {
     slug: "cubone",
@@ -4349,9 +3373,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfDirt,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4365,17 +3387,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4397,9 +3410,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4413,17 +3424,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4445,9 +3447,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.MetalStuff,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4461,17 +3461,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4493,10 +3484,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SlenderObjects,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4510,17 +3498,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4542,10 +3521,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Symbols,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4559,16 +3535,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4590,10 +3558,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfFire,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4607,17 +3572,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4639,10 +3595,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfFire,
       Category.Luxury,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4656,17 +3609,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4688,10 +3632,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Bulldoze,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Bulldoze] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4705,17 +3646,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4737,10 +3669,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.RoundStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Bulldoze,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Bulldoze] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4754,17 +3683,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4786,10 +3706,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.HardStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -4799,17 +3716,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4831,10 +3739,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.HardStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4848,17 +3753,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4880,10 +3776,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.HardStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4897,17 +3790,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4929,9 +3813,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Gatherings,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4945,17 +3827,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -4977,10 +3850,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Healing,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Teleport,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Teleport] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -4994,17 +3864,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5026,9 +3887,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LooksLikeFood,
       Category.MetalStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -5038,17 +3897,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5070,9 +3920,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.GroupActivities,
       Category.MetalStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5086,17 +3934,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5118,10 +3957,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5135,14 +3971,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5164,9 +3994,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5180,17 +4008,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5212,9 +4031,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5228,17 +4045,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5260,10 +4068,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5277,17 +4082,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5309,9 +4105,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.SpookyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5325,17 +4119,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5357,10 +4142,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5374,14 +4156,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5403,9 +4179,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5419,17 +4193,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5451,9 +4216,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5467,17 +4230,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5499,9 +4253,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfNature,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5515,17 +4267,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5547,9 +4290,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5563,17 +4304,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5595,10 +4327,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NoisyStuff,
       Category.PlaySpaces,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5612,17 +4341,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5644,9 +4364,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpinningStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -5656,17 +4374,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5688,9 +4397,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5704,17 +4411,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5736,12 +4434,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Teleport,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Teleport] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Dusclops: {
     slug: "dusclops",
@@ -5760,9 +4455,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5776,14 +4469,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5805,10 +4492,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5822,14 +4506,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5851,10 +4529,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SlenderObjects,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5868,17 +4543,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5900,9 +4566,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SlenderObjects,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5916,17 +4580,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5948,9 +4603,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SlenderObjects,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -5964,17 +4617,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -5996,10 +4640,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Fly,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Fly] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6013,17 +4654,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: null,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6045,9 +4677,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6061,17 +4691,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6093,12 +4714,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.Symbols,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Bulbasaur: {
     slug: "bulbasaur",
@@ -6117,9 +4735,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6133,17 +4749,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6165,10 +4772,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6182,17 +4786,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6214,10 +4809,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.PrettyFlowers,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6231,17 +4823,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6263,9 +4846,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6279,17 +4860,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6311,9 +4883,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6327,17 +4897,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6359,9 +4920,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.SharpStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6375,16 +4934,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6406,9 +4957,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.DreamIsland,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.DreamIsland] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6422,17 +4971,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6454,9 +4994,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.GlassStuff,
       Category.PrettyFlowers,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6466,17 +5004,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6498,9 +5027,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Healing,
       Category.LettersAndWords,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Illuminate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Illuminate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6514,17 +5041,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6546,9 +5064,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.SpinningStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6562,17 +5078,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6594,10 +5101,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.GlassStuff,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6611,17 +5115,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6643,10 +5138,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6660,17 +5152,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6692,10 +5175,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6709,17 +5189,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6741,9 +5212,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6757,17 +5226,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6789,9 +5249,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6805,17 +5263,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6837,9 +5286,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.GroupActivities,
       Category.SpookyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6853,17 +5300,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6885,9 +5323,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.GroupActivities,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6901,17 +5337,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6933,9 +5360,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.PrettyFlowers,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6949,14 +5374,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -6978,10 +5397,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.PrettyFlowers,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -6995,14 +5411,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7024,9 +5434,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7040,17 +5448,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7072,9 +5471,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7088,17 +5485,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7120,10 +5508,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7137,17 +5522,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7169,9 +5545,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7185,17 +5559,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7217,9 +5582,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -7229,17 +5592,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7261,9 +5615,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7277,16 +5629,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7308,10 +5652,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfFire,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7325,16 +5666,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7356,9 +5689,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7372,17 +5703,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7404,9 +5726,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Symbols,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Teleport,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Teleport] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7420,17 +5740,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7452,9 +5763,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Symbols,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Teleport,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Teleport] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7468,17 +5777,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7500,9 +5800,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.GroupActivities,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7516,17 +5814,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7548,9 +5837,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.GroupActivities,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7564,17 +5851,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7596,10 +5874,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7613,17 +5888,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7645,9 +5911,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LooksLikeFood,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.SparklingSkylands,
     habitatList: [
       {
@@ -7657,17 +5921,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7689,10 +5944,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7706,17 +5958,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7738,9 +5981,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -7754,17 +5995,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7786,9 +6018,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SharpStuff,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -7798,17 +6028,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7830,9 +6051,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -7842,17 +6061,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7874,9 +6084,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -7886,17 +6094,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7918,9 +6117,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfNature,
       Category.PrettyFlowers,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -7930,17 +6127,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -7962,9 +6150,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -7974,17 +6160,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8006,9 +6183,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NoisyStuff,
       Category.RoundStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -8018,17 +6193,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8050,9 +6216,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.MetalStuff,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8066,17 +6230,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8098,9 +6253,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.MetalStuff,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8114,17 +6267,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8146,10 +6290,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.MetalStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate, Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8163,17 +6304,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8195,9 +6327,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.RoundStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -8207,17 +6337,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8239,13 +6360,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.RoundStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate, Specialty.Hype] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Electrode: {
     slug: "electrode",
@@ -8264,10 +6381,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.SpinningStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Explode,
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Explode, Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8281,17 +6395,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8313,9 +6418,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfFire,
       Category.SharpStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8329,17 +6432,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8361,10 +6455,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.HardStuff,
       Category.LotsOfFire,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8378,17 +6469,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8410,10 +6492,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfNature,
       Category.NiceBreezes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -8423,17 +6502,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8455,10 +6525,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.GroupActivities,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8472,17 +6539,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8504,10 +6562,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Healing,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8521,17 +6576,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8553,9 +6599,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfFire,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8569,17 +6613,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8601,10 +6636,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfFire,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8618,17 +6650,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8650,9 +6673,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NoisyStuff,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.RockyRidges,
     habitatList: [
       {
@@ -8662,17 +6683,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8694,10 +6706,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SharpStuff,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate, Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8711,17 +6720,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8743,10 +6743,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SharpStuff,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate, Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8760,17 +6757,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8792,10 +6780,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Generate] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8809,17 +6794,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8841,12 +6817,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Generate,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Generate] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Zapdos: {
     slug: "zapdos",
@@ -8865,12 +6838,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.Symbols,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Charmander: {
     slug: "charmander",
@@ -8889,9 +6859,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfFire,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8905,17 +6873,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8937,9 +6896,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -8953,17 +6910,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -8985,10 +6933,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Fly,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Fly] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9002,16 +6947,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9033,9 +6970,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9049,17 +6984,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9081,9 +7007,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9097,17 +7021,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9129,9 +7044,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9145,17 +7058,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9177,9 +7081,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9193,17 +7095,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9225,9 +7118,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SharpStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9241,17 +7132,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9273,9 +7155,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.MetalStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -9285,17 +7165,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9317,10 +7188,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SharpStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9334,17 +7202,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9366,10 +7225,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Build,
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Build, Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9383,17 +7239,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9415,10 +7262,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SharpStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9432,17 +7276,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9464,9 +7299,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.SharpStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9480,17 +7313,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9512,10 +7336,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.SharpStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9529,17 +7350,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9561,9 +7373,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpinningStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -9573,17 +7383,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9605,9 +7406,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpinningStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9621,17 +7420,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9653,10 +7443,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpinningStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9670,17 +7457,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9702,10 +7480,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9719,17 +7494,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9751,9 +7517,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9767,17 +7531,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9799,13 +7554,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Trapinch: {
     slug: "trapinch",
@@ -9824,10 +7575,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9841,17 +7589,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9873,13 +7612,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.MetalStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Recycle,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Recycle] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Cranidos: {
     slug: "cranidos",
@@ -9898,9 +7633,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9914,17 +7647,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9946,10 +7670,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.MetalStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -9963,17 +7684,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -9995,10 +7707,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.MetalStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10012,17 +7721,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10044,9 +7744,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10060,17 +7758,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10092,10 +7781,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10109,17 +7795,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10141,12 +7818,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.Symbols,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Hoothoot: {
     slug: "hoothoot",
@@ -10165,10 +7839,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10182,14 +7853,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10211,9 +7876,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10227,17 +7890,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10259,10 +7913,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10276,17 +7927,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10308,12 +7950,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Eat,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Eat] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Snorlax: {
     slug: "snorlax",
@@ -10332,10 +7971,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -10345,17 +7981,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10377,10 +8004,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10394,14 +8018,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10423,10 +8041,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10440,16 +8055,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10471,9 +8078,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10487,17 +8092,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10519,9 +8115,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10535,17 +8129,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10567,10 +8152,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10584,17 +8166,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10616,9 +8189,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10632,14 +8203,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10661,9 +8226,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10677,17 +8240,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10709,10 +8263,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10726,14 +8277,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10755,10 +8300,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10772,14 +8314,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10801,10 +8337,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10818,14 +8351,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10847,9 +8374,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpinningStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10863,17 +8388,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10895,9 +8411,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpinningStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -10911,17 +8425,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -10943,13 +8448,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Tangrowth: {
     slug: "tangrowth",
@@ -10968,29 +8469,15 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: null,
     habitatList: [
       {
         habitat: HabitatConfig.BenchWithGreenery,
-        locations: [
-          Location.CloudIsland,
-        ] as LocationConst[],
+        locations: [Location.CloudIsland] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11012,9 +8499,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11028,17 +8513,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11060,10 +8536,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Teleport,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Teleport] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11077,17 +8550,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11109,10 +8573,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Teleport,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Teleport] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11126,17 +8587,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11157,9 +8609,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.LotsOfWater,
       Category.OceanVibes,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11173,17 +8623,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11205,10 +8646,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11222,17 +8660,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11254,10 +8683,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NoisyStuff,
       Category.PlaySpaces,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11271,17 +8697,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11303,10 +8720,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11320,17 +8734,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11352,10 +8757,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.SpookyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11369,16 +8771,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11400,11 +8794,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-    ] as SpecialtyConst[],
+    specialties: [] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Magikarp: {
     slug: "magikarp",
@@ -11423,8 +8815,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-    ] as SpecialtyConst[],
+    specialties: [] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11438,17 +8829,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11470,9 +8852,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -11482,17 +8862,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11514,9 +8885,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11530,17 +8899,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11562,10 +8922,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Hype,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Hype] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11579,17 +8936,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11611,12 +8959,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.MetalStuff,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Party,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Party] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Mismagius: {
     slug: "mismagius",
@@ -11635,10 +8980,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11652,14 +8994,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11681,10 +9017,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11698,17 +9031,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11730,10 +9054,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11747,17 +9068,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11779,10 +9091,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11796,17 +9105,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11828,10 +9128,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SlenderObjects,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11845,17 +9142,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11877,9 +9165,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.SharpStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11893,17 +9179,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11925,9 +9202,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11941,17 +9216,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -11973,9 +9239,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -11989,17 +9253,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12021,10 +9276,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12038,17 +9290,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12070,9 +9313,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12086,17 +9327,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12118,10 +9350,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12135,17 +9364,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12167,10 +9387,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12184,17 +9401,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12216,10 +9424,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Rides,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12233,17 +9438,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12265,9 +9461,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpinningStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12281,17 +9475,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12313,9 +9498,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12329,17 +9512,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12361,10 +9535,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.Symbols,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Crush,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Crush, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12378,17 +9549,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12410,10 +9572,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Symbols,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Teleport,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Teleport, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12427,17 +9586,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12459,10 +9609,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12476,17 +9623,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12508,10 +9646,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Symbols,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12525,17 +9660,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12557,10 +9683,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12574,17 +9697,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12606,10 +9720,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Teleport,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Teleport, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: Location.SparklingSkylands,
     habitatList: [
       {
@@ -12619,17 +9730,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12651,10 +9753,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12668,16 +9767,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12699,9 +9790,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12715,17 +9804,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12747,10 +9827,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.OceanVibes,
       Category.SlenderObjects,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Water,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Water] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -12760,17 +9837,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12792,10 +9860,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.StoneStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Crush,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Crush] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12809,17 +9874,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12841,10 +9897,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Hype,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Hype, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.PaletteTown,
     habitatList: [
       {
@@ -12854,17 +9907,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12886,9 +9930,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.NiceBreezes,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12902,17 +9944,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12934,10 +9967,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PlaySpaces,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12951,17 +9981,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -12983,9 +10004,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SpookyStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -12999,17 +10018,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13031,9 +10041,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13047,14 +10055,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13076,9 +10078,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13092,17 +10092,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13124,10 +10115,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.PrettyFlowers,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13141,17 +10129,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13173,9 +10152,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13189,17 +10166,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13221,10 +10189,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Luxury,
       Category.NoisyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Fly,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Fly] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13238,17 +10203,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13270,10 +10226,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Bulldoze,
-      Specialty.Fly,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Bulldoze, Specialty.Fly] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13287,17 +10240,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13319,9 +10263,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13335,17 +10277,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13367,10 +10300,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Symbols,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13384,17 +10314,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13416,10 +10337,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Symbols,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13433,17 +10351,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13465,13 +10374,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.StrangeStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-      Specialty.Trade,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn, Specialty.Trade] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Ninetales: {
     slug: "ninetales",
@@ -13490,9 +10395,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Burn,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Burn] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13506,17 +10409,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13538,12 +10432,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StoneStuff,
       Category.Symbols,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   HoOh: {
     slug: "ho-oh",
@@ -13562,11 +10453,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.Symbols,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-    ] as SpecialtyConst[],
+    specialties: [] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Pidgey: {
     slug: "pidgey",
@@ -13585,10 +10474,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13602,16 +10488,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13633,10 +10511,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Chop,
-      Specialty.Fly,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Chop, Specialty.Fly] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13650,16 +10525,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13681,9 +10548,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13697,14 +10562,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13726,10 +10585,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SharpStuff,
       Category.ShinyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13743,14 +10599,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13772,10 +10622,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WobblyStuff,
       Category.WoodenStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13789,17 +10636,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13821,9 +10659,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13837,17 +10673,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13869,9 +10696,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.SoftStuff,
       Category.SpinningStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13885,17 +10710,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13917,10 +10733,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.RoundStuff,
       Category.SoftStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Grow,
-      Specialty.Litter,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Grow, Specialty.Litter] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -13934,17 +10747,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -13966,12 +10770,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.ShinyStuff,
       Category.Symbols,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Lugia: {
     slug: "lugia",
@@ -13990,11 +10791,9 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.Symbols,
     ] as CategoryConst[],
-    specialties: [
-    ] as SpecialtyConst[],
+    specialties: [] as SpecialtyConst[],
     primaryLocation: null,
-    habitatList: [
-    ],
+    habitatList: [],
   },
   Abra: {
     slug: "abra",
@@ -14013,9 +10812,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.WatchingStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Teleport,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Teleport] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -14029,17 +10826,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -14061,10 +10849,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WobblyStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Fly,
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Fly, Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -14078,17 +10863,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -14110,9 +10886,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -14126,17 +10900,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Common,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],
@@ -14158,10 +10923,7 @@ export const Pokemon: Record<string, PokemonConst> = {
       Category.StrangeStuff,
       Category.WatchingStuff,
     ] as CategoryConst[],
-    specialties: [
-      Specialty.Gather,
-      Specialty.Search,
-    ] as SpecialtyConst[],
+    specialties: [Specialty.Gather, Specialty.Search] as SpecialtyConst[],
     primaryLocation: Location.WitheredWastelands,
     habitatList: [
       {
@@ -14175,17 +10937,8 @@ export const Pokemon: Record<string, PokemonConst> = {
           Location.CloudIsland,
         ] as LocationConst[],
         rarity: Rarity.Rare,
-        time: [
-          Time.Morning,
-          Time.Day,
-          Time.Evening,
-          Time.Night,
-        ] as TimeConst[],
-        weather: [
-          Weather.Sun,
-          Weather.Cloud,
-          Weather.Rain,
-        ] as WeatherConst[],
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night] as TimeConst[],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain] as WeatherConst[],
         isCloudIsland: true,
       } as HabitatListConst,
     ],

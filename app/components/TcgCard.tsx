@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { pkmnIconUrl, dexNum, getRarity } from "@/app/lib/data";
+import { pkmnIconUrl, dexNum, getRarity } from "@/app/lib/const";
 import type { PokemonConst } from "@/app/lib/const";
 
 const HABITAT_COLORS = Object.freeze({

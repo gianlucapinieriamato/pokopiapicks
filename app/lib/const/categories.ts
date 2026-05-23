@@ -794,10 +794,7 @@ export const Category = {
   Healing: {
     slug: "healing",
     label: "Healing",
-    items: [
-      Item.Humidifier,
-      Item.FirstAidKit,
-    ] as ItemConst[],
+    items: [Item.Humidifier, Item.FirstAidKit] as ItemConst[],
   },
   LettersAndWords: {
     slug: "letters-and-words",
@@ -1930,5 +1927,5 @@ export const Category = {
     ] as ItemConst[],
   },
 } as const;
-export type CategoryConst = typeof Category[keyof typeof Category];
+export type CategoryConst = (typeof Category)[keyof typeof Category];
 export type CategoryKey = keyof typeof Category;

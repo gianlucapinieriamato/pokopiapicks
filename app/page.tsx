@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/config";
-import { POKEMON_LIST } from "@/app/lib/data";
+import { POKEMON_LIST } from "@/app/lib/const";
 import HoverTile from "@/app/components/HoverTile";
 import TcgCard from "@/app/components/TcgCard";
 import Card from "@/app/components/Card";

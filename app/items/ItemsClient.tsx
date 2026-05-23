@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import type { ItemConst, CategoryConst } from "@/app/lib/const";
-import { ITEM_GROUPS } from "@/app/lib/data/item-groups";
+import { ITEM_GROUPS } from "@/app/lib/const";
 import Shortcut from "@/app/components/Shortcut";
 import HoverTile from "@/app/components/HoverTile";
 import ItemTile from "@/app/components/ItemTile";
@@ -24,7 +24,7 @@ export default function ItemsClient({
 }) {
   const searchParams = useSearchParams();
   const group = searchParams.get("group")?.toLowerCase() ?? null;
-  const groupItems = group ? new Set(ITEM_GROUPS[group] ?? []) : null;
+  const groupItems = group ? new Set((ITEM_GROUPS[group] ?? []).map((i) => i.slug)) : null;
   const [view, setView] = useState<"items" | "categories">("items");
   const [search, setSearch] = useState(() => searchParams.get("search") ?? "");
   const [catFilter, setCatFilter] = useState<string[]>([]);

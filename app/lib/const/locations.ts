@@ -11,7 +11,8 @@ export const Location = {
   WitheredWastelands: {
     slug: "witheredwastelands",
     label: "Withered Wastelands",
-    description: "The Withered Wastelands are a collection of grassy areas and caves alongside a coast that make up what used to be Fuchsia City and its surrounding area. Your task here is to get the area to rain, as rain hasn't fallen here for some time",
+    description:
+      "The Withered Wastelands are a collection of grassy areas and caves alongside a coast that make up what used to be Fuchsia City and its surrounding area. Your task here is to get the area to rain, as rain hasn't fallen here for some time",
     objective: "",
     materials: [
       Item.SturdyStick,
@@ -212,7 +213,8 @@ export const Location = {
   BleakBeach: {
     slug: "bleakbeach",
     label: "Bleak Beach",
-    description: "Bleak Beach is the area that used to be Vermilion City. Here, the land is overcome in darkness no matter the time of day and you have to find a way to bring light to the area.In addition to Vermilion City, it also includes the SS Anne",
+    description:
+      "Bleak Beach is the area that used to be Vermilion City. Here, the land is overcome in darkness no matter the time of day and you have to find a way to bring light to the area.In addition to Vermilion City, it also includes the SS Anne",
     objective: "",
     materials: [
       Item.SturdyStick,
@@ -454,7 +456,8 @@ export const Location = {
   RockyRidges: {
     slug: "rockyridges",
     label: "Rocky Ridges",
-    description: "Rocky Ridges makees up the area that used to be Pewter City and Mt. Moon, and includes a mine going deep underground into the muntain. Within the mountains is what used to be Pewter Museum including the exhibits.This area featurs a focus on ore for you to find",
+    description:
+      "Rocky Ridges makees up the area that used to be Pewter City and Mt. Moon, and includes a mine going deep underground into the muntain. Within the mountains is what used to be Pewter Museum including the exhibits.This area featurs a focus on ore for you to find",
     objective: "",
     materials: [
       Item.SturdyStick,
@@ -713,7 +716,8 @@ export const Location = {
   SparklingSkylands: {
     slug: "sparklingskylands",
     label: "Sparkling Skylands",
-    description: "The Sparkling Skylands are a giant area that focused around what used to be Celadon and Saffron Cities. The catastrophe caused the ground to shoot up into the sky.With the Pokemon you find here, your task is to rebuild Silph Co. into a new building to bring back humans and Pokemon",
+    description:
+      "The Sparkling Skylands are a giant area that focused around what used to be Celadon and Saffron Cities. The catastrophe caused the ground to shoot up into the sky.With the Pokemon you find here, your task is to rebuild Silph Co. into a new building to bring back humans and Pokemon",
     objective: "",
     materials: [
       Item.SturdyStick,
@@ -1053,7 +1057,8 @@ export const Location = {
   PaletteTown: {
     slug: "palettetown",
     label: "Palette Town",
-    description: "Palette Town is an area found over the bridge from Withered Wastelands. This area is a free open space for you to do with as you please.This map is the one you use in multiplayer on both Cloud Islands and in modes where you can play and build along with your friends",
+    description:
+      "Palette Town is an area found over the bridge from Withered Wastelands. This area is a free open space for you to do with as you please.This map is the one you use in multiplayer on both Cloud Islands and in modes where you can play and build along with your friends",
     objective: "",
     materials: [
       Item.SturdyStick,
@@ -1186,7 +1191,8 @@ export const Location = {
   CloudIsland: {
     slug: "cloudisland",
     label: "Cloud Island",
-    description: "Cloud Islands are unique islands stored on the server that allow for you to start fresh. It contains all main materials and terrain blocks, as well as its own Mysterious Slate board",
+    description:
+      "Cloud Islands are unique islands stored on the server that allow for you to start fresh. It contains all main materials and terrain blocks, as well as its own Mysterious Slate board",
     objective: "",
     materials: [] as ItemConst[],
     blocksAndPlants: [] as ItemConst[],
@@ -1292,5 +1298,5 @@ export const Location = {
     ] as ShopItemConst[],
   },
 } as const;
-export type LocationConst = typeof Location[keyof typeof Location];
+export type LocationConst = (typeof Location)[keyof typeof Location];
 export type LocationKey = keyof typeof Location;

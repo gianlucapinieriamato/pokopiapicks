@@ -2,37 +2,37 @@
 
 /** Weather conditions */
 export const Weather = {
-  Cloud:    { slug: "cloud", label: "Cloud" },
-  Rain:    { slug: "rain", label: "Rain" },
-  Sun:    { slug: "sun", label: "Sun" },
+  Cloud: { slug: "cloud", label: "Cloud" },
+  Rain: { slug: "rain", label: "Rain" },
+  Sun: { slug: "sun", label: "Sun" },
 } as const;
-export type WeatherConst = typeof Weather[keyof typeof Weather];
+export type WeatherConst = (typeof Weather)[keyof typeof Weather];
 
 /** Time of day */
 export const Time = {
-  Day:      { slug: "day", label: "Day" },
-  Evening:      { slug: "evening", label: "Evening" },
-  Morning:      { slug: "morning", label: "Morning" },
-  Night:      { slug: "night", label: "Night" },
+  Day: { slug: "day", label: "Day" },
+  Evening: { slug: "evening", label: "Evening" },
+  Morning: { slug: "morning", label: "Morning" },
+  Night: { slug: "night", label: "Night" },
 } as const;
-export type TimeConst = typeof Time[keyof typeof Time];
+export type TimeConst = (typeof Time)[keyof typeof Time];
 
 /** Spawn rarity */
 export const Rarity = {
-  Common:   { slug: "common", label: "Common" },
-  Rare:   { slug: "rare", label: "Rare" },
+  Common: { slug: "common", label: "Common" },
+  Rare: { slug: "rare", label: "Rare" },
 } as const;
-export type RarityConst = typeof Rarity[keyof typeof Rarity];
+export type RarityConst = (typeof Rarity)[keyof typeof Rarity];
 
 /** Berry flavor preferences */
 export const Flavor = {
-  Bitter:   { slug: "bitter", label: "Bitter" },
-  Dry:   { slug: "dry", label: "Dry" },
-  Sour:   { slug: "sour", label: "Sour" },
-  Spicy:   { slug: "spicy", label: "Spicy" },
-  Sweet:   { slug: "sweet", label: "Sweet" },
+  Bitter: { slug: "bitter", label: "Bitter" },
+  Dry: { slug: "dry", label: "Dry" },
+  Sour: { slug: "sour", label: "Sour" },
+  Spicy: { slug: "spicy", label: "Spicy" },
+  Sweet: { slug: "sweet", label: "Sweet" },
 } as const;
-export type FlavorConst = typeof Flavor[keyof typeof Flavor];
+export type FlavorConst = (typeof Flavor)[keyof typeof Flavor];
 
 /** Pokemon top-level habitat types */
 export const PokemonHabitat = {
@@ -43,4 +43,5 @@ export const PokemonHabitat = {
   Humid: { slug: "humid", label: "Humid" },
   Warm: { slug: "warm", label: "Warm" },
 } as const;
-export type PokemonHabitatConst = typeof PokemonHabitat[keyof typeof PokemonHabitat];
+export type PokemonHabitatConst =
+  (typeof PokemonHabitat)[keyof typeof PokemonHabitat];

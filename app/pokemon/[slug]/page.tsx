@@ -7,10 +7,9 @@ import {
   POKEMON_LIST,
   pkmnIconUrl,
   dexNum,
+  getRarity,
 } from "@/app/lib/const";
-import type { PokemonConst } from "@/app/lib/const";
-import { ITEMS } from "@/app/lib/data";
-import { getRarity } from "@/app/lib/data";
+import type { PokemonConst, ItemConst } from "@/app/lib/const";
 import JsonLd from "@/app/components/JsonLd";
 import InfoTip from "@/app/components/InfoTip";
 import { SITE_URL } from "@/app/lib/config";
@@ -72,18 +71,18 @@ export default async function PokemonPage({
   const prev = idx > 0 ? POKEMON_LIST[idx - 1] : null;
   const next = idx < POKEMON_LIST.length - 1 ? POKEMON_LIST[idx + 1] : null;
 
-  // Build item → categories map using rich objects
-  const itemToCats: Record<string, string[]> = {};
+  // Build item → { item object, categories } map
+  const itemMap: Record<string, { item: ItemConst; cats: string[] }> = {};
   for (const cat of p.categories) {
     for (const item of cat.items) {
-      if (!itemToCats[item.slug]) itemToCats[item.slug] = [];
-      itemToCats[item.slug]!.push(cat.slug);
+      if (!itemMap[item.slug]) itemMap[item.slug] = { item, cats: [] };
+      itemMap[item.slug]!.cats.push(cat.slug);
     }
   }
-  const allItems = Object.entries(itemToCats);
+  const allItems = Object.values(itemMap);
   const sharedItems = allItems
-    .filter(([, cats]) => cats.length >= 2)
-    .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+    .filter(({ cats }) => cats.length >= 2)
+    .sort((a, b) => b.cats.length - a.cats.length || a.item.slug.localeCompare(b.item.slug));
 
   return (
     <PageWrap>
@@ -219,19 +218,18 @@ export default async function PokemonPage({
               These items appear in multiple categories: they count double (or more).
             </p>
             <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-3 mb-7">
-              {sharedItems.map(([itemSlug, cats]) => {
-                const itemEntry = ITEMS[itemSlug];
+              {sharedItems.map(({ item, cats }) => {
                 const catLabels = cats.map((catSlug) => {
                   const cat = p.categories.find((c) => c.slug === catSlug);
                   return cat?.label ?? catSlug;
                 });
                 return (
                   <BestGiftItem
-                    key={itemSlug}
-                    item={itemEntry?.name ?? itemSlug}
+                    key={item.slug}
+                    item={item.label}
                     cats={catLabels}
-                    href={`/item/${itemSlug}`}
-                    iconSrc={itemEntry?.icon ?? undefined}
+                    href={`/item/${item.slug}`}
+                    iconSrc={item.icon ?? undefined}
                   />
                 );
               })}
@@ -254,7 +252,7 @@ export default async function PokemonPage({
             >
               <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 px-1 mb-2">
                 {cat.items.map((item) => {
-                  const cats = itemToCats[item.slug] ?? [];
+                  const cats = itemMap[item.slug]?.cats ?? [];
                   const isShared = cats.length >= 2;
                   const otherCats = cats
                     .filter((cs) => cs !== cat.slug)

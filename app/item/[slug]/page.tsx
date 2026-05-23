@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Item, Category, POKEMON_LIST, pkmnIconUrl, dexNum } from "@/app/lib/const";
-import { ITEM_RECIPES } from "@/app/lib/data";
+import { Item, Category, POKEMON_LIST, pkmnIconUrl, dexNum, ITEM_RECIPES } from "@/app/lib/const";
 import type { ItemConst, CategoryConst } from "@/app/lib/const";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
@@ -80,23 +79,22 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
             </div>
             <div className="flex flex-wrap gap-3">
               {recipe.materials.map((mat, i) => {
-                const matItem = Object.values(Item).find((it) => it.label.toLowerCase() === mat.name.toLowerCase()) ?? null;
                 const inner = (
                   <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-1 border border-paper-edge">
-                    {matItem?.icon && (
+                    {mat.item.icon && (
                       <div className="relative size-8 shrink-0">
-                        <Image fill src={matItem.icon} alt={mat.name} className="object-contain [image-rendering:pixelated]" sizes="32px" />
+                        <Image fill src={mat.item.icon} alt={mat.item.label} className="object-contain [image-rendering:pixelated]" sizes="32px" />
                       </div>
                     )}
                     <div>
-                      <div className="font-outfit font-semibold text-[13px] text-ink leading-tight">{mat.name}</div>
+                      <div className="font-outfit font-semibold text-[13px] text-ink leading-tight">{mat.item.label}</div>
                       {mat.qty > 1 && <div className="font-mono text-[11px] text-ink-soft">×{mat.qty}</div>}
                     </div>
                   </div>
                 );
-                return matItem
-                  ? <Link key={i} href={`/item/${matItem.slug}`} className="no-underline">{inner}</Link>
-                  : <div key={i}>{inner}</div>;
+                return (
+                  <Link key={i} href={`/item/${mat.item.slug}`} className="no-underline">{inner}</Link>
+                );
               })}
             </div>
           </div>
