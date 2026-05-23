@@ -7,7 +7,6 @@ import {
   POKEMON_LIST,
   pkmnIconUrl,
   dexNum,
-  getRarity,
 } from "@/app/lib/const";
 import type { PokemonConst, ItemConst } from "@/app/lib/const";
 import JsonLd from "@/app/components/JsonLd";

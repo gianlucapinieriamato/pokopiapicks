@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { pkmnIconUrl, dexNum, getRarity } from "@/app/lib/const";
+import { pkmnIconUrl, dexNum } from "@/app/lib/const";
 import type { PokemonConst } from "@/app/lib/const";
 
 const HABITAT_COLORS = Object.freeze({
@@ -115,20 +115,19 @@ export default function TcgCard({
   p: PokemonConst;
   size?: "lg" | "md" | "sm";
 }) {
-  const r = getRarity(p);
   const isSm = size === "sm";
   const v = VARIANTS[size];
   const habitatSlug = p.habitat.slug as keyof typeof HABITAT_COLORS;
   const { h1, h2 } = HABITAT_COLORS[habitatSlug] ?? { h1: "#d8ccb8", h2: "#a89070" };
 
-  const holoOpacity = r.holoIntensity / 100;
-  const sweepOpacity = r.sparkles ? holoOpacity * 0.65 : 0;
+  const holoOpacity = p.isLegendary ? 1 : 0.25;
+  const sweepOpacity = p.isLegendary ? holoOpacity * 0.65 : 0;
 
   return (
     <div className={`relative w-full ${v.wrapper} aspect-[100/155]`}>
       {/* Gold frame */}
       <div
-        className={`absolute inset-0 ${v.frameRound} ${r.sparkles ? v.legendShadow : v.frameShadow}`}
+        className={`absolute inset-0 ${v.frameRound} ${p.isLegendary ? v.legendShadow : v.frameShadow}`}
         style={{ background: "var(--card-frame)" }}
       >
         {/* Inner card face */}
@@ -144,7 +143,7 @@ export default function TcgCard({
               className={`font-outfit font-extrabold ${v.name} tracking-[-0.01em] leading-none text-ink whitespace-nowrap overflow-hidden text-ellipsis min-w-0`}
             >
               {p.label}
-              {r.sparkles && (
+              {p.isLegendary && (
                 <span
                   className={`${v.star} text-accent drop-shadow-[0_0_3px_var(--accent)] ml-1`}
                 >
@@ -164,7 +163,7 @@ export default function TcgCard({
             className={`${v.artMargin} shrink-0 grow-0 basis-[54%] rounded-md habitat-art relative overflow-hidden border border-[1.5px] border-[rgba(138,105,25,0.42)] flex items-end justify-center`}
             style={{ "--h1": h1, "--h2": h2 } as React.CSSProperties}
           >
-            {r.sparkles && (
+            {p.isLegendary && (
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{ backgroundImage: "var(--sparkle-dots)" }}
@@ -185,7 +184,7 @@ export default function TcgCard({
               {p.habitat.label}
             </div>
             {/* Gift count / legendary badge */}
-            {r.sparkles && (
+            {p.isLegendary && (
               <div
                 className={`absolute top-[5px] right-[5px] ${v.artLabel} px-[7px] py-[2px] rounded-full text-paper font-outfit font-extrabold tracking-[0.03em] shadow-[0_1px_0_var(--accent-deep)] bg-gradient-to-br from-accent to-accent-deep`}
               >
@@ -264,7 +263,7 @@ export default function TcgCard({
               POKOPIA · PICKS
             </span>
             <span
-              className={`font-mono ${v.footer} ${r.sparkles ? "text-accent" : "text-ink-fade"} tracking-[0.06em] font-semibold`}
+              className={`font-mono ${v.footer} ${p.isLegendary ? "text-accent" : "text-ink-fade"} tracking-[0.06em] font-semibold`}
             >
               {p.types?.[0]?.toUpperCase() ?? ""}
             </span>
