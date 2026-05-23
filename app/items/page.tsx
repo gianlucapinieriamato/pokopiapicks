@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Items & Gift Categories",
   description: `Browse all gift items and categories in Pokemon Pokopia. Filter by category to find the perfect item for any Pokemon.`,
 };
+import { Suspense } from "react";
 import ItemsClient from "./ItemsClient";
 import PageWrap from "@/app/components/PageWrap";
 import Breadcrumb from "@/app/components/Breadcrumb";
@@ -35,7 +36,9 @@ export default function ItemsPage() {
       }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Items" }]} />
       <PageHeader title="Items" />
-      <ItemsClient items={ALL_ITEMS} categories={ALL_CATS} pkmnCountByCat={pkmnCountByCat} />
+      <Suspense>
+        <ItemsClient items={ALL_ITEMS} categories={ALL_CATS} pkmnCountByCat={pkmnCountByCat} />
+      </Suspense>
     </PageWrap>
   );
 }

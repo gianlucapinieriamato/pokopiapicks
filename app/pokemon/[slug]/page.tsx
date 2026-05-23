@@ -93,18 +93,18 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
       {/* ── Hero: card + info ── */}
       <div className="flex items-start gap-7 mb-5 pb-5 border-b border-paper-edge max-md:flex-col max-md:items-center max-md:text-center max-md:gap-4">
         <div className="shrink-0 w-[260px]">
-          <TcgCard p={{ ...p, slug }} size="md" giftCount={sharedItems.length > 0 ? sharedItems.length : null} />
+          <TcgCard p={{ ...p, slug }} size="lg" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] mb-[2px]">#{dexNum(p)}</div>
           <div className="font-outfit font-extrabold text-[36px] tracking-[-0.02em] leading-[1.05] mb-2 max-md:text-[26px]">{p.name}</div>
           <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>
+            <span className="inline-flex items-center gap-1.5">
               <span>Ideal habitat: </span><span className="text-leaf font-semibold">{p.habitat}</span>
               <InfoTip tip="Pokemon with the same habitat can share a living space in Pokopia." />
             </span>
             {p.flavor && (
-              <span>
+              <span className="inline-flex items-center gap-1.5">
                 <span>Flavor: </span><span className="text-leaf font-semibold">{p.flavor}</span>
                 <InfoTip tip="The berry flavor this Pokemon prefers. Pokemon that share a flavor tend to like the same gift items." />
               </span>
@@ -153,7 +153,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         {sharedItems.length > 0 && (
           <>
             <SectionTitle pill="TOP GIFTS">Best gifts</SectionTitle>
-            <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">These items appear in multiple categories — they count double (or more).</p>
+            <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">These items appear in multiple categories: they count double (or more).</p>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-3 mb-7 max-md:grid-cols-1">
               {sharedItems.map(([item, cats]) => {
                 const itemEntry = ITEMS[item];
@@ -212,7 +212,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             {p.habitatList.map((entry) => (
               <div key={entry.habitatSlug} className="mb-4">
                 <div className="flex items-baseline gap-2 mb-2 px-[14px] py-2 bg-chrome rounded-[10px] border border-paper-edge">
-                  <Link href={`/habitat/${entry.habitatSlug}`} className="font-outfit font-bold text-[16px] no-underline text-inherit">
+                  <Link href={`/habitats/${entry.habitatSlug}`} className="font-outfit font-bold text-[16px] no-underline text-inherit">
                     {HABITATS[entry.habitatSlug]?.name ?? entry.habitatSlug}
                   </Link>
                   {entry.rarity && <span className="font-mono text-[11px] text-ink-soft ml-auto font-medium">{entry.rarity}</span>}
@@ -221,7 +221,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                   {entry.locations.map((loc, j) => (
                     <span key={loc}>
                       {j > 0 && " · "}
-                      <Link href={`/location/${loc}`} className="text-leaf no-underline">
+                      <Link href={`/locations/${loc}`} className="text-leaf no-underline">
                         {LOCATIONS[loc]?.name ?? loc}
                       </Link>
                     </span>

@@ -66,13 +66,17 @@ const EXAMPLE_GROUP = EXAMPLE_ANCHOR ? buildGroup([EXAMPLE_ANCHOR], 4) : [];
 
 const MAX_ANCHORS = 3;
 
+function resolveSlugs(slugs: string[]) {
+  return slugs.flatMap((s) => { const p = POKEMON[s]; return p ? [p] : []; });
+}
+
 export default function MatchmakerPage() {
   const [anchorSlugs, setAnchorSlugs] = useState<string[]>([]);
   const [query, setQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [groupSize] = useState(4);
 
-  const anchors = anchorSlugs.map((s) => POKEMON[s]).filter(Boolean);
+  const anchors = resolveSlugs(anchorSlugs);
   const primaryAnchor = anchors[0] ?? null;
   const anchorHabitat = primaryAnchor?.habitat ?? null;
 
@@ -98,26 +102,25 @@ export default function MatchmakerPage() {
 
   const recommendations = useMemo(() => {
     if (anchorSlugs.length === 0) return [];
-    const anchorList = anchorSlugs.map((s) => POKEMON[s]).filter(Boolean);
+    const anchorList = resolveSlugs(anchorSlugs);
     const habitat = anchorList[0]?.habitat ?? null;
     if (!habitat) return [];
-    return POKEMON_LIST
-      .filter((p) => !anchorSlugs.includes(p.slug) && p.habitat === habitat)
-      .map((p) => {
-        const scores = anchorList.map((a) => score(a, p));
-        const avg = scores.reduce((s, v) => s + v, 0) / scores.length;
-        const shared = anchorList.reduce((sum, a) => sum + sharedItemCount(a.categories, p.categories), 0);
-        return { pokemon: p, score: Math.round(avg), shared };
-      })
-      .filter((r) => r.score >= 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 10);
+    const scored: Array<{ pokemon: typeof POKEMON_LIST[0]; score: number; shared: number }> = [];
+    for (const p of POKEMON_LIST) {
+      if (anchorSlugs.includes(p.slug) || p.habitat !== habitat) continue;
+      const scores = anchorList.map((a) => score(a, p));
+      const avg = scores.reduce((acc, v) => acc + v, 0) / scores.length;
+      const shared = anchorList.reduce((sum, a) => sum + sharedItemCount(a.categories, p.categories), 0);
+      const pts = Math.round(avg);
+      if (pts < 0) continue;
+      scored.push({ pokemon: p, score: pts, shared });
+    }
+    return scored.sort((a, b) => b.score - a.score).slice(0, 10);
   }, [anchorSlugs]);
 
   const group = useMemo(() => {
     if (anchorSlugs.length === 0) return [];
-    const anchorList = anchorSlugs.map((s) => POKEMON[s]).filter(Boolean);
-    return buildGroup(anchorList, groupSize);
+    return buildGroup(resolveSlugs(anchorSlugs), groupSize);
   }, [anchorSlugs, groupSize]);
 
   return (
@@ -125,7 +128,7 @@ export default function MatchmakerPage() {
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Matchmaker" }]} />
       <PageHeader title="Matchmaker">
         <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">
-          Pick up to {MAX_ANCHORS} anchor Pokemon to find the best roommates. Same habitat required — shared items are bonus points.
+          Pick up to {MAX_ANCHORS} anchor Pokemon to find the best roommates. Same habitat required; shared items are bonus points.
         </p>
       </PageHeader>
 
@@ -139,6 +142,7 @@ export default function MatchmakerPage() {
                 </div>
                 <span className="font-outfit font-bold text-[12px] text-ink-deep">{a.name}</span>
                 <button
+                  type="button"
                   onClick={() => removeAnchor(a.slug)}
                   className="ml-0.5 text-ink-soft hover:text-ink font-mono text-[11px] leading-none"
                   aria-label={`Remove ${a.name}`}
@@ -160,14 +164,19 @@ export default function MatchmakerPage() {
             {showSuggestions && searchMatches.length > 0 && (
               <div className="absolute top-[calc(100%+6px)] left-0 right-0 bg-paper border border-[1.5px] border-paper-edge rounded-[14px] max-h-[360px] overflow-y-auto z-10 block shadow-[0_12px_28px_-8px_var(--shadow)]">
                 {searchMatches.map((p) => (
-                  <div key={p.slug} className={`flex items-center gap-3 px-4 py-2 cursor-pointer border-b border-surface-1 transition-colors hover:bg-surface-1 last:border-b-0${anchorSlugs.includes(p.slug) ? " opacity-40" : ""}`} onMouseDown={(e) => { e.preventDefault(); selectAnchor(p.slug); }}>
+                  <button
+                    key={p.slug}
+                    type="button"
+                    className={`flex items-center gap-3 px-4 py-2 cursor-pointer border-b border-surface-1 transition-colors hover:bg-surface-1 last:border-b-0 w-full text-left${anchorSlugs.includes(p.slug) ? " opacity-40" : ""}`}
+                    onMouseDown={(e) => { e.preventDefault(); selectAnchor(p.slug); }}
+                  >
                     <div className="relative size-11 shrink-0">
                       <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="44px" />
                     </div>
                     <span className="font-mono text-[11px] text-ink-fade min-w-[38px] font-semibold">#{dexNum(p)}</span>
                     <span className="font-bold text-[15px]">{p.name}</span>
                     <span className="ml-auto font-mono text-[10px] text-ink-soft bg-surface-2 px-2 py-[3px] rounded-full font-semibold">{p.habitat}</span>
-                  </div>
+                  </button>
                 ))}
               </div>
             )}
@@ -204,7 +213,7 @@ export default function MatchmakerPage() {
           <div className="mb-5">
             <SectionTitle>How it works</SectionTitle>
             <p className="text-[13px] text-ink-soft leading-relaxed">
-              Search for a Pokemon above to find its best housing group — Pokemon that share the most item preferences and have complementary specialties. You can add up to {MAX_ANCHORS} anchors to narrow it down further.
+              Search for a Pokemon above to find its best housing group: Pokemon that share the most item preferences and have complementary specialties. You can add up to {MAX_ANCHORS} anchors to narrow it down further.
             </p>
           </div>
 
@@ -217,6 +226,7 @@ export default function MatchmakerPage() {
                 {EXAMPLE_GROUP.map((p) => (
                   <button
                     key={p.slug}
+                    type="button"
                     onClick={() => selectAnchor(p.slug)}
                     className="bg-chrome border border-[1.5px] border-paper-edge rounded-[14px] p-3 text-center text-ink flex flex-col items-center gap-1 transition-all hover:bg-paper hover:border-accent hover:-translate-y-0.5 hover:shadow-[0_6px_16px_-6px_var(--shadow)] w-full cursor-pointer"
                   >
@@ -240,6 +250,7 @@ export default function MatchmakerPage() {
               {TOP_STARTERS.map((p) => (
                 <button
                   key={p.slug}
+                  type="button"
                   onClick={() => selectAnchor(p.slug)}
                   className="flex items-center gap-1.5 bg-chrome border border-[1.5px] border-paper-edge rounded-full px-2.5 py-[5px] text-ink transition-all hover:bg-paper hover:border-accent cursor-pointer"
                 >
@@ -269,13 +280,11 @@ export default function MatchmakerPage() {
             const candSpecs = p.specialties ?? [];
             const isComplementary = candSpecs.length > 0 && !candSpecs.some((sp) => allAnchorSpecs.has(sp));
             return (
-              <div
+              <button
                 key={p.slug}
-                role="button"
-                tabIndex={0}
+                type="button"
                 onClick={() => selectAnchor(p.slug)}
-                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") selectAnchor(p.slug); }}
-                className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 mb-2.5 cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] transition-all"
+                className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 mb-2.5 cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] transition-all w-full text-left"
               >
                 <div className="absolute -top-2 right-3 font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
                   {s} pts{isComplementary ? " ⚡" : ""}
@@ -301,7 +310,7 @@ export default function MatchmakerPage() {
                     {isComplementary && " · complementary ⚡"}
                   </div>
                 </div>
-              </div>
+              </button>
             );
           })}
         </Card>
@@ -317,6 +326,7 @@ export default function MatchmakerPage() {
               return (
                 <button
                   key={p.slug}
+                  type="button"
                   onClick={() => selectAnchor(p.slug)}
                   className={`border border-[1.5px] rounded-[14px] p-3 text-center text-ink flex flex-col items-center gap-1 transition-all hover:-translate-y-0.5 hover:shadow-[0_6px_16px_-6px_var(--shadow)] w-full cursor-pointer ${isAnchor ? "bg-accent-soft border-accent" : "bg-chrome border-paper-edge hover:bg-paper hover:border-accent"}`}
                 >

@@ -35,7 +35,7 @@ export default function HabitatsPage() {
           {ALL_HABITATS.map((h) => {
             const count = h.pokemon.length;
             return (
-              <Link key={h.slug} href={`/habitat/${h.slug}`} className="no-underline">
+              <Link key={h.slug} href={`/habitats/${h.slug}`} className="no-underline">
                 <HoverTile className="py-3 px-3.5">
                   <div className="font-outfit font-bold text-sm text-ink mb-1">{h.name}</div>
                   {h.description && (

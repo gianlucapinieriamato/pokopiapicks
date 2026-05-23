@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useState, useMemo } from "react";
+import { useSearchParams } from "next/navigation";
 import type { ItemEntry, CategoryEntry } from "@/app/lib/types";
+import { ITEM_GROUPS } from "@/app/lib/data/item-groups";
 import Shortcut from "@/app/components/Shortcut";
 import HoverTile from "@/app/components/HoverTile";
 import ItemTile from "@/app/components/ItemTile";
@@ -20,13 +22,17 @@ export default function ItemsClient({
   categories: CategoryEntry[];
   pkmnCountByCat: Record<string, number>;
 }) {
+  const searchParams = useSearchParams();
+  const group = searchParams.get("group")?.toLowerCase() ?? null;
+  const groupItems = group ? new Set(ITEM_GROUPS[group] ?? []) : null;
   const [view, setView] = useState<"items" | "categories">("items");
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(() => searchParams.get("search") ?? "");
   const [catFilter, setCatFilter] = useState<string[]>([]);
+  const [catOpen, setCatOpen] = useState(false);
   const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
-    let list = items;
+    let list = groupItems ? items.filter((i) => groupItems.has(i.name)) : items;
     if (search.trim()) {
       const q = search.toLowerCase();
       list = list.filter((i) => i.name.toLowerCase().includes(q));
@@ -64,17 +70,22 @@ export default function ItemsClient({
               className="mb-3.5"
             />
             <div className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5">
-              <div className="flex items-center justify-between mb-2">
+              <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => setCatOpen((o) => !o)}>
                 <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">Category</div>
-                {catFilter.length > 0 && <span className="font-mono text-[9px] bg-ink text-paper px-1.5 py-[2px] rounded-full">{catFilter.length}</span>}
-              </div>
-              <div className="flex flex-wrap gap-1.5">
-                {categories.map((c) => (
-                  <Shortcut key={c.slug} active={catFilter.includes(c.slug)} onClick={() => toggleCat(c.slug)}>
-                    {c.name} <span className="opacity-55 text-[10px]">({c.items.length})</span>
-                  </Shortcut>
-                ))}
-              </div>
+                <div className="flex items-center gap-1.5">
+                  {catFilter.length > 0 && <span className="font-mono text-[9px] bg-ink text-paper px-1.5 py-[2px] rounded-full">{catFilter.length}</span>}
+                  <span className="font-mono text-[10px] text-ink-fade">{catOpen ? "▲" : "▼"}</span>
+                </div>
+              </button>
+              {catOpen && (
+                <div className="flex flex-wrap gap-1.5 mt-3">
+                  {categories.map((c) => (
+                    <Shortcut key={c.slug} active={catFilter.includes(c.slug)} onClick={() => toggleCat(c.slug)}>
+                      {c.name} <span className="opacity-55 text-[10px]">({c.items.length})</span>
+                    </Shortcut>
+                  ))}
+                </div>
+              )}
             </div>
             {(search || catFilter.length > 0) && (
               <Shortcut className="mt-2.5" onClick={() => { setSearch(""); setCatFilter([]); setPage(1); }}>

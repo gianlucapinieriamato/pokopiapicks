@@ -66,7 +66,7 @@ export default function Home() {
   return (
     <div className="max-w-[1080px] mx-auto px-5 pt-8 pb-20 relative z-[1]">
       <header className="text-center mb-5 pt-6 pb-2 px-5">
-        <h1 className="font-outfit font-extrabold text-[clamp(2rem,5vw,3.4rem)] leading-none tracking-[-0.025em] mb-2 uppercase whitespace-nowrap">
+        <h1 className="font-outfit font-semibold text-[clamp(2rem,5vw,3.4rem)] leading-none tracking-[-0.025em] mb-2 uppercase whitespace-nowrap">
           Pokopia <span className="italic text-accent-deep font-bold">Picks</span>
         </h1>
         <p className="max-w-[560px] mx-auto text-ink-soft text-[15px] leading-[1.55]">
@@ -98,16 +98,17 @@ export default function Home() {
           {showSuggestions && matches.length > 0 && (
             <div className="absolute top-[calc(100%+6px)] left-0 right-0 bg-paper border border-[1.5px] border-paper-edge rounded-[14px] max-h-[360px] overflow-y-auto z-10 block shadow-[0_12px_28px_-8px_var(--shadow)]">
               {matches.map((p, i) => (
-                <div
+                <button
                   key={p.slug}
+                  type="button"
                   className={`${SUGGESTION_ROW}${i === activeIdx ? " bg-surface-1" : ""}`}
                   onMouseDown={(e) => { e.preventDefault(); push(`/pokemon/${p.slug}`); }}
                 >
-                  <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} className="w-11 h-11 object-contain shrink-0 [image-rendering:pixelated]" />
+                  <PkmnIcon src={pkmnIconUrl(p)} alt={p.name} className="size-11 object-contain shrink-0 [image-rendering:pixelated]" />
                   <span className="font-mono text-[11px] text-ink-fade min-w-[38px] font-semibold">#{dexNum(p)}</span>
                   <span className="font-bold text-[15px]">{p.name}</span>
                   <span className="ml-auto font-mono text-[10px] text-ink-soft bg-surface-2 px-2 py-[3px] rounded-full font-semibold">{p.categories.length} cats</span>
-                </div>
+                </button>
               ))}
             </div>
           )}

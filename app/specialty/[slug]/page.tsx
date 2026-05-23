@@ -36,10 +36,11 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ slug
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: s.name, item: `${SITE_URL}/specialty/${slug}` },
+          { "@type": "ListItem", position: 2, name: "Specialties", item: `${SITE_URL}/specialty` },
+          { "@type": "ListItem", position: 3, name: s.name, item: `${SITE_URL}/specialty/${slug}` },
         ],
       }} />
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: s.name }]} />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Specialties", href: "/specialty" }, { label: s.name }]} />
       <PageHeader title={s.name} meta={pokemonWith.length + " Pokemon"}>
         {s.description && <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">{s.description}</p>}
       </PageHeader>

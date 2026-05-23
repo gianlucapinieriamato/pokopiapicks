@@ -235,7 +235,58 @@ def extract_h2_section(html: str, heading_pattern: str) -> list[str]:
     items = [clean_text(li) for li in re.findall(r'<li[^>]*>(.*?)</li>', content, re.IGNORECASE | re.DOTALL)]
     if not items:
         items = [clean_text(td) for td in re.findall(r'<td[^>]*>(.*?)</td>', content, re.IGNORECASE | re.DOTALL)]
-    return [t for t in items if 2 < len(t) < 100 and re.search(r'[a-zA-Z]', t)]
+    seen = set()
+    out = []
+    for t in items:
+        if 2 < len(t) < 100 and re.search(r'[a-zA-Z]', t) and t not in seen:
+            seen.add(t)
+            out.append(t)
+    return out
+
+
+def extract_fooevo_section(html: str, heading_pattern: str) -> list[str]:
+    """Extract only fooevo td items from the section following an <h2>. Safer than extract_h2_section
+    for sections that also have cen tds with quantity/image noise."""
+    m = re.search(
+        r'<h2[^>]*>[^<]*' + heading_pattern + r'[^<]*</h2>(.*?)(?=<h2|</body)',
+        html, re.IGNORECASE | re.DOTALL,
+    )
+    if not m:
+        return []
+    content = m.group(1)
+    items = [clean_text(td) for td in re.findall(r'<td[^>]*class=["\']fooevo["\'][^>]*>(.*?)</td>', content, re.IGNORECASE | re.DOTALL)]
+    seen = set()
+    out = []
+    for t in items:
+        if 2 < len(t) < 100 and re.search(r'[a-zA-Z]', t) and t not in seen:
+            seen.add(t)
+            out.append(t)
+    return out
+
+
+def extract_shop_items(html: str) -> list[dict]:
+    """Extract shop items with unlock levels from the Exclusive Shop Items section."""
+    m = re.search(
+        r'<h2[^>]*>[^<]*Exclusive Shop Items[^<]*</h2>(.*?)(?=<h2|</body)',
+        html, re.IGNORECASE | re.DOTALL,
+    )
+    if not m:
+        return []
+    content = m.group(1)
+    results = []
+    for row in re.findall(r'<tr[^>]*>(.*?)</tr>', content, re.IGNORECASE | re.DOTALL):
+        level_m = re.search(r'<td[^>]*class=["\']fooinfo["\'][^>]*>Lv\.\s*(\d+)', row, re.IGNORECASE)
+        if not level_m:
+            continue
+        level = int(level_m.group(1))
+        # Name is in a cen td that does NOT start with <img
+        name_m = re.search(r'<td[^>]*class=["\']cen["\'][^>]*>(?!\s*<img)([^<]+)', row, re.IGNORECASE)
+        if not name_m:
+            continue
+        name = clean_text(name_m.group(1))
+        if name:
+            results.append({'name': name, 'level': level})
+    return results
 
 
 def scrape_locations(use_cache: bool) -> None:
@@ -276,6 +327,10 @@ def scrape_locations(use_cache: bool) -> None:
 
         materials = extract_h2_section(page_stripped, r'Materials')
         blocks_plants = extract_h2_section(page_stripped, r'Plants')
+        items_in_area = extract_fooevo_section(page_stripped, r'Items Found in Area')
+        items_in_pokeballs = extract_fooevo_section(page_stripped, r'Items Found in Pok')
+        treasure = extract_fooevo_section(page_stripped, r'Treasure Found in Area')
+        shop_items = extract_shop_items(page_stripped)
 
         results[slug] = {
             'slug': slug,
@@ -284,8 +339,12 @@ def scrape_locations(use_cache: bool) -> None:
             'objective': '',
             'materials': materials,
             'blocksAndPlants': blocks_plants,
+            'itemsInArea': items_in_area,
+            'itemsInPokeballs': items_in_pokeballs,
+            'treasure': treasure,
+            'shopItems': shop_items,
         }
-        print(f'OK — {len(materials)} materials, {len(blocks_plants)} plants/blocks')
+        print(f'OK — {len(materials)} mat, {len(blocks_plants)} plants, {len(items_in_area)} area, {len(items_in_pokeballs)} balls, {len(treasure)} treasure, {len(shop_items)} shop')
 
     out = DATA_DIR / 'locations.json'
     out.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding='utf-8')
