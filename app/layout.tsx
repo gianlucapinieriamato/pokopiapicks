@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
+    url: SITE_URL,
     siteName: SITE_NAME,
     title: `${SITE_NAME} · What each Pokemon likes`,
     description: SITE_DESCRIPTION,
@@ -41,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`h-full ${outfit.variable} ${jetbrainsMono.variable}`}>
-      <head>
+      <body className="min-h-full flex flex-col">
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6028271541011678"
@@ -54,21 +55,37 @@ export default function RootLayout({
           name: SITE_NAME,
           url: SITE_URL,
           description: SITE_DESCRIPTION,
+          potentialAction: {
+            "@type": "SearchAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: `${SITE_URL}/pokedex/?q={search_term_string}`,
+            },
+            "query-input": "required name=search_term_string",
+          },
         }} />
-      </head>
-      <body className="min-h-full flex flex-col">
         <Nav />
-        <div className="max-w-[1080px] mx-auto px-5 py-2">
+        <div className="min-h-[90px] flex items-center justify-center max-w-[1080px] mx-auto px-5 py-2 w-full" aria-hidden="true">
           <AdSlot slot="8403578120" format="horizontal" />
         </div>
         <main className="flex-1">
           {children}
         </main>
-        <div className="max-w-[1080px] mx-auto px-5 py-2">
+        <div className="min-h-[90px] flex items-center justify-center max-w-[1080px] mx-auto px-5 py-2 w-full" aria-hidden="true">
           <AdSlot slot="2178978334" format="horizontal" />
         </div>
-        <footer className="text-center py-6 px-5 font-mono text-[10px] text-ink-fade tracking-[0.04em] font-medium border-t border-paper-edge bg-chrome">
-          Pokopia Picks
+        <footer className="mt-12 py-6 border-t border-paper-edge text-center">
+          <p className="text-[13px] text-ink-soft">
+            Pokopia Picks — fan-made wiki for Pokémon Pokopia.{" "}
+            <a
+              href="https://www.serebii.net/pokemonpokopia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-ink"
+            >
+              Data from Serebii
+            </a>
+          </p>
         </footer>
       </body>
     </html>
