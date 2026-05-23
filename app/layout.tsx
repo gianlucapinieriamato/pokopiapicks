@@ -87,15 +87,7 @@ export default function RootLayout({
         <AdSlot slot="2178978334" format="horizontal" />
         <footer className="mt-12 py-6 border-t border-paper-edge text-center">
           <p className="text-[13px] text-ink-soft">
-            Pokopia Picks — fan-made wiki for Pokemon Pokopia.{" "}
-            <a
-              href="https://www.serebii.net/pokemonpokopia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-ink"
-            >
-              Data from Serebii
-            </a>
+            Pokopia Picks — fan-made wiki for Pokemon Pokopia.
           </p>
         </footer>
       </body>

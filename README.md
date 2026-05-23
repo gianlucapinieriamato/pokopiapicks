@@ -29,8 +29,6 @@ All game data lives in `/data/*.json`:
 | `habitats.json`            | 201 in-game habitat types with Pokemon reverse lookup                           |
 | `locations.json`           | 6 locations with materials and plants/blocks                                    |
 
-Data scraped from [Serebii](https://www.serebii.net/pokemonpokopia/). HQ sprites from [PokeAPI sprites](https://github.com/PokeAPI/sprites) (BSD-3-Clause).
-
 ## Scraping
 
 ```bash

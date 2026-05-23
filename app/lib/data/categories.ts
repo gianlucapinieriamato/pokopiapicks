@@ -2,9 +2,9 @@ import type { CategoryEntry } from "../types";
 
 export const CATEGORIES: Record<string, CategoryEntry> = {
   "blocky-stuff": {
-    "slug": "blocky-stuff",
-    "name": "Blocky stuff",
-    "items": [
+    slug: "blocky-stuff",
+    name: "Blocky stuff",
+    items: [
       "Wall storage box",
       "Plain chest",
       "Office cabinet",
@@ -71,13 +71,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Mini generator",
       "Wall light",
       "Town map",
-      "Team Rocket Wall Hanging"
-    ]
+      "Team Rocket Wall Hanging",
+    ],
   },
-  "cleanliness": {
-    "slug": "cleanliness",
-    "name": "Cleanliness",
-    "items": [
+  cleanliness: {
+    slug: "cleanliness",
+    name: "Cleanliness",
+    items: [
       "Waterproof seat",
       "Modern sink",
       "Washing machine",
@@ -89,13 +89,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Shower",
       "Bathtub",
       "Bouncy blue bathtub",
-      "Water basin"
-    ]
+      "Water basin",
+    ],
   },
   "colorful-stuff": {
-    "slug": "colorful-stuff",
-    "name": "Colorful stuff",
-    "items": [
+    slug: "colorful-stuff",
+    name: "Colorful stuff",
+    items: [
       "Pokemetal",
       "Red paint",
       "Blue paint",
@@ -172,13 +172,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Juice trio",
       "Flower garland",
       "Jewel wall decoration",
-      "Treasure"
-    ]
+      "Treasure",
+    ],
   },
   "complicated-stuff": {
-    "slug": "complicated-stuff",
-    "name": "Complicated stuff",
-    "items": [
+    slug: "complicated-stuff",
+    name: "Complicated stuff",
+    items: [
       "Pencil holder",
       "Fancy pen",
       "Letter",
@@ -217,26 +217,26 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Card reader",
       "Town map",
       "Team Rocket Wall Hanging",
-      "Digital camera"
-    ]
+      "Digital camera",
+    ],
   },
-  "construction": {
-    "slug": "construction",
-    "name": "Construction",
-    "items": [
+  construction: {
+    slug: "construction",
+    name: "Construction",
+    items: [
       "Sandbags",
       "Metal drum",
       "Construction supplies",
       "Iron pipes",
       "Wheelbarrow",
       "Iron-scaffold plank",
-      "Iron scaffold"
-    ]
+      "Iron scaffold",
+    ],
   },
-  "containers": {
-    "slug": "containers",
-    "name": "Containers",
-    "items": [
+  containers: {
+    slug: "containers",
+    name: "Containers",
+    items: [
       "Wall storage box",
       "Plain chest",
       "Office cabinet",
@@ -296,13 +296,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Juice trio",
       "Flower backpack",
       "Adventure kit",
-      "Oil lantern"
-    ]
+      "Oil lantern",
+    ],
   },
   "cute-stuff": {
-    "slug": "cute-stuff",
-    "name": "Cute stuff",
-    "items": [
+    slug: "cute-stuff",
+    name: "Cute stuff",
+    items: [
       "Poke Ball Chest",
       "Berry case",
       "Polygonal Shelf",
@@ -358,13 +358,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Flowery table setting",
       "Lunch box",
       "Hoppip water bottle",
-      "Flower backpack"
-    ]
+      "Flower backpack",
+    ],
   },
-  "electronics": {
-    "slug": "electronics",
-    "name": "Electronics",
-    "items": [
+  electronics: {
+    slug: "electronics",
+    name: "Electronics",
+    items: [
       "Gaming fridge",
       "Gaming chair",
       "Gaming bed",
@@ -437,23 +437,18 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Berry hanging lamp",
       "Surface light",
       "Spotlight",
-      "Antique chandelier"
-    ]
+      "Antique chandelier",
+    ],
   },
-  "exercise": {
-    "slug": "exercise",
-    "name": "Exercise",
-    "items": [
-      "Punching game",
-      "Wobbuffet Wobbler",
-      "Punching bag",
-      "Bike"
-    ]
+  exercise: {
+    slug: "exercise",
+    name: "Exercise",
+    items: ["Punching game", "Wobbuffet Wobbler", "Punching bag", "Bike"],
   },
-  "fabric": {
-    "slug": "fabric",
-    "name": "Fabric",
-    "items": [
+  fabric: {
+    slug: "fabric",
+    name: "Fabric",
+    items: [
       "Fluff",
       "Plain chest",
       "Plain closet",
@@ -524,13 +519,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Room Service",
       "Camping chair",
       "Sleeping bag",
-      "Adventure kit"
-    ]
+      "Adventure kit",
+    ],
   },
-  "garbage": {
-    "slug": "garbage",
-    "name": "Garbage",
-    "items": [
+  garbage: {
+    slug: "garbage",
+    name: "Garbage",
+    items: [
       "Nonburnable garbage",
       "Wastepaper",
       "Small garbage can",
@@ -545,13 +540,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Garbage bags",
       "Garbage bin",
       "Recycling bin",
-      "Nonburnable garbage (outdoor)"
-    ]
+      "Nonburnable garbage (outdoor)",
+    ],
   },
-  "gatherings": {
-    "slug": "gatherings",
-    "name": "Gatherings",
-    "items": [
+  gatherings: {
+    slug: "gatherings",
+    name: "Gatherings",
+    items: [
       "Office shelf",
       "Tea set",
       "Table setting",
@@ -589,13 +584,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Flowery table setting",
       "Lunch box",
       "Juice trio",
-      "Flower garland"
-    ]
+      "Flower garland",
+    ],
   },
   "glass-stuff": {
-    "slug": "glass-stuff",
-    "name": "Glass stuff",
-    "items": [
+    slug: "glass-stuff",
+    name: "Glass stuff",
+    items: [
       "Sea glass fragments",
       "Crystal fragment",
       "Glass",
@@ -674,13 +669,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Juice trio",
       "Red crystal fragment",
       "Digital camera",
-      "Oil lantern"
-    ]
+      "Oil lantern",
+    ],
   },
   "group-activities": {
-    "slug": "group-activities",
-    "name": "Group Activities",
-    "items": [
+    slug: "group-activities",
+    name: "Group Activities",
+    items: [
       "Wooden bench",
       "Stone bench",
       "Plain sofa",
@@ -733,13 +728,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Flower cushion",
       "Flowery table setting",
       "Map and compass",
-      "Treasure"
-    ]
+      "Treasure",
+    ],
   },
   "hard-stuff": {
-    "slug": "hard-stuff",
-    "name": "Hard stuff",
-    "items": [
+    slug: "hard-stuff",
+    name: "Hard stuff",
+    items: [
       "Stone",
       "Iron stand",
       "Iron table",
@@ -786,21 +781,18 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Stone roof valley",
       "Stone roof decoration",
       "Stone debris",
-      "Metal Debris"
-    ]
+      "Metal Debris",
+    ],
   },
-  "healing": {
-    "slug": "healing",
-    "name": "Healing",
-    "items": [
-      "Humidifier",
-      "First aid kit"
-    ]
+  healing: {
+    slug: "healing",
+    name: "Healing",
+    items: ["Humidifier", "First aid kit"],
   },
   "letters-and-words": {
-    "slug": "letters-and-words",
-    "name": "Letters and words",
-    "items": [
+    slug: "letters-and-words",
+    name: "Letters and words",
+    items: [
       "Office shelf",
       "Letter",
       "Notepad",
@@ -829,13 +821,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Raichu sign",
       "Frame",
       "Weakness Policy",
-      "Map and compass"
-    ]
+      "Map and compass",
+    ],
   },
   "looks-like-food": {
-    "slug": "looks-like-food",
-    "name": "Looks like food",
-    "items": [
+    slug: "looks-like-food",
+    name: "Looks like food",
+    items: [
       "Berry case",
       "Berry table",
       "Berry chair",
@@ -858,13 +850,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Leftovers",
       "Berry print",
       "Lunch box",
-      "Juice trio"
-    ]
+      "Juice trio",
+    ],
   },
   "lots-of-dirt": {
-    "slug": "lots-of-dirt",
-    "name": "Lots of dirt",
-    "items": [
+    slug: "lots-of-dirt",
+    name: "Lots of dirt",
+    items: [
       "Red paint",
       "Blue paint",
       "Green paint",
@@ -900,13 +892,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Tundra Fossil (head)",
       "Tundra Fossil (body)",
       "Tundra Fossil (tail)",
-      "Mud"
-    ]
+      "Mud",
+    ],
   },
   "lots-of-fire": {
-    "slug": "lots-of-fire",
-    "name": "Lots of fire",
-    "items": [
+    slug: "lots-of-fire",
+    name: "Lots of fire",
+    items: [
       "Cooking stove",
       "Fiery Magby statue",
       "Campfire",
@@ -919,13 +911,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Smelting furnace",
       "Metallic smelting furnace",
       "Charcoal",
-      "Oil lantern"
-    ]
+      "Oil lantern",
+    ],
   },
   "lots-of-nature": {
-    "slug": "lots-of-nature",
-    "name": "Lots of nature",
-    "items": [
+    slug: "lots-of-nature",
+    name: "Lots of nature",
+    items: [
       "Berry case",
       "Straw table",
       "Log table",
@@ -953,13 +945,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Miracle Seed",
       "Silver Powder",
       "Big Root",
-      "Berry print"
-    ]
+      "Berry print",
+    ],
   },
   "lots-of-water": {
-    "slug": "lots-of-water",
-    "name": "Lots of water",
-    "items": [
+    slug: "lots-of-water",
+    name: "Lots of water",
+    items: [
       "Resort hammock",
       "Table setting",
       "Paper Party cups",
@@ -983,13 +975,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Sprinkler",
       "Mystic Water",
       "Water pillar quarter",
-      "Hoppip water bottle"
-    ]
+      "Hoppip water bottle",
+    ],
   },
-  "luxury": {
-    "slug": "luxury",
-    "name": "Luxury",
-    "items": [
+  luxury: {
+    slug: "luxury",
+    name: "Luxury",
+    items: [
       "Antique chest",
       "Antique closet",
       "Antique table",
@@ -1023,13 +1015,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Luxury lamp",
       "Antique chandelier",
       "Jewel wall decoration",
-      "Treasure"
-    ]
+      "Treasure",
+    ],
   },
   "metal-stuff": {
-    "slug": "metal-stuff",
-    "name": "Metal stuff",
-    "items": [
+    slug: "metal-stuff",
+    name: "Metal stuff",
+    items: [
       "Copper ore",
       "Iron ore",
       "Gold ore",
@@ -1144,13 +1136,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Camping chair",
       "Digital camera",
       "Treasure",
-      "Oil lantern"
-    ]
+      "Oil lantern",
+    ],
   },
   "nice-breezes": {
-    "slug": "nice-breezes",
-    "name": "Nice breezes",
-    "items": [
+    slug: "nice-breezes",
+    name: "Nice breezes",
+    items: [
       "Fan",
       "Air conditioner",
       "Pinwheels",
@@ -1158,13 +1150,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Model space shuttle",
       "Ceiling fan",
       "Weather vane",
-      "Large ventilation fan"
-    ]
+      "Large ventilation fan",
+    ],
   },
   "noisy-stuff": {
-    "slug": "noisy-stuff",
-    "name": "Noisy stuff",
-    "items": [
+    slug: "noisy-stuff",
+    name: "Noisy stuff",
+    items: [
       "Alarm Clock",
       "CD player",
       "Cool electric guitar",
@@ -1179,13 +1171,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Music mat (Sol)",
       "Music mat (La)",
       "Music mat (Ti)",
-      "Music mat (High do)"
-    ]
+      "Music mat (High do)",
+    ],
   },
   "ocean-vibes": {
-    "slug": "ocean-vibes",
-    "name": "Ocean vibes",
-    "items": [
+    slug: "ocean-vibes",
+    name: "Ocean vibes",
+    items: [
       "Resort stool",
       "Resort chair",
       "Resort sofa",
@@ -1199,13 +1191,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Fishing rod",
       "Harbor streetlight",
       "Shell lamp",
-      "Resort light"
-    ]
+      "Resort light",
+    ],
   },
   "play-spaces": {
-    "slug": "play-spaces",
-    "name": "Play spaces",
-    "items": [
+    slug: "play-spaces",
+    name: "Play spaces",
+    items: [
       "Arcade machine",
       "Toy blocks",
       "Pinwheels",
@@ -1224,13 +1216,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Music mat (Sol)",
       "Music mat (La)",
       "Music mat (Ti)",
-      "Music mat (High do)"
-    ]
+      "Music mat (High do)",
+    ],
   },
   "pretty-flowers": {
-    "slug": "pretty-flowers",
-    "name": "Pretty flowers",
-    "items": [
+    slug: "pretty-flowers",
+    name: "Pretty flowers",
+    items: [
       "Small vase",
       "Leafy plant",
       "Extravagant flowers",
@@ -1284,24 +1276,24 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Flower cushion",
       "Flowery table setting",
       "Flower garland",
-      "Flower backpack"
-    ]
+      "Flower backpack",
+    ],
   },
-  "rides": {
-    "slug": "rides",
-    "name": "Rides",
-    "items": [
+  rides: {
+    slug: "rides",
+    name: "Rides",
+    items: [
       "Step stool",
       "Model space shuttle",
       "Spaceship",
       "Bike",
-      "Handcar"
-    ]
+      "Handcar",
+    ],
   },
   "round-stuff": {
-    "slug": "round-stuff",
-    "name": "Round stuff",
-    "items": [
+    slug: "round-stuff",
+    name: "Round stuff",
+    items: [
       "Fluff",
       "Poke Ball Chest",
       "Pizza",
@@ -1413,23 +1405,18 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Adrenaline Orb",
       "Flame Orb",
       "Ring Target",
-      "Armor Fossil"
-    ]
+      "Armor Fossil",
+    ],
   },
   "sharp-stuff": {
-    "slug": "sharp-stuff",
-    "name": "Sharp stuff",
-    "items": [
-      "Fancy pen",
-      "Vending machine",
-      "Frame",
-      "Wall light"
-    ]
+    slug: "sharp-stuff",
+    name: "Sharp stuff",
+    items: ["Fancy pen", "Vending machine", "Frame", "Wall light"],
   },
   "shiny-stuff": {
-    "slug": "shiny-stuff",
-    "name": "Shiny stuff",
-    "items": [
+    slug: "shiny-stuff",
+    name: "Shiny stuff",
+    items: [
       "Crystal fragment",
       "Stardust",
       "Poke Ball Chest",
@@ -1489,13 +1476,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Rainbow Feather",
       "Silver Feather",
       "Red crystal fragment",
-      "Digital camera"
-    ]
+      "Digital camera",
+    ],
   },
   "slender-objects": {
-    "slug": "slender-objects",
-    "name": "Slender objects",
-    "items": [
+    slug: "slender-objects",
+    name: "Slender objects",
+    items: [
       "Vine rope",
       "Twine",
       "Small vase",
@@ -1534,13 +1521,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Metal chain",
       "Rope",
       "Broken streetlight",
-      "Inflatable Sudowoodo"
-    ]
+      "Inflatable Sudowoodo",
+    ],
   },
   "soft-stuff": {
-    "slug": "soft-stuff",
-    "name": "Soft stuff",
-    "items": [
+    slug: "soft-stuff",
+    name: "Soft stuff",
+    items: [
       "Squishy clay",
       "Fluff",
       "Straw stool",
@@ -1604,13 +1591,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Flower backpack",
       "Camping chair",
       "Sleeping bag",
-      "Adventure kit"
-    ]
+      "Adventure kit",
+    ],
   },
   "spinning-stuff": {
-    "slug": "spinning-stuff",
-    "name": "Spinning stuff",
-    "items": [
+    slug: "spinning-stuff",
+    name: "Spinning stuff",
+    items: [
       "Fancy chair",
       "Office chair",
       "Gaming chair",
@@ -1621,13 +1608,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Weather vane",
       "Small stage",
       "Large ventilation fan",
-      "Model planet"
-    ]
+      "Model planet",
+    ],
   },
   "spooky-stuff": {
-    "slug": "spooky-stuff",
-    "name": "Spooky stuff",
-    "items": [
+    slug: "spooky-stuff",
+    name: "Spooky stuff",
+    items: [
       "Luxury chair",
       "Pitcher-plant pot",
       "Munna bank",
@@ -1637,13 +1624,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Eerie candle",
       "Gravestone",
       "Mushroom streetlight",
-      "Spell Tag"
-    ]
+      "Spell Tag",
+    ],
   },
   "stone-stuff": {
-    "slug": "stone-stuff",
-    "name": "Stone stuff",
-    "items": [
+    slug: "stone-stuff",
+    name: "Stone stuff",
+    items: [
       "Stone",
       "Stone bench",
       "Luxury bed",
@@ -1695,13 +1682,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Stone debris",
       "Metal Debris",
       "Jewel wall decoration",
-      "Treasure"
-    ]
+      "Treasure",
+    ],
   },
   "strange-stuff": {
-    "slug": "strange-stuff",
-    "name": "Strange stuff",
-    "items": [
+    slug: "strange-stuff",
+    name: "Strange stuff",
+    items: [
       "Armor fragment",
       "Polygonal Shelf",
       "Wall mirror",
@@ -1794,24 +1781,24 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Tundra Fossil (body)",
       "Tundra Fossil (tail)",
       "Inflatable Sudowoodo",
-      "Digital camera"
-    ]
+      "Digital camera",
+    ],
   },
-  "symbols": {
-    "slug": "symbols",
-    "name": "Symbols",
-    "items": [
+  symbols: {
+    slug: "symbols",
+    name: "Symbols",
+    items: [
       "Mug",
       "Sign",
       "Signpost",
       "Information board",
-      "Team Rocket Wall Hanging"
-    ]
+      "Team Rocket Wall Hanging",
+    ],
   },
   "watching-stuff": {
-    "slug": "watching-stuff",
-    "name": "Watching stuff",
-    "items": [
+    slug: "watching-stuff",
+    name: "Watching stuff",
+    items: [
       "Wall mirror",
       "Wiggly mirror",
       "Small vase",
@@ -1854,13 +1841,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Water pillar quarter",
       "Flower garland",
       "Inflatable Sudowoodo",
-      "Jewel wall decoration"
-    ]
+      "Jewel wall decoration",
+    ],
   },
   "wobbly-stuff": {
-    "slug": "wobbly-stuff",
-    "name": "Wobbly stuff",
-    "items": [
+    slug: "wobbly-stuff",
+    name: "Wobbly stuff",
+    items: [
       "Folding chair",
       "Resort hammock",
       "Leafy plant",
@@ -1879,13 +1866,13 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Fishing rod",
       "Tires",
       "Resort light",
-      "Inflatable Sudowoodo"
-    ]
+      "Inflatable Sudowoodo",
+    ],
   },
   "wooden-stuff": {
-    "slug": "wooden-stuff",
-    "name": "Wooden stuff",
-    "items": [
+    slug: "wooden-stuff",
+    name: "Wooden stuff",
+    items: [
       "Storage box",
       "Wall storage box",
       "Big storage box",
@@ -1924,7 +1911,7 @@ export const CATEGORIES: Record<string, CategoryEntry> = {
       "Frame",
       "Cutting board",
       "Mushroom lamp",
-      "Stone fragments"
-    ]
-  }
+      "Stone fragments",
+    ],
+  },
 };

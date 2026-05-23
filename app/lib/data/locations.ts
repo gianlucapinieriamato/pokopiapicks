@@ -1,12 +1,13 @@
 import type { LocationEntry } from "../types";
 
 export const LOCATIONS: Record<string, LocationEntry> = {
-  "witheredwastelands": {
-    "slug": "witheredwastelands",
-    "name": "Withered Wastelands",
-    "description": "The Withered Wastelands are a collection of grassy areas and caves alongside a coast that make up what used to be Fuchsia City and its surrounding area. Your task here is to get the area to rain, as rain hasn't fallen here for some time",
-    "objective": "",
-    "materials": [
+  witheredwastelands: {
+    slug: "witheredwastelands",
+    name: "Withered Wastelands",
+    description:
+      "The Withered Wastelands are a collection of grassy areas and caves alongside a coast that make up what used to be Fuchsia City and its surrounding area. Your task here is to get the area to rain, as rain hasn't fallen here for some time",
+    objective: "",
+    materials: [
       "Sturdy stick",
       "Stone",
       "Leaf",
@@ -27,9 +28,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Squishy clay",
       "Copper ore",
       "Gold ore",
-      "Pokemetal fragment"
+      "Pokemetal fragment",
     ],
-    "blocksAndPlants": [
+    blocksAndPlants: [
       "Tall grass",
       "Moss",
       "Wildflowers",
@@ -103,9 +104,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Cracked sandstone",
       "Copper deposit (Wasteland)",
       "Gold deposit",
-      "Pokemetal deposit"
+      "Pokemetal deposit",
     ],
-    "itemsInArea": [
+    itemsInArea: [
       "Workbench",
       "Professor's treasure trove",
       "Straw bed",
@@ -168,9 +169,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Tall potted plant",
       "Office cabinet",
       "Poke Ball Doormat",
-      "Town map"
+      "Town map",
     ],
-    "itemsInPokeballs": [
+    itemsInPokeballs: [
       "Adorable-hedge seeds",
       "Arched tiling",
       "Bridge planks Recipe",
@@ -191,9 +192,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Torch",
       "Vine rope",
       "Water basin Recipe",
-      "Wooden bed Recipe"
+      "Wooden bed Recipe",
     ],
-    "treasure": [
+    treasure: [
       "Large lost relic",
       "Small lost relic",
       "Pikachu doll",
@@ -210,277 +211,278 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Wing fossil (body)",
       "Wing Fossil (tail)",
       "Strange strings",
-      "Armor fragment"
+      "Armor fragment",
     ],
-    "shopItems": [
+    shopItems: [
       {
-        "name": "Garden bench",
-        "level": 2
+        name: "Garden bench",
+        level: 2,
       },
       {
-        "name": "Leaf hut kit",
-        "level": 2
+        name: "Leaf hut kit",
+        level: 2,
       },
       {
-        "name": "Log bed",
-        "level": 2
+        name: "Log bed",
+        level: 2,
       },
       {
-        "name": "Mug",
-        "level": 2
+        name: "Mug",
+        level: 2,
       },
       {
-        "name": "Mysterious goggles",
-        "level": 2
+        name: "Mysterious goggles",
+        level: 2,
       },
       {
-        "name": "Slender candle",
-        "level": 2
+        name: "Slender candle",
+        level: 2,
       },
       {
-        "name": "Wooden chair",
-        "level": 2
+        name: "Wooden chair",
+        level: 2,
       },
       {
-        "name": "Workbench Recipe",
-        "level": 2
+        name: "Workbench Recipe",
+        level: 2,
       },
       {
-        "name": "Castform weather charm",
-        "level": 3
+        name: "Castform weather charm",
+        level: 3,
       },
       {
-        "name": "Handy bag",
-        "level": 3
+        name: "Handy bag",
+        level: 3,
       },
       {
-        "name": "Horsea fountain",
-        "level": 3
+        name: "Horsea fountain",
+        level: 3,
       },
       {
-        "name": "Leaf den kit",
-        "level": 3
+        name: "Leaf den kit",
+        level: 3,
       },
       {
-        "name": "Security camera",
-        "level": 3
+        name: "Security camera",
+        level: 3,
       },
       {
-        "name": "Toy blocks",
-        "level": 3
+        name: "Toy blocks",
+        level: 3,
       },
       {
-        "name": "Tripod",
-        "level": 3
+        name: "Tripod",
+        level: 3,
       },
       {
-        "name": "Twisted potted plant",
-        "level": 3
+        name: "Twisted potted plant",
+        level: 3,
       },
       {
-        "name": "Water basin",
-        "level": 3
+        name: "Water basin",
+        level: 3,
       },
       {
-        "name": "Wooden bed",
-        "level": 3
+        name: "Wooden bed",
+        level: 3,
       },
       {
-        "name": "Arched tiling Recipe",
-        "level": 3
+        name: "Arched tiling Recipe",
+        level: 3,
       },
       {
-        "name": "Hay pile Recipe",
-        "level": 3
+        name: "Hay pile Recipe",
+        level: 3,
       },
       {
-        "name": "Wooden fencing Recipe",
-        "level": 3
+        name: "Wooden fencing Recipe",
+        level: 3,
       },
       {
-        "name": "Wooden gate Recipe",
-        "level": 3
+        name: "Wooden gate Recipe",
+        level: 3,
       },
       {
-        "name": "Cart",
-        "level": 4
+        name: "Cart",
+        level: 4,
       },
       {
-        "name": "Leaf cottage kit",
-        "level": 4
+        name: "Leaf cottage kit",
+        level: 4,
       },
       {
-        "name": "Mushroom streetlight",
-        "level": 4
+        name: "Mushroom streetlight",
+        level: 4,
       },
       {
-        "name": "PP Up",
-        "level": 4
+        name: "PP Up",
+        level: 4,
       },
       {
-        "name": "Berry basket Recipe",
-        "level": 4
+        name: "Berry basket Recipe",
+        level: 4,
       },
       {
-        "name": "Community box Recipe",
-        "level": 4
+        name: "Community box Recipe",
+        level: 4,
       },
       {
-        "name": "House partition Recipe",
-        "level": 4
+        name: "House partition Recipe",
+        level: 4,
       },
       {
-        "name": "Wooden ladder Recipe",
-        "level": 4
+        name: "Wooden ladder Recipe",
+        level: 4,
       },
       {
-        "name": "Bonfire",
-        "level": 5
+        name: "Bonfire",
+        level: 5,
       },
       {
-        "name": "Leaf house kit",
-        "level": 5
+        name: "Leaf house kit",
+        level: 5,
       },
       {
-        "name": "Pink hut kit",
-        "level": 5
+        name: "Pink hut kit",
+        level: 5,
       },
       {
-        "name": "Flat tiled roof Recipe",
-        "level": 5
+        name: "Flat tiled roof Recipe",
+        level: 5,
       },
       {
-        "name": "Hatch window Recipe",
-        "level": 5
+        name: "Hatch window Recipe",
+        level: 5,
       },
       {
-        "name": "Magikarp decoration Recipe",
-        "level": 5
+        name: "Magikarp decoration Recipe",
+        level: 5,
       },
       {
-        "name": "Party popper Recipe",
-        "level": 5
+        name: "Party popper Recipe",
+        level: 5,
       },
       {
-        "name": "Sloped tiled roof Recipe",
-        "level": 5
+        name: "Sloped tiled roof Recipe",
+        level: 5,
       },
       {
-        "name": "Tiled hipped roof Recipe",
-        "level": 5
+        name: "Tiled hipped roof Recipe",
+        level: 5,
       },
       {
-        "name": "Tiled roof decoration Recipe",
-        "level": 5
+        name: "Tiled roof decoration Recipe",
+        level: 5,
       },
       {
-        "name": "Tiled roof valley Recipe",
-        "level": 5
+        name: "Tiled roof valley Recipe",
+        level: 5,
       },
       {
-        "name": "Underground hatch Recipe",
-        "level": 5
+        name: "Underground hatch Recipe",
+        level: 5,
       },
       {
-        "name": "Pokemetal",
-        "level": 6
+        name: "Pokemetal",
+        level: 6,
       },
       {
-        "name": "Wall mirror",
-        "level": 6
+        name: "Wall mirror",
+        level: 6,
       },
       {
-        "name": "Diagonal wooden flooring Recipe",
-        "level": 6
+        name: "Diagonal wooden flooring Recipe",
+        level: 6,
       },
       {
-        "name": "Floor switch Recipe",
-        "level": 6
+        name: "Floor switch Recipe",
+        level: 6,
       },
       {
-        "name": "Garden light Recipe",
-        "level": 6
+        name: "Garden light Recipe",
+        level: 6,
       },
       {
-        "name": "Wall Mirror Recipe",
-        "level": 6
+        name: "Wall Mirror Recipe",
+        level: 6,
       },
       {
-        "name": "Rare Pokemetal",
-        "level": 7
+        name: "Rare Pokemetal",
+        level: 7,
       },
       {
-        "name": "Ditto rug Recipe",
-        "level": 7
+        name: "Ditto rug Recipe",
+        level: 7,
       },
       {
-        "name": "Garden bench Recipe",
-        "level": 7
+        name: "Garden bench Recipe",
+        level: 7,
       },
       {
-        "name": "Garden chair Recipe",
-        "level": 7
+        name: "Garden chair Recipe",
+        level: 7,
       },
       {
-        "name": "Painted wall Recipe",
-        "level": 7
+        name: "Painted wall Recipe",
+        level: 7,
       },
       {
-        "name": "Relaxing park kit",
-        "level": 8
+        name: "Relaxing park kit",
+        level: 8,
       },
       {
-        "name": "Garden flowers Recipe",
-        "level": 8
+        name: "Garden flowers Recipe",
+        level: 8,
       },
       {
-        "name": "Garden table Recipe",
-        "level": 8
+        name: "Garden table Recipe",
+        level: 8,
       },
       {
-        "name": "Simple flooring Recipe",
-        "level": 8
+        name: "Simple flooring Recipe",
+        level: 8,
       },
       {
-        "name": "Berry chair Recipe",
-        "level": 9
+        name: "Berry chair Recipe",
+        level: 9,
       },
       {
-        "name": "Berry table lamp Recipe",
-        "level": 9
+        name: "Berry table lamp Recipe",
+        level: 9,
       },
       {
-        "name": "Modern wall Recipe",
-        "level": 9
+        name: "Modern wall Recipe",
+        level: 9,
       },
       {
-        "name": "Berry bed Recipe",
-        "level": 10
+        name: "Berry bed Recipe",
+        level: 10,
       },
       {
-        "name": "Berry hanging lamp Recipe",
-        "level": 10
+        name: "Berry hanging lamp Recipe",
+        level: 10,
       },
       {
-        "name": "Berry table Recipe",
-        "level": 10
+        name: "Berry table Recipe",
+        level: 10,
       },
       {
-        "name": "Berry wall decoration Recipe",
-        "level": 10
+        name: "Berry wall decoration Recipe",
+        level: 10,
       },
       {
-        "name": "Polka-dot print Recipe",
-        "level": 10
-      }
-    ]
+        name: "Polka-dot print Recipe",
+        level: 10,
+      },
+    ],
   },
-  "bleakbeach": {
-    "slug": "bleakbeach",
-    "name": "Bleak Beach",
-    "description": "Bleak Beach is the area that used to be Vermilion City. Here, the land is overcome in darkness no matter the time of day and you have to find a way to bring light to the area.In addition to Vermilion City, it also includes the SS Anne",
-    "objective": "",
-    "materials": [
+  bleakbeach: {
+    slug: "bleakbeach",
+    name: "Bleak Beach",
+    description:
+      "Bleak Beach is the area that used to be Vermilion City. Here, the land is overcome in darkness no matter the time of day and you have to find a way to bring light to the area.In addition to Vermilion City, it also includes the SS Anne",
+    objective: "",
+    materials: [
       "Sturdy stick",
       "Stone",
       "Leaf",
@@ -494,9 +496,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Vine rope",
       "Honey",
       "Seaweed",
-      "Leppa Berry"
+      "Leppa Berry",
     ],
-    "blocksAndPlants": [
+    blocksAndPlants: [
       "Yellow tall grass",
       "Moss",
       "Seashore flowers",
@@ -579,9 +581,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Cube light",
       "Damaged stone flooring",
       "Cracked sandstone",
-      "Copper deposit (Beach)"
+      "Copper deposit (Beach)",
     ],
-    "itemsInArea": [
+    itemsInArea: [
       "Workbench",
       "Garbage bin",
       "Garbage bags",
@@ -695,9 +697,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Iron steps",
       "Spotlight",
       "Poke Ball Doormat",
-      "Town map"
+      "Town map",
     ],
-    "itemsInPokeballs": [
+    itemsInPokeballs: [
       "Alarm clock Recipe",
       "Brick wall",
       "Bridge planks Recipe",
@@ -725,9 +727,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Square tiling Recipe",
       "Utility pole",
       "Utility pole Recipe",
-      "Walkway Recipe"
+      "Walkway Recipe",
     ],
-    "treasure": [
+    treasure: [
       "Large lost relic",
       "Small lost relic",
       "Clefairy doll",
@@ -743,281 +745,282 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Wing fossil (body)",
       "Wing Fossil (tail)",
       "Strange strings",
-      "Armor fragment"
+      "Armor fragment",
     ],
-    "shopItems": [
+    shopItems: [
       {
-        "name": "Beach chair",
-        "level": 2
+        name: "Beach chair",
+        level: 2,
       },
       {
-        "name": "Beach parasol",
-        "level": 2
+        name: "Beach parasol",
+        level: 2,
       },
       {
-        "name": "Desk light",
-        "level": 2
+        name: "Desk light",
+        level: 2,
       },
       {
-        "name": "Sand den kit",
-        "level": 2
+        name: "Sand den kit",
+        level: 2,
       },
       {
-        "name": "Tire toy",
-        "level": 2
+        name: "Tire toy",
+        level: 2,
       },
       {
-        "name": "Wooden birdhouse",
-        "level": 2
+        name: "Wooden birdhouse",
+        level: 2,
       },
       {
-        "name": "Brick steps Recipe",
-        "level": 2
+        name: "Brick steps Recipe",
+        level: 2,
       },
       {
-        "name": "Cash register Recipe",
-        "level": 2
+        name: "Cash register Recipe",
+        level: 2,
       },
       {
-        "name": "Plate Recipe",
-        "level": 2
+        name: "Plate Recipe",
+        level: 2,
       },
       {
-        "name": "First aid kit",
-        "level": 3
+        name: "First aid kit",
+        level: 3,
       },
       {
-        "name": "Knitting supplies",
-        "level": 3
+        name: "Knitting supplies",
+        level: 3,
       },
       {
-        "name": "Sand hut kit",
-        "level": 3
+        name: "Sand hut kit",
+        level: 3,
       },
       {
-        "name": "Harbor streetlight Recipe",
-        "level": 3
+        name: "Harbor streetlight Recipe",
+        level: 3,
       },
       {
-        "name": "Plain sofa Recipe",
-        "level": 3
+        name: "Plain sofa Recipe",
+        level: 3,
       },
       {
-        "name": "Pikachu fountain kit",
-        "level": 4
+        name: "Pikachu fountain kit",
+        level: 4,
       },
       {
-        "name": "Plain closet",
-        "level": 4
+        name: "Plain closet",
+        level: 4,
       },
       {
-        "name": "Plain stand",
-        "level": 4
+        name: "Plain stand",
+        level: 4,
       },
       {
-        "name": "Sand cottage kit",
-        "level": 4
+        name: "Sand cottage kit",
+        level: 4,
       },
       {
-        "name": "Boat railing Recipe",
-        "level": 4
+        name: "Boat railing Recipe",
+        level: 4,
       },
       {
-        "name": "Brick wall Recipe",
-        "level": 4
+        name: "Brick wall Recipe",
+        level: 4,
       },
       {
-        "name": "Grate flooring Recipe",
-        "level": 4
+        name: "Grate flooring Recipe",
+        level: 4,
       },
       {
-        "name": "Plain lamp Recipe",
-        "level": 4
+        name: "Plain lamp Recipe",
+        level: 4,
       },
       {
-        "name": "Mini floodgate",
-        "level": 5
+        name: "Mini floodgate",
+        level: 5,
       },
       {
-        "name": "Orange hut kit",
-        "level": 5
+        name: "Orange hut kit",
+        level: 5,
       },
       {
-        "name": "Sand house kit",
-        "level": 5
+        name: "Sand house kit",
+        level: 5,
       },
       {
-        "name": "Sash window",
-        "level": 5
+        name: "Sash window",
+        level: 5,
       },
       {
-        "name": "Washing Machine",
-        "level": 5
+        name: "Washing Machine",
+        level: 5,
       },
       {
-        "name": "Brick hipped roof Recipe",
-        "level": 5
+        name: "Brick hipped roof Recipe",
+        level: 5,
       },
       {
-        "name": "Brick roof decoration Recipe",
-        "level": 5
+        name: "Brick roof decoration Recipe",
+        level: 5,
       },
       {
-        "name": "Brick roof valley Recipe",
-        "level": 5
+        name: "Brick roof valley Recipe",
+        level: 5,
       },
       {
-        "name": "Dormered brick roof Recipe",
-        "level": 5
+        name: "Dormered brick roof Recipe",
+        level: 5,
       },
       {
-        "name": "Flat brick roof Recipe",
-        "level": 5
+        name: "Flat brick roof Recipe",
+        level: 5,
       },
       {
-        "name": "Modern door Recipe",
-        "level": 5
+        name: "Modern door Recipe",
+        level: 5,
       },
       {
-        "name": "Pitched brick roof Recipe",
-        "level": 5
+        name: "Pitched brick roof Recipe",
+        level: 5,
       },
       {
-        "name": "Plaster wall Recipe",
-        "level": 5
+        name: "Plaster wall Recipe",
+        level: 5,
       },
       {
-        "name": "Sash window Recipe",
-        "level": 5
+        name: "Sash window Recipe",
+        level: 5,
       },
       {
-        "name": "Washing Machine Recipe",
-        "level": 5
+        name: "Washing Machine Recipe",
+        level: 5,
       },
       {
-        "name": "Pokemetal",
-        "level": 6
+        name: "Pokemetal",
+        level: 6,
       },
       {
-        "name": "Brick border (line) Recipe",
-        "level": 6
+        name: "Brick border (line) Recipe",
+        level: 6,
       },
       {
-        "name": "Resort hammock Recipe",
-        "level": 6
+        name: "Resort hammock Recipe",
+        level: 6,
       },
       {
-        "name": "Resort stool Recipe",
-        "level": 6
+        name: "Resort stool Recipe",
+        level: 6,
       },
       {
-        "name": "Soft carpeting Recipe",
-        "level": 6
+        name: "Soft carpeting Recipe",
+        level: 6,
       },
       {
-        "name": "Wall switch Recipe",
-        "level": 6
+        name: "Wall switch Recipe",
+        level: 6,
       },
       {
-        "name": "Rare Pokemetal",
-        "level": 7
+        name: "Rare Pokemetal",
+        level: 7,
       },
       {
-        "name": "Brick border (single) Recipe",
-        "level": 7
+        name: "Brick border (single) Recipe",
+        level: 7,
       },
       {
-        "name": "Cloth wall Recipe",
-        "level": 7
+        name: "Cloth wall Recipe",
+        level: 7,
       },
       {
-        "name": "Poke Ball mat Recipe",
-        "level": 7
+        name: "Poke Ball mat Recipe",
+        level: 7,
       },
       {
-        "name": "Resort chair Recipe",
-        "level": 7
+        name: "Resort chair Recipe",
+        level: 7,
       },
       {
-        "name": "Resort sofa Recipe",
-        "level": 7
+        name: "Resort sofa Recipe",
+        level: 7,
       },
       {
-        "name": "Stylish cafe kit",
-        "level": 8
+        name: "Stylish cafe kit",
+        level: 8,
       },
       {
-        "name": "Brick border (corner) Recipe",
-        "level": 8
+        name: "Brick border (corner) Recipe",
+        level: 8,
       },
       {
-        "name": "Levee Recipe",
-        "level": 8
+        name: "Levee Recipe",
+        level: 8,
       },
       {
-        "name": "Resort bed Recipe",
-        "level": 8
+        name: "Resort bed Recipe",
+        level: 8,
       },
       {
-        "name": "Resort table Recipe",
-        "level": 8
+        name: "Resort table Recipe",
+        level: 8,
       },
       {
-        "name": "Inflatable boat",
-        "level": 9
+        name: "Inflatable boat",
+        level: 9,
       },
       {
-        "name": "Pikachu sofa",
-        "level": 9
+        name: "Pikachu sofa",
+        level: 9,
       },
       {
-        "name": "Cute chair Recipe",
-        "level": 9
+        name: "Cute chair Recipe",
+        level: 9,
       },
       {
-        "name": "Cute lamp Recipe",
-        "level": 9
+        name: "Cute lamp Recipe",
+        level: 9,
       },
       {
-        "name": "Starry-sky wall Recipe",
-        "level": 9
+        name: "Starry-sky wall Recipe",
+        level: 9,
       },
       {
-        "name": "Beach Pokemon Center Kit",
-        "level": 10
+        name: "Beach Pokemon Center Kit",
+        level: 10,
       },
       {
-        "name": "Wasteland Pokemon Center kit",
-        "level": 10
+        name: "Wasteland Pokemon Center kit",
+        level: 10,
       },
       {
-        "name": "Cute bed Recipe",
-        "level": 10
+        name: "Cute bed Recipe",
+        level: 10,
       },
       {
-        "name": "Cute dresser Recipe",
-        "level": 10
+        name: "Cute dresser Recipe",
+        level: 10,
       },
       {
-        "name": "Cute sofa Recipe",
-        "level": 10
+        name: "Cute sofa Recipe",
+        level: 10,
       },
       {
-        "name": "Cute table Recipe",
-        "level": 10
+        name: "Cute table Recipe",
+        level: 10,
       },
       {
-        "name": "Gingham print Recipe",
-        "level": 10
-      }
-    ]
+        name: "Gingham print Recipe",
+        level: 10,
+      },
+    ],
   },
-  "rockyridges": {
-    "slug": "rockyridges",
-    "name": "Rocky Ridges",
-    "description": "Rocky Ridges makees up the area that used to be Pewter City and Mt. Moon, and includes a mine going deep underground into the muntain. Within the mountains is what used to be Pewter Museum including the exhibits.This area featurs a focus on ore for you to find",
-    "objective": "",
-    "materials": [
+  rockyridges: {
+    slug: "rockyridges",
+    name: "Rocky Ridges",
+    description:
+      "Rocky Ridges makees up the area that used to be Pewter City and Mt. Moon, and includes a mine going deep underground into the muntain. Within the mountains is what used to be Pewter Museum including the exhibits.This area featurs a focus on ore for you to find",
+    objective: "",
+    materials: [
       "Sturdy stick",
       "Stone",
       "Leaf",
@@ -1034,9 +1037,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Lumber",
       "Mossy Stone",
       "Vine",
-      "Vine Rope"
+      "Vine Rope",
     ],
-    "blocksAndPlants": [
+    blocksAndPlants: [
       "Red Tall grass",
       "Mountain flowers",
       "Mountain flowers (pink)",
@@ -1136,9 +1139,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Iron deposit",
       "Gold deposit",
       "Pokemetal deposit",
-      "Reddish-brown cave rock"
+      "Reddish-brown cave rock",
     ],
-    "itemsInArea": [
+    itemsInArea: [
       "Workbench",
       "Stone steps",
       "Iron scaffold",
@@ -1250,9 +1253,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Wooden steps",
       "Poke Ball Doormat",
       "Town map",
-      "Broken bookcase"
+      "Broken bookcase",
     ],
-    "itemsInPokeballs": [
+    itemsInPokeballs: [
       "Aged-stone wall Recipe",
       "Balloons",
       "Bean seeds",
@@ -1274,9 +1277,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Railway track Recipe",
       "Small stage",
       "Stone house kit",
-      "Stone steps Recipe"
+      "Stone steps Recipe",
     ],
-    "treasure": [
+    treasure: [
       "Large lost relic",
       "Small lost relic",
       "Arcanine doll",
@@ -1293,217 +1296,218 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Wing fossil (body)",
       "Wing Fossil (tail)",
       "Strange strings",
-      "Armor fragment"
+      "Armor fragment",
     ],
-    "shopItems": [
+    shopItems: [
       {
-        "name": "Standing mic",
-        "level": 2
+        name: "Standing mic",
+        level: 2,
       },
       {
-        "name": "Stone bench",
-        "level": 2
+        name: "Stone bench",
+        level: 2,
       },
       {
-        "name": "Stone hut kit",
-        "level": 2
+        name: "Stone hut kit",
+        level: 2,
       },
       {
-        "name": "Twine",
-        "level": 2
+        name: "Twine",
+        level: 2,
       },
       {
-        "name": "Stepping stones Recipe",
-        "level": 2
+        name: "Stepping stones Recipe",
+        level: 2,
       },
       {
-        "name": "Balloons",
-        "level": 3
+        name: "Balloons",
+        level: 3,
       },
       {
-        "name": "Fluff",
-        "level": 3
+        name: "Fluff",
+        level: 3,
       },
       {
-        "name": "Fresh water",
-        "level": 3
+        name: "Fresh water",
+        level: 3,
       },
       {
-        "name": "Moonlight dance statue kit",
-        "level": 3
+        name: "Moonlight dance statue kit",
+        level: 3,
       },
       {
-        "name": "Small stage",
-        "level": 3
+        name: "Small stage",
+        level: 3,
       },
       {
-        "name": "Stone den kit",
-        "level": 3
+        name: "Stone den kit",
+        level: 3,
       },
       {
-        "name": "Iron bed Recipe",
-        "level": 3
+        name: "Iron bed Recipe",
+        level: 3,
       },
       {
-        "name": "Party bunting Recipe",
-        "level": 3
+        name: "Party bunting Recipe",
+        level: 3,
       },
       {
-        "name": "Paper party cups",
-        "level": 4
+        name: "Paper party cups",
+        level: 4,
       },
       {
-        "name": "Speakers",
-        "level": 4
+        name: "Speakers",
+        level: 4,
       },
       {
-        "name": "Stone cottage kit",
-        "level": 4
+        name: "Stone cottage kit",
+        level: 4,
       },
       {
-        "name": "Dark marble flooring Recipe",
-        "level": 4
+        name: "Dark marble flooring Recipe",
+        level: 4,
       },
       {
-        "name": "Iron tiling Recipe",
-        "level": 4
+        name: "Iron tiling Recipe",
+        level: 4,
       },
       {
-        "name": "Gray hut kit",
-        "level": 5
+        name: "Gray hut kit",
+        level: 5,
       },
       {
-        "name": "Refrigerator",
-        "level": 5
+        name: "Refrigerator",
+        level: 5,
       },
       {
-        "name": "Stone house kit",
-        "level": 5
+        name: "Stone house kit",
+        level: 5,
       },
       {
-        "name": "Tablet",
-        "level": 5
+        name: "Tablet",
+        level: 5,
       },
       {
-        "name": "Iron door Recipe",
-        "level": 5
+        name: "Iron door Recipe",
+        level: 5,
       },
       {
-        "name": "Iron ladder Recipe",
-        "level": 5
+        name: "Iron ladder Recipe",
+        level: 5,
       },
       {
-        "name": "Iron steps Recipe",
-        "level": 5
+        name: "Iron steps Recipe",
+        level: 5,
       },
       {
-        "name": "Refrigerator Recipe",
-        "level": 5
+        name: "Refrigerator Recipe",
+        level: 5,
       },
       {
-        "name": "Small stage Recipe",
-        "level": 5
+        name: "Small stage Recipe",
+        level: 5,
       },
       {
-        "name": "Laser sensor",
-        "level": 6
+        name: "Laser sensor",
+        level: 6,
       },
       {
-        "name": "Pokemetal",
-        "level": 6
+        name: "Pokemetal",
+        level: 6,
       },
       {
-        "name": "Industrial chair Recipe",
-        "level": 6
+        name: "Industrial chair Recipe",
+        level: 6,
       },
       {
-        "name": "Lantern Recipe",
-        "level": 6
+        name: "Lantern Recipe",
+        level: 6,
       },
       {
-        "name": "Laser sensor Recipe",
-        "level": 6
+        name: "Laser sensor Recipe",
+        level: 6,
       },
       {
-        "name": "Stylish stone flooring Recipe",
-        "level": 6
+        name: "Stylish stone flooring Recipe",
+        level: 6,
       },
       {
-        "name": "Rare Pokemetal",
-        "level": 7
+        name: "Rare Pokemetal",
+        level: 7,
       },
       {
-        "name": "Industrial bench Recipe",
-        "level": 7
+        name: "Industrial bench Recipe",
+        level: 7,
       },
       {
-        "name": "Industrial desk Recipe",
-        "level": 7
+        name: "Industrial desk Recipe",
+        level: 7,
       },
       {
-        "name": "Iron wall Recipe",
-        "level": 7
+        name: "Iron wall Recipe",
+        level: 7,
       },
       {
-        "name": "Poke Ball doormat Recipe",
-        "level": 7
+        name: "Poke Ball doormat Recipe",
+        level: 7,
       },
       {
-        "name": "Concert stage kit",
-        "level": 8
+        name: "Concert stage kit",
+        level: 8,
       },
       {
-        "name": "Cube light Recipe",
-        "level": 8
+        name: "Cube light Recipe",
+        level: 8,
       },
       {
-        "name": "Luxury sofa Recipe",
-        "level": 8
+        name: "Luxury sofa Recipe",
+        level: 8,
       },
       {
-        "name": "Luxury table Recipe",
-        "level": 8
+        name: "Luxury table Recipe",
+        level: 8,
       },
       {
-        "name": "Cushy wall Recipe",
-        "level": 9
+        name: "Cushy wall Recipe",
+        level: 9,
       },
       {
-        "name": "Punching game",
-        "level": 9
+        name: "Punching game",
+        level: 9,
       },
       {
-        "name": "Luxury chair Recipe",
-        "level": 9
+        name: "Luxury chair Recipe",
+        level: 9,
       },
       {
-        "name": "Luxury lamp Recipe",
-        "level": 9
+        name: "Luxury lamp Recipe",
+        level: 9,
       },
       {
-        "name": "Ridge Pokemon Center kit",
-        "level": 10
+        name: "Ridge Pokemon Center kit",
+        level: 10,
       },
       {
-        "name": "Luxury dresser Recipe",
-        "level": 10
+        name: "Luxury dresser Recipe",
+        level: 10,
       },
       {
-        "name": "Luxury bed Recipe",
-        "level": 10
+        name: "Luxury bed Recipe",
+        level: 10,
       },
       {
-        "name": "Stylish Poke Ball Print Recipe",
-        "level": 10
-      }
-    ]
+        name: "Stylish Poke Ball Print Recipe",
+        level: 10,
+      },
+    ],
   },
-  "sparklingskylands": {
-    "slug": "sparklingskylands",
-    "name": "Sparkling Skylands",
-    "description": "The Sparkling Skylands are a giant area that focused around what used to be Celadon and Saffron Cities. The catastrophe caused the ground to shoot up into the sky.With the Pokemon you find here, your task is to rebuild Silph Co. into a new building to bring back humans and Pokemon",
-    "objective": "",
-    "materials": [
+  sparklingskylands: {
+    slug: "sparklingskylands",
+    name: "Sparkling Skylands",
+    description:
+      "The Sparkling Skylands are a giant area that focused around what used to be Celadon and Saffron Cities. The catastrophe caused the ground to shoot up into the sky.With the Pokemon you find here, your task is to rebuild Silph Co. into a new building to bring back humans and Pokemon",
+    objective: "",
+    materials: [
       "Sturdy stick",
       "Stone",
       "Vine",
@@ -1520,9 +1524,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Small log",
       "Lumber",
       "Leppa Berry",
-      "Rare Pokemetal fragment"
+      "Rare Pokemetal fragment",
     ],
-    "blocksAndPlants": [
+    blocksAndPlants: [
       "Red Tall grass",
       "Yellow Tall grass",
       "Pink Tall grass",
@@ -1652,9 +1656,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Grubby rags",
       "Copper deposit (Skyland)",
       "Iron deposit",
-      "Pokemetal deposit"
+      "Pokemetal deposit",
     ],
-    "itemsInArea": [
+    itemsInArea: [
       "Workbench",
       "Storage box",
       "Stone steps",
@@ -1823,9 +1827,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Iron pipe (vertical T)",
       "Iron pipe (upward curve)",
       "Iron pipe (upward T)",
-      "Iron pipe (vertical cross)"
+      "Iron pipe (vertical cross)",
     ],
-    "itemsInPokeballs": [
+    itemsInPokeballs: [
       "Beautiful flower seeds",
       "Cleaning supplies",
       "Fluff",
@@ -1845,9 +1849,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Stylish-hedge seeds",
       "Wall switch",
       "Wooden ladder",
-      "Yellow hut kit"
+      "Yellow hut kit",
     ],
-    "treasure": [
+    treasure: [
       "Large lost relic",
       "Small lost relic",
       "Dragonite doll",
@@ -1863,229 +1867,230 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Wing fossil (body)",
       "Wing Fossil (tail)",
       "Strange strings",
-      "Armor fragment"
+      "Armor fragment",
     ],
-    "shopItems": [
+    shopItems: [
       {
-        "name": "Mailbox",
-        "level": 2
+        name: "Mailbox",
+        level: 2,
       },
       {
-        "name": "Office chair",
-        "level": 2
+        name: "Office chair",
+        level: 2,
       },
       {
-        "name": "Slide",
-        "level": 2
+        name: "Slide",
+        level: 2,
       },
       {
-        "name": "Asphalt road Recipe",
-        "level": 2
+        name: "Asphalt road Recipe",
+        level: 2,
       },
       {
-        "name": "CD rack Recipe",
-        "level": 2
+        name: "CD rack Recipe",
+        level: 2,
       },
       {
-        "name": "Concrete steps Recipe",
-        "level": 2
+        name: "Concrete steps Recipe",
+        level: 2,
       },
       {
-        "name": "Metal fencing Recipe",
-        "level": 2
+        name: "Metal fencing Recipe",
+        level: 2,
       },
       {
-        "name": "Mosaic tiling Recipe",
-        "level": 2
+        name: "Mosaic tiling Recipe",
+        level: 2,
       },
       {
-        "name": "Bathtub",
-        "level": 3
+        name: "Bathtub",
+        level: 3,
       },
       {
-        "name": "Magazine rack",
-        "level": 3
+        name: "Magazine rack",
+        level: 3,
       },
       {
-        "name": "Office cabinet",
-        "level": 3
+        name: "Office cabinet",
+        level: 3,
       },
       {
-        "name": "Pokemart kit",
-        "level": 3
+        name: "Pokemart kit",
+        level: 3,
       },
       {
-        "name": "Pop art sofa",
-        "level": 3
+        name: "Pop art sofa",
+        level: 3,
       },
       {
-        "name": "CD player Recipe",
-        "level": 3
+        name: "CD player Recipe",
+        level: 3,
       },
       {
-        "name": "Newspaper",
-        "level": 4
+        name: "Newspaper",
+        level: 4,
       },
       {
-        "name": "Office locker",
-        "level": 4
+        name: "Office locker",
+        level: 4,
       },
       {
-        "name": "Concrete slab Recipe",
-        "level": 4
+        name: "Concrete slab Recipe",
+        level: 4,
       },
       {
-        "name": "Corrugated metal Recipe",
-        "level": 4
+        name: "Corrugated metal Recipe",
+        level: 4,
       },
       {
-        "name": "Metallic smelting furnace Recipe",
-        "level": 4
+        name: "Metallic smelting furnace Recipe",
+        level: 4,
       },
       {
-        "name": "Protruding wall Recipe",
-        "level": 4
+        name: "Protruding wall Recipe",
+        level: 4,
       },
       {
-        "name": "Stone fencing Recipe",
-        "level": 4
+        name: "Stone fencing Recipe",
+        level: 4,
       },
       {
-        "name": "Window pane Recipe",
-        "level": 4
+        name: "Window pane Recipe",
+        level: 4,
       },
       {
-        "name": "Game Boy system",
-        "level": 5
+        name: "Game Boy system",
+        level: 5,
       },
       {
-        "name": "Stone fireplace",
-        "level": 5
+        name: "Stone fireplace",
+        level: 5,
       },
       {
-        "name": "Yellow hut kit",
-        "level": 5
+        name: "Yellow hut kit",
+        level: 5,
       },
       {
-        "name": "Game Boy system Recipe",
-        "level": 5
+        name: "Game Boy system Recipe",
+        level: 5,
       },
       {
-        "name": "Glass window Recipe",
-        "level": 5
+        name: "Glass window Recipe",
+        level: 5,
       },
       {
-        "name": "Simple door Recipe",
-        "level": 5
+        name: "Simple door Recipe",
+        level: 5,
       },
       {
-        "name": "Pokemetal",
-        "level": 6
+        name: "Pokemetal",
+        level: 6,
       },
       {
-        "name": "Concrete border (corner) Recipe",
-        "level": 6
+        name: "Concrete border (corner) Recipe",
+        level: 6,
       },
       {
-        "name": "Concrete border (line) Recipe",
-        "level": 6
+        name: "Concrete border (line) Recipe",
+        level: 6,
       },
       {
-        "name": "Concrete border (single) Recipe",
-        "level": 6
+        name: "Concrete border (single) Recipe",
+        level: 6,
       },
       {
-        "name": "Mini generator Recipe",
-        "level": 6
+        name: "Mini generator Recipe",
+        level: 6,
       },
       {
-        "name": "Pop art bed Recipe",
-        "level": 6
+        name: "Pop art bed Recipe",
+        level: 6,
       },
       {
-        "name": "Pop art chair Recipe",
-        "level": 6
+        name: "Pop art chair Recipe",
+        level: 6,
       },
       {
-        "name": "Rare Pokemetal",
-        "level": 7
+        name: "Rare Pokemetal",
+        level: 7,
       },
       {
-        "name": "Pop art sofa Recipe",
-        "level": 7
+        name: "Pop art sofa Recipe",
+        level: 7,
       },
       {
-        "name": "Pop art table Recipe",
-        "level": 7
+        name: "Pop art table Recipe",
+        level: 7,
       },
       {
-        "name": "Rough wall Recipe",
-        "level": 7
+        name: "Rough wall Recipe",
+        level: 7,
       },
       {
-        "name": "Small office kit",
-        "level": 8
+        name: "Small office kit",
+        level: 8,
       },
       {
-        "name": "Pop art lamp Recipe",
-        "level": 8
+        name: "Pop art lamp Recipe",
+        level: 8,
       },
       {
-        "name": "Shop flooring Recipe",
-        "level": 8
+        name: "Shop flooring Recipe",
+        level: 8,
       },
       {
-        "name": "Big drum",
-        "level": 9
+        name: "Big drum",
+        level: 9,
       },
       {
-        "name": "Gaming chair Recipe",
-        "level": 9
+        name: "Gaming chair Recipe",
+        level: 9,
       },
       {
-        "name": "Gaming light Recipe",
-        "level": 9
+        name: "Gaming light Recipe",
+        level: 9,
       },
       {
-        "name": "Pokemon Center wall (lower) Recipe",
-        "level": 9
+        name: "Pokemon Center wall (lower) Recipe",
+        level: 9,
       },
       {
-        "name": "Pokemon Center wall (middle) Recipe",
-        "level": 9
+        name: "Pokemon Center wall (middle) Recipe",
+        level: 9,
       },
       {
-        "name": "Pokemon Center wall (trim) Recipe",
-        "level": 9
+        name: "Pokemon Center wall (trim) Recipe",
+        level: 9,
       },
       {
-        "name": "Pokemon Center wall (upper) Recipe",
-        "level": 9
+        name: "Pokemon Center wall (upper) Recipe",
+        level: 9,
       },
       {
-        "name": "Skyland Pokemon Center kit",
-        "level": 10
+        name: "Skyland Pokemon Center kit",
+        level: 10,
       },
       {
-        "name": "Berry print Recipe",
-        "level": 10
+        name: "Berry print Recipe",
+        level: 10,
       },
       {
-        "name": "Gaming fridge Recipe",
-        "level": 10
+        name: "Gaming fridge Recipe",
+        level: 10,
       },
       {
-        "name": "Gaming PC Recipe",
-        "level": 10
-      }
-    ]
+        name: "Gaming PC Recipe",
+        level: 10,
+      },
+    ],
   },
-  "palettetown": {
-    "slug": "palettetown",
-    "name": "Palette Town",
-    "description": "Palette Town is an area found over the bridge from Withered Wastelands. This area is a free open space for you to do with as you please.This map is the one you use in multiplayer on both Cloud Islands and in modes where you can play and build along with your friends",
-    "objective": "",
-    "materials": [
+  palettetown: {
+    slug: "palettetown",
+    name: "Palette Town",
+    description:
+      "Palette Town is an area found over the bridge from Withered Wastelands. This area is a free open space for you to do with as you please.This map is the one you use in multiplayer on both Cloud Islands and in modes where you can play and build along with your friends",
+    objective: "",
+    materials: [
       "Sturdy stick",
       "Stone",
       "Glowing mushrooms",
@@ -2097,9 +2102,9 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Fresh carrot",
       "Copper ore",
       "Iron ore",
-      "Gold ore"
+      "Gold ore",
     ],
-    "blocksAndPlants": [
+    blocksAndPlants: [
       "Tall Grass",
       "Dry tall grass",
       "Wildflowers",
@@ -2151,21 +2156,21 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Iron deposit",
       "Gold deposit",
       "Iron ore",
-      "Gold ore"
+      "Gold ore",
     ],
-    "itemsInArea": [
+    itemsInArea: [
       "Workbench",
       "Stone steps",
       "Mysterious Pedestal",
       "Poke Ball Doormat",
-      "Town map"
+      "Town map",
     ],
-    "itemsInPokeballs": [
+    itemsInPokeballs: [
       "Abandoned Power Plant kit",
       "Altar of the Flame kit",
-      "Freezing Chambers kit"
+      "Freezing Chambers kit",
     ],
-    "treasure": [
+    treasure: [
       "Large lost relic",
       "Small lost relic",
       "Ditto doll",
@@ -2193,878 +2198,879 @@ export const LOCATIONS: Record<string, LocationEntry> = {
       "Tundra Fossil (body)",
       "Tundra Fossil (tail)",
       "Strange strings",
-      "Armor fragment"
+      "Armor fragment",
     ],
-    "shopItems": [
+    shopItems: [
       {
-        "name": "Big storage box",
-        "level": 2
+        name: "Big storage box",
+        level: 2,
       },
       {
-        "name": "Eevee doll",
-        "level": 2
+        name: "Eevee doll",
+        level: 2,
       },
       {
-        "name": "Dowsing Machine Recipe",
-        "level": 2
+        name: "Dowsing Machine Recipe",
+        level: 2,
       },
       {
-        "name": "CD player",
-        "level": 3
+        name: "CD player",
+        level: 3,
       },
       {
-        "name": "Fishing rod",
-        "level": 3
+        name: "Fishing rod",
+        level: 3,
       },
       {
-        "name": "Pikachu doll",
-        "level": 3
+        name: "Pikachu doll",
+        level: 3,
       },
       {
-        "name": "Counter Recipe",
-        "level": 3
+        name: "Counter Recipe",
+        level: 3,
       },
       {
-        "name": "Town streetlight Recipe",
-        "level": 3
+        name: "Town streetlight Recipe",
+        level: 3,
       },
       {
-        "name": "Fan",
-        "level": 4
+        name: "Fan",
+        level: 4,
       },
       {
-        "name": "Light wooden wall Recipe",
-        "level": 4
+        name: "Light wooden wall Recipe",
+        level: 4,
       },
       {
-        "name": "Arcanine doll",
-        "level": 5
+        name: "Arcanine doll",
+        level: 5,
       },
       {
-        "name": "Black paint",
-        "level": 5
+        name: "Black paint",
+        level: 5,
       },
       {
-        "name": "Blue paint",
-        "level": 5
+        name: "Blue paint",
+        level: 5,
       },
       {
-        "name": "Cyan paint",
-        "level": 5
+        name: "Cyan paint",
+        level: 5,
       },
       {
-        "name": "Green paint",
-        "level": 5
+        name: "Green paint",
+        level: 5,
       },
       {
-        "name": "Jumbled cords",
-        "level": 5
+        name: "Jumbled cords",
+        level: 5,
       },
       {
-        "name": "Pink paint",
-        "level": 5
+        name: "Pink paint",
+        level: 5,
       },
       {
-        "name": "Red paint",
-        "level": 5
+        name: "Red paint",
+        level: 5,
       },
       {
-        "name": "Television",
-        "level": 5
+        name: "Television",
+        level: 5,
       },
       {
-        "name": "White paint",
-        "level": 5
+        name: "White paint",
+        level: 5,
       },
       {
-        "name": "Yellow paint",
-        "level": 5
+        name: "Yellow paint",
+        level: 5,
       },
       {
-        "name": "Antique bed Recipe",
-        "level": 5
+        name: "Antique bed Recipe",
+        level: 5,
       },
       {
-        "name": "Antique chair Recipe",
-        "level": 5
+        name: "Antique chair Recipe",
+        level: 5,
       },
       {
-        "name": "Antique table Recipe",
-        "level": 5
+        name: "Antique table Recipe",
+        level: 5,
       },
       {
-        "name": "Dragonite doll",
-        "level": 6
+        name: "Dragonite doll",
+        level: 6,
       },
       {
-        "name": "Pokemetal",
-        "level": 6
+        name: "Pokemetal",
+        level: 6,
       },
       {
-        "name": "Antique chest Recipe",
-        "level": 6
+        name: "Antique chest Recipe",
+        level: 6,
       },
       {
-        "name": "Antique sofa Recipe",
-        "level": 6
+        name: "Antique sofa Recipe",
+        level: 6,
       },
       {
-        "name": "Rare Pokemetal",
-        "level": 7
+        name: "Rare Pokemetal",
+        level: 7,
       },
       {
-        "name": "Substitute doll",
-        "level": 7
+        name: "Substitute doll",
+        level: 7,
       },
       {
-        "name": "Antique chandelier Recipe",
-        "level": 7
+        name: "Antique chandelier Recipe",
+        level: 7,
       },
       {
-        "name": "Antique dresser Recipe",
-        "level": 7
+        name: "Antique dresser Recipe",
+        level: 7,
       },
       {
-        "name": "Antique wall (lower) Recipe",
-        "level": 7
+        name: "Antique wall (lower) Recipe",
+        level: 7,
       },
       {
-        "name": "Antique wall (middle) Recipe",
-        "level": 7
+        name: "Antique wall (middle) Recipe",
+        level: 7,
       },
       {
-        "name": "Antique wall (upper) Recipe",
-        "level": 7
+        name: "Antique wall (upper) Recipe",
+        level: 7,
       },
       {
-        "name": "Ditto doll",
-        "level": 8
+        name: "Ditto doll",
+        level: 8,
       },
       {
-        "name": "Fountain plaza kit",
-        "level": 8
+        name: "Fountain plaza kit",
+        level: 8,
       },
       {
-        "name": "Antique clock Recipe",
-        "level": 8
+        name: "Antique clock Recipe",
+        level: 8,
       },
       {
-        "name": "Antique closet Recipe",
-        "level": 8
+        name: "Antique closet Recipe",
+        level: 8,
       },
       {
-        "name": "Cracked sandstone Recipe",
-        "level": 8
+        name: "Cracked sandstone Recipe",
+        level: 8,
       },
       {
-        "name": "Light antique wall (lower) Recipe",
-        "level": 8
+        name: "Light antique wall (lower) Recipe",
+        level: 8,
       },
       {
-        "name": "Light antique wall (middle) Recipe",
-        "level": 8
+        name: "Light antique wall (middle) Recipe",
+        level: 8,
       },
       {
-        "name": "Light antique wall (upper) Recipe",
-        "level": 8
+        name: "Light antique wall (upper) Recipe",
+        level: 8,
       },
       {
-        "name": "Photo cutout board",
-        "level": 9
+        name: "Photo cutout board",
+        level: 9,
       },
       {
-        "name": "Carved coarse rock Recipe",
-        "level": 9
+        name: "Carved coarse rock Recipe",
+        level: 9,
       },
       {
-        "name": "Carved light-brown rock Recipe",
-        "level": 9
+        name: "Carved light-brown rock Recipe",
+        level: 9,
       },
       {
-        "name": "Carved red rock Recipe",
-        "level": 9
+        name: "Carved red rock Recipe",
+        level: 9,
       },
       {
-        "name": "Carved white rock Recipe",
-        "level": 9
+        name: "Carved white rock Recipe",
+        level: 9,
       },
       {
-        "name": "Carved yellow rock Recipe",
-        "level": 9
+        name: "Carved yellow rock Recipe",
+        level: 9,
       },
       {
-        "name": "Poke Ball light Recipe",
-        "level": 9
+        name: "Poke Ball light Recipe",
+        level: 9,
       },
       {
-        "name": "Poke Ball sofa Recipe",
-        "level": 9
+        name: "Poke Ball sofa Recipe",
+        level: 9,
       },
       {
-        "name": "Poke Ball bed Recipe",
-        "level": 10
+        name: "Poke Ball bed Recipe",
+        level: 10,
       },
       {
-        "name": "Poke Ball Chest Recipe",
-        "level": 10
+        name: "Poke Ball Chest Recipe",
+        level: 10,
       },
       {
-        "name": "Poke Ball Print Recipe",
-        "level": 10
+        name: "Poke Ball Print Recipe",
+        level: 10,
       },
       {
-        "name": "Poke Ball table Recipe",
-        "level": 10
-      }
-    ]
+        name: "Poke Ball table Recipe",
+        level: 10,
+      },
+    ],
   },
-  "cloudisland": {
-    "slug": "cloudisland",
-    "name": "Cloud Island",
-    "description": "Cloud Islands are unique islands stored on the server that allow for you to start fresh. It contains all main materials and terrain blocks, as well as its own Mysterious Slate board",
-    "objective": "",
-    "materials": [],
-    "blocksAndPlants": [],
-    "itemsInArea": [],
-    "itemsInPokeballs": [],
-    "treasure": [],
-    "shopItems": [
+  cloudisland: {
+    slug: "cloudisland",
+    name: "Cloud Island",
+    description:
+      "Cloud Islands are unique islands stored on the server that allow for you to start fresh. It contains all main materials and terrain blocks, as well as its own Mysterious Slate board",
+    objective: "",
+    materials: [],
+    blocksAndPlants: [],
+    itemsInArea: [],
+    itemsInPokeballs: [],
+    treasure: [],
+    shopItems: [
       {
-        "name": "Wall mirror",
-        "level": 1
+        name: "Wall mirror",
+        level: 1,
       },
       {
-        "name": "Wooden plate",
-        "level": 1
+        name: "Wooden plate",
+        level: 1,
       },
       {
-        "name": "Offering dish",
-        "level": 1
+        name: "Offering dish",
+        level: 1,
       },
       {
-        "name": "Pinwheels",
-        "level": 1
+        name: "Pinwheels",
+        level: 1,
       },
       {
-        "name": "Eevee doll",
-        "level": 1
+        name: "Eevee doll",
+        level: 1,
       },
       {
-        "name": "Pikachu doll",
-        "level": 1
+        name: "Pikachu doll",
+        level: 1,
       },
       {
-        "name": "Clefairy doll",
-        "level": 1
+        name: "Clefairy doll",
+        level: 1,
       },
       {
-        "name": "Arcanine doll",
-        "level": 1
+        name: "Arcanine doll",
+        level: 1,
       },
       {
-        "name": "Dragonite doll",
-        "level": 1
+        name: "Dragonite doll",
+        level: 1,
       },
       {
-        "name": "Workbench",
-        "level": 1
+        name: "Workbench",
+        level: 1,
       },
       {
-        "name": "Smelting furnace",
-        "level": 1
+        name: "Smelting furnace",
+        level: 1,
       },
       {
-        "name": "Concrete mixer",
-        "level": 1
+        name: "Concrete mixer",
+        level: 1,
       },
       {
-        "name": "Security camera",
-        "level": 1
+        name: "Security camera",
+        level: 1,
       },
       {
-        "name": "Relocation kit (prepare)",
-        "level": 1
+        name: "Relocation kit (prepare)",
+        level: 1,
       },
       {
-        "name": "Demolition kit",
-        "level": 1
+        name: "Demolition kit",
+        level: 1,
       },
       {
-        "name": "Wildflower seeds",
-        "level": 1
+        name: "Wildflower seeds",
+        level: 1,
       },
       {
-        "name": "Dowsing machine",
-        "level": 1
+        name: "Dowsing machine",
+        level: 1,
       },
       {
-        "name": "Big storage box",
-        "level": 2
+        name: "Big storage box",
+        level: 2,
       },
       {
-        "name": "Utility pole",
-        "level": 2
+        name: "Utility pole",
+        level: 2,
       },
       {
-        "name": "Iron beam",
-        "level": 2
+        name: "Iron beam",
+        level: 2,
       },
       {
-        "name": "Iron column",
-        "level": 2
+        name: "Iron column",
+        level: 2,
       },
       {
-        "name": "Leaf den kit",
-        "level": 2
+        name: "Leaf den kit",
+        level: 2,
       },
       {
-        "name": "Windmill kit",
-        "level": 2
+        name: "Windmill kit",
+        level: 2,
       },
       {
-        "name": "Waterwheel kit",
-        "level": 2
+        name: "Waterwheel kit",
+        level: 2,
       },
       {
-        "name": "Wooden table",
-        "level": 2
+        name: "Wooden table",
+        level: 2,
       },
       {
-        "name": "Garden bench",
-        "level": 2
+        name: "Garden bench",
+        level: 2,
       },
       {
-        "name": "Log bed",
-        "level": 2
+        name: "Log bed",
+        level: 2,
       },
       {
-        "name": "Mug",
-        "level": 2
+        name: "Mug",
+        level: 2,
       },
       {
-        "name": "Twisted potted plant",
-        "level": 2
+        name: "Twisted potted plant",
+        level: 2,
       },
       {
-        "name": "Slender candle",
-        "level": 2
+        name: "Slender candle",
+        level: 2,
       },
       {
-        "name": "Stone bench",
-        "level": 3
+        name: "Stone bench",
+        level: 3,
       },
       {
-        "name": "Beach chair",
-        "level": 3
+        name: "Beach chair",
+        level: 3,
       },
       {
-        "name": "Wooden bed",
-        "level": 3
+        name: "Wooden bed",
+        level: 3,
       },
       {
-        "name": "Pizza",
-        "level": 3
+        name: "Pizza",
+        level: 3,
       },
       {
-        "name": "Fried potatoes",
-        "level": 3
+        name: "Fried potatoes",
+        level: 3,
       },
       {
-        "name": "Soda float",
-        "level": 3
+        name: "Soda float",
+        level: 3,
       },
       {
-        "name": "Toy blocks",
-        "level": 3
+        name: "Toy blocks",
+        level: 3,
       },
       {
-        "name": "CD player",
-        "level": 3
+        name: "CD player",
+        level: 3,
       },
       {
-        "name": "Standing mic",
-        "level": 3
+        name: "Standing mic",
+        level: 3,
       },
       {
-        "name": "Wooden birdhouse",
-        "level": 3
+        name: "Wooden birdhouse",
+        level: 3,
       },
       {
-        "name": "Tire toy",
-        "level": 3
+        name: "Tire toy",
+        level: 3,
       },
       {
-        "name": "Blank canvas",
-        "level": 3
+        name: "Blank canvas",
+        level: 3,
       },
       {
-        "name": "Water basin",
-        "level": 3
+        name: "Water basin",
+        level: 3,
       },
       {
-        "name": "Beach parasol",
-        "level": 3
+        name: "Beach parasol",
+        level: 3,
       },
       {
-        "name": "Horsea fountain",
-        "level": 3
+        name: "Horsea fountain",
+        level: 3,
       },
       {
-        "name": "Fishing rod",
-        "level": 3
+        name: "Fishing rod",
+        level: 3,
       },
       {
-        "name": "Garbage bin",
-        "level": 3
+        name: "Garbage bin",
+        level: 3,
       },
       {
-        "name": "Cutting board",
-        "level": 3
+        name: "Cutting board",
+        level: 3,
       },
       {
-        "name": "Desk light",
-        "level": 3
+        name: "Desk light",
+        level: 3,
       },
       {
-        "name": "Twine",
-        "level": 3
+        name: "Twine",
+        level: 3,
       },
       {
-        "name": "Leaf hut kit",
-        "level": 3
+        name: "Leaf hut kit",
+        level: 3,
       },
       {
-        "name": "Sand den kit",
-        "level": 3
+        name: "Sand den kit",
+        level: 3,
       },
       {
-        "name": "Stone den kit",
-        "level": 3
+        name: "Stone den kit",
+        level: 3,
       },
       {
-        "name": "Pokemon Center rebuilding kit",
-        "level": 3
+        name: "Pokemon Center rebuilding kit",
+        level: 3,
       },
       {
-        "name": "Furnace kit",
-        "level": 3
+        name: "Furnace kit",
+        level: 3,
       },
       {
-        "name": "Seashore-flower seeds",
-        "level": 3
+        name: "Seashore-flower seeds",
+        level: 3,
       },
       {
-        "name": "Mountain-flower seeds",
-        "level": 3
+        name: "Mountain-flower seeds",
+        level: 3,
       },
       {
-        "name": "Bean seeds",
-        "level": 3
+        name: "Bean seeds",
+        level: 3,
       },
       {
-        "name": "Plain closet",
-        "level": 4
+        name: "Plain closet",
+        level: 4,
       },
       {
-        "name": "Plain stand",
-        "level": 4
+        name: "Plain stand",
+        level: 4,
       },
       {
-        "name": "Iron rack",
-        "level": 4
+        name: "Iron rack",
+        level: 4,
       },
       {
-        "name": "Box sofa",
-        "level": 4
+        name: "Box sofa",
+        level: 4,
       },
       {
-        "name": "Office chair",
-        "level": 4
+        name: "Office chair",
+        level: 4,
       },
       {
-        "name": "Paper party cups",
-        "level": 4
+        name: "Paper party cups",
+        level: 4,
       },
       {
-        "name": "Afternoon tea set",
-        "level": 4
+        name: "Afternoon tea set",
+        level: 4,
       },
       {
-        "name": "Chocolate cookies",
-        "level": 4
+        name: "Chocolate cookies",
+        level: 4,
       },
       {
-        "name": "Corkboard",
-        "level": 4
+        name: "Corkboard",
+        level: 4,
       },
       {
-        "name": "Fan",
-        "level": 4
+        name: "Fan",
+        level: 4,
       },
       {
-        "name": "Knitting supplies",
-        "level": 4
+        name: "Knitting supplies",
+        level: 4,
       },
       {
-        "name": "First aid kit",
-        "level": 4
+        name: "First aid kit",
+        level: 4,
       },
       {
-        "name": "Speaker",
-        "level": 4
+        name: "Speaker",
+        level: 4,
       },
       {
-        "name": "Balloons",
-        "level": 4
+        name: "Balloons",
+        level: 4,
       },
       {
-        "name": "Slide",
-        "level": 4
+        name: "Slide",
+        level: 4,
       },
       {
-        "name": "Cart",
-        "level": 4
+        name: "Cart",
+        level: 4,
       },
       {
-        "name": "Mailbox",
-        "level": 4
+        name: "Mailbox",
+        level: 4,
       },
       {
-        "name": "Small stage",
-        "level": 4
+        name: "Small stage",
+        level: 4,
       },
       {
-        "name": "Tires",
-        "level": 4
+        name: "Tires",
+        level: 4,
       },
       {
-        "name": "Stylish frying pan",
-        "level": 4
+        name: "Stylish frying pan",
+        level: 4,
       },
       {
-        "name": "Stylish cooking pot",
-        "level": 4
+        name: "Stylish cooking pot",
+        level: 4,
       },
       {
-        "name": "Mushroom streetlight",
-        "level": 4
+        name: "Mushroom streetlight",
+        level: 4,
       },
       {
-        "name": "Fresh water",
-        "level": 4
+        name: "Fresh water",
+        level: 4,
       },
       {
-        "name": "Fluff",
-        "level": 4
+        name: "Fluff",
+        level: 4,
       },
       {
-        "name": "Leaf cottage kit",
-        "level": 4
+        name: "Leaf cottage kit",
+        level: 4,
       },
       {
-        "name": "Sand hut kit",
-        "level": 4
+        name: "Sand hut kit",
+        level: 4,
       },
       {
-        "name": "Sand cottage kit",
-        "level": 4
+        name: "Sand cottage kit",
+        level: 4,
       },
       {
-        "name": "Stone hut kit",
-        "level": 4
+        name: "Stone hut kit",
+        level: 4,
       },
       {
-        "name": "Stone cottage kit",
-        "level": 4
+        name: "Stone cottage kit",
+        level: 4,
       },
       {
-        "name": "City den kit",
-        "level": 4
+        name: "City den kit",
+        level: 4,
       },
       {
-        "name": "Poke Ball House kit",
-        "level": 4
+        name: "Poke Ball House kit",
+        level: 4,
       },
       {
-        "name": "Pikachu fountain kit",
-        "level": 4
+        name: "Pikachu fountain kit",
+        level: 4,
       },
       {
-        "name": "Moonlight dance statue kit",
-        "level": 4
+        name: "Moonlight dance statue kit",
+        level: 4,
       },
       {
-        "name": "Gray hut kit",
-        "level": 4
+        name: "Gray hut kit",
+        level: 4,
       },
       {
-        "name": "Log cabin kit",
-        "level": 4
+        name: "Log cabin kit",
+        level: 4,
       },
       {
-        "name": "Fountain plaza kit",
-        "level": 4
+        name: "Fountain plaza kit",
+        level: 4,
       },
       {
-        "name": "Skyland-flower seeds",
-        "level": 4
+        name: "Skyland-flower seeds",
+        level: 4,
       },
       {
-        "name": "Tomato seeds",
-        "level": 4
+        name: "Tomato seeds",
+        level: 4,
       },
       {
-        "name": "Wheat seeds",
-        "level": 4
+        name: "Wheat seeds",
+        level: 4,
       },
       {
-        "name": "Small square rug",
-        "level": 4
+        name: "Small square rug",
+        level: 4,
       },
       {
-        "name": "Office locker",
-        "level": 5
+        name: "Office locker",
+        level: 5,
       },
       {
-        "name": "Office shelf",
-        "level": 5
+        name: "Office shelf",
+        level: 5,
       },
       {
-        "name": "Pop art sofa",
-        "level": 5
+        name: "Pop art sofa",
+        level: 5,
       },
       {
-        "name": "Sandwiches",
-        "level": 5
+        name: "Sandwiches",
+        level: 5,
       },
       {
-        "name": "Shaved ice",
-        "level": 5
+        name: "Shaved ice",
+        level: 5,
       },
       {
-        "name": "Ribbon cake",
-        "level": 5
+        name: "Ribbon cake",
+        level: 5,
       },
       {
-        "name": "Newspaper",
-        "level": 5
+        name: "Newspaper",
+        level: 5,
       },
       {
-        "name": "Magazine rack",
-        "level": 5
+        name: "Magazine rack",
+        level: 5,
       },
       {
-        "name": "Modern sink",
-        "level": 5
+        name: "Modern sink",
+        level: 5,
       },
       {
-        "name": "Cooking stove",
-        "level": 5
+        name: "Cooking stove",
+        level: 5,
       },
       {
-        "name": "Microwave oven",
-        "level": 5
+        name: "Microwave oven",
+        level: 5,
       },
       {
-        "name": "Bathtub",
-        "level": 5
+        name: "Bathtub",
+        level: 5,
       },
       {
-        "name": "Tablet",
-        "level": 5
+        name: "Tablet",
+        level: 5,
       },
       {
-        "name": "Television",
-        "level": 5
+        name: "Television",
+        level: 5,
       },
       {
-        "name": "Jumbled cords",
-        "level": 5
+        name: "Jumbled cords",
+        level: 5,
       },
       {
-        "name": "Bonfire",
-        "level": 5
+        name: "Bonfire",
+        level: 5,
       },
       {
-        "name": "Mini floodgate",
-        "level": 5
+        name: "Mini floodgate",
+        level: 5,
       },
       {
-        "name": "Red paint",
-        "level": 5
+        name: "Red paint",
+        level: 5,
       },
       {
-        "name": "Blue paint",
-        "level": 5
+        name: "Blue paint",
+        level: 5,
       },
       {
-        "name": "Green paint",
-        "level": 5
+        name: "Green paint",
+        level: 5,
       },
       {
-        "name": "Yellow paint",
-        "level": 5
+        name: "Yellow paint",
+        level: 5,
       },
       {
-        "name": "Pink paint",
-        "level": 5
+        name: "Pink paint",
+        level: 5,
       },
       {
-        "name": "Cyan paint",
-        "level": 5
+        name: "Cyan paint",
+        level: 5,
       },
       {
-        "name": "White paint",
-        "level": 5
+        name: "White paint",
+        level: 5,
       },
       {
-        "name": "Black paint",
-        "level": 5
+        name: "Black paint",
+        level: 5,
       },
       {
-        "name": "Leaf house kit",
-        "level": 5
+        name: "Leaf house kit",
+        level: 5,
       },
       {
-        "name": "Sand house kit",
-        "level": 5
+        name: "Sand house kit",
+        level: 5,
       },
       {
-        "name": "Stone house kit",
-        "level": 5
+        name: "Stone house kit",
+        level: 5,
       },
       {
-        "name": "City hut kit",
-        "level": 5
+        name: "City hut kit",
+        level: 5,
       },
       {
-        "name": "City cottage kit",
-        "level": 5
+        name: "City cottage kit",
+        level: 5,
       },
       {
-        "name": "PokeMart kit",
-        "level": 5
+        name: "PokeMart kit",
+        level: 5,
       },
       {
-        "name": "Charging station kit",
-        "level": 5
+        name: "Charging station kit",
+        level: 5,
       },
       {
-        "name": "Pink hut kit",
-        "level": 5
+        name: "Pink hut kit",
+        level: 5,
       },
       {
-        "name": "Yellow hut kit",
-        "level": 5
+        name: "Yellow hut kit",
+        level: 5,
       },
       {
-        "name": "Potato seeds",
-        "level": 5
+        name: "Potato seeds",
+        level: 5,
       },
       {
-        "name": "Wooden flooring (wallpaper)",
-        "level": 5
+        name: "Wooden flooring (wallpaper)",
+        level: 5,
       },
       {
-        "name": "Plaster wall (wallpaper)",
-        "level": 5
+        name: "Plaster wall (wallpaper)",
+        level: 5,
       },
       {
-        "name": "Hardwood flooring (wallpaper)",
-        "level": 5
+        name: "Hardwood flooring (wallpaper)",
+        level: 5,
       },
       {
-        "name": "Party cooking pot",
-        "level": 5
+        name: "Party cooking pot",
+        level: 5,
       },
       {
-        "name": "Stone fireplace",
-        "level": 6
+        name: "Stone fireplace",
+        level: 6,
       },
       {
-        "name": "Vending machine",
-        "level": 6
+        name: "Vending machine",
+        level: 6,
       },
       {
-        "name": "Pokemetal",
-        "level": 6
+        name: "Pokemetal",
+        level: 6,
       },
       {
-        "name": "City house kit",
-        "level": 6
+        name: "City house kit",
+        level: 6,
       },
       {
-        "name": "Freezing chambers kit",
-        "level": 6
+        name: "Freezing chambers kit",
+        level: 6,
       },
       {
-        "name": "Tidal Bell",
-        "level": 6
+        name: "Tidal Bell",
+        level: 6,
       },
       {
-        "name": "Clear Bell",
-        "level": 6
+        name: "Clear Bell",
+        level: 6,
       },
       {
-        "name": "Abandoned Power Plant kit",
-        "level": 7
+        name: "Abandoned Power Plant kit",
+        level: 7,
       },
       {
-        "name": "Small office kit",
-        "level": 8
+        name: "Small office kit",
+        level: 8,
       },
       {
-        "name": "Relaxing park kit",
-        "level": 8
+        name: "Relaxing park kit",
+        level: 8,
       },
       {
-        "name": "Stylish cafe kit",
-        "level": 8
+        name: "Stylish cafe kit",
+        level: 8,
       },
       {
-        "name": "Concert stage kit",
-        "level": 8
+        name: "Concert stage kit",
+        level: 8,
       },
       {
-        "name": "Altar of Flame kit",
-        "level": 8
+        name: "Altar of Flame kit",
+        level: 8,
       },
       {
-        "name": "Pikachu sofa",
-        "level": 9
+        name: "Pikachu sofa",
+        level: 9,
       },
       {
-        "name": "Big drum",
-        "level": 9
+        name: "Big drum",
+        level: 9,
       },
       {
-        "name": "Punching game",
-        "level": 9
+        name: "Punching game",
+        level: 9,
       },
       {
-        "name": "Inflatable boat",
-        "level": 9
+        name: "Inflatable boat",
+        level: 9,
       },
       {
-        "name": "Photo cutout board",
-        "level": 9
+        name: "Photo cutout board",
+        level: 9,
       },
       {
-        "name": "Wasteland Pokemon Center kit",
-        "level": 10
+        name: "Wasteland Pokemon Center kit",
+        level: 10,
       },
       {
-        "name": "Beach Pokemon Center kit",
-        "level": 10
+        name: "Beach Pokemon Center kit",
+        level: 10,
       },
       {
-        "name": "Ridge Pokemon Center kit",
-        "level": 10
+        name: "Ridge Pokemon Center kit",
+        level: 10,
       },
       {
-        "name": "Skyland Pokemon Center kit",
-        "level": 10
-      }
-    ]
-  }
+        name: "Skyland Pokemon Center kit",
+        level: 10,
+      },
+    ],
+  },
 };

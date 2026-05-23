@@ -18,7 +18,7 @@ Warm, playful, legible. A cozy game companion — inviting and approachable, wit
 
 ## Anti-references
 
-- **Fan wikis (Bulbapedia, Serebii):** Dense table walls, raw data dumps, no visual hierarchy. Pokopia Picks should feel curated, not exported from a database.
+- **Fan wikis (Bulbapedia):** Dense table walls, raw data dumps, no visual hierarchy. Pokopia Picks should feel curated, not exported from a database.
 - **Generic SaaS dashboards:** Minimal grays, Linear/Notion aesthetics. This is a warm, game-adjacent tool — not a startup product.
 
 ## Design Principles

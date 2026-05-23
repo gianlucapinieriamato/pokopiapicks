@@ -9,21 +9,22 @@ export const NAME_FIXES: Readonly<Record<string, string>> = {
   "Elegant flower seed": "Elegant flower",
   "Wooden chair": "Wooden stool",
   "Grubby rag": "Grubby rags",
-  "Speakers": "Speaker",
+  Speakers: "Speaker",
   "Public chair": "Public Seat",
 };
 
-// Items whose icon filename on Serebii differs from the name-derived path
+// Items whose icon filename differs from the name-derived path
 export const ICON_OVERRIDES: Readonly<Record<string, string>> = {
   "Pecha tree seed": "/icons/items/pechaseeds.png",
   "Public chair": "/icons/items/publicseat.png",
-  "Speakers": "/icons/items/speaker.png",
+  Speakers: "/icons/items/speaker.png",
   "PP Up": "/icons/items/ppup.png",
 };
 
 export function resolveItem(name: string): ResolvedItem {
   const displayName = NAME_FIXES[name] ?? name;
-  if (ICON_OVERRIDES[name]) return { icon: ICON_OVERRIDES[name], slug: undefined, displayName };
+  if (ICON_OVERRIDES[name])
+    return { icon: ICON_OVERRIDES[name], slug: undefined, displayName };
 
   const canonical = NAME_FIXES[name] ?? name;
   const entry = ITEMS[canonical] ?? ITEMS[name];
@@ -31,10 +32,12 @@ export function resolveItem(name: string): ResolvedItem {
 
   const baseName = name.endsWith(" Recipe") ? name.slice(0, -7) : name;
   const baseEntry = ITEMS[baseName];
-  if (baseEntry) return { icon: baseEntry.icon, slug: baseEntry.slug, displayName };
+  if (baseEntry)
+    return { icon: baseEntry.icon, slug: baseEntry.slug, displayName };
 
   const derivedPath = `/icons/items/${baseName.toLowerCase().replace(/\s+/g, "")}.png`;
-  if (existsSync(join(process.cwd(), "public", derivedPath))) return { icon: derivedPath, slug: undefined, displayName };
+  if (existsSync(join(process.cwd(), "public", derivedPath)))
+    return { icon: derivedPath, slug: undefined, displayName };
 
   return { icon: null, slug: undefined, displayName };
 }
