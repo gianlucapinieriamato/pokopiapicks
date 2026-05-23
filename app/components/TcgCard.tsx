@@ -97,13 +97,13 @@ function ChipRow({
   const visible = max == null ? items : items.slice(0, max);
   const overflow = max == null ? 0 : items.length - max;
   return (
-    <div className="flex flex-wrap gap-[3px]">
+    <div className="flex flex-nowrap overflow-hidden gap-[3px]">
       {visible.map((item) => (
-        <span key={item} className={chipClass}>
+        <span key={item} className={`${chipClass} shrink-0 whitespace-nowrap`}>
           {item}
         </span>
       ))}
-      {overflow > 0 && <span className={badgeClass}>+{overflow}</span>}
+      {overflow > 0 && <span className={`${badgeClass} shrink-0`}>+{overflow}</span>}
     </div>
   );
 }
