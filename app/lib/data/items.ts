@@ -3,6419 +3,5142 @@ import type { ItemEntry } from "../types";
 
 export const ITEMS: Record<string, ItemEntry> = {
   "adorable-hedge": {
-    "slug": "adorable-hedge",
-    "name": "Adorable hedge",
-    "icon": "/icons/items/adorablehedge.png",
-    "categories": []
+    slug: "adorable-hedge",
+    name: "Adorable hedge",
+    icon: "/icons/items/adorablehedge.png",
+    categories: [],
   },
   "adorable-hedge-blue": {
-    "slug": "adorable-hedge-blue",
-    "name": "Adorable hedge (blue)",
-    "icon": "/icons/items/adorablehedge(blue).png",
-    "categories": []
+    slug: "adorable-hedge-blue",
+    name: "Adorable hedge (blue)",
+    icon: "/icons/items/adorablehedge(blue).png",
+    categories: [],
   },
   "adorable-hedge-orange": {
-    "slug": "adorable-hedge-orange",
-    "name": "Adorable hedge (orange)",
-    "icon": "/icons/items/adorablehedge(orange).png",
-    "categories": []
+    slug: "adorable-hedge-orange",
+    name: "Adorable hedge (orange)",
+    icon: "/icons/items/adorablehedge(orange).png",
+    categories: [],
   },
   "adorable-hedge-purple": {
-    "slug": "adorable-hedge-purple",
-    "name": "Adorable hedge (purple)",
-    "icon": "/icons/items/adorablehedge(purple).png",
-    "categories": []
+    slug: "adorable-hedge-purple",
+    name: "Adorable hedge (purple)",
+    icon: "/icons/items/adorablehedge(purple).png",
+    categories: [],
   },
   "adorable-hedge-red": {
-    "slug": "adorable-hedge-red",
-    "name": "Adorable hedge (red)",
-    "icon": "/icons/items/adorablehedge(red).png",
-    "categories": []
+    slug: "adorable-hedge-red",
+    name: "Adorable hedge (red)",
+    icon: "/icons/items/adorablehedge(red).png",
+    categories: [],
   },
   "adrenaline-orb": {
-    "slug": "adrenaline-orb",
-    "name": "Adrenaline Orb",
-    "icon": "/icons/items/adrenalineorb.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "adrenaline-orb",
+    name: "Adrenaline Orb",
+    icon: "/icons/items/adrenalineorb.png",
+    categories: ["round-stuff"],
   },
   "adventure-kit": {
-    "slug": "adventure-kit",
-    "name": "Adventure kit",
-    "icon": "/icons/items/adventurekit.png",
-    "categories": [
-      "containers",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "adventure-kit",
+    name: "Adventure kit",
+    icon: "/icons/items/adventurekit.png",
+    categories: ["containers", "fabric", "soft-stuff"],
   },
   "aether-paradise": {
-    "slug": "aether-paradise",
-    "name": "Aether Paradise",
-    "icon": "/icons/items/aetherparadise.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "aether-paradise",
+    name: "Aether Paradise",
+    icon: "/icons/items/aetherparadise.png",
+    categories: ["round-stuff"],
   },
   "afternoon-tea-set": {
-    "slug": "afternoon-tea-set",
-    "name": "Afternoon tea set",
-    "icon": "/icons/items/afternoonteaset.png",
-    "categories": [
-      "colorful-stuff",
-      "gatherings",
-      "looks-like-food",
-      "luxury"
-    ]
+    slug: "afternoon-tea-set",
+    name: "Afternoon tea set",
+    icon: "/icons/items/afternoonteaset.png",
+    categories: ["colorful-stuff", "gatherings", "looks-like-food", "luxury"],
   },
   "aged-stone-wall": {
-    "slug": "aged-stone-wall",
-    "name": "Aged-stone wall",
-    "icon": "/icons/items/aged-stonewall.png",
-    "categories": []
+    slug: "aged-stone-wall",
+    name: "Aged-stone wall",
+    icon: "/icons/items/aged-stonewall.png",
+    categories: [],
   },
   "air-conditioner": {
-    "slug": "air-conditioner",
-    "name": "Air conditioner",
-    "icon": "/icons/items/airconditioner.png",
-    "categories": [
-      "electronics",
-      "metal-stuff",
-      "nice-breezes",
-      "strange-stuff"
-    ]
+    slug: "air-conditioner",
+    name: "Air conditioner",
+    icon: "/icons/items/airconditioner.png",
+    categories: ["electronics", "metal-stuff", "nice-breezes", "strange-stuff"],
   },
   "alarm-clock": {
-    "slug": "alarm-clock",
-    "name": "Alarm Clock",
-    "icon": "/icons/items/alarmclock.png",
-    "categories": [
+    slug: "alarm-clock",
+    name: "Alarm Clock",
+    icon: "/icons/items/alarmclock.png",
+    categories: [
       "glass-stuff",
       "metal-stuff",
       "noisy-stuff",
       "round-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "alpine-grass": {
-    "slug": "alpine-grass",
-    "name": "Alpine grass",
-    "icon": "/icons/items/alpinegrass.png",
-    "categories": []
+    slug: "alpine-grass",
+    name: "Alpine grass",
+    icon: "/icons/items/alpinegrass.png",
+    categories: [],
   },
   "antique-bed": {
-    "slug": "antique-bed",
-    "name": "Antique bed",
-    "icon": "/icons/items/antiquebed.png",
-    "categories": [
-      "fabric",
-      "group-activities",
-      "luxury",
-      "soft-stuff"
-    ]
+    slug: "antique-bed",
+    name: "Antique bed",
+    icon: "/icons/items/antiquebed.png",
+    categories: ["fabric", "group-activities", "luxury", "soft-stuff"],
   },
   "antique-chair": {
-    "slug": "antique-chair",
-    "name": "Antique chair",
-    "icon": "/icons/items/antiquechair.png",
-    "categories": [
-      "colorful-stuff",
-      "fabric",
-      "luxury",
-      "soft-stuff"
-    ]
+    slug: "antique-chair",
+    name: "Antique chair",
+    icon: "/icons/items/antiquechair.png",
+    categories: ["colorful-stuff", "fabric", "luxury", "soft-stuff"],
   },
   "antique-chandelier": {
-    "slug": "antique-chandelier",
-    "name": "Antique chandelier",
-    "icon": "/icons/items/antiquechandelier.png",
-    "categories": [
-      "electronics",
-      "glass-stuff",
-      "luxury",
-      "metal-stuff"
-    ]
+    slug: "antique-chandelier",
+    name: "Antique chandelier",
+    icon: "/icons/items/antiquechandelier.png",
+    categories: ["electronics", "glass-stuff", "luxury", "metal-stuff"],
   },
   "antique-chest": {
-    "slug": "antique-chest",
-    "name": "Antique chest",
-    "icon": "/icons/items/antiquechest.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "luxury",
-      "wooden-stuff"
-    ]
+    slug: "antique-chest",
+    name: "Antique chest",
+    icon: "/icons/items/antiquechest.png",
+    categories: ["blocky-stuff", "containers", "luxury", "wooden-stuff"],
   },
   "antique-clock": {
-    "slug": "antique-clock",
-    "name": "Antique clock",
-    "icon": "/icons/items/antiqueclock.png",
-    "categories": [
-      "complicated-stuff",
-      "glass-stuff",
-      "luxury",
-      "wooden-stuff"
-    ]
+    slug: "antique-clock",
+    name: "Antique clock",
+    icon: "/icons/items/antiqueclock.png",
+    categories: ["complicated-stuff", "glass-stuff", "luxury", "wooden-stuff"],
   },
   "antique-closet": {
-    "slug": "antique-closet",
-    "name": "Antique closet",
-    "icon": "/icons/items/antiquecloset.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "luxury",
-      "wooden-stuff"
-    ]
+    slug: "antique-closet",
+    name: "Antique closet",
+    icon: "/icons/items/antiquecloset.png",
+    categories: ["blocky-stuff", "containers", "luxury", "wooden-stuff"],
   },
   "antique-dresser": {
-    "slug": "antique-dresser",
-    "name": "Antique dresser",
-    "icon": "/icons/items/antiquedresser.png",
-    "categories": [
-      "glass-stuff",
-      "luxury"
-    ]
+    slug: "antique-dresser",
+    name: "Antique dresser",
+    icon: "/icons/items/antiquedresser.png",
+    categories: ["glass-stuff", "luxury"],
   },
   "antique-sofa": {
-    "slug": "antique-sofa",
-    "name": "Antique sofa",
-    "icon": "/icons/items/antiquesofa.png",
-    "categories": [
+    slug: "antique-sofa",
+    name: "Antique sofa",
+    icon: "/icons/items/antiquesofa.png",
+    categories: [
       "colorful-stuff",
       "fabric",
       "group-activities",
       "luxury",
-      "soft-stuff"
-    ]
+      "soft-stuff",
+    ],
   },
   "antique-table": {
-    "slug": "antique-table",
-    "name": "Antique table",
-    "icon": "/icons/items/antiquetable.png",
-    "categories": [
-      "luxury",
-      "wooden-stuff"
-    ]
+    slug: "antique-table",
+    name: "Antique table",
+    icon: "/icons/items/antiquetable.png",
+    categories: ["luxury", "wooden-stuff"],
   },
   "antique-wall-lower": {
-    "slug": "antique-wall-lower",
-    "name": "Antique wall (lower)",
-    "icon": "/icons/items/antiquewall(lower).png",
-    "categories": []
+    slug: "antique-wall-lower",
+    name: "Antique wall (lower)",
+    icon: "/icons/items/antiquewall(lower).png",
+    categories: [],
   },
   "antique-wall-middle": {
-    "slug": "antique-wall-middle",
-    "name": "Antique wall (middle)",
-    "icon": "/icons/items/antiquewall(middle).png",
-    "categories": []
+    slug: "antique-wall-middle",
+    name: "Antique wall (middle)",
+    icon: "/icons/items/antiquewall(middle).png",
+    categories: [],
   },
   "antique-wall-upper": {
-    "slug": "antique-wall-upper",
-    "name": "Antique wall (upper)",
-    "icon": "/icons/items/antiquewall(upper).png",
-    "categories": []
+    slug: "antique-wall-upper",
+    name: "Antique wall (upper)",
+    icon: "/icons/items/antiquewall(upper).png",
+    categories: [],
   },
   "arcade-machine": {
-    "slug": "arcade-machine",
-    "name": "Arcade machine",
-    "icon": "/icons/items/arcademachine.png",
-    "categories": [
+    slug: "arcade-machine",
+    name: "Arcade machine",
+    icon: "/icons/items/arcademachine.png",
+    categories: [
       "blocky-stuff",
       "electronics",
       "glass-stuff",
       "group-activities",
-      "play-spaces"
-    ]
+      "play-spaces",
+    ],
   },
   "arcanine-doll": {
-    "slug": "arcanine-doll",
-    "name": "Arcanine doll",
-    "icon": "/icons/items/arcaninedoll.png",
-    "categories": [
-      "cute-stuff",
-      "fabric"
-    ]
+    slug: "arcanine-doll",
+    name: "Arcanine doll",
+    icon: "/icons/items/arcaninedoll.png",
+    categories: ["cute-stuff", "fabric"],
   },
   "arch-bridge": {
-    "slug": "arch-bridge",
-    "name": "Arch Bridge",
-    "icon": "/icons/items/archbridge.png",
-    "categories": []
+    slug: "arch-bridge",
+    name: "Arch Bridge",
+    icon: "/icons/items/archbridge.png",
+    categories: [],
   },
   "arched-tiling": {
-    "slug": "arched-tiling",
-    "name": "Arched tiling",
-    "icon": "/icons/items/archedtiling.png",
-    "categories": []
+    slug: "arched-tiling",
+    name: "Arched tiling",
+    icon: "/icons/items/archedtiling.png",
+    categories: [],
   },
   "area-zero": {
-    "slug": "area-zero",
-    "name": "Area Zero",
-    "icon": "/icons/items/areazero.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "area-zero",
+    name: "Area Zero",
+    icon: "/icons/items/areazero.png",
+    categories: ["round-stuff"],
   },
   "armor-fossil": {
-    "slug": "armor-fossil",
-    "name": "Armor Fossil",
-    "icon": "/icons/items/armorfossil.png",
-    "categories": [
-      "hard-stuff",
-      "lots-of-dirt",
-      "round-stuff",
-      "strange-stuff"
-    ]
+    slug: "armor-fossil",
+    name: "Armor Fossil",
+    icon: "/icons/items/armorfossil.png",
+    categories: ["hard-stuff", "lots-of-dirt", "round-stuff", "strange-stuff"],
   },
   "armor-fragment": {
-    "slug": "armor-fragment",
-    "name": "Armor fragment",
-    "icon": "/icons/items/armorfragment.png",
-    "categories": [
-      "strange-stuff"
-    ]
+    slug: "armor-fragment",
+    name: "Armor fragment",
+    icon: "/icons/items/armorfragment.png",
+    categories: ["strange-stuff"],
   },
   "arrow-sign": {
-    "slug": "arrow-sign",
-    "name": "Arrow sign",
-    "icon": "/icons/items/arrowsign.png",
-    "categories": [
-      "letters-and-words",
-      "wooden-stuff"
-    ]
+    slug: "arrow-sign",
+    name: "Arrow sign",
+    icon: "/icons/items/arrowsign.png",
+    categories: ["letters-and-words", "wooden-stuff"],
   },
   "aspear-berry": {
-    "slug": "aspear-berry",
-    "name": "Aspear Berry",
-    "icon": "/icons/items/aspearberry.png",
-    "categories": []
+    slug: "aspear-berry",
+    name: "Aspear Berry",
+    icon: "/icons/items/aspearberry.png",
+    categories: [],
   },
   "aspear-tree": {
-    "slug": "aspear-tree",
-    "name": "Aspear tree",
-    "icon": "/icons/items/aspeartree.png",
-    "categories": []
+    slug: "aspear-tree",
+    name: "Aspear tree",
+    icon: "/icons/items/aspeartree.png",
+    categories: [],
   },
   "asphalt-road": {
-    "slug": "asphalt-road",
-    "name": "Asphalt road",
-    "icon": "/icons/items/asphaltroad.png",
-    "categories": []
+    slug: "asphalt-road",
+    name: "Asphalt road",
+    icon: "/icons/items/asphaltroad.png",
+    categories: [],
   },
   "audio-mixer": {
-    "slug": "audio-mixer",
-    "name": "Audio mixer",
-    "icon": "/icons/items/audiomixer.png",
-    "categories": [
-      "complicated-stuff",
-      "electronics",
-      "strange-stuff"
-    ]
+    slug: "audio-mixer",
+    name: "Audio mixer",
+    icon: "/icons/items/audiomixer.png",
+    categories: ["complicated-stuff", "electronics", "strange-stuff"],
   },
   "auspicious-armor": {
-    "slug": "auspicious-armor",
-    "name": "Auspicious Armor",
-    "icon": "/icons/items/auspiciousarmor.png",
-    "categories": [
-      "luxury",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "auspicious-armor",
+    name: "Auspicious Armor",
+    icon: "/icons/items/auspiciousarmor.png",
+    categories: ["luxury", "shiny-stuff", "strange-stuff"],
   },
-  "balloons": {
-    "slug": "balloons",
-    "name": "Balloons",
-    "icon": "/icons/items/balloons.png",
-    "categories": [
+  balloons: {
+    slug: "balloons",
+    name: "Balloons",
+    icon: "/icons/items/balloons.png",
+    categories: [
       "colorful-stuff",
       "gatherings",
       "play-spaces",
       "round-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
-  "barrel": {
-    "slug": "barrel",
-    "name": "Barrel",
-    "icon": "/icons/items/barrel.png",
-    "categories": [
-      "containers",
-      "metal-stuff",
-      "round-stuff",
-      "wooden-stuff"
-    ]
+  barrel: {
+    slug: "barrel",
+    name: "Barrel",
+    icon: "/icons/items/barrel.png",
+    categories: ["containers", "metal-stuff", "round-stuff", "wooden-stuff"],
   },
   "barren-ordinary-soil": {
-    "slug": "barren-ordinary-soil",
-    "name": "Barren ordinary soil",
-    "icon": "/icons/items/barrenordinarysoil.png",
-    "categories": []
+    slug: "barren-ordinary-soil",
+    name: "Barren ordinary soil",
+    icon: "/icons/items/barrenordinarysoil.png",
+    categories: [],
   },
   "barren-pure-white-soil": {
-    "slug": "barren-pure-white-soil",
-    "name": "Barren pure-white soil",
-    "icon": "/icons/items/barrenpure-whitesoil.png",
-    "categories": []
+    slug: "barren-pure-white-soil",
+    name: "Barren pure-white soil",
+    icon: "/icons/items/barrenpure-whitesoil.png",
+    categories: [],
   },
   "barren-striped-soil": {
-    "slug": "barren-striped-soil",
-    "name": "Barren striped soil",
-    "icon": "/icons/items/barrenstripedsoil.png",
-    "categories": []
+    slug: "barren-striped-soil",
+    name: "Barren striped soil",
+    icon: "/icons/items/barrenstripedsoil.png",
+    categories: [],
   },
   "bathtime-set": {
-    "slug": "bathtime-set",
-    "name": "Bathtime set",
-    "icon": "/icons/items/bathtimeset.png",
-    "categories": [
-      "cleanliness",
-      "cute-stuff",
-      "lots-of-water",
-      "shiny-stuff"
-    ]
+    slug: "bathtime-set",
+    name: "Bathtime set",
+    icon: "/icons/items/bathtimeset.png",
+    categories: ["cleanliness", "cute-stuff", "lots-of-water", "shiny-stuff"],
   },
-  "bathtub": {
-    "slug": "bathtub",
-    "name": "Bathtub",
-    "icon": "/icons/items/bathtub.png",
-    "categories": [
+  bathtub: {
+    slug: "bathtub",
+    name: "Bathtub",
+    icon: "/icons/items/bathtub.png",
+    categories: [
       "cleanliness",
       "lots-of-water",
       "stone-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "battle-gym-leader-battle": {
-    "slug": "battle-gym-leader-battle",
-    "name": "Battle! (Gym Leader Battle)",
-    "icon": "/icons/items/battle!(gymleaderbattle).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "battle-gym-leader-battle",
+    name: "Battle! (Gym Leader Battle)",
+    icon: "/icons/items/battle!(gymleaderbattle).png",
+    categories: ["round-stuff"],
   },
   "battle-gym-leader-1": {
-    "slug": "battle-gym-leader-1",
-    "name": "Battle! (Gym Leader) 1",
-    "icon": "/icons/items/battle!(gymleader)1.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "battle-gym-leader-1",
+    name: "Battle! (Gym Leader) 1",
+    icon: "/icons/items/battle!(gymleader)1.png",
+    categories: ["round-stuff"],
   },
   "battle-gym-leader-2": {
-    "slug": "battle-gym-leader-2",
-    "name": "Battle! (Gym Leader) 2",
-    "icon": "/icons/items/battle!(gymleader)2.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "battle-gym-leader-2",
+    name: "Battle! (Gym Leader) 2",
+    icon: "/icons/items/battle!(gymleader)2.png",
+    categories: ["round-stuff"],
   },
   "beach-chair": {
-    "slug": "beach-chair",
-    "name": "Beach chair",
-    "icon": "/icons/items/beachchair.png",
-    "categories": [
-      "fabric",
-      "ocean-vibes",
-      "soft-stuff"
-    ]
+    slug: "beach-chair",
+    name: "Beach chair",
+    icon: "/icons/items/beachchair.png",
+    categories: ["fabric", "ocean-vibes", "soft-stuff"],
   },
   "beach-parasol": {
-    "slug": "beach-parasol",
-    "name": "Beach parasol",
-    "icon": "/icons/items/beachparasol.png",
-    "categories": [
-      "fabric",
-      "lots-of-water",
-      "ocean-vibes"
-    ]
+    slug: "beach-parasol",
+    name: "Beach parasol",
+    icon: "/icons/items/beachparasol.png",
+    categories: ["fabric", "lots-of-water", "ocean-vibes"],
   },
   "beach-sand": {
-    "slug": "beach-sand",
-    "name": "Beach sand",
-    "icon": "/icons/items/beachsand.png",
-    "categories": []
+    slug: "beach-sand",
+    name: "Beach sand",
+    icon: "/icons/items/beachsand.png",
+    categories: [],
   },
-  "bean": {
-    "slug": "bean",
-    "name": "Bean",
-    "icon": "/icons/items/bean.png",
-    "categories": []
+  bean: {
+    slug: "bean",
+    name: "Bean",
+    icon: "/icons/items/bean.png",
+    categories: [],
   },
   "beautiful-flower": {
-    "slug": "beautiful-flower",
-    "name": "Beautiful flower",
-    "icon": "/icons/items/beautifulflower.png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "beautiful-flower",
+    name: "Beautiful flower",
+    icon: "/icons/items/beautifulflower.png",
+    categories: ["pretty-flowers"],
   },
   "beautiful-flower-pink": {
-    "slug": "beautiful-flower-pink",
-    "name": "Beautiful flower (pink)",
-    "icon": "/icons/items/beautifulflower(pink).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "beautiful-flower-pink",
+    name: "Beautiful flower (pink)",
+    icon: "/icons/items/beautifulflower(pink).png",
+    categories: ["pretty-flowers"],
   },
   "beautiful-flower-purple": {
-    "slug": "beautiful-flower-purple",
-    "name": "Beautiful flower (purple)",
-    "icon": "/icons/items/beautifulflower(purple).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "beautiful-flower-purple",
+    name: "Beautiful flower (purple)",
+    icon: "/icons/items/beautifulflower(purple).png",
+    categories: ["pretty-flowers"],
   },
   "beautiful-flower-white": {
-    "slug": "beautiful-flower-white",
-    "name": "Beautiful flower (white)",
-    "icon": "/icons/items/beautifulflower(white).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "beautiful-flower-white",
+    name: "Beautiful flower (white)",
+    icon: "/icons/items/beautifulflower(white).png",
+    categories: ["pretty-flowers"],
   },
   "beautiful-flower-yellow": {
-    "slug": "beautiful-flower-yellow",
-    "name": "Beautiful flower (yellow)",
-    "icon": "/icons/items/beautifulflower(yellow).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "beautiful-flower-yellow",
+    name: "Beautiful flower (yellow)",
+    icon: "/icons/items/beautifulflower(yellow).png",
+    categories: ["pretty-flowers"],
   },
-  "bell": {
-    "slug": "bell",
-    "name": "Bell",
-    "icon": "/icons/items/bell.png",
-    "categories": [
-      "metal-stuff",
-      "shiny-stuff",
-      "strange-stuff",
-      "wobbly-stuff"
-    ]
+  bell: {
+    slug: "bell",
+    name: "Bell",
+    icon: "/icons/items/bell.png",
+    categories: ["metal-stuff", "shiny-stuff", "strange-stuff", "wobbly-stuff"],
   },
   "bell-tower": {
-    "slug": "bell-tower",
-    "name": "Bell Tower",
-    "icon": "/icons/items/belltower.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "bell-tower",
+    name: "Bell Tower",
+    icon: "/icons/items/belltower.png",
+    categories: ["round-stuff"],
   },
   "berry-basket": {
-    "slug": "berry-basket",
-    "name": "Berry basket",
-    "icon": "/icons/items/berrybasket.png",
-    "categories": [
+    slug: "berry-basket",
+    name: "Berry basket",
+    icon: "/icons/items/berrybasket.png",
+    categories: [
       "blocky-stuff",
       "containers",
       "looks-like-food",
-      "lots-of-nature"
-    ]
+      "lots-of-nature",
+    ],
   },
   "berry-bed": {
-    "slug": "berry-bed",
-    "name": "Berry bed",
-    "icon": "/icons/items/berrybed.png",
-    "categories": [
+    slug: "berry-bed",
+    name: "Berry bed",
+    icon: "/icons/items/berrybed.png",
+    categories: [
       "cute-stuff",
       "fabric",
       "looks-like-food",
       "lots-of-nature",
-      "soft-stuff"
-    ]
+      "soft-stuff",
+    ],
   },
   "berry-case": {
-    "slug": "berry-case",
-    "name": "Berry case",
-    "icon": "/icons/items/berrycase.png",
-    "categories": [
+    slug: "berry-case",
+    name: "Berry case",
+    icon: "/icons/items/berrycase.png",
+    categories: [
       "containers",
       "cute-stuff",
       "looks-like-food",
-      "lots-of-nature"
-    ]
+      "lots-of-nature",
+    ],
   },
   "berry-chair": {
-    "slug": "berry-chair",
-    "name": "Berry chair",
-    "icon": "/icons/items/berrychair.png",
-    "categories": [
+    slug: "berry-chair",
+    name: "Berry chair",
+    icon: "/icons/items/berrychair.png",
+    categories: [
       "cute-stuff",
       "looks-like-food",
       "lots-of-nature",
-      "soft-stuff"
-    ]
+      "soft-stuff",
+    ],
   },
   "berry-clock": {
-    "slug": "berry-clock",
-    "name": "Berry clock",
-    "icon": "/icons/items/berryclock.png",
-    "categories": [
+    slug: "berry-clock",
+    name: "Berry clock",
+    icon: "/icons/items/berryclock.png",
+    categories: [
       "cute-stuff",
       "fabric",
       "looks-like-food",
       "lots-of-nature",
       "round-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
   "berry-hanging-lamp": {
-    "slug": "berry-hanging-lamp",
-    "name": "Berry hanging lamp",
-    "icon": "/icons/items/berryhanginglamp.png",
-    "categories": [
+    slug: "berry-hanging-lamp",
+    name: "Berry hanging lamp",
+    icon: "/icons/items/berryhanginglamp.png",
+    categories: [
       "cute-stuff",
       "electronics",
       "glass-stuff",
       "looks-like-food",
       "lots-of-nature",
-      "slender-objects"
-    ]
+      "slender-objects",
+    ],
   },
   "berry-print": {
-    "slug": "berry-print",
-    "name": "Berry print",
-    "icon": "/icons/items/berryprint.png",
-    "categories": [
-      "looks-like-food",
-      "lots-of-nature"
-    ]
+    slug: "berry-print",
+    name: "Berry print",
+    icon: "/icons/items/berryprint.png",
+    categories: ["looks-like-food", "lots-of-nature"],
   },
   "berry-print-wallpaper": {
-    "slug": "berry-print-wallpaper",
-    "name": "Berry print (wallpaper)",
-    "icon": "/icons/items/berryprint(wallpaper).png",
-    "categories": [
-      "looks-like-food",
-      "lots-of-nature"
-    ]
+    slug: "berry-print-wallpaper",
+    name: "Berry print (wallpaper)",
+    icon: "/icons/items/berryprint(wallpaper).png",
+    categories: ["looks-like-food", "lots-of-nature"],
   },
   "berry-table": {
-    "slug": "berry-table",
-    "name": "Berry table",
-    "icon": "/icons/items/berrytable.png",
-    "categories": [
-      "looks-like-food",
-      "lots-of-nature"
-    ]
+    slug: "berry-table",
+    name: "Berry table",
+    icon: "/icons/items/berrytable.png",
+    categories: ["looks-like-food", "lots-of-nature"],
   },
   "berry-table-lamp": {
-    "slug": "berry-table-lamp",
-    "name": "Berry table lamp",
-    "icon": "/icons/items/berrytablelamp.png",
-    "categories": [
+    slug: "berry-table-lamp",
+    name: "Berry table lamp",
+    icon: "/icons/items/berrytablelamp.png",
+    categories: [
       "cute-stuff",
       "electronics",
       "glass-stuff",
       "looks-like-food",
-      "lots-of-nature"
-    ]
+      "lots-of-nature",
+    ],
   },
   "berry-wall-decoration": {
-    "slug": "berry-wall-decoration",
-    "name": "Berry wall decoration",
-    "icon": "/icons/items/berrywalldecoration.png",
-    "categories": [
+    slug: "berry-wall-decoration",
+    name: "Berry wall decoration",
+    icon: "/icons/items/berrywalldecoration.png",
+    categories: [
       "colorful-stuff",
       "gatherings",
       "looks-like-food",
       "lots-of-nature",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "big-drum": {
-    "slug": "big-drum",
-    "name": "Big drum",
-    "icon": "/icons/items/bigdrum.png",
-    "categories": [
-      "round-stuff",
-      "wobbly-stuff"
-    ]
+    slug: "big-drum",
+    name: "Big drum",
+    icon: "/icons/items/bigdrum.png",
+    categories: ["round-stuff", "wobbly-stuff"],
   },
   "big-nugget": {
-    "slug": "big-nugget",
-    "name": "Big Nugget",
-    "icon": "/icons/items/bignugget.png",
-    "categories": [
-      "metal-stuff",
-      "round-stuff",
-      "shiny-stuff",
-      "stone-stuff"
-    ]
+    slug: "big-nugget",
+    name: "Big Nugget",
+    icon: "/icons/items/bignugget.png",
+    categories: ["metal-stuff", "round-stuff", "shiny-stuff", "stone-stuff"],
   },
   "big-root": {
-    "slug": "big-root",
-    "name": "Big Root",
-    "icon": "/icons/items/bigroot.png",
-    "categories": [
-      "lots-of-nature"
-    ]
+    slug: "big-root",
+    name: "Big Root",
+    icon: "/icons/items/bigroot.png",
+    categories: ["lots-of-nature"],
   },
   "big-storage-box": {
-    "slug": "big-storage-box",
-    "name": "Big storage box",
-    "icon": "/icons/items/bigstoragebox.png",
-    "categories": [
-      "wooden-stuff"
-    ]
+    slug: "big-storage-box",
+    name: "Big storage box",
+    icon: "/icons/items/bigstoragebox.png",
+    categories: ["wooden-stuff"],
   },
-  "bike": {
-    "slug": "bike",
-    "name": "Bike",
-    "icon": "/icons/items/bike.png",
-    "categories": [
+  bike: {
+    slug: "bike",
+    name: "Bike",
+    icon: "/icons/items/bike.png",
+    categories: [
       "complicated-stuff",
       "exercise",
       "metal-stuff",
       "rides",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "black-cliff-rock": {
-    "slug": "black-cliff-rock",
-    "name": "Black cliff rock",
-    "icon": "/icons/items/blackcliffrock.png",
-    "categories": []
+    slug: "black-cliff-rock",
+    name: "Black cliff rock",
+    icon: "/icons/items/blackcliffrock.png",
+    categories: [],
   },
   "black-paint": {
-    "slug": "black-paint",
-    "name": "Black paint",
-    "icon": "/icons/items/blackpaint.png",
-    "categories": [
-      "colorful-stuff",
-      "lots-of-dirt"
-    ]
+    slug: "black-paint",
+    name: "Black paint",
+    icon: "/icons/items/blackpaint.png",
+    categories: ["colorful-stuff", "lots-of-dirt"],
   },
   "black-rock": {
-    "slug": "black-rock",
-    "name": "Black rock",
-    "icon": "/icons/items/blackrock.png",
-    "categories": []
+    slug: "black-rock",
+    name: "Black rock",
+    icon: "/icons/items/blackrock.png",
+    categories: [],
   },
   "black-spotted-cliff-rock": {
-    "slug": "black-spotted-cliff-rock",
-    "name": "Black spotted cliff rock",
-    "icon": "/icons/items/blackspottedcliffrock.png",
-    "categories": []
+    slug: "black-spotted-cliff-rock",
+    name: "Black spotted cliff rock",
+    icon: "/icons/items/blackspottedcliffrock.png",
+    categories: [],
   },
   "blank-canvas": {
-    "slug": "blank-canvas",
-    "name": "Blank canvas",
-    "icon": "/icons/items/blankcanvas.png",
-    "categories": [
-      "fabric",
-      "watching-stuff"
-    ]
+    slug: "blank-canvas",
+    name: "Blank canvas",
+    icon: "/icons/items/blankcanvas.png",
+    categories: ["fabric", "watching-stuff"],
   },
   "blue-meteor-lamp": {
-    "slug": "blue-meteor-lamp",
-    "name": "Blue meteor lamp",
-    "icon": "/icons/items/bluemeteorlamp.png",
-    "categories": [
-      "cute-stuff",
-      "electronics",
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "blue-meteor-lamp",
+    name: "Blue meteor lamp",
+    icon: "/icons/items/bluemeteorlamp.png",
+    categories: ["cute-stuff", "electronics", "glass-stuff", "shiny-stuff"],
   },
   "blue-paint": {
-    "slug": "blue-paint",
-    "name": "Blue paint",
-    "icon": "/icons/items/bluepaint.png",
-    "categories": [
-      "colorful-stuff",
-      "lots-of-dirt"
-    ]
+    slug: "blue-paint",
+    name: "Blue paint",
+    icon: "/icons/items/bluepaint.png",
+    categories: ["colorful-stuff", "lots-of-dirt"],
   },
   "blue-green-shoots": {
-    "slug": "blue-green-shoots",
-    "name": "Blue-green shoots",
-    "icon": "/icons/items/blue-greenshoots.png",
-    "categories": []
+    slug: "blue-green-shoots",
+    name: "Blue-green shoots",
+    icon: "/icons/items/blue-greenshoots.png",
+    categories: [],
   },
-  "bonfire": {
-    "slug": "bonfire",
-    "name": "Bonfire",
-    "icon": "/icons/items/bonfire.png",
-    "categories": [
-      "group-activities",
-      "lots-of-fire",
-      "watching-stuff"
-    ]
+  bonfire: {
+    slug: "bonfire",
+    name: "Bonfire",
+    icon: "/icons/items/bonfire.png",
+    categories: ["group-activities", "lots-of-fire", "watching-stuff"],
   },
   "boo-in-the-box": {
-    "slug": "boo-in-the-box",
-    "name": "Boo-in-the-box",
-    "icon": "/icons/items/boo-in-the-box.png",
-    "categories": [
+    slug: "boo-in-the-box",
+    name: "Boo-in-the-box",
+    icon: "/icons/items/boo-in-the-box.png",
+    categories: [
       "blocky-stuff",
       "containers",
       "group-activities",
       "play-spaces",
       "spooky-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
-  "book": {
-    "slug": "book",
-    "name": "Book",
-    "icon": "/icons/items/book.png",
-    "categories": [
+  book: {
+    slug: "book",
+    name: "Book",
+    icon: "/icons/items/book.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "letters-and-words",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
-  "bookcase": {
-    "slug": "bookcase",
-    "name": "Bookcase",
-    "icon": "/icons/items/bookcase.png",
-    "categories": [
+  bookcase: {
+    slug: "bookcase",
+    name: "Bookcase",
+    icon: "/icons/items/bookcase.png",
+    categories: [
       "blocky-stuff",
       "colorful-stuff",
       "complicated-stuff",
       "containers",
       "watching-stuff",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
   "bouncy-blue-bathtub": {
-    "slug": "bouncy-blue-bathtub",
-    "name": "Bouncy blue bathtub",
-    "icon": "/icons/items/bouncybluebathtub.png",
-    "categories": [
-      "cleanliness",
-      "cute-stuff",
-      "lots-of-water",
-      "strange-stuff"
-    ]
+    slug: "bouncy-blue-bathtub",
+    name: "Bouncy blue bathtub",
+    icon: "/icons/items/bouncybluebathtub.png",
+    categories: ["cleanliness", "cute-stuff", "lots-of-water", "strange-stuff"],
   },
-  "boutique": {
-    "slug": "boutique",
-    "name": "Boutique",
-    "icon": "/icons/items/boutique.png",
-    "categories": [
-      "round-stuff"
-    ]
+  boutique: {
+    slug: "boutique",
+    name: "Boutique",
+    icon: "/icons/items/boutique.png",
+    categories: ["round-stuff"],
   },
   "box-sofa": {
-    "slug": "box-sofa",
-    "name": "Box Sofa",
-    "icon": "/icons/items/boxsofa.png",
-    "categories": [
-      "blocky-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "box-sofa",
+    name: "Box Sofa",
+    icon: "/icons/items/boxsofa.png",
+    categories: ["blocky-stuff", "fabric", "soft-stuff"],
   },
   "brick-wall": {
-    "slug": "brick-wall",
-    "name": "Brick wall",
-    "icon": "/icons/items/brickwall.png",
-    "categories": []
+    slug: "brick-wall",
+    name: "Brick wall",
+    icon: "/icons/items/brickwall.png",
+    categories: [],
   },
   "broken-streetlight": {
-    "slug": "broken-streetlight",
-    "name": "Broken streetlight",
-    "icon": "/icons/items/brokenstreetlight.png",
-    "categories": [
-      "slender-objects"
-    ]
+    slug: "broken-streetlight",
+    name: "Broken streetlight",
+    icon: "/icons/items/brokenstreetlight.png",
+    categories: ["slender-objects"],
   },
   "broken-tiling-wall": {
-    "slug": "broken-tiling-wall",
-    "name": "Broken-tiling wall",
-    "icon": "/icons/items/broken-tilingwall.png",
-    "categories": []
+    slug: "broken-tiling-wall",
+    name: "Broken-tiling wall",
+    icon: "/icons/items/broken-tilingwall.png",
+    categories: [],
   },
   "bumpy-beach-sand": {
-    "slug": "bumpy-beach-sand",
-    "name": "Bumpy beach sand",
-    "icon": "/icons/items/bumpybeachsand.png",
-    "categories": []
+    slug: "bumpy-beach-sand",
+    name: "Bumpy beach sand",
+    icon: "/icons/items/bumpybeachsand.png",
+    categories: [],
   },
-  "campfire": {
-    "slug": "campfire",
-    "name": "Campfire",
-    "icon": "/icons/items/campfire.png",
-    "categories": [
-      "group-activities",
-      "lots-of-fire",
-      "stone-stuff"
-    ]
+  campfire: {
+    slug: "campfire",
+    name: "Campfire",
+    icon: "/icons/items/campfire.png",
+    categories: ["group-activities", "lots-of-fire", "stone-stuff"],
   },
   "camping-chair": {
-    "slug": "camping-chair",
-    "name": "Camping chair",
-    "icon": "/icons/items/campingchair.png",
-    "categories": [
-      "fabric",
-      "metal-stuff",
-      "soft-stuff"
-    ]
+    slug: "camping-chair",
+    name: "Camping chair",
+    icon: "/icons/items/campingchair.png",
+    categories: ["fabric", "metal-stuff", "soft-stuff"],
   },
-  "cannon": {
-    "slug": "cannon",
-    "name": "Cannon",
-    "icon": "/icons/items/cannon.png",
-    "categories": [
-      "metal-stuff",
-      "strange-stuff"
-    ]
+  cannon: {
+    slug: "cannon",
+    name: "Cannon",
+    icon: "/icons/items/cannon.png",
+    categories: ["metal-stuff", "strange-stuff"],
   },
-  "canoe": {
-    "slug": "canoe",
-    "name": "Canoe",
-    "icon": "/icons/items/canoe.png",
-    "categories": [
-      "group-activities",
-      "round-stuff"
-    ]
+  canoe: {
+    slug: "canoe",
+    name: "Canoe",
+    icon: "/icons/items/canoe.png",
+    categories: ["group-activities", "round-stuff"],
   },
   "card-reader": {
-    "slug": "card-reader",
-    "name": "Card reader",
-    "icon": "/icons/items/cardreader.png",
-    "categories": [
+    slug: "card-reader",
+    name: "Card reader",
+    icon: "/icons/items/cardreader.png",
+    categories: [
       "complicated-stuff",
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "cardboard-boxes": {
-    "slug": "cardboard-boxes",
-    "name": "Cardboard boxes",
-    "icon": "/icons/items/cardboardboxes.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "gatherings"
-    ]
+    slug: "cardboard-boxes",
+    name: "Cardboard boxes",
+    icon: "/icons/items/cardboardboxes.png",
+    categories: ["blocky-stuff", "containers", "gatherings"],
   },
   "carved-red-rock": {
-    "slug": "carved-red-rock",
-    "name": "Carved red rock",
-    "icon": "/icons/items/carvedredrock.png",
-    "categories": []
+    slug: "carved-red-rock",
+    name: "Carved red rock",
+    icon: "/icons/items/carvedredrock.png",
+    categories: [],
   },
   "carved-yellow-rock": {
-    "slug": "carved-yellow-rock",
-    "name": "Carved yellow rock",
-    "icon": "/icons/items/carvedyellowrock.png",
-    "categories": []
+    slug: "carved-yellow-rock",
+    name: "Carved yellow rock",
+    icon: "/icons/items/carvedyellowrock.png",
+    categories: [],
   },
   "cash-register": {
-    "slug": "cash-register",
-    "name": "Cash register",
-    "icon": "/icons/items/cashregister.png",
-    "categories": [
+    slug: "cash-register",
+    name: "Cash register",
+    icon: "/icons/items/cashregister.png",
+    categories: [
       "complicated-stuff",
       "containers",
       "metal-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "castform-weather-charm": {
-    "slug": "castform-weather-charm",
-    "name": "Castform weather charm",
-    "icon": "/icons/items/castformweathercharm.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "spinning-stuff",
-      "strange-stuff"
-    ]
+    slug: "castform-weather-charm",
+    name: "Castform weather charm",
+    icon: "/icons/items/castformweathercharm.png",
+    categories: ["cute-stuff", "fabric", "spinning-stuff", "strange-stuff"],
   },
   "cave-mushrooms": {
-    "slug": "cave-mushrooms",
-    "name": "Cave mushrooms",
-    "icon": "/icons/items/cavemushrooms.png",
-    "categories": []
+    slug: "cave-mushrooms",
+    name: "Cave mushrooms",
+    icon: "/icons/items/cavemushrooms.png",
+    categories: [],
   },
   "cave-rock": {
-    "slug": "cave-rock",
-    "name": "Cave rock",
-    "icon": "/icons/items/caverock.png",
-    "categories": []
+    slug: "cave-rock",
+    name: "Cave rock",
+    icon: "/icons/items/caverock.png",
+    categories: [],
   },
   "caves-of-mt-moon": {
-    "slug": "caves-of-mt-moon",
-    "name": "Caves of Mt. Moon",
-    "icon": "/icons/items/cavesofmt.moon.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "caves-of-mt-moon",
+    name: "Caves of Mt. Moon",
+    icon: "/icons/items/cavesofmt.moon.png",
+    categories: ["round-stuff"],
   },
   "cd-player": {
-    "slug": "cd-player",
-    "name": "CD player",
-    "icon": "/icons/items/cdplayer.png",
-    "categories": [
-      "electronics",
-      "group-activities",
-      "noisy-stuff"
-    ]
+    slug: "cd-player",
+    name: "CD player",
+    icon: "/icons/items/cdplayer.png",
+    categories: ["electronics", "group-activities", "noisy-stuff"],
   },
   "cd-rack": {
-    "slug": "cd-rack",
-    "name": "CD rack",
-    "icon": "/icons/items/cdrack.png",
-    "categories": [
+    slug: "cd-rack",
+    name: "CD rack",
+    icon: "/icons/items/cdrack.png",
+    categories: [
       "colorful-stuff",
       "complicated-stuff",
       "containers",
       "gatherings",
       "strange-stuff",
       "watching-stuff",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
   "ceiling-fan": {
-    "slug": "ceiling-fan",
-    "name": "Ceiling fan",
-    "icon": "/icons/items/ceilingfan.png",
-    "categories": [
+    slug: "ceiling-fan",
+    name: "Ceiling fan",
+    icon: "/icons/items/ceilingfan.png",
+    categories: [
       "electronics",
       "nice-breezes",
       "spinning-stuff",
       "strange-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
   "cell-phone": {
-    "slug": "cell-phone",
-    "name": "Cell phone",
-    "icon": "/icons/items/cellphone.png",
-    "categories": [
+    slug: "cell-phone",
+    name: "Cell phone",
+    icon: "/icons/items/cellphone.png",
+    categories: [
       "blocky-stuff",
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "shiny-stuff"
-    ]
+      "shiny-stuff",
+    ],
   },
   "chansey-plant": {
-    "slug": "chansey-plant",
-    "name": "Chansey plant",
-    "icon": "/icons/items/chanseyplant.png",
-    "categories": [
+    slug: "chansey-plant",
+    name: "Chansey plant",
+    icon: "/icons/items/chanseyplant.png",
+    categories: [
       "blocky-stuff",
       "cute-stuff",
       "luxury",
       "pretty-flowers",
-      "round-stuff"
-    ]
+      "round-stuff",
+    ],
   },
-  "charcoal": {
-    "slug": "charcoal",
-    "name": "Charcoal",
-    "icon": "/icons/items/charcoal.png",
-    "categories": [
-      "lots-of-fire"
-    ]
+  charcoal: {
+    slug: "charcoal",
+    name: "Charcoal",
+    icon: "/icons/items/charcoal.png",
+    categories: ["lots-of-fire"],
   },
   "chesto-berry": {
-    "slug": "chesto-berry",
-    "name": "Chesto Berry",
-    "icon": "/icons/items/chestoberry.png",
-    "categories": []
+    slug: "chesto-berry",
+    name: "Chesto Berry",
+    icon: "/icons/items/chestoberry.png",
+    categories: [],
   },
   "chesto-tree": {
-    "slug": "chesto-tree",
-    "name": "Chesto tree",
-    "icon": "/icons/items/chestotree.png",
-    "categories": []
+    slug: "chesto-tree",
+    name: "Chesto tree",
+    icon: "/icons/items/chestotree.png",
+    categories: [],
   },
   "chic-chair": {
-    "slug": "chic-chair",
-    "name": "Chic chair",
-    "icon": "/icons/items/chicchair.png",
-    "categories": [
-      "fabric",
-      "luxury",
-      "soft-stuff"
-    ]
+    slug: "chic-chair",
+    name: "Chic chair",
+    icon: "/icons/items/chicchair.png",
+    categories: ["fabric", "luxury", "soft-stuff"],
   },
   "chic-sofa": {
-    "slug": "chic-sofa",
-    "name": "Chic sofa",
-    "icon": "/icons/items/chicsofa.png",
-    "categories": [
-      "fabric",
-      "group-activities",
-      "luxury",
-      "soft-stuff"
-    ]
+    slug: "chic-sofa",
+    name: "Chic sofa",
+    icon: "/icons/items/chicsofa.png",
+    categories: ["fabric", "group-activities", "luxury", "soft-stuff"],
   },
   "chic-streetlight": {
-    "slug": "chic-streetlight",
-    "name": "Chic streetlight",
-    "icon": "/icons/items/chicstreetlight.png",
-    "categories": [
+    slug: "chic-streetlight",
+    name: "Chic streetlight",
+    icon: "/icons/items/chicstreetlight.png",
+    categories: [
       "electronics",
       "glass-stuff",
       "metal-stuff",
       "shiny-stuff",
-      "slender-objects"
-    ]
+      "slender-objects",
+    ],
   },
   "chic-table": {
-    "slug": "chic-table",
-    "name": "Chic table",
-    "icon": "/icons/items/chictable.png",
-    "categories": [
-      "luxury"
-    ]
+    slug: "chic-table",
+    name: "Chic table",
+    icon: "/icons/items/chictable.png",
+    categories: ["luxury"],
   },
   "chocolate-cookies": {
-    "slug": "chocolate-cookies",
-    "name": "Chocolate cookies",
-    "icon": "/icons/items/chocolatecookies.png",
-    "categories": [
+    slug: "chocolate-cookies",
+    name: "Chocolate cookies",
+    icon: "/icons/items/chocolatecookies.png",
+    categories: [
       "colorful-stuff",
       "gatherings",
       "looks-like-food",
-      "round-stuff"
-    ]
+      "round-stuff",
+    ],
   },
-  "clay": {
-    "slug": "clay",
-    "name": "Clay",
-    "icon": "/icons/items/clay.png",
-    "categories": []
+  clay: {
+    slug: "clay",
+    name: "Clay",
+    icon: "/icons/items/clay.png",
+    categories: [],
   },
   "cleaning-supplies": {
-    "slug": "cleaning-supplies",
-    "name": "Cleaning supplies",
-    "icon": "/icons/items/cleaningsupplies.png",
-    "categories": [
-      "cleanliness",
-      "lots-of-water",
-      "shiny-stuff"
-    ]
+    slug: "cleaning-supplies",
+    name: "Cleaning supplies",
+    icon: "/icons/items/cleaningsupplies.png",
+    categories: ["cleanliness", "lots-of-water", "shiny-stuff"],
   },
   "clear-amulet": {
-    "slug": "clear-amulet",
-    "name": "Clear Amulet",
-    "icon": "/icons/items/clearamulet.png",
-    "categories": [
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "clear-amulet",
+    name: "Clear Amulet",
+    icon: "/icons/items/clearamulet.png",
+    categories: ["glass-stuff", "shiny-stuff"],
   },
   "clear-bell": {
-    "slug": "clear-bell",
-    "name": "Clear Bell",
-    "icon": "/icons/items/clearbell.png",
-    "categories": [
-      "noisy-stuff",
-      "round-stuff",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "clear-bell",
+    name: "Clear Bell",
+    icon: "/icons/items/clearbell.png",
+    categories: ["noisy-stuff", "round-stuff", "shiny-stuff", "strange-stuff"],
   },
   "clefairy-doll": {
-    "slug": "clefairy-doll",
-    "name": "Clefairy doll",
-    "icon": "/icons/items/clefairydoll.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "clefairy-doll",
+    name: "Clefairy doll",
+    icon: "/icons/items/clefairydoll.png",
+    categories: ["cute-stuff", "fabric", "soft-stuff"],
   },
   "cliff-rock": {
-    "slug": "cliff-rock",
-    "name": "Cliff rock",
-    "icon": "/icons/items/cliffrock.png",
-    "categories": []
+    slug: "cliff-rock",
+    name: "Cliff rock",
+    icon: "/icons/items/cliffrock.png",
+    categories: [],
   },
   "cloth-wall": {
-    "slug": "cloth-wall",
-    "name": "Cloth wall",
-    "icon": "/icons/items/clothwall.png",
-    "categories": []
+    slug: "cloth-wall",
+    name: "Cloth wall",
+    icon: "/icons/items/clothwall.png",
+    categories: [],
   },
   "coarse-rock": {
-    "slug": "coarse-rock",
-    "name": "Coarse rock",
-    "icon": "/icons/items/coarserock.png",
-    "categories": []
+    slug: "coarse-rock",
+    name: "Coarse rock",
+    icon: "/icons/items/coarserock.png",
+    categories: [],
   },
   "cobblestone-wall": {
-    "slug": "cobblestone-wall",
-    "name": "Cobblestone wall",
-    "icon": "/icons/items/cobblestonewall.png",
-    "categories": []
+    slug: "cobblestone-wall",
+    name: "Cobblestone wall",
+    icon: "/icons/items/cobblestonewall.png",
+    categories: [],
   },
-  "computer": {
-    "slug": "computer",
-    "name": "Computer",
-    "icon": "/icons/items/computer.png",
-    "categories": [
+  computer: {
+    slug: "computer",
+    name: "Computer",
+    icon: "/icons/items/computer.png",
+    categories: [
       "complicated-stuff",
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "shiny-stuff"
-    ]
+      "shiny-stuff",
+    ],
   },
   "concrete-pipe": {
-    "slug": "concrete-pipe",
-    "name": "Concrete pipe",
-    "icon": "/icons/items/concretepipe.png",
-    "categories": [
-      "round-stuff",
-      "stone-stuff"
-    ]
+    slug: "concrete-pipe",
+    name: "Concrete pipe",
+    icon: "/icons/items/concretepipe.png",
+    categories: ["round-stuff", "stone-stuff"],
   },
   "concrete-wall": {
-    "slug": "concrete-wall",
-    "name": "Concrete wall",
-    "icon": "/icons/items/concretewall.png",
-    "categories": []
+    slug: "concrete-wall",
+    name: "Concrete wall",
+    icon: "/icons/items/concretewall.png",
+    categories: [],
   },
   "construction-supplies": {
-    "slug": "construction-supplies",
-    "name": "Construction supplies",
-    "icon": "/icons/items/constructionsupplies.png",
-    "categories": [
+    slug: "construction-supplies",
+    name: "Construction supplies",
+    icon: "/icons/items/constructionsupplies.png",
+    categories: [
       "construction",
       "containers",
       "gatherings",
       "group-activities",
       "metal-stuff",
-      "round-stuff"
-    ]
+      "round-stuff",
+    ],
   },
   "contest-spectacular": {
-    "slug": "contest-spectacular",
-    "name": "Contest Spectacular",
-    "icon": "/icons/items/contestspectacular.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "contest-spectacular",
+    name: "Contest Spectacular",
+    icon: "/icons/items/contestspectacular.png",
+    categories: ["round-stuff"],
   },
   "control-unit": {
-    "slug": "control-unit",
-    "name": "Control unit",
-    "icon": "/icons/items/controlunit.png",
-    "categories": [
-      "blocky-stuff",
-      "complicated-stuff"
-    ]
+    slug: "control-unit",
+    name: "Control unit",
+    icon: "/icons/items/controlunit.png",
+    categories: ["blocky-stuff", "complicated-stuff"],
   },
   "cooking-stove": {
-    "slug": "cooking-stove",
-    "name": "Cooking stove",
-    "icon": "/icons/items/cookingstove.png",
-    "categories": [
+    slug: "cooking-stove",
+    name: "Cooking stove",
+    icon: "/icons/items/cookingstove.png",
+    categories: [
       "blocky-stuff",
       "lots-of-fire",
       "metal-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "cool-bass-guitar": {
-    "slug": "cool-bass-guitar",
-    "name": "Cool bass guitar",
-    "icon": "/icons/items/coolbassguitar.png",
-    "categories": [
-      "electronics",
-      "noisy-stuff",
-      "strange-stuff"
-    ]
+    slug: "cool-bass-guitar",
+    name: "Cool bass guitar",
+    icon: "/icons/items/coolbassguitar.png",
+    categories: ["electronics", "noisy-stuff", "strange-stuff"],
   },
   "cool-electric-guitar": {
-    "slug": "cool-electric-guitar",
-    "name": "Cool electric guitar",
-    "icon": "/icons/items/coolelectricguitar.png",
-    "categories": [
-      "electronics",
-      "noisy-stuff",
-      "strange-stuff"
-    ]
+    slug: "cool-electric-guitar",
+    name: "Cool electric guitar",
+    icon: "/icons/items/coolelectricguitar.png",
+    categories: ["electronics", "noisy-stuff", "strange-stuff"],
   },
   "cooled-molten-rock": {
-    "slug": "cooled-molten-rock",
-    "name": "Cooled molten rock",
-    "icon": "/icons/items/cooledmoltenrock.png",
-    "categories": []
+    slug: "cooled-molten-rock",
+    name: "Cooled molten rock",
+    icon: "/icons/items/cooledmoltenrock.png",
+    categories: [],
   },
   "copper-deposit": {
-    "slug": "copper-deposit",
-    "name": "Copper deposit",
-    "icon": "/icons/items/copperdeposit.png",
-    "categories": []
+    slug: "copper-deposit",
+    name: "Copper deposit",
+    icon: "/icons/items/copperdeposit.png",
+    categories: [],
   },
   "copper-deposit-beach": {
-    "slug": "copper-deposit-beach",
-    "name": "Copper deposit (Beach)",
-    "icon": "/icons/items/copperdeposit(beach).png",
-    "categories": []
+    slug: "copper-deposit-beach",
+    name: "Copper deposit (Beach)",
+    icon: "/icons/items/copperdeposit(beach).png",
+    categories: [],
   },
   "copper-deposit-ridge": {
-    "slug": "copper-deposit-ridge",
-    "name": "Copper deposit (Ridge)",
-    "icon": "/icons/items/copperdeposit(ridge).png",
-    "categories": []
+    slug: "copper-deposit-ridge",
+    name: "Copper deposit (Ridge)",
+    icon: "/icons/items/copperdeposit(ridge).png",
+    categories: [],
   },
   "copper-deposit-skyland": {
-    "slug": "copper-deposit-skyland",
-    "name": "Copper deposit (Skyland)",
-    "icon": "/icons/items/copperdeposit(skyland).png",
-    "categories": []
+    slug: "copper-deposit-skyland",
+    name: "Copper deposit (Skyland)",
+    icon: "/icons/items/copperdeposit(skyland).png",
+    categories: [],
   },
   "copper-deposit-wasteland": {
-    "slug": "copper-deposit-wasteland",
-    "name": "Copper deposit (Wasteland)",
-    "icon": "/icons/items/copperdeposit(wasteland).png",
-    "categories": []
+    slug: "copper-deposit-wasteland",
+    name: "Copper deposit (Wasteland)",
+    icon: "/icons/items/copperdeposit(wasteland).png",
+    categories: [],
   },
   "copper-ingot": {
-    "slug": "copper-ingot",
-    "name": "Copper ingot",
-    "icon": "/icons/items/copperingot.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "copper-ingot",
+    name: "Copper ingot",
+    icon: "/icons/items/copperingot.png",
+    categories: ["metal-stuff"],
   },
   "copper-ore": {
-    "slug": "copper-ore",
-    "name": "Copper ore",
-    "icon": "/icons/items/copperore.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "copper-ore",
+    name: "Copper ore",
+    icon: "/icons/items/copperore.png",
+    categories: ["metal-stuff"],
   },
-  "corkboard": {
-    "slug": "corkboard",
-    "name": "Corkboard",
-    "icon": "/icons/items/corkboard.png",
-    "categories": [
-      "blocky-stuff",
-      "gatherings",
-      "watching-stuff"
-    ]
+  corkboard: {
+    slug: "corkboard",
+    name: "Corkboard",
+    icon: "/icons/items/corkboard.png",
+    categories: ["blocky-stuff", "gatherings", "watching-stuff"],
   },
   "corrugated-metal": {
-    "slug": "corrugated-metal",
-    "name": "Corrugated metal",
-    "icon": "/icons/items/corrugatedmetal.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "corrugated-metal",
+    name: "Corrugated metal",
+    icon: "/icons/items/corrugatedmetal.png",
+    categories: ["metal-stuff"],
   },
   "cotton-spores": {
-    "slug": "cotton-spores",
-    "name": "Cotton Spores",
-    "icon": "/icons/items/cottonspores.png",
-    "categories": [
-      "soft-stuff"
-    ]
+    slug: "cotton-spores",
+    name: "Cotton Spores",
+    icon: "/icons/items/cottonspores.png",
+    categories: ["soft-stuff"],
   },
   "cracked-sandstone": {
-    "slug": "cracked-sandstone",
-    "name": "Cracked sandstone",
-    "icon": "/icons/items/crackedsandstone.png",
-    "categories": []
+    slug: "cracked-sandstone",
+    name: "Cracked sandstone",
+    icon: "/icons/items/crackedsandstone.png",
+    categories: [],
   },
   "crisscross-wooden-flooring": {
-    "slug": "crisscross-wooden-flooring",
-    "name": "Crisscross wooden flooring",
-    "icon": "/icons/items/crisscrosswoodenflooring.png",
-    "categories": []
+    slug: "crisscross-wooden-flooring",
+    name: "Crisscross wooden flooring",
+    icon: "/icons/items/crisscrosswoodenflooring.png",
+    categories: [],
   },
   "crystal-ball": {
-    "slug": "crystal-ball",
-    "name": "Crystal ball",
-    "icon": "/icons/items/crystalball.png",
-    "categories": [
+    slug: "crystal-ball",
+    name: "Crystal ball",
+    icon: "/icons/items/crystalball.png",
+    categories: [
       "fabric",
       "glass-stuff",
       "round-stuff",
       "shiny-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "crystal-cluster": {
-    "slug": "crystal-cluster",
-    "name": "Crystal cluster",
-    "icon": "/icons/items/crystalcluster.png",
-    "categories": []
+    slug: "crystal-cluster",
+    name: "Crystal cluster",
+    icon: "/icons/items/crystalcluster.png",
+    categories: [],
   },
   "crystal-fragment": {
-    "slug": "crystal-fragment",
-    "name": "Crystal fragment",
-    "icon": "/icons/items/crystalfragment.png",
-    "categories": [
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "crystal-fragment",
+    name: "Crystal fragment",
+    icon: "/icons/items/crystalfragment.png",
+    categories: ["glass-stuff", "shiny-stuff"],
   },
   "crystal-wall": {
-    "slug": "crystal-wall",
-    "name": "Crystal wall",
-    "icon": "/icons/items/crystalwall.png",
-    "categories": []
+    slug: "crystal-wall",
+    name: "Crystal wall",
+    icon: "/icons/items/crystalwall.png",
+    categories: [],
   },
   "cube-light": {
-    "slug": "cube-light",
-    "name": "Cube light",
-    "icon": "/icons/items/cubelight.png",
-    "categories": []
+    slug: "cube-light",
+    name: "Cube light",
+    icon: "/icons/items/cubelight.png",
+    categories: [],
   },
   "cushy-wall": {
-    "slug": "cushy-wall",
-    "name": "Cushy wall",
-    "icon": "/icons/items/cushywall.png",
-    "categories": []
+    slug: "cushy-wall",
+    name: "Cushy wall",
+    icon: "/icons/items/cushywall.png",
+    categories: [],
   },
   "cute-bed": {
-    "slug": "cute-bed",
-    "name": "Cute bed",
-    "icon": "/icons/items/cutebed.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "cute-bed",
+    name: "Cute bed",
+    icon: "/icons/items/cutebed.png",
+    categories: ["cute-stuff", "fabric", "soft-stuff"],
   },
   "cute-chair": {
-    "slug": "cute-chair",
-    "name": "Cute chair",
-    "icon": "/icons/items/cutechair.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "cute-chair",
+    name: "Cute chair",
+    icon: "/icons/items/cutechair.png",
+    categories: ["cute-stuff", "fabric", "soft-stuff"],
   },
   "cute-dresser": {
-    "slug": "cute-dresser",
-    "name": "Cute dresser",
-    "icon": "/icons/items/cutedresser.png",
-    "categories": [
-      "containers",
-      "cute-stuff",
-      "glass-stuff",
-      "strange-stuff"
-    ]
+    slug: "cute-dresser",
+    name: "Cute dresser",
+    icon: "/icons/items/cutedresser.png",
+    categories: ["containers", "cute-stuff", "glass-stuff", "strange-stuff"],
   },
   "cute-flower": {
-    "slug": "cute-flower",
-    "name": "Cute flower",
-    "icon": "/icons/items/cuteflower.png",
-    "categories": [
-      "cute-stuff",
-      "pretty-flowers"
-    ]
+    slug: "cute-flower",
+    name: "Cute flower",
+    icon: "/icons/items/cuteflower.png",
+    categories: ["cute-stuff", "pretty-flowers"],
   },
   "cute-flower-blue": {
-    "slug": "cute-flower-blue",
-    "name": "Cute flower (blue)",
-    "icon": "/icons/items/cuteflower(blue).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "cute-flower-blue",
+    name: "Cute flower (blue)",
+    icon: "/icons/items/cuteflower(blue).png",
+    categories: ["pretty-flowers"],
   },
   "cute-flower-pink": {
-    "slug": "cute-flower-pink",
-    "name": "Cute flower (pink)",
-    "icon": "/icons/items/cuteflower(pink).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "cute-flower-pink",
+    name: "Cute flower (pink)",
+    icon: "/icons/items/cuteflower(pink).png",
+    categories: ["pretty-flowers"],
   },
   "cute-flower-white": {
-    "slug": "cute-flower-white",
-    "name": "Cute flower (white)",
-    "icon": "/icons/items/cuteflower(white).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "cute-flower-white",
+    name: "Cute flower (white)",
+    icon: "/icons/items/cuteflower(white).png",
+    categories: ["pretty-flowers"],
   },
   "cute-flower-yellow": {
-    "slug": "cute-flower-yellow",
-    "name": "Cute flower (yellow)",
-    "icon": "/icons/items/cuteflower(yellow).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "cute-flower-yellow",
+    name: "Cute flower (yellow)",
+    icon: "/icons/items/cuteflower(yellow).png",
+    categories: ["pretty-flowers"],
   },
   "cute-lamp": {
-    "slug": "cute-lamp",
-    "name": "Cute lamp",
-    "icon": "/icons/items/cutelamp.png",
-    "categories": [
-      "cute-stuff",
-      "electronics",
-      "glass-stuff"
-    ]
+    slug: "cute-lamp",
+    name: "Cute lamp",
+    icon: "/icons/items/cutelamp.png",
+    categories: ["cute-stuff", "electronics", "glass-stuff"],
   },
   "cute-sofa": {
-    "slug": "cute-sofa",
-    "name": "Cute sofa",
-    "icon": "/icons/items/cutesofa.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "group-activities",
-      "soft-stuff"
-    ]
+    slug: "cute-sofa",
+    name: "Cute sofa",
+    icon: "/icons/items/cutesofa.png",
+    categories: ["cute-stuff", "fabric", "group-activities", "soft-stuff"],
   },
   "cute-table": {
-    "slug": "cute-table",
-    "name": "Cute table",
-    "icon": "/icons/items/cutetable.png",
-    "categories": [
-      "cute-stuff"
-    ]
+    slug: "cute-table",
+    name: "Cute table",
+    icon: "/icons/items/cutetable.png",
+    categories: ["cute-stuff"],
   },
   "cutting-board": {
-    "slug": "cutting-board",
-    "name": "Cutting board",
-    "icon": "/icons/items/cuttingboard.png",
-    "categories": [
-      "wooden-stuff"
-    ]
+    slug: "cutting-board",
+    name: "Cutting board",
+    icon: "/icons/items/cuttingboard.png",
+    categories: ["wooden-stuff"],
   },
   "cyan-paint": {
-    "slug": "cyan-paint",
-    "name": "Cyan paint",
-    "icon": "/icons/items/cyanpaint.png",
-    "categories": [
-      "colorful-stuff",
-      "lots-of-dirt"
-    ]
+    slug: "cyan-paint",
+    name: "Cyan paint",
+    icon: "/icons/items/cyanpaint.png",
+    categories: ["colorful-stuff", "lots-of-dirt"],
   },
   "cyber-flooring": {
-    "slug": "cyber-flooring",
-    "name": "Cyber flooring",
-    "icon": "/icons/items/cyberflooring.png",
-    "categories": []
+    slug: "cyber-flooring",
+    name: "Cyber flooring",
+    icon: "/icons/items/cyberflooring.png",
+    categories: [],
   },
   "damaged-asphalt-road": {
-    "slug": "damaged-asphalt-road",
-    "name": "Damaged asphalt road",
-    "icon": "/icons/items/damagedasphaltroad.png",
-    "categories": []
+    slug: "damaged-asphalt-road",
+    name: "Damaged asphalt road",
+    icon: "/icons/items/damagedasphaltroad.png",
+    categories: [],
   },
   "damaged-mosaic-tiling": {
-    "slug": "damaged-mosaic-tiling",
-    "name": "Damaged mosaic tiling",
-    "icon": "/icons/items/damagedmosaictiling.png",
-    "categories": []
+    slug: "damaged-mosaic-tiling",
+    name: "Damaged mosaic tiling",
+    icon: "/icons/items/damagedmosaictiling.png",
+    categories: [],
   },
   "damaged-square-tiling": {
-    "slug": "damaged-square-tiling",
-    "name": "Damaged square tiling",
-    "icon": "/icons/items/damagedsquaretiling.png",
-    "categories": []
+    slug: "damaged-square-tiling",
+    name: "Damaged square tiling",
+    icon: "/icons/items/damagedsquaretiling.png",
+    categories: [],
   },
   "damaged-stone-flooring": {
-    "slug": "damaged-stone-flooring",
-    "name": "Damaged stone flooring",
-    "icon": "/icons/items/damagedstoneflooring.png",
-    "categories": []
+    slug: "damaged-stone-flooring",
+    name: "Damaged stone flooring",
+    icon: "/icons/items/damagedstoneflooring.png",
+    categories: [],
   },
   "damaged-stone-tiling": {
-    "slug": "damaged-stone-tiling",
-    "name": "Damaged stone tiling",
-    "icon": "/icons/items/damagedstonetiling.png",
-    "categories": []
+    slug: "damaged-stone-tiling",
+    name: "Damaged stone tiling",
+    icon: "/icons/items/damagedstonetiling.png",
+    categories: [],
   },
   "damaged-wooden-flooring": {
-    "slug": "damaged-wooden-flooring",
-    "name": "Damaged wooden flooring",
-    "icon": "/icons/items/damagedwoodenflooring.png",
-    "categories": []
+    slug: "damaged-wooden-flooring",
+    name: "Damaged wooden flooring",
+    icon: "/icons/items/damagedwoodenflooring.png",
+    categories: [],
   },
   "damp-hedge": {
-    "slug": "damp-hedge",
-    "name": "Damp hedge",
-    "icon": "/icons/items/damphedge.png",
-    "categories": []
+    slug: "damp-hedge",
+    name: "Damp hedge",
+    icon: "/icons/items/damphedge.png",
+    categories: [],
   },
   "damp-hedge-blue": {
-    "slug": "damp-hedge-blue",
-    "name": "Damp hedge (blue)",
-    "icon": "/icons/items/damphedge(blue).png",
-    "categories": []
+    slug: "damp-hedge-blue",
+    name: "Damp hedge (blue)",
+    icon: "/icons/items/damphedge(blue).png",
+    categories: [],
   },
   "damp-hedge-pink": {
-    "slug": "damp-hedge-pink",
-    "name": "Damp hedge (pink)",
-    "icon": "/icons/items/damphedge(pink).png",
-    "categories": []
+    slug: "damp-hedge-pink",
+    name: "Damp hedge (pink)",
+    icon: "/icons/items/damphedge(pink).png",
+    categories: [],
   },
   "damp-hedge-red": {
-    "slug": "damp-hedge-red",
-    "name": "Damp hedge (red)",
-    "icon": "/icons/items/damphedge(red).png",
-    "categories": []
+    slug: "damp-hedge-red",
+    name: "Damp hedge (red)",
+    icon: "/icons/items/damphedge(red).png",
+    categories: [],
   },
   "damp-hedge-white": {
-    "slug": "damp-hedge-white",
-    "name": "Damp hedge (white)",
-    "icon": "/icons/items/damphedge(white).png",
-    "categories": []
+    slug: "damp-hedge-white",
+    name: "Damp hedge (white)",
+    icon: "/icons/items/damphedge(white).png",
+    categories: [],
   },
   "dark-marble-flooring": {
-    "slug": "dark-marble-flooring",
-    "name": "Dark marble flooring",
-    "icon": "/icons/items/darkmarbleflooring.png",
-    "categories": []
+    slug: "dark-marble-flooring",
+    name: "Dark marble flooring",
+    icon: "/icons/items/darkmarbleflooring.png",
+    categories: [],
   },
   "deck-chair": {
-    "slug": "deck-chair",
-    "name": "Deck chair",
-    "icon": "/icons/items/deckchair.png",
-    "categories": [
-      "ocean-vibes"
-    ]
+    slug: "deck-chair",
+    name: "Deck chair",
+    icon: "/icons/items/deckchair.png",
+    categories: ["ocean-vibes"],
   },
   "decorative-bookshelf": {
-    "slug": "decorative-bookshelf",
-    "name": "Decorative bookshelf",
-    "icon": "/icons/items/decorativebookshelf.png",
-    "categories": [
-      "gatherings",
-      "letters-and-words"
-    ]
+    slug: "decorative-bookshelf",
+    name: "Decorative bookshelf",
+    icon: "/icons/items/decorativebookshelf.png",
+    categories: ["gatherings", "letters-and-words"],
   },
   "decorative-plant-shelf": {
-    "slug": "decorative-plant-shelf",
-    "name": "Decorative plant shelf",
-    "icon": "/icons/items/decorativeplantshelf.png",
-    "categories": [
-      "gatherings",
-      "pretty-flowers"
-    ]
+    slug: "decorative-plant-shelf",
+    name: "Decorative plant shelf",
+    icon: "/icons/items/decorativeplantshelf.png",
+    categories: ["gatherings", "pretty-flowers"],
   },
   "decorative-storage-shelf": {
-    "slug": "decorative-storage-shelf",
-    "name": "Decorative storage shelf",
-    "icon": "/icons/items/decorativestorageshelf.png",
-    "categories": [
-      "gatherings",
-      "stone-stuff",
-      "strange-stuff"
-    ]
+    slug: "decorative-storage-shelf",
+    name: "Decorative storage shelf",
+    icon: "/icons/items/decorativestorageshelf.png",
+    categories: ["gatherings", "stone-stuff", "strange-stuff"],
   },
   "desk-light": {
-    "slug": "desk-light",
-    "name": "Desk light",
-    "icon": "/icons/items/desklight.png",
-    "categories": [
+    slug: "desk-light",
+    name: "Desk light",
+    icon: "/icons/items/desklight.png",
+    categories: [
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "slender-objects"
-    ]
+      "slender-objects",
+    ],
   },
   "despot-fossil-body": {
-    "slug": "despot-fossil-body",
-    "name": "Despot Fossil (body)",
-    "icon": "/icons/items/despotfossil(body).png",
-    "categories": [
+    slug: "despot-fossil-body",
+    name: "Despot Fossil (body)",
+    icon: "/icons/items/despotfossil(body).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "despot-fossil-head": {
-    "slug": "despot-fossil-head",
-    "name": "Despot Fossil (head)",
-    "icon": "/icons/items/despotfossil(head).png",
-    "categories": [
-      "hard-stuff",
-      "lots-of-dirt",
-      "strange-stuff"
-    ]
+    slug: "despot-fossil-head",
+    name: "Despot Fossil (head)",
+    icon: "/icons/items/despotfossil(head).png",
+    categories: ["hard-stuff", "lots-of-dirt", "strange-stuff"],
   },
   "despot-fossil-legs": {
-    "slug": "despot-fossil-legs",
-    "name": "Despot Fossil (legs)",
-    "icon": "/icons/items/despotfossil(legs).png",
-    "categories": [
+    slug: "despot-fossil-legs",
+    name: "Despot Fossil (legs)",
+    icon: "/icons/items/despotfossil(legs).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "despot-fossil-tail": {
-    "slug": "despot-fossil-tail",
-    "name": "Despot Fossil (tail)",
-    "icon": "/icons/items/despotfossil(tail).png",
-    "categories": [
+    slug: "despot-fossil-tail",
+    name: "Despot Fossil (tail)",
+    icon: "/icons/items/despotfossil(tail).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "diagonal-wooden-flooring": {
-    "slug": "diagonal-wooden-flooring",
-    "name": "Diagonal wooden flooring",
-    "icon": "/icons/items/diagonalwoodenflooring.png",
-    "categories": []
+    slug: "diagonal-wooden-flooring",
+    name: "Diagonal wooden flooring",
+    icon: "/icons/items/diagonalwoodenflooring.png",
+    categories: [],
   },
   "digital-camera": {
-    "slug": "digital-camera",
-    "name": "Digital camera",
-    "icon": "/icons/items/digitalcamera.png",
-    "categories": [
+    slug: "digital-camera",
+    name: "Digital camera",
+    icon: "/icons/items/digitalcamera.png",
+    categories: [
       "complicated-stuff",
       "glass-stuff",
       "metal-stuff",
       "shiny-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "dining-cabinet": {
-    "slug": "dining-cabinet",
-    "name": "Dining cabinet",
-    "icon": "/icons/items/diningcabinet.png",
-    "categories": [
+    slug: "dining-cabinet",
+    name: "Dining cabinet",
+    icon: "/icons/items/diningcabinet.png",
+    categories: [
       "containers",
       "gatherings",
       "glass-stuff",
       "luxury",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
   "ditto-doll": {
-    "slug": "ditto-doll",
-    "name": "Ditto doll",
-    "icon": "/icons/items/dittodoll.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "ditto-doll",
+    name: "Ditto doll",
+    icon: "/icons/items/dittodoll.png",
+    categories: ["cute-stuff", "fabric", "soft-stuff"],
   },
   "ditto-flag": {
-    "slug": "ditto-flag",
-    "name": "Ditto Flag",
-    "icon": "/icons/items/dittoflag.png",
-    "categories": [
-      "stone-stuff"
-    ]
+    slug: "ditto-flag",
+    name: "Ditto Flag",
+    icon: "/icons/items/dittoflag.png",
+    categories: ["stone-stuff"],
   },
   "double-streetlight": {
-    "slug": "double-streetlight",
-    "name": "Double streetlight",
-    "icon": "/icons/items/doublestreetlight.png",
-    "categories": [
+    slug: "double-streetlight",
+    name: "Double streetlight",
+    icon: "/icons/items/doublestreetlight.png",
+    categories: [
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "slender-objects"
-    ]
+      "slender-objects",
+    ],
   },
   "dragonite-doll": {
-    "slug": "dragonite-doll",
-    "name": "Dragonite doll",
-    "icon": "/icons/items/dragonitedoll.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "dragonite-doll",
+    name: "Dragonite doll",
+    icon: "/icons/items/dragonitedoll.png",
+    categories: ["cute-stuff", "fabric", "soft-stuff"],
   },
   "dress-up-with-props": {
-    "slug": "dress-up-with-props",
-    "name": "Dress Up With Props",
-    "icon": "/icons/items/dressupwithprops.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "dress-up-with-props",
+    name: "Dress Up With Props",
+    icon: "/icons/items/dressupwithprops.png",
+    categories: ["round-stuff"],
   },
   "driftveil-city": {
-    "slug": "driftveil-city",
-    "name": "Driftveil City",
-    "icon": "/icons/items/driftveilcity.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "driftveil-city",
+    name: "Driftveil City",
+    icon: "/icons/items/driftveilcity.png",
+    categories: ["round-stuff"],
   },
-  "driftwood": {
-    "slug": "driftwood",
-    "name": "Driftwood",
-    "icon": "/icons/items/driftwood.png",
-    "categories": []
+  driftwood: {
+    slug: "driftwood",
+    name: "Driftwood",
+    icon: "/icons/items/driftwood.png",
+    categories: [],
   },
   "dry-blue-green-shoots": {
-    "slug": "dry-blue-green-shoots",
-    "name": "Dry blue-green shoots",
-    "icon": "/icons/items/dryblue-greenshoots.png",
-    "categories": []
+    slug: "dry-blue-green-shoots",
+    name: "Dry blue-green shoots",
+    icon: "/icons/items/dryblue-greenshoots.png",
+    categories: [],
   },
   "dry-field-grass": {
-    "slug": "dry-field-grass",
-    "name": "Dry Field Grass",
-    "icon": "/icons/items/dryfieldgrass.png",
-    "categories": []
+    slug: "dry-field-grass",
+    name: "Dry Field Grass",
+    icon: "/icons/items/dryfieldgrass.png",
+    categories: [],
   },
   "dry-green-shoots": {
-    "slug": "dry-green-shoots",
-    "name": "Dry green shoots",
-    "icon": "/icons/items/drygreenshoots.png",
-    "categories": []
+    slug: "dry-green-shoots",
+    name: "Dry green shoots",
+    icon: "/icons/items/drygreenshoots.png",
+    categories: [],
   },
   "dry-leppa-tree": {
-    "slug": "dry-leppa-tree",
-    "name": "Dry Leppa tree",
-    "icon": "/icons/items/dryleppatree.png",
-    "categories": []
+    slug: "dry-leppa-tree",
+    name: "Dry Leppa tree",
+    icon: "/icons/items/dryleppatree.png",
+    categories: [],
   },
   "dry-tall-grass": {
-    "slug": "dry-tall-grass",
-    "name": "Dry tall grass",
-    "icon": "/icons/items/drytallgrass.png",
-    "categories": []
+    slug: "dry-tall-grass",
+    name: "Dry tall grass",
+    icon: "/icons/items/drytallgrass.png",
+    categories: [],
   },
   "dry-verdant-shoots": {
-    "slug": "dry-verdant-shoots",
-    "name": "Dry verdant shoots",
-    "icon": "/icons/items/dryverdantshoots.png",
-    "categories": []
+    slug: "dry-verdant-shoots",
+    name: "Dry verdant shoots",
+    icon: "/icons/items/dryverdantshoots.png",
+    categories: [],
   },
   "dry-vine": {
-    "slug": "dry-vine",
-    "name": "Dry vine",
-    "icon": "/icons/items/dryvine.png",
-    "categories": []
+    slug: "dry-vine",
+    name: "Dry vine",
+    icon: "/icons/items/dryvine.png",
+    categories: [],
   },
   "dry-wildflowers": {
-    "slug": "dry-wildflowers",
-    "name": "Dry wildflowers",
-    "icon": "/icons/items/drywildflowers.png",
-    "categories": []
+    slug: "dry-wildflowers",
+    name: "Dry wildflowers",
+    icon: "/icons/items/drywildflowers.png",
+    categories: [],
   },
   "dry-yellow-green-shoots": {
-    "slug": "dry-yellow-green-shoots",
-    "name": "Dry yellow-green shoots",
-    "icon": "/icons/items/dryyellow-greenshoots.png",
-    "categories": []
+    slug: "dry-yellow-green-shoots",
+    name: "Dry yellow-green shoots",
+    icon: "/icons/items/dryyellow-greenshoots.png",
+    categories: [],
   },
   "ecruteak-city": {
-    "slug": "ecruteak-city",
-    "name": "Ecruteak City",
-    "icon": "/icons/items/ecruteakcity.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "ecruteak-city",
+    name: "Ecruteak City",
+    icon: "/icons/items/ecruteakcity.png",
+    categories: ["round-stuff"],
   },
   "eerie-candle": {
-    "slug": "eerie-candle",
-    "name": "Eerie candle",
-    "icon": "/icons/items/eeriecandle.png",
-    "categories": [
-      "cute-stuff",
-      "lots-of-fire",
-      "spooky-stuff",
-      "stone-stuff"
-    ]
+    slug: "eerie-candle",
+    name: "Eerie candle",
+    icon: "/icons/items/eeriecandle.png",
+    categories: ["cute-stuff", "lots-of-fire", "spooky-stuff", "stone-stuff"],
   },
   "eevee-doll": {
-    "slug": "eevee-doll",
-    "name": "Eevee doll",
-    "icon": "/icons/items/eeveedoll.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "eevee-doll",
+    name: "Eevee doll",
+    icon: "/icons/items/eeveedoll.png",
+    categories: ["cute-stuff", "fabric", "soft-stuff"],
   },
   "elegant-flower": {
-    "slug": "elegant-flower",
-    "name": "Elegant flower",
-    "icon": "/icons/items/elegantflower.png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "elegant-flower",
+    name: "Elegant flower",
+    icon: "/icons/items/elegantflower.png",
+    categories: ["pretty-flowers"],
   },
   "elegant-flower-orange": {
-    "slug": "elegant-flower-orange",
-    "name": "Elegant flower (orange)",
-    "icon": "/icons/items/elegantflower(orange).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "elegant-flower-orange",
+    name: "Elegant flower (orange)",
+    icon: "/icons/items/elegantflower(orange).png",
+    categories: ["pretty-flowers"],
   },
   "elegant-flower-pink": {
-    "slug": "elegant-flower-pink",
-    "name": "Elegant flower (pink)",
-    "icon": "/icons/items/elegantflower(pink).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "elegant-flower-pink",
+    name: "Elegant flower (pink)",
+    icon: "/icons/items/elegantflower(pink).png",
+    categories: ["pretty-flowers"],
   },
   "elegant-flower-red": {
-    "slug": "elegant-flower-red",
-    "name": "Elegant flower (red)",
-    "icon": "/icons/items/elegantflower(red).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "elegant-flower-red",
+    name: "Elegant flower (red)",
+    icon: "/icons/items/elegantflower(red).png",
+    categories: ["pretty-flowers"],
   },
   "elegant-flower-yellow": {
-    "slug": "elegant-flower-yellow",
-    "name": "Elegant flower (yellow)",
-    "icon": "/icons/items/elegantflower(yellow).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "elegant-flower-yellow",
+    name: "Elegant flower (yellow)",
+    icon: "/icons/items/elegantflower(yellow).png",
+    categories: ["pretty-flowers"],
   },
   "excavation-tools": {
-    "slug": "excavation-tools",
-    "name": "Excavation tools",
-    "icon": "/icons/items/excavationtools.png",
-    "categories": [
-      "metal-stuff",
-      "strange-stuff"
-    ]
+    slug: "excavation-tools",
+    name: "Excavation tools",
+    icon: "/icons/items/excavationtools.png",
+    categories: ["metal-stuff", "strange-stuff"],
   },
   "extravagant-carpeting": {
-    "slug": "extravagant-carpeting",
-    "name": "Extravagant carpeting",
-    "icon": "/icons/items/extravagantcarpeting.png",
-    "categories": []
+    slug: "extravagant-carpeting",
+    name: "Extravagant carpeting",
+    icon: "/icons/items/extravagantcarpeting.png",
+    categories: [],
   },
   "extravagant-flowers": {
-    "slug": "extravagant-flowers",
-    "name": "Extravagant flowers",
-    "icon": "/icons/items/extravagantflowers.png",
-    "categories": [
+    slug: "extravagant-flowers",
+    name: "Extravagant flowers",
+    icon: "/icons/items/extravagantflowers.png",
+    categories: [
       "containers",
       "pretty-flowers",
       "stone-stuff",
       "watching-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
   "extravagant-pillar-lower": {
-    "slug": "extravagant-pillar-lower",
-    "name": "Extravagant pillar (lower)",
-    "icon": "/icons/items/extravagantpillar(lower).png",
-    "categories": []
+    slug: "extravagant-pillar-lower",
+    name: "Extravagant pillar (lower)",
+    icon: "/icons/items/extravagantpillar(lower).png",
+    categories: [],
   },
   "extravagant-pillar-middle": {
-    "slug": "extravagant-pillar-middle",
-    "name": "Extravagant pillar (middle)",
-    "icon": "/icons/items/extravagantpillar(middle).png",
-    "categories": []
+    slug: "extravagant-pillar-middle",
+    name: "Extravagant pillar (middle)",
+    icon: "/icons/items/extravagantpillar(middle).png",
+    categories: [],
   },
   "extravagant-pillar-upper": {
-    "slug": "extravagant-pillar-upper",
-    "name": "Extravagant pillar (upper)",
-    "icon": "/icons/items/extravagantpillar(upper).png",
-    "categories": []
+    slug: "extravagant-pillar-upper",
+    name: "Extravagant pillar (upper)",
+    icon: "/icons/items/extravagantpillar(upper).png",
+    categories: [],
   },
   "fairy-feather": {
-    "slug": "fairy-feather",
-    "name": "Fairy Feather",
-    "icon": "/icons/items/fairyfeather.png",
-    "categories": [
-      "cute-stuff"
-    ]
+    slug: "fairy-feather",
+    name: "Fairy Feather",
+    icon: "/icons/items/fairyfeather.png",
+    categories: ["cute-stuff"],
   },
-  "fan": {
-    "slug": "fan",
-    "name": "Fan",
-    "icon": "/icons/items/fan.png",
-    "categories": [
+  fan: {
+    slug: "fan",
+    name: "Fan",
+    icon: "/icons/items/fan.png",
+    categories: [
       "electronics",
       "metal-stuff",
       "nice-breezes",
-      "spinning-stuff"
-    ]
+      "spinning-stuff",
+    ],
   },
   "fancy-chair": {
-    "slug": "fancy-chair",
-    "name": "Fancy chair",
-    "icon": "/icons/items/fancychair.png",
-    "categories": [
-      "fabric",
-      "luxury",
-      "soft-stuff",
-      "spinning-stuff"
-    ]
+    slug: "fancy-chair",
+    name: "Fancy chair",
+    icon: "/icons/items/fancychair.png",
+    categories: ["fabric", "luxury", "soft-stuff", "spinning-stuff"],
   },
   "fancy-pen": {
-    "slug": "fancy-pen",
-    "name": "Fancy pen",
-    "icon": "/icons/items/fancypen.png",
-    "categories": [
+    slug: "fancy-pen",
+    name: "Fancy pen",
+    icon: "/icons/items/fancypen.png",
+    categories: [
       "complicated-stuff",
       "luxury",
       "metal-stuff",
       "sharp-stuff",
-      "slender-objects"
-    ]
+      "slender-objects",
+    ],
   },
-  "fern": {
-    "slug": "fern",
-    "name": "Fern",
-    "icon": "/icons/items/fern.png",
-    "categories": []
+  fern: {
+    slug: "fern",
+    name: "Fern",
+    icon: "/icons/items/fern.png",
+    categories: [],
   },
   "field-grass": {
-    "slug": "field-grass",
-    "name": "Field grass",
-    "icon": "/icons/items/fieldgrass.png",
-    "categories": []
+    slug: "field-grass",
+    name: "Field grass",
+    icon: "/icons/items/fieldgrass.png",
+    categories: [],
   },
   "fiery-magby-statue": {
-    "slug": "fiery-magby-statue",
-    "name": "Fiery Magby statue",
-    "icon": "/icons/items/fierymagbystatue.png",
-    "categories": [
-      "lots-of-fire",
-      "stone-stuff",
-      "strange-stuff"
-    ]
+    slug: "fiery-magby-statue",
+    name: "Fiery Magby statue",
+    icon: "/icons/items/fierymagbystatue.png",
+    categories: ["lots-of-fire", "stone-stuff", "strange-stuff"],
   },
   "fire-hydrant": {
-    "slug": "fire-hydrant",
-    "name": "Fire hydrant",
-    "icon": "/icons/items/firehydrant.png",
-    "categories": [
-      "lots-of-water",
-      "metal-stuff",
-      "shiny-stuff"
-    ]
+    slug: "fire-hydrant",
+    name: "Fire hydrant",
+    icon: "/icons/items/firehydrant.png",
+    categories: ["lots-of-water", "metal-stuff", "shiny-stuff"],
   },
-  "firepit": {
-    "slug": "firepit",
-    "name": "Firepit",
-    "icon": "/icons/items/firepit.png",
-    "categories": [
+  firepit: {
+    slug: "firepit",
+    name: "Firepit",
+    icon: "/icons/items/firepit.png",
+    categories: [
       "group-activities",
       "lots-of-fire",
       "round-stuff",
-      "stone-stuff"
-    ]
+      "stone-stuff",
+    ],
   },
   "firework-blue": {
-    "slug": "firework-blue",
-    "name": "Firework (blue)",
-    "icon": "/icons/items/firework(blue).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "firework-blue",
+    name: "Firework (blue)",
+    icon: "/icons/items/firework(blue).png",
+    categories: ["round-stuff"],
   },
   "firework-green": {
-    "slug": "firework-green",
-    "name": "Firework (green)",
-    "icon": "/icons/items/firework(green).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "firework-green",
+    name: "Firework (green)",
+    icon: "/icons/items/firework(green).png",
+    categories: ["round-stuff"],
   },
   "firework-red": {
-    "slug": "firework-red",
-    "name": "Firework (red)",
-    "icon": "/icons/items/firework(red).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "firework-red",
+    name: "Firework (red)",
+    icon: "/icons/items/firework(red).png",
+    categories: ["round-stuff"],
   },
   "firework-white": {
-    "slug": "firework-white",
-    "name": "Firework (white)",
-    "icon": "/icons/items/firework(white).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "firework-white",
+    name: "Firework (white)",
+    icon: "/icons/items/firework(white).png",
+    categories: ["round-stuff"],
   },
   "firework-yellow": {
-    "slug": "firework-yellow",
-    "name": "Firework (yellow)",
-    "icon": "/icons/items/firework(yellow).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "firework-yellow",
+    name: "Firework (yellow)",
+    icon: "/icons/items/firework(yellow).png",
+    categories: ["round-stuff"],
   },
   "first-aid-kit": {
-    "slug": "first-aid-kit",
-    "name": "First aid kit",
-    "icon": "/icons/items/firstaidkit.png",
-    "categories": [
-      "colorful-stuff",
-      "containers",
-      "healing",
-      "metal-stuff"
-    ]
+    slug: "first-aid-kit",
+    name: "First aid kit",
+    icon: "/icons/items/firstaidkit.png",
+    categories: ["colorful-stuff", "containers", "healing", "metal-stuff"],
   },
   "fish-scale-tiling": {
-    "slug": "fish-scale-tiling",
-    "name": "Fish-scale tiling",
-    "icon": "/icons/items/fish-scaletiling.png",
-    "categories": []
+    slug: "fish-scale-tiling",
+    name: "Fish-scale tiling",
+    icon: "/icons/items/fish-scaletiling.png",
+    categories: [],
   },
   "fishing-rod": {
-    "slug": "fishing-rod",
-    "name": "Fishing rod",
-    "icon": "/icons/items/fishingrod.png",
-    "categories": [
+    slug: "fishing-rod",
+    name: "Fishing rod",
+    icon: "/icons/items/fishingrod.png",
+    categories: [
       "metal-stuff",
       "ocean-vibes",
       "slender-objects",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
   "flame-orb": {
-    "slug": "flame-orb",
-    "name": "Flame Orb",
-    "icon": "/icons/items/flameorb.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "flame-orb",
+    name: "Flame Orb",
+    icon: "/icons/items/flameorb.png",
+    categories: ["round-stuff"],
   },
   "flat-leaf-plant": {
-    "slug": "flat-leaf-plant",
-    "name": "Flat-leaf plant",
-    "icon": "/icons/items/flat-leafplant.png",
-    "categories": [
+    slug: "flat-leaf-plant",
+    name: "Flat-leaf plant",
+    icon: "/icons/items/flat-leafplant.png",
+    categories: [
       "containers",
       "lots-of-nature",
       "pretty-flowers",
       "slender-objects",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "floor-switch": {
-    "slug": "floor-switch",
-    "name": "Floor switch",
-    "icon": "/icons/items/floorswitch.png",
-    "categories": [
-      "electronics"
-    ]
+    slug: "floor-switch",
+    name: "Floor switch",
+    icon: "/icons/items/floorswitch.png",
+    categories: ["electronics"],
   },
   "flower-backpack": {
-    "slug": "flower-backpack",
-    "name": "Flower backpack",
-    "icon": "/icons/items/flowerbackpack.png",
-    "categories": [
-      "containers",
-      "cute-stuff",
-      "pretty-flowers",
-      "soft-stuff"
-    ]
+    slug: "flower-backpack",
+    name: "Flower backpack",
+    icon: "/icons/items/flowerbackpack.png",
+    categories: ["containers", "cute-stuff", "pretty-flowers", "soft-stuff"],
   },
   "flower-cushion": {
-    "slug": "flower-cushion",
-    "name": "Flower cushion",
-    "icon": "/icons/items/flowercushion.png",
-    "categories": [
+    slug: "flower-cushion",
+    name: "Flower cushion",
+    icon: "/icons/items/flowercushion.png",
+    categories: [
       "cute-stuff",
       "group-activities",
       "pretty-flowers",
-      "soft-stuff"
-    ]
+      "soft-stuff",
+    ],
   },
   "flower-garland": {
-    "slug": "flower-garland",
-    "name": "Flower garland",
-    "icon": "/icons/items/flowergarland.png",
-    "categories": [
+    slug: "flower-garland",
+    name: "Flower garland",
+    icon: "/icons/items/flowergarland.png",
+    categories: [
       "colorful-stuff",
       "gatherings",
       "pretty-flowers",
       "soft-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "flowery-table-setting": {
-    "slug": "flowery-table-setting",
-    "name": "Flowery table setting",
-    "icon": "/icons/items/flowerytablesetting.png",
-    "categories": [
+    slug: "flowery-table-setting",
+    name: "Flowery table setting",
+    icon: "/icons/items/flowerytablesetting.png",
+    categories: [
       "colorful-stuff",
       "cute-stuff",
       "gatherings",
       "group-activities",
       "pretty-flowers",
-      "soft-stuff"
-    ]
+      "soft-stuff",
+    ],
   },
-  "fluff": {
-    "slug": "fluff",
-    "name": "Fluff",
-    "icon": "/icons/items/fluff.png",
-    "categories": [
-      "fabric",
-      "round-stuff",
-      "soft-stuff"
-    ]
+  fluff: {
+    slug: "fluff",
+    name: "Fluff",
+    icon: "/icons/items/fluff.png",
+    categories: ["fabric", "round-stuff", "soft-stuff"],
   },
   "fluorescent-light": {
-    "slug": "fluorescent-light",
-    "name": "Fluorescent light",
-    "icon": "/icons/items/fluorescentlight.png",
-    "categories": [
+    slug: "fluorescent-light",
+    name: "Fluorescent light",
+    icon: "/icons/items/fluorescentlight.png",
+    categories: [
       "electronics",
       "glass-stuff",
       "shiny-stuff",
-      "slender-objects"
-    ]
+      "slender-objects",
+    ],
   },
   "folding-chair": {
-    "slug": "folding-chair",
-    "name": "Folding chair",
-    "icon": "/icons/items/foldingchair.png",
-    "categories": [
-      "metal-stuff",
-      "wobbly-stuff"
-    ]
+    slug: "folding-chair",
+    name: "Folding chair",
+    icon: "/icons/items/foldingchair.png",
+    categories: ["metal-stuff", "wobbly-stuff"],
   },
   "food-counter": {
-    "slug": "food-counter",
-    "name": "Food counter",
-    "icon": "/icons/items/foodcounter.png",
-    "categories": [
-      "wooden-stuff"
-    ]
+    slug: "food-counter",
+    name: "Food counter",
+    icon: "/icons/items/foodcounter.png",
+    categories: ["wooden-stuff"],
   },
   "fortree-city": {
-    "slug": "fortree-city",
-    "name": "Fortree City",
-    "icon": "/icons/items/fortreecity.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "fortree-city",
+    name: "Fortree City",
+    icon: "/icons/items/fortreecity.png",
+    categories: ["round-stuff"],
   },
-  "foundation": {
-    "slug": "foundation",
-    "name": "Foundation",
-    "icon": "/icons/items/foundation.png",
-    "categories": []
+  foundation: {
+    slug: "foundation",
+    name: "Foundation",
+    icon: "/icons/items/foundation.png",
+    categories: [],
   },
-  "frame": {
-    "slug": "frame",
-    "name": "Frame",
-    "icon": "/icons/items/frame.png",
-    "categories": [
+  frame: {
+    slug: "frame",
+    name: "Frame",
+    icon: "/icons/items/frame.png",
+    categories: [
       "blocky-stuff",
       "containers",
       "letters-and-words",
       "sharp-stuff",
       "watching-stuff",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
   "fresh-carrot": {
-    "slug": "fresh-carrot",
-    "name": "Fresh carrot",
-    "icon": "/icons/items/freshcarrot.png",
-    "categories": []
+    slug: "fresh-carrot",
+    name: "Fresh carrot",
+    icon: "/icons/items/freshcarrot.png",
+    categories: [],
   },
   "fried-potatoes": {
-    "slug": "fried-potatoes",
-    "name": "Fried potatoes",
-    "icon": "/icons/items/friedpotatoes.png",
-    "categories": [
-      "colorful-stuff",
-      "gatherings",
-      "looks-like-food"
-    ]
+    slug: "fried-potatoes",
+    name: "Fried potatoes",
+    icon: "/icons/items/friedpotatoes.png",
+    categories: ["colorful-stuff", "gatherings", "looks-like-food"],
   },
   "fuchsia-city-theme": {
-    "slug": "fuchsia-city-theme",
-    "name": "Fuchsia City Theme",
-    "icon": "/icons/items/fuchsiacitytheme.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "fuchsia-city-theme",
+    name: "Fuchsia City Theme",
+    icon: "/icons/items/fuchsiacitytheme.png",
+    categories: ["round-stuff"],
   },
   "funky-diffuser": {
-    "slug": "funky-diffuser",
-    "name": "Funky diffuser",
-    "icon": "/icons/items/funkydiffuser.png",
-    "categories": [
-      "lots-of-water",
-      "metal-stuff",
-      "strange-stuff"
-    ]
+    slug: "funky-diffuser",
+    name: "Funky diffuser",
+    icon: "/icons/items/funkydiffuser.png",
+    categories: ["lots-of-water", "metal-stuff", "strange-stuff"],
   },
   "game-boy-system": {
-    "slug": "game-boy-system",
-    "name": "Game Boy system",
-    "icon": "/icons/items/gameboysystem.png",
-    "categories": [
-      "blocky-stuff",
-      "electronics",
-      "group-activities"
-    ]
+    slug: "game-boy-system",
+    name: "Game Boy system",
+    icon: "/icons/items/gameboysystem.png",
+    categories: ["blocky-stuff", "electronics", "group-activities"],
   },
   "game-corner": {
-    "slug": "game-corner",
-    "name": "Game Corner",
-    "icon": "/icons/items/gamecorner.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "game-corner",
+    name: "Game Corner",
+    icon: "/icons/items/gamecorner.png",
+    categories: ["round-stuff"],
   },
   "gaming-bed": {
-    "slug": "gaming-bed",
-    "name": "Gaming bed",
-    "icon": "/icons/items/gamingbed.png",
-    "categories": [
+    slug: "gaming-bed",
+    name: "Gaming bed",
+    icon: "/icons/items/gamingbed.png",
+    categories: [
       "colorful-stuff",
       "electronics",
       "group-activities",
       "shiny-stuff",
-      "soft-stuff"
-    ]
+      "soft-stuff",
+    ],
   },
   "gaming-chair": {
-    "slug": "gaming-chair",
-    "name": "Gaming chair",
-    "icon": "/icons/items/gamingchair.png",
-    "categories": [
+    slug: "gaming-chair",
+    name: "Gaming chair",
+    icon: "/icons/items/gamingchair.png",
+    categories: [
       "colorful-stuff",
       "electronics",
       "fabric",
       "luxury",
       "shiny-stuff",
       "soft-stuff",
-      "spinning-stuff"
-    ]
+      "spinning-stuff",
+    ],
   },
   "gaming-fridge": {
-    "slug": "gaming-fridge",
-    "name": "Gaming fridge",
-    "icon": "/icons/items/gamingfridge.png",
-    "categories": [
+    slug: "gaming-fridge",
+    name: "Gaming fridge",
+    icon: "/icons/items/gamingfridge.png",
+    categories: [
       "colorful-stuff",
       "containers",
       "electronics",
       "glass-stuff",
-      "metal-stuff"
-    ]
+      "metal-stuff",
+    ],
   },
   "gaming-light": {
-    "slug": "gaming-light",
-    "name": "Gaming light",
-    "icon": "/icons/items/gaminglight.png",
-    "categories": [
-      "colorful-stuff",
-      "electronics",
-      "gatherings",
-      "glass-stuff"
-    ]
+    slug: "gaming-light",
+    name: "Gaming light",
+    icon: "/icons/items/gaminglight.png",
+    categories: ["colorful-stuff", "electronics", "gatherings", "glass-stuff"],
   },
   "gaming-pc": {
-    "slug": "gaming-pc",
-    "name": "Gaming PC",
-    "icon": "/icons/items/gamingpc.png",
-    "categories": [
+    slug: "gaming-pc",
+    name: "Gaming PC",
+    icon: "/icons/items/gamingpc.png",
+    categories: [
       "colorful-stuff",
       "electronics",
       "glass-stuff",
-      "metal-stuff",
-      "shiny-stuff"
-    ]
-  },
-  "garbage-bags": {
-    "slug": "garbage-bags",
-    "name": "Garbage bags",
-    "icon": "/icons/items/garbagebags.png",
-    "categories": [
-      "garbage",
-      "gatherings"
-    ]
-  },
-  "garbage-bin": {
-    "slug": "garbage-bin",
-    "name": "Garbage bin",
-    "icon": "/icons/items/garbagebin.png",
-    "categories": [
-      "containers",
-      "garbage",
-      "metal-stuff"
-    ]
-  },
-  "garden-bench": {
-    "slug": "garden-bench",
-    "name": "Garden bench",
-    "icon": "/icons/items/gardenbench.png",
-    "categories": [
-      "group-activities",
-      "lots-of-nature",
-      "metal-stuff"
-    ]
-  },
-  "garden-chair": {
-    "slug": "garden-chair",
-    "name": "Garden chair",
-    "icon": "/icons/items/gardenchair.png",
-    "categories": [
-      "lots-of-nature",
-      "metal-stuff"
-    ]
-  },
-  "garden-flowers": {
-    "slug": "garden-flowers",
-    "name": "Garden flowers",
-    "icon": "/icons/items/gardenflowers.png",
-    "categories": [
-      "colorful-stuff",
-      "pretty-flowers"
-    ]
-  },
-  "garden-light": {
-    "slug": "garden-light",
-    "name": "Garden light",
-    "icon": "/icons/items/gardenlight.png",
-    "categories": [
-      "electronics",
-      "glass-stuff",
-      "metal-stuff"
-    ]
-  },
-  "garden-ornament": {
-    "slug": "garden-ornament",
-    "name": "Garden ornament",
-    "icon": "/icons/items/gardenornament.png",
-    "categories": [
-      "gatherings",
-      "stone-stuff"
-    ]
-  },
-  "garden-table": {
-    "slug": "garden-table",
-    "name": "Garden table",
-    "icon": "/icons/items/gardentable.png",
-    "categories": [
-      "lots-of-nature"
-    ]
-  },
-  "glass": {
-    "slug": "glass",
-    "name": "Glass",
-    "icon": "/icons/items/glass.png",
-    "categories": [
-      "glass-stuff"
-    ]
-  },
-  "glass-window": {
-    "slug": "glass-window",
-    "name": "Glass window",
-    "icon": "/icons/items/glasswindow.png",
-    "categories": [
-      "glass-stuff"
-    ]
-  },
-  "glowing-mushrooms": {
-    "slug": "glowing-mushrooms",
-    "name": "Glowing mushrooms",
-    "icon": "/icons/items/glowingmushrooms.png",
-    "categories": []
-  },
-  "glowing-stone": {
-    "slug": "glowing-stone",
-    "name": "Glowing stone",
-    "icon": "/icons/items/glowingstone.png",
-    "categories": []
-  },
-  "gold-bottle-cap": {
-    "slug": "gold-bottle-cap",
-    "name": "Gold Bottle Cap",
-    "icon": "/icons/items/goldbottlecap.png",
-    "categories": [
-      "round-stuff",
-      "shiny-stuff"
-    ]
-  },
-  "gold-deposit": {
-    "slug": "gold-deposit",
-    "name": "Gold deposit",
-    "icon": "/icons/items/golddeposit.png",
-    "categories": []
-  },
-  "gold-ingot": {
-    "slug": "gold-ingot",
-    "name": "Gold ingot",
-    "icon": "/icons/items/goldingot.png",
-    "categories": [
-      "metal-stuff"
-    ]
-  },
-  "gold-ore": {
-    "slug": "gold-ore",
-    "name": "Gold ore",
-    "icon": "/icons/items/goldore.png",
-    "categories": [
-      "metal-stuff"
-    ]
-  },
-  "gold-teeth": {
-    "slug": "gold-teeth",
-    "name": "Gold Teeth",
-    "icon": "/icons/items/goldteeth.png",
-    "categories": [
       "metal-stuff",
       "shiny-stuff",
-      "stone-stuff",
-      "strange-stuff"
-    ]
+    ],
+  },
+  "garbage-bags": {
+    slug: "garbage-bags",
+    name: "Garbage bags",
+    icon: "/icons/items/garbagebags.png",
+    categories: ["garbage", "gatherings"],
+  },
+  "garbage-bin": {
+    slug: "garbage-bin",
+    name: "Garbage bin",
+    icon: "/icons/items/garbagebin.png",
+    categories: ["containers", "garbage", "metal-stuff"],
+  },
+  "garden-bench": {
+    slug: "garden-bench",
+    name: "Garden bench",
+    icon: "/icons/items/gardenbench.png",
+    categories: ["group-activities", "lots-of-nature", "metal-stuff"],
+  },
+  "garden-chair": {
+    slug: "garden-chair",
+    name: "Garden chair",
+    icon: "/icons/items/gardenchair.png",
+    categories: ["lots-of-nature", "metal-stuff"],
+  },
+  "garden-flowers": {
+    slug: "garden-flowers",
+    name: "Garden flowers",
+    icon: "/icons/items/gardenflowers.png",
+    categories: ["colorful-stuff", "pretty-flowers"],
+  },
+  "garden-light": {
+    slug: "garden-light",
+    name: "Garden light",
+    icon: "/icons/items/gardenlight.png",
+    categories: ["electronics", "glass-stuff", "metal-stuff"],
+  },
+  "garden-ornament": {
+    slug: "garden-ornament",
+    name: "Garden ornament",
+    icon: "/icons/items/gardenornament.png",
+    categories: ["gatherings", "stone-stuff"],
+  },
+  "garden-table": {
+    slug: "garden-table",
+    name: "Garden table",
+    icon: "/icons/items/gardentable.png",
+    categories: ["lots-of-nature"],
+  },
+  glass: {
+    slug: "glass",
+    name: "Glass",
+    icon: "/icons/items/glass.png",
+    categories: ["glass-stuff"],
+  },
+  "glass-window": {
+    slug: "glass-window",
+    name: "Glass window",
+    icon: "/icons/items/glasswindow.png",
+    categories: ["glass-stuff"],
+  },
+  "glowing-mushrooms": {
+    slug: "glowing-mushrooms",
+    name: "Glowing mushrooms",
+    icon: "/icons/items/glowingmushrooms.png",
+    categories: [],
+  },
+  "glowing-stone": {
+    slug: "glowing-stone",
+    name: "Glowing stone",
+    icon: "/icons/items/glowingstone.png",
+    categories: [],
+  },
+  "gold-bottle-cap": {
+    slug: "gold-bottle-cap",
+    name: "Gold Bottle Cap",
+    icon: "/icons/items/goldbottlecap.png",
+    categories: ["round-stuff", "shiny-stuff"],
+  },
+  "gold-deposit": {
+    slug: "gold-deposit",
+    name: "Gold deposit",
+    icon: "/icons/items/golddeposit.png",
+    categories: [],
+  },
+  "gold-ingot": {
+    slug: "gold-ingot",
+    name: "Gold ingot",
+    icon: "/icons/items/goldingot.png",
+    categories: ["metal-stuff"],
+  },
+  "gold-ore": {
+    slug: "gold-ore",
+    name: "Gold ore",
+    icon: "/icons/items/goldore.png",
+    categories: ["metal-stuff"],
+  },
+  "gold-teeth": {
+    slug: "gold-teeth",
+    name: "Gold Teeth",
+    icon: "/icons/items/goldteeth.png",
+    categories: ["metal-stuff", "shiny-stuff", "stone-stuff", "strange-stuff"],
   },
   "gold-wall": {
-    "slug": "gold-wall",
-    "name": "Gold wall",
-    "icon": "/icons/items/goldwall.png",
-    "categories": []
+    slug: "gold-wall",
+    name: "Gold wall",
+    icon: "/icons/items/goldwall.png",
+    categories: [],
   },
   "grass-flooring": {
-    "slug": "grass-flooring",
-    "name": "Grass flooring",
-    "icon": "/icons/items/grassflooring.png",
-    "categories": []
+    slug: "grass-flooring",
+    name: "Grass flooring",
+    icon: "/icons/items/grassflooring.png",
+    categories: [],
   },
-  "gravel": {
-    "slug": "gravel",
-    "name": "Gravel",
-    "icon": "/icons/items/gravel.png",
-    "categories": []
+  gravel: {
+    slug: "gravel",
+    name: "Gravel",
+    icon: "/icons/items/gravel.png",
+    categories: [],
   },
-  "gravestone": {
-    "slug": "gravestone",
-    "name": "Gravestone",
-    "icon": "/icons/items/gravestone.png",
-    "categories": [
-      "letters-and-words",
-      "spooky-stuff",
-      "strange-stuff"
-    ]
+  gravestone: {
+    slug: "gravestone",
+    name: "Gravestone",
+    icon: "/icons/items/gravestone.png",
+    categories: ["letters-and-words", "spooky-stuff", "strange-stuff"],
   },
   "gray-circle-flooring": {
-    "slug": "gray-circle-flooring",
-    "name": "Gray circle flooring",
-    "icon": "/icons/items/graycircleflooring.png",
-    "categories": []
+    slug: "gray-circle-flooring",
+    name: "Gray circle flooring",
+    icon: "/icons/items/graycircleflooring.png",
+    categories: [],
   },
   "green-meteor-lamp": {
-    "slug": "green-meteor-lamp",
-    "name": "Green meteor lamp",
-    "icon": "/icons/items/greenmeteorlamp.png",
-    "categories": [
-      "cute-stuff",
-      "electronics",
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "green-meteor-lamp",
+    name: "Green meteor lamp",
+    icon: "/icons/items/greenmeteorlamp.png",
+    categories: ["cute-stuff", "electronics", "glass-stuff", "shiny-stuff"],
   },
   "green-paint": {
-    "slug": "green-paint",
-    "name": "Green paint",
-    "icon": "/icons/items/greenpaint.png",
-    "categories": [
-      "colorful-stuff",
-      "lots-of-dirt"
-    ]
+    slug: "green-paint",
+    name: "Green paint",
+    icon: "/icons/items/greenpaint.png",
+    categories: ["colorful-stuff", "lots-of-dirt"],
   },
   "green-shoots": {
-    "slug": "green-shoots",
-    "name": "Green shoots",
-    "icon": "/icons/items/greenshoots.png",
-    "categories": []
+    slug: "green-shoots",
+    name: "Green shoots",
+    icon: "/icons/items/greenshoots.png",
+    categories: [],
   },
   "grubby-book": {
-    "slug": "grubby-book",
-    "name": "Grubby book",
-    "icon": "/icons/items/grubbybook.png",
-    "categories": [
-      "complicated-stuff",
-      "garbage",
-      "letters-and-words"
-    ]
+    slug: "grubby-book",
+    name: "Grubby book",
+    icon: "/icons/items/grubbybook.png",
+    categories: ["complicated-stuff", "garbage", "letters-and-words"],
   },
   "grubby-cell-phone": {
-    "slug": "grubby-cell-phone",
-    "name": "Grubby cell phone",
-    "icon": "/icons/items/grubbycellphone.png",
-    "categories": [
-      "garbage"
-    ]
+    slug: "grubby-cell-phone",
+    name: "Grubby cell phone",
+    icon: "/icons/items/grubbycellphone.png",
+    categories: ["garbage"],
   },
   "grubby-letter": {
-    "slug": "grubby-letter",
-    "name": "Grubby letter",
-    "icon": "/icons/items/grubbyletter.png",
-    "categories": [
-      "complicated-stuff",
-      "garbage",
-      "letters-and-words"
-    ]
+    slug: "grubby-letter",
+    name: "Grubby letter",
+    icon: "/icons/items/grubbyletter.png",
+    categories: ["complicated-stuff", "garbage", "letters-and-words"],
   },
   "grubby-newspaper": {
-    "slug": "grubby-newspaper",
-    "name": "Grubby newspaper",
-    "icon": "/icons/items/grubbynewspaper.png",
-    "categories": [
+    slug: "grubby-newspaper",
+    name: "Grubby newspaper",
+    icon: "/icons/items/grubbynewspaper.png",
+    categories: [
       "complicated-stuff",
       "garbage",
       "letters-and-words",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "grubby-notepad": {
-    "slug": "grubby-notepad",
-    "name": "Grubby notepad",
-    "icon": "/icons/items/grubbynotepad.png",
-    "categories": [
-      "complicated-stuff",
-      "garbage",
-      "letters-and-words"
-    ]
+    slug: "grubby-notepad",
+    name: "Grubby notepad",
+    icon: "/icons/items/grubbynotepad.png",
+    categories: ["complicated-stuff", "garbage", "letters-and-words"],
   },
   "grubby-papers": {
-    "slug": "grubby-papers",
-    "name": "Grubby papers",
-    "icon": "/icons/items/grubbypapers.png",
-    "categories": [
-      "complicated-stuff",
-      "garbage",
-      "letters-and-words"
-    ]
+    slug: "grubby-papers",
+    name: "Grubby papers",
+    icon: "/icons/items/grubbypapers.png",
+    categories: ["complicated-stuff", "garbage", "letters-and-words"],
   },
   "grubby-rags": {
-    "slug": "grubby-rags",
-    "name": "Grubby rags",
-    "icon": "/icons/items/grubbyrags.png",
-    "categories": []
+    slug: "grubby-rags",
+    name: "Grubby rags",
+    icon: "/icons/items/grubbyrags.png",
+    categories: [],
   },
   "grubby-tablet": {
-    "slug": "grubby-tablet",
-    "name": "Grubby tablet",
-    "icon": "/icons/items/grubbytablet.png",
-    "categories": [
-      "garbage"
-    ]
+    slug: "grubby-tablet",
+    name: "Grubby tablet",
+    icon: "/icons/items/grubbytablet.png",
+    categories: ["garbage"],
   },
   "guest-room-bed": {
-    "slug": "guest-room-bed",
-    "name": "Guest-room bed",
-    "icon": "/icons/items/guest-roombed.png",
-    "categories": [
+    slug: "guest-room-bed",
+    name: "Guest-room bed",
+    icon: "/icons/items/guest-roombed.png",
+    categories: [
       "fabric",
       "group-activities",
       "luxury",
       "soft-stuff",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
   "guest-room-wall": {
-    "slug": "guest-room-wall",
-    "name": "Guest-room wall",
-    "icon": "/icons/items/guest-roomwall.png",
-    "categories": []
+    slug: "guest-room-wall",
+    name: "Guest-room wall",
+    icon: "/icons/items/guest-roomwall.png",
+    categories: [],
   },
   "gym-emblem-statue": {
-    "slug": "gym-emblem-statue",
-    "name": "Gym emblem statue",
-    "icon": "/icons/items/gymemblemstatue.png",
-    "categories": [
-      "shiny-stuff",
-      "stone-stuff"
-    ]
+    slug: "gym-emblem-statue",
+    name: "Gym emblem statue",
+    icon: "/icons/items/gymemblemstatue.png",
+    categories: ["shiny-stuff", "stone-stuff"],
   },
-  "handcar": {
-    "slug": "handcar",
-    "name": "Handcar",
-    "icon": "/icons/items/handcar.png",
-    "categories": [
-      "rides"
-    ]
+  handcar: {
+    slug: "handcar",
+    name: "Handcar",
+    icon: "/icons/items/handcar.png",
+    categories: ["rides"],
   },
   "hanging-banner": {
-    "slug": "hanging-banner",
-    "name": "Hanging banner",
-    "icon": "/icons/items/hangingbanner.png",
-    "categories": [
-      "colorful-stuff",
-      "fabric"
-    ]
+    slug: "hanging-banner",
+    name: "Hanging banner",
+    icon: "/icons/items/hangingbanner.png",
+    categories: ["colorful-stuff", "fabric"],
   },
   "hanging-scroll": {
-    "slug": "hanging-scroll",
-    "name": "Hanging scroll",
-    "icon": "/icons/items/hangingscroll.png",
-    "categories": [
-      "blocky-stuff",
-      "letters-and-words",
-      "strange-stuff"
-    ]
+    slug: "hanging-scroll",
+    name: "Hanging scroll",
+    icon: "/icons/items/hangingscroll.png",
+    categories: ["blocky-stuff", "letters-and-words", "strange-stuff"],
   },
   "harbor-streetlight": {
-    "slug": "harbor-streetlight",
-    "name": "Harbor streetlight",
-    "icon": "/icons/items/harborstreetlight.png",
-    "categories": [
+    slug: "harbor-streetlight",
+    name: "Harbor streetlight",
+    icon: "/icons/items/harborstreetlight.png",
+    categories: [
       "electronics",
       "glass-stuff",
       "metal-stuff",
       "ocean-vibes",
-      "slender-objects"
-    ]
+      "slender-objects",
+    ],
   },
   "hardwood-flooring": {
-    "slug": "hardwood-flooring",
-    "name": "Hardwood flooring",
-    "icon": "/icons/items/hardwoodflooring.png",
-    "categories": []
+    slug: "hardwood-flooring",
+    name: "Hardwood flooring",
+    icon: "/icons/items/hardwoodflooring.png",
+    categories: [],
   },
   "hau-oli-city-day": {
-    "slug": "hau-oli-city-day",
-    "name": "Hau'oli City (Day)",
-    "icon": "/icons/items/hau'olicity(day).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "hau-oli-city-day",
+    name: "Hau'oli City (Day)",
+    icon: "/icons/items/hau'olicity(day).png",
+    categories: ["round-stuff"],
   },
   "hay-pile": {
-    "slug": "hay-pile",
-    "name": "Hay pile",
-    "icon": "/icons/items/haypile.png",
-    "categories": []
+    slug: "hay-pile",
+    name: "Hay pile",
+    icon: "/icons/items/haypile.png",
+    categories: [],
   },
   "headbutt-fossil-body": {
-    "slug": "headbutt-fossil-body",
-    "name": "Headbutt Fossil (body)",
-    "icon": "/icons/items/headbuttfossil(body).png",
-    "categories": [
+    slug: "headbutt-fossil-body",
+    name: "Headbutt Fossil (body)",
+    icon: "/icons/items/headbuttfossil(body).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "headbutt-fossil-head": {
-    "slug": "headbutt-fossil-head",
-    "name": "Headbutt Fossil (head)",
-    "icon": "/icons/items/headbuttfossil(head).png",
-    "categories": [
-      "hard-stuff",
-      "lots-of-dirt",
-      "strange-stuff"
-    ]
+    slug: "headbutt-fossil-head",
+    name: "Headbutt Fossil (head)",
+    icon: "/icons/items/headbuttfossil(head).png",
+    categories: ["hard-stuff", "lots-of-dirt", "strange-stuff"],
   },
   "headbutt-fossil-tail": {
-    "slug": "headbutt-fossil-tail",
-    "name": "Headbutt Fossil (tail)",
-    "icon": "/icons/items/headbuttfossil(tail).png",
-    "categories": [
+    slug: "headbutt-fossil-tail",
+    name: "Headbutt Fossil (tail)",
+    icon: "/icons/items/headbuttfossil(tail).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "healthy-hedge": {
-    "slug": "healthy-hedge",
-    "name": "Healthy hedge",
-    "icon": "/icons/items/healthyhedge.png",
-    "categories": []
+    slug: "healthy-hedge",
+    name: "Healthy hedge",
+    icon: "/icons/items/healthyhedge.png",
+    categories: [],
   },
   "healthy-hedge-orange": {
-    "slug": "healthy-hedge-orange",
-    "name": "Healthy hedge (orange)",
-    "icon": "/icons/items/healthyhedge(orange).png",
-    "categories": []
+    slug: "healthy-hedge-orange",
+    name: "Healthy hedge (orange)",
+    icon: "/icons/items/healthyhedge(orange).png",
+    categories: [],
   },
   "healthy-hedge-pink": {
-    "slug": "healthy-hedge-pink",
-    "name": "Healthy hedge (pink)",
-    "icon": "/icons/items/healthyhedge(pink).png",
-    "categories": []
+    slug: "healthy-hedge-pink",
+    name: "Healthy hedge (pink)",
+    icon: "/icons/items/healthyhedge(pink).png",
+    categories: [],
   },
   "healthy-hedge-purple": {
-    "slug": "healthy-hedge-purple",
-    "name": "Healthy hedge (purple)",
-    "icon": "/icons/items/healthyhedge(purple).png",
-    "categories": []
+    slug: "healthy-hedge-purple",
+    name: "Healthy hedge (purple)",
+    icon: "/icons/items/healthyhedge(purple).png",
+    categories: [],
   },
   "healthy-hedge-red": {
-    "slug": "healthy-hedge-red",
-    "name": "Healthy hedge (red)",
-    "icon": "/icons/items/healthyhedge(red).png",
-    "categories": []
+    slug: "healthy-hedge-red",
+    name: "Healthy hedge (red)",
+    icon: "/icons/items/healthyhedge(red).png",
+    categories: [],
   },
   "heart-scale": {
-    "slug": "heart-scale",
-    "name": "Heart Scale",
-    "icon": "/icons/items/heartscale.png",
-    "categories": [
-      "cute-stuff"
-    ]
+    slug: "heart-scale",
+    name: "Heart Scale",
+    icon: "/icons/items/heartscale.png",
+    categories: ["cute-stuff"],
   },
   "hexagonal-flooring": {
-    "slug": "hexagonal-flooring",
-    "name": "Hexagonal flooring",
-    "icon": "/icons/items/hexagonalflooring.png",
-    "categories": []
+    slug: "hexagonal-flooring",
+    name: "Hexagonal flooring",
+    icon: "/icons/items/hexagonalflooring.png",
+    categories: [],
   },
-  "honey": {
-    "slug": "honey",
-    "name": "Honey",
-    "icon": "/icons/items/honey.png",
-    "categories": []
+  honey: {
+    slug: "honey",
+    name: "Honey",
+    icon: "/icons/items/honey.png",
+    categories: [],
   },
   "hoppip-water-bottle": {
-    "slug": "hoppip-water-bottle",
-    "name": "Hoppip water bottle",
-    "icon": "/icons/items/hoppipwaterbottle.png",
-    "categories": [
-      "colorful-stuff",
-      "containers",
-      "cute-stuff",
-      "lots-of-water"
-    ]
+    slug: "hoppip-water-bottle",
+    name: "Hoppip water bottle",
+    icon: "/icons/items/hoppipwaterbottle.png",
+    categories: ["colorful-stuff", "containers", "cute-stuff", "lots-of-water"],
   },
   "horsea-fountain": {
-    "slug": "horsea-fountain",
-    "name": "Horsea fountain",
-    "icon": "/icons/items/horseafountain.png",
-    "categories": [
+    slug: "horsea-fountain",
+    name: "Horsea fountain",
+    icon: "/icons/items/horseafountain.png",
+    categories: [
       "lots-of-water",
       "ocean-vibes",
       "stone-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
-  "humidifier": {
-    "slug": "humidifier",
-    "name": "Humidifier",
-    "icon": "/icons/items/humidifier.png",
-    "categories": [
+  humidifier: {
+    slug: "humidifier",
+    name: "Humidifier",
+    icon: "/icons/items/humidifier.png",
+    categories: [
       "electronics",
       "glass-stuff",
       "healing",
       "lots-of-water",
       "round-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
-  "ice": {
-    "slug": "ice",
-    "name": "Ice",
-    "icon": "/icons/items/ice.png",
-    "categories": []
+  ice: {
+    slug: "ice",
+    name: "Ice",
+    icon: "/icons/items/ice.png",
+    categories: [],
   },
   "indigo-meteor-lamp": {
-    "slug": "indigo-meteor-lamp",
-    "name": "Indigo meteor lamp",
-    "icon": "/icons/items/indigometeorlamp.png",
-    "categories": [
-      "cute-stuff",
-      "electronics",
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "indigo-meteor-lamp",
+    name: "Indigo meteor lamp",
+    icon: "/icons/items/indigometeorlamp.png",
+    categories: ["cute-stuff", "electronics", "glass-stuff", "shiny-stuff"],
   },
   "industrial-bed": {
-    "slug": "industrial-bed",
-    "name": "Industrial bed",
-    "icon": "/icons/items/industrialbed.png",
-    "categories": [
-      "fabric",
-      "group-activities",
-      "metal-stuff",
-      "soft-stuff"
-    ]
+    slug: "industrial-bed",
+    name: "Industrial bed",
+    icon: "/icons/items/industrialbed.png",
+    categories: ["fabric", "group-activities", "metal-stuff", "soft-stuff"],
   },
   "industrial-bench": {
-    "slug": "industrial-bench",
-    "name": "Industrial bench",
-    "icon": "/icons/items/industrialbench.png",
-    "categories": [
-      "group-activities",
-      "metal-stuff"
-    ]
+    slug: "industrial-bench",
+    name: "Industrial bench",
+    icon: "/icons/items/industrialbench.png",
+    categories: ["group-activities", "metal-stuff"],
   },
   "industrial-chair": {
-    "slug": "industrial-chair",
-    "name": "Industrial chair",
-    "icon": "/icons/items/industrialchair.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "industrial-chair",
+    name: "Industrial chair",
+    icon: "/icons/items/industrialchair.png",
+    categories: ["metal-stuff"],
   },
   "industrial-desk": {
-    "slug": "industrial-desk",
-    "name": "Industrial desk",
-    "icon": "/icons/items/industrialdesk.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "industrial-desk",
+    name: "Industrial desk",
+    icon: "/icons/items/industrialdesk.png",
+    categories: ["metal-stuff"],
   },
   "inflatable-boat": {
-    "slug": "inflatable-boat",
-    "name": "Inflatable boat",
-    "icon": "/icons/items/inflatableboat.png",
-    "categories": [
+    slug: "inflatable-boat",
+    name: "Inflatable boat",
+    icon: "/icons/items/inflatableboat.png",
+    categories: [
       "blocky-stuff",
       "group-activities",
       "lots-of-water",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
   "inflatable-sudowoodo": {
-    "slug": "inflatable-sudowoodo",
-    "name": "Inflatable Sudowoodo",
-    "icon": "/icons/items/inflatablesudowoodo.png",
-    "categories": [
+    slug: "inflatable-sudowoodo",
+    name: "Inflatable Sudowoodo",
+    icon: "/icons/items/inflatablesudowoodo.png",
+    categories: [
       "slender-objects",
       "strange-stuff",
       "watching-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
   "information-board": {
-    "slug": "information-board",
-    "name": "Information board",
-    "icon": "/icons/items/informationboard.png",
-    "categories": [
+    slug: "information-board",
+    name: "Information board",
+    icon: "/icons/items/informationboard.png",
+    categories: [
       "complicated-stuff",
       "letters-and-words",
       "metal-stuff",
       "shiny-stuff",
       "stone-stuff",
-      "symbols"
-    ]
+      "symbols",
+    ],
   },
   "iron-ball": {
-    "slug": "iron-ball",
-    "name": "Iron Ball",
-    "icon": "/icons/items/ironball.png",
-    "categories": [
-      "hard-stuff",
-      "round-stuff"
-    ]
+    slug: "iron-ball",
+    name: "Iron Ball",
+    icon: "/icons/items/ironball.png",
+    categories: ["hard-stuff", "round-stuff"],
   },
   "iron-beam": {
-    "slug": "iron-beam",
-    "name": "Iron beam",
-    "icon": "/icons/items/ironbeam.png",
-    "categories": []
+    slug: "iron-beam",
+    name: "Iron beam",
+    icon: "/icons/items/ironbeam.png",
+    categories: [],
   },
   "iron-bed": {
-    "slug": "iron-bed",
-    "name": "Iron bed",
-    "icon": "/icons/items/ironbed.png",
-    "categories": [
-      "fabric",
-      "metal-stuff",
-      "soft-stuff"
-    ]
+    slug: "iron-bed",
+    name: "Iron bed",
+    icon: "/icons/items/ironbed.png",
+    categories: ["fabric", "metal-stuff", "soft-stuff"],
   },
   "iron-bench": {
-    "slug": "iron-bench",
-    "name": "Iron bench",
-    "icon": "/icons/items/ironbench.png",
-    "categories": [
-      "group-activities",
-      "metal-stuff"
-    ]
+    slug: "iron-bench",
+    name: "Iron bench",
+    icon: "/icons/items/ironbench.png",
+    categories: ["group-activities", "metal-stuff"],
   },
   "iron-chair": {
-    "slug": "iron-chair",
-    "name": "Iron chair",
-    "icon": "/icons/items/ironchair.png",
-    "categories": [
-      "blocky-stuff",
-      "metal-stuff"
-    ]
+    slug: "iron-chair",
+    name: "Iron chair",
+    icon: "/icons/items/ironchair.png",
+    categories: ["blocky-stuff", "metal-stuff"],
   },
   "iron-column": {
-    "slug": "iron-column",
-    "name": "Iron column",
-    "icon": "/icons/items/ironcolumn.png",
-    "categories": []
+    slug: "iron-column",
+    name: "Iron column",
+    icon: "/icons/items/ironcolumn.png",
+    categories: [],
   },
   "iron-deposit": {
-    "slug": "iron-deposit",
-    "name": "Iron deposit",
-    "icon": "/icons/items/irondeposit.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-deposit",
+    name: "Iron deposit",
+    icon: "/icons/items/irondeposit.png",
+    categories: ["metal-stuff"],
   },
   "iron-door": {
-    "slug": "iron-door",
-    "name": "Iron door",
-    "icon": "/icons/items/irondoor.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-door",
+    name: "Iron door",
+    icon: "/icons/items/irondoor.png",
+    categories: ["metal-stuff"],
   },
   "iron-gate": {
-    "slug": "iron-gate",
-    "name": "Iron gate",
-    "icon": "/icons/items/irongate.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-gate",
+    name: "Iron gate",
+    icon: "/icons/items/irongate.png",
+    categories: ["metal-stuff"],
   },
   "iron-ingot": {
-    "slug": "iron-ingot",
-    "name": "Iron ingot",
-    "icon": "/icons/items/ironingot.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-ingot",
+    name: "Iron ingot",
+    icon: "/icons/items/ironingot.png",
+    categories: ["metal-stuff"],
   },
   "iron-ladder": {
-    "slug": "iron-ladder",
-    "name": "Iron ladder",
-    "icon": "/icons/items/ironladder.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-ladder",
+    name: "Iron ladder",
+    icon: "/icons/items/ironladder.png",
+    categories: ["metal-stuff"],
   },
   "iron-ore": {
-    "slug": "iron-ore",
-    "name": "Iron ore",
-    "icon": "/icons/items/ironore.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-ore",
+    name: "Iron ore",
+    icon: "/icons/items/ironore.png",
+    categories: ["metal-stuff"],
   },
   "iron-pipes": {
-    "slug": "iron-pipes",
-    "name": "Iron pipes",
-    "icon": "/icons/items/ironpipes.png",
-    "categories": [
-      "construction",
-      "gatherings",
-      "metal-stuff"
-    ]
+    slug: "iron-pipes",
+    name: "Iron pipes",
+    icon: "/icons/items/ironpipes.png",
+    categories: ["construction", "gatherings", "metal-stuff"],
   },
   "iron-plating": {
-    "slug": "iron-plating",
-    "name": "Iron plating",
-    "icon": "/icons/items/ironplating.png",
-    "categories": []
+    slug: "iron-plating",
+    name: "Iron plating",
+    icon: "/icons/items/ironplating.png",
+    categories: [],
   },
   "iron-rack": {
-    "slug": "iron-rack",
-    "name": "Iron rack",
-    "icon": "/icons/items/ironrack.png",
-    "categories": [
-      "hard-stuff"
-    ]
+    slug: "iron-rack",
+    name: "Iron rack",
+    icon: "/icons/items/ironrack.png",
+    categories: ["hard-stuff"],
   },
   "iron-scaffold": {
-    "slug": "iron-scaffold",
-    "name": "Iron scaffold",
-    "icon": "/icons/items/ironscaffold.png",
-    "categories": [
-      "construction"
-    ]
+    slug: "iron-scaffold",
+    name: "Iron scaffold",
+    icon: "/icons/items/ironscaffold.png",
+    categories: ["construction"],
   },
   "iron-stand": {
-    "slug": "iron-stand",
-    "name": "Iron stand",
-    "icon": "/icons/items/ironstand.png",
-    "categories": [
+    slug: "iron-stand",
+    name: "Iron stand",
+    icon: "/icons/items/ironstand.png",
+    categories: [
       "blocky-stuff",
       "containers",
       "hard-stuff",
       "metal-stuff",
-      "shiny-stuff"
-    ]
+      "shiny-stuff",
+    ],
   },
   "iron-steps": {
-    "slug": "iron-steps",
-    "name": "Iron steps",
-    "icon": "/icons/items/ironsteps.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-steps",
+    name: "Iron steps",
+    icon: "/icons/items/ironsteps.png",
+    categories: ["metal-stuff"],
   },
   "iron-table": {
-    "slug": "iron-table",
-    "name": "Iron table",
-    "icon": "/icons/items/irontable.png",
-    "categories": [
-      "hard-stuff",
-      "metal-stuff"
-    ]
+    slug: "iron-table",
+    name: "Iron table",
+    icon: "/icons/items/irontable.png",
+    categories: ["hard-stuff", "metal-stuff"],
   },
   "iron-tiling": {
-    "slug": "iron-tiling",
-    "name": "Iron tiling",
-    "icon": "/icons/items/irontiling.png",
-    "categories": []
+    slug: "iron-tiling",
+    name: "Iron tiling",
+    icon: "/icons/items/irontiling.png",
+    categories: [],
   },
   "iron-wall": {
-    "slug": "iron-wall",
-    "name": "Iron wall",
-    "icon": "/icons/items/ironwall.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-wall",
+    name: "Iron wall",
+    icon: "/icons/items/ironwall.png",
+    categories: ["metal-stuff"],
   },
   "iron-plate-flooring": {
-    "slug": "iron-plate-flooring",
-    "name": "Iron-plate flooring",
-    "icon": "/icons/items/iron-plateflooring.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-plate-flooring",
+    name: "Iron-plate flooring",
+    icon: "/icons/items/iron-plateflooring.png",
+    categories: ["metal-stuff"],
   },
   "iron-plate-flooring-wallpaper": {
-    "slug": "iron-plate-flooring-wallpaper",
-    "name": "Iron-plate flooring (wallpaper)",
-    "icon": "/icons/items/iron-plateflooring(wallpaper).png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "iron-plate-flooring-wallpaper",
+    name: "Iron-plate flooring (wallpaper)",
+    icon: "/icons/items/iron-plateflooring(wallpaper).png",
+    categories: ["metal-stuff"],
   },
   "iron-scaffold-plank": {
-    "slug": "iron-scaffold-plank",
-    "name": "Iron-scaffold plank",
-    "icon": "/icons/items/iron-scaffoldplank.png",
-    "categories": [
-      "construction"
-    ]
+    slug: "iron-scaffold-plank",
+    name: "Iron-scaffold plank",
+    icon: "/icons/items/iron-scaffoldplank.png",
+    categories: ["construction"],
   },
   "jaw-fossil": {
-    "slug": "jaw-fossil",
-    "name": "Jaw Fossil",
-    "icon": "/icons/items/jawfossil.png",
-    "categories": [
-      "hard-stuff",
-      "lots-of-dirt",
-      "strange-stuff"
-    ]
+    slug: "jaw-fossil",
+    name: "Jaw Fossil",
+    icon: "/icons/items/jawfossil.png",
+    categories: ["hard-stuff", "lots-of-dirt", "strange-stuff"],
   },
   "jewel-wall-decoration": {
-    "slug": "jewel-wall-decoration",
-    "name": "Jewel wall decoration",
-    "icon": "/icons/items/jewelwalldecoration.png",
-    "categories": [
-      "colorful-stuff",
-      "luxury",
-      "stone-stuff",
-      "watching-stuff"
-    ]
+    slug: "jewel-wall-decoration",
+    name: "Jewel wall decoration",
+    icon: "/icons/items/jewelwalldecoration.png",
+    categories: ["colorful-stuff", "luxury", "stone-stuff", "watching-stuff"],
   },
   "jubilife-village": {
-    "slug": "jubilife-village",
-    "name": "Jubilife Village",
-    "icon": "/icons/items/jubilifevillage.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "jubilife-village",
+    name: "Jubilife Village",
+    icon: "/icons/items/jubilifevillage.png",
+    categories: ["round-stuff"],
   },
   "juice-trio": {
-    "slug": "juice-trio",
-    "name": "Juice trio",
-    "icon": "/icons/items/juicetrio.png",
-    "categories": [
+    slug: "juice-trio",
+    name: "Juice trio",
+    icon: "/icons/items/juicetrio.png",
+    categories: [
       "colorful-stuff",
       "containers",
       "gatherings",
       "glass-stuff",
-      "looks-like-food"
-    ]
+      "looks-like-food",
+    ],
   },
   "jumbled-cords": {
-    "slug": "jumbled-cords",
-    "name": "Jumbled cords",
-    "icon": "/icons/items/jumbledcords.png",
-    "categories": [
+    slug: "jumbled-cords",
+    name: "Jumbled cords",
+    icon: "/icons/items/jumbledcords.png",
+    categories: [
       "complicated-stuff",
       "containers",
       "electronics",
       "garbage",
       "gatherings",
       "group-activities",
-      "metal-stuff"
-    ]
+      "metal-stuff",
+    ],
   },
   "knitting-supplies": {
-    "slug": "knitting-supplies",
-    "name": "Knitting supplies",
-    "icon": "/icons/items/knittingsupplies.png",
-    "categories": [
+    slug: "knitting-supplies",
+    name: "Knitting supplies",
+    icon: "/icons/items/knittingsupplies.png",
+    categories: [
       "colorful-stuff",
       "fabric",
       "gatherings",
       "group-activities",
       "lots-of-dirt",
       "round-stuff",
-      "soft-stuff"
-    ]
+      "soft-stuff",
+    ],
   },
   "lagging-tail": {
-    "slug": "lagging-tail",
-    "name": "Lagging Tail",
-    "icon": "/icons/items/laggingtail.png",
-    "categories": [
-      "hard-stuff"
-    ]
+    slug: "lagging-tail",
+    name: "Lagging Tail",
+    icon: "/icons/items/laggingtail.png",
+    categories: ["hard-stuff"],
   },
-  "lantern": {
-    "slug": "lantern",
-    "name": "Lantern",
-    "icon": "/icons/items/lantern.png",
-    "categories": [
-      "electronics",
-      "glass-stuff",
-      "metal-stuff"
-    ]
+  lantern: {
+    slug: "lantern",
+    name: "Lantern",
+    icon: "/icons/items/lantern.png",
+    categories: ["electronics", "glass-stuff", "metal-stuff"],
   },
-  "laptop": {
-    "slug": "laptop",
-    "name": "Laptop",
-    "icon": "/icons/items/laptop.png",
-    "categories": [
+  laptop: {
+    slug: "laptop",
+    name: "Laptop",
+    icon: "/icons/items/laptop.png",
+    categories: [
       "blocky-stuff",
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "shiny-stuff"
-    ]
+      "shiny-stuff",
+    ],
   },
   "large-boulder": {
-    "slug": "large-boulder",
-    "name": "Large boulder",
-    "icon": "/icons/items/largeboulder.png",
-    "categories": []
+    slug: "large-boulder",
+    name: "Large boulder",
+    icon: "/icons/items/largeboulder.png",
+    categories: [],
   },
   "large-lost-relic": {
-    "slug": "large-lost-relic",
-    "name": "Large Lost Relic",
-    "icon": "/icons/items/largelostrelic.png",
-    "categories": [
-      "strange-stuff"
-    ]
+    slug: "large-lost-relic",
+    name: "Large Lost Relic",
+    icon: "/icons/items/largelostrelic.png",
+    categories: ["strange-stuff"],
   },
   "large-mirror": {
-    "slug": "large-mirror",
-    "name": "Large mirror",
-    "icon": "/icons/items/largemirror.png",
-    "categories": [
-      "blocky-stuff",
-      "glass-stuff",
-      "luxury",
-      "strange-stuff"
-    ]
+    slug: "large-mirror",
+    name: "Large mirror",
+    icon: "/icons/items/largemirror.png",
+    categories: ["blocky-stuff", "glass-stuff", "luxury", "strange-stuff"],
   },
   "large-palm-tree": {
-    "slug": "large-palm-tree",
-    "name": "Large palm tree",
-    "icon": "/icons/items/largepalmtree.png",
-    "categories": []
+    slug: "large-palm-tree",
+    name: "Large palm tree",
+    icon: "/icons/items/largepalmtree.png",
+    categories: [],
   },
   "large-ventilation-fan": {
-    "slug": "large-ventilation-fan",
-    "name": "Large ventilation fan",
-    "icon": "/icons/items/largeventilationfan.png",
-    "categories": [
+    slug: "large-ventilation-fan",
+    name: "Large ventilation fan",
+    icon: "/icons/items/largeventilationfan.png",
+    categories: [
       "blocky-stuff",
       "metal-stuff",
       "nice-breezes",
       "spinning-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "laser-sensor": {
-    "slug": "laser-sensor",
-    "name": "Laser sensor",
-    "icon": "/icons/items/lasersensor.png",
-    "categories": [
-      "electronics"
-    ]
+    slug: "laser-sensor",
+    name: "Laser sensor",
+    icon: "/icons/items/lasersensor.png",
+    categories: ["electronics"],
   },
   "lava-rock": {
-    "slug": "lava-rock",
-    "name": "Lava rock",
-    "icon": "/icons/items/lavarock.png",
-    "categories": []
+    slug: "lava-rock",
+    name: "Lava rock",
+    icon: "/icons/items/lavarock.png",
+    categories: [],
   },
-  "leaf": {
-    "slug": "leaf",
-    "name": "Leaf",
-    "icon": "/icons/items/leaf.png",
-    "categories": []
+  leaf: {
+    slug: "leaf",
+    name: "Leaf",
+    icon: "/icons/items/leaf.png",
+    categories: [],
   },
   "leafy-plant": {
-    "slug": "leafy-plant",
-    "name": "Leafy plant",
-    "icon": "/icons/items/leafyplant.png",
-    "categories": [
+    slug: "leafy-plant",
+    name: "Leafy plant",
+    icon: "/icons/items/leafyplant.png",
+    categories: [
       "containers",
       "pretty-flowers",
       "watching-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
-  "leftovers": {
-    "slug": "leftovers",
-    "name": "Leftovers",
-    "icon": "/icons/items/leftovers.png",
-    "categories": [
-      "looks-like-food"
-    ]
+  leftovers: {
+    slug: "leftovers",
+    name: "Leftovers",
+    icon: "/icons/items/leftovers.png",
+    categories: ["looks-like-food"],
   },
   "leppa-berry": {
-    "slug": "leppa-berry",
-    "name": "Leppa Berry",
-    "icon": "/icons/items/leppaberry.png",
-    "categories": []
+    slug: "leppa-berry",
+    name: "Leppa Berry",
+    icon: "/icons/items/leppaberry.png",
+    categories: [],
   },
   "leppa-tree": {
-    "slug": "leppa-tree",
-    "name": "Leppa Tree",
-    "icon": "/icons/items/leppatree.png",
-    "categories": []
+    slug: "leppa-tree",
+    name: "Leppa Tree",
+    icon: "/icons/items/leppatree.png",
+    categories: [],
   },
-  "letter": {
-    "slug": "letter",
-    "name": "Letter",
-    "icon": "/icons/items/letter.png",
-    "categories": [
+  letter: {
+    slug: "letter",
+    name: "Letter",
+    icon: "/icons/items/letter.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "letters-and-words",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
-  "levee": {
-    "slug": "levee",
-    "name": "Levee",
-    "icon": "/icons/items/levee.png",
-    "categories": []
+  levee: {
+    slug: "levee",
+    name: "Levee",
+    icon: "/icons/items/levee.png",
+    categories: [],
   },
   "life-orb": {
-    "slug": "life-orb",
-    "name": "Life Orb",
-    "icon": "/icons/items/lifeorb.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "life-orb",
+    name: "Life Orb",
+    icon: "/icons/items/lifeorb.png",
+    categories: ["round-stuff"],
   },
   "light-antique-wall-upper": {
-    "slug": "light-antique-wall-upper",
-    "name": "Light antique wall (upper)",
-    "icon": "/icons/items/lightantiquewall(upper).png",
-    "categories": []
+    slug: "light-antique-wall-upper",
+    name: "Light antique wall (upper)",
+    icon: "/icons/items/lightantiquewall(upper).png",
+    categories: [],
   },
   "light-brown-rock": {
-    "slug": "light-brown-rock",
-    "name": "Light brown rock",
-    "icon": "/icons/items/lightbrownrock.png",
-    "categories": []
+    slug: "light-brown-rock",
+    name: "Light brown rock",
+    icon: "/icons/items/lightbrownrock.png",
+    categories: [],
   },
   "light-clay": {
-    "slug": "light-clay",
-    "name": "Light Clay",
-    "icon": "/icons/items/lightclay.png",
-    "categories": [
-      "soft-stuff",
-      "stone-stuff"
-    ]
+    slug: "light-clay",
+    name: "Light Clay",
+    icon: "/icons/items/lightclay.png",
+    categories: ["soft-stuff", "stone-stuff"],
   },
   "light-marble-flooring": {
-    "slug": "light-marble-flooring",
-    "name": "Light marble flooring",
-    "icon": "/icons/items/lightmarbleflooring.png",
-    "categories": []
+    slug: "light-marble-flooring",
+    name: "Light marble flooring",
+    icon: "/icons/items/lightmarbleflooring.png",
+    categories: [],
   },
   "light-wooden-wall": {
-    "slug": "light-wooden-wall",
-    "name": "Light wooden wall",
-    "icon": "/icons/items/lightwoodenwall.png",
-    "categories": []
+    slug: "light-wooden-wall",
+    name: "Light wooden wall",
+    icon: "/icons/items/lightwoodenwall.png",
+    categories: [],
   },
-  "limestone": {
-    "slug": "limestone",
-    "name": "Limestone",
-    "icon": "/icons/items/limestone.png",
-    "categories": []
+  limestone: {
+    slug: "limestone",
+    name: "Limestone",
+    icon: "/icons/items/limestone.png",
+    categories: [],
   },
   "lined-stone-flooring": {
-    "slug": "lined-stone-flooring",
-    "name": "Lined-stone flooring",
-    "icon": "/icons/items/lined-stoneflooring.png",
-    "categories": []
+    slug: "lined-stone-flooring",
+    name: "Lined-stone flooring",
+    icon: "/icons/items/lined-stoneflooring.png",
+    categories: [],
   },
   "log-bed": {
-    "slug": "log-bed",
-    "name": "Log Bed",
-    "icon": "/icons/items/logbed.png",
-    "categories": [
+    slug: "log-bed",
+    name: "Log Bed",
+    icon: "/icons/items/logbed.png",
+    categories: [
       "blocky-stuff",
       "colorful-stuff",
       "fabric",
       "lots-of-nature",
       "soft-stuff",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
   "log-chair": {
-    "slug": "log-chair",
-    "name": "Log chair",
-    "icon": "/icons/items/logchair.png",
-    "categories": [
-      "lots-of-nature",
-      "wooden-stuff"
-    ]
+    slug: "log-chair",
+    name: "Log chair",
+    icon: "/icons/items/logchair.png",
+    categories: ["lots-of-nature", "wooden-stuff"],
   },
   "log-table": {
-    "slug": "log-table",
-    "name": "Log table",
-    "icon": "/icons/items/logtable.png",
-    "categories": [
-      "lots-of-nature",
-      "wooden-stuff"
-    ]
+    slug: "log-table",
+    name: "Log table",
+    icon: "/icons/items/logtable.png",
+    categories: ["lots-of-nature", "wooden-stuff"],
   },
   "lucky-egg": {
-    "slug": "lucky-egg",
-    "name": "Lucky Egg",
-    "icon": "/icons/items/luckyegg.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "lucky-egg",
+    name: "Lucky Egg",
+    icon: "/icons/items/luckyegg.png",
+    categories: ["round-stuff"],
   },
   "lum-berry": {
-    "slug": "lum-berry",
-    "name": "Lum Berry",
-    "icon": "/icons/items/lumberry.png",
-    "categories": []
+    slug: "lum-berry",
+    name: "Lum Berry",
+    icon: "/icons/items/lumberry.png",
+    categories: [],
   },
   "lum-tree": {
-    "slug": "lum-tree",
-    "name": "Lum tree",
-    "icon": "/icons/items/lumtree.png",
-    "categories": []
+    slug: "lum-tree",
+    name: "Lum tree",
+    icon: "/icons/items/lumtree.png",
+    categories: [],
   },
-  "lumber": {
-    "slug": "lumber",
-    "name": "Lumber",
-    "icon": "/icons/items/lumber.png",
-    "categories": []
+  lumber: {
+    slug: "lumber",
+    name: "Lumber",
+    icon: "/icons/items/lumber.png",
+    categories: [],
   },
   "lunch-box": {
-    "slug": "lunch-box",
-    "name": "Lunch box",
-    "icon": "/icons/items/lunchbox.png",
-    "categories": [
+    slug: "lunch-box",
+    name: "Lunch box",
+    icon: "/icons/items/lunchbox.png",
+    categories: [
       "colorful-stuff",
       "cute-stuff",
       "gatherings",
-      "looks-like-food"
-    ]
+      "looks-like-food",
+    ],
   },
   "luxury-bed": {
-    "slug": "luxury-bed",
-    "name": "Luxury bed",
-    "icon": "/icons/items/luxurybed.png",
-    "categories": [
-      "group-activities",
-      "luxury",
-      "soft-stuff",
-      "stone-stuff"
-    ]
+    slug: "luxury-bed",
+    name: "Luxury bed",
+    icon: "/icons/items/luxurybed.png",
+    categories: ["group-activities", "luxury", "soft-stuff", "stone-stuff"],
   },
   "luxury-chair": {
-    "slug": "luxury-chair",
-    "name": "Luxury chair",
-    "icon": "/icons/items/luxurychair.png",
-    "categories": [
-      "luxury",
-      "metal-stuff",
-      "spooky-stuff"
-    ]
+    slug: "luxury-chair",
+    name: "Luxury chair",
+    icon: "/icons/items/luxurychair.png",
+    categories: ["luxury", "metal-stuff", "spooky-stuff"],
   },
   "luxury-dresser": {
-    "slug": "luxury-dresser",
-    "name": "Luxury dresser",
-    "icon": "/icons/items/luxurydresser.png",
-    "categories": [
-      "containers",
-      "glass-stuff",
-      "luxury",
-      "strange-stuff"
-    ]
+    slug: "luxury-dresser",
+    name: "Luxury dresser",
+    icon: "/icons/items/luxurydresser.png",
+    categories: ["containers", "glass-stuff", "luxury", "strange-stuff"],
   },
   "luxury-lamp": {
-    "slug": "luxury-lamp",
-    "name": "Luxury lamp",
-    "icon": "/icons/items/luxurylamp.png",
-    "categories": [
+    slug: "luxury-lamp",
+    name: "Luxury lamp",
+    icon: "/icons/items/luxurylamp.png",
+    categories: [
       "cute-stuff",
       "electronics",
       "fabric",
       "glass-stuff",
       "luxury",
-      "slender-objects"
-    ]
+      "slender-objects",
+    ],
   },
   "luxury-sofa": {
-    "slug": "luxury-sofa",
-    "name": "Luxury sofa",
-    "icon": "/icons/items/luxurysofa.png",
-    "categories": [
-      "fabric",
-      "group-activities",
-      "luxury",
-      "soft-stuff"
-    ]
+    slug: "luxury-sofa",
+    name: "Luxury sofa",
+    icon: "/icons/items/luxurysofa.png",
+    categories: ["fabric", "group-activities", "luxury", "soft-stuff"],
   },
   "luxury-table": {
-    "slug": "luxury-table",
-    "name": "Luxury table",
-    "icon": "/icons/items/luxurytable.png",
-    "categories": [
-      "luxury"
-    ]
+    slug: "luxury-table",
+    name: "Luxury table",
+    icon: "/icons/items/luxurytable.png",
+    categories: ["luxury"],
   },
   "magazine-rack": {
-    "slug": "magazine-rack",
-    "name": "Magazine rack",
-    "icon": "/icons/items/magazinerack.png",
-    "categories": [
+    slug: "magazine-rack",
+    name: "Magazine rack",
+    icon: "/icons/items/magazinerack.png",
+    categories: [
       "colorful-stuff",
       "complicated-stuff",
       "containers",
       "gatherings",
       "watching-stuff",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
-  "mailbox": {
-    "slug": "mailbox",
-    "name": "Mailbox",
-    "icon": "/icons/items/mailbox.png",
-    "categories": [
-      "containers",
-      "metal-stuff"
-    ]
+  mailbox: {
+    slug: "mailbox",
+    name: "Mailbox",
+    icon: "/icons/items/mailbox.png",
+    categories: ["containers", "metal-stuff"],
   },
   "malicious-armor": {
-    "slug": "malicious-armor",
-    "name": "Malicious Armor",
-    "icon": "/icons/items/maliciousarmor.png",
-    "categories": [
-      "luxury",
-      "strange-stuff"
-    ]
+    slug: "malicious-armor",
+    name: "Malicious Armor",
+    icon: "/icons/items/maliciousarmor.png",
+    categories: ["luxury", "strange-stuff"],
   },
   "map-and-compass": {
-    "slug": "map-and-compass",
-    "name": "Map and compass",
-    "icon": "/icons/items/mapandcompass.png",
-    "categories": [
-      "group-activities",
-      "letters-and-words"
-    ]
+    slug: "map-and-compass",
+    name: "Map and compass",
+    icon: "/icons/items/mapandcompass.png",
+    categories: ["group-activities", "letters-and-words"],
   },
-  "marble": {
-    "slug": "marble",
-    "name": "Marble",
-    "icon": "/icons/items/marble.png",
-    "categories": []
+  marble: {
+    slug: "marble",
+    name: "Marble",
+    icon: "/icons/items/marble.png",
+    categories: [],
   },
   "marked-road-horizontal": {
-    "slug": "marked-road-horizontal",
-    "name": "Marked road (horizontal)",
-    "icon": "/icons/items/markedroad(horizontal).png",
-    "categories": []
+    slug: "marked-road-horizontal",
+    name: "Marked road (horizontal)",
+    icon: "/icons/items/markedroad(horizontal).png",
+    categories: [],
   },
   "menu-board": {
-    "slug": "menu-board",
-    "name": "Menu board",
-    "icon": "/icons/items/menuboard.png",
-    "categories": [
+    slug: "menu-board",
+    name: "Menu board",
+    icon: "/icons/items/menuboard.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "letters-and-words",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
   "metal-chain": {
-    "slug": "metal-chain",
-    "name": "Metal chain",
-    "icon": "/icons/items/metalchain.png",
-    "categories": [
-      "metal-stuff",
-      "slender-objects"
-    ]
+    slug: "metal-chain",
+    name: "Metal chain",
+    icon: "/icons/items/metalchain.png",
+    categories: ["metal-stuff", "slender-objects"],
   },
   "metal-debris": {
-    "slug": "metal-debris",
-    "name": "Metal Debris",
-    "icon": "/icons/items/metaldebris.png",
-    "categories": [
-      "hard-stuff",
-      "metal-stuff",
-      "stone-stuff"
-    ]
+    slug: "metal-debris",
+    name: "Metal Debris",
+    icon: "/icons/items/metaldebris.png",
+    categories: ["hard-stuff", "metal-stuff", "stone-stuff"],
   },
   "metal-drum": {
-    "slug": "metal-drum",
-    "name": "Metal drum",
-    "icon": "/icons/items/metaldrum.png",
-    "categories": [
-      "construction",
-      "containers",
-      "metal-stuff",
-      "round-stuff"
-    ]
+    slug: "metal-drum",
+    name: "Metal drum",
+    icon: "/icons/items/metaldrum.png",
+    categories: ["construction", "containers", "metal-stuff", "round-stuff"],
   },
   "metal-fragments": {
-    "slug": "metal-fragments",
-    "name": "Metal fragments",
-    "icon": "/icons/items/metalfragments.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "metal-fragments",
+    name: "Metal fragments",
+    icon: "/icons/items/metalfragments.png",
+    categories: ["metal-stuff"],
   },
   "metal-powder": {
-    "slug": "metal-powder",
-    "name": "Metal Powder",
-    "icon": "/icons/items/metalpowder.png",
-    "categories": [
-      "shiny-stuff"
-    ]
+    slug: "metal-powder",
+    name: "Metal Powder",
+    icon: "/icons/items/metalpowder.png",
+    categories: ["shiny-stuff"],
   },
   "metallic-smelting-furnace": {
-    "slug": "metallic-smelting-furnace",
-    "name": "Metallic smelting furnace",
-    "icon": "/icons/items/metallicsmeltingfurnace.png",
-    "categories": [
-      "lots-of-fire"
-    ]
+    slug: "metallic-smelting-furnace",
+    name: "Metallic smelting furnace",
+    icon: "/icons/items/metallicsmeltingfurnace.png",
+    categories: ["lots-of-fire"],
   },
-  "microscope": {
-    "slug": "microscope",
-    "name": "Microscope",
-    "icon": "/icons/items/microscope.png",
-    "categories": [
+  microscope: {
+    slug: "microscope",
+    name: "Microscope",
+    icon: "/icons/items/microscope.png",
+    categories: [
       "complicated-stuff",
       "glass-stuff",
       "metal-stuff",
       "strange-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "microwave-oven": {
-    "slug": "microwave-oven",
-    "name": "Microwave oven",
-    "icon": "/icons/items/microwaveoven.png",
-    "categories": [
+    slug: "microwave-oven",
+    name: "Microwave oven",
+    icon: "/icons/items/microwaveoven.png",
+    categories: [
       "blocky-stuff",
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "mini-bookcase": {
-    "slug": "mini-bookcase",
-    "name": "Mini bookcase",
-    "icon": "/icons/items/minibookcase.png",
-    "categories": [
+    slug: "mini-bookcase",
+    name: "Mini bookcase",
+    icon: "/icons/items/minibookcase.png",
+    categories: [
       "blocky-stuff",
       "colorful-stuff",
       "complicated-stuff",
       "containers",
       "watching-stuff",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
   "mini-generator": {
-    "slug": "mini-generator",
-    "name": "Mini generator",
-    "icon": "/icons/items/minigenerator.png",
-    "categories": [
+    slug: "mini-generator",
+    name: "Mini generator",
+    icon: "/icons/items/minigenerator.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "electronics",
       "metal-stuff",
       "shiny-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "mini-plain-bed": {
-    "slug": "mini-plain-bed",
-    "name": "Mini plain bed",
-    "icon": "/icons/items/miniplainbed.png",
-    "categories": [
-      "blocky-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "mini-plain-bed",
+    name: "Mini plain bed",
+    icon: "/icons/items/miniplainbed.png",
+    categories: ["blocky-stuff", "fabric", "soft-stuff"],
   },
   "miracle-seed": {
-    "slug": "miracle-seed",
-    "name": "Miracle Seed",
-    "icon": "/icons/items/miracleseed.png",
-    "categories": [
-      "lots-of-nature"
-    ]
+    slug: "miracle-seed",
+    name: "Miracle Seed",
+    icon: "/icons/items/miracleseed.png",
+    categories: ["lots-of-nature"],
   },
   "mirror-ball": {
-    "slug": "mirror-ball",
-    "name": "Mirror ball",
-    "icon": "/icons/items/mirrorball.png",
-    "categories": [
+    slug: "mirror-ball",
+    name: "Mirror ball",
+    icon: "/icons/items/mirrorball.png",
+    categories: [
       "electronics",
       "glass-stuff",
       "metal-stuff",
       "round-stuff",
-      "shiny-stuff"
-    ]
+      "shiny-stuff",
+    ],
   },
   "model-planet": {
-    "slug": "model-planet",
-    "name": "Model planet",
-    "icon": "/icons/items/modelplanet.png",
-    "categories": [
+    slug: "model-planet",
+    name: "Model planet",
+    icon: "/icons/items/modelplanet.png",
+    categories: [
       "colorful-stuff",
       "cute-stuff",
       "electronics",
       "metal-stuff",
       "round-stuff",
-      "spinning-stuff"
-    ]
+      "spinning-stuff",
+    ],
   },
   "model-space-shuttle": {
-    "slug": "model-space-shuttle",
-    "name": "Model space shuttle",
-    "icon": "/icons/items/modelspaceshuttle.png",
-    "categories": [
+    slug: "model-space-shuttle",
+    name: "Model space shuttle",
+    icon: "/icons/items/modelspaceshuttle.png",
+    categories: [
       "metal-stuff",
       "nice-breezes",
       "rides",
       "shiny-stuff",
-      "stone-stuff"
-    ]
+      "stone-stuff",
+    ],
   },
   "modern-carpeting": {
-    "slug": "modern-carpeting",
-    "name": "Modern carpeting",
-    "icon": "/icons/items/moderncarpeting.png",
-    "categories": []
+    slug: "modern-carpeting",
+    name: "Modern carpeting",
+    icon: "/icons/items/moderncarpeting.png",
+    categories: [],
   },
   "modern-door": {
-    "slug": "modern-door",
-    "name": "Modern door",
-    "icon": "/icons/items/moderndoor.png",
-    "categories": [
-      "glass-stuff"
-    ]
+    slug: "modern-door",
+    name: "Modern door",
+    icon: "/icons/items/moderndoor.png",
+    categories: ["glass-stuff"],
   },
   "modern-sink": {
-    "slug": "modern-sink",
-    "name": "Modern sink",
-    "icon": "/icons/items/modernsink.png",
-    "categories": [
+    slug: "modern-sink",
+    name: "Modern sink",
+    icon: "/icons/items/modernsink.png",
+    categories: [
       "blocky-stuff",
       "cleanliness",
       "lots-of-water",
       "metal-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "molten-rock": {
-    "slug": "molten-rock",
-    "name": "Molten rock",
-    "icon": "/icons/items/moltenrock.png",
-    "categories": []
+    slug: "molten-rock",
+    name: "Molten rock",
+    icon: "/icons/items/moltenrock.png",
+    categories: [],
   },
   "mosaic-tiling": {
-    "slug": "mosaic-tiling",
-    "name": "Mosaic tiling",
-    "icon": "/icons/items/mosaictiling.png",
-    "categories": []
+    slug: "mosaic-tiling",
+    name: "Mosaic tiling",
+    icon: "/icons/items/mosaictiling.png",
+    categories: [],
   },
-  "moss": {
-    "slug": "moss",
-    "name": "Moss",
-    "icon": "/icons/items/moss.png",
-    "categories": []
+  moss: {
+    slug: "moss",
+    name: "Moss",
+    icon: "/icons/items/moss.png",
+    categories: [],
   },
   "mossy-boulder": {
-    "slug": "mossy-boulder",
-    "name": "Mossy boulder",
-    "icon": "/icons/items/mossyboulder.png",
-    "categories": []
+    slug: "mossy-boulder",
+    name: "Mossy boulder",
+    icon: "/icons/items/mossyboulder.png",
+    categories: [],
   },
   "mossy-soil": {
-    "slug": "mossy-soil",
-    "name": "Mossy Soil",
-    "icon": "/icons/items/mossysoil.png",
-    "categories": []
+    slug: "mossy-soil",
+    name: "Mossy Soil",
+    icon: "/icons/items/mossysoil.png",
+    categories: [],
   },
   "mossy-stone": {
-    "slug": "mossy-stone",
-    "name": "Mossy Stone",
-    "icon": "/icons/items/mossystone.png",
-    "categories": []
+    slug: "mossy-stone",
+    name: "Mossy Stone",
+    icon: "/icons/items/mossystone.png",
+    categories: [],
   },
   "mountain-flowers": {
-    "slug": "mountain-flowers",
-    "name": "Mountain flowers",
-    "icon": "/icons/items/mountainflowers.png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "mountain-flowers",
+    name: "Mountain flowers",
+    icon: "/icons/items/mountainflowers.png",
+    categories: ["pretty-flowers"],
   },
   "mountain-flowers-pink": {
-    "slug": "mountain-flowers-pink",
-    "name": "Mountain flowers (pink)",
-    "icon": "/icons/items/mountainflowers(pink).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "mountain-flowers-pink",
+    name: "Mountain flowers (pink)",
+    icon: "/icons/items/mountainflowers(pink).png",
+    categories: ["pretty-flowers"],
   },
   "mountain-flowers-purple": {
-    "slug": "mountain-flowers-purple",
-    "name": "Mountain flowers (purple)",
-    "icon": "/icons/items/mountainflowers(purple).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "mountain-flowers-purple",
+    name: "Mountain flowers (purple)",
+    icon: "/icons/items/mountainflowers(purple).png",
+    categories: ["pretty-flowers"],
   },
   "mountain-flowers-red": {
-    "slug": "mountain-flowers-red",
-    "name": "Mountain flowers (red)",
-    "icon": "/icons/items/mountainflowers(red).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "mountain-flowers-red",
+    name: "Mountain flowers (red)",
+    icon: "/icons/items/mountainflowers(red).png",
+    categories: ["pretty-flowers"],
   },
   "mountain-flowers-white": {
-    "slug": "mountain-flowers-white",
-    "name": "Mountain flowers (white)",
-    "icon": "/icons/items/mountainflowers(white).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "mountain-flowers-white",
+    name: "Mountain flowers (white)",
+    icon: "/icons/items/mountainflowers(white).png",
+    categories: ["pretty-flowers"],
   },
   "mt-coronet": {
-    "slug": "mt-coronet",
-    "name": "Mt. Coronet",
-    "icon": "/icons/items/mt.coronet.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "mt-coronet",
+    name: "Mt. Coronet",
+    icon: "/icons/items/mt.coronet.png",
+    categories: ["round-stuff"],
   },
-  "mud": {
-    "slug": "mud",
-    "name": "Mud",
-    "icon": "/icons/items/mud.png",
-    "categories": [
-      "lots-of-dirt"
-    ]
+  mud: {
+    slug: "mud",
+    name: "Mud",
+    icon: "/icons/items/mud.png",
+    categories: ["lots-of-dirt"],
   },
   "muddy-sand": {
-    "slug": "muddy-sand",
-    "name": "Muddy sand",
-    "icon": "/icons/items/muddysand.png",
-    "categories": []
+    slug: "muddy-sand",
+    name: "Muddy sand",
+    icon: "/icons/items/muddysand.png",
+    categories: [],
   },
   "muddy-seashell-soil": {
-    "slug": "muddy-seashell-soil",
-    "name": "Muddy seashell soil",
-    "icon": "/icons/items/muddyseashellsoil.png",
-    "categories": []
+    slug: "muddy-seashell-soil",
+    name: "Muddy seashell soil",
+    icon: "/icons/items/muddyseashellsoil.png",
+    categories: [],
   },
   "muddy-tiling": {
-    "slug": "muddy-tiling",
-    "name": "Muddy Tiling",
-    "icon": "/icons/items/muddytiling.png",
-    "categories": []
+    slug: "muddy-tiling",
+    name: "Muddy Tiling",
+    icon: "/icons/items/muddytiling.png",
+    categories: [],
   },
-  "mug": {
-    "slug": "mug",
-    "name": "Mug",
-    "icon": "/icons/items/mug.png",
-    "categories": [
-      "containers",
-      "symbols"
-    ]
+  mug: {
+    slug: "mug",
+    name: "Mug",
+    icon: "/icons/items/mug.png",
+    categories: ["containers", "symbols"],
   },
   "munna-bank": {
-    "slug": "munna-bank",
-    "name": "Munna bank",
-    "icon": "/icons/items/munnabank.png",
-    "categories": [
-      "containers",
-      "cute-stuff",
-      "spooky-stuff",
-      "stone-stuff"
-    ]
+    slug: "munna-bank",
+    name: "Munna bank",
+    icon: "/icons/items/munnabank.png",
+    categories: ["containers", "cute-stuff", "spooky-stuff", "stone-stuff"],
   },
   "mushroom-lamp": {
-    "slug": "mushroom-lamp",
-    "name": "Mushroom lamp",
-    "icon": "/icons/items/mushroomlamp.png",
-    "categories": [
-      "electronics",
-      "wooden-stuff"
-    ]
+    slug: "mushroom-lamp",
+    name: "Mushroom lamp",
+    icon: "/icons/items/mushroomlamp.png",
+    categories: ["electronics", "wooden-stuff"],
   },
   "mushroom-streetlight": {
-    "slug": "mushroom-streetlight",
-    "name": "Mushroom streetlight",
-    "icon": "/icons/items/mushroomstreetlight.png",
-    "categories": [
-      "shiny-stuff",
-      "slender-objects",
-      "spooky-stuff"
-    ]
+    slug: "mushroom-streetlight",
+    name: "Mushroom streetlight",
+    icon: "/icons/items/mushroomstreetlight.png",
+    categories: ["shiny-stuff", "slender-objects", "spooky-stuff"],
   },
   "music-mat-fa": {
-    "slug": "music-mat-fa",
-    "name": "Music mat (Fa)",
-    "icon": "/icons/items/musicmat(fa).png",
-    "categories": [
-      "noisy-stuff",
-      "play-spaces",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "music-mat-fa",
+    name: "Music mat (Fa)",
+    icon: "/icons/items/musicmat(fa).png",
+    categories: ["noisy-stuff", "play-spaces", "shiny-stuff", "strange-stuff"],
   },
   "music-mat-high-do": {
-    "slug": "music-mat-high-do",
-    "name": "Music mat (High do)",
-    "icon": "/icons/items/musicmat(highdo).png",
-    "categories": [
-      "noisy-stuff",
-      "play-spaces",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "music-mat-high-do",
+    name: "Music mat (High do)",
+    icon: "/icons/items/musicmat(highdo).png",
+    categories: ["noisy-stuff", "play-spaces", "shiny-stuff", "strange-stuff"],
   },
   "music-mat-la": {
-    "slug": "music-mat-la",
-    "name": "Music mat (La)",
-    "icon": "/icons/items/musicmat(la).png",
-    "categories": [
-      "noisy-stuff",
-      "play-spaces",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "music-mat-la",
+    name: "Music mat (La)",
+    icon: "/icons/items/musicmat(la).png",
+    categories: ["noisy-stuff", "play-spaces", "shiny-stuff", "strange-stuff"],
   },
   "music-mat-low-do": {
-    "slug": "music-mat-low-do",
-    "name": "Music mat (low do)",
-    "icon": "/icons/items/musicmat(lowdo).png",
-    "categories": [
-      "noisy-stuff",
-      "play-spaces",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "music-mat-low-do",
+    name: "Music mat (low do)",
+    icon: "/icons/items/musicmat(lowdo).png",
+    categories: ["noisy-stuff", "play-spaces", "shiny-stuff", "strange-stuff"],
   },
   "music-mat-mi": {
-    "slug": "music-mat-mi",
-    "name": "Music mat (Mi)",
-    "icon": "/icons/items/musicmat(mi).png",
-    "categories": [
-      "noisy-stuff",
-      "play-spaces",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "music-mat-mi",
+    name: "Music mat (Mi)",
+    icon: "/icons/items/musicmat(mi).png",
+    categories: ["noisy-stuff", "play-spaces", "shiny-stuff", "strange-stuff"],
   },
   "music-mat-re": {
-    "slug": "music-mat-re",
-    "name": "Music mat (Re)",
-    "icon": "/icons/items/musicmat(re).png",
-    "categories": [
-      "noisy-stuff",
-      "play-spaces",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "music-mat-re",
+    name: "Music mat (Re)",
+    icon: "/icons/items/musicmat(re).png",
+    categories: ["noisy-stuff", "play-spaces", "shiny-stuff", "strange-stuff"],
   },
   "music-mat-sol": {
-    "slug": "music-mat-sol",
-    "name": "Music mat (Sol)",
-    "icon": "/icons/items/musicmat(sol).png",
-    "categories": [
-      "noisy-stuff",
-      "play-spaces",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "music-mat-sol",
+    name: "Music mat (Sol)",
+    icon: "/icons/items/musicmat(sol).png",
+    categories: ["noisy-stuff", "play-spaces", "shiny-stuff", "strange-stuff"],
   },
   "music-mat-ti": {
-    "slug": "music-mat-ti",
-    "name": "Music mat (Ti)",
-    "icon": "/icons/items/musicmat(ti).png",
-    "categories": [
-      "noisy-stuff",
-      "play-spaces",
-      "shiny-stuff",
-      "strange-stuff"
-    ]
+    slug: "music-mat-ti",
+    name: "Music mat (Ti)",
+    icon: "/icons/items/musicmat(ti).png",
+    categories: ["noisy-stuff", "play-spaces", "shiny-stuff", "strange-stuff"],
   },
   "mysterious-pedestal": {
-    "slug": "mysterious-pedestal",
-    "name": "Mysterious pedestal",
-    "icon": "/icons/items/mysteriouspedestal.png",
-    "categories": []
+    slug: "mysterious-pedestal",
+    name: "Mysterious pedestal",
+    icon: "/icons/items/mysteriouspedestal.png",
+    categories: [],
   },
   "mysterious-statue": {
-    "slug": "mysterious-statue",
-    "name": "Mysterious statue",
-    "icon": "/icons/items/mysteriousstatue.png",
-    "categories": [
-      "spooky-stuff",
-      "stone-stuff",
-      "strange-stuff"
-    ]
+    slug: "mysterious-statue",
+    name: "Mysterious statue",
+    icon: "/icons/items/mysteriousstatue.png",
+    categories: ["spooky-stuff", "stone-stuff", "strange-stuff"],
   },
   "mysterious-stone": {
-    "slug": "mysterious-stone",
-    "name": "Mysterious stone",
-    "icon": "/icons/items/mysteriousstone.png",
-    "categories": []
+    slug: "mysterious-stone",
+    name: "Mysterious stone",
+    icon: "/icons/items/mysteriousstone.png",
+    categories: [],
   },
   "mystic-water": {
-    "slug": "mystic-water",
-    "name": "Mystic Water",
-    "icon": "/icons/items/mysticwater.png",
-    "categories": [
-      "lots-of-water"
-    ]
+    slug: "mystic-water",
+    name: "Mystic Water",
+    icon: "/icons/items/mysticwater.png",
+    categories: ["lots-of-water"],
   },
   "naptime-bed": {
-    "slug": "naptime-bed",
-    "name": "Naptime bed",
-    "icon": "/icons/items/naptimebed.png",
-    "categories": [
-      "soft-stuff"
-    ]
+    slug: "naptime-bed",
+    name: "Naptime bed",
+    icon: "/icons/items/naptimebed.png",
+    categories: ["soft-stuff"],
   },
   "neon-flooring": {
-    "slug": "neon-flooring",
-    "name": "Neon flooring",
-    "icon": "/icons/items/neonflooring.png",
-    "categories": []
+    slug: "neon-flooring",
+    name: "Neon flooring",
+    icon: "/icons/items/neonflooring.png",
+    categories: [],
   },
-  "newspaper": {
-    "slug": "newspaper",
-    "name": "Newspaper",
-    "icon": "/icons/items/newspaper.png",
-    "categories": [
+  newspaper: {
+    slug: "newspaper",
+    name: "Newspaper",
+    icon: "/icons/items/newspaper.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "letters-and-words",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "nonburnable-garbage": {
-    "slug": "nonburnable-garbage",
-    "name": "Nonburnable garbage",
-    "icon": "/icons/items/nonburnablegarbage.png",
-    "categories": [
-      "garbage"
-    ]
+    slug: "nonburnable-garbage",
+    name: "Nonburnable garbage",
+    icon: "/icons/items/nonburnablegarbage.png",
+    categories: ["garbage"],
   },
   "nonburnable-garbage-outdoor": {
-    "slug": "nonburnable-garbage-outdoor",
-    "name": "Nonburnable garbage (outdoor)",
-    "icon": "/icons/items/nonburnablegarbage(outdoor).png",
-    "categories": [
-      "garbage"
-    ]
+    slug: "nonburnable-garbage-outdoor",
+    name: "Nonburnable garbage (outdoor)",
+    icon: "/icons/items/nonburnablegarbage(outdoor).png",
+    categories: ["garbage"],
   },
-  "notepad": {
-    "slug": "notepad",
-    "name": "Notepad",
-    "icon": "/icons/items/notepad.png",
-    "categories": [
+  notepad: {
+    slug: "notepad",
+    name: "Notepad",
+    icon: "/icons/items/notepad.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "letters-and-words",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
-  "nugget": {
-    "slug": "nugget",
-    "name": "Nugget",
-    "icon": "/icons/items/nugget.png",
-    "categories": [
-      "round-stuff",
-      "shiny-stuff"
-    ]
+  nugget: {
+    slug: "nugget",
+    name: "Nugget",
+    icon: "/icons/items/nugget.png",
+    categories: ["round-stuff", "shiny-stuff"],
   },
   "oak-s-lab": {
-    "slug": "oak-s-lab",
-    "name": "Oak's Lab",
-    "icon": "/icons/items/oak'slab.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "oak-s-lab",
+    name: "Oak's Lab",
+    icon: "/icons/items/oak'slab.png",
+    categories: ["round-stuff"],
   },
   "ocean-rock": {
-    "slug": "ocean-rock",
-    "name": "Ocean rock",
-    "icon": "/icons/items/oceanrock.png",
-    "categories": []
+    slug: "ocean-rock",
+    name: "Ocean rock",
+    icon: "/icons/items/oceanrock.png",
+    categories: [],
   },
   "office-cabinet": {
-    "slug": "office-cabinet",
-    "name": "Office cabinet",
-    "icon": "/icons/items/officecabinet.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "metal-stuff",
-      "wooden-stuff"
-    ]
+    slug: "office-cabinet",
+    name: "Office cabinet",
+    icon: "/icons/items/officecabinet.png",
+    categories: ["blocky-stuff", "containers", "metal-stuff", "wooden-stuff"],
   },
   "office-chair": {
-    "slug": "office-chair",
-    "name": "Office chair",
-    "icon": "/icons/items/officechair.png",
-    "categories": [
-      "fabric",
-      "metal-stuff",
-      "soft-stuff",
-      "spinning-stuff"
-    ]
+    slug: "office-chair",
+    name: "Office chair",
+    icon: "/icons/items/officechair.png",
+    categories: ["fabric", "metal-stuff", "soft-stuff", "spinning-stuff"],
   },
   "office-desk": {
-    "slug": "office-desk",
-    "name": "Office desk",
-    "icon": "/icons/items/officedesk.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "office-desk",
+    name: "Office desk",
+    icon: "/icons/items/officedesk.png",
+    categories: ["metal-stuff"],
   },
   "office-locker": {
-    "slug": "office-locker",
-    "name": "Office locker",
-    "icon": "/icons/items/officelocker.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "metal-stuff"
-    ]
+    slug: "office-locker",
+    name: "Office locker",
+    icon: "/icons/items/officelocker.png",
+    categories: ["blocky-stuff", "containers", "metal-stuff"],
   },
   "office-shelf": {
-    "slug": "office-shelf",
-    "name": "Office shelf",
-    "icon": "/icons/items/officeshelf.png",
-    "categories": [
+    slug: "office-shelf",
+    name: "Office shelf",
+    icon: "/icons/items/officeshelf.png",
+    categories: [
       "blocky-stuff",
       "containers",
       "gatherings",
       "glass-stuff",
       "letters-and-words",
-      "metal-stuff"
-    ]
+      "metal-stuff",
+    ],
   },
   "oil-lantern": {
-    "slug": "oil-lantern",
-    "name": "Oil lantern",
-    "icon": "/icons/items/oillantern.png",
-    "categories": [
-      "containers",
-      "glass-stuff",
-      "lots-of-fire",
-      "metal-stuff"
-    ]
+    slug: "oil-lantern",
+    name: "Oil lantern",
+    icon: "/icons/items/oillantern.png",
+    categories: ["containers", "glass-stuff", "lots-of-fire", "metal-stuff"],
   },
   "open-book": {
-    "slug": "open-book",
-    "name": "Open Book",
-    "icon": "/icons/items/openbook.png",
-    "categories": [
+    slug: "open-book",
+    name: "Open Book",
+    icon: "/icons/items/openbook.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "letters-and-words",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "orange-meteor-lamp": {
-    "slug": "orange-meteor-lamp",
-    "name": "Orange meteor lamp",
-    "icon": "/icons/items/orangemeteorlamp.png",
-    "categories": [
-      "cute-stuff",
-      "electronics",
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "orange-meteor-lamp",
+    name: "Orange meteor lamp",
+    icon: "/icons/items/orangemeteorlamp.png",
+    categories: ["cute-stuff", "electronics", "glass-stuff", "shiny-stuff"],
   },
   "ordinary-sand": {
-    "slug": "ordinary-sand",
-    "name": "Ordinary sand",
-    "icon": "/icons/items/ordinarysand.png",
-    "categories": []
+    slug: "ordinary-sand",
+    name: "Ordinary sand",
+    icon: "/icons/items/ordinarysand.png",
+    categories: [],
   },
   "ordinary-soil": {
-    "slug": "ordinary-soil",
-    "name": "Ordinary soil",
-    "icon": "/icons/items/ordinarysoil.png",
-    "categories": []
+    slug: "ordinary-soil",
+    name: "Ordinary soil",
+    icon: "/icons/items/ordinarysoil.png",
+    categories: [],
   },
   "paint-balloon-aquamarine": {
-    "slug": "paint-balloon-aquamarine",
-    "name": "Paint balloon (aquamarine)",
-    "icon": "/icons/items/paintballoon(aquamarine).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-aquamarine",
+    name: "Paint balloon (aquamarine)",
+    icon: "/icons/items/paintballoon(aquamarine).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-beige": {
-    "slug": "paint-balloon-beige",
-    "name": "Paint balloon (beige)",
-    "icon": "/icons/items/paintballoon(beige).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-beige",
+    name: "Paint balloon (beige)",
+    icon: "/icons/items/paintballoon(beige).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-black": {
-    "slug": "paint-balloon-black",
-    "name": "Paint balloon (black)",
-    "icon": "/icons/items/paintballoon(black).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-black",
+    name: "Paint balloon (black)",
+    icon: "/icons/items/paintballoon(black).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-blue": {
-    "slug": "paint-balloon-blue",
-    "name": "Paint balloon (blue)",
-    "icon": "/icons/items/paintballoon(blue).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-blue",
+    name: "Paint balloon (blue)",
+    icon: "/icons/items/paintballoon(blue).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-brown": {
-    "slug": "paint-balloon-brown",
-    "name": "Paint balloon (brown)",
-    "icon": "/icons/items/paintballoon(brown).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-brown",
+    name: "Paint balloon (brown)",
+    icon: "/icons/items/paintballoon(brown).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-cyan": {
-    "slug": "paint-balloon-cyan",
-    "name": "Paint balloon (cyan)",
-    "icon": "/icons/items/paintballoon(cyan).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-cyan",
+    name: "Paint balloon (cyan)",
+    icon: "/icons/items/paintballoon(cyan).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-gray": {
-    "slug": "paint-balloon-gray",
-    "name": "Paint balloon (gray)",
-    "icon": "/icons/items/paintballoon(gray).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-gray",
+    name: "Paint balloon (gray)",
+    icon: "/icons/items/paintballoon(gray).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-green": {
-    "slug": "paint-balloon-green",
-    "name": "Paint balloon (green)",
-    "icon": "/icons/items/paintballoon(green).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-green",
+    name: "Paint balloon (green)",
+    icon: "/icons/items/paintballoon(green).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-lime": {
-    "slug": "paint-balloon-lime",
-    "name": "Paint balloon (lime)",
-    "icon": "/icons/items/paintballoon(lime).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-lime",
+    name: "Paint balloon (lime)",
+    icon: "/icons/items/paintballoon(lime).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-navy": {
-    "slug": "paint-balloon-navy",
-    "name": "Paint balloon (navy)",
-    "icon": "/icons/items/paintballoon(navy).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-navy",
+    name: "Paint balloon (navy)",
+    icon: "/icons/items/paintballoon(navy).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-orange": {
-    "slug": "paint-balloon-orange",
-    "name": "Paint balloon (orange)",
-    "icon": "/icons/items/paintballoon(orange).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-orange",
+    name: "Paint balloon (orange)",
+    icon: "/icons/items/paintballoon(orange).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-pink": {
-    "slug": "paint-balloon-pink",
-    "name": "Paint balloon (pink)",
-    "icon": "/icons/items/paintballoon(pink).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-pink",
+    name: "Paint balloon (pink)",
+    icon: "/icons/items/paintballoon(pink).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-plum": {
-    "slug": "paint-balloon-plum",
-    "name": "Paint balloon (plum)",
-    "icon": "/icons/items/paintballoon(plum).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-plum",
+    name: "Paint balloon (plum)",
+    icon: "/icons/items/paintballoon(plum).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-purple": {
-    "slug": "paint-balloon-purple",
-    "name": "Paint balloon (purple)",
-    "icon": "/icons/items/paintballoon(purple).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-purple",
+    name: "Paint balloon (purple)",
+    icon: "/icons/items/paintballoon(purple).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-red": {
-    "slug": "paint-balloon-red",
-    "name": "Paint balloon (red)",
-    "icon": "/icons/items/paintballoon(red).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-red",
+    name: "Paint balloon (red)",
+    icon: "/icons/items/paintballoon(red).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-rose": {
-    "slug": "paint-balloon-rose",
-    "name": "Paint balloon (rose)",
-    "icon": "/icons/items/paintballoon(rose).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-rose",
+    name: "Paint balloon (rose)",
+    icon: "/icons/items/paintballoon(rose).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-white": {
-    "slug": "paint-balloon-white",
-    "name": "Paint balloon (white)",
-    "icon": "/icons/items/paintballoon(white).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-white",
+    name: "Paint balloon (white)",
+    icon: "/icons/items/paintballoon(white).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "paint-balloon-yellow": {
-    "slug": "paint-balloon-yellow",
-    "name": "Paint balloon (yellow)",
-    "icon": "/icons/items/paintballoon(yellow).png",
-    "categories": [
-      "colorful-stuff",
-      "round-stuff"
-    ]
+    slug: "paint-balloon-yellow",
+    name: "Paint balloon (yellow)",
+    icon: "/icons/items/paintballoon(yellow).png",
+    categories: ["colorful-stuff", "round-stuff"],
   },
   "painted-wall": {
-    "slug": "painted-wall",
-    "name": "Painted wall",
-    "icon": "/icons/items/paintedwall.png",
-    "categories": []
+    slug: "painted-wall",
+    name: "Painted wall",
+    icon: "/icons/items/paintedwall.png",
+    categories: [],
   },
   "painting-landscape": {
-    "slug": "painting-landscape",
-    "name": "Painting (landscape)",
-    "icon": "/icons/items/painting(landscape).png",
-    "categories": [
-      "colorful-stuff",
-      "fabric",
-      "watching-stuff"
-    ]
+    slug: "painting-landscape",
+    name: "Painting (landscape)",
+    icon: "/icons/items/painting(landscape).png",
+    categories: ["colorful-stuff", "fabric", "watching-stuff"],
   },
   "painting-portrait": {
-    "slug": "painting-portrait",
-    "name": "Painting (portrait)",
-    "icon": "/icons/items/painting(portrait).png",
-    "categories": [
-      "colorful-stuff",
-      "fabric",
-      "watching-stuff"
-    ]
+    slug: "painting-portrait",
+    name: "Painting (portrait)",
+    icon: "/icons/items/painting(portrait).png",
+    categories: ["colorful-stuff", "fabric", "watching-stuff"],
   },
   "painting-still-life": {
-    "slug": "painting-still-life",
-    "name": "Painting (still life)",
-    "icon": "/icons/items/painting(stilllife).png",
-    "categories": [
-      "colorful-stuff",
-      "fabric",
-      "watching-stuff"
-    ]
+    slug: "painting-still-life",
+    name: "Painting (still life)",
+    icon: "/icons/items/painting(stilllife).png",
+    categories: ["colorful-stuff", "fabric", "watching-stuff"],
   },
   "pallet-town": {
-    "slug": "pallet-town",
-    "name": "Pallet Town",
-    "icon": "/icons/items/pallettown.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "pallet-town",
+    name: "Pallet Town",
+    icon: "/icons/items/pallettown.png",
+    categories: ["round-stuff"],
   },
   "paper-party-cups": {
-    "slug": "paper-party-cups",
-    "name": "Paper Party cups",
-    "icon": "/icons/items/paperpartycups.png",
-    "categories": [
-      "gatherings",
-      "group-activities",
-      "lots-of-water"
-    ]
+    slug: "paper-party-cups",
+    name: "Paper Party cups",
+    icon: "/icons/items/paperpartycups.png",
+    categories: ["gatherings", "group-activities", "lots-of-water"],
   },
-  "papers": {
-    "slug": "papers",
-    "name": "Papers",
-    "icon": "/icons/items/papers.png",
-    "categories": [
+  papers: {
+    slug: "papers",
+    name: "Papers",
+    icon: "/icons/items/papers.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "letters-and-words",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "party-bunting": {
-    "slug": "party-bunting",
-    "name": "Party bunting",
-    "icon": "/icons/items/partybunting.png",
-    "categories": [
-      "colorful-stuff",
-      "fabric"
-    ]
+    slug: "party-bunting",
+    name: "Party bunting",
+    icon: "/icons/items/partybunting.png",
+    categories: ["colorful-stuff", "fabric"],
   },
   "patterned-aged-stone-wall": {
-    "slug": "patterned-aged-stone-wall",
-    "name": "Patterned aged-stone wall",
-    "icon": "/icons/items/patternedaged-stonewall.png",
-    "categories": []
+    slug: "patterned-aged-stone-wall",
+    name: "Patterned aged-stone wall",
+    icon: "/icons/items/patternedaged-stonewall.png",
+    categories: [],
   },
   "pecha-berry": {
-    "slug": "pecha-berry",
-    "name": "Pecha Berry",
-    "icon": "/icons/items/pechaberry.png",
-    "categories": []
+    slug: "pecha-berry",
+    name: "Pecha Berry",
+    icon: "/icons/items/pechaberry.png",
+    categories: [],
   },
   "pecha-tree": {
-    "slug": "pecha-tree",
-    "name": "Pecha tree",
-    "icon": "/icons/items/pechatree.png",
-    "categories": []
+    slug: "pecha-tree",
+    name: "Pecha tree",
+    icon: "/icons/items/pechatree.png",
+    categories: [],
   },
   "pencil-holder": {
-    "slug": "pencil-holder",
-    "name": "Pencil holder",
-    "icon": "/icons/items/pencilholder.png",
-    "categories": [
+    slug: "pencil-holder",
+    name: "Pencil holder",
+    icon: "/icons/items/pencilholder.png",
+    categories: [
       "complicated-stuff",
       "containers",
       "gatherings",
-      "stone-stuff"
-    ]
+      "stone-stuff",
+    ],
   },
   "pewter-city-theme": {
-    "slug": "pewter-city-theme",
-    "name": "Pewter City Theme",
-    "icon": "/icons/items/pewtercitytheme.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "pewter-city-theme",
+    name: "Pewter City Theme",
+    icon: "/icons/items/pewtercitytheme.png",
+    categories: ["round-stuff"],
   },
   "photo-cutout-board": {
-    "slug": "photo-cutout-board",
-    "name": "Photo cutout board",
-    "icon": "/icons/items/photocutoutboard.png",
-    "categories": [
+    slug: "photo-cutout-board",
+    name: "Photo cutout board",
+    icon: "/icons/items/photocutoutboard.png",
+    categories: [
       "colorful-stuff",
       "cute-stuff",
       "gatherings",
       "group-activities",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "photo-frame": {
-    "slug": "photo-frame",
-    "name": "Photo frame",
-    "icon": "/icons/items/photoframe.png",
-    "categories": [
+    slug: "photo-frame",
+    name: "Photo frame",
+    icon: "/icons/items/photoframe.png",
+    categories: [
       "blocky-stuff",
       "containers",
       "group-activities",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "picnic-basket": {
-    "slug": "picnic-basket",
-    "name": "Picnic basket",
-    "icon": "/icons/items/picnicbasket.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "fabric",
-      "group-activities"
-    ]
+    slug: "picnic-basket",
+    name: "Picnic basket",
+    icon: "/icons/items/picnicbasket.png",
+    categories: ["blocky-stuff", "containers", "fabric", "group-activities"],
   },
   "pikachu-doll": {
-    "slug": "pikachu-doll",
-    "name": "Pikachu doll",
-    "icon": "/icons/items/pikachudoll.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "pikachu-doll",
+    name: "Pikachu doll",
+    icon: "/icons/items/pikachudoll.png",
+    categories: ["cute-stuff", "fabric", "soft-stuff"],
   },
   "pikachu-sofa": {
-    "slug": "pikachu-sofa",
-    "name": "Pikachu sofa",
-    "icon": "/icons/items/pikachusofa.png",
-    "categories": [
+    slug: "pikachu-sofa",
+    name: "Pikachu sofa",
+    icon: "/icons/items/pikachusofa.png",
+    categories: [
       "colorful-stuff",
       "cute-stuff",
       "fabric",
       "group-activities",
-      "soft-stuff"
-    ]
+      "soft-stuff",
+    ],
   },
   "pink-paint": {
-    "slug": "pink-paint",
-    "name": "Pink paint",
-    "icon": "/icons/items/pinkpaint.png",
-    "categories": [
-      "colorful-stuff",
-      "lots-of-dirt"
-    ]
+    slug: "pink-paint",
+    name: "Pink paint",
+    icon: "/icons/items/pinkpaint.png",
+    categories: ["colorful-stuff", "lots-of-dirt"],
   },
   "pink-tall-grass": {
-    "slug": "pink-tall-grass",
-    "name": "Pink Tall grass",
-    "icon": "/icons/items/pinktallgrass.png",
-    "categories": []
+    slug: "pink-tall-grass",
+    name: "Pink Tall grass",
+    icon: "/icons/items/pinktallgrass.png",
+    categories: [],
   },
-  "pinwheels": {
-    "slug": "pinwheels",
-    "name": "Pinwheels",
-    "icon": "/icons/items/pinwheels.png",
-    "categories": [
+  pinwheels: {
+    slug: "pinwheels",
+    name: "Pinwheels",
+    icon: "/icons/items/pinwheels.png",
+    categories: [
       "colorful-stuff",
       "gatherings",
       "nice-breezes",
       "play-spaces",
       "spinning-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "pitcher-plant-pot": {
-    "slug": "pitcher-plant-pot",
-    "name": "Pitcher-plant pot",
-    "icon": "/icons/items/pitcher-plantpot.png",
-    "categories": [
+    slug: "pitcher-plant-pot",
+    name: "Pitcher-plant pot",
+    icon: "/icons/items/pitcher-plantpot.png",
+    categories: [
       "containers",
       "spooky-stuff",
       "stone-stuff",
       "watching-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
-  "pizza": {
-    "slug": "pizza",
-    "name": "Pizza",
-    "icon": "/icons/items/pizza.png",
-    "categories": [
-      "colorful-stuff",
-      "looks-like-food",
-      "round-stuff"
-    ]
+  pizza: {
+    slug: "pizza",
+    name: "Pizza",
+    icon: "/icons/items/pizza.png",
+    categories: ["colorful-stuff", "looks-like-food", "round-stuff"],
   },
   "plain-bed": {
-    "slug": "plain-bed",
-    "name": "Plain bed",
-    "icon": "/icons/items/plainbed.png",
-    "categories": [
-      "fabric",
-      "group-activities",
-      "soft-stuff"
-    ]
+    slug: "plain-bed",
+    name: "Plain bed",
+    icon: "/icons/items/plainbed.png",
+    categories: ["fabric", "group-activities", "soft-stuff"],
   },
   "plain-chair": {
-    "slug": "plain-chair",
-    "name": "Plain chair",
-    "icon": "/icons/items/plainchair.png",
-    "categories": [
-      "fabric",
-      "soft-stuff",
-      "wooden-stuff"
-    ]
+    slug: "plain-chair",
+    name: "Plain chair",
+    icon: "/icons/items/plainchair.png",
+    categories: ["fabric", "soft-stuff", "wooden-stuff"],
   },
   "plain-chest": {
-    "slug": "plain-chest",
-    "name": "Plain chest",
-    "icon": "/icons/items/plainchest.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "fabric",
-      "wooden-stuff"
-    ]
+    slug: "plain-chest",
+    name: "Plain chest",
+    icon: "/icons/items/plainchest.png",
+    categories: ["blocky-stuff", "containers", "fabric", "wooden-stuff"],
   },
   "plain-closet": {
-    "slug": "plain-closet",
-    "name": "Plain closet",
-    "icon": "/icons/items/plaincloset.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "fabric",
-      "wooden-stuff"
-    ]
+    slug: "plain-closet",
+    name: "Plain closet",
+    icon: "/icons/items/plaincloset.png",
+    categories: ["blocky-stuff", "containers", "fabric", "wooden-stuff"],
   },
   "plain-lamp": {
-    "slug": "plain-lamp",
-    "name": "Plain lamp",
-    "icon": "/icons/items/plainlamp.png",
-    "categories": [
-      "electronics",
-      "fabric",
-      "glass-stuff"
-    ]
+    slug: "plain-lamp",
+    name: "Plain lamp",
+    icon: "/icons/items/plainlamp.png",
+    categories: ["electronics", "fabric", "glass-stuff"],
   },
   "plain-sofa": {
-    "slug": "plain-sofa",
-    "name": "Plain sofa",
-    "icon": "/icons/items/plainsofa.png",
-    "categories": [
-      "fabric",
-      "group-activities",
-      "soft-stuff"
-    ]
+    slug: "plain-sofa",
+    name: "Plain sofa",
+    icon: "/icons/items/plainsofa.png",
+    categories: ["fabric", "group-activities", "soft-stuff"],
   },
   "plain-stand": {
-    "slug": "plain-stand",
-    "name": "Plain stand",
-    "icon": "/icons/items/plainstand.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "fabric",
-      "wooden-stuff"
-    ]
+    slug: "plain-stand",
+    name: "Plain stand",
+    icon: "/icons/items/plainstand.png",
+    categories: ["blocky-stuff", "containers", "fabric", "wooden-stuff"],
   },
   "plain-stool": {
-    "slug": "plain-stool",
-    "name": "Plain stool",
-    "icon": "/icons/items/plainstool.png",
-    "categories": [
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "plain-stool",
+    name: "Plain stool",
+    icon: "/icons/items/plainstool.png",
+    categories: ["fabric", "soft-stuff"],
   },
   "plain-table": {
-    "slug": "plain-table",
-    "name": "Plain table",
-    "icon": "/icons/items/plaintable.png",
-    "categories": [
-      "wooden-stuff"
-    ]
+    slug: "plain-table",
+    name: "Plain table",
+    icon: "/icons/items/plaintable.png",
+    categories: ["wooden-stuff"],
   },
   "plaster-wall": {
-    "slug": "plaster-wall",
-    "name": "Plaster wall",
-    "icon": "/icons/items/plasterwall.png",
-    "categories": []
+    slug: "plaster-wall",
+    name: "Plaster wall",
+    icon: "/icons/items/plasterwall.png",
+    categories: [],
   },
   "pointy-tree": {
-    "slug": "pointy-tree",
-    "name": "Pointy tree",
-    "icon": "/icons/items/pointytree.png",
-    "categories": []
+    slug: "pointy-tree",
+    name: "Pointy tree",
+    icon: "/icons/items/pointytree.png",
+    categories: [],
   },
   "pok-eacute-ball-bed": {
-    "slug": "pok-eacute-ball-bed",
-    "name": "Poke Ball bed",
-    "icon": "/icons/items/pokeballbed.png",
-    "categories": [
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "pok-eacute-ball-bed",
+    name: "Poke Ball bed",
+    icon: "/icons/items/pokeballbed.png",
+    categories: ["fabric", "soft-stuff"],
   },
   "pok-eacute-ball-chest": {
-    "slug": "pok-eacute-ball-chest",
-    "name": "Poke Ball Chest",
-    "icon": "/icons/items/pokeballchest.png",
-    "categories": [
+    slug: "pok-eacute-ball-chest",
+    name: "Poke Ball Chest",
+    icon: "/icons/items/pokeballchest.png",
+    categories: [
       "containers",
       "cute-stuff",
       "metal-stuff",
       "round-stuff",
-      "shiny-stuff"
-    ]
+      "shiny-stuff",
+    ],
   },
   "pok-eacute-ball-lamp": {
-    "slug": "pok-eacute-ball-lamp",
-    "name": "Poke Ball lamp",
-    "icon": "/icons/items/pokeballlamp.png",
-    "categories": [
+    slug: "pok-eacute-ball-lamp",
+    name: "Poke Ball lamp",
+    icon: "/icons/items/pokeballlamp.png",
+    categories: [
       "electronics",
       "glass-stuff",
       "luxury",
       "round-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "pok-eacute-ball-light": {
-    "slug": "pok-eacute-ball-light",
-    "name": "Poke Ball light",
-    "icon": "/icons/items/pokeballlight.png",
-    "categories": [
+    slug: "pok-eacute-ball-light",
+    name: "Poke Ball light",
+    icon: "/icons/items/pokeballlight.png",
+    categories: [
       "colorful-stuff",
       "electronics",
       "glass-stuff",
       "luxury",
-      "metal-stuff"
-    ]
+      "metal-stuff",
+    ],
   },
   "pok-eacute-ball-sofa": {
-    "slug": "pok-eacute-ball-sofa",
-    "name": "Poke Ball Sofa",
-    "icon": "/icons/items/pokeballsofa.png",
-    "categories": [
-      "group-activities",
-      "metal-stuff"
-    ]
+    slug: "pok-eacute-ball-sofa",
+    name: "Poke Ball Sofa",
+    icon: "/icons/items/pokeballsofa.png",
+    categories: ["group-activities", "metal-stuff"],
   },
   "pok-eacute-metal": {
-    "slug": "pok-eacute-metal",
-    "name": "Pokemetal",
-    "icon": "/icons/items/pokemetal.png",
-    "categories": [
-      "colorful-stuff",
-      "metal-stuff"
-    ]
+    slug: "pok-eacute-metal",
+    name: "Pokemetal",
+    icon: "/icons/items/pokemetal.png",
+    categories: ["colorful-stuff", "metal-stuff"],
   },
   "pokemetal-deposit": {
-    "slug": "pokemetal-deposit",
-    "name": "Pokemetal deposit",
-    "icon": "/icons/items/pokemetaldeposit.png",
-    "categories": []
+    slug: "pokemetal-deposit",
+    name: "Pokemetal deposit",
+    icon: "/icons/items/pokemetaldeposit.png",
+    categories: [],
   },
   "pok-eacute-metal-fragment": {
-    "slug": "pok-eacute-metal-fragment",
-    "name": "Pokemetal fragment",
-    "icon": "/icons/items/pokemetalfragment.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "pok-eacute-metal-fragment",
+    name: "Pokemetal fragment",
+    icon: "/icons/items/pokemetalfragment.png",
+    categories: ["metal-stuff"],
   },
   "pok-eacute-mon-center": {
-    "slug": "pok-eacute-mon-center",
-    "name": "Pokemon Center",
-    "icon": "/icons/items/pokemoncenter.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "pok-eacute-mon-center",
+    name: "Pokemon Center",
+    icon: "/icons/items/pokemoncenter.png",
+    categories: ["round-stuff"],
   },
   "pok-eacute-mon-gym": {
-    "slug": "pok-eacute-mon-gym",
-    "name": "Pokemon Gym",
-    "icon": "/icons/items/pokemongym.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "pok-eacute-mon-gym",
+    name: "Pokemon Gym",
+    icon: "/icons/items/pokemongym.png",
+    categories: ["round-stuff"],
   },
   "polygonal-shelf": {
-    "slug": "polygonal-shelf",
-    "name": "Polygonal Shelf",
-    "icon": "/icons/items/polygonalshelf.png",
-    "categories": [
-      "containers",
-      "cute-stuff",
-      "strange-stuff"
-    ]
+    slug: "polygonal-shelf",
+    name: "Polygonal Shelf",
+    icon: "/icons/items/polygonalshelf.png",
+    categories: ["containers", "cute-stuff", "strange-stuff"],
   },
   "pop-art-bed": {
-    "slug": "pop-art-bed",
-    "name": "Pop art bed",
-    "icon": "/icons/items/popartbed.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "group-activities",
-      "soft-stuff"
-    ]
+    slug: "pop-art-bed",
+    name: "Pop art bed",
+    icon: "/icons/items/popartbed.png",
+    categories: ["cute-stuff", "fabric", "group-activities", "soft-stuff"],
   },
   "pop-art-chair": {
-    "slug": "pop-art-chair",
-    "name": "Pop art chair",
-    "icon": "/icons/items/popartchair.png",
-    "categories": [
-      "colorful-stuff",
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "pop-art-chair",
+    name: "Pop art chair",
+    icon: "/icons/items/popartchair.png",
+    categories: ["colorful-stuff", "cute-stuff", "fabric", "soft-stuff"],
   },
   "pop-art-lamp": {
-    "slug": "pop-art-lamp",
-    "name": "Pop art lamp",
-    "icon": "/icons/items/popartlamp.png",
-    "categories": [
-      "electronics",
-      "glass-stuff"
-    ]
+    slug: "pop-art-lamp",
+    name: "Pop art lamp",
+    icon: "/icons/items/popartlamp.png",
+    categories: ["electronics", "glass-stuff"],
   },
   "pop-art-sofa": {
-    "slug": "pop-art-sofa",
-    "name": "Pop art sofa",
-    "icon": "/icons/items/popartsofa.png",
-    "categories": [
+    slug: "pop-art-sofa",
+    name: "Pop art sofa",
+    icon: "/icons/items/popartsofa.png",
+    categories: [
       "colorful-stuff",
       "cute-stuff",
       "fabric",
       "group-activities",
-      "soft-stuff"
-    ]
+      "soft-stuff",
+    ],
   },
   "pop-art-table": {
-    "slug": "pop-art-table",
-    "name": "Pop art table",
-    "icon": "/icons/items/poparttable.png",
-    "categories": [
-      "cute-stuff"
-    ]
+    slug: "pop-art-table",
+    name: "Pop art table",
+    icon: "/icons/items/poparttable.png",
+    categories: ["cute-stuff"],
   },
   "pop-art-wall-lower": {
-    "slug": "pop-art-wall-lower",
-    "name": "Pop art wall (lower)",
-    "icon": "/icons/items/popartwall(lower).png",
-    "categories": []
+    slug: "pop-art-wall-lower",
+    name: "Pop art wall (lower)",
+    icon: "/icons/items/popartwall(lower).png",
+    categories: [],
   },
   "pop-art-wall-middle": {
-    "slug": "pop-art-wall-middle",
-    "name": "Pop art wall (middle)",
-    "icon": "/icons/items/popartwall(middle).png",
-    "categories": []
+    slug: "pop-art-wall-middle",
+    name: "Pop art wall (middle)",
+    icon: "/icons/items/popartwall(middle).png",
+    categories: [],
   },
   "pop-art-wall-upper": {
-    "slug": "pop-art-wall-upper",
-    "name": "Pop art wall (upper)",
-    "icon": "/icons/items/popartwall(upper).png",
-    "categories": []
+    slug: "pop-art-wall-upper",
+    name: "Pop art wall (upper)",
+    icon: "/icons/items/popartwall(upper).png",
+    categories: [],
   },
-  "printer": {
-    "slug": "printer",
-    "name": "Printer",
-    "icon": "/icons/items/printer.png",
-    "categories": [
+  printer: {
+    slug: "printer",
+    name: "Printer",
+    icon: "/icons/items/printer.png",
+    categories: [
       "complicated-stuff",
       "electronics",
       "glass-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "protruding-wall": {
-    "slug": "protruding-wall",
-    "name": "Protruding wall",
-    "icon": "/icons/items/protrudingwall.png",
-    "categories": []
+    slug: "protruding-wall",
+    name: "Protruding wall",
+    icon: "/icons/items/protrudingwall.png",
+    categories: [],
   },
   "public-seat": {
-    "slug": "public-seat",
-    "name": "Public seat",
-    "icon": "/icons/items/publicseat.png",
-    "categories": [
-      "blocky-stuff",
-      "metal-stuff"
-    ]
+    slug: "public-seat",
+    name: "Public seat",
+    icon: "/icons/items/publicseat.png",
+    categories: ["blocky-stuff", "metal-stuff"],
   },
   "punching-bag": {
-    "slug": "punching-bag",
-    "name": "Punching bag",
-    "icon": "/icons/items/punchingbag.png",
-    "categories": [
-      "exercise",
-      "fabric",
-      "lots-of-dirt",
-      "wobbly-stuff"
-    ]
+    slug: "punching-bag",
+    name: "Punching bag",
+    icon: "/icons/items/punchingbag.png",
+    categories: ["exercise", "fabric", "lots-of-dirt", "wobbly-stuff"],
   },
   "punching-game": {
-    "slug": "punching-game",
-    "name": "Punching game",
-    "icon": "/icons/items/punchinggame.png",
-    "categories": [
-      "colorful-stuff",
-      "exercise",
-      "play-spaces",
-      "wobbly-stuff"
-    ]
+    slug: "punching-game",
+    name: "Punching game",
+    icon: "/icons/items/punchinggame.png",
+    categories: ["colorful-stuff", "exercise", "play-spaces", "wobbly-stuff"],
   },
   "pure-white-soil": {
-    "slug": "pure-white-soil",
-    "name": "Pure-white soil",
-    "icon": "/icons/items/pure-whitesoil.png",
-    "categories": []
+    slug: "pure-white-soil",
+    name: "Pure-white soil",
+    icon: "/icons/items/pure-whitesoil.png",
+    categories: [],
   },
   "raichu-sign": {
-    "slug": "raichu-sign",
-    "name": "Raichu sign",
-    "icon": "/icons/items/raichusign.png",
-    "categories": [
-      "colorful-stuff",
-      "glass-stuff",
-      "letters-and-words"
-    ]
+    slug: "raichu-sign",
+    name: "Raichu sign",
+    icon: "/icons/items/raichusign.png",
+    categories: ["colorful-stuff", "glass-stuff", "letters-and-words"],
   },
   "rainbow-feather": {
-    "slug": "rainbow-feather",
-    "name": "Rainbow Feather",
-    "icon": "/icons/items/rainbowfeather.png",
-    "categories": [
-      "shiny-stuff"
-    ]
+    slug: "rainbow-feather",
+    name: "Rainbow Feather",
+    icon: "/icons/items/rainbowfeather.png",
+    categories: ["shiny-stuff"],
   },
   "rare-pok-eacute-metal-fragment": {
-    "slug": "rare-pok-eacute-metal-fragment",
-    "name": "Rare Pokemetal fragment",
-    "icon": "/icons/items/rarepokemetalfragment.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "rare-pok-eacute-metal-fragment",
+    name: "Rare Pokemetal fragment",
+    icon: "/icons/items/rarepokemetalfragment.png",
+    categories: ["metal-stuff"],
   },
   "rawst-berry": {
-    "slug": "rawst-berry",
-    "name": "Rawst Berry",
-    "icon": "/icons/items/rawstberry.png",
-    "categories": []
+    slug: "rawst-berry",
+    name: "Rawst Berry",
+    icon: "/icons/items/rawstberry.png",
+    categories: [],
   },
   "rawst-tree": {
-    "slug": "rawst-tree",
-    "name": "Rawst tree",
-    "icon": "/icons/items/rawsttree.png",
-    "categories": []
+    slug: "rawst-tree",
+    name: "Rawst tree",
+    icon: "/icons/items/rawsttree.png",
+    categories: [],
   },
   "recycling-bin": {
-    "slug": "recycling-bin",
-    "name": "Recycling bin",
-    "icon": "/icons/items/recyclingbin.png",
-    "categories": [
-      "containers",
-      "garbage",
-      "metal-stuff"
-    ]
+    slug: "recycling-bin",
+    name: "Recycling bin",
+    icon: "/icons/items/recyclingbin.png",
+    categories: ["containers", "garbage", "metal-stuff"],
   },
   "red-cliff-rock": {
-    "slug": "red-cliff-rock",
-    "name": "Red cliff rock",
-    "icon": "/icons/items/redcliffrock.png",
-    "categories": []
+    slug: "red-cliff-rock",
+    name: "Red cliff rock",
+    icon: "/icons/items/redcliffrock.png",
+    categories: [],
   },
   "red-crystal-fragment": {
-    "slug": "red-crystal-fragment",
-    "name": "Red crystal fragment",
-    "icon": "/icons/items/redcrystalfragment.png",
-    "categories": [
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "red-crystal-fragment",
+    name: "Red crystal fragment",
+    icon: "/icons/items/redcrystalfragment.png",
+    categories: ["glass-stuff", "shiny-stuff"],
   },
   "red-meteor-lamp": {
-    "slug": "red-meteor-lamp",
-    "name": "Red meteor lamp",
-    "icon": "/icons/items/redmeteorlamp.png",
-    "categories": [
-      "cute-stuff",
-      "electronics",
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "red-meteor-lamp",
+    name: "Red meteor lamp",
+    icon: "/icons/items/redmeteorlamp.png",
+    categories: ["cute-stuff", "electronics", "glass-stuff", "shiny-stuff"],
   },
   "red-paint": {
-    "slug": "red-paint",
-    "name": "Red paint",
-    "icon": "/icons/items/redpaint.png",
-    "categories": [
-      "colorful-stuff",
-      "lots-of-dirt"
-    ]
+    slug: "red-paint",
+    name: "Red paint",
+    icon: "/icons/items/redpaint.png",
+    categories: ["colorful-stuff", "lots-of-dirt"],
   },
   "red-spotted-cliff-rock": {
-    "slug": "red-spotted-cliff-rock",
-    "name": "Red spotted cliff rock",
-    "icon": "/icons/items/redspottedcliffrock.png",
-    "categories": []
+    slug: "red-spotted-cliff-rock",
+    name: "Red spotted cliff rock",
+    icon: "/icons/items/redspottedcliffrock.png",
+    categories: [],
   },
   "red-tall-grass": {
-    "slug": "red-tall-grass",
-    "name": "Red Tall grass",
-    "icon": "/icons/items/redtallgrass.png",
-    "categories": []
+    slug: "red-tall-grass",
+    name: "Red Tall grass",
+    icon: "/icons/items/redtallgrass.png",
+    categories: [],
   },
   "reddish-brown-cave-rock": {
-    "slug": "reddish-brown-cave-rock",
-    "name": "Reddish-brown cave rock",
-    "icon": "/icons/items/reddish-browncaverock.png",
-    "categories": []
+    slug: "reddish-brown-cave-rock",
+    name: "Reddish-brown cave rock",
+    icon: "/icons/items/reddish-browncaverock.png",
+    categories: [],
   },
-  "refrigerator": {
-    "slug": "refrigerator",
-    "name": "Refrigerator",
-    "icon": "/icons/items/refrigerator.png",
-    "categories": [
+  refrigerator: {
+    slug: "refrigerator",
+    name: "Refrigerator",
+    icon: "/icons/items/refrigerator.png",
+    categories: [
       "blocky-stuff",
       "containers",
       "electronics",
       "metal-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
-  "repel": {
-    "slug": "repel",
-    "name": "Repel",
-    "icon": "/icons/items/repel.png",
-    "categories": [
-      "strange-stuff"
-    ]
+  repel: {
+    slug: "repel",
+    name: "Repel",
+    icon: "/icons/items/repel.png",
+    categories: ["strange-stuff"],
   },
   "resort-bed": {
-    "slug": "resort-bed",
-    "name": "Resort bed",
-    "icon": "/icons/items/resortbed.png",
-    "categories": [
-      "fabric",
-      "ocean-vibes",
-      "soft-stuff"
-    ]
+    slug: "resort-bed",
+    name: "Resort bed",
+    icon: "/icons/items/resortbed.png",
+    categories: ["fabric", "ocean-vibes", "soft-stuff"],
   },
   "resort-chair": {
-    "slug": "resort-chair",
-    "name": "Resort chair",
-    "icon": "/icons/items/resortchair.png",
-    "categories": [
-      "fabric",
-      "ocean-vibes",
-      "soft-stuff"
-    ]
+    slug: "resort-chair",
+    name: "Resort chair",
+    icon: "/icons/items/resortchair.png",
+    categories: ["fabric", "ocean-vibes", "soft-stuff"],
   },
   "resort-hammock": {
-    "slug": "resort-hammock",
-    "name": "Resort hammock",
-    "icon": "/icons/items/resorthammock.png",
-    "categories": [
+    slug: "resort-hammock",
+    name: "Resort hammock",
+    icon: "/icons/items/resorthammock.png",
+    categories: [
       "fabric",
       "lots-of-water",
       "ocean-vibes",
       "soft-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
   "resort-light": {
-    "slug": "resort-light",
-    "name": "Resort light",
-    "icon": "/icons/items/resortlight.png",
-    "categories": [
-      "electronics",
-      "metal-stuff",
-      "ocean-vibes",
-      "wobbly-stuff"
-    ]
+    slug: "resort-light",
+    name: "Resort light",
+    icon: "/icons/items/resortlight.png",
+    categories: ["electronics", "metal-stuff", "ocean-vibes", "wobbly-stuff"],
   },
   "resort-sofa": {
-    "slug": "resort-sofa",
-    "name": "Resort sofa",
-    "icon": "/icons/items/resortsofa.png",
-    "categories": [
-      "fabric",
-      "group-activities",
-      "ocean-vibes",
-      "soft-stuff"
-    ]
+    slug: "resort-sofa",
+    name: "Resort sofa",
+    icon: "/icons/items/resortsofa.png",
+    categories: ["fabric", "group-activities", "ocean-vibes", "soft-stuff"],
   },
   "resort-stool": {
-    "slug": "resort-stool",
-    "name": "Resort stool",
-    "icon": "/icons/items/resortstool.png",
-    "categories": [
-      "fabric",
-      "ocean-vibes",
-      "soft-stuff"
-    ]
+    slug: "resort-stool",
+    name: "Resort stool",
+    icon: "/icons/items/resortstool.png",
+    categories: ["fabric", "ocean-vibes", "soft-stuff"],
   },
   "ribbon-cake": {
-    "slug": "ribbon-cake",
-    "name": "Ribbon cake",
-    "icon": "/icons/items/ribboncake.png",
-    "categories": [
+    slug: "ribbon-cake",
+    name: "Ribbon cake",
+    icon: "/icons/items/ribboncake.png",
+    categories: [
       "colorful-stuff",
       "cute-stuff",
       "looks-like-food",
-      "round-stuff"
-    ]
+      "round-stuff",
+    ],
   },
   "ring-target": {
-    "slug": "ring-target",
-    "name": "Ring Target",
-    "icon": "/icons/items/ringtarget.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "ring-target",
+    name: "Ring Target",
+    icon: "/icons/items/ringtarget.png",
+    categories: ["round-stuff"],
   },
   "ripe-bean-plant": {
-    "slug": "ripe-bean-plant",
-    "name": "Ripe bean plant",
-    "icon": "/icons/items/ripebeanplant.png",
-    "categories": []
+    slug: "ripe-bean-plant",
+    name: "Ripe bean plant",
+    icon: "/icons/items/ripebeanplant.png",
+    categories: [],
   },
   "ripe-wheat": {
-    "slug": "ripe-wheat",
-    "name": "Ripe wheat",
-    "icon": "/icons/items/ripewheat.png",
-    "categories": []
+    slug: "ripe-wheat",
+    name: "Ripe wheat",
+    icon: "/icons/items/ripewheat.png",
+    categories: [],
   },
   "road-to-bill": {
-    "slug": "road-to-bill",
-    "name": "Road to Bill",
-    "icon": "/icons/items/roadtobill.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "road-to-bill",
+    name: "Road to Bill",
+    icon: "/icons/items/roadtobill.png",
+    categories: ["round-stuff"],
   },
   "road-to-cerulean-city": {
-    "slug": "road-to-cerulean-city",
-    "name": "Road to Cerulean City",
-    "icon": "/icons/items/roadtoceruleancity.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "road-to-cerulean-city",
+    name: "Road to Cerulean City",
+    icon: "/icons/items/roadtoceruleancity.png",
+    categories: ["round-stuff"],
   },
   "road-to-viridian-city": {
-    "slug": "road-to-viridian-city",
-    "name": "Road to Viridian City",
-    "icon": "/icons/items/roadtoviridiancity.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "road-to-viridian-city",
+    name: "Road to Viridian City",
+    icon: "/icons/items/roadtoviridiancity.png",
+    categories: ["round-stuff"],
   },
   "robust-flower": {
-    "slug": "robust-flower",
-    "name": "Robust flower",
-    "icon": "/icons/items/robustflower.png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "robust-flower",
+    name: "Robust flower",
+    icon: "/icons/items/robustflower.png",
+    categories: ["pretty-flowers"],
   },
   "robust-flower-blue": {
-    "slug": "robust-flower-blue",
-    "name": "Robust flower (blue)",
-    "icon": "/icons/items/robustflower(blue).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "robust-flower-blue",
+    name: "Robust flower (blue)",
+    icon: "/icons/items/robustflower(blue).png",
+    categories: ["pretty-flowers"],
   },
   "robust-flower-orange": {
-    "slug": "robust-flower-orange",
-    "name": "Robust flower (orange)",
-    "icon": "/icons/items/robustflower(orange).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "robust-flower-orange",
+    name: "Robust flower (orange)",
+    icon: "/icons/items/robustflower(orange).png",
+    categories: ["pretty-flowers"],
   },
   "robust-flower-purple": {
-    "slug": "robust-flower-purple",
-    "name": "Robust flower (purple)",
-    "icon": "/icons/items/robustflower(purple).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "robust-flower-purple",
+    name: "Robust flower (purple)",
+    icon: "/icons/items/robustflower(purple).png",
+    categories: ["pretty-flowers"],
   },
   "robust-flower-white": {
-    "slug": "robust-flower-white",
-    "name": "Robust flower (white)",
-    "icon": "/icons/items/robustflower(white).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "robust-flower-white",
+    name: "Robust flower (white)",
+    icon: "/icons/items/robustflower(white).png",
+    categories: ["pretty-flowers"],
   },
   "rocket-hideout": {
-    "slug": "rocket-hideout",
-    "name": "Rocket Hideout",
-    "icon": "/icons/items/rockethideout.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "rocket-hideout",
+    name: "Rocket Hideout",
+    icon: "/icons/items/rockethideout.png",
+    categories: ["round-stuff"],
   },
   "room-service": {
-    "slug": "room-service",
-    "name": "Room Service",
-    "icon": "/icons/items/roomservice.png",
-    "categories": [
-      "fabric"
-    ]
+    slug: "room-service",
+    name: "Room Service",
+    icon: "/icons/items/roomservice.png",
+    categories: ["fabric"],
   },
-  "rope": {
-    "slug": "rope",
-    "name": "Rope",
-    "icon": "/icons/items/rope.png",
-    "categories": [
-      "slender-objects"
-    ]
+  rope: {
+    slug: "rope",
+    name: "Rope",
+    icon: "/icons/items/rope.png",
+    categories: ["slender-objects"],
   },
   "rose-tower": {
-    "slug": "rose-tower",
-    "name": "Rose Tower",
-    "icon": "/icons/items/rosetower.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "rose-tower",
+    name: "Rose Tower",
+    icon: "/icons/items/rosetower.png",
+    categories: ["round-stuff"],
   },
   "rough-wall": {
-    "slug": "rough-wall",
-    "name": "Rough wall",
-    "icon": "/icons/items/roughwall.png",
-    "categories": []
+    slug: "rough-wall",
+    name: "Rough wall",
+    icon: "/icons/items/roughwall.png",
+    categories: [],
   },
   "route-10-unova": {
-    "slug": "route-10-unova",
-    "name": "Route 10 (Unova)",
-    "icon": "/icons/items/route10(unova).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "route-10-unova",
+    name: "Route 10 (Unova)",
+    icon: "/icons/items/route10(unova).png",
+    categories: ["round-stuff"],
   },
   "route-209-day": {
-    "slug": "route-209-day",
-    "name": "Route 209 (Day)",
-    "icon": "/icons/items/route209(day).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "route-209-day",
+    name: "Route 209 (Day)",
+    icon: "/icons/items/route209(day).png",
+    categories: ["round-stuff"],
   },
   "rowlet-clock": {
-    "slug": "rowlet-clock",
-    "name": "Rowlet clock",
-    "icon": "/icons/items/rowletclock.png",
-    "categories": [
+    slug: "rowlet-clock",
+    name: "Rowlet clock",
+    icon: "/icons/items/rowletclock.png",
+    categories: [
       "complicated-stuff",
       "cute-stuff",
       "strange-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "rusted-iron-plate-flooring": {
-    "slug": "rusted-iron-plate-flooring",
-    "name": "Rusted iron-plate flooring",
-    "icon": "/icons/items/rustediron-plateflooring.png",
-    "categories": []
+    slug: "rusted-iron-plate-flooring",
+    name: "Rusted iron-plate flooring",
+    icon: "/icons/items/rustediron-plateflooring.png",
+    categories: [],
   },
   "rusted-wall": {
-    "slug": "rusted-wall",
-    "name": "Rusted wall",
-    "icon": "/icons/items/rustedwall.png",
-    "categories": []
+    slug: "rusted-wall",
+    name: "Rusted wall",
+    icon: "/icons/items/rustedwall.png",
+    categories: [],
   },
   "sail-fossil": {
-    "slug": "sail-fossil",
-    "name": "Sail Fossil",
-    "icon": "/icons/items/sailfossil.png",
-    "categories": [
-      "hard-stuff",
-      "lots-of-dirt",
-      "strange-stuff"
-    ]
+    slug: "sail-fossil",
+    name: "Sail Fossil",
+    icon: "/icons/items/sailfossil.png",
+    categories: ["hard-stuff", "lots-of-dirt", "strange-stuff"],
   },
-  "sandbags": {
-    "slug": "sandbags",
-    "name": "Sandbags",
-    "icon": "/icons/items/sandbags.png",
-    "categories": [
-      "construction",
-      "fabric",
-      "gatherings",
-      "lots-of-dirt"
-    ]
+  sandbags: {
+    slug: "sandbags",
+    name: "Sandbags",
+    icon: "/icons/items/sandbags.png",
+    categories: ["construction", "fabric", "gatherings", "lots-of-dirt"],
   },
-  "sandbox": {
-    "slug": "sandbox",
-    "name": "Sandbox",
-    "icon": "/icons/items/sandbox.png",
-    "categories": [
+  sandbox: {
+    slug: "sandbox",
+    name: "Sandbox",
+    icon: "/icons/items/sandbox.png",
+    categories: [
       "blocky-stuff",
       "group-activities",
       "lots-of-dirt",
-      "play-spaces"
-    ]
+      "play-spaces",
+    ],
   },
-  "sandstone": {
-    "slug": "sandstone",
-    "name": "Sandstone",
-    "icon": "/icons/items/sandstone.png",
-    "categories": []
+  sandstone: {
+    slug: "sandstone",
+    name: "Sandstone",
+    icon: "/icons/items/sandstone.png",
+    categories: [],
   },
-  "sandwiches": {
-    "slug": "sandwiches",
-    "name": "Sandwiches",
-    "icon": "/icons/items/sandwiches.png",
-    "categories": [
+  sandwiches: {
+    slug: "sandwiches",
+    name: "Sandwiches",
+    icon: "/icons/items/sandwiches.png",
+    categories: [
       "blocky-stuff",
       "colorful-stuff",
       "gatherings",
-      "looks-like-food"
-    ]
+      "looks-like-food",
+    ],
   },
   "sash-window": {
-    "slug": "sash-window",
-    "name": "Sash window",
-    "icon": "/icons/items/sashwindow.png",
-    "categories": [
-      "glass-stuff"
-    ]
+    slug: "sash-window",
+    name: "Sash window",
+    icon: "/icons/items/sashwindow.png",
+    categories: ["glass-stuff"],
   },
   "science-experiment": {
-    "slug": "science-experiment",
-    "name": "Science experiment",
-    "icon": "/icons/items/scienceexperiment.png",
-    "categories": [
+    slug: "science-experiment",
+    name: "Science experiment",
+    icon: "/icons/items/scienceexperiment.png",
+    categories: [
       "complicated-stuff",
       "gatherings",
       "glass-stuff",
       "letters-and-words",
-      "metal-stuff"
-    ]
+      "metal-stuff",
+    ],
   },
   "scrap-cube": {
-    "slug": "scrap-cube",
-    "name": "Scrap cube",
-    "icon": "/icons/items/scrapcube.png",
-    "categories": []
+    slug: "scrap-cube",
+    name: "Scrap cube",
+    icon: "/icons/items/scrapcube.png",
+    categories: [],
   },
   "sea-glass-fragments": {
-    "slug": "sea-glass-fragments",
-    "name": "Sea glass fragments",
-    "icon": "/icons/items/seaglassfragments.png",
-    "categories": [
-      "glass-stuff"
-    ]
+    slug: "sea-glass-fragments",
+    name: "Sea glass fragments",
+    icon: "/icons/items/seaglassfragments.png",
+    categories: ["glass-stuff"],
   },
-  "seashell": {
-    "slug": "seashell",
-    "name": "Seashell",
-    "icon": "/icons/items/seashell.png",
-    "categories": []
+  seashell: {
+    slug: "seashell",
+    name: "Seashell",
+    icon: "/icons/items/seashell.png",
+    categories: [],
   },
   "seashell-soil": {
-    "slug": "seashell-soil",
-    "name": "Seashell soil",
-    "icon": "/icons/items/seashellsoil.png",
-    "categories": []
+    slug: "seashell-soil",
+    name: "Seashell soil",
+    icon: "/icons/items/seashellsoil.png",
+    categories: [],
   },
   "seashore-flowers": {
-    "slug": "seashore-flowers",
-    "name": "seashore flowers",
-    "icon": "/icons/items/seashoreflowers.png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "seashore-flowers",
+    name: "seashore flowers",
+    icon: "/icons/items/seashoreflowers.png",
+    categories: ["pretty-flowers"],
   },
   "seashore-flowers-blue": {
-    "slug": "seashore-flowers-blue",
-    "name": "Seashore flowers (blue)",
-    "icon": "/icons/items/seashoreflowers(blue).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "seashore-flowers-blue",
+    name: "Seashore flowers (blue)",
+    icon: "/icons/items/seashoreflowers(blue).png",
+    categories: ["pretty-flowers"],
   },
   "seashore-flowers-orange": {
-    "slug": "seashore-flowers-orange",
-    "name": "Seashore flowers (orange)",
-    "icon": "/icons/items/seashoreflowers(orange).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "seashore-flowers-orange",
+    name: "Seashore flowers (orange)",
+    icon: "/icons/items/seashoreflowers(orange).png",
+    categories: ["pretty-flowers"],
   },
   "seashore-flowers-white": {
-    "slug": "seashore-flowers-white",
-    "name": "Seashore flowers (white)",
-    "icon": "/icons/items/seashoreflowers(white).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "seashore-flowers-white",
+    name: "Seashore flowers (white)",
+    icon: "/icons/items/seashoreflowers(white).png",
+    categories: ["pretty-flowers"],
   },
   "seashore-flowers-yellow": {
-    "slug": "seashore-flowers-yellow",
-    "name": "Seashore flowers (yellow)",
-    "icon": "/icons/items/seashoreflowers(yellow).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "seashore-flowers-yellow",
+    name: "Seashore flowers (yellow)",
+    icon: "/icons/items/seashoreflowers(yellow).png",
+    categories: ["pretty-flowers"],
   },
   "seashore-grass": {
-    "slug": "seashore-grass",
-    "name": "Seashore grass",
-    "icon": "/icons/items/seashoregrass.png",
-    "categories": []
+    slug: "seashore-grass",
+    name: "Seashore grass",
+    icon: "/icons/items/seashoregrass.png",
+    categories: [],
   },
-  "seaweed": {
-    "slug": "seaweed",
-    "name": "Seaweed",
-    "icon": "/icons/items/seaweed.png",
-    "categories": []
+  seaweed: {
+    slug: "seaweed",
+    name: "Seaweed",
+    icon: "/icons/items/seaweed.png",
+    categories: [],
   },
   "security-camera": {
-    "slug": "security-camera",
-    "name": "Security camera",
-    "icon": "/icons/items/securitycamera.png",
-    "categories": [
-      "electronics"
-    ]
+    slug: "security-camera",
+    name: "Security camera",
+    icon: "/icons/items/securitycamera.png",
+    categories: ["electronics"],
   },
   "seedot-lamp": {
-    "slug": "seedot-lamp",
-    "name": "Seedot Lamp",
-    "icon": "/icons/items/seedotlamp.png",
-    "categories": [
-      "electronics",
-      "glass-stuff",
-      "lots-of-nature",
-      "round-stuff"
-    ]
+    slug: "seedot-lamp",
+    name: "Seedot Lamp",
+    icon: "/icons/items/seedotlamp.png",
+    categories: ["electronics", "glass-stuff", "lots-of-nature", "round-stuff"],
   },
   "shaved-ice": {
-    "slug": "shaved-ice",
-    "name": "Shaved ice",
-    "icon": "/icons/items/shavedice.png",
-    "categories": [
-      "colorful-stuff",
-      "looks-like-food",
-      "lots-of-water"
-    ]
+    slug: "shaved-ice",
+    name: "Shaved ice",
+    icon: "/icons/items/shavedice.png",
+    categories: ["colorful-stuff", "looks-like-food", "lots-of-water"],
   },
   "shell-lamp": {
-    "slug": "shell-lamp",
-    "name": "Shell lamp",
-    "icon": "/icons/items/shelllamp.png",
-    "categories": [
-      "cute-stuff",
-      "electronics",
-      "glass-stuff",
-      "ocean-vibes"
-    ]
+    slug: "shell-lamp",
+    name: "Shell lamp",
+    icon: "/icons/items/shelllamp.png",
+    categories: ["cute-stuff", "electronics", "glass-stuff", "ocean-vibes"],
   },
   "shield-fossil-body": {
-    "slug": "shield-fossil-body",
-    "name": "Shield Fossil (body)",
-    "icon": "/icons/items/shieldfossil(body).png",
-    "categories": [
+    slug: "shield-fossil-body",
+    name: "Shield Fossil (body)",
+    icon: "/icons/items/shieldfossil(body).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "shield-fossil-head": {
-    "slug": "shield-fossil-head",
-    "name": "Shield Fossil (Head)",
-    "icon": "/icons/items/shieldfossil(head).png",
-    "categories": [
-      "hard-stuff",
-      "lots-of-dirt",
-      "strange-stuff"
-    ]
+    slug: "shield-fossil-head",
+    name: "Shield Fossil (Head)",
+    icon: "/icons/items/shieldfossil(head).png",
+    categories: ["hard-stuff", "lots-of-dirt", "strange-stuff"],
   },
   "shield-fossil-tail": {
-    "slug": "shield-fossil-tail",
-    "name": "Shield Fossil (tail)",
-    "icon": "/icons/items/shieldfossil(tail).png",
-    "categories": [
+    slug: "shield-fossil-tail",
+    name: "Shield Fossil (tail)",
+    icon: "/icons/items/shieldfossil(tail).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "ship-s-wheel": {
-    "slug": "ship-s-wheel",
-    "name": "Ship's Wheel",
-    "icon": "/icons/items/ship'swheel.png",
-    "categories": [
-      "ocean-vibes",
-      "round-stuff"
-    ]
+    slug: "ship-s-wheel",
+    name: "Ship's Wheel",
+    icon: "/icons/items/ship'swheel.png",
+    categories: ["ocean-vibes", "round-stuff"],
   },
-  "shower": {
-    "slug": "shower",
-    "name": "Shower",
-    "icon": "/icons/items/shower.png",
-    "categories": [
+  shower: {
+    slug: "shower",
+    name: "Shower",
+    icon: "/icons/items/shower.png",
+    categories: [
       "cleanliness",
       "lots-of-water",
       "metal-stuff",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "sideways-log": {
-    "slug": "sideways-log",
-    "name": "Sideways log",
-    "icon": "/icons/items/sidewayslog.png",
-    "categories": []
+    slug: "sideways-log",
+    name: "Sideways log",
+    icon: "/icons/items/sidewayslog.png",
+    categories: [],
   },
-  "sign": {
-    "slug": "sign",
-    "name": "Sign",
-    "icon": "/icons/items/sign.png",
-    "categories": [
-      "letters-and-words",
-      "symbols",
-      "wooden-stuff"
-    ]
+  sign: {
+    slug: "sign",
+    name: "Sign",
+    icon: "/icons/items/sign.png",
+    categories: ["letters-and-words", "symbols", "wooden-stuff"],
   },
-  "signpost": {
-    "slug": "signpost",
-    "name": "Signpost",
-    "icon": "/icons/items/signpost.png",
-    "categories": [
+  signpost: {
+    slug: "signpost",
+    name: "Signpost",
+    icon: "/icons/items/signpost.png",
+    categories: [
       "complicated-stuff",
       "letters-and-words",
       "metal-stuff",
       "shiny-stuff",
       "stone-stuff",
-      "symbols"
-    ]
+      "symbols",
+    ],
   },
   "silk-scarf": {
-    "slug": "silk-scarf",
-    "name": "Silk Scarf",
-    "icon": "/icons/items/silkscarf.png",
-    "categories": [
-      "fabric"
-    ]
+    slug: "silk-scarf",
+    name: "Silk Scarf",
+    icon: "/icons/items/silkscarf.png",
+    categories: ["fabric"],
   },
   "silph-co": {
-    "slug": "silph-co",
-    "name": "Silph Co.",
-    "icon": "/icons/items/silphco..png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "silph-co",
+    name: "Silph Co.",
+    icon: "/icons/items/silphco..png",
+    categories: ["round-stuff"],
   },
   "silver-bottle-cap": {
-    "slug": "silver-bottle-cap",
-    "name": "Silver Bottle Cap",
-    "icon": "/icons/items/silverbottlecap.png",
-    "categories": [
-      "round-stuff",
-      "shiny-stuff"
-    ]
+    slug: "silver-bottle-cap",
+    name: "Silver Bottle Cap",
+    icon: "/icons/items/silverbottlecap.png",
+    categories: ["round-stuff", "shiny-stuff"],
   },
   "silver-feather": {
-    "slug": "silver-feather",
-    "name": "Silver Feather",
-    "icon": "/icons/items/silverfeather.png",
-    "categories": [
-      "shiny-stuff"
-    ]
+    slug: "silver-feather",
+    name: "Silver Feather",
+    icon: "/icons/items/silverfeather.png",
+    categories: ["shiny-stuff"],
   },
   "silver-powder": {
-    "slug": "silver-powder",
-    "name": "Silver Powder",
-    "icon": "/icons/items/silverpowder.png",
-    "categories": [
-      "lots-of-nature"
-    ]
+    slug: "silver-powder",
+    name: "Silver Powder",
+    icon: "/icons/items/silverpowder.png",
+    categories: ["lots-of-nature"],
   },
   "simple-cushion": {
-    "slug": "simple-cushion",
-    "name": "Simple cushion",
-    "icon": "/icons/items/simplecushion.png",
-    "categories": [
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "simple-cushion",
+    name: "Simple cushion",
+    icon: "/icons/items/simplecushion.png",
+    categories: ["fabric", "soft-stuff"],
   },
   "simple-flooring": {
-    "slug": "simple-flooring",
-    "name": "Simple flooring",
-    "icon": "/icons/items/simpleflooring.png",
-    "categories": []
+    slug: "simple-flooring",
+    name: "Simple flooring",
+    icon: "/icons/items/simpleflooring.png",
+    categories: [],
   },
   "simple-square-tiling": {
-    "slug": "simple-square-tiling",
-    "name": "Simple square tiling",
-    "icon": "/icons/items/simplesquaretiling.png",
-    "categories": []
+    slug: "simple-square-tiling",
+    name: "Simple square tiling",
+    icon: "/icons/items/simplesquaretiling.png",
+    categories: [],
   },
-  "sink": {
-    "slug": "sink",
-    "name": "Sink",
-    "icon": "/icons/items/sink.png",
-    "categories": [
+  sink: {
+    slug: "sink",
+    name: "Sink",
+    icon: "/icons/items/sink.png",
+    categories: [
       "blocky-stuff",
       "cleanliness",
       "lots-of-water",
       "stone-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "skull-fossil": {
-    "slug": "skull-fossil",
-    "name": "Skull Fossil",
-    "icon": "/icons/items/skullfossil.png",
-    "categories": [
-      "hard-stuff",
-      "lots-of-dirt",
-      "strange-stuff"
-    ]
+    slug: "skull-fossil",
+    name: "Skull Fossil",
+    icon: "/icons/items/skullfossil.png",
+    categories: ["hard-stuff", "lots-of-dirt", "strange-stuff"],
   },
   "sky-high-grass": {
-    "slug": "sky-high-grass",
-    "name": "Sky-high grass",
-    "icon": "/icons/items/sky-highgrass.png",
-    "categories": []
+    slug: "sky-high-grass",
+    name: "Sky-high grass",
+    icon: "/icons/items/sky-highgrass.png",
+    categories: [],
   },
   "skyland-cliff-rock": {
-    "slug": "skyland-cliff-rock",
-    "name": "Skyland cliff rock",
-    "icon": "/icons/items/skylandcliffrock.png",
-    "categories": []
+    slug: "skyland-cliff-rock",
+    name: "Skyland cliff rock",
+    icon: "/icons/items/skylandcliffrock.png",
+    categories: [],
   },
   "skyland-flowers": {
-    "slug": "skyland-flowers",
-    "name": "Skyland flowers",
-    "icon": "/icons/items/skylandflowers.png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "skyland-flowers",
+    name: "Skyland flowers",
+    icon: "/icons/items/skylandflowers.png",
+    categories: ["pretty-flowers"],
   },
   "skyland-flowers-blue": {
-    "slug": "skyland-flowers-blue",
-    "name": "Skyland flowers (blue)",
-    "icon": "/icons/items/skylandflowers(blue).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "skyland-flowers-blue",
+    name: "Skyland flowers (blue)",
+    icon: "/icons/items/skylandflowers(blue).png",
+    categories: ["pretty-flowers"],
   },
   "skyland-flowers-orange": {
-    "slug": "skyland-flowers-orange",
-    "name": "Skyland flowers (orange)",
-    "icon": "/icons/items/skylandflowers(orange).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "skyland-flowers-orange",
+    name: "Skyland flowers (orange)",
+    icon: "/icons/items/skylandflowers(orange).png",
+    categories: ["pretty-flowers"],
   },
   "skyland-flowers-pink": {
-    "slug": "skyland-flowers-pink",
-    "name": "Skyland flowers (pink)",
-    "icon": "/icons/items/skylandflowers(pink).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "skyland-flowers-pink",
+    name: "Skyland flowers (pink)",
+    icon: "/icons/items/skylandflowers(pink).png",
+    categories: ["pretty-flowers"],
   },
   "skyland-flowers-yellow": {
-    "slug": "skyland-flowers-yellow",
-    "name": "Skyland flowers (yellow)",
-    "icon": "/icons/items/skylandflowers(yellow).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "skyland-flowers-yellow",
+    name: "Skyland flowers (yellow)",
+    icon: "/icons/items/skylandflowers(yellow).png",
+    categories: ["pretty-flowers"],
   },
   "skyland-sand": {
-    "slug": "skyland-sand",
-    "name": "Skyland sand",
-    "icon": "/icons/items/skylandsand.png",
-    "categories": []
+    slug: "skyland-sand",
+    name: "Skyland sand",
+    icon: "/icons/items/skylandsand.png",
+    categories: [],
   },
   "skyland-sandstone": {
-    "slug": "skyland-sandstone",
-    "name": "Skyland sandstone",
-    "icon": "/icons/items/skylandsandstone.png",
-    "categories": []
+    slug: "skyland-sandstone",
+    name: "Skyland sandstone",
+    icon: "/icons/items/skylandsandstone.png",
+    categories: [],
   },
   "skyland-spotted-cliff-rock": {
-    "slug": "skyland-spotted-cliff-rock",
-    "name": "Skyland spotted cliff rock",
-    "icon": "/icons/items/skylandspottedcliffrock.png",
-    "categories": []
+    slug: "skyland-spotted-cliff-rock",
+    name: "Skyland spotted cliff rock",
+    icon: "/icons/items/skylandspottedcliffrock.png",
+    categories: [],
   },
   "sleeping-bag": {
-    "slug": "sleeping-bag",
-    "name": "Sleeping bag",
-    "icon": "/icons/items/sleepingbag.png",
-    "categories": [
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "sleeping-bag",
+    name: "Sleeping bag",
+    icon: "/icons/items/sleepingbag.png",
+    categories: ["fabric", "soft-stuff"],
   },
   "slender-candle": {
-    "slug": "slender-candle",
-    "name": "Slender candle",
-    "icon": "/icons/items/slendercandle.png",
-    "categories": [
+    slug: "slender-candle",
+    name: "Slender candle",
+    icon: "/icons/items/slendercandle.png",
+    categories: [
       "lots-of-fire",
       "slender-objects",
       "spooky-stuff",
-      "stone-stuff"
-    ]
+      "stone-stuff",
+    ],
   },
-  "slide": {
-    "slug": "slide",
-    "name": "Slide",
-    "icon": "/icons/items/slide.png",
-    "categories": [
-      "group-activities",
-      "play-spaces",
-      "wooden-stuff"
-    ]
+  slide: {
+    slug: "slide",
+    name: "Slide",
+    icon: "/icons/items/slide.png",
+    categories: ["group-activities", "play-spaces", "wooden-stuff"],
   },
   "small-garbage-can": {
-    "slug": "small-garbage-can",
-    "name": "Small garbage can",
-    "icon": "/icons/items/smallgarbagecan.png",
-    "categories": [
-      "containers",
-      "garbage",
-      "metal-stuff",
-      "round-stuff"
-    ]
+    slug: "small-garbage-can",
+    name: "Small garbage can",
+    icon: "/icons/items/smallgarbagecan.png",
+    categories: ["containers", "garbage", "metal-stuff", "round-stuff"],
   },
   "small-log": {
-    "slug": "small-log",
-    "name": "Small log",
-    "icon": "/icons/items/smalllog.png",
-    "categories": []
+    slug: "small-log",
+    name: "Small log",
+    icon: "/icons/items/smalllog.png",
+    categories: [],
   },
   "small-lost-relic": {
-    "slug": "small-lost-relic",
-    "name": "Small Lost Relic",
-    "icon": "/icons/items/smalllostrelic.png",
-    "categories": [
-      "strange-stuff"
-    ]
+    slug: "small-lost-relic",
+    name: "Small Lost Relic",
+    icon: "/icons/items/smalllostrelic.png",
+    categories: ["strange-stuff"],
   },
   "small-stage": {
-    "slug": "small-stage",
-    "name": "Small stage",
-    "icon": "/icons/items/smallstage.png",
-    "categories": [
+    slug: "small-stage",
+    name: "Small stage",
+    icon: "/icons/items/smallstage.png",
+    categories: [
       "group-activities",
       "metal-stuff",
       "play-spaces",
       "round-stuff",
       "spinning-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "small-vase": {
-    "slug": "small-vase",
-    "name": "Small vase",
-    "icon": "/icons/items/smallvase.png",
-    "categories": [
+    slug: "small-vase",
+    name: "Small vase",
+    icon: "/icons/items/smallvase.png",
+    categories: [
       "containers",
       "pretty-flowers",
       "slender-objects",
       "stone-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "smelting-furnace": {
-    "slug": "smelting-furnace",
-    "name": "Smelting furnace",
-    "icon": "/icons/items/smeltingfurnace.png",
-    "categories": [
-      "lots-of-fire"
-    ]
+    slug: "smelting-furnace",
+    name: "Smelting furnace",
+    icon: "/icons/items/smeltingfurnace.png",
+    categories: ["lots-of-fire"],
   },
   "snowbelle-city": {
-    "slug": "snowbelle-city",
-    "name": "Snowbelle City",
-    "icon": "/icons/items/snowbellecity.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "snowbelle-city",
+    name: "Snowbelle City",
+    icon: "/icons/items/snowbellecity.png",
+    categories: ["round-stuff"],
   },
   "soda-float": {
-    "slug": "soda-float",
-    "name": "Soda float",
-    "icon": "/icons/items/sodafloat.png",
-    "categories": [
-      "colorful-stuff",
-      "looks-like-food",
-      "lots-of-water"
-    ]
+    slug: "soda-float",
+    name: "Soda float",
+    icon: "/icons/items/sodafloat.png",
+    categories: ["colorful-stuff", "looks-like-food", "lots-of-water"],
   },
   "soft-carpeting": {
-    "slug": "soft-carpeting",
-    "name": "Soft carpeting",
-    "icon": "/icons/items/softcarpeting.png",
-    "categories": []
+    slug: "soft-carpeting",
+    name: "Soft carpeting",
+    icon: "/icons/items/softcarpeting.png",
+    categories: [],
   },
   "soft-sand": {
-    "slug": "soft-sand",
-    "name": "Soft Sand",
-    "icon": "/icons/items/softsand.png",
-    "categories": [
-      "soft-stuff"
-    ]
+    slug: "soft-sand",
+    name: "Soft Sand",
+    icon: "/icons/items/softsand.png",
+    categories: ["soft-stuff"],
   },
   "soft-seat": {
-    "slug": "soft-seat",
-    "name": "Soft seat",
-    "icon": "/icons/items/softseat.png",
-    "categories": [
-      "blocky-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "soft-seat",
+    name: "Soft seat",
+    icon: "/icons/items/softseat.png",
+    categories: ["blocky-stuff", "fabric", "soft-stuff"],
   },
   "sootopolis-city": {
-    "slug": "sootopolis-city",
-    "name": "Sootopolis City",
-    "icon": "/icons/items/sootopoliscity.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "sootopolis-city",
+    name: "Sootopolis City",
+    icon: "/icons/items/sootopoliscity.png",
+    categories: ["round-stuff"],
   },
   "south-province": {
-    "slug": "south-province",
-    "name": "South Province",
-    "icon": "/icons/items/southprovince.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "south-province",
+    name: "South Province",
+    icon: "/icons/items/southprovince.png",
+    categories: ["round-stuff"],
   },
-  "spaceship": {
-    "slug": "spaceship",
-    "name": "Spaceship",
-    "icon": "/icons/items/spaceship.png",
-    "categories": [
+  spaceship: {
+    slug: "spaceship",
+    name: "Spaceship",
+    icon: "/icons/items/spaceship.png",
+    categories: [
       "glass-stuff",
       "metal-stuff",
       "rides",
       "round-stuff",
-      "stone-stuff"
-    ]
+      "stone-stuff",
+    ],
   },
-  "spacesuit": {
-    "slug": "spacesuit",
-    "name": "Spacesuit",
-    "icon": "/icons/items/spacesuit.png",
-    "categories": [
+  spacesuit: {
+    slug: "spacesuit",
+    name: "Spacesuit",
+    icon: "/icons/items/spacesuit.png",
+    categories: [
       "complicated-stuff",
       "glass-stuff",
       "metal-stuff",
       "shiny-stuff",
-      "stone-stuff"
-    ]
+      "stone-stuff",
+    ],
   },
-  "speaker": {
-    "slug": "speaker",
-    "name": "Speaker",
-    "icon": "/icons/items/speaker.png",
-    "categories": [
-      "blocky-stuff",
-      "electronics",
-      "noisy-stuff"
-    ]
+  speaker: {
+    slug: "speaker",
+    name: "Speaker",
+    icon: "/icons/items/speaker.png",
+    categories: ["blocky-stuff", "electronics", "noisy-stuff"],
   },
   "spectator-chair": {
-    "slug": "spectator-chair",
-    "name": "Spectator chair",
-    "icon": "/icons/items/spectatorchair.png",
-    "categories": [
-      "metal-stuff"
-    ]
+    slug: "spectator-chair",
+    name: "Spectator chair",
+    icon: "/icons/items/spectatorchair.png",
+    categories: ["metal-stuff"],
   },
   "spell-tag": {
-    "slug": "spell-tag",
-    "name": "Spell Tag",
-    "icon": "/icons/items/spelltag.png",
-    "categories": [
-      "spooky-stuff"
-    ]
+    slug: "spell-tag",
+    name: "Spell Tag",
+    icon: "/icons/items/spelltag.png",
+    categories: ["spooky-stuff"],
   },
-  "spotlight": {
-    "slug": "spotlight",
-    "name": "Spotlight",
-    "icon": "/icons/items/spotlight.png",
-    "categories": [
-      "electronics",
-      "glass-stuff",
-      "metal-stuff"
-    ]
+  spotlight: {
+    slug: "spotlight",
+    name: "Spotlight",
+    icon: "/icons/items/spotlight.png",
+    categories: ["electronics", "glass-stuff", "metal-stuff"],
   },
   "spotted-cliff-rock": {
-    "slug": "spotted-cliff-rock",
-    "name": "Spotted cliff rock",
-    "icon": "/icons/items/spottedcliffrock.png",
-    "categories": []
+    slug: "spotted-cliff-rock",
+    name: "Spotted cliff rock",
+    icon: "/icons/items/spottedcliffrock.png",
+    categories: [],
   },
-  "sprinkler": {
-    "slug": "sprinkler",
-    "name": "Sprinkler",
-    "icon": "/icons/items/sprinkler.png",
-    "categories": [
+  sprinkler: {
+    slug: "sprinkler",
+    name: "Sprinkler",
+    icon: "/icons/items/sprinkler.png",
+    categories: [
       "lots-of-water",
       "metal-stuff",
       "stone-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "square-plant": {
-    "slug": "square-plant",
-    "name": "Square plant",
-    "icon": "/icons/items/squareplant.png",
-    "categories": []
+    slug: "square-plant",
+    name: "Square plant",
+    icon: "/icons/items/squareplant.png",
+    categories: [],
   },
   "square-tiling": {
-    "slug": "square-tiling",
-    "name": "Square tiling",
-    "icon": "/icons/items/squaretiling.png",
-    "categories": []
+    slug: "square-tiling",
+    name: "Square tiling",
+    icon: "/icons/items/squaretiling.png",
+    categories: [],
   },
   "squishy-clay": {
-    "slug": "squishy-clay",
-    "name": "Squishy clay",
-    "icon": "/icons/items/squishyclay.png",
-    "categories": [
-      "soft-stuff"
-    ]
+    slug: "squishy-clay",
+    name: "Squishy clay",
+    icon: "/icons/items/squishyclay.png",
+    categories: ["soft-stuff"],
   },
   "stained-glass-window-lower": {
-    "slug": "stained-glass-window-lower",
-    "name": "Stained-glass window (lower)",
-    "icon": "/icons/items/stained-glasswindow(lower).png",
-    "categories": [
-      "glass-stuff"
-    ]
+    slug: "stained-glass-window-lower",
+    name: "Stained-glass window (lower)",
+    icon: "/icons/items/stained-glasswindow(lower).png",
+    categories: ["glass-stuff"],
   },
   "stained-glass-window-middle": {
-    "slug": "stained-glass-window-middle",
-    "name": "Stained-glass window (middle)",
-    "icon": "/icons/items/stained-glasswindow(middle).png",
-    "categories": [
-      "glass-stuff"
-    ]
+    slug: "stained-glass-window-middle",
+    name: "Stained-glass window (middle)",
+    icon: "/icons/items/stained-glasswindow(middle).png",
+    categories: ["glass-stuff"],
   },
   "stained-glass-window-upper": {
-    "slug": "stained-glass-window-upper",
-    "name": "Stained-glass window (upper)",
-    "icon": "/icons/items/stained-glasswindow(upper).png",
-    "categories": [
-      "glass-stuff"
-    ]
+    slug: "stained-glass-window-upper",
+    name: "Stained-glass window (upper)",
+    icon: "/icons/items/stained-glasswindow(upper).png",
+    categories: ["glass-stuff"],
   },
-  "stalactites": {
-    "slug": "stalactites",
-    "name": "Stalactites",
-    "icon": "/icons/items/stalactites.png",
-    "categories": []
+  stalactites: {
+    slug: "stalactites",
+    name: "Stalactites",
+    icon: "/icons/items/stalactites.png",
+    categories: [],
   },
-  "stalagmites": {
-    "slug": "stalagmites",
-    "name": "Stalagmites",
-    "icon": "/icons/items/stalagmites.png",
-    "categories": []
+  stalagmites: {
+    slug: "stalagmites",
+    name: "Stalagmites",
+    icon: "/icons/items/stalagmites.png",
+    categories: [],
   },
   "standing-mic": {
-    "slug": "standing-mic",
-    "name": "Standing mic",
-    "icon": "/icons/items/standingmic.png",
-    "categories": [
+    slug: "standing-mic",
+    name: "Standing mic",
+    icon: "/icons/items/standingmic.png",
+    categories: [
       "electronics",
       "group-activities",
       "shiny-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "star-piece": {
-    "slug": "star-piece",
-    "name": "Star Piece",
-    "icon": "/icons/items/starpiece.png",
-    "categories": [
-      "shiny-stuff"
-    ]
+    slug: "star-piece",
+    name: "Star Piece",
+    icon: "/icons/items/starpiece.png",
+    categories: ["shiny-stuff"],
   },
-  "stardust": {
-    "slug": "stardust",
-    "name": "Stardust",
-    "icon": "/icons/items/stardust.png",
-    "categories": [
-      "shiny-stuff"
-    ]
+  stardust: {
+    slug: "stardust",
+    name: "Stardust",
+    icon: "/icons/items/stardust.png",
+    categories: ["shiny-stuff"],
   },
   "starry-sky-wall": {
-    "slug": "starry-sky-wall",
-    "name": "Starry-sky wall",
-    "icon": "/icons/items/starry-skywall.png",
-    "categories": []
+    slug: "starry-sky-wall",
+    name: "Starry-sky wall",
+    icon: "/icons/items/starry-skywall.png",
+    categories: [],
   },
   "step-stool": {
-    "slug": "step-stool",
-    "name": "Step stool",
-    "icon": "/icons/items/stepstool.png",
-    "categories": [
-      "metal-stuff",
-      "rides"
-    ]
+    slug: "step-stool",
+    name: "Step stool",
+    icon: "/icons/items/stepstool.png",
+    categories: ["metal-stuff", "rides"],
   },
   "sticky-web": {
-    "slug": "sticky-web",
-    "name": "Sticky web",
-    "icon": "/icons/items/stickyweb.png",
-    "categories": []
+    slug: "sticky-web",
+    name: "Sticky web",
+    icon: "/icons/items/stickyweb.png",
+    categories: [],
   },
-  "stone": {
-    "slug": "stone",
-    "name": "Stone",
-    "icon": "/icons/items/stone.png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+  stone: {
+    slug: "stone",
+    name: "Stone",
+    icon: "/icons/items/stone.png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-bench": {
-    "slug": "stone-bench",
-    "name": "Stone bench",
-    "icon": "/icons/items/stonebench.png",
-    "categories": [
-      "group-activities",
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-bench",
+    name: "Stone bench",
+    icon: "/icons/items/stonebench.png",
+    categories: ["group-activities", "hard-stuff", "stone-stuff"],
   },
   "stone-brick-wall": {
-    "slug": "stone-brick-wall",
-    "name": "Stone brick wall",
-    "icon": "/icons/items/stonebrickwall.png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-brick-wall",
+    name: "Stone brick wall",
+    icon: "/icons/items/stonebrickwall.png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-brick-wall-wallpaper": {
-    "slug": "stone-brick-wall-wallpaper",
-    "name": "Stone brick wall (wallpaper)",
-    "icon": "/icons/items/stonebrickwall(wallpaper).png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-brick-wall-wallpaper",
+    name: "Stone brick wall (wallpaper)",
+    icon: "/icons/items/stonebrickwall(wallpaper).png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-debris": {
-    "slug": "stone-debris",
-    "name": "Stone debris",
-    "icon": "/icons/items/stonedebris.png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-debris",
+    name: "Stone debris",
+    icon: "/icons/items/stonedebris.png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-fireplace": {
-    "slug": "stone-fireplace",
-    "name": "Stone fireplace",
-    "icon": "/icons/items/stonefireplace.png",
-    "categories": [
+    slug: "stone-fireplace",
+    name: "Stone fireplace",
+    icon: "/icons/items/stonefireplace.png",
+    categories: [
       "blocky-stuff",
       "colorful-stuff",
       "hard-stuff",
       "luxury",
-      "stone-stuff"
-    ]
+      "stone-stuff",
+    ],
   },
   "stone-flooring": {
-    "slug": "stone-flooring",
-    "name": "Stone flooring",
-    "icon": "/icons/items/stoneflooring.png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-flooring",
+    name: "Stone flooring",
+    icon: "/icons/items/stoneflooring.png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-flooring-wallpaper": {
-    "slug": "stone-flooring-wallpaper",
-    "name": "Stone flooring (wallpaper)",
-    "icon": "/icons/items/stoneflooring(wallpaper).png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-flooring-wallpaper",
+    name: "Stone flooring (wallpaper)",
+    icon: "/icons/items/stoneflooring(wallpaper).png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-fragments": {
-    "slug": "stone-fragments",
-    "name": "Stone fragments",
-    "icon": "/icons/items/stonefragments.png",
-    "categories": [
-      "wooden-stuff"
-    ]
+    slug: "stone-fragments",
+    name: "Stone fragments",
+    icon: "/icons/items/stonefragments.png",
+    categories: ["wooden-stuff"],
   },
   "stone-hipped-roof": {
-    "slug": "stone-hipped-roof",
-    "name": "Stone hipped roof",
-    "icon": "/icons/items/stonehippedroof.png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-hipped-roof",
+    name: "Stone hipped roof",
+    icon: "/icons/items/stonehippedroof.png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-pillar-lower": {
-    "slug": "stone-pillar-lower",
-    "name": "Stone pillar (lower)",
-    "icon": "/icons/items/stonepillar(lower).png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-pillar-lower",
+    name: "Stone pillar (lower)",
+    icon: "/icons/items/stonepillar(lower).png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-pillar-middle": {
-    "slug": "stone-pillar-middle",
-    "name": "Stone pillar (middle)",
-    "icon": "/icons/items/stonepillar(middle).png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-pillar-middle",
+    name: "Stone pillar (middle)",
+    icon: "/icons/items/stonepillar(middle).png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-pillar-upper": {
-    "slug": "stone-pillar-upper",
-    "name": "Stone pillar (upper)",
-    "icon": "/icons/items/stonepillar(upper).png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-pillar-upper",
+    name: "Stone pillar (upper)",
+    icon: "/icons/items/stonepillar(upper).png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-roof-decoration": {
-    "slug": "stone-roof-decoration",
-    "name": "Stone roof decoration",
-    "icon": "/icons/items/stoneroofdecoration.png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-roof-decoration",
+    name: "Stone roof decoration",
+    icon: "/icons/items/stoneroofdecoration.png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-roof-valley": {
-    "slug": "stone-roof-valley",
-    "name": "Stone roof valley",
-    "icon": "/icons/items/stoneroofvalley.png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-roof-valley",
+    name: "Stone roof valley",
+    icon: "/icons/items/stoneroofvalley.png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-steps": {
-    "slug": "stone-steps",
-    "name": "Stone steps",
-    "icon": "/icons/items/stonesteps.png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-steps",
+    name: "Stone steps",
+    icon: "/icons/items/stonesteps.png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-table": {
-    "slug": "stone-table",
-    "name": "Stone table",
-    "icon": "/icons/items/stonetable.png",
-    "categories": [
-      "hard-stuff"
-    ]
+    slug: "stone-table",
+    name: "Stone table",
+    icon: "/icons/items/stonetable.png",
+    categories: ["hard-stuff"],
   },
   "stone-tiling": {
-    "slug": "stone-tiling",
-    "name": "Stone tiling",
-    "icon": "/icons/items/stonetiling.png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-tiling",
+    name: "Stone tiling",
+    icon: "/icons/items/stonetiling.png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "stone-tiling-wallpaper": {
-    "slug": "stone-tiling-wallpaper",
-    "name": "Stone tiling (wallpaper)",
-    "icon": "/icons/items/stonetiling(wallpaper).png",
-    "categories": [
-      "hard-stuff",
-      "stone-stuff"
-    ]
+    slug: "stone-tiling-wallpaper",
+    name: "Stone tiling (wallpaper)",
+    icon: "/icons/items/stonetiling(wallpaper).png",
+    categories: ["hard-stuff", "stone-stuff"],
   },
   "storage-box": {
-    "slug": "storage-box",
-    "name": "Storage box",
-    "icon": "/icons/items/storagebox.png",
-    "categories": [
-      "wooden-stuff"
-    ]
+    slug: "storage-box",
+    name: "Storage box",
+    icon: "/icons/items/storagebox.png",
+    categories: ["wooden-stuff"],
   },
   "straw-bed": {
-    "slug": "straw-bed",
-    "name": "Straw bed",
-    "icon": "/icons/items/strawbed.png",
-    "categories": [
-      "lots-of-nature",
-      "soft-stuff"
-    ]
+    slug: "straw-bed",
+    name: "Straw bed",
+    icon: "/icons/items/strawbed.png",
+    categories: ["lots-of-nature", "soft-stuff"],
   },
   "straw-stool": {
-    "slug": "straw-stool",
-    "name": "Straw stool",
-    "icon": "/icons/items/strawstool.png",
-    "categories": [
-      "soft-stuff"
-    ]
+    slug: "straw-stool",
+    name: "Straw stool",
+    icon: "/icons/items/strawstool.png",
+    categories: ["soft-stuff"],
   },
   "straw-table": {
-    "slug": "straw-table",
-    "name": "Straw table",
-    "icon": "/icons/items/strawtable.png",
-    "categories": [
-      "lots-of-nature"
-    ]
+    slug: "straw-table",
+    name: "Straw table",
+    icon: "/icons/items/strawtable.png",
+    categories: ["lots-of-nature"],
   },
   "strength-rock": {
-    "slug": "strength-rock",
-    "name": "Strength rock",
-    "icon": "/icons/items/strengthrock.png",
-    "categories": [
-      "hard-stuff"
-    ]
+    slug: "strength-rock",
+    name: "Strength rock",
+    icon: "/icons/items/strengthrock.png",
+    categories: ["hard-stuff"],
   },
   "string-lights": {
-    "slug": "string-lights",
-    "name": "String lights",
-    "icon": "/icons/items/stringlights.png",
-    "categories": [
-      "electronics",
-      "gatherings",
-      "glass-stuff"
-    ]
+    slug: "string-lights",
+    name: "String lights",
+    icon: "/icons/items/stringlights.png",
+    categories: ["electronics", "gatherings", "glass-stuff"],
   },
   "striped-soil": {
-    "slug": "striped-soil",
-    "name": "Striped soil",
-    "icon": "/icons/items/stripedsoil.png",
-    "categories": []
+    slug: "striped-soil",
+    name: "Striped soil",
+    icon: "/icons/items/stripedsoil.png",
+    categories: [],
   },
   "striped-wall": {
-    "slug": "striped-wall",
-    "name": "Striped wall",
-    "icon": "/icons/items/stripedwall.png",
-    "categories": []
+    slug: "striped-wall",
+    name: "Striped wall",
+    icon: "/icons/items/stripedwall.png",
+    categories: [],
   },
   "study-desk": {
-    "slug": "study-desk",
-    "name": "Study desk",
-    "icon": "/icons/items/studydesk.png",
-    "categories": [
-      "wooden-stuff"
-    ]
+    slug: "study-desk",
+    name: "Study desk",
+    icon: "/icons/items/studydesk.png",
+    categories: ["wooden-stuff"],
   },
   "sturdy-stick": {
-    "slug": "sturdy-stick",
-    "name": "Sturdy stick",
-    "icon": "/icons/items/sturdystick.png",
-    "categories": []
+    slug: "sturdy-stick",
+    name: "Sturdy stick",
+    icon: "/icons/items/sturdystick.png",
+    categories: [],
   },
   "stylish-brick-wall-lower": {
-    "slug": "stylish-brick-wall-lower",
-    "name": "Stylish brick wall (lower)",
-    "icon": "/icons/items/stylishbrickwall(lower).png",
-    "categories": []
+    slug: "stylish-brick-wall-lower",
+    name: "Stylish brick wall (lower)",
+    icon: "/icons/items/stylishbrickwall(lower).png",
+    categories: [],
   },
   "stylish-brick-wall-middle": {
-    "slug": "stylish-brick-wall-middle",
-    "name": "Stylish brick wall (middle)",
-    "icon": "/icons/items/stylishbrickwall(middle).png",
-    "categories": []
+    slug: "stylish-brick-wall-middle",
+    name: "Stylish brick wall (middle)",
+    icon: "/icons/items/stylishbrickwall(middle).png",
+    categories: [],
   },
   "stylish-brick-wall-upper": {
-    "slug": "stylish-brick-wall-upper",
-    "name": "Stylish brick wall (upper)",
-    "icon": "/icons/items/stylishbrickwall(upper).png",
-    "categories": []
+    slug: "stylish-brick-wall-upper",
+    name: "Stylish brick wall (upper)",
+    icon: "/icons/items/stylishbrickwall(upper).png",
+    categories: [],
   },
   "stylish-gold-wall": {
-    "slug": "stylish-gold-wall",
-    "name": "Stylish gold wall",
-    "icon": "/icons/items/stylishgoldwall.png",
-    "categories": []
+    slug: "stylish-gold-wall",
+    name: "Stylish gold wall",
+    icon: "/icons/items/stylishgoldwall.png",
+    categories: [],
   },
   "stylish-hedge": {
-    "slug": "stylish-hedge",
-    "name": "Stylish hedge",
-    "icon": "/icons/items/stylishhedge.png",
-    "categories": []
+    slug: "stylish-hedge",
+    name: "Stylish hedge",
+    icon: "/icons/items/stylishhedge.png",
+    categories: [],
   },
   "stylish-hedge-blue": {
-    "slug": "stylish-hedge-blue",
-    "name": "Stylish hedge (blue)",
-    "icon": "/icons/items/stylishhedge(blue).png",
-    "categories": []
+    slug: "stylish-hedge-blue",
+    name: "Stylish hedge (blue)",
+    icon: "/icons/items/stylishhedge(blue).png",
+    categories: [],
   },
   "stylish-hedge-orange": {
-    "slug": "stylish-hedge-orange",
-    "name": "Stylish hedge (orange)",
-    "icon": "/icons/items/stylishhedge(orange).png",
-    "categories": []
+    slug: "stylish-hedge-orange",
+    name: "Stylish hedge (orange)",
+    icon: "/icons/items/stylishhedge(orange).png",
+    categories: [],
   },
   "stylish-hedge-purple": {
-    "slug": "stylish-hedge-purple",
-    "name": "Stylish hedge (purple)",
-    "icon": "/icons/items/stylishhedge(purple).png",
-    "categories": []
+    slug: "stylish-hedge-purple",
+    name: "Stylish hedge (purple)",
+    icon: "/icons/items/stylishhedge(purple).png",
+    categories: [],
   },
   "stylish-hedge-white": {
-    "slug": "stylish-hedge-white",
-    "name": "Stylish hedge (white)",
-    "icon": "/icons/items/stylishhedge(white).png",
-    "categories": []
+    slug: "stylish-hedge-white",
+    name: "Stylish hedge (white)",
+    icon: "/icons/items/stylishhedge(white).png",
+    categories: [],
   },
   "stylish-stone-flooring": {
-    "slug": "stylish-stone-flooring",
-    "name": "Stylish Stone Flooring",
-    "icon": "/icons/items/stylishstoneflooring.png",
-    "categories": []
+    slug: "stylish-stone-flooring",
+    name: "Stylish Stone Flooring",
+    icon: "/icons/items/stylishstoneflooring.png",
+    categories: [],
   },
   "stylish-stool": {
-    "slug": "stylish-stool",
-    "name": "Stylish stool",
-    "icon": "/icons/items/stylishstool.png",
-    "categories": [
-      "colorful-stuff",
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "stylish-stool",
+    name: "Stylish stool",
+    icon: "/icons/items/stylishstool.png",
+    categories: ["colorful-stuff", "cute-stuff", "fabric", "soft-stuff"],
   },
   "stylish-tiling": {
-    "slug": "stylish-tiling",
-    "name": "Stylish tiling",
-    "icon": "/icons/items/stylishtiling.png",
-    "categories": []
+    slug: "stylish-tiling",
+    name: "Stylish tiling",
+    icon: "/icons/items/stylishtiling.png",
+    categories: [],
   },
   "substitute-doll": {
-    "slug": "substitute-doll",
-    "name": "Substitute doll",
-    "icon": "/icons/items/substitutedoll.png",
-    "categories": [
-      "cute-stuff",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "substitute-doll",
+    name: "Substitute doll",
+    icon: "/icons/items/substitutedoll.png",
+    categories: ["cute-stuff", "fabric", "soft-stuff"],
   },
   "super-training": {
-    "slug": "super-training",
-    "name": "Super Training!",
-    "icon": "/icons/items/supertraining!.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "super-training",
+    name: "Super Training!",
+    icon: "/icons/items/supertraining!.png",
+    categories: ["round-stuff"],
   },
   "surface-light": {
-    "slug": "surface-light",
-    "name": "Surface light",
-    "icon": "/icons/items/surfacelight.png",
-    "categories": [
-      "electronics",
-      "glass-stuff",
-      "round-stuff"
-    ]
+    slug: "surface-light",
+    name: "Surface light",
+    icon: "/icons/items/surfacelight.png",
+    categories: ["electronics", "glass-stuff", "round-stuff"],
   },
   "table-setting": {
-    "slug": "table-setting",
-    "name": "Table setting",
-    "icon": "/icons/items/tablesetting.png",
-    "categories": [
+    slug: "table-setting",
+    name: "Table setting",
+    icon: "/icons/items/tablesetting.png",
+    categories: [
       "fabric",
       "gatherings",
       "group-activities",
       "looks-like-food",
-      "lots-of-water"
-    ]
+      "lots-of-water",
+    ],
   },
-  "tablet": {
-    "slug": "tablet",
-    "name": "Tablet",
-    "icon": "/icons/items/tablet.png",
-    "categories": [
+  tablet: {
+    slug: "tablet",
+    name: "Tablet",
+    icon: "/icons/items/tablet.png",
+    categories: [
       "blocky-stuff",
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "shiny-stuff"
-    ]
+      "shiny-stuff",
+    ],
   },
   "tabletop-mic": {
-    "slug": "tabletop-mic",
-    "name": "Tabletop mic",
-    "icon": "/icons/items/tabletopmic.png",
-    "categories": [
-      "electronics",
-      "shiny-stuff"
-    ]
+    slug: "tabletop-mic",
+    name: "Tabletop mic",
+    icon: "/icons/items/tabletopmic.png",
+    categories: ["electronics", "shiny-stuff"],
   },
   "tall-potted-plant": {
-    "slug": "tall-potted-plant",
-    "name": "Tall potted plant",
-    "icon": "/icons/items/tallpottedplant.png",
-    "categories": [
+    slug: "tall-potted-plant",
+    name: "Tall potted plant",
+    icon: "/icons/items/tallpottedplant.png",
+    categories: [
       "containers",
       "lots-of-nature",
       "pretty-flowers",
       "slender-objects",
       "stone-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "tea-set": {
-    "slug": "tea-set",
-    "name": "Tea set",
-    "icon": "/icons/items/teaset.png",
-    "categories": [
-      "containers",
-      "gatherings",
-      "group-activities"
-    ]
+    slug: "tea-set",
+    name: "Tea set",
+    icon: "/icons/items/teaset.png",
+    categories: ["containers", "gatherings", "group-activities"],
   },
   "team-rocket-wall-hanging": {
-    "slug": "team-rocket-wall-hanging",
-    "name": "Team Rocket Wall Hanging",
-    "icon": "/icons/items/teamrocketwallhanging.png",
-    "categories": [
+    slug: "team-rocket-wall-hanging",
+    name: "Team Rocket Wall Hanging",
+    icon: "/icons/items/teamrocketwallhanging.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "metal-stuff",
       "symbols",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
-  "television": {
-    "slug": "television",
-    "name": "Television",
-    "icon": "/icons/items/television.png",
-    "categories": [
+  television: {
+    slug: "television",
+    name: "Television",
+    icon: "/icons/items/television.png",
+    categories: [
       "blocky-stuff",
       "electronics",
       "glass-stuff",
@@ -6423,346 +5146,290 @@ export const ITEMS: Record<string, ItemEntry> = {
       "letters-and-words",
       "metal-stuff",
       "shiny-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "the-academy": {
-    "slug": "the-academy",
-    "name": "The Academy",
-    "icon": "/icons/items/theacademy.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "the-academy",
+    name: "The Academy",
+    icon: "/icons/items/theacademy.png",
+    categories: ["round-stuff"],
   },
   "the-s-s-anne": {
-    "slug": "the-s-s-anne",
-    "name": "The S.S. Anne",
-    "icon": "/icons/items/thes.s.anne.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "the-s-s-anne",
+    name: "The S.S. Anne",
+    icon: "/icons/items/thes.s.anne.png",
+    categories: ["round-stuff"],
   },
   "tidal-bell": {
-    "slug": "tidal-bell",
-    "name": "Tidal Bell",
-    "icon": "/icons/items/tidalbell.png",
-    "categories": [
-      "nice-breezes",
-      "noisy-stuff",
-      "round-stuff",
-      "strange-stuff"
-    ]
+    slug: "tidal-bell",
+    name: "Tidal Bell",
+    icon: "/icons/items/tidalbell.png",
+    categories: ["nice-breezes", "noisy-stuff", "round-stuff", "strange-stuff"],
   },
   "tire-toy": {
-    "slug": "tire-toy",
-    "name": "Tire toy",
-    "icon": "/icons/items/tiretoy.png",
-    "categories": [
+    slug: "tire-toy",
+    name: "Tire toy",
+    icon: "/icons/items/tiretoy.png",
+    categories: [
       "group-activities",
       "play-spaces",
       "round-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
-  "tires": {
-    "slug": "tires",
-    "name": "Tires",
-    "icon": "/icons/items/tires.png",
-    "categories": [
-      "gatherings",
-      "round-stuff",
-      "wobbly-stuff"
-    ]
+  tires: {
+    slug: "tires",
+    name: "Tires",
+    icon: "/icons/items/tires.png",
+    categories: ["gatherings", "round-stuff", "wobbly-stuff"],
   },
   "title-screen": {
-    "slug": "title-screen",
-    "name": "Title Screen",
-    "icon": "/icons/items/titlescreen.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "title-screen",
+    name: "Title Screen",
+    icon: "/icons/items/titlescreen.png",
+    categories: ["round-stuff"],
   },
-  "toilet": {
-    "slug": "toilet",
-    "name": "Toilet",
-    "icon": "/icons/items/toilet.png",
-    "categories": [
+  toilet: {
+    slug: "toilet",
+    name: "Toilet",
+    icon: "/icons/items/toilet.png",
+    categories: [
       "cleanliness",
       "electronics",
       "lots-of-water",
       "stone-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
-  "tomato": {
-    "slug": "tomato",
-    "name": "Tomato",
-    "icon": "/icons/items/tomato.png",
-    "categories": []
+  tomato: {
+    slug: "tomato",
+    name: "Tomato",
+    icon: "/icons/items/tomato.png",
+    categories: [],
   },
-  "torch": {
-    "slug": "torch",
-    "name": "Torch",
-    "icon": "/icons/items/torch.png",
-    "categories": [
-      "lots-of-fire"
-    ]
+  torch: {
+    slug: "torch",
+    name: "Torch",
+    icon: "/icons/items/torch.png",
+    categories: ["lots-of-fire"],
   },
   "towel-rack": {
-    "slug": "towel-rack",
-    "name": "Towel rack",
-    "icon": "/icons/items/towelrack.png",
-    "categories": [
-      "cleanliness",
-      "fabric",
-      "soft-stuff"
-    ]
+    slug: "towel-rack",
+    name: "Towel rack",
+    icon: "/icons/items/towelrack.png",
+    categories: ["cleanliness", "fabric", "soft-stuff"],
   },
   "town-map": {
-    "slug": "town-map",
-    "name": "Town map",
-    "icon": "/icons/items/townmap.png",
-    "categories": [
+    slug: "town-map",
+    name: "Town map",
+    icon: "/icons/items/townmap.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "strange-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "town-streetlight": {
-    "slug": "town-streetlight",
-    "name": "Town streetlight",
-    "icon": "/icons/items/townstreetlight.png",
-    "categories": [
+    slug: "town-streetlight",
+    name: "Town streetlight",
+    icon: "/icons/items/townstreetlight.png",
+    categories: [
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "slender-objects"
-    ]
+      "slender-objects",
+    ],
   },
   "toy-blocks": {
-    "slug": "toy-blocks",
-    "name": "Toy blocks",
-    "icon": "/icons/items/toyblocks.png",
-    "categories": [
-      "gatherings",
-      "play-spaces",
-      "wooden-stuff"
-    ]
+    slug: "toy-blocks",
+    name: "Toy blocks",
+    icon: "/icons/items/toyblocks.png",
+    categories: ["gatherings", "play-spaces", "wooden-stuff"],
   },
-  "treasure": {
-    "slug": "treasure",
-    "name": "Treasure",
-    "icon": "/icons/items/treasure.png",
-    "categories": [
+  treasure: {
+    slug: "treasure",
+    name: "Treasure",
+    icon: "/icons/items/treasure.png",
+    categories: [
       "colorful-stuff",
       "group-activities",
       "luxury",
       "metal-stuff",
-      "stone-stuff"
-    ]
+      "stone-stuff",
+    ],
   },
   "tundra-fossil-body": {
-    "slug": "tundra-fossil-body",
-    "name": "Tundra Fossil (body)",
-    "icon": "/icons/items/tundrafossil(body).png",
-    "categories": [
+    slug: "tundra-fossil-body",
+    name: "Tundra Fossil (body)",
+    icon: "/icons/items/tundrafossil(body).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "tundra-fossil-head": {
-    "slug": "tundra-fossil-head",
-    "name": "Tundra Fossil (head)",
-    "icon": "/icons/items/tundrafossil(head).png",
-    "categories": [
-      "hard-stuff",
-      "lots-of-dirt",
-      "strange-stuff"
-    ]
+    slug: "tundra-fossil-head",
+    name: "Tundra Fossil (head)",
+    icon: "/icons/items/tundrafossil(head).png",
+    categories: ["hard-stuff", "lots-of-dirt", "strange-stuff"],
   },
   "tundra-fossil-tail": {
-    "slug": "tundra-fossil-tail",
-    "name": "Tundra Fossil (tail)",
-    "icon": "/icons/items/tundrafossil(tail).png",
-    "categories": [
+    slug: "tundra-fossil-tail",
+    name: "Tundra Fossil (tail)",
+    icon: "/icons/items/tundrafossil(tail).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
-  "twine": {
-    "slug": "twine",
-    "name": "Twine",
-    "icon": "/icons/items/twine.png",
-    "categories": [
-      "slender-objects"
-    ]
+  twine: {
+    slug: "twine",
+    name: "Twine",
+    icon: "/icons/items/twine.png",
+    categories: ["slender-objects"],
   },
   "twisted-potted-plant": {
-    "slug": "twisted-potted-plant",
-    "name": "Twisted potted plant",
-    "icon": "/icons/items/twistedpottedplant.png",
-    "categories": [
+    slug: "twisted-potted-plant",
+    name: "Twisted potted plant",
+    icon: "/icons/items/twistedpottedplant.png",
+    categories: [
       "containers",
       "lots-of-nature",
       "pretty-flowers",
       "slender-objects",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "twisted-spoon": {
-    "slug": "twisted-spoon",
-    "name": "Twisted Spoon",
-    "icon": "/icons/items/twistedspoon.png",
-    "categories": [
-      "strange-stuff"
-    ]
+    slug: "twisted-spoon",
+    name: "Twisted Spoon",
+    icon: "/icons/items/twistedspoon.png",
+    categories: ["strange-stuff"],
   },
   "ultra-ruin": {
-    "slug": "ultra-ruin",
-    "name": "Ultra Ruin",
-    "icon": "/icons/items/ultraruin.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "ultra-ruin",
+    name: "Ultra Ruin",
+    icon: "/icons/items/ultraruin.png",
+    categories: ["round-stuff"],
   },
   "union-cave": {
-    "slug": "union-cave",
-    "name": "Union Cave",
-    "icon": "/icons/items/unioncave.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "union-cave",
+    name: "Union Cave",
+    icon: "/icons/items/unioncave.png",
+    categories: ["round-stuff"],
   },
   "upright-log": {
-    "slug": "upright-log",
-    "name": "Upright log",
-    "icon": "/icons/items/uprightlog.png",
-    "categories": []
+    slug: "upright-log",
+    name: "Upright log",
+    icon: "/icons/items/uprightlog.png",
+    categories: [],
   },
   "utility-pole": {
-    "slug": "utility-pole",
-    "name": "Utility pole",
-    "icon": "/icons/items/utilitypole.png",
-    "categories": [
-      "electronics"
-    ]
+    slug: "utility-pole",
+    name: "Utility pole",
+    icon: "/icons/items/utilitypole.png",
+    categories: ["electronics"],
   },
   "vending-machine": {
-    "slug": "vending-machine",
-    "name": "Vending machine",
-    "icon": "/icons/items/vendingmachine.png",
-    "categories": [
+    slug: "vending-machine",
+    name: "Vending machine",
+    icon: "/icons/items/vendingmachine.png",
+    categories: [
       "blocky-stuff",
       "glass-stuff",
       "group-activities",
       "metal-stuff",
-      "sharp-stuff"
-    ]
+      "sharp-stuff",
+    ],
   },
   "verdant-shoots": {
-    "slug": "verdant-shoots",
-    "name": "Verdant shoots",
-    "icon": "/icons/items/verdantshoots.png",
-    "categories": []
+    slug: "verdant-shoots",
+    name: "Verdant shoots",
+    icon: "/icons/items/verdantshoots.png",
+    categories: [],
   },
   "vermilion-city-theme": {
-    "slug": "vermilion-city-theme",
-    "name": "Vermilion City Theme",
-    "icon": "/icons/items/vermilioncitytheme.png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "vermilion-city-theme",
+    name: "Vermilion City Theme",
+    icon: "/icons/items/vermilioncitytheme.png",
+    categories: ["round-stuff"],
   },
-  "vine": {
-    "slug": "vine",
-    "name": "Vine",
-    "icon": "/icons/items/vine.png",
-    "categories": []
+  vine: {
+    slug: "vine",
+    name: "Vine",
+    icon: "/icons/items/vine.png",
+    categories: [],
   },
   "vine-rope": {
-    "slug": "vine-rope",
-    "name": "Vine rope",
-    "icon": "/icons/items/vinerope.png",
-    "categories": [
-      "slender-objects"
-    ]
+    slug: "vine-rope",
+    name: "Vine rope",
+    icon: "/icons/items/vinerope.png",
+    categories: ["slender-objects"],
   },
   "vine-wall-decoration": {
-    "slug": "vine-wall-decoration",
-    "name": "Vine wall decoration",
-    "icon": "/icons/items/vinewalldecoration.png",
-    "categories": [
-      "lots-of-nature",
-      "slender-objects"
-    ]
+    slug: "vine-wall-decoration",
+    name: "Vine wall decoration",
+    icon: "/icons/items/vinewalldecoration.png",
+    categories: ["lots-of-nature", "slender-objects"],
   },
   "violet-meteor-lamp": {
-    "slug": "violet-meteor-lamp",
-    "name": "Violet meteor lamp",
-    "icon": "/icons/items/violetmeteorlamp.png",
-    "categories": [
-      "cute-stuff",
-      "electronics",
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "violet-meteor-lamp",
+    name: "Violet meteor lamp",
+    icon: "/icons/items/violetmeteorlamp.png",
+    categories: ["cute-stuff", "electronics", "glass-stuff", "shiny-stuff"],
   },
   "volcanic-ash": {
-    "slug": "volcanic-ash",
-    "name": "Volcanic ash",
-    "icon": "/icons/items/volcanicash.png",
-    "categories": []
+    slug: "volcanic-ash",
+    name: "Volcanic ash",
+    icon: "/icons/items/volcanicash.png",
+    categories: [],
   },
   "volcanic-rock": {
-    "slug": "volcanic-rock",
-    "name": "Volcanic rock",
-    "icon": "/icons/items/volcanicrock.png",
-    "categories": []
+    slug: "volcanic-rock",
+    name: "Volcanic rock",
+    icon: "/icons/items/volcanicrock.png",
+    categories: [],
   },
   "wall-calendar": {
-    "slug": "wall-calendar",
-    "name": "Wall Calendar",
-    "icon": "/icons/items/wallcalendar.png",
-    "categories": [
+    slug: "wall-calendar",
+    name: "Wall Calendar",
+    icon: "/icons/items/wallcalendar.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "letters-and-words",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "wall-light": {
-    "slug": "wall-light",
-    "name": "Wall light",
-    "icon": "/icons/items/walllight.png",
-    "categories": [
-      "blocky-stuff",
-      "electronics",
-      "glass-stuff",
-      "sharp-stuff"
-    ]
+    slug: "wall-light",
+    name: "Wall light",
+    icon: "/icons/items/walllight.png",
+    categories: ["blocky-stuff", "electronics", "glass-stuff", "sharp-stuff"],
   },
   "wall-mirror": {
-    "slug": "wall-mirror",
-    "name": "Wall mirror",
-    "icon": "/icons/items/wallmirror.png",
-    "categories": [
+    slug: "wall-mirror",
+    name: "Wall mirror",
+    icon: "/icons/items/wallmirror.png",
+    categories: [
       "blocky-stuff",
       "glass-stuff",
       "luxury",
       "strange-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "wall-monitor": {
-    "slug": "wall-monitor",
-    "name": "Wall monitor",
-    "icon": "/icons/items/wallmonitor.png",
-    "categories": [
+    slug: "wall-monitor",
+    name: "Wall monitor",
+    icon: "/icons/items/wallmonitor.png",
+    categories: [
       "blocky-stuff",
       "electronics",
       "glass-stuff",
@@ -6770,780 +5437,666 @@ export const ITEMS: Record<string, ItemEntry> = {
       "letters-and-words",
       "metal-stuff",
       "shiny-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "wall-photo-frame": {
-    "slug": "wall-photo-frame",
-    "name": "Wall photo frame",
-    "icon": "/icons/items/wallphotoframe.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "watching-stuff"
-    ]
+    slug: "wall-photo-frame",
+    name: "Wall photo frame",
+    icon: "/icons/items/wallphotoframe.png",
+    categories: ["blocky-stuff", "containers", "watching-stuff"],
   },
   "wall-storage-box": {
-    "slug": "wall-storage-box",
-    "name": "Wall storage box",
-    "icon": "/icons/items/wallstoragebox.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "wooden-stuff"
-    ]
+    slug: "wall-storage-box",
+    name: "Wall storage box",
+    icon: "/icons/items/wallstoragebox.png",
+    categories: ["blocky-stuff", "containers", "wooden-stuff"],
   },
   "wall-switch": {
-    "slug": "wall-switch",
-    "name": "Wall switch",
-    "icon": "/icons/items/wallswitch.png",
-    "categories": [
-      "electronics"
-    ]
+    slug: "wall-switch",
+    name: "Wall switch",
+    icon: "/icons/items/wallswitch.png",
+    categories: ["electronics"],
   },
   "wall-torch": {
-    "slug": "wall-torch",
-    "name": "Wall torch",
-    "icon": "/icons/items/walltorch.png",
-    "categories": [
-      "lots-of-fire",
-      "stone-stuff"
-    ]
+    slug: "wall-torch",
+    name: "Wall torch",
+    icon: "/icons/items/walltorch.png",
+    categories: ["lots-of-fire", "stone-stuff"],
   },
   "wall-mounted-flowers": {
-    "slug": "wall-mounted-flowers",
-    "name": "Wall-mounted flowers",
-    "icon": "/icons/items/wall-mountedflowers.png",
-    "categories": [
-      "colorful-stuff",
-      "pretty-flowers"
-    ]
+    slug: "wall-mounted-flowers",
+    name: "Wall-mounted flowers",
+    icon: "/icons/items/wall-mountedflowers.png",
+    categories: ["colorful-stuff", "pretty-flowers"],
   },
   "warning-wall": {
-    "slug": "warning-wall",
-    "name": "Warning wall",
-    "icon": "/icons/items/warningwall.png",
-    "categories": []
+    slug: "warning-wall",
+    name: "Warning wall",
+    icon: "/icons/items/warningwall.png",
+    categories: [],
   },
   "washing-machine": {
-    "slug": "washing-machine",
-    "name": "Washing machine",
-    "icon": "/icons/items/washingmachine.png",
-    "categories": [
+    slug: "washing-machine",
+    name: "Washing machine",
+    icon: "/icons/items/washingmachine.png",
+    categories: [
       "blocky-stuff",
       "cleanliness",
       "containers",
       "electronics",
       "glass-stuff",
       "metal-stuff",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
-  "wastepaper": {
-    "slug": "wastepaper",
-    "name": "Wastepaper",
-    "icon": "/icons/items/wastepaper.png",
-    "categories": [
-      "garbage"
-    ]
+  wastepaper: {
+    slug: "wastepaper",
+    name: "Wastepaper",
+    icon: "/icons/items/wastepaper.png",
+    categories: ["garbage"],
   },
   "water-basin": {
-    "slug": "water-basin",
-    "name": "Water basin",
-    "icon": "/icons/items/waterbasin.png",
-    "categories": [
+    slug: "water-basin",
+    name: "Water basin",
+    icon: "/icons/items/waterbasin.png",
+    categories: [
       "cleanliness",
       "colorful-stuff",
       "lots-of-water",
       "round-stuff",
-      "wooden-stuff"
-    ]
+      "wooden-stuff",
+    ],
   },
   "water-pillar-quarter": {
-    "slug": "water-pillar-quarter",
-    "name": "Water pillar quarter",
-    "icon": "/icons/items/waterpillarquarter.png",
-    "categories": [
-      "glass-stuff",
-      "lots-of-water",
-      "watching-stuff"
-    ]
+    slug: "water-pillar-quarter",
+    name: "Water pillar quarter",
+    icon: "/icons/items/waterpillarquarter.png",
+    categories: ["glass-stuff", "lots-of-water", "watching-stuff"],
   },
   "waterproof-seat": {
-    "slug": "waterproof-seat",
-    "name": "Waterproof seat",
-    "icon": "/icons/items/waterproofseat.png",
-    "categories": [
-      "cleanliness"
-    ]
+    slug: "waterproof-seat",
+    name: "Waterproof seat",
+    icon: "/icons/items/waterproofseat.png",
+    categories: ["cleanliness"],
   },
   "weakness-policy": {
-    "slug": "weakness-policy",
-    "name": "Weakness Policy",
-    "icon": "/icons/items/weaknesspolicy.png",
-    "categories": [
-      "letters-and-words"
-    ]
+    slug: "weakness-policy",
+    name: "Weakness Policy",
+    icon: "/icons/items/weaknesspolicy.png",
+    categories: ["letters-and-words"],
   },
   "weather-vane": {
-    "slug": "weather-vane",
-    "name": "Weather vane",
-    "icon": "/icons/items/weathervane.png",
-    "categories": [
-      "metal-stuff",
-      "nice-breezes",
-      "spinning-stuff"
-    ]
+    slug: "weather-vane",
+    name: "Weather vane",
+    icon: "/icons/items/weathervane.png",
+    categories: ["metal-stuff", "nice-breezes", "spinning-stuff"],
   },
-  "wheat": {
-    "slug": "wheat",
-    "name": "Wheat",
-    "icon": "/icons/items/wheat.png",
-    "categories": []
+  wheat: {
+    slug: "wheat",
+    name: "Wheat",
+    icon: "/icons/items/wheat.png",
+    categories: [],
   },
-  "wheelbarrow": {
-    "slug": "wheelbarrow",
-    "name": "Wheelbarrow",
-    "icon": "/icons/items/wheelbarrow.png",
-    "categories": [
-      "construction",
-      "containers",
-      "lots-of-dirt",
-      "metal-stuff"
-    ]
+  wheelbarrow: {
+    slug: "wheelbarrow",
+    name: "Wheelbarrow",
+    icon: "/icons/items/wheelbarrow.png",
+    categories: ["construction", "containers", "lots-of-dirt", "metal-stuff"],
   },
   "white-paint": {
-    "slug": "white-paint",
-    "name": "White paint",
-    "icon": "/icons/items/whitepaint.png",
-    "categories": [
-      "colorful-stuff",
-      "lots-of-dirt"
-    ]
+    slug: "white-paint",
+    name: "White paint",
+    icon: "/icons/items/whitepaint.png",
+    categories: ["colorful-stuff", "lots-of-dirt"],
   },
   "white-rock": {
-    "slug": "white-rock",
-    "name": "White rock",
-    "icon": "/icons/items/whiterock.png",
-    "categories": []
+    slug: "white-rock",
+    name: "White rock",
+    icon: "/icons/items/whiterock.png",
+    categories: [],
   },
-  "whiteboard": {
-    "slug": "whiteboard",
-    "name": "Whiteboard",
-    "icon": "/icons/items/whiteboard.png",
-    "categories": [
+  whiteboard: {
+    slug: "whiteboard",
+    name: "Whiteboard",
+    icon: "/icons/items/whiteboard.png",
+    categories: [
       "blocky-stuff",
       "complicated-stuff",
       "gatherings",
       "group-activities",
       "letters-and-words",
-      "shiny-stuff"
-    ]
+      "shiny-stuff",
+    ],
   },
   "wiggly-mirror": {
-    "slug": "wiggly-mirror",
-    "name": "Wiggly mirror",
-    "icon": "/icons/items/wigglymirror.png",
-    "categories": [
+    slug: "wiggly-mirror",
+    name: "Wiggly mirror",
+    icon: "/icons/items/wigglymirror.png",
+    categories: [
       "cute-stuff",
       "glass-stuff",
       "strange-stuff",
-      "watching-stuff"
-    ]
+      "watching-stuff",
+    ],
   },
   "wild-area-north": {
-    "slug": "wild-area-north",
-    "name": "Wild Area (North)",
-    "icon": "/icons/items/wildarea(north).png",
-    "categories": [
-      "round-stuff"
-    ]
+    slug: "wild-area-north",
+    name: "Wild Area (North)",
+    icon: "/icons/items/wildarea(north).png",
+    categories: ["round-stuff"],
   },
-  "wildflowers": {
-    "slug": "wildflowers",
-    "name": "Wildflowers",
-    "icon": "/icons/items/wildflowers.png",
-    "categories": [
-      "pretty-flowers"
-    ]
+  wildflowers: {
+    slug: "wildflowers",
+    name: "Wildflowers",
+    icon: "/icons/items/wildflowers.png",
+    categories: ["pretty-flowers"],
   },
   "wildflowers-blue": {
-    "slug": "wildflowers-blue",
-    "name": "Wildflowers (blue)",
-    "icon": "/icons/items/wildflowers(blue).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "wildflowers-blue",
+    name: "Wildflowers (blue)",
+    icon: "/icons/items/wildflowers(blue).png",
+    categories: ["pretty-flowers"],
   },
   "wildflowers-orange": {
-    "slug": "wildflowers-orange",
-    "name": "Wildflowers (orange)",
-    "icon": "/icons/items/wildflowers(orange).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "wildflowers-orange",
+    name: "Wildflowers (orange)",
+    icon: "/icons/items/wildflowers(orange).png",
+    categories: ["pretty-flowers"],
   },
   "wildflowers-purple": {
-    "slug": "wildflowers-purple",
-    "name": "Wildflowers (purple)",
-    "icon": "/icons/items/wildflowers(purple).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "wildflowers-purple",
+    name: "Wildflowers (purple)",
+    icon: "/icons/items/wildflowers(purple).png",
+    categories: ["pretty-flowers"],
   },
   "wildflowers-red": {
-    "slug": "wildflowers-red",
-    "name": "Wildflowers (red)",
-    "icon": "/icons/items/wildflowers(red).png",
-    "categories": [
-      "pretty-flowers"
-    ]
+    slug: "wildflowers-red",
+    name: "Wildflowers (red)",
+    icon: "/icons/items/wildflowers(red).png",
+    categories: ["pretty-flowers"],
   },
   "window-pane": {
-    "slug": "window-pane",
-    "name": "Window pane",
-    "icon": "/icons/items/windowpane.png",
-    "categories": [
-      "glass-stuff"
-    ]
+    slug: "window-pane",
+    name: "Window pane",
+    icon: "/icons/items/windowpane.png",
+    categories: ["glass-stuff"],
   },
   "wing-fossil-body": {
-    "slug": "wing-fossil-body",
-    "name": "Wing fossil (body)",
-    "icon": "/icons/items/wingfossil(body).png",
-    "categories": [
+    slug: "wing-fossil-body",
+    name: "Wing fossil (body)",
+    icon: "/icons/items/wingfossil(body).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "wing-fossil-head": {
-    "slug": "wing-fossil-head",
-    "name": "Wing Fossil (head)",
-    "icon": "/icons/items/wingfossil(head).png",
-    "categories": [
-      "hard-stuff",
-      "lots-of-dirt",
-      "strange-stuff"
-    ]
+    slug: "wing-fossil-head",
+    name: "Wing Fossil (head)",
+    icon: "/icons/items/wingfossil(head).png",
+    categories: ["hard-stuff", "lots-of-dirt", "strange-stuff"],
   },
   "wing-fossil-left-wing": {
-    "slug": "wing-fossil-left-wing",
-    "name": "Wing Fossil (left wing)",
-    "icon": "/icons/items/wingfossil(leftwing).png",
-    "categories": [
+    slug: "wing-fossil-left-wing",
+    name: "Wing Fossil (left wing)",
+    icon: "/icons/items/wingfossil(leftwing).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "wing-fossil-right-wing": {
-    "slug": "wing-fossil-right-wing",
-    "name": "Wing Fossil (right wing)",
-    "icon": "/icons/items/wingfossil(rightwing).png",
-    "categories": [
+    slug: "wing-fossil-right-wing",
+    name: "Wing Fossil (right wing)",
+    icon: "/icons/items/wingfossil(rightwing).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
   "wing-fossil-tail": {
-    "slug": "wing-fossil-tail",
-    "name": "Wing Fossil (tail)",
-    "icon": "/icons/items/wingfossil(tail).png",
-    "categories": [
+    slug: "wing-fossil-tail",
+    name: "Wing Fossil (tail)",
+    icon: "/icons/items/wingfossil(tail).png",
+    categories: [
       "hard-stuff",
       "lots-of-dirt",
       "slender-objects",
-      "strange-stuff"
-    ]
+      "strange-stuff",
+    ],
   },
-  "wire": {
-    "slug": "wire",
-    "name": "Wire",
-    "icon": "/icons/items/wire.png",
-    "categories": [
-      "slender-objects"
-    ]
+  wire: {
+    slug: "wire",
+    name: "Wire",
+    icon: "/icons/items/wire.png",
+    categories: ["slender-objects"],
   },
   "wireless-power-transmitter": {
-    "slug": "wireless-power-transmitter",
-    "name": "Wireless power transmitter",
-    "icon": "/icons/items/wirelesspowertransmitter.png",
-    "categories": [
-      "electronics"
-    ]
+    slug: "wireless-power-transmitter",
+    name: "Wireless power transmitter",
+    icon: "/icons/items/wirelesspowertransmitter.png",
+    categories: ["electronics"],
   },
   "wireless-power-transmitter-switch": {
-    "slug": "wireless-power-transmitter-switch",
-    "name": "Wireless power-transmitter switch",
-    "icon": "/icons/items/wirelesspower-transmitterswitch.png",
-    "categories": [
-      "electronics"
-    ]
+    slug: "wireless-power-transmitter-switch",
+    name: "Wireless power-transmitter switch",
+    icon: "/icons/items/wirelesspower-transmitterswitch.png",
+    categories: ["electronics"],
   },
   "wobbuffet-wobbler": {
-    "slug": "wobbuffet-wobbler",
-    "name": "Wobbuffet Wobbler",
-    "icon": "/icons/items/wobbuffetwobbler.png",
-    "categories": [
+    slug: "wobbuffet-wobbler",
+    name: "Wobbuffet Wobbler",
+    icon: "/icons/items/wobbuffetwobbler.png",
+    categories: [
       "cute-stuff",
       "exercise",
       "play-spaces",
       "round-stuff",
       "strange-stuff",
-      "wobbly-stuff"
-    ]
+      "wobbly-stuff",
+    ],
   },
   "wood-fragments": {
-    "slug": "wood-fragments",
-    "name": "Wood fragments",
-    "icon": "/icons/items/woodfragments.png",
-    "categories": []
+    slug: "wood-fragments",
+    name: "Wood fragments",
+    icon: "/icons/items/woodfragments.png",
+    categories: [],
   },
   "wooden-bed": {
-    "slug": "wooden-bed",
-    "name": "Wooden Bed",
-    "icon": "/icons/items/woodenbed.png",
-    "categories": [
-      "group-activities",
-      "lots-of-nature",
-      "soft-stuff"
-    ]
+    slug: "wooden-bed",
+    name: "Wooden Bed",
+    icon: "/icons/items/woodenbed.png",
+    categories: ["group-activities", "lots-of-nature", "soft-stuff"],
   },
   "wooden-bench": {
-    "slug": "wooden-bench",
-    "name": "Wooden bench",
-    "icon": "/icons/items/woodenbench.png",
-    "categories": [
-      "group-activities"
-    ]
+    slug: "wooden-bench",
+    name: "Wooden bench",
+    icon: "/icons/items/woodenbench.png",
+    categories: ["group-activities"],
   },
   "wooden-birdhouse": {
-    "slug": "wooden-birdhouse",
-    "name": "Wooden birdhouse",
-    "icon": "/icons/items/woodenbirdhouse.png",
-    "categories": [
-      "containers",
-      "slender-objects"
-    ]
+    slug: "wooden-birdhouse",
+    name: "Wooden birdhouse",
+    icon: "/icons/items/woodenbirdhouse.png",
+    categories: ["containers", "slender-objects"],
   },
   "wooden-crate": {
-    "slug": "wooden-crate",
-    "name": "Wooden crate",
-    "icon": "/icons/items/woodencrate.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "wooden-stuff"
-    ]
+    slug: "wooden-crate",
+    name: "Wooden crate",
+    icon: "/icons/items/woodencrate.png",
+    categories: ["blocky-stuff", "containers", "wooden-stuff"],
   },
   "wooden-flooring": {
-    "slug": "wooden-flooring",
-    "name": "Wooden flooring",
-    "icon": "/icons/items/woodenflooring.png",
-    "categories": []
+    slug: "wooden-flooring",
+    name: "Wooden flooring",
+    icon: "/icons/items/woodenflooring.png",
+    categories: [],
   },
   "wooden-pillar-lower": {
-    "slug": "wooden-pillar-lower",
-    "name": "Wooden pillar (lower)",
-    "icon": "/icons/items/woodenpillar(lower).png",
-    "categories": []
+    slug: "wooden-pillar-lower",
+    name: "Wooden pillar (lower)",
+    icon: "/icons/items/woodenpillar(lower).png",
+    categories: [],
   },
   "wooden-pillar-middle": {
-    "slug": "wooden-pillar-middle",
-    "name": "Wooden pillar (middle)",
-    "icon": "/icons/items/woodenpillar(middle).png",
-    "categories": []
+    slug: "wooden-pillar-middle",
+    name: "Wooden pillar (middle)",
+    icon: "/icons/items/woodenpillar(middle).png",
+    categories: [],
   },
   "wooden-pillar-upper": {
-    "slug": "wooden-pillar-upper",
-    "name": "Wooden pillar (upper)",
-    "icon": "/icons/items/woodenpillar(upper).png",
-    "categories": []
+    slug: "wooden-pillar-upper",
+    name: "Wooden pillar (upper)",
+    icon: "/icons/items/woodenpillar(upper).png",
+    categories: [],
   },
   "wooden-plate": {
-    "slug": "wooden-plate",
-    "name": "Wooden plate",
-    "icon": "/icons/items/woodenplate.png",
-    "categories": [
-      "wooden-stuff"
-    ]
+    slug: "wooden-plate",
+    name: "Wooden plate",
+    icon: "/icons/items/woodenplate.png",
+    categories: ["wooden-stuff"],
   },
   "wooden-stool": {
-    "slug": "wooden-stool",
-    "name": "Wooden stool",
-    "icon": "/icons/items/woodenstool.png",
-    "categories": [
-      "blocky-stuff"
-    ]
+    slug: "wooden-stool",
+    name: "Wooden stool",
+    icon: "/icons/items/woodenstool.png",
+    categories: ["blocky-stuff"],
   },
   "wooden-wall": {
-    "slug": "wooden-wall",
-    "name": "Wooden wall",
-    "icon": "/icons/items/woodenwall.png",
-    "categories": []
+    slug: "wooden-wall",
+    name: "Wooden wall",
+    icon: "/icons/items/woodenwall.png",
+    categories: [],
   },
   "worn-lumber": {
-    "slug": "worn-lumber",
-    "name": "Worn lumber",
-    "icon": "/icons/items/wornlumber.png",
-    "categories": []
+    slug: "worn-lumber",
+    name: "Worn lumber",
+    icon: "/icons/items/wornlumber.png",
+    categories: [],
   },
   "worn-wooden-crate": {
-    "slug": "worn-wooden-crate",
-    "name": "Worn wooden crate",
-    "icon": "/icons/items/wornwoodencrate.png",
-    "categories": [
-      "blocky-stuff",
-      "containers",
-      "wooden-stuff"
-    ]
+    slug: "worn-wooden-crate",
+    name: "Worn wooden crate",
+    icon: "/icons/items/wornwoodencrate.png",
+    categories: ["blocky-stuff", "containers", "wooden-stuff"],
   },
   "woven-carpeting": {
-    "slug": "woven-carpeting",
-    "name": "Woven carpeting",
-    "icon": "/icons/items/wovencarpeting.png",
-    "categories": []
+    slug: "woven-carpeting",
+    name: "Woven carpeting",
+    icon: "/icons/items/wovencarpeting.png",
+    categories: [],
   },
-  "wreath": {
-    "slug": "wreath",
-    "name": "Wreath",
-    "icon": "/icons/items/wreath.png",
-    "categories": [
-      "round-stuff",
-      "wooden-stuff"
-    ]
+  wreath: {
+    slug: "wreath",
+    name: "Wreath",
+    icon: "/icons/items/wreath.png",
+    categories: ["round-stuff", "wooden-stuff"],
   },
-  "wyndon": {
-    "slug": "wyndon",
-    "name": "Wyndon",
-    "icon": "/icons/items/wyndon.png",
-    "categories": [
-      "round-stuff"
-    ]
+  wyndon: {
+    slug: "wyndon",
+    name: "Wyndon",
+    icon: "/icons/items/wyndon.png",
+    categories: ["round-stuff"],
   },
   "yellow-meteor-lamp": {
-    "slug": "yellow-meteor-lamp",
-    "name": "Yellow meteor lamp",
-    "icon": "/icons/items/yellowmeteorlamp.png",
-    "categories": [
-      "cute-stuff",
-      "electronics",
-      "glass-stuff",
-      "shiny-stuff"
-    ]
+    slug: "yellow-meteor-lamp",
+    name: "Yellow meteor lamp",
+    icon: "/icons/items/yellowmeteorlamp.png",
+    categories: ["cute-stuff", "electronics", "glass-stuff", "shiny-stuff"],
   },
   "yellow-paint": {
-    "slug": "yellow-paint",
-    "name": "Yellow paint",
-    "icon": "/icons/items/yellowpaint.png",
-    "categories": [
-      "colorful-stuff",
-      "lots-of-dirt"
-    ]
+    slug: "yellow-paint",
+    name: "Yellow paint",
+    icon: "/icons/items/yellowpaint.png",
+    categories: ["colorful-stuff", "lots-of-dirt"],
   },
   "yellow-rock": {
-    "slug": "yellow-rock",
-    "name": "Yellow rock",
-    "icon": "/icons/items/yellowrock.png",
-    "categories": []
+    slug: "yellow-rock",
+    name: "Yellow rock",
+    icon: "/icons/items/yellowrock.png",
+    categories: [],
   },
   "yellow-tall-grass": {
-    "slug": "yellow-tall-grass",
-    "name": "Yellow Tall grass",
-    "icon": "/icons/items/yellowtallgrass.png",
-    "categories": []
+    slug: "yellow-tall-grass",
+    name: "Yellow Tall grass",
+    icon: "/icons/items/yellowtallgrass.png",
+    categories: [],
   },
   "yellow-green-shoots": {
-    "slug": "yellow-green-shoots",
-    "name": "Yellow-green shoots",
-    "icon": "/icons/items/yellow-greenshoots.png",
-    "categories": []
+    slug: "yellow-green-shoots",
+    name: "Yellow-green shoots",
+    icon: "/icons/items/yellow-greenshoots.png",
+    categories: [],
   },
   "bread-oven": {
-    "slug": "bread-oven",
-    "name": "Bread oven",
-    "icon": "/icons/items/breadoven.png",
-    "categories": []
+    slug: "bread-oven",
+    name: "Bread oven",
+    icon: "/icons/items/breadoven.png",
+    categories: [],
   },
-  "brick": {
-    "slug": "brick",
-    "name": "Brick",
-    "icon": "/icons/items/brick.png",
-    "categories": []
+  brick: {
+    slug: "brick",
+    name: "Brick",
+    icon: "/icons/items/brick.png",
+    categories: [],
   },
-  "canvas": {
-    "slug": "canvas",
-    "name": "Canvas",
-    "icon": "/icons/items/canvas.png",
-    "categories": []
+  canvas: {
+    slug: "canvas",
+    name: "Canvas",
+    icon: "/icons/items/canvas.png",
+    categories: [],
   },
-  "cart": {
-    "slug": "cart",
-    "name": "Cart",
-    "icon": "/icons/items/cart.png",
-    "categories": []
+  cart: {
+    slug: "cart",
+    name: "Cart",
+    icon: "/icons/items/cart.png",
+    categories: [],
   },
   "castform-weather-charm-rain": {
-    "slug": "castform-weather-charm-rain",
-    "name": "Castform weather charm (rain)",
-    "icon": "/icons/items/castformweathercharm(rain).png",
-    "categories": []
+    slug: "castform-weather-charm-rain",
+    name: "Castform weather charm (rain)",
+    icon: "/icons/items/castformweathercharm(rain).png",
+    categories: [],
   },
   "castform-weather-charm-sun": {
-    "slug": "castform-weather-charm-sun",
-    "name": "Castform weather charm (sun)",
-    "icon": "/icons/items/castformweathercharm(sun).png",
-    "categories": []
+    slug: "castform-weather-charm-sun",
+    name: "Castform weather charm (sun)",
+    icon: "/icons/items/castformweathercharm(sun).png",
+    categories: [],
   },
-  "concrete": {
-    "slug": "concrete",
-    "name": "Concrete",
-    "icon": "/icons/items/concrete.png",
-    "categories": []
+  concrete: {
+    slug: "concrete",
+    name: "Concrete",
+    icon: "/icons/items/concrete.png",
+    categories: [],
   },
-  "counter": {
-    "slug": "counter",
-    "name": "Counter",
-    "icon": "/icons/items/counter.png",
-    "categories": []
+  counter: {
+    slug: "counter",
+    name: "Counter",
+    icon: "/icons/items/counter.png",
+    categories: [],
   },
   "crossing-gate": {
-    "slug": "crossing-gate",
-    "name": "Crossing gate",
-    "icon": "/icons/items/crossinggate.png",
-    "categories": []
+    slug: "crossing-gate",
+    name: "Crossing gate",
+    icon: "/icons/items/crossinggate.png",
+    categories: [],
   },
   "dandy-flowers": {
-    "slug": "dandy-flowers",
-    "name": "Dandy flowers",
-    "icon": "/icons/items/dandyflowers.png",
-    "categories": []
+    slug: "dandy-flowers",
+    name: "Dandy flowers",
+    icon: "/icons/items/dandyflowers.png",
+    categories: [],
   },
   "dowsing-machine": {
-    "slug": "dowsing-machine",
-    "name": "Dowsing Machine",
-    "icon": "/icons/items/dowsingmachine.png",
-    "categories": []
+    slug: "dowsing-machine",
+    name: "Dowsing Machine",
+    icon: "/icons/items/dowsingmachine.png",
+    categories: [],
   },
-  "duckweed": {
-    "slug": "duckweed",
-    "name": "Duckweed",
-    "icon": "/icons/items/duckweed.png",
-    "categories": []
+  duckweed: {
+    slug: "duckweed",
+    name: "Duckweed",
+    icon: "/icons/items/duckweed.png",
+    categories: [],
   },
   "frying-pan": {
-    "slug": "frying-pan",
-    "name": "Frying pan",
-    "icon": "/icons/items/fryingpan.png",
-    "categories": []
+    slug: "frying-pan",
+    name: "Frying pan",
+    icon: "/icons/items/fryingpan.png",
+    categories: [],
   },
   "high-up-location": {
-    "slug": "high-up-location",
-    "name": "High-up Location",
-    "icon": "/icons/items/high-uplocation.png",
-    "categories": []
+    slug: "high-up-location",
+    name: "High-up Location",
+    icon: "/icons/items/high-uplocation.png",
+    categories: [],
   },
   "hot-spring-water": {
-    "slug": "hot-spring-water",
-    "name": "Hot-spring Water",
-    "icon": "/icons/items/hot-springwater.png",
-    "categories": []
+    slug: "hot-spring-water",
+    name: "Hot-spring Water",
+    icon: "/icons/items/hot-springwater.png",
+    categories: [],
   },
   "hot-spring-spout": {
-    "slug": "hot-spring-spout",
-    "name": "Hot-spring spout",
-    "icon": "/icons/items/hot-springspout.png",
-    "categories": []
-  },
-  "iron-ignot": {
-    "slug": "iron-ignot",
-    "name": "Iron ignot",
-    "icon": null,
-    "categories": []
+    slug: "hot-spring-spout",
+    name: "Hot-spring spout",
+    icon: "/icons/items/hot-springspout.png",
+    categories: [],
   },
   "kitchen-table": {
-    "slug": "kitchen-table",
-    "name": "Kitchen table",
-    "icon": "/icons/items/kitchentable.png",
-    "categories": []
+    slug: "kitchen-table",
+    name: "Kitchen table",
+    icon: "/icons/items/kitchentable.png",
+    categories: [],
   },
   "large-tree": {
-    "slug": "large-tree",
-    "name": "Large tree",
-    "icon": "/icons/items/largetree.png",
-    "categories": []
+    slug: "large-tree",
+    name: "Large tree",
+    icon: "/icons/items/largetree.png",
+    categories: [],
   },
-  "lava": {
-    "slug": "lava",
-    "name": "Lava",
-    "icon": "/icons/items/lava.png",
-    "categories": []
-  },
-  "linestone": {
-    "slug": "linestone",
-    "name": "Linestone",
-    "icon": null,
-    "categories": []
+  lava: {
+    slug: "lava",
+    name: "Lava",
+    icon: "/icons/items/lava.png",
+    categories: [],
   },
   "muddy-water": {
-    "slug": "muddy-water",
-    "name": "Muddy Water",
-    "icon": "/icons/items/muddywater.png",
-    "categories": []
+    slug: "muddy-water",
+    name: "Muddy Water",
+    icon: "/icons/items/muddywater.png",
+    categories: [],
   },
   "ocean-water": {
-    "slug": "ocean-water",
-    "name": "Ocean Water",
-    "icon": "/icons/items/oceanwater.png",
-    "categories": []
+    slug: "ocean-water",
+    name: "Ocean Water",
+    icon: "/icons/items/oceanwater.png",
+    categories: [],
   },
-  "paper": {
-    "slug": "paper",
-    "name": "Paper",
-    "icon": "/icons/items/paper.png",
-    "categories": []
+  paper: {
+    slug: "paper",
+    name: "Paper",
+    icon: "/icons/items/paper.png",
+    categories: [],
   },
   "party-platter": {
-    "slug": "party-platter",
-    "name": "Party Platter",
-    "icon": "/icons/items/partyplatter.png",
-    "categories": []
+    slug: "party-platter",
+    name: "Party Platter",
+    icon: "/icons/items/partyplatter.png",
+    categories: [],
   },
-  "pedestal": {
-    "slug": "pedestal",
-    "name": "Pedestal",
-    "icon": "/icons/items/pedestal.png",
-    "categories": []
+  pedestal: {
+    slug: "pedestal",
+    name: "Pedestal",
+    icon: "/icons/items/pedestal.png",
+    categories: [],
   },
-  "perch": {
-    "slug": "perch",
-    "name": "Perch",
-    "icon": "/icons/items/perch.png",
-    "categories": []
+  perch: {
+    slug: "perch",
+    name: "Perch",
+    icon: "/icons/items/perch.png",
+    categories: [],
   },
   "plated-food": {
-    "slug": "plated-food",
-    "name": "Plated Food",
-    "icon": "/icons/items/platedfood.png",
-    "categories": []
+    slug: "plated-food",
+    name: "Plated Food",
+    icon: "/icons/items/platedfood.png",
+    categories: [],
   },
-  "post": {
-    "slug": "post",
-    "name": "Post",
-    "icon": "/icons/items/post.png",
-    "categories": []
+  post: {
+    slug: "post",
+    name: "Post",
+    icon: "/icons/items/post.png",
+    categories: [],
   },
   "push-cart": {
-    "slug": "push-cart",
-    "name": "Push cart",
-    "icon": "/icons/items/pushcart.png",
-    "categories": []
+    slug: "push-cart",
+    name: "Push cart",
+    icon: "/icons/items/pushcart.png",
+    categories: [],
   },
   "railway-track": {
-    "slug": "railway-track",
-    "name": "Railway track",
-    "icon": "/icons/items/railwaytrack.png",
-    "categories": []
+    slug: "railway-track",
+    name: "Railway track",
+    icon: "/icons/items/railwaytrack.png",
+    categories: [],
   },
   "rare-pokemetal": {
-    "slug": "rare-pokemetal",
-    "name": "Rare Pokemetal",
-    "icon": "/icons/items/rarepokemetal.png",
-    "categories": []
+    slug: "rare-pokemetal",
+    name: "Rare Pokemetal",
+    icon: "/icons/items/rarepokemetal.png",
+    categories: [],
   },
   "red-rock": {
-    "slug": "red-rock",
-    "name": "Red rock",
-    "icon": "/icons/items/redrock.png",
-    "categories": []
+    slug: "red-rock",
+    name: "Red rock",
+    icon: "/icons/items/redrock.png",
+    categories: [],
   },
   "resort-table": {
-    "slug": "resort-table",
-    "name": "Resort table",
-    "icon": "/icons/items/resorttable.png",
-    "categories": []
+    slug: "resort-table",
+    name: "Resort table",
+    icon: "/icons/items/resorttable.png",
+    categories: [],
   },
   "roserade-tea": {
-    "slug": "roserade-tea",
-    "name": "Roserade Tea",
-    "icon": "/icons/items/roseradetea.png",
-    "categories": []
+    slug: "roserade-tea",
+    name: "Roserade Tea",
+    icon: "/icons/items/roseradetea.png",
+    categories: [],
   },
   "sewer-hole-cover": {
-    "slug": "sewer-hole-cover",
-    "name": "Sewer-hole cover",
-    "icon": "/icons/items/sewer-holecover.png",
-    "categories": []
+    slug: "sewer-hole-cover",
+    name: "Sewer-hole cover",
+    icon: "/icons/items/sewer-holecover.png",
+    categories: [],
   },
   "side-table": {
-    "slug": "side-table",
-    "name": "Side table",
-    "icon": "/icons/items/sidetable.png",
-    "categories": []
+    slug: "side-table",
+    name: "Side table",
+    icon: "/icons/items/sidetable.png",
+    categories: [],
   },
   "smooth-rock": {
-    "slug": "smooth-rock",
-    "name": "Smooth Rock",
-    "icon": "/icons/items/smoothrock.png",
-    "categories": []
+    slug: "smooth-rock",
+    name: "Smooth Rock",
+    icon: "/icons/items/smoothrock.png",
+    categories: [],
   },
   "stepping-stones": {
-    "slug": "stepping-stones",
-    "name": "Stepping stones",
-    "icon": "/icons/items/steppingstones.png",
-    "categories": []
-  },
-  "stones": {
-    "slug": "stones",
-    "name": "Stones",
-    "icon": null,
-    "categories": []
+    slug: "stepping-stones",
+    name: "Stepping stones",
+    icon: "/icons/items/steppingstones.png",
+    categories: [],
   },
   "strange-strings": {
-    "slug": "strange-strings",
-    "name": "Strange strings",
-    "icon": "/icons/items/strangestrings.png",
-    "categories": []
+    slug: "strange-strings",
+    name: "Strange strings",
+    icon: "/icons/items/strangestrings.png",
+    categories: [],
   },
-  "tinkagear": {
-    "slug": "tinkagear",
-    "name": "Tinkagear",
-    "icon": "/icons/items/tinkagear.png",
-    "categories": []
+  tinkagear: {
+    slug: "tinkagear",
+    name: "Tinkagear",
+    icon: "/icons/items/tinkagear.png",
+    categories: [],
   },
   "traffic-cone": {
-    "slug": "traffic-cone",
-    "name": "Traffic cone",
-    "icon": "/icons/items/trafficcone.png",
-    "categories": []
+    slug: "traffic-cone",
+    name: "Traffic cone",
+    icon: "/icons/items/trafficcone.png",
+    categories: [],
   },
-  "walkway": {
-    "slug": "walkway",
-    "name": "Walkway",
-    "icon": "/icons/items/walkway.png",
-    "categories": []
+  walkway: {
+    slug: "walkway",
+    name: "Walkway",
+    icon: "/icons/items/walkway.png",
+    categories: [],
   },
-  "waterfall": {
-    "slug": "waterfall",
-    "name": "Waterfall",
-    "icon": "/icons/items/waterfall.png",
-    "categories": []
+  waterfall: {
+    slug: "waterfall",
+    name: "Waterfall",
+    icon: "/icons/items/waterfall.png",
+    categories: [],
   },
-  "waterwheel": {
-    "slug": "waterwheel",
-    "name": "Waterwheel",
-    "icon": "/icons/items/waterwheel.png",
-    "categories": []
+  waterwheel: {
+    slug: "waterwheel",
+    name: "Waterwheel",
+    icon: "/icons/items/waterwheel.png",
+    categories: [],
   },
   "wooden-path": {
-    "slug": "wooden-path",
-    "name": "Wooden path",
-    "icon": "/icons/items/woodenpath.png",
-    "categories": []
-  }
+    slug: "wooden-path",
+    name: "Wooden path",
+    icon: "/icons/items/woodenpath.png",
+    categories: [],
+  },
 } as const;

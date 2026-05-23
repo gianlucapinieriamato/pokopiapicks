@@ -934,8 +934,8 @@ export const ITEM_RECIPES: Record<string, CraftingRecipe> = {
     "unlock": "Shop - Rocky Ridges Lv. 9",
     "materials": [
       {
-        "slug": Item.Linestone,
-        "name": "Linestone",
+        "slug": Item.Limestone,
+        "name": "Limestone",
         "qty": 2
       },
       {
@@ -2248,8 +2248,8 @@ export const ITEM_RECIPES: Record<string, CraftingRecipe> = {
     "unlock": "Register 170 Pokemon",
     "materials": [
       {
-        "slug": Item.IronIgnot,
-        "name": "Iron ignot",
+        "slug": Item.IronIngot,
+        "name": "Iron ingot",
         "qty": 1
       }
     ]
@@ -5783,8 +5783,8 @@ export const ITEM_RECIPES: Record<string, CraftingRecipe> = {
     "unlock": "Shop - Rocky Ridges Lv. 2",
     "materials": [
       {
-        "slug": Item.Stones,
-        "name": "Stones",
+        "slug": Item.Stone,
+        "name": "Stone",
         "qty": 3
       }
     ]
