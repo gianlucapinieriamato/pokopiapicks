@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import {
   POKEMON_BY_SLUG,
   POKEMON_LIST,
+  POKEMON_VARIANTS_BY_BASE,
+  POKEMON_BASE_BY_VARIANT,
   pkmnIconUrl,
   dexNum,
 } from "@/app/lib/const";
@@ -65,6 +67,10 @@ export default async function PokemonPage({
   const { slug } = await params;
   const p = (POKEMON_BY_SLUG[slug] ?? null) as PokemonConst | null;
   if (!p) notFound();
+
+  const variants = POKEMON_VARIANTS_BY_BASE[slug] ?? [];
+  const baseForm = POKEMON_BASE_BY_VARIANT[slug] ?? null;
+  const isVariant = baseForm !== null;
 
   const idx = POKEMON_LIST.findIndex((q) => q.slug === slug);
   const prev = idx > 0 ? POKEMON_LIST[idx - 1] : null;
@@ -140,6 +146,17 @@ export default async function PokemonPage({
           <TcgCard p={p} size="lg" />
         </div>
         <div className="flex-1 min-w-0">
+          {isVariant && baseForm && (
+            <div className="font-mono text-[11px] text-ink-soft tracking-[0.04em] mb-2 flex items-center gap-1">
+              <span>Variant of</span>
+              <Link
+                href={`/pokemon/${baseForm.slug}`}
+                className="text-leaf font-semibold no-underline hover:underline"
+              >
+                {baseForm.label}
+              </Link>
+            </div>
+          )}
           <div className="font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] mb-[2px]">
             #{dexNum(p)}
           </div>
@@ -197,6 +214,24 @@ export default async function PokemonPage({
             </div>
           </div>
 
+          {variants.length > 0 && (
+            <div className="mt-3">
+              <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1">
+                Other forms
+              </p>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {variants.map((v) => (
+                  <Link
+                    key={v.slug}
+                    href={`/pokemon/${v.slug}`}
+                    className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em] no-underline"
+                  >
+                    {v.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
           <GoesWellWith slug={slug} habitat={p.habitat} />
         </div>
       </div>
