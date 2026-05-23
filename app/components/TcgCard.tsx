@@ -210,8 +210,8 @@ export default function TcgCard({
               Likes
             </div>
             <ChipRow
-              items={p.categories.map((c) => c.label)}
-              max={size === "lg" ? 2 : 1}
+              items={p.categories.map((c) => c.label).sort((a, b) => a.length - b.length)}
+              max={size === "lg" ? 3 : 2}
               chipClass={`${CHIP_BASE} ${v.chip}`}
               badgeClass={`${CHIP_BASE} ${v.chip} text-ink-soft`}
             />
