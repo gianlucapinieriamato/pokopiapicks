@@ -21,7 +21,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const loc = LOCATIONS[slug];
   if (!loc) return { title: "Not found" };
-  return { title: loc.name, description: loc.description };
+  return {
+    title: `${loc.name} — Location`,
+    description: `${loc.name} in Pokemon Pokopia — items, materials, shop items and Pokemon found in this location. ${loc.description ? loc.description.slice(0, 100) : ""}`.trim(),
+  };
 }
 
 // Scraped names that differ from canonical ITEMS keys or correct display names

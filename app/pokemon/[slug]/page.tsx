@@ -25,9 +25,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = POKEMON[slug];
   if (!p) return { title: "Not found" };
+  const specNames = p.specialties?.map((s) => SPECIALTIES[s]?.name).filter(Boolean).join(", ");
+  const catList = p.categories.slice(0, 3).join(", ");
   return {
-    title: `${p.name} (#${dexNum(p)})`,
-    description: `${p.name} — ${p.habitat} habitat, ${p.categories.length} favorite categories.`,
+    title: `${p.name} — gifts, habitat & specialties`,
+    description: `What does ${p.name} like in Pokemon Pokopia? ${p.habitat} habitat${specNames ? `, ${specNames} specialty` : ""}${catList ? `. Loves: ${catList}` : ""}. Find the best gift items and roommates.`,
   };
 }
 

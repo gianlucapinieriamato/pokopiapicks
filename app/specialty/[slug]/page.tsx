@@ -17,7 +17,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const s = SPECIALTIES[slug];
   if (!s) return { title: "Not found" };
-  return { title: `${s.name} specialty`, description: s.description };
+  return {
+    title: `${s.name} — Specialty`,
+    description: `${s.pokemon.length} Pokemon have the ${s.name} specialty in Pokemon Pokopia. ${s.description ? s.description.slice(0, 130) : ""}`.trim(),
+  };
 }
 
 export default async function SpecialtyPage({ params }: { params: Promise<{ slug: string }> }) {

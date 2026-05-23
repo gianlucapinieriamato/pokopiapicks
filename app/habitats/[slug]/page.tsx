@@ -23,7 +23,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const h = HABITATS[slug];
   if (!h) return { title: "Not found" };
-  return { title: h.name, description: h.description };
+  return {
+    title: `${h.name} — Habitat`,
+    description: `${h.name} habitat in Pokemon Pokopia — ${h.pokemon.length} Pokemon spawn here. ${h.description ? h.description.slice(0, 120) : ""}`.trim(),
+  };
 }
 
 export default async function HabitatPage({ params }: { params: Promise<{ slug: string }> }) {

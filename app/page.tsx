@@ -20,7 +20,7 @@ function normalize(s: string) {
 const FEATURES = [
   { href: "/matchmaker", label: "Matchmaker", desc: "Find the best roommates for any Pokemon" },
   { href: "/items", label: "Item Explorer", desc: "Browse all items and gift categories" },
-  { href: "/lookup", label: "Advanced Filter", desc: "Filter by habitat, flavor, specialty & more" },
+  { href: "/pokedex", label: "Pokédex", desc: "Filter by habitat, flavor, specialty & more" },
   { href: "/habitats", label: "Habitats", desc: "Explore where each Pokemon lives" },
 ] as const;
 
