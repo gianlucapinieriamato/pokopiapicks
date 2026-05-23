@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { ITEMS, CATEGORIES, POKEMON, ITEM_RECIPES, pkmnIconUrl, dexNum, catDisplayName } from "@/app/lib/data";
+import type { CategorySlug } from "@/app/lib/data/consts";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
@@ -34,7 +35,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
     .filter((p) => {
       return item.categories.some((catSlug) => {
         const catDisplay = CATEGORIES[catSlug]?.name ?? catSlug;
-        return p.categories.includes(catDisplay) || p.categories.includes(catSlug);
+        return p.categories.includes(catDisplay as CategorySlug) || p.categories.includes(catSlug as CategorySlug);
       });
     })
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));

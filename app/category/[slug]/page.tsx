@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { CATEGORIES, ITEMS, POKEMON, pkmnIconUrl, dexNum } from "@/app/lib/data";
+import type { CategorySlug } from "@/app/lib/data/consts";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
@@ -32,7 +33,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   if (!cat) return <PageWrap><p>Category not found.</p></PageWrap>;
 
   const pokemonWhoLike = Object.values(POKEMON)
-    .filter((p) => p.categories.includes(cat.name) || p.categories.includes(slug))
+    .filter((p) => p.categories.includes(cat.slug as CategorySlug) || p.categories.includes(slug as CategorySlug))
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   return (

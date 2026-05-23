@@ -7,6 +7,7 @@ import {
   CATEGORIES,
   LOCATIONS,
 } from "@/app/lib/data";
+import type { CategorySlug, LocationSlug } from "@/app/lib/data/consts";
 import TcgCard from "@/app/components/TcgCard";
 import Shortcut from "@/app/components/Shortcut";
 import SearchInput from "@/app/components/SearchInput";
@@ -121,12 +122,12 @@ export default function PokedexClient() {
         !p.specialties?.some((s) => specialtyFilter.includes(s))
       )
         return false;
-      if (catFilter.length && !catFilter.every((c) => p.categories.includes(c)))
+      if (catFilter.length && !catFilter.every((c) => p.categories.includes(c as CategorySlug)))
         return false;
       if (
         locFilter.length &&
         !locFilter.some((loc) =>
-          p.habitatList?.some((h) => h.locations.includes(loc)),
+          p.habitatList?.some((h) => h.locations.includes(loc as LocationSlug)),
         )
       )
         return false;

@@ -1,23 +1,25 @@
+import type { CategorySlug, HabitatConfigSlug, LocationSlug, SpecialtySlug, PokemonHabitatSlug } from "./data/consts";
+
 export type PokemonEntry = {
   name: string;
   num: number;
-  habitat: string;
-  habitatSlug: string; // slug reference for cross-linking
-  categories: readonly string[]; // category slugs (e.g. "blocky-stuff")
+  habitat: string;                          // display name (e.g. "Dry")
+  habitatSlug: PokemonHabitatSlug;          // typed slug (e.g. "dry")
+  categories: readonly CategorySlug[];      // typed category slugs
   icon: string;
   slug: string;
   nationalDexNum: number | null;
   spriteHq: string | null;
   types?: readonly string[];
-  specialties?: readonly string[];
+  specialties?: readonly SpecialtySlug[];   // typed specialty slugs
   flavor?: string | null;
-  primaryLocation?: string | null;
+  primaryLocation?: LocationSlug | null;    // typed location slug
   habitatList?: HabitatListEntry[];
 };
 
 export type HabitatListEntry = {
-  habitatSlug: string;
-  locations: readonly string[];
+  habitatSlug: HabitatConfigSlug;           // typed habitat config slug
+  locations: readonly LocationSlug[];       // typed location slugs
   rarity: string | null;
   time: readonly string[] | null;
   weather: readonly string[] | null;

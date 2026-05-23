@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LOCATIONS, POKEMON } from "@/app/lib/data";
+import type { LocationSlug } from "@/app/lib/data/consts";
 import { resolveItem } from "@/app/lib/items";
 import ItemTile from "@/app/components/ItemTile";
 import JsonLd from "@/app/components/JsonLd";
@@ -62,7 +63,7 @@ export default async function LocationPage({
   if (!loc) notFound();
 
   const pokemonHere = Object.values(POKEMON)
-    .filter((p) => p.habitatList?.some((h) => h.locations.includes(slug)))
+    .filter((p) => p.habitatList?.some((h) => h.locations.includes(slug as LocationSlug)))
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   const uniqueMaterials = [...new Set(loc.materials)];

@@ -1,0 +1,209 @@
+/**
+ * scripts/gen-consts.ts
+ * Generates app/lib/data/consts.ts and scripts/consts-map.json
+ * from the existing data files.
+ *
+ * Run with: npx tsx scripts/gen-consts.ts
+ */
+
+import { writeFileSync } from "fs";
+import { join } from "path";
+import { CATEGORIES } from "../app/lib/data/categories";
+import { HABITATS } from "../app/lib/data/habitats";
+import { LOCATIONS } from "../app/lib/data/locations";
+import { SPECIALTIES } from "../app/lib/data/specialties";
+import { POKEMON } from "../app/lib/data/pokemon";
+
+// ---------------------------------------------------------------------------
+// Helper: convert a display name to a PascalCase identifier
+// "Blocky stuff" → "BlockyStuff"
+// "Smooth tall grass" → "SmoothTallGrass"
+// "DJ" → "Dj"  (lower-cased all-caps words are kept as-is via word boundary)
+// ---------------------------------------------------------------------------
+function toPascalCase(name: string): string {
+  return name
+    .split(/[\s\-_/()]+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("")
+    .replace(/[^A-Za-z0-9]/g, "");
+}
+
+// ---------------------------------------------------------------------------
+// Collect data
+// ---------------------------------------------------------------------------
+
+// 1. Categories (43)
+const categories = Object.values(CATEGORIES).map((c) => ({
+  slug: c.slug,
+  name: c.name,
+  key: toPascalCase(c.name),
+}));
+
+// 2. Habitat configs (201) — entries in HABITATS
+const habitatConfigs = Object.values(HABITATS).map((h) => ({
+  slug: h.slug,
+  name: h.name,
+  key: toPascalCase(h.name),
+}));
+
+// 3. Locations (6)
+const locations = Object.values(LOCATIONS).map((l) => ({
+  slug: l.slug,
+  name: l.name,
+  key: toPascalCase(l.name),
+}));
+
+// 4. Specialties (31)
+const specialties = Object.values(SPECIALTIES).map((s) => ({
+  slug: s.slug,
+  name: s.name,
+  key: toPascalCase(s.name),
+}));
+
+// 5. PokemonHabitat — distinct values of pokemon.habitatSlug
+// We need display names too; derive from pokemon.habitat (title-cased)
+const pokemonHabitatMap = new Map<string, string>(); // slug → display name
+for (const p of Object.values(POKEMON) as any[]) {
+  if (p.habitatSlug && !pokemonHabitatMap.has(p.habitatSlug)) {
+    // habitat field holds the display name (e.g. "Dry")
+    pokemonHabitatMap.set(p.habitatSlug, p.habitat as string);
+  }
+}
+const pokemonHabitats = [...pokemonHabitatMap.entries()]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([slug, name]) => ({
+    slug,
+    name,
+    key: toPascalCase(name),
+  }));
+
+// ---------------------------------------------------------------------------
+// De-duplicate keys within each group (in case two entries produce same key)
+// ---------------------------------------------------------------------------
+function dedup(
+  entries: { slug: string; name: string; key: string }[]
+): { slug: string; name: string; key: string }[] {
+  const seen = new Map<string, number>();
+  return entries.map((e) => {
+    const count = seen.get(e.key) ?? 0;
+    seen.set(e.key, count + 1);
+    return count === 0 ? e : { ...e, key: `${e.key}${count + 1}` };
+  });
+}
+
+const catEntries = dedup(categories);
+const habEntries = dedup(habitatConfigs);
+const locEntries = dedup(locations);
+const spEntries = dedup(specialties);
+const phEntries = dedup(pokemonHabitats);
+
+// ---------------------------------------------------------------------------
+// Build the slug → "Group.Key" lookup map (consts-map.json)
+// ---------------------------------------------------------------------------
+// We need separate maps per field to avoid collision (e.g. "dry" as location vs habitatSlug)
+const constsMap: Record<string, string> = {};
+
+for (const e of catEntries) {
+  constsMap[`Category::${e.slug}`] = `Category.${e.key}`;
+}
+for (const e of habEntries) {
+  constsMap[`HabitatConfig::${e.slug}`] = `HabitatConfig.${e.key}`;
+}
+for (const e of locEntries) {
+  constsMap[`Location::${e.slug}`] = `Location.${e.key}`;
+}
+for (const e of spEntries) {
+  constsMap[`Specialty::${e.slug}`] = `Specialty.${e.key}`;
+}
+for (const e of phEntries) {
+  constsMap[`PokemonHabitat::${e.slug}`] = `PokemonHabitat.${e.key}`;
+}
+
+// ---------------------------------------------------------------------------
+// Generate consts.ts content
+// ---------------------------------------------------------------------------
+function buildConstBlock(
+  groupName: string,
+  typeName: string,
+  entries: { slug: string; name: string; key: string }[],
+  comment: string
+): string {
+  const maxKeyLen = Math.max(...entries.map((e) => e.key.length));
+  const rows = entries
+    .map((e) => {
+      const pad = " ".repeat(maxKeyLen - e.key.length + 2);
+      return `  ${e.key}:${pad}"${e.slug}",`;
+    })
+    .join("\n");
+
+  return `/** ${comment} */
+export const ${groupName} = {
+${rows}
+} as const;
+export type ${typeName} = typeof ${groupName}[keyof typeof ${groupName}];
+`;
+}
+
+const banner = `// AUTO-GENERATED by scripts/gen-consts.ts — do not edit by hand
+// Re-run \`npx tsx scripts/gen-consts.ts\` after adding or renaming slugs.
+`;
+
+const constsTs =
+  banner +
+  "\n" +
+  buildConstBlock(
+    "Category",
+    "CategorySlug",
+    catEntries,
+    "Category slugs (43)"
+  ) +
+  "\n" +
+  buildConstBlock(
+    "HabitatConfig",
+    "HabitatConfigSlug",
+    habEntries,
+    "Habitat configuration slugs — habitatList[].habitatSlug (201)"
+  ) +
+  "\n" +
+  buildConstBlock(
+    "Location",
+    "LocationSlug",
+    locEntries,
+    "Location slugs (6)"
+  ) +
+  "\n" +
+  buildConstBlock(
+    "Specialty",
+    "SpecialtySlug",
+    spEntries,
+    "Specialty slugs (31)"
+  ) +
+  "\n" +
+  buildConstBlock(
+    "PokemonHabitat",
+    "PokemonHabitatSlug",
+    phEntries,
+    "Top-level pokemon habitat-type slugs — pokemon.habitatSlug (6)"
+  );
+
+// ---------------------------------------------------------------------------
+// Write files
+// ---------------------------------------------------------------------------
+const root = join(__dirname, "..");
+
+const constsPath = join(root, "app", "lib", "data", "consts.ts");
+writeFileSync(constsPath, constsTs, "utf-8");
+console.log(`Wrote ${constsPath}`);
+
+const mapPath = join(root, "scripts", "consts-map.json");
+writeFileSync(mapPath, JSON.stringify(constsMap, null, 2), "utf-8");
+console.log(`Wrote ${mapPath}`);
+
+// Print summary
+console.log("\nSummary:");
+console.log(`  Category:      ${catEntries.length} entries`);
+console.log(`  HabitatConfig: ${habEntries.length} entries`);
+console.log(`  Location:      ${locEntries.length} entries`);
+console.log(`  Specialty:     ${spEntries.length} entries`);
+console.log(`  PokemonHabitat:${phEntries.length} entries`);
