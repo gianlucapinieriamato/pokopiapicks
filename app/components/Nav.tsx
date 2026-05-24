@@ -5,11 +5,10 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const LINKS = [
-  { href: "/", label: "Home" },
   { href: "/pokedex", label: "Pokedex" },
   { href: "/items", label: "Items" },
-  { href: "/specialty", label: "Specialties" },
   { href: "/habitats", label: "Habitats" },
+  { href: "/specialty", label: "Specialties" },
   { href: "/locations", label: "Locations" },
   { href: "/matchmaker", label: "Matchmaker" },
 ];
@@ -20,16 +19,14 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   const isActive = (href: string) =>
-    href === "/"
-      ? pathname === "/"
-      : pathname === href ||
-        (href === "/pokedex" && pathname.startsWith("/pokemon")) ||
-        (href === "/items" &&
-          (pathname.startsWith("/item/") ||
-            pathname.startsWith("/category"))) ||
-        (href === "/specialty" && pathname.startsWith("/specialty/")) ||
-        (href === "/habitats" && pathname.startsWith("/habitats/")) ||
-        (href === "/locations" && pathname.startsWith("/locations/"));
+    pathname === href ||
+    (href === "/pokedex" && pathname.startsWith("/pokemon")) ||
+    (href === "/items" &&
+      (pathname.startsWith("/item/") ||
+        pathname.startsWith("/category"))) ||
+    (href === "/specialty" && pathname.startsWith("/specialty/")) ||
+    (href === "/habitats" && pathname.startsWith("/habitats/")) ||
+    (href === "/locations" && pathname.startsWith("/locations/"));
 
   const linkBase =
     "font-outfit font-bold text-[12px] px-3 py-[6px] rounded-full text-ink-soft no-underline transition-all tracking-[0.02em] hover:bg-surface-1 hover:text-ink";

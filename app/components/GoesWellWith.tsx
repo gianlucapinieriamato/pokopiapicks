@@ -2,23 +2,29 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useMemo } from "react";
-import { POKEMON_LIST, pkmnIconUrl, dexNum } from "@/app/lib/data";
+import { POKEMON_LIST, pkmnIconUrl, dexNum } from "@/app/lib/const";
+import type { PokemonHabitatConst } from "@/app/lib/const";
 import SectionTitle from "@/app/components/SectionTitle";
 import InfoTip from "@/app/components/InfoTip";
 
-export default function GoesWellWith({ slug, habitat }: { slug: string; habitat: string }) {
+export default function GoesWellWith({
+  slug,
+  habitat,
+}: {
+  slug: string;
+  habitat: PokemonHabitatConst;
+}) {
   const picks = useMemo(() => {
-    const sameHabitat = POKEMON_LIST.filter((q) => q.habitat === habitat && q.slug !== slug);
+    const sameHabitat = POKEMON_LIST.filter(
+      (q) => q.habitat.slug === habitat.slug && q.slug !== slug
+    );
     const seen = new Set<number>();
     const deduped = sameHabitat.filter((q) => {
       if (seen.has(q.num)) return false;
       seen.add(q.num);
       return true;
     });
-    // Deterministic pseudo-shuffle: compute a stable sort key per item so the
-    // comparator is antisymmetric (compare(a,b) === -compare(b,a)) and produces
-    // consistent results across JS engines. The seed mixes all pool nums so the
-    // selection changes meaningfully between different habitats.
+    // Deterministic pseudo-shuffle
     const seed = deduped.reduce((s, p) => s + p.num, 0);
     const withKey = deduped.map((p) => ({ p, key: (p.num * 1009 + seed) % 307 }));
     return withKey.sort((a, b) => a.key - b.key).map((x) => x.p).slice(0, 6);
@@ -28,7 +34,7 @@ export default function GoesWellWith({ slug, habitat }: { slug: string; habitat:
 
   return (
     <div className="mt-4 pt-4 border-t border-paper-edge max-md:mt-3 max-md:pt-3">
-      <SectionTitle pill={habitat}>
+      <SectionTitle pill={habitat.label}>
         Goes well with
         <InfoTip tip="Pokemon with the same habitat can share a living space in Pokopia." />
       </SectionTitle>
@@ -40,10 +46,18 @@ export default function GoesWellWith({ slug, habitat }: { slug: string; habitat:
             className="bg-chrome border border-[1.5px] border-paper-edge rounded-[14px] py-3 px-2 text-center no-underline text-ink flex flex-col items-center gap-1 transition-all hover:bg-paper hover:border-accent hover:-translate-y-0.5 hover:shadow-[0_6px_16px_-6px_var(--shadow)]"
           >
             <div className="relative size-14">
-              <Image fill src={pkmnIconUrl(q)} alt={q.name} className="object-contain [image-rendering:pixelated]" sizes="56px" />
+              <Image
+                fill
+                src={pkmnIconUrl(q)}
+                alt={q.label}
+                className="object-contain [image-rendering:pixelated]"
+                sizes="56px"
+              />
             </div>
-            <div className="font-mono text-[10px] text-ink-fade font-medium">#{dexNum(q)}</div>
-            <div className="font-bold text-[12px] leading-tight">{q.name}</div>
+            <div className="font-mono text-[10px] text-ink-fade font-medium">
+              #{dexNum(q)}
+            </div>
+            <div className="font-bold text-[12px] leading-tight">{q.label}</div>
           </Link>
         ))}
       </div>

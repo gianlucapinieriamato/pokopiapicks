@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { pkmnIconUrl, dexNum } from "@/app/lib/data";
-import type { PokemonEntry } from "@/app/lib/types";
+import { pkmnIconUrl, dexNum } from "@/app/lib/const";
+import type { PokemonConst } from "@/app/lib/const";
 
 export default function PokemonGridCard({
   p,
   prefix,
   children,
 }: {
-  p: PokemonEntry;
+  p: PokemonConst;
   prefix?: React.ReactNode;
   children?: React.ReactNode;
 }) {
@@ -19,10 +19,10 @@ export default function PokemonGridCard({
     >
       {prefix}
       <div className="relative size-16">
-        <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="64px" />
+        <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain [image-rendering:pixelated]" sizes="64px" />
       </div>
       <div className="font-mono text-[10px] text-ink-fade font-medium">#{dexNum(p)}</div>
-      <div className="font-bold text-[12px] leading-tight">{p.name}</div>
+      <div className="font-bold text-[12px] leading-tight">{p.label}</div>
       {children}
     </Link>
   );

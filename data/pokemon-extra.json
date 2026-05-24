@@ -1,0 +1,2158 @@
+{
+  "abra": {
+    "classification": "Psi Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "43.0lbs",
+    "weightKg": "19.5kg"
+  },
+  "absol": {
+    "classification": "Disaster Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "103.6lbs",
+    "weightKg": "47.0kg"
+  },
+  "aerodactyl": {
+    "classification": "Fossil Pokémon",
+    "heightFt": "5’11”",
+    "heightM": "1.8m",
+    "weightLbs": "130.1lbs",
+    "weightKg": "59.0kg"
+  },
+  "alakazam": {
+    "classification": "Psi Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "105.8lbs",
+    "weightKg": "48.0kg"
+  },
+  "altaria": {
+    "classification": "Humming Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "45.4lbs",
+    "weightKg": "20.6kg"
+  },
+  "amaura": {
+    "classification": "Tundra Pokémon",
+    "heightFt": "4’03”",
+    "heightM": "1.3m",
+    "weightLbs": "55.6lbs",
+    "weightKg": "25.2kg"
+  },
+  "ampharos": {
+    "classification": "Light Pokémon",
+    "heightFt": "4’07”",
+    "heightM": "1.4m",
+    "weightLbs": "135.6lbs",
+    "weightKg": "61.5kg"
+  },
+  "arbok": {
+    "classification": "Cobra Pokémon",
+    "heightFt": "11’06”",
+    "heightM": "3.5m",
+    "weightLbs": "143.3lbs",
+    "weightKg": "65kg"
+  },
+  "arcanine": {
+    "classification": "Legendary Pokémon",
+    "heightFt": "6’03”",
+    "heightM": "1.9m",
+    "weightLbs": "341.7lbs",
+    "weightKg": "155kg"
+  },
+  "ariados": {
+    "classification": "Long Leg Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "73.9lbs",
+    "weightKg": "33.5kg"
+  },
+  "armarouge": {
+    "classification": "Fire Warrior Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "187.4lbs",
+    "weightKg": "85kg"
+  },
+  "articuno": {
+    "classification": "Freeze Pokémon",
+    "heightFt": "5’07”",
+    "heightM": "1.7m",
+    "weightLbs": "122.1lbs",
+    "weightKg": "55.4kg"
+  },
+  "audino": {
+    "classification": "Hearing Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "68.3lbs",
+    "weightKg": "31.0kg"
+  },
+  "aurorus": {
+    "classification": "Tundra Pokémon",
+    "heightFt": "8’10”",
+    "heightM": "2.7m",
+    "weightLbs": "496.0lbs",
+    "weightKg": "225.0kg"
+  },
+  "axew": {
+    "classification": "Tusk Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "39.7lbs",
+    "weightKg": "18kg"
+  },
+  "azumarill": {
+    "classification": "Aquarabbit Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "62.8lbs",
+    "weightKg": "28.5kg"
+  },
+  "azurill": {
+    "classification": "Polka Dot Pokémon",
+    "heightFt": "0’08”",
+    "heightM": "0.2m",
+    "weightLbs": "4.4lbs",
+    "weightKg": "2kg"
+  },
+  "bastiodon": {
+    "classification": "Shield Pokémon",
+    "heightFt": "4’03”",
+    "heightM": "1.3m",
+    "weightLbs": "329.6lbs",
+    "weightKg": "149.5kg"
+  },
+  "beldum": {
+    "classification": "Iron Ball Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "209.9lbs",
+    "weightKg": "95.2kg"
+  },
+  "bellossom": {
+    "classification": "Flower Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "12.8lbs",
+    "weightKg": "5.8kg"
+  },
+  "bellsprout": {
+    "classification": "Flower Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "8.8lbs",
+    "weightKg": "4kg"
+  },
+  "blastoise": {
+    "classification": "Shellfish Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "188.5lbs",
+    "weightKg": "85.5kg"
+  },
+  "blaziken": {
+    "classification": "Blaze Pokémon",
+    "heightFt": "6’03”",
+    "heightM": "1.9m",
+    "weightLbs": "114.6lbs",
+    "weightKg": "52kg"
+  },
+  "blissey": {
+    "classification": "Happiness Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "103.2lbs",
+    "weightKg": "46.8kg"
+  },
+  "bonsly": {
+    "classification": "Bonsai Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "33.1lbs",
+    "weightKg": "15kg"
+  },
+  "bulbasaur": {
+    "classification": "Seed Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "15.2lbs",
+    "weightKg": "6.9kg"
+  },
+  "cacnea": {
+    "classification": "Cactus Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "113.1lbs",
+    "weightKg": "51.3kg"
+  },
+  "cacturne": {
+    "classification": "Scarecrow Pokémon",
+    "heightFt": "4’03”",
+    "heightM": "1.3m",
+    "weightLbs": "170.6lbs",
+    "weightKg": "77.4kg"
+  },
+  "carkol": {
+    "classification": "Coal Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "172.0lbs",
+    "weightKg": "78kg"
+  },
+  "ceruledge": {
+    "classification": "Fire Blades Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "136.7lbs",
+    "weightKg": "62kg"
+  },
+  "chandelure": {
+    "classification": "Luring Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "75.6lbs",
+    "weightKg": "34.3kg"
+  },
+  "chansey": {
+    "classification": "Egg Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "76.3lbs",
+    "weightKg": "34.6kg"
+  },
+  "charcadet": {
+    "classification": "Fire Child Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "23.1lbs",
+    "weightKg": "10.5kg"
+  },
+  "charizard": {
+    "classification": "Flame Pokémon",
+    "heightFt": "5’07”",
+    "heightM": "1.7m",
+    "weightLbs": "199.5lbs",
+    "weightKg": "90.5kg"
+  },
+  "charjabug": {
+    "classification": "Battery Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "23.1lbs",
+    "weightKg": "10.5kg"
+  },
+  "charmander": {
+    "classification": "Lizard Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "18.7lbs",
+    "weightKg": "8.5kg"
+  },
+  "charmeleon": {
+    "classification": "Flame Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "41.9lbs",
+    "weightKg": "19kg"
+  },
+  "chatot": {
+    "classification": "Music Note Pokémon",
+    "heightFt": "0’00”",
+    "heightM": "m",
+    "weightLbs": "0.0lbs",
+    "weightKg": "kg"
+  },
+  "cinccino": {
+    "classification": "Scarf Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "16.5lbs",
+    "weightKg": "7.5kg"
+  },
+  "cinderace": {
+    "classification": "Striker Pokémon",
+    "heightFt": "4’07”",
+    "heightM": "1.4m",
+    "weightLbs": "72.8lbs",
+    "weightKg": "33kg"
+  },
+  "clefable": {
+    "classification": "Fairy Pokémon",
+    "heightFt": "4’03”",
+    "heightM": "1.3m",
+    "weightLbs": "88.2lbs",
+    "weightKg": "40kg"
+  },
+  "clefairy": {
+    "classification": "Fairy Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "16.5lbs",
+    "weightKg": "7.5kg"
+  },
+  "cleffa": {
+    "classification": "Star Shape Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "6.6lbs",
+    "weightKg": "3kg"
+  },
+  "clodsire": {
+    "classification": "Spiny Fish Pokémon",
+    "heightFt": "5’11”",
+    "heightM": "1.8m",
+    "weightLbs": "491.6lbs",
+    "weightKg": "223kg"
+  },
+  "coalossal": {
+    "classification": "Coal Pokémon",
+    "heightFt": "9’02”",
+    "heightM": "2.8m",
+    "weightLbs": "684.5lbs",
+    "weightKg": "310.5kg"
+  },
+  "combee": {
+    "classification": "Tiny Bee Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "12.1lbs",
+    "weightKg": "5.5kg"
+  },
+  "combusken": {
+    "classification": "Young Fowl Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "43.0lbs",
+    "weightKg": "19.5kg"
+  },
+  "conkeldurr": {
+    "classification": "Muscular Pokémon",
+    "heightFt": "4’07”",
+    "heightM": "1.4m",
+    "weightLbs": "191.8lbs",
+    "weightKg": "87kg"
+  },
+  "corviknight": {
+    "classification": "Raven Pokémon",
+    "heightFt": "7’03”",
+    "heightM": "2.2m",
+    "weightLbs": "165.3lbs",
+    "weightKg": "75kg"
+  },
+  "corvisquire": {
+    "classification": "Raven Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "35.3lbs",
+    "weightKg": "16kg"
+  },
+  "cramorant": {
+    "classification": "Gulp Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "39.7lbs",
+    "weightKg": "18kg"
+  },
+  "cranidos": {
+    "classification": "Head Butt Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "69.4lbs",
+    "weightKg": "31.5kg"
+  },
+  "crobat": {
+    "classification": "Bat Pokémon",
+    "heightFt": "5’11”",
+    "heightM": "1.8m",
+    "weightLbs": "165.3lbs",
+    "weightKg": "75.0kg"
+  },
+  "cubone": {
+    "classification": "Lonely Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "14.3lbs",
+    "weightKg": "6.5kg"
+  },
+  "cyndaquil": {
+    "classification": "Fire Mouse Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "17.4lbs",
+    "weightKg": "7.9kg"
+  },
+  "dachsbun": {
+    "classification": "Dog Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "32.8lbs",
+    "weightKg": "14.9kg"
+  },
+  "dartrix": {
+    "classification": "Blade Quill Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "35.3lbs",
+    "weightKg": "16kg"
+  },
+  "decidueye": {
+    "classification": "Arrow Quill Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "80.7lbs",
+    "weightKg": "36.6kg"
+  },
+  "dedenne": {
+    "classification": "Antenna Pokémon",
+    "heightFt": "0’08”",
+    "heightM": "0.2m",
+    "weightLbs": "4.9lbs",
+    "weightKg": "2.2kg"
+  },
+  "diglett": {
+    "classification": "Mole Pokémon",
+    "heightFt": "0’08”",
+    "heightM": "0.2m",
+    "weightLbs": "1.8lbs",
+    "weightKg": "0.8kg"
+  },
+  "dragapult": {
+    "classification": "Stealth Pokémon",
+    "heightFt": "9’10”",
+    "heightM": "3m",
+    "weightLbs": "110.2lbs",
+    "weightKg": "50kg"
+  },
+  "dragonair": {
+    "classification": "Dragon Pokémon",
+    "heightFt": "13’01”",
+    "heightM": "4m",
+    "weightLbs": "36.4lbs",
+    "weightKg": "16.5kg"
+  },
+  "dragonite": {
+    "classification": "Dragon Pokémon",
+    "heightFt": "7’03”",
+    "heightM": "2.2m",
+    "weightLbs": "463.0lbs",
+    "weightKg": "210kg"
+  },
+  "drakloak": {
+    "classification": "Caretaker Pokémon",
+    "heightFt": "4’07”",
+    "heightM": "1.4m",
+    "weightLbs": "24.3lbs",
+    "weightKg": "11kg"
+  },
+  "dratini": {
+    "classification": "Dragon Pokémon",
+    "heightFt": "5’11”",
+    "heightM": "1.8m",
+    "weightLbs": "7.3lbs",
+    "weightKg": "3.3kg"
+  },
+  "dreepy": {
+    "classification": "Lingering Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "4.4lbs",
+    "weightKg": "2kg"
+  },
+  "drifblim": {
+    "classification": "Blimp Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "33.1lbs",
+    "weightKg": "15kg"
+  },
+  "drifloon": {
+    "classification": "Balloon Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "2.6lbs",
+    "weightKg": "1.2kg"
+  },
+  "drilbur": {
+    "classification": "Mole Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "18.7lbs",
+    "weightKg": "8.5kg"
+  },
+  "dugtrio": {
+    "classification": "Mole Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "73.4lbs",
+    "weightKg": "33.3kg"
+  },
+  "dusclops": {
+    "classification": "Beckon Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "67.5lbs",
+    "weightKg": "30.6kg"
+  },
+  "dusknoir": {
+    "classification": "Gripper Pokémon",
+    "heightFt": "7’03”",
+    "heightM": "2.2m",
+    "weightLbs": "235.0lbs",
+    "weightKg": "106.6kg"
+  },
+  "duskull": {
+    "classification": "Requiem Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "33.1lbs",
+    "weightKg": "15kg"
+  },
+  "eevee": {
+    "classification": "Evolution Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "14.3lbs",
+    "weightKg": "6.5kg"
+  },
+  "ekans": {
+    "classification": "Snake Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "15.2lbs",
+    "weightKg": "6.9kg"
+  },
+  "electabuzz": {
+    "classification": "Electric Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "66.1lbs",
+    "weightKg": "30kg"
+  },
+  "electivire": {
+    "classification": "Thunderbolt Pokémon",
+    "heightFt": "5’11”",
+    "heightM": "1.8m",
+    "weightLbs": "305.6lbs",
+    "weightKg": "138.6kg"
+  },
+  "electrode": {
+    "classification": "Ball Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "146.8lbs",
+    "weightKg": "66.6kg"
+  },
+  "elekid": {
+    "classification": "Electric Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "51.8lbs",
+    "weightKg": "23.5kg"
+  },
+  "empoleon": {
+    "classification": "Emperor Pokémon",
+    "heightFt": "5’07”",
+    "heightM": "1.7m",
+    "weightLbs": "186.3lbs",
+    "weightKg": "84.5kg"
+  },
+  "entei": {
+    "classification": "Volcano Pokémon",
+    "heightFt": "6’11”",
+    "heightM": "2.1m",
+    "weightLbs": "436.5lbs",
+    "weightKg": "198kg"
+  },
+  "espeon": {
+    "classification": "Sun Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "58.4lbs",
+    "weightKg": "26.5kg"
+  },
+  "excadrill": {
+    "classification": "Subterrene Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "89.1lbs",
+    "weightKg": "40.4kg"
+  },
+  "exeggcute": {
+    "classification": "Egg Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "5.5lbs",
+    "weightKg": "2.5kg"
+  },
+  "exeggutor": {
+    "classification": "Coconut Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "264.6lbs",
+    "weightKg": "120kg"
+  },
+  "farigiraf": {
+    "classification": "Long Neck Pokémon",
+    "heightFt": "10’06”",
+    "heightM": "3.2m",
+    "weightLbs": "352.7lbs",
+    "weightKg": "160kg"
+  },
+  "fidough": {
+    "classification": "Puppy Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "24.0lbs",
+    "weightKg": "10.9kg"
+  },
+  "flaaffy": {
+    "classification": "Wool Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "29.3lbs",
+    "weightKg": "13.3kg"
+  },
+  "flareon": {
+    "classification": "Flame Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "55.1lbs",
+    "weightKg": "25kg"
+  },
+  "floragato": {
+    "classification": "Grass Cat Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "26.9lbs",
+    "weightKg": "12.2kg"
+  },
+  "flygon": {
+    "classification": "Mystic Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "180.8lbs",
+    "weightKg": "82kg"
+  },
+  "fraxure": {
+    "classification": "Axe Jaw Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "79.4lbs",
+    "weightKg": "36kg"
+  },
+  "froakie": {
+    "classification": "Bubble Frog Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "15.4lbs",
+    "weightKg": "7kg"
+  },
+  "frogadier": {
+    "classification": "Bubble Frog Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "24.0lbs",
+    "weightKg": "10.9kg"
+  },
+  "gallade": {
+    "classification": "Blade Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "114.6lbs",
+    "weightKg": "52kg"
+  },
+  "garbodor": {
+    "classification": "Trash Heap Pokémon",
+    "heightFt": "6’03”",
+    "heightM": "1.9m",
+    "weightLbs": "236.6lbs",
+    "weightKg": "107.3kg"
+  },
+  "gardevoir": {
+    "classification": "Embrace Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "106.7lbs",
+    "weightKg": "48.4kg"
+  },
+  "gastly": {
+    "classification": "Gas Pokémon",
+    "heightFt": "4’03”",
+    "heightM": "1.3m",
+    "weightLbs": "0.2lbs",
+    "weightKg": "0.1kg"
+  },
+  "gastrodon": {
+    "classification": "Sea Slug Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "65.9lbs",
+    "weightKg": "29.9kg"
+  },
+  "gastrodoneastsea": {
+    "classification": "Sea Slug Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "65.9lbs",
+    "weightKg": "29.9kg"
+  },
+  "gengar": {
+    "classification": "Shadow Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "89.3lbs",
+    "weightKg": "40.5kg"
+  },
+  "geodude": {
+    "classification": "Rock Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "44.1lbs",
+    "weightKg": "20kg"
+  },
+  "gholdengo": {
+    "classification": "Coin Entity Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "66.1lbs",
+    "weightKg": "30kg"
+  },
+  "gimmighoul": {
+    "classification": "Coin Chest Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "11.0lbs",
+    "weightKg": "5kg"
+  },
+  "girafarig": {
+    "classification": "Long Neck Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "91.5lbs",
+    "weightKg": "41.5kg"
+  },
+  "glaceon": {
+    "classification": "Fresh Snow Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "57.1lbs",
+    "weightKg": "25.9kg"
+  },
+  "glimmet": {
+    "classification": "Ore Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "17.6lbs",
+    "weightKg": "8kg"
+  },
+  "glimmora": {
+    "classification": "Ore Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "99.2lbs",
+    "weightKg": "45kg"
+  },
+  "gloom": {
+    "classification": "Weed Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "19.0lbs",
+    "weightKg": "8.6kg"
+  },
+  "golbat": {
+    "classification": "Bat Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "121.3lbs",
+    "weightKg": "55.0kg"
+  },
+  "golduck": {
+    "classification": "Duck Pokémon",
+    "heightFt": "5’07”",
+    "heightM": "1.7m",
+    "weightLbs": "168.9lbs",
+    "weightKg": "76.6kg"
+  },
+  "golem": {
+    "classification": "Megaton Pokémon",
+    "heightFt": "4’07”",
+    "heightM": "1.4m",
+    "weightLbs": "661.4lbs",
+    "weightKg": "300kg"
+  },
+  "goodra": {
+    "classification": "Dragon Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "331.8lbs",
+    "weightKg": "150.5kg"
+  },
+  "goomy": {
+    "classification": "Soft Tissue Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "6.2lbs",
+    "weightKg": "2.8kg"
+  },
+  "graveler": {
+    "classification": "Rock Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "231.5lbs",
+    "weightKg": "105kg"
+  },
+  "greedent": {
+    "classification": "Greedy Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "13.2lbs",
+    "weightKg": "6kg"
+  },
+  "greninja": {
+    "classification": "Ninja Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "88.2lbs",
+    "weightKg": "40kg"
+  },
+  "grimer": {
+    "classification": "Sludge Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "66.1lbs",
+    "weightKg": "30kg"
+  },
+  "growlithe": {
+    "classification": "Puppy Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "41.9lbs",
+    "weightKg": "19kg"
+  },
+  "grubbin": {
+    "classification": "Larva Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "9.7lbs",
+    "weightKg": "4.4kg"
+  },
+  "gulpin": {
+    "classification": "Stomach Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "22.7lbs",
+    "weightKg": "10.3kg"
+  },
+  "gurdurr": {
+    "classification": "Muscular Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "88.2lbs",
+    "weightKg": "40kg"
+  },
+  "gyarados": {
+    "classification": "Atrocious Pokémon",
+    "heightFt": "21’04”",
+    "heightM": "6.5m",
+    "weightLbs": "518.1lbs",
+    "weightKg": "235kg"
+  },
+  "happiny": {
+    "classification": "Playhouse Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "53.8lbs",
+    "weightKg": "24.4kg"
+  },
+  "hariyama": {
+    "classification": "Arm Thrust Pokémon",
+    "heightFt": "7’07”",
+    "heightM": "2.3m",
+    "weightLbs": "559.5lbs",
+    "weightKg": "253.8kg"
+  },
+  "haunter": {
+    "classification": "Gas Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "0.2lbs",
+    "weightKg": "0.1kg"
+  },
+  "haxorus": {
+    "classification": "Axe Jaw Pokémon",
+    "heightFt": "5’11”",
+    "heightM": "1.8m",
+    "weightLbs": "232.6lbs",
+    "weightKg": "105.5kg"
+  },
+  "heracross": {
+    "classification": "Singlehorn Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "119.0lbs",
+    "weightKg": "54kg"
+  },
+  "hitmonchan": {
+    "classification": "Punching Pokémon",
+    "heightFt": "4’07”",
+    "heightM": "1.4m",
+    "weightLbs": "110.7lbs",
+    "weightKg": "50.2kg"
+  },
+  "hitmonlee": {
+    "classification": "Kicking Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "109.8lbs",
+    "weightKg": "49.8kg"
+  },
+  "hitmontop": {
+    "classification": "Handstand Pokémon",
+    "heightFt": "4’07”",
+    "heightM": "1.4m",
+    "weightLbs": "105.8lbs",
+    "weightKg": "48kg"
+  },
+  "ho-oh": {
+    "classification": "Rainbow Pokémon",
+    "heightFt": "12’06”",
+    "heightM": "3.8m",
+    "weightLbs": "438.7lbs",
+    "weightKg": "199kg"
+  },
+  "honchkrow": {
+    "classification": "Big Boss Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "60.2lbs",
+    "weightKg": "27.3kg"
+  },
+  "hoothoot": {
+    "classification": "Owl Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "46.7lbs",
+    "weightKg": "21.2kg"
+  },
+  "hoppip": {
+    "classification": "Cottonweed Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "1.1lbs",
+    "weightKg": "0.5kg"
+  },
+  "igglybuff": {
+    "classification": "Balloon Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "2.2lbs",
+    "weightKg": "1kg"
+  },
+  "illumise": {
+    "classification": "Firefly Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "39.0lbs",
+    "weightKg": "17.7kg"
+  },
+  "ivysaur": {
+    "classification": "Seed Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "28.7lbs",
+    "weightKg": "13kg"
+  },
+  "jigglypuff": {
+    "classification": "Balloon Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "12.1lbs",
+    "weightKg": "5.5kg"
+  },
+  "jolteon": {
+    "classification": "Lightning Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "54.0lbs",
+    "weightKg": "24.5kg"
+  },
+  "jumpluff": {
+    "classification": "Cottonweed Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "6.6lbs",
+    "weightKg": "3kg"
+  },
+  "kadabra": {
+    "classification": "Psi Pokémon",
+    "heightFt": "4’03”",
+    "heightM": "1.3m",
+    "weightLbs": "124.6lbs",
+    "weightKg": "56.5kg"
+  },
+  "kilowattrel": {
+    "classification": "Frigatebird Pokémon",
+    "heightFt": "4’07”",
+    "heightM": "1.4m",
+    "weightLbs": "85.1lbs",
+    "weightKg": "38.6kg"
+  },
+  "kirlia": {
+    "classification": "Emotion Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "44.5lbs",
+    "weightKg": "20.2kg"
+  },
+  "koffing": {
+    "classification": "Poison Gas Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "2.2lbs",
+    "weightKg": "1kg"
+  },
+  "kricketot": {
+    "classification": "Cricket Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "4.9lbs",
+    "weightKg": "2.2kg"
+  },
+  "kricketune": {
+    "classification": "Cricket Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "56.2lbs",
+    "weightKg": "25.5kg"
+  },
+  "kyogre": {
+    "classification": "Sea Basin Pokémon",
+    "heightFt": "14’09”",
+    "heightM": "4.5m",
+    "weightLbs": "776.0lbs",
+    "weightKg": "352kg"
+  },
+  "lampent": {
+    "classification": "Lamp Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "28.7lbs",
+    "weightKg": "13kg"
+  },
+  "lapras": {
+    "classification": "Transport Pokémon",
+    "heightFt": "8’02”",
+    "heightM": "2.5m",
+    "weightLbs": "485.0lbs",
+    "weightKg": "220kg"
+  },
+  "larvesta": {
+    "classification": "Torch Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "63.5lbs",
+    "weightKg": "28.8kg"
+  },
+  "larvitar": {
+    "classification": "Rock Skin Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "158.7lbs",
+    "weightKg": "72kg"
+  },
+  "leafeon": {
+    "classification": "Verdant Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "56.2lbs",
+    "weightKg": "25.5kg"
+  },
+  "litwick": {
+    "classification": "Candle Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "6.8lbs",
+    "weightKg": "3.1kg"
+  },
+  "lombre": {
+    "classification": "Jolly Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "71.6lbs",
+    "weightKg": "32.5kg"
+  },
+  "lotad": {
+    "classification": "Water Weed Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "5.7lbs",
+    "weightKg": "2.6kg"
+  },
+  "lucario": {
+    "classification": "Aura Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "119.0lbs",
+    "weightKg": "54kg"
+  },
+  "ludicolo": {
+    "classification": "Carefree Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "121.3lbs",
+    "weightKg": "55kg"
+  },
+  "lugia": {
+    "classification": "Diving Pokémon",
+    "heightFt": "17’01”",
+    "heightM": "5.2m",
+    "weightLbs": "476.2lbs",
+    "weightKg": "216kg"
+  },
+  "machamp": {
+    "classification": "Superpower Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "286.6lbs",
+    "weightKg": "130.0kg"
+  },
+  "machoke": {
+    "classification": "Superpower Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "155.4lbs",
+    "weightKg": "70.5kg"
+  },
+  "machop": {
+    "classification": "Superpower Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "43.0lbs",
+    "weightKg": "19.5kg"
+  },
+  "magby": {
+    "classification": "Live Coal Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "47.2lbs",
+    "weightKg": "21.4kg"
+  },
+  "magikarp": {
+    "classification": "Fish Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "22.0lbs",
+    "weightKg": "10kg"
+  },
+  "magmar": {
+    "classification": "Spitfire Pokémon",
+    "heightFt": "4’03”",
+    "heightM": "1.3m",
+    "weightLbs": "98.1lbs",
+    "weightKg": "44.5kg"
+  },
+  "magmortar": {
+    "classification": "Blast Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "149.9lbs",
+    "weightKg": "68kg"
+  },
+  "magnemite": {
+    "classification": "Magnet Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "13.2lbs",
+    "weightKg": "6kg"
+  },
+  "magneton": {
+    "classification": "Magnet Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "132.3lbs",
+    "weightKg": "60kg"
+  },
+  "magnezone": {
+    "classification": "Magnet Area Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "396.8lbs",
+    "weightKg": "180kg"
+  },
+  "makuhita": {
+    "classification": "Guts Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "190.5lbs",
+    "weightKg": "86.4kg"
+  },
+  "mareep": {
+    "classification": "Wool Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "17.2lbs",
+    "weightKg": "7.8kg"
+  },
+  "marill": {
+    "classification": "Aquamouse Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "18.7lbs",
+    "weightKg": "8.5kg"
+  },
+  "marowak": {
+    "classification": "Bone Keeper Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1.0m",
+    "weightLbs": "99.2lbs",
+    "weightKg": "45.0kg"
+  },
+  "mawile": {
+    "classification": "Deceiver Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "25.4lbs",
+    "weightKg": "11.5kg"
+  },
+  "meowscarada": {
+    "classification": "Magician Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "68.8lbs",
+    "weightKg": "31.2kg"
+  },
+  "meowth": {
+    "classification": "Scratch Cat Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "9.3lbs",
+    "weightKg": "4.2kg"
+  },
+  "metagross": {
+    "classification": "Iron Leg Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "1212.5lbs",
+    "weightKg": "550kg"
+  },
+  "metang": {
+    "classification": "Iron Claw Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "446.4lbs",
+    "weightKg": "202.5kg"
+  },
+  "mew": {
+    "classification": "New Species Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "8.8lbs",
+    "weightKg": "4kg"
+  },
+  "mewtwo": {
+    "classification": "Genetic Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "269.0lbs",
+    "weightKg": "122kg"
+  },
+  "mimikyu": {
+    "classification": "Disguise Pokémon",
+    "heightFt": "0’08”",
+    "heightM": "0.2m",
+    "weightLbs": "1.5lbs",
+    "weightKg": "0.7kg"
+  },
+  "minccino": {
+    "classification": "Chinchilla Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "12.8lbs",
+    "weightKg": "5.8kg"
+  },
+  "minun": {
+    "classification": "Cheering Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "9.3lbs",
+    "weightKg": "4.2kg"
+  },
+  "misdreavus": {
+    "classification": "Screech Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "2.2lbs",
+    "weightKg": "1kg"
+  },
+  "mismagius": {
+    "classification": "Magical Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "9.7lbs",
+    "weightKg": "4.4kg"
+  },
+  "moltres": {
+    "classification": "Flame Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "132.3lbs",
+    "weightKg": "60kg"
+  },
+  "mosslax": {
+    "classification": "Sleeping Pokémon",
+    "heightFt": "6’11”",
+    "heightM": "2.1m",
+    "weightLbs": "1014.1lbs",
+    "weightKg": "460kg"
+  },
+  "muk": {
+    "classification": "Sludge Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "66.1lbs",
+    "weightKg": "30kg"
+  },
+  "munchlax": {
+    "classification": "Big Eater Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "231.5lbs",
+    "weightKg": "105kg"
+  },
+  "murkrow": {
+    "classification": "Darkness Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "4.6lbs",
+    "weightKg": "2.1kg"
+  },
+  "ninetales": {
+    "classification": "Fox Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "43.9lbs",
+    "weightKg": "19.9kg"
+  },
+  "noctowl": {
+    "classification": "Owl Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "89.9lbs",
+    "weightKg": "40.8kg"
+  },
+  "noibat": {
+    "classification": "Sound Wave Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "17.6lbs",
+    "weightKg": "8kg"
+  },
+  "noivern": {
+    "classification": "Sound Wave Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "187.4lbs",
+    "weightKg": "85kg"
+  },
+  "oddish": {
+    "classification": "Weed Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "11.9lbs",
+    "weightKg": "5.4kg"
+  },
+  "onix": {
+    "classification": "Rock Snake Pokémon",
+    "heightFt": "28’10”",
+    "heightM": "8.8m",
+    "weightLbs": "463.0lbs",
+    "weightKg": "210.0kg"
+  },
+  "paldeanwooper": {
+    "classification": "Water Fish Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "18.7lbs",
+    "weightKg": "8.5kg"
+  },
+  "paras": {
+    "classification": "Mushroom Pokémon",
+    "heightFt": "0’00”",
+    "heightM": "m",
+    "weightLbs": "0.0lbs",
+    "weightKg": "kg"
+  },
+  "parasect": {
+    "classification": "Mushroom Pokémon",
+    "heightFt": "0’00”",
+    "heightM": "m",
+    "weightLbs": "0.0lbs",
+    "weightKg": "kg"
+  },
+  "pawmi": {
+    "classification": "Mouse Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "5.5lbs",
+    "weightKg": "2.5kg"
+  },
+  "pawmo": {
+    "classification": "Mouse Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "14.3lbs",
+    "weightKg": "6.5kg"
+  },
+  "pawmot": {
+    "classification": "Hands-On Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "90.4lbs",
+    "weightKg": "41kg"
+  },
+  "peakychu": {
+    "classification": "Mouse Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "13.2lbs",
+    "weightKg": "6kg"
+  },
+  "pelipper": {
+    "classification": "Water Bird Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "61.7lbs",
+    "weightKg": "28kg"
+  },
+  "persian": {
+    "classification": "Classy Cat Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "70.5lbs",
+    "weightKg": "32kg"
+  },
+  "pichu": {
+    "classification": "Tiny Mouse Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "4.4lbs",
+    "weightKg": "2kg"
+  },
+  "pidgeot": {
+    "classification": "Bird Pokémon",
+    "heightFt": "0’00”",
+    "heightM": "m",
+    "weightLbs": "0.0lbs",
+    "weightKg": "kg"
+  },
+  "pidgeotto": {
+    "classification": "Bird Pokémon",
+    "heightFt": "0’00”",
+    "heightM": "m",
+    "weightLbs": "0.0lbs",
+    "weightKg": "kg"
+  },
+  "pidgey": {
+    "classification": "Tiny Bird Pokémon",
+    "heightFt": "0’00”",
+    "heightM": "m",
+    "weightLbs": "0.0lbs",
+    "weightKg": "kg"
+  },
+  "pikachu": {
+    "classification": "Mouse Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "13.2lbs",
+    "weightKg": "6kg"
+  },
+  "pinsir": {
+    "classification": "Stagbeetle Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "121.3lbs",
+    "weightKg": "55.0kg"
+  },
+  "piplup": {
+    "classification": "Penguin Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "11.5lbs",
+    "weightKg": "5.2kg"
+  },
+  "plusle": {
+    "classification": "Cheering Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "9.3lbs",
+    "weightKg": "4.2kg"
+  },
+  "politoed": {
+    "classification": "Frog Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "74.7lbs",
+    "weightKg": "33.9kg"
+  },
+  "poliwag": {
+    "classification": "Tadpole Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "27.3lbs",
+    "weightKg": "12.4kg"
+  },
+  "poliwhirl": {
+    "classification": "Tadpole Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "44.1lbs",
+    "weightKg": "20kg"
+  },
+  "poliwrath": {
+    "classification": "Tadpole Pokémon",
+    "heightFt": "4’03”",
+    "heightM": "1.3m",
+    "weightLbs": "119.0lbs",
+    "weightKg": "54kg"
+  },
+  "porygon-z": {
+    "classification": "Virtual Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "75.0lbs",
+    "weightKg": "34kg"
+  },
+  "porygon": {
+    "classification": "Virtual Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "80.5lbs",
+    "weightKg": "36.5kg"
+  },
+  "porygon2": {
+    "classification": "Virtual Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "71.6lbs",
+    "weightKg": "32.5kg"
+  },
+  "prinplup": {
+    "classification": "Penguin Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "50.7lbs",
+    "weightKg": "23kg"
+  },
+  "professortangrowth": {
+    "classification": "Vine Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2.0m",
+    "weightLbs": "283.5lbs",
+    "weightKg": "128.6kg"
+  },
+  "psyduck": {
+    "classification": "Duck Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "43.2lbs",
+    "weightKg": "19.6kg"
+  },
+  "pupitar": {
+    "classification": "Hard Shell Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "335.1lbs",
+    "weightKg": "152kg"
+  },
+  "quilava": {
+    "classification": "Volcano Pokémon",
+    "heightFt": "2’11”",
+    "heightM": "0.9m",
+    "weightLbs": "41.9lbs",
+    "weightKg": "19kg"
+  },
+  "raboot": {
+    "classification": "Rabbit Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "19.8lbs",
+    "weightKg": "9kg"
+  },
+  "raichu": {
+    "classification": "Mouse Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "66.1lbs",
+    "weightKg": "30kg"
+  },
+  "raikou": {
+    "classification": "Thunder Pokémon",
+    "heightFt": "6’03”",
+    "heightM": "1.9m",
+    "weightLbs": "392.4lbs",
+    "weightKg": "178kg"
+  },
+  "ralts": {
+    "classification": "Feeling Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "14.6lbs",
+    "weightKg": "6.6kg"
+  },
+  "rampardos": {
+    "classification": "Head Butt Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "226.0lbs",
+    "weightKg": "102.5kg"
+  },
+  "riolu": {
+    "classification": "Emanation Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "44.5lbs",
+    "weightKg": "20.2kg"
+  },
+  "rolycoly": {
+    "classification": "Coal Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "26.5lbs",
+    "weightKg": "12kg"
+  },
+  "rookidee": {
+    "classification": "Tiny Bird Pokémon",
+    "heightFt": "0’08”",
+    "heightM": "0.2m",
+    "weightLbs": "4.0lbs",
+    "weightKg": "1.8kg"
+  },
+  "rowlet": {
+    "classification": "Grass Quill Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "3.3lbs",
+    "weightKg": "1.5kg"
+  },
+  "sableye": {
+    "classification": "Darkness Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "24.3lbs",
+    "weightKg": "11kg"
+  },
+  "scizor": {
+    "classification": "Pincer Pokémon",
+    "heightFt": "5’11”",
+    "heightM": "1.8m",
+    "weightLbs": "260.1lbs",
+    "weightKg": "118kg"
+  },
+  "scorbunny": {
+    "classification": "Rabbit Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "9.9lbs",
+    "weightKg": "4.5kg"
+  },
+  "scyther": {
+    "classification": "Mantis Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "123.5lbs",
+    "weightKg": "56kg"
+  },
+  "serperior": {
+    "classification": "Regal Pokémon",
+    "heightFt": "10’10”",
+    "heightM": "3.3m",
+    "weightLbs": "138.9lbs",
+    "weightKg": "63kg"
+  },
+  "servine": {
+    "classification": "Grass Snake Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "35.3lbs",
+    "weightKg": "16kg"
+  },
+  "shellos": {
+    "classification": "Sea Slug Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "13.9lbs",
+    "weightKg": "6.3kg"
+  },
+  "shelloseastsea": {
+    "classification": "Sea Slug Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "13.9lbs",
+    "weightKg": "6.3kg"
+  },
+  "shieldon": {
+    "classification": "Shield Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "125.7lbs",
+    "weightKg": "57kg"
+  },
+  "skiploom": {
+    "classification": "Cottonweed Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "2.2lbs",
+    "weightKg": "1kg"
+  },
+  "skwovet": {
+    "classification": "Cheeky Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "5.5lbs",
+    "weightKg": "2.5kg"
+  },
+  "sliggoo": {
+    "classification": "Soft Tissue Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "38.6lbs",
+    "weightKg": "17.5kg"
+  },
+  "slowbro": {
+    "classification": "Hermit Crab Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "173.1lbs",
+    "weightKg": "78.5kg"
+  },
+  "slowking": {
+    "classification": "Royal Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "175.3lbs",
+    "weightKg": "79.5kg"
+  },
+  "slowpoke": {
+    "classification": "Dopey Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "79.4lbs",
+    "weightKg": "36kg"
+  },
+  "smeargle": {
+    "classification": "Painter Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "127.9lbs",
+    "weightKg": "58kg"
+  },
+  "snivy": {
+    "classification": "Grass Snake Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "17.9lbs",
+    "weightKg": "8.1kg"
+  },
+  "snorlax": {
+    "classification": "Sleeping Pokémon",
+    "heightFt": "6’11”",
+    "heightM": "2.1m",
+    "weightLbs": "1014.1lbs",
+    "weightKg": "460kg"
+  },
+  "spinarak": {
+    "classification": "String Spit Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "18.7lbs",
+    "weightKg": "8.5kg"
+  },
+  "sprigatito": {
+    "classification": "Grass Cat Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "9.0lbs",
+    "weightKg": "4.1kg"
+  },
+  "squirtle": {
+    "classification": "Tiny Turtle Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "19.8lbs",
+    "weightKg": "9kg"
+  },
+  "steelix": {
+    "classification": "Iron Snake Pokémon",
+    "heightFt": "30’02”",
+    "heightM": "9.2m",
+    "weightLbs": "881.8lbs",
+    "weightKg": "400.0kg"
+  },
+  "stereorotom": {
+    "classification": "Plasma Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "0.7lbs",
+    "weightKg": "0.3kg"
+  },
+  "sudowoodo": {
+    "classification": "Imitation Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "83.8lbs",
+    "weightKg": "38kg"
+  },
+  "suicune": {
+    "classification": "Aurora Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "412.3lbs",
+    "weightKg": "187kg"
+  },
+  "swablu": {
+    "classification": "Cotton Bird Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "2.6lbs",
+    "weightKg": "1.2kg"
+  },
+  "swalot": {
+    "classification": "Poison Bag Pokémon",
+    "heightFt": "5’07”",
+    "heightM": "1.7m",
+    "weightLbs": "176.4lbs",
+    "weightKg": "80kg"
+  },
+  "sylveon": {
+    "classification": "Intertwining Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "51.8lbs",
+    "weightKg": "23.5kg"
+  },
+  "tangela": {
+    "classification": "Vine Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1.0m",
+    "weightLbs": "77.2lbs",
+    "weightKg": "35.0kg"
+  },
+  "tangrowth": {
+    "classification": "Vine Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2.0m",
+    "weightLbs": "283.5lbs",
+    "weightKg": "128.6kg"
+  },
+  "tatsugiricurlyform": {
+    "classification": "Mimicry Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "17.6lbs",
+    "weightKg": "8kg"
+  },
+  "tatsugiridroopyform": {
+    "classification": "Mimicry Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "17.6lbs",
+    "weightKg": "8kg"
+  },
+  "tatsugiristretchyform": {
+    "classification": "Mimicry Pokémon",
+    "heightFt": "1’00”",
+    "heightM": "0.3m",
+    "weightLbs": "17.6lbs",
+    "weightKg": "8kg"
+  },
+  "timburr": {
+    "classification": "Muscular Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "27.6lbs",
+    "weightKg": "12.5kg"
+  },
+  "tinkatink": {
+    "classification": "Metalsmith Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "19.6lbs",
+    "weightKg": "8.9kg"
+  },
+  "tinkaton": {
+    "classification": "Hammer Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "248.7lbs",
+    "weightKg": "112.8kg"
+  },
+  "tinkatuff": {
+    "classification": "Hammer Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "130.3lbs",
+    "weightKg": "59.1kg"
+  },
+  "torchic": {
+    "classification": "Chick Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "5.5lbs",
+    "weightKg": "2.5kg"
+  },
+  "torkoal": {
+    "classification": "Coal Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "177.2lbs",
+    "weightKg": "80.4kg"
+  },
+  "toxel": {
+    "classification": "Baby Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "24.3lbs",
+    "weightKg": "11kg"
+  },
+  "toxtricityampedform": {
+    "classification": "Punk Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "88.2lbs",
+    "weightKg": "40kg"
+  },
+  "toxtricitylowkeyform": {
+    "classification": "Punk Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "88.2lbs",
+    "weightKg": "40kg"
+  },
+  "trapinch": {
+    "classification": "Ant Pit Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "33.1lbs",
+    "weightKg": "15kg"
+  },
+  "trubbish": {
+    "classification": "Trash Bag Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "68.3lbs",
+    "weightKg": "31.0kg"
+  },
+  "typhlosion": {
+    "classification": "Volcano Pokémon",
+    "heightFt": "5’07”",
+    "heightM": "1.7m",
+    "weightLbs": "175.3lbs",
+    "weightKg": "79.5kg"
+  },
+  "tyranitar": {
+    "classification": "Armor Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "445.3lbs",
+    "weightKg": "202kg"
+  },
+  "tyrantrum": {
+    "classification": "Despot Pokémon",
+    "heightFt": "8’02”",
+    "heightM": "2.5m",
+    "weightLbs": "595.2lbs",
+    "weightKg": "270.0kg"
+  },
+  "tyrogue": {
+    "classification": "Scuffle Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "46.3lbs",
+    "weightKg": "21kg"
+  },
+  "tyrunt": {
+    "classification": "Royal Heir Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "57.3lbs",
+    "weightKg": "26.0kg"
+  },
+  "umbreon": {
+    "classification": "Moonlight Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "59.5lbs",
+    "weightKg": "27kg"
+  },
+  "vaporeon": {
+    "classification": "Bubble Jet Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "63.9lbs",
+    "weightKg": "29kg"
+  },
+  "venomoth": {
+    "classification": "Poison Moth Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "27.6lbs",
+    "weightKg": "12.5kg"
+  },
+  "venonat": {
+    "classification": "Insect Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "66.1lbs",
+    "weightKg": "30kg"
+  },
+  "venusaur": {
+    "classification": "Seed Pokémon",
+    "heightFt": "6’07”",
+    "heightM": "2m",
+    "weightLbs": "220.5lbs",
+    "weightKg": "100kg"
+  },
+  "vespiquen": {
+    "classification": "Beehive Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "84.9lbs",
+    "weightKg": "38.5kg"
+  },
+  "vibrava": {
+    "classification": "Vibration Pokémon",
+    "heightFt": "3’07”",
+    "heightM": "1.1m",
+    "weightLbs": "33.7lbs",
+    "weightKg": "15.3kg"
+  },
+  "victreebel": {
+    "classification": "Flycatcher Pokémon",
+    "heightFt": "5’07”",
+    "heightM": "1.7m",
+    "weightLbs": "34.2lbs",
+    "weightKg": "15.5kg"
+  },
+  "vikavolt": {
+    "classification": "Stag Beetle Pokémon",
+    "heightFt": "4’11”",
+    "heightM": "1.5m",
+    "weightLbs": "99.2lbs",
+    "weightKg": "45kg"
+  },
+  "vileplume": {
+    "classification": "Flower Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "41.0lbs",
+    "weightKg": "18.6kg"
+  },
+  "volbeat": {
+    "classification": "Firefly Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "39.0lbs",
+    "weightKg": "17.7kg"
+  },
+  "volcanion": {
+    "classification": "Steam Pokémon",
+    "heightFt": "5’07”",
+    "heightM": "1.7m",
+    "weightLbs": "429.9lbs",
+    "weightKg": "195kg"
+  },
+  "volcarona": {
+    "classification": "Sun Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "101.4lbs",
+    "weightKg": "46kg"
+  },
+  "voltorb": {
+    "classification": "Ball Pokémon",
+    "heightFt": "1’08”",
+    "heightM": "0.5m",
+    "weightLbs": "22.9lbs",
+    "weightKg": "10.4kg"
+  },
+  "vulpix": {
+    "classification": "Fox Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "21.8lbs",
+    "weightKg": "9.9kg"
+  },
+  "wartortle": {
+    "classification": "Turtle Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "49.6lbs",
+    "weightKg": "22.5kg"
+  },
+  "wattrel": {
+    "classification": "Storm Petrel Pokémon",
+    "heightFt": "1’04”",
+    "heightM": "0.4m",
+    "weightLbs": "7.9lbs",
+    "weightKg": "3.6kg"
+  },
+  "weepinbell": {
+    "classification": "Flycatcher Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "14.1lbs",
+    "weightKg": "6.4kg"
+  },
+  "weezing": {
+    "classification": "Poison Gas Pokémon",
+    "heightFt": "3’11”",
+    "heightM": "1.2m",
+    "weightLbs": "20.9lbs",
+    "weightKg": "9.5kg"
+  },
+  "wigglytuff": {
+    "classification": "Balloon Pokémon",
+    "heightFt": "3’03”",
+    "heightM": "1m",
+    "weightLbs": "26.5lbs",
+    "weightKg": "12kg"
+  },
+  "wingull": {
+    "classification": "Seagull Pokémon",
+    "heightFt": "2’00”",
+    "heightM": "0.6m",
+    "weightLbs": "20.9lbs",
+    "weightKg": "9.5kg"
+  },
+  "zapdos": {
+    "classification": "Electric Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "116.0lbs",
+    "weightKg": "52.6kg"
+  },
+  "zoroark": {
+    "classification": "Illusion Fox Pokémon",
+    "heightFt": "5’03”",
+    "heightM": "1.6m",
+    "weightLbs": "178.8lbs",
+    "weightKg": "81.1kg"
+  },
+  "zorua": {
+    "classification": "Tricky Fox Pokémon",
+    "heightFt": "2’04”",
+    "heightM": "0.7m",
+    "weightLbs": "27.6lbs",
+    "weightKg": "12.5kg"
+  },
+  "zubat": {
+    "classification": "Bat Pokémon",
+    "heightFt": "2’07”",
+    "heightM": "0.8m",
+    "weightLbs": "16.5lbs",
+    "weightKg": "7.5kg"
+  }
+}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LOCATIONS, POKEMON_LIST } from "@/app/lib/data";
+import { Location, POKEMON_LIST } from "@/app/lib/const";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
@@ -14,11 +14,15 @@ export const metadata: Metadata = {
   description: "Browse all Pokemon Pokopia locations, materials, and which Pokemon appear there.",
 };
 
-const ALL_LOCATIONS = Object.values(LOCATIONS);
+const ALL_LOCATIONS = Object.values(Location);
 
 const pkmnCountByLocation: Record<string, number> = {};
-for (const loc of POKEMON_LIST.flatMap(p => p.habitatList?.flatMap(h => h.locations) ?? [])) {
-  pkmnCountByLocation[loc] = (pkmnCountByLocation[loc] ?? 0) + 1;
+for (const p of POKEMON_LIST) {
+  for (const h of p.habitatList) {
+    for (const loc of h.locations) {
+      pkmnCountByLocation[loc.slug] = (pkmnCountByLocation[loc.slug] ?? 0) + 1;
+    }
+  }
 }
 
 export default function LocationsPage() {
@@ -42,7 +46,7 @@ export default function LocationsPage() {
             return (
               <Link key={loc.slug} href={`/locations/${loc.slug}`} className="no-underline">
                 <HoverTile className="py-3 px-3.5">
-                  <div className="font-outfit font-bold text-sm text-ink mb-1">{loc.name}</div>
+                  <div className="font-outfit font-bold text-sm text-ink mb-1">{loc.label}</div>
                   {loc.description && (
                     <div className="font-mono text-[10px] text-ink-soft tracking-[0.02em] leading-snug mb-1 line-clamp-2">{loc.description}</div>
                   )}

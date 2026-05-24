@@ -2,8 +2,8 @@
 import Link from "next/link";
 import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import type { ItemEntry, CategoryEntry } from "@/app/lib/types";
-import { ITEM_GROUPS } from "@/app/lib/data/item-groups";
+import type { ItemConst, CategoryConst } from "@/app/lib/const";
+import { ITEM_GROUPS } from "@/app/lib/const";
 import Shortcut from "@/app/components/Shortcut";
 import HoverTile from "@/app/components/HoverTile";
 import ItemTile from "@/app/components/ItemTile";
@@ -18,13 +18,13 @@ export default function ItemsClient({
   categories,
   pkmnCountByCat,
 }: {
-  items: ItemEntry[];
-  categories: CategoryEntry[];
+  items: ItemConst[];
+  categories: CategoryConst[];
   pkmnCountByCat: Record<string, number>;
 }) {
   const searchParams = useSearchParams();
   const group = searchParams.get("group")?.toLowerCase() ?? null;
-  const groupItems = group ? new Set(ITEM_GROUPS[group] ?? []) : null;
+  const groupItems = group ? new Set((ITEM_GROUPS[group] ?? []).map((i) => i.slug)) : null;
   const [view, setView] = useState<"items" | "categories">("items");
   const [search, setSearch] = useState(() => searchParams.get("search") ?? "");
   const [catFilter, setCatFilter] = useState<string[]>([]);
@@ -32,16 +32,23 @@ export default function ItemsClient({
   const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
-    let list = groupItems ? items.filter((i) => groupItems.has(i.name)) : items;
+    let list = groupItems ? items.filter((i) => groupItems.has(i.slug)) : items;
     if (search.trim()) {
       const q = search.toLowerCase();
-      list = list.filter((i) => i.name.toLowerCase().includes(q));
+      list = list.filter((i) => i.label.toLowerCase().includes(q));
     }
     if (catFilter.length) {
-      list = list.filter((i) => catFilter.some((c) => i.categories.includes(c)));
+      // Items are now in categories — look up reverse mapping
+      const catItems = new Set(
+        catFilter.flatMap((cs) => {
+          const cat = categories.find((c) => c.slug === cs);
+          return cat ? cat.items.map((i) => i.slug) : [];
+        })
+      );
+      list = list.filter((i) => catItems.has(i.slug));
     }
     return list;
-  }, [items, search, catFilter]);
+  }, [items, search, catFilter, categories, groupItems]);
 
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -81,7 +88,7 @@ export default function ItemsClient({
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {categories.map((c) => (
                     <Shortcut key={c.slug} active={catFilter.includes(c.slug)} onClick={() => toggleCat(c.slug)}>
-                      {c.name} <span className="opacity-55 text-[10px]">({c.items.length})</span>
+                      {c.label} <span className="opacity-55 text-[10px]">({c.items.length})</span>
                     </Shortcut>
                   ))}
                 </div>
@@ -100,7 +107,7 @@ export default function ItemsClient({
             ) : (
               <div className="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-2">
                 {paginated.map((item) => (
-                  <ItemTile key={item.slug} name={item.name} slug={item.slug} icon={item.icon} />
+                  <ItemTile key={item.slug} name={item.label} slug={item.slug} icon={item.icon} />
                 ))}
               </div>
             )}
@@ -121,7 +128,7 @@ export default function ItemsClient({
             {categories.map((cat) => (
               <Link key={cat.slug} href={`/category/${cat.slug}`} className="no-underline">
                 <HoverTile className="py-3 px-3.5">
-                  <div className="font-outfit font-bold text-sm text-ink mb-1">{cat.name}</div>
+                  <div className="font-outfit font-bold text-sm text-ink mb-1">{cat.label}</div>
                   <div className="font-mono text-[10px] text-ink-fade tracking-[0.04em]">
                     {cat.items.length} items · {pkmnCountByCat[cat.slug] ?? 0} Pokemon
                   </div>

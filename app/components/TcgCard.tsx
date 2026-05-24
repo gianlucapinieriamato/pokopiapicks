@@ -1,14 +1,14 @@
 import Image from "next/image";
-import { pkmnIconUrl, dexNum, getRarity, SPECIALTIES } from "@/app/lib/data";
-import type { PokemonEntry } from "@/app/lib/types";
+import { pkmnIconUrl, dexNum, POKEMON_CATEGORIES_SORTED } from "@/app/lib/const";
+import type { PokemonConst } from "@/app/lib/const";
 
 const HABITAT_COLORS = Object.freeze({
-  Bright: { h1: "#ffe9a0", h2: "#d4a93a" },
-  Cool:   { h1: "#b8dff0", h2: "#4a9abf" },
-  Dark:   { h1: "#c8b4d8", h2: "#5a3878" },
-  Dry:    { h1: "#e8d4a0", h2: "#b89050" },
-  Humid:  { h1: "#a8d4a0", h2: "#4a8a4e" },
-  Warm:   { h1: "#f0b880", h2: "#c86030" },
+  bright: { h1: "#ffe9a0", h2: "#d4a93a" },
+  cool:   { h1: "#b8dff0", h2: "#4a9abf" },
+  dark:   { h1: "#c8b4d8", h2: "#5a3878" },
+  dry:    { h1: "#e8d4a0", h2: "#b89050" },
+  humid:  { h1: "#a8d4a0", h2: "#4a8a4e" },
+  warm:   { h1: "#f0b880", h2: "#c86030" },
 } as const);
 
 const CHIP_BASE =
@@ -97,13 +97,13 @@ function ChipRow({
   const visible = max == null ? items : items.slice(0, max);
   const overflow = max == null ? 0 : items.length - max;
   return (
-    <div className="flex flex-wrap gap-[3px]">
+    <div className="flex flex-nowrap gap-[3px]">
       {visible.map((item) => (
-        <span key={item} className={chipClass}>
+        <span key={item} className={`${chipClass} shrink-0 whitespace-nowrap`}>
           {item}
         </span>
       ))}
-      {overflow > 0 && <span className={badgeClass}>+{overflow}</span>}
+      {overflow > 0 && <span className={`${badgeClass} shrink-0 whitespace-nowrap`}>+{overflow}</span>}
     </div>
   );
 }
@@ -112,22 +112,22 @@ export default function TcgCard({
   p,
   size = "md",
 }: {
-  p: PokemonEntry;
+  p: PokemonConst;
   size?: "lg" | "md" | "sm";
 }) {
-  const r = getRarity(p);
   const isSm = size === "sm";
   const v = VARIANTS[size];
-  const { h1, h2 } = HABITAT_COLORS[p.habitat as keyof typeof HABITAT_COLORS] ?? { h1: "#d8ccb8", h2: "#a89070" };
+  const habitatSlug = p.habitat.slug as keyof typeof HABITAT_COLORS;
+  const { h1, h2 } = HABITAT_COLORS[habitatSlug] ?? { h1: "#d8ccb8", h2: "#a89070" };
 
-  const holoOpacity = r.holoIntensity / 100;
-  const sweepOpacity = r.sparkles ? holoOpacity * 0.65 : 0;
+  const holoOpacity = p.isLegendary ? 1 : 0.25;
+  const sweepOpacity = p.isLegendary ? holoOpacity * 0.65 : 0;
 
   return (
-    <div className={`relative w-full ${v.wrapper} aspect-[100/155]`}>
+    <div className={`relative w-full ${v.wrapper} aspect-[100/155] min-h-[320px]`}>
       {/* Gold frame */}
       <div
-        className={`absolute inset-0 ${v.frameRound} ${r.sparkles ? v.legendShadow : v.frameShadow}`}
+        className={`absolute inset-0 ${v.frameRound} ${p.isLegendary ? v.legendShadow : v.frameShadow}`}
         style={{ background: "var(--card-frame)" }}
       >
         {/* Inner card face */}
@@ -142,8 +142,8 @@ export default function TcgCard({
             <div
               className={`font-outfit font-extrabold ${v.name} tracking-[-0.01em] leading-none text-ink whitespace-nowrap overflow-hidden text-ellipsis min-w-0`}
             >
-              {p.name}
-              {r.sparkles && (
+              {p.label}
+              {p.isLegendary && (
                 <span
                   className={`${v.star} text-accent drop-shadow-[0_0_3px_var(--accent)] ml-1`}
                 >
@@ -163,7 +163,7 @@ export default function TcgCard({
             className={`${v.artMargin} shrink-0 grow-0 basis-[54%] rounded-md habitat-art relative overflow-hidden border border-[1.5px] border-[rgba(138,105,25,0.42)] flex items-end justify-center`}
             style={{ "--h1": h1, "--h2": h2 } as React.CSSProperties}
           >
-            {r.sparkles && (
+            {p.isLegendary && (
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{ backgroundImage: "var(--sparkle-dots)" }}
@@ -181,10 +181,10 @@ export default function TcgCard({
             <div
               className={`absolute top-[5px] left-[5px] ${v.artLabel} px-[7px] py-[2px] rounded-full bg-paper/85 text-ink font-outfit font-bold tracking-[0.03em]`}
             >
-              {p.habitat}
+              {p.habitat.label}
             </div>
             {/* Gift count / legendary badge */}
-            {r.sparkles && (
+            {p.isLegendary && (
               <div
                 className={`absolute top-[5px] right-[5px] ${v.artLabel} px-[7px] py-[2px] rounded-full text-paper font-outfit font-extrabold tracking-[0.03em] shadow-[0_1px_0_var(--accent-deep)] bg-gradient-to-br from-accent to-accent-deep`}
               >
@@ -195,7 +195,7 @@ export default function TcgCard({
               <Image
                 fill
                 src={pkmnIconUrl(p)}
-                alt={p.name}
+                alt={p.label}
                 className="object-contain [image-rendering:pixelated]"
                 sizes="200px"
               />
@@ -210,14 +210,14 @@ export default function TcgCard({
               Likes
             </div>
             <ChipRow
-              items={p.categories}
+              items={(POKEMON_CATEGORIES_SORTED[p.slug] ?? p.categories).map((c) => c.label)}
               max={size === "lg" ? 3 : 2}
               chipClass={`${CHIP_BASE} ${v.chip}`}
               badgeClass={`${CHIP_BASE} ${v.chip} text-ink-soft`}
             />
 
             {((p.specialties && p.specialties.length > 0) || p.flavor) && (
-              <div className="flex gap-[6px] mt-1 items-start">
+              <div className="flex gap-[6px] mt-2 items-start">
                 {p.specialties && p.specialties.length > 0 && (
                   <div className="flex-1 min-w-0">
                     <div
@@ -226,9 +226,7 @@ export default function TcgCard({
                       Specialty
                     </div>
                     <ChipRow
-                      items={p.specialties.map(
-                        (s) => SPECIALTIES[s]?.name ?? s,
-                      )}
+                      items={p.specialties.map((s) => s.label)}
                       max={size === "lg" ? 3 : 1}
                       chipClass={`${CHIP_BASE} ${v.chipSm} text-accent-deep border-accent bg-accent-soft`}
                       badgeClass={`${CHIP_BASE} ${v.chipSm} text-accent-deep border-accent bg-accent-soft`}
@@ -243,7 +241,7 @@ export default function TcgCard({
                       Flavor
                     </div>
                     <ChipRow
-                      items={[p.flavor]}
+                      items={[p.flavor.label]}
                       max={2}
                       chipClass={`${CHIP_BASE} ${v.chipSm} text-leaf border-leaf bg-leaf-soft`}
                       badgeClass={`${CHIP_BASE} ${v.chipSm} text-leaf border-leaf bg-leaf-soft`}
@@ -265,9 +263,9 @@ export default function TcgCard({
               POKOPIA · PICKS
             </span>
             <span
-              className={`font-mono ${v.footer} ${r.sparkles ? "text-accent" : "text-ink-fade"} tracking-[0.06em] font-semibold`}
+              className={`font-mono ${v.footer} ${p.isLegendary ? "text-accent" : "text-ink-fade"} tracking-[0.06em] font-semibold`}
             >
-              {p.types?.[0]?.toUpperCase() ?? ""}
+              {p.types[0]?.label ?? ""}
             </span>
           </div>
 

@@ -2,8 +2,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
-import { POKEMON, POKEMON_LIST, SPECIALTIES, pkmnIconUrl, dexNum, getCatItems, catDisplayName } from "@/app/lib/data";
-import type { PokemonEntry, PokemonRecommendation } from "@/app/lib/types";
+import {
+  POKEMON_BY_SLUG,
+  POKEMON_LIST,
+  pkmnIconUrl,
+  dexNum,
+} from "@/app/lib/const";
+import type { PokemonConst } from "@/app/lib/const";
 import PokemonGrid from "@/app/components/PokemonGrid";
 import SearchInput from "@/app/components/SearchInput";
 import { SuggestionDropdown } from "@/app/components/SuggestionDropdown";
@@ -13,45 +18,40 @@ import Card from "@/app/components/Card";
 import PageHeader from "@/app/components/PageHeader";
 import SectionTitle from "@/app/components/SectionTitle";
 
-// ─── Pure helpers (outside component — no hooks, no side-effects) ──────────
+// ─── Pure helpers ──────────────────────────────────────────────────────────
 
-function sharedItemCount(a: readonly string[], b: readonly string[]): number {
-  const setA = new Set<string>();
-  for (const cat of a) for (const item of getCatItems(cat)) setA.add(item);
-  let count = 0;
-  for (const cat of b) for (const item of getCatItems(cat)) { if (setA.has(item)) count++; }
-  return count;
+function sharedItemCount(a: PokemonConst, b: PokemonConst): number {
+  const setA = new Set(a.categories.flatMap((cat) => cat.items.map((i) => i.slug)));
+  return b.categories.flatMap((cat) => cat.items).filter((i) => setA.has(i.slug)).length;
 }
 
-function calcScore(anchor: PokemonEntry, candidate: PokemonEntry): number {
-  if (anchor.habitat !== candidate.habitat) return -1;
-  const shared = sharedItemCount(anchor.categories, candidate.categories);
-  const anchorSpecs = new Set(anchor.specialties ?? []);
-  const candSpecs = new Set(candidate.specialties ?? []);
+function calcScore(anchor: PokemonConst, candidate: PokemonConst): number {
+  if (anchor.habitat.slug !== candidate.habitat.slug) return -1;
+  const shared = sharedItemCount(anchor, candidate);
+  const anchorSpecs = new Set(anchor.specialties.map((s) => s.slug));
+  const candSpecs = new Set(candidate.specialties.map((s) => s.slug));
   const hasOverlap = [...candSpecs].some((s) => anchorSpecs.has(s));
   const multiplier = (!hasOverlap && candSpecs.size > 0 && anchorSpecs.size > 0) ? 1.5 : 1.0;
   return Math.round(shared * multiplier);
 }
 
-function buildGroup(
-  initialAnchors: PokemonEntry[], // candidates is consumed (spliced) during selection
-  size: number,
-): PokemonEntry[] {
+function buildGroup(initialAnchors: PokemonConst[], size: number): PokemonConst[] {
   if (initialAnchors.length === 0) return [];
   const first = initialAnchors[0];
   if (!first) return [];
-  const habitat = first.habitat;
+  const habitatSlug = first.habitat.slug;
   const anchorSlugSet = new Set(initialAnchors.map((a) => a.slug));
-  const group: PokemonEntry[] = [...initialAnchors];
-  const candidates = POKEMON_LIST.filter((p) => !anchorSlugSet.has(p.slug) && p.habitat === habitat);
+  const group: PokemonConst[] = [...initialAnchors];
+  const candidates = POKEMON_LIST.filter(
+    (p) => !anchorSlugSet.has(p.slug) && p.habitat.slug === habitatSlug
+  );
   const target = Math.max(size, initialAnchors.length + 1);
   while (group.length < target && candidates.length > 0) {
-    const groupCats = [...new Set(group.flatMap((m) => m.categories))];
     let bestIdx = 0, bestScore = -1;
     for (let i = 0; i < candidates.length; i++) {
       const c = candidates[i];
       if (!c) continue;
-      const s = sharedItemCount(groupCats, c.categories);
+      const s = group.reduce((sum, m) => sum + sharedItemCount(m, c), 0);
       if (s > bestScore) { bestScore = s; bestIdx = i; }
     }
     const picked = candidates.splice(bestIdx, 1)[0];
@@ -60,12 +60,18 @@ function buildGroup(
   return group;
 }
 
-function resolveSlugs(slugs: string[]): PokemonEntry[] {
-  return slugs.flatMap((s) => { const p = POKEMON[s]; return p ? [p] : []; });
+function resolveSlugs(slugs: string[]): PokemonConst[] {
+  return slugs.flatMap((s) => { const p = POKEMON_BY_SLUG[s]; return p ? [p] : []; });
 }
 
 const MAX_ANCHORS = 3;
-const GROUP_SIZE = 4; // was unused state
+const GROUP_SIZE = 4;
+
+type PokemonRecommendation = {
+  pokemon: PokemonConst;
+  score: number;
+  shared: number;
+};
 
 // ─── Component ────────────────────────────────────────────────────────────
 
@@ -75,28 +81,24 @@ export default function MatchmakerClient() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [activeIdx, setActiveIdx] = useState(-1);
 
-  // Fix 5: ref-tracked blur timer to avoid memory leak on unmount
   const blurTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     const timerRef = blurTimerRef;
     return () => { if (timerRef.current) clearTimeout(timerRef.current); };
   }, []);
 
-  // Fix 1: O(n²) TOP_STARTERS moved into useMemo (was module-scope IIFE)
   const TOP_STARTERS = useMemo(() => {
     const scored = POKEMON_LIST.map((p) => {
-      const peers = POKEMON_LIST.filter((q) => q.slug !== p.slug && q.habitat === p.habitat);
+      const peers = POKEMON_LIST.filter(
+        (q) => q.slug !== p.slug && q.habitat.slug === p.habitat.slug
+      );
       if (peers.length === 0) return { p, avg: 0 };
       const total = peers.reduce((sum, q) => sum + Math.max(0, calcScore(p, q)), 0);
       return { p, avg: total / peers.length };
     });
-    return scored
-      .sort((a, b) => b.avg - a.avg)
-      .slice(0, 6)
-      .map((x) => x.p);
+    return scored.sort((a, b) => b.avg - a.avg).slice(0, 6).map((x) => x.p);
   }, []);
 
-  // Fix 1: EXAMPLE_GROUP also moved into useMemo (was module-scope)
   const EXAMPLE_ANCHOR = useMemo(
     () => POKEMON_LIST.find((p) => p.slug === "bulbasaur") ?? TOP_STARTERS[0] ?? null,
     [TOP_STARTERS],
@@ -106,16 +108,14 @@ export default function MatchmakerClient() {
     [EXAMPLE_ANCHOR],
   );
 
-  // Fix 3: memoize resolveSlugs call — was called on every render
   const anchors = useMemo(() => resolveSlugs(anchorSlugs), [anchorSlugs]);
-
   const primaryAnchor = anchors[0] ?? null;
-  const anchorHabitat = primaryAnchor?.habitat ?? null;
+  const anchorHabitat = primaryAnchor?.habitat.label ?? null;
 
   const searchMatches = useMemo(() => {
     const q = query.toLowerCase().trim();
     if (!q) return [];
-    return POKEMON_LIST.filter((p) => p.name.toLowerCase().includes(q)).slice(0, 10);
+    return POKEMON_LIST.filter((p) => p.label.toLowerCase().includes(q)).slice(0, 10);
   }, [query]);
 
   const selectAnchor = useCallback((slug: string) => {
@@ -133,18 +133,17 @@ export default function MatchmakerClient() {
     setAnchorSlugs((prev) => prev.filter((s) => s !== slug));
   }, []);
 
-  const recommendations = useMemo(() => {
+  const recommendations = useMemo<PokemonRecommendation[]>(() => {
     if (anchorSlugs.length === 0) return [];
-    // Fix 3: use already-memoized `anchors` instead of re-calling resolveSlugs
     const anchorSet = new Set(anchorSlugs);
-    const habitat = anchors[0]?.habitat ?? null;
-    if (!habitat) return [];
+    const habitatSlug = anchors[0]?.habitat.slug ?? null;
+    if (!habitatSlug) return [];
     const scored: PokemonRecommendation[] = [];
     for (const p of POKEMON_LIST) {
-      if (anchorSet.has(p.slug) || p.habitat !== habitat) continue;
+      if (anchorSet.has(p.slug) || p.habitat.slug !== habitatSlug) continue;
       const scores = anchors.map((a) => calcScore(a, p));
       const avg = scores.reduce((acc, v) => acc + v, 0) / scores.length;
-      const shared = anchors.reduce((sum, a) => sum + sharedItemCount(a.categories, p.categories), 0);
+      const shared = anchors.reduce((sum, a) => sum + sharedItemCount(a, p), 0);
       const pts = Math.round(avg);
       if (pts < 0) continue;
       scored.push({ pokemon: p, score: pts, shared });
@@ -172,14 +171,14 @@ export default function MatchmakerClient() {
             {anchors.map((a) => (
               <div key={a.slug} className="flex items-center gap-1.5 bg-accent-soft border border-[1.5px] border-accent rounded-full px-2 py-[4px]">
                 <div className="relative size-5 shrink-0">
-                  <Image fill src={pkmnIconUrl(a)} alt={a.name} className="object-contain [image-rendering:pixelated]" sizes="20px" />
+                  <Image fill src={pkmnIconUrl(a)} alt={a.label} className="object-contain [image-rendering:pixelated]" sizes="20px" />
                 </div>
-                <span className="font-outfit font-bold text-[12px] text-ink-deep">{a.name}</span>
+                <span className="font-outfit font-bold text-[12px] text-ink-deep">{a.label}</span>
                 <button
                   type="button"
                   onClick={() => removeAnchor(a.slug)}
                   className="ml-0.5 text-ink-soft hover:text-ink font-mono text-[11px] leading-none"
-                  aria-label={`Remove ${a.name}`}
+                  aria-label={`Remove ${a.label}`}
                 >
                   ✕
                 </button>
@@ -189,7 +188,6 @@ export default function MatchmakerClient() {
         )}
 
         {anchorSlugs.length < MAX_ANCHORS && (
-          // Fix 6: Use SuggestionDropdown component + ARIA combobox props on SearchInput
           <SearchInput
             value={query}
             onChange={(e) => { setQuery(e.target.value); setShowSuggestions(true); setActiveIdx(-1); }}
@@ -206,7 +204,6 @@ export default function MatchmakerClient() {
                 : undefined
             }
           >
-            {/* Fix 6: replaced inline dropdown with shared SuggestionDropdown */}
             {showSuggestions && (
               <SuggestionDropdown
                 id="matchmaker-search-listbox"
@@ -224,17 +221,21 @@ export default function MatchmakerClient() {
               <div key={anchor.slug} className="flex items-start gap-3">
                 <div className="size-[72px] shrink-0 bg-[var(--portrait-bg)] rounded-[12px] border-2 border-paper-edge p-1.5 shadow-[0_4px_12px_-4px_var(--shadow)]">
                   <div className="relative w-full h-full">
-                    <Image fill src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.name} className="object-contain [image-rendering:pixelated]" sizes="72px" />
+                    <Image fill src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.label} className="object-contain [image-rendering:pixelated]" sizes="72px" />
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="font-mono text-[11px] text-accent-deep font-semibold tracking-[0.1em] mb-[2px]">
                     {i === 0 ? "Anchor" : `Anchor ${i + 1}`} · #{dexNum(anchor)}
                   </div>
-                  <div className="font-outfit font-extrabold text-[20px] tracking-[-0.02em] leading-[1.05] mb-1">{anchor.name}</div>
-                  <div className="font-mono text-[11px] text-leaf font-semibold tracking-[0.04em]">{anchor.habitat}</div>
+                  <div className="font-outfit font-extrabold text-[20px] tracking-[-0.02em] leading-[1.05] mb-1">{anchor.label}</div>
+                  <div className="font-mono text-[11px] text-leaf font-semibold tracking-[0.04em]">{anchor.habitat.label}</div>
                   <div className="flex flex-wrap gap-1 mt-1">
-                    {anchor.categories.map((c) => <span key={c} className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em]">{catDisplayName(c)}</span>)}
+                    {anchor.categories.map((c) => (
+                      <span key={c.slug} className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em]">
+                        {c.label}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -255,7 +256,7 @@ export default function MatchmakerClient() {
           {EXAMPLE_GROUP.length > 0 && EXAMPLE_ANCHOR && (
             <>
               <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold mb-3">
-                Example · {EXAMPLE_ANCHOR.name}&apos;s best group
+                Example · {EXAMPLE_ANCHOR.label}&apos;s best group
               </div>
               <PokemonGrid className="mb-5">
                 {EXAMPLE_GROUP.map((p) => (
@@ -269,10 +270,10 @@ export default function MatchmakerClient() {
                       <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>
                     )}
                     <div className="relative size-16">
-                      <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="64px" />
+                      <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain [image-rendering:pixelated]" sizes="64px" />
                     </div>
                     <div className="font-mono text-[10px] text-ink-fade font-medium">#{dexNum(p)}</div>
-                    <div className="font-bold text-[12px] leading-tight">{p.name}</div>
+                    <div className="font-bold text-[12px] leading-tight">{p.label}</div>
                   </button>
                 ))}
               </PokemonGrid>
@@ -290,9 +291,9 @@ export default function MatchmakerClient() {
                   className="flex items-center gap-1.5 bg-chrome border border-[1.5px] border-paper-edge rounded-full px-2.5 py-[5px] text-ink transition-all hover:bg-paper hover:border-accent cursor-pointer"
                 >
                   <div className="relative size-5 shrink-0">
-                    <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="20px" />
+                    <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain [image-rendering:pixelated]" sizes="20px" />
                   </div>
-                  <span className="font-outfit font-bold text-[12px]">{p.name}</span>
+                  <span className="font-outfit font-bold text-[12px]">{p.label}</span>
                 </button>
               ))}
             </div>
@@ -300,7 +301,6 @@ export default function MatchmakerClient() {
         </Card>
       )}
 
-      {/* Fix 8: empty-state CTA when anchors produce 0 recommendations */}
       {anchorSlugs.length > 0 && recommendations.length === 0 && (
         <Card>
           <div className="text-center py-6">
@@ -324,23 +324,21 @@ export default function MatchmakerClient() {
           <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">
             Ranked by shared items{anchors.length > 1 ? ` across ${anchors.length} anchors` : ""}. Complementary specialties add a 50% bonus.
           </p>
-          {/* Fix 4: hoist allAnchorSpecs above map to avoid recomputing per row */}
           {(() => {
-            const allAnchorSpecs = new Set(anchors.flatMap((a) => a.specialties ?? []));
+            const allAnchorSpecs = new Set(anchors.flatMap((a) => a.specialties.map((s) => s.slug)));
             return recommendations.map(({ pokemon: p, score: s, shared }) => {
-              const candSpecs = p.specialties ?? [];
-              const isComplementary = candSpecs.length > 0 && !candSpecs.some((sp) => allAnchorSpecs.has(sp));
+              const candSpecs = p.specialties;
+              const isComplementary =
+                candSpecs.length > 0 && !candSpecs.some((sp) => allAnchorSpecs.has(sp.slug));
               return (
-                // Fix 1: was <button> containing <Link> (a-in-button invalid HTML); now <div role="button">
                 <div
                   key={p.slug}
                   role="button"
                   tabIndex={0}
                   onClick={() => selectAnchor(p.slug)}
-                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectAnchor(p.slug); } }}
+                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectAnchor(p.slug); } }}
                   className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 mb-2.5 cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] transition-all w-full text-left"
                 >
-                  {/* Fix 9: replace ⚡ emoji with text labels */}
                   <div className="absolute -top-2 right-3 flex items-center gap-1">
                     <span className="font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
                       {s} pts
@@ -351,15 +349,14 @@ export default function MatchmakerClient() {
                       </span>
                     )}
                   </div>
-                  {/* Fix 7: bg-white/70 → bg-paper */}
                   <div className="size-14 shrink-0 bg-paper rounded-[10px] p-1">
                     <div className="relative w-full h-full">
-                      <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="56px" />
+                      <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain [image-rendering:pixelated]" sizes="56px" />
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="font-extrabold text-[14px] text-ink leading-tight">{p.name}</span>
+                      <span className="font-extrabold text-[14px] text-ink leading-tight">{p.label}</span>
                       <Link
                         href={`/pokemon/${p.slug}`}
                         className="font-mono text-[10px] text-ink-soft no-underline hover:text-accent shrink-0"
@@ -369,7 +366,7 @@ export default function MatchmakerClient() {
                       </Link>
                     </div>
                     <div className="font-mono text-[10px] text-ink-soft tracking-[0.02em] leading-snug">
-                      {shared} shared items · {p.specialties?.map((sp) => SPECIALTIES[sp]?.name ?? sp).join(", ") || "no specialty"}
+                      {shared} shared items · {p.specialties.map((sp) => sp.label).join(", ") || "no specialty"}
                       {isComplementary && " · complementary"}
                     </div>
                   </div>
@@ -383,26 +380,27 @@ export default function MatchmakerClient() {
       {group.length > 1 && (
         <Card>
           <SectionTitle pill="TEAM">Best group of {group.length}</SectionTitle>
-          <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">Greedy algorithm: each Pokemon maximizes shared items with the current group.</p>
+          <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">
+            Greedy algorithm: each Pokemon maximizes shared items with the current group.
+          </p>
           <PokemonGrid>
             {group.map((p) => {
               const isAnchor = anchorSlugs.includes(p.slug);
               return (
-                // Fix 1: was <button> containing <Link> (a-in-button invalid HTML); now <div role="button">
                 <div
                   key={p.slug}
                   role="button"
                   tabIndex={0}
                   onClick={() => selectAnchor(p.slug)}
-                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectAnchor(p.slug); } }}
+                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectAnchor(p.slug); } }}
                   className={`border border-[1.5px] rounded-[14px] p-3 text-center text-ink flex flex-col items-center gap-1 transition-all hover:-translate-y-0.5 hover:shadow-[0_6px_16px_-6px_var(--shadow)] w-full cursor-pointer ${isAnchor ? "bg-accent-soft border-accent" : "bg-chrome border-paper-edge hover:bg-paper hover:border-accent"}`}
                 >
                   {isAnchor && <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>}
                   <div className="relative size-16">
-                    <Image fill src={pkmnIconUrl(p)} alt={p.name} className="object-contain [image-rendering:pixelated]" sizes="64px" />
+                    <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain [image-rendering:pixelated]" sizes="64px" />
                   </div>
                   <div className="font-mono text-[10px] text-ink-fade font-medium">#{dexNum(p)}</div>
-                  <div className="font-bold text-[12px] leading-tight">{p.name}</div>
+                  <div className="font-bold text-[12px] leading-tight">{p.label}</div>
                   <Link
                     href={`/pokemon/${p.slug}`}
                     className="font-mono text-[10px] text-ink-soft no-underline hover:text-accent mt-0.5"

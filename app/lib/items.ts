@@ -1,9 +1,12 @@
-import { existsSync } from "fs";
-import { join } from "path";
-import { ITEMS } from "@/app/lib/data";
-import type { ResolvedItem } from "@/app/lib/types";
+import { Item } from "@/app/lib/const";
 
-// Scraped names that differ from canonical ITEMS keys or correct display names
+export type ResolvedItem = {
+  displayName: string;
+  slug: string | undefined;
+  icon: string | null;
+};
+
+// Scraped names that differ from canonical item labels or correct display names
 export const NAME_FIXES: Readonly<Record<string, string>> = {
   "Beautiful flower seeds": "Beautiful flower",
   "Elegant flower seed": "Elegant flower",
@@ -24,20 +27,18 @@ export const ICON_OVERRIDES: Readonly<Record<string, string>> = {
 export function resolveItem(name: string): ResolvedItem {
   const displayName = NAME_FIXES[name] ?? name;
   if (ICON_OVERRIDES[name])
-    return { icon: ICON_OVERRIDES[name], slug: undefined, displayName };
+    return { icon: ICON_OVERRIDES[name]!, slug: undefined, displayName };
 
-  const canonical = NAME_FIXES[name] ?? name;
-  const entry = ITEMS[canonical] ?? ITEMS[name];
+  const entry = Object.values(Item).find(
+    (i) => i.label.toLowerCase() === displayName.toLowerCase()
+  );
   if (entry) return { icon: entry.icon, slug: entry.slug, displayName };
 
   const baseName = name.endsWith(" Recipe") ? name.slice(0, -7) : name;
-  const baseEntry = ITEMS[baseName];
-  if (baseEntry)
-    return { icon: baseEntry.icon, slug: baseEntry.slug, displayName };
-
-  const derivedPath = `/icons/items/${baseName.toLowerCase().replace(/\s+/g, "")}.png`;
-  if (existsSync(join(process.cwd(), "public", derivedPath)))
-    return { icon: derivedPath, slug: undefined, displayName };
+  const baseEntry = Object.values(Item).find(
+    (i) => i.label.toLowerCase() === baseName.toLowerCase()
+  );
+  if (baseEntry) return { icon: baseEntry.icon, slug: baseEntry.slug, displayName };
 
   return { icon: null, slug: undefined, displayName };
 }

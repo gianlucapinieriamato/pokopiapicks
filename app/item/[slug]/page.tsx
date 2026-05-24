@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { ITEMS, CATEGORIES, POKEMON, ITEM_RECIPES, pkmnIconUrl, dexNum, catDisplayName } from "@/app/lib/data";
+import { Item, Category, POKEMON_LIST, pkmnIconUrl, dexNum, ITEM_RECIPES } from "@/app/lib/const";
+import type { ItemConst, CategoryConst } from "@/app/lib/const";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
@@ -11,32 +12,35 @@ import SectionTitle from "@/app/components/SectionTitle";
 import PokemonGridCard from "@/app/components/PokemonGridCard";
 import PokemonGrid from "@/app/components/PokemonGrid";
 
+// Build a reverse map: item slug → categories that contain it
+function getItemCategories(slug: string): CategoryConst[] {
+  return Object.values(Category).filter((c) => c.items.some((i) => i.slug === slug));
+}
+
 export function generateStaticParams() {
-  return Object.values(ITEMS).map((item) => ({ slug: item.slug }));
+  return Object.values(Item).map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const item = Object.values(ITEMS).find((i) => i.slug === slug);
+  const item = Object.values(Item).find((i) => i.slug === slug) ?? null;
   if (!item) return { title: "Not found" };
-  const desc = item.categories.length > 0
-    ? `${item.name} is a gift item in Pokemon Pokopia, appearing in ${item.categories.length} favorite ${item.categories.length === 1 ? "category" : "categories"}. Give it to Pokemon that like these categories to earn happiness.`
-    : `${item.name} — a naturally occurring material in Pokemon Pokopia. Found in locations across the game.`;
-  return { title: item.name, description: desc };
+  const cats = getItemCategories(slug);
+  const desc = cats.length > 0
+    ? `${item.label} is a gift item in Pokemon Pokopia, appearing in ${cats.length} favorite ${cats.length === 1 ? "category" : "categories"}. Give it to Pokemon that like these categories to earn happiness.`
+    : `${item.label} — a naturally occurring material in Pokemon Pokopia. Found in locations across the game.`;
+  return { title: item.label, description: desc };
 }
 
 export default async function ItemPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const item = Object.values(ITEMS).find((i) => i.slug === slug);
+  const item = Object.values(Item).find((i) => i.slug === slug) ?? null;
   if (!item) return <PageWrap><p>Item not found.</p></PageWrap>;
 
-  const pokemonWhoLike = Object.values(POKEMON)
-    .filter((p) => {
-      return item.categories.some((catSlug) => {
-        const catDisplay = CATEGORIES[catSlug]?.name ?? catSlug;
-        return p.categories.includes(catDisplay) || p.categories.includes(catSlug);
-      });
-    })
+  const cats = getItemCategories(slug);
+
+  const pokemonWhoLike = POKEMON_LIST
+    .filter((p) => p.categories.some((c) => cats.some((cat) => cat.slug === c.slug)))
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   const recipe = ITEM_RECIPES[slug];
@@ -49,20 +53,20 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
           { "@type": "ListItem", position: 2, name: "Items", item: `${SITE_URL}/items` },
-          { "@type": "ListItem", position: 3, name: item.name, item: `${SITE_URL}/item/${slug}` },
+          { "@type": "ListItem", position: 3, name: item.label, item: `${SITE_URL}/item/${slug}` },
         ],
       }} />
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Items", href: "/items" }, { label: item.name }]} />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Items", href: "/items" }, { label: item.label }]} />
       <div className="mb-6">
         <div className="flex items-center gap-4 mb-2">
           {item.icon && (
             <div className="size-16 bg-surface-1 rounded-[10px] p-[6px] shrink-0">
               <div className="relative w-full h-full">
-                <Image fill src={item.icon} alt={item.name} className="object-contain [image-rendering:pixelated]" sizes="64px" />
+                <Image fill src={item.icon} alt={item.label} className="object-contain [image-rendering:pixelated]" sizes="64px" />
               </div>
             </div>
           )}
-          <div className="font-outfit font-extrabold leading-[1.05] tracking-[-0.025em] text-[clamp(1.8rem,4vw,2.8rem)]">{item.name}</div>
+          <div className="font-outfit font-extrabold leading-[1.05] tracking-[-0.025em] text-[clamp(1.8rem,4vw,2.8rem)]">{item.label}</div>
         </div>
       </div>
 
@@ -75,23 +79,22 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
             </div>
             <div className="flex flex-wrap gap-3">
               {recipe.materials.map((mat, i) => {
-                const matItem = Object.values(ITEMS).find((it) => it.name.toLowerCase() === mat.name.toLowerCase());
                 const inner = (
                   <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-1 border border-paper-edge">
-                    {matItem?.icon && (
+                    {mat.item.icon && (
                       <div className="relative size-8 shrink-0">
-                        <Image fill src={matItem.icon} alt={mat.name} className="object-contain [image-rendering:pixelated]" sizes="32px" />
+                        <Image fill src={mat.item.icon} alt={mat.item.label} className="object-contain [image-rendering:pixelated]" sizes="32px" />
                       </div>
                     )}
                     <div>
-                      <div className="font-outfit font-semibold text-[13px] text-ink leading-tight">{mat.name}</div>
+                      <div className="font-outfit font-semibold text-[13px] text-ink leading-tight">{mat.item.label}</div>
                       {mat.qty > 1 && <div className="font-mono text-[11px] text-ink-soft">×{mat.qty}</div>}
                     </div>
                   </div>
                 );
-                return matItem
-                  ? <Link key={i} href={`/item/${matItem.slug}`} className="no-underline">{inner}</Link>
-                  : <div key={i}>{inner}</div>;
+                return (
+                  <Link key={i} href={`/item/${mat.item.slug}`} className="no-underline">{inner}</Link>
+                );
               })}
             </div>
           </div>
@@ -101,8 +104,10 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
       <Card>
         <SectionTitle>Categories</SectionTitle>
         <div className="flex flex-wrap gap-2 mt-2 mb-4">
-          {item.categories.map((c) => (
-            <Link key={c} href={`/category/${c}`} className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em] no-underline">{catDisplayName(c)}</Link>
+          {cats.map((c) => (
+            <Link key={c.slug} href={`/category/${c.slug}`} className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em] no-underline">
+              {c.label}
+            </Link>
           ))}
         </div>
 

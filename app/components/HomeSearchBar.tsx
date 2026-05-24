@@ -3,8 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { POKEMON, POKEMON_LIST } from "@/app/lib/data";
-import type { PokemonEntry } from "@/app/lib/types";
+import { POKEMON_LIST } from "@/app/lib/const";
+import type { PokemonConst } from "@/app/lib/const";
 import SearchInput from "@/app/components/SearchInput";
 import Shortcut from "@/app/components/Shortcut";
 import { SuggestionDropdown } from "@/app/components/SuggestionDropdown";
@@ -13,12 +13,12 @@ function normalize(s: string) {
   return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 }
 
-function searchPokemon(q: string): PokemonEntry[] {
+function searchPokemon(q: string): PokemonConst[] {
   const nq = normalize(q.trim());
   if (!nq) return [];
-  const prefix: PokemonEntry[] = [], contains: PokemonEntry[] = [];
+  const prefix: PokemonConst[] = [], contains: PokemonConst[] = [];
   for (const p of POKEMON_LIST) {
-    const nName = normalize(p.name);
+    const nName = normalize(p.label);
     if (nName.startsWith(nq)) prefix.push(p);
     else if (nName.includes(nq)) contains.push(p);
   }
@@ -30,7 +30,7 @@ const LISTBOX_ID = "home-search-listbox";
 export function HomeSearchBar() {
   const { push } = useRouter();
   const [query, setQuery] = useState("");
-  const [matches, setMatches] = useState<PokemonEntry[]>([]);
+  const [matches, setMatches] = useState<PokemonConst[]>([]);
   const [activeIdx, setActiveIdx] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const blurTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -83,6 +83,11 @@ export function HomeSearchBar() {
       ? `${LISTBOX_ID}-opt-${matches[activeIdx]!.slug}`
       : undefined;
 
+  // Quick-pick pokemon slugs for the suggestion row
+  const quickPicks = (["lucario", "onix", "eevee", "pikachu", "snorlax"] as const)
+    .map((slug) => POKEMON_LIST.find((p) => p.slug === slug))
+    .filter((p): p is PokemonConst => p != null);
+
   return (
     <>
       <SearchInput
@@ -115,9 +120,9 @@ export function HomeSearchBar() {
       </SearchInput>
       <div className="mt-4 flex gap-2 flex-wrap items-center">
         <span className="font-mono text-[11px] text-ink-fade tracking-[0.08em] font-semibold">Try:</span>
-        {(["lucario", "onix", "eevee", "pikachu", "snorlax"] as const).map((slug) => (
-          <Link key={slug} href={`/pokemon/${slug}`} className="no-underline">
-            <Shortcut>{POKEMON[slug]?.name ?? slug}</Shortcut>
+        {quickPicks.map((p) => (
+          <Link key={p.slug} href={`/pokemon/${p.slug}`} className="no-underline">
+            <Shortcut>{p.label}</Shortcut>
           </Link>
         ))}
       </div>

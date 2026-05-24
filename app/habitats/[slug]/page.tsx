@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { HABITATS, POKEMON, HABITAT_REQUIREMENTS, ITEMS } from "@/app/lib/data";
-import type { HabitatRequirement, ItemEntry } from "@/app/lib/types";
+import {
+  HabitatConfig,
+  POKEMON_BY_HABITAT_CONFIG,
+} from "@/app/lib/const";
+import type { HabitatRequirementConst } from "@/app/lib/const";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
 import PageWrap from "@/app/components/PageWrap";
@@ -13,21 +16,11 @@ import PokemonGridCard from "@/app/components/PokemonGridCard";
 import SectionTitle from "@/app/components/SectionTitle";
 import Link from "next/link";
 import Image from "next/image";
-import { existsSync } from "fs";
-import { join } from "path";
-import { ITEM_GROUPS } from "@/app/lib/data/item-groups";
-
-type ResolvedReq = {
-  req: HabitatRequirement;
-  item: ItemEntry | undefined;
-  isExact: boolean;
-  isAny: boolean;
-};
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return Object.keys(HABITATS).map((slug) => ({ slug }));
+  return Object.values(HabitatConfig).map((h) => ({ slug: h.slug }));
 }
 
 export async function generateMetadata({
@@ -36,12 +29,13 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const h = HABITATS[slug];
+  const h = Object.values(HabitatConfig).find((hc) => hc.slug === slug);
   if (!h) return { title: "Not found" };
+  const pokemonHere = POKEMON_BY_HABITAT_CONFIG[slug] ?? [];
   const desc =
-    `${h.name} habitat in Pokemon Pokopia — ${h.pokemon.length} Pokemon spawn here. ${h.description ?? ""}`.trim();
+    `${h.label} habitat in Pokemon Pokopia — ${pokemonHere.length} Pokemon spawn here. ${h.description ?? ""}`.trim();
   return {
-    title: `${h.name} Habitat — Build Guide | Pokopia Picks`,
+    title: `${h.label} Habitat — Build Guide | Pokopia Picks`,
     description: desc.slice(0, 155),
     openGraph: {
       url: `${SITE_URL}/habitats/${slug}/`,
@@ -55,54 +49,12 @@ export default async function HabitatPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const h = HABITATS[slug];
+  const h = Object.values(HabitatConfig).find((hc) => hc.slug === slug);
   if (!h) notFound();
 
-  const pokemonHere = h.pokemon
-    .flatMap((s) => (POKEMON[s] ? [POKEMON[s]] : []))
+  const pokemonHere = (POKEMON_BY_HABITAT_CONFIG[slug] ?? [])
+    .slice()
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
-
-  const requirements = HABITAT_REQUIREMENTS[slug] ?? [];
-
-  const allItems = Object.values(ITEMS);
-
-  // For each requirement, resolve to: exact match, or best prefix match (for "any type" items)
-  const resolved: ResolvedReq[] = requirements.map((req) => {
-    const nameLower = req.name.toLowerCase();
-    const baseName = nameLower.replace(/\s*\(any\)\s*$/, "").trim();
-    const isAnyLabel = nameLower.includes("(any)");
-
-    if (isAnyLabel) {
-      const anyIconPath = `/icons/items/${baseName.replace(/\s+/g, "")}(any).png`;
-      if (existsSync(join(process.cwd(), "public", anyIconPath))) {
-        return {
-          req,
-          item: { slug: "", name: req.name, icon: anyIconPath, categories: [] },
-          isExact: false,
-          isAny: true,
-        };
-      }
-    }
-
-    // 1. Exact match on full name
-    const exact = allItems.find((i) => i.name.toLowerCase() === nameLower);
-    if (exact) return { req, item: exact, isExact: true, isAny: isAnyLabel };
-
-    // 2. Exact match on base name (e.g. "Seat (any)" → find "Seat")
-    const baseExact = allItems.find((i) => i.name.toLowerCase() === baseName);
-    if (baseExact) return { req, item: baseExact, isExact: false, isAny: true };
-
-    // 3. Word-boundary match — first item whose name contains the base name as a whole word
-    const wordRe = new RegExp(
-      `(?:^|\\s)${baseName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:\\s|$)`,
-      "i",
-    );
-    const wordMatch = allItems.find((i) => wordRe.test(i.name));
-    if (wordMatch) return { req, item: wordMatch, isExact: false, isAny: true };
-
-    // 4. No match
-    return { req, item: undefined, isExact: false, isAny: isAnyLabel };
-  });
 
   return (
     <PageWrap>
@@ -112,18 +64,8 @@ export default async function HabitatPage({
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Habitats",
-              item: `${SITE_URL}/habitats`,
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: h.name,
-              item: `${SITE_URL}/habitats/${slug}`,
-            },
+            { "@type": "ListItem", position: 2, name: "Habitats", item: `${SITE_URL}/habitats` },
+            { "@type": "ListItem", position: 3, name: h.label, item: `${SITE_URL}/habitats/${slug}` },
           ],
         }}
       />
@@ -131,11 +73,11 @@ export default async function HabitatPage({
         items={[
           { label: "Home", href: "/" },
           { label: "Habitats", href: "/habitats" },
-          { label: h.name },
+          { label: h.label },
         ]}
       />
       <PageHeader
-        title={h.name}
+        title={h.label}
         meta={pokemonHere.length + " Pokemon spawn here"}
       >
         {h.description && (
@@ -145,19 +87,25 @@ export default async function HabitatPage({
         )}
       </PageHeader>
 
-      {resolved.length > 0 && (
+      {h.requirements.length > 0 && (
         <Card>
           <SectionTitle>How to build</SectionTitle>
           <div className="flex flex-wrap gap-3 mt-3">
-            {resolved.map(({ req, item, isExact, isAny }) => {
+            {h.requirements.map((req: HabitatRequirementConst) => {
+              const isGroup = req.type === "group";
+              const icon = isGroup ? null : req.item.icon;
+              const href = isGroup
+                ? `/items?group=${encodeURIComponent(req.groupKey)}`
+                : `/item/${req.item.slug}`;
+
               const inner = (
                 <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-1 border border-paper-edge">
-                  {item?.icon && (
+                  {icon && (
                     <div className="relative size-8 shrink-0">
                       <Image
                         fill
-                        src={item.icon}
-                        alt={req.name}
+                        src={icon}
+                        alt={req.label}
                         className="object-contain [image-rendering:pixelated]"
                         sizes="32px"
                       />
@@ -165,15 +113,13 @@ export default async function HabitatPage({
                   )}
                   <div>
                     <div className="font-outfit font-semibold text-[13px] text-ink leading-tight">
-                      {req.name}
+                      {req.label}
                     </div>
                     <div className="flex items-center gap-1.5">
                       {req.qty > 1 && (
-                        <span className="font-mono text-[11px] text-ink-soft">
-                          ×{req.qty}
-                        </span>
+                        <span className="font-mono text-[11px] text-ink-soft">×{req.qty}</span>
                       )}
-                      {isAny && (
+                      {isGroup && (
                         <span className="font-mono text-[10px] text-ink-soft bg-surface-2 px-1.5 py-0.5 rounded-full">
                           any type
                         </span>
@@ -182,19 +128,11 @@ export default async function HabitatPage({
                   </div>
                 </div>
               );
-              const baseName = req.name.replace(/\s*\(any\)\s*$/i, "").trim();
-              const groupKey = baseName.toLowerCase();
-              const href = isAny
-                ? `/items?group=${encodeURIComponent(groupKey)}`
-                : isExact && item
-                  ? `/item/${item.slug}`
-                  : null;
-              return href ? (
-                <Link key={req.name} href={href} className="no-underline">
+
+              return (
+                <Link key={req.label} href={href} className="no-underline">
                   {inner}
                 </Link>
-              ) : (
-                <div key={req.name}>{inner}</div>
               );
             })}
           </div>
