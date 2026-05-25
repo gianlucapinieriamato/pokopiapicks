@@ -1,42 +1,48 @@
-'use client'
-import { useEffect, useRef, useState } from 'react'
+"use client";
+import { useEffect, useRef, useState } from "react";
 
 interface AdSlotProps {
-  slot: string
-  format?: string
-  className?: string
+  slot: string;
+  format?: string;
+  className?: string;
 }
 
-export function AdSlot({ slot, format = 'auto', className = '' }: AdSlotProps) {
-  const insRef = useRef<HTMLModElement>(null)
+export function AdSlot({ slot, format = "auto", className = "" }: AdSlotProps) {
+  const insRef = useRef<HTMLModElement>(null);
   // Lazy initializer: always false on first render (show slot by default).
   // The effect below detects blocked/unfilled ads and sets hidden=true after
   // the fact — this is intentional deferred behavior, not a stale-state bug.
-  const [hidden, setHidden] = useState<boolean>(() => false)
+  const [hidden, setHidden] = useState<boolean>(() => false);
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const agl = (window as any).adsbygoogle
+    const agl = (window as any).adsbygoogle;
     if (!agl?.loaded) {
-      setHidden(true)
-      return
+      setTimeout(() => setHidden(true), 0);
+      return;
     }
-    const ins = insRef.current
-    if (!ins || ins.getAttribute('data-adsbygoogle-status')) return
-    try {
-      agl.push({})
-    } catch {
-      setHidden(true)
-      return
-    }
-    // hide if slot didn't fill after AdSense had time to respond
-    const timer = setTimeout(() => {
-      if (ins.getAttribute('data-adsbygoogle-status') !== 'done') setHidden(true)
-    }, 2000)
-    return () => clearTimeout(timer)
-  }, [])
 
-  if (hidden) return null
+    const ins = insRef.current;
+    if (!ins || ins.getAttribute("data-adsbygoogle-status")) return;
+    try {
+      agl.push({});
+    } catch {
+      setTimeout(() => setHidden(true), 0);
+      return;
+    }
+    // hide if slot didn't fill or is empty after AdSense had time to respond
+    const timer = setTimeout(() => {
+      if (
+        ins.getAttribute("data-adsbygoogle-status") !== "done" ||
+        !ins.hasChildNodes()
+      ) {
+        setHidden(true);
+      }
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (hidden) return null;
 
   return (
     <aside
@@ -46,12 +52,12 @@ export function AdSlot({ slot, format = 'auto', className = '' }: AdSlotProps) {
       <ins
         ref={insRef}
         className="adsbygoogle w-full text-center"
-        style={{ display: 'block', width: '100%', minWidth: 0 }}
+        style={{ display: "block", width: "100%", minWidth: 0 }}
         data-ad-client="pub-6028271541011678"
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive="true"
       />
     </aside>
-  )
+  );
 }

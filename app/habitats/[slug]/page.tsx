@@ -106,7 +106,7 @@ export default async function HabitatPage({
                         fill
                         src={icon}
                         alt={req.label}
-                        className="object-contain [image-rendering:pixelated]"
+                        className="object-contain"
                         sizes="32px"
                       />
                     </div>

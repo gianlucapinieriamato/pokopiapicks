@@ -55,6 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`h-full ${outfit.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-full flex flex-col">
@@ -83,9 +84,9 @@ export default function RootLayout({
         />
         <Nav />
         <AdSlot slot="8403578120" format="horizontal" />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 overflow-x-hidden">{children}</main>
         <AdSlot slot="2178978334" format="horizontal" />
-        <footer className="mt-12 py-6 border-t border-paper-edge text-center">
+        <footer className="mt-4 md:mt-12 py-6 border-t border-paper-edge text-center">
           <p className="text-[13px] text-ink-soft">
             Pokopia Picks — fan-made wiki for Pokemon Pokopia.
           </p>

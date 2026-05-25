@@ -4268,6 +4268,164 @@ export const HabitatConfig = {
       },
     ],
   },
+
+  Lumberjacksworkplace: {
+    slug: "lumberjacksworkplace",
+    label: "Lumberjack's workplace",
+    description:
+      "",
+    requirements: [
+      // TODO: Item.logchair not found in items.ts
+      {
+        type: "item" as const,
+        item: Item.Cart,
+        label: "Cart",
+        qty: 1,
+      },
+      // TODO: Item.logtable not found in items.ts
+    ],
+  },
+  Professorstreasuretrove: {
+    slug: "professorstreasuretrove",
+    label: "Professor's treasure trove",
+    description:
+      "",
+    requirements: [
+    ],
+  },
+  Nothinbutpokeballs: {
+    slug: "nothinbutpokeballs",
+    label: "Nothin' but Poke Balls",
+    description:
+      "",
+    requirements: [
+      // TODO: Item.pokeballsofa not found in items.ts
+      // TODO: Item.pokeballbed not found in items.ts
+      // TODO: Item.pokeballtable not found in items.ts
+      // TODO: Item.pokeballlight not found in items.ts
+    ],
+  },
+  Gourmetsaltar: {
+    slug: "gourmetsaltar",
+    label: "Gourmet's altar",
+    description:
+      "",
+    requirements: [
+      // TODO: Item.offeringdish not found in items.ts
+    ],
+  },
+  Chefskitchen: {
+    slug: "chefskitchen",
+    label: "Chef's kitchen",
+    description:
+      "",
+    requirements: [
+      // TODO: Item.cookingstove not found in items.ts
+      // TODO: Item.modernsink not found in items.ts
+      // TODO: Item.plaintable not found in items.ts
+      // TODO: Item.stylishcookingpot not found in items.ts
+      // TODO: Item.cuttingboard not found in items.ts
+    ],
+  },
+  FortuneTellerstable: {
+    slug: "fortune-tellerstable",
+    label: "Fortune-teller's table",
+    description:
+      "",
+    requirements: [
+      // TODO: Item.crystalball not found in items.ts
+    ],
+  },
+  Professorsapprenticeprogram: {
+    slug: "professorsapprenticeprogram",
+    label: "Professor's apprentice program",
+    description:
+      "",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Whiteboard,
+        label: "Whiteboard",
+        qty: 1,
+      },
+      // TODO: Item.jumbledcords not found in items.ts
+      {
+        type: "item" as const,
+        item: Item.Laptop,
+        label: "Laptop",
+        qty: 1,
+      },
+    ],
+  },
+  Researchersdesk: {
+    slug: "researchersdesk",
+    label: "Researcher's desk",
+    description:
+      "",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Computer,
+        label: "Computer",
+        qty: 1,
+      },
+      // TODO: Item.scienceexperiment not found in items.ts
+    ],
+  },
+  Naturesmarket: {
+    slug: "naturesmarket",
+    label: "Nature's market",
+    description:
+      "",
+    requirements: [
+      // TODO: Item.largeboulder not found in items.ts
+      // TODO: Item.cashregister not found in items.ts
+    ],
+  },
+  Gamersparadise: {
+    slug: "gamersparadise",
+    label: "Gamer's paradise",
+    description:
+      "",
+    requirements: [
+      // TODO: Item.gamingbed not found in items.ts
+      // TODO: Item.gamingpc not found in items.ts
+      // TODO: Item.gamingchair not found in items.ts
+      // TODO: Item.gamingfridge not found in items.ts
+    ],
+  },
+  Maliciousknightsshrine: {
+    slug: "maliciousknightsshrine",
+    label: "Malicious knight's shrine",
+    description:
+      "",
+    requirements: [
+      // TODO: Item.maliciousarmor not found in items.ts
+      // TODO: Item.steppingstones not found in items.ts
+      {
+        type: "item" as const,
+        item: Item.Firepit,
+        label: "Firepit",
+        qty: 1,
+      },
+    ],
+  },
+  Auspiciousknightsshrine: {
+    slug: "auspiciousknightsshrine",
+    label: "Auspicious knight's shrine",
+    description:
+      "",
+    requirements: [
+      // TODO: Item.auspiciousarmor not found in items.ts
+      // TODO: Item.steppingstones not found in items.ts
+      {
+        type: "item" as const,
+        item: Item.Firepit,
+        label: "Firepit",
+        qty: 1,
+      },
+    ],
+  },
 } as const;
 export type HabitatConfigConst =
   (typeof HabitatConfig)[keyof typeof HabitatConfig];
