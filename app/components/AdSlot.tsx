@@ -24,7 +24,7 @@ export function AdSlot({ slot, format = "auto", className = "" }: AdSlotProps) {
     try {
       agl.push({});
     } catch {
-      setHidden(true);
+      setTimeout(() => setHidden(true), 0);
       return;
     }
     // hide if slot didn't fill after AdSense had time to respond
