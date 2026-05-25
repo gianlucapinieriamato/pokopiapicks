@@ -17,7 +17,10 @@ export function AdSlot({ slot, format = "auto", className = "" }: AdSlotProps) {
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const agl = (window as any).adsbygoogle;
-    if (!agl?.loaded) return;
+    if (!agl?.loaded) {
+      setTimeout(() => setHidden(true), 0);
+      return;
+    }
 
     const ins = insRef.current;
     if (!ins || ins.getAttribute("data-adsbygoogle-status")) return;
@@ -27,10 +30,14 @@ export function AdSlot({ slot, format = "auto", className = "" }: AdSlotProps) {
       setTimeout(() => setHidden(true), 0);
       return;
     }
-    // hide if slot didn't fill after AdSense had time to respond
+    // hide if slot didn't fill or is empty after AdSense had time to respond
     const timer = setTimeout(() => {
-      if (ins.getAttribute("data-adsbygoogle-status") !== "done")
+      if (
+        ins.getAttribute("data-adsbygoogle-status") !== "done" ||
+        !ins.hasChildNodes()
+      ) {
         setHidden(true);
+      }
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
