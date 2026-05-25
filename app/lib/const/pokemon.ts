@@ -337,7 +337,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Recycle],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Researchersdesk,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Common,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Tinkaton: {
     slug: "tinkaton",
@@ -3158,7 +3174,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Appraise],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Professorstreasuretrove,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Common,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Vespiquen: {
     slug: "vespiquen",
@@ -3785,7 +3817,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Recycle],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Professorsapprenticeprogram,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Common,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Wattrel: {
     slug: "wattrel",
@@ -5183,7 +5231,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Teleport],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.FortuneTellerstable,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Rare,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Dusclops: {
     slug: "dusclops",
@@ -7433,7 +7497,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Generate, Specialty.Hype],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Naturesmarket,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Common,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Electrode: {
     slug: "electrode",
@@ -8831,7 +8911,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Burn, Specialty.Trade],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Auspiciousknightsshrine,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Rare,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Trapinch: {
     slug: "trapinch",
@@ -8901,7 +8997,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Crush, Specialty.Recycle],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Gamersparadise,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Rare,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Cranidos: {
     slug: "cranidos",
@@ -9299,7 +9411,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Eat],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Gourmetsaltar,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Common,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Snorlax: {
     slug: "snorlax",
@@ -9881,7 +10009,19 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Grow, Specialty.Litter],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Nothinbutpokeballs,
+        locations: [
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Common,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Tangrowth: {
     slug: "tangrowth",
@@ -10482,7 +10622,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Party],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Chefskitchen,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Common,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Mismagius: {
     slug: "mismagius",
@@ -12131,7 +12287,23 @@ export const Pokemon: Record<string, PokemonConst> = {
     ],
     specialties: [Specialty.Burn, Specialty.Trade],
     primaryLocation: null,
-    habitatList: [],
+    habitatList: [
+      {
+        habitat: HabitatConfig.Maliciousknightsshrine,
+        locations: [
+          Location.WitheredWastelands,
+          Location.BleakBeach,
+          Location.RockyRidges,
+          Location.SparklingSkylands,
+          Location.PaletteTown,
+          Location.CloudIsland,
+        ],
+        rarity: Rarity.Common,
+        time: [Time.Morning, Time.Day, Time.Evening, Time.Night],
+        weather: [Weather.Sun, Weather.Cloud, Weather.Rain],
+        isCloudIsland: true,
+      } as HabitatListConst,
+    ],
   },
   Ninetales: {
     slug: "ninetales",

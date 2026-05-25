@@ -62,7 +62,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
           {item.icon && (
             <div className="size-16 bg-surface-1 rounded-[10px] p-[6px] shrink-0">
               <div className="relative w-full h-full">
-                <Image fill src={item.icon} alt={item.label} className="object-contain [image-rendering:pixelated]" sizes="64px" />
+                <Image fill src={item.icon} alt={item.label} className="object-contain" sizes="64px" />
               </div>
             </div>
           )}
@@ -83,7 +83,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
                   <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-1 border border-paper-edge">
                     {mat.item.icon && (
                       <div className="relative size-8 shrink-0">
-                        <Image fill src={mat.item.icon} alt={mat.item.label} className="object-contain [image-rendering:pixelated]" sizes="32px" />
+                        <Image fill src={mat.item.icon} alt={mat.item.label} className="object-contain" sizes="32px" />
                       </div>
                     )}
                     <div>

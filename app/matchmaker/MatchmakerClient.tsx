@@ -5,6 +5,7 @@ import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import {
   POKEMON_BY_SLUG,
   POKEMON_LIST,
+  POKEMON_CATEGORIES_SORTED,
   pkmnIconUrl,
   dexNum,
 } from "@/app/lib/const";
@@ -17,23 +18,7 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 import Card from "@/app/components/Card";
 import PageHeader from "@/app/components/PageHeader";
 import SectionTitle from "@/app/components/SectionTitle";
-
-// ─── Pure helpers ──────────────────────────────────────────────────────────
-
-function sharedItemCount(a: PokemonConst, b: PokemonConst): number {
-  const setA = new Set(a.categories.flatMap((cat) => cat.items.map((i) => i.slug)));
-  return b.categories.flatMap((cat) => cat.items).filter((i) => setA.has(i.slug)).length;
-}
-
-function calcScore(anchor: PokemonConst, candidate: PokemonConst): number {
-  if (anchor.habitat.slug !== candidate.habitat.slug) return -1;
-  const shared = sharedItemCount(anchor, candidate);
-  const anchorSpecs = new Set(anchor.specialties.map((s) => s.slug));
-  const candSpecs = new Set(candidate.specialties.map((s) => s.slug));
-  const hasOverlap = [...candSpecs].some((s) => anchorSpecs.has(s));
-  const multiplier = (!hasOverlap && candSpecs.size > 0 && anchorSpecs.size > 0) ? 1.5 : 1.0;
-  return Math.round(shared * multiplier);
-}
+import { sharedItemCount, calcScore } from "@/app/lib/scoring";
 
 function buildGroup(initialAnchors: PokemonConst[], size: number): PokemonConst[] {
   if (initialAnchors.length === 0) return [];
@@ -171,7 +156,7 @@ export default function MatchmakerClient() {
             {anchors.map((a) => (
               <div key={a.slug} className="flex items-center gap-1.5 bg-accent-soft border border-[1.5px] border-accent rounded-full px-2 py-[4px]">
                 <div className="relative size-5 shrink-0">
-                  <Image fill src={pkmnIconUrl(a)} alt={a.label} className="object-contain [image-rendering:pixelated]" sizes="20px" />
+                  <Image fill src={pkmnIconUrl(a)} alt={a.label} className="object-contain" sizes="20px" />
                 </div>
                 <span className="font-outfit font-bold text-[12px] text-ink-deep">{a.label}</span>
                 <button
@@ -221,7 +206,7 @@ export default function MatchmakerClient() {
               <div key={anchor.slug} className="flex items-start gap-3">
                 <div className="size-[72px] shrink-0 bg-[var(--portrait-bg)] rounded-[12px] border-2 border-paper-edge p-1.5 shadow-[0_4px_12px_-4px_var(--shadow)]">
                   <div className="relative w-full h-full">
-                    <Image fill src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.label} className="object-contain [image-rendering:pixelated]" sizes="72px" />
+                    <Image fill src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.label} className="object-contain" sizes="72px" />
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
@@ -231,7 +216,7 @@ export default function MatchmakerClient() {
                   <div className="font-outfit font-extrabold text-[20px] tracking-[-0.02em] leading-[1.05] mb-1">{anchor.label}</div>
                   <div className="font-mono text-[11px] text-leaf font-semibold tracking-[0.04em]">{anchor.habitat.label}</div>
                   <div className="flex flex-wrap gap-1 mt-1">
-                    {anchor.categories.map((c) => (
+                    {(POKEMON_CATEGORIES_SORTED[anchor.slug] ?? anchor.categories).map((c) => (
                       <span key={c.slug} className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em]">
                         {c.label}
                       </span>
@@ -270,7 +255,7 @@ export default function MatchmakerClient() {
                       <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>
                     )}
                     <div className="relative size-16">
-                      <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain [image-rendering:pixelated]" sizes="64px" />
+                      <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain" sizes="64px" />
                     </div>
                     <div className="font-mono text-[10px] text-ink-fade font-medium">#{dexNum(p)}</div>
                     <div className="font-bold text-[12px] leading-tight">{p.label}</div>
@@ -291,7 +276,7 @@ export default function MatchmakerClient() {
                   className="flex items-center gap-1.5 bg-chrome border border-[1.5px] border-paper-edge rounded-full px-2.5 py-[5px] text-ink transition-all hover:bg-paper hover:border-accent cursor-pointer"
                 >
                   <div className="relative size-5 shrink-0">
-                    <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain [image-rendering:pixelated]" sizes="20px" />
+                    <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain" sizes="20px" />
                   </div>
                   <span className="font-outfit font-bold text-[12px]">{p.label}</span>
                 </button>
@@ -340,18 +325,18 @@ export default function MatchmakerClient() {
                   className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 mb-2.5 cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] transition-all w-full text-left"
                 >
                   <div className="absolute -top-2 right-3 flex items-center gap-1">
-                    <span className="font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
-                      {s} pts
-                    </span>
                     {isComplementary && (
-                      <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-leaf/20 text-leaf uppercase tracking-wide">
+                      <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-leaf text-paper uppercase tracking-wide">
                         COMPLEMENT
                       </span>
                     )}
+                    <span className="font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
+                      {s} pts
+                    </span>
                   </div>
                   <div className="size-14 shrink-0 bg-paper rounded-[10px] p-1">
                     <div className="relative w-full h-full">
-                      <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain [image-rendering:pixelated]" sizes="56px" />
+                      <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain" sizes="56px" />
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
@@ -367,7 +352,6 @@ export default function MatchmakerClient() {
                     </div>
                     <div className="font-mono text-[10px] text-ink-soft tracking-[0.02em] leading-snug">
                       {shared} shared items · {p.specialties.map((sp) => sp.label).join(", ") || "no specialty"}
-                      {isComplementary && " · complementary"}
                     </div>
                   </div>
                 </div>
@@ -397,7 +381,7 @@ export default function MatchmakerClient() {
                 >
                   {isAnchor && <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>}
                   <div className="relative size-16">
-                    <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain [image-rendering:pixelated]" sizes="64px" />
+                    <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain" sizes="64px" />
                   </div>
                   <div className="font-mono text-[10px] text-ink-fade font-medium">#{dexNum(p)}</div>
                   <div className="font-bold text-[12px] leading-tight">{p.label}</div>
