@@ -6,7 +6,7 @@ export default function ItemTile({ name, slug, icon }: { name: string; slug?: st
   const tile = (
     <HoverTile className="flex items-center gap-2.5 py-2 px-2.5">
       <div className="relative size-7 shrink-0">
-        {icon && <Image fill src={icon} alt="" className="object-contain [image-rendering:pixelated]" sizes="28px" />}
+        {icon && <Image fill src={icon} alt="" className="object-contain" sizes="28px" />}
       </div>
       <span className="font-outfit font-semibold text-xs text-ink leading-[1.3] line-clamp-2">{name}</span>
     </HoverTile>

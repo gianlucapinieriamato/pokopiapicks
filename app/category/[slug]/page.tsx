@@ -56,7 +56,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             <Link key={item.slug} href={`/item/${item.slug}`} className="no-underline">
               <div className="text-[13px] px-[10px] py-[6px] rounded-lg bg-paper border border-surface-2 text-ink transition-all flex items-center gap-2 min-h-[44px] hover:border-accent hover:bg-surface-1">
                 <div className="relative size-8 shrink-0">
-                  {item.icon && <Image fill src={item.icon} alt={item.label} className="object-contain [image-rendering:pixelated]" sizes="32px" />}
+                  {item.icon && <Image fill src={item.icon} alt={item.label} className="object-contain" sizes="32px" />}
                 </div>
                 <div className="flex-1 min-w-0">{item.label}</div>
               </div>

@@ -1,8 +1,11 @@
 "use client";
 import { useId } from "react";
 
-export default function InfoTip({ tip }: { tip: string }) {
+export default function InfoTip({ tip, align = "center" }: { tip: string; align?: "center" | "right" }) {
   const tooltipId = useId();
+  const tipPos = align === "right"
+    ? "right-0"
+    : "left-1/2 -translate-x-1/2";
   return (
     <span className="group/tip relative inline-flex">
       <button
@@ -16,7 +19,7 @@ export default function InfoTip({ tip }: { tip: string }) {
       <span
         id={tooltipId}
         role="tooltip"
-        className="pointer-events-none absolute bottom-[calc(100%+6px)] left-1/2 -translate-x-1/2 z-20 opacity-0 transition-opacity duration-150 group-hover/tip:opacity-100 group-focus-within/tip:opacity-100 bg-ink text-paper px-[10px] py-[5px] rounded-md text-[12px] font-['Outfit'] font-medium whitespace-normal w-max max-w-[260px] text-center leading-[1.4] tracking-normal"
+        className={`pointer-events-none absolute bottom-[calc(100%+6px)] ${tipPos} z-20 opacity-0 transition-opacity duration-150 group-hover/tip:opacity-100 group-focus-within/tip:opacity-100 bg-ink text-paper px-[10px] py-[5px] rounded-md text-[12px] font-['Outfit'] font-medium whitespace-normal w-max max-w-[260px] text-center leading-[1.4] tracking-normal`}
       >
         {tip}
         <span className="absolute top-full left-1/2 -translate-x-1/2 block size-0 border-x-[5px] border-x-transparent border-t-[5px] border-t-ink" />

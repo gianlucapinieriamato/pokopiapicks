@@ -22,7 +22,7 @@ export default function BestGiftItem({
         <div className="size-14 shrink-0 bg-white/70 rounded-[10px] p-1">
           {iconSrc && (
             <div className="relative w-full h-full">
-              <Image fill src={iconSrc} alt={item} className="object-contain [image-rendering:pixelated]" sizes="56px" />
+              <Image fill src={iconSrc} alt={item} className="object-contain" sizes="56px" />
             </div>
           )}
         </div>

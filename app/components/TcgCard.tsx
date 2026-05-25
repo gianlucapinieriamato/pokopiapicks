@@ -1,14 +1,18 @@
 import Image from "next/image";
-import { pkmnIconUrl, dexNum, POKEMON_CATEGORIES_SORTED } from "@/app/lib/const";
+import {
+  pkmnIconUrl,
+  dexNum,
+  POKEMON_CATEGORIES_SORTED,
+} from "@/app/lib/const";
 import type { PokemonConst } from "@/app/lib/const";
 
 const HABITAT_COLORS = Object.freeze({
   bright: { h1: "#ffe9a0", h2: "#d4a93a" },
-  cool:   { h1: "#b8dff0", h2: "#4a9abf" },
-  dark:   { h1: "#c8b4d8", h2: "#5a3878" },
-  dry:    { h1: "#e8d4a0", h2: "#b89050" },
-  humid:  { h1: "#a8d4a0", h2: "#4a8a4e" },
-  warm:   { h1: "#f0b880", h2: "#c86030" },
+  cool: { h1: "#b8dff0", h2: "#4a9abf" },
+  dark: { h1: "#c8b4d8", h2: "#5a3878" },
+  dry: { h1: "#e8d4a0", h2: "#b89050" },
+  humid: { h1: "#a8d4a0", h2: "#4a8a4e" },
+  warm: { h1: "#f0b880", h2: "#c86030" },
 } as const);
 
 const CHIP_BASE =
@@ -20,10 +24,10 @@ const VARIANTS = {
     frameRound: "rounded-2xl",
     innerRound: "rounded-[10px]",
     inset: "inset-[7px]",
-    headerPad: "px-[14px] py-[10px]",
+    headerPad: "px-2 py-2",
     artMargin: "m-2 mb-0",
     chipArea: "px-[10px] pt-[6px] pb-1",
-    footerPad: "px-3 pt-[6px] pb-2",
+    footerPad: "px-2 pt-[6px] pb-2",
     name: "text-[20px]",
     dex: "text-[11px]",
     artLabel: "text-[10px]",
@@ -42,10 +46,10 @@ const VARIANTS = {
     frameRound: "rounded-xl",
     innerRound: "rounded-lg",
     inset: "inset-1",
-    headerPad: "px-[9px] py-[6px]",
-    artMargin: "m-1 mb-0",
+    headerPad: "px-2 py-2",
+    artMargin: "m-2 mb-0",
     chipArea: "px-[6px] pt-1 pb-[3px]",
-    footerPad: "px-2 pt-[3px] pb-[5px]",
+    footerPad: "px-2 pt-[3px] pb-2",
     name: "text-[14px]",
     dex: "text-[8px]",
     artLabel: "text-[8px]",
@@ -64,10 +68,10 @@ const VARIANTS = {
     frameRound: "rounded-xl",
     innerRound: "rounded-lg",
     inset: "inset-1",
-    headerPad: "px-[9px] py-[6px]",
-    artMargin: "m-1 mb-0",
+    headerPad: "px-2 py-2",
+    artMargin: "m-2 mb-0",
     chipArea: "px-[6px] pt-1 pb-[3px]",
-    footerPad: "px-2 pt-[3px] pb-[5px]",
+    footerPad: "px-2 pt-[3px] pb-2",
     name: "text-[12px]",
     dex: "text-[8px]",
     artLabel: "text-[8px]",
@@ -103,7 +107,11 @@ function ChipRow({
           {item}
         </span>
       ))}
-      {overflow > 0 && <span className={`${badgeClass} shrink-0 whitespace-nowrap`}>+{overflow}</span>}
+      {overflow > 0 && (
+        <span className={`${badgeClass} shrink-0 whitespace-nowrap`}>
+          +{overflow}
+        </span>
+      )}
     </div>
   );
 }
@@ -115,16 +123,20 @@ export default function TcgCard({
   p: PokemonConst;
   size?: "lg" | "md" | "sm";
 }) {
-  const isSm = size === "sm";
   const v = VARIANTS[size];
   const habitatSlug = p.habitat.slug as keyof typeof HABITAT_COLORS;
-  const { h1, h2 } = HABITAT_COLORS[habitatSlug] ?? { h1: "#d8ccb8", h2: "#a89070" };
+  const { h1, h2 } = HABITAT_COLORS[habitatSlug] ?? {
+    h1: "#d8ccb8",
+    h2: "#a89070",
+  };
 
   const holoOpacity = p.isLegendary ? 1 : 0.25;
   const sweepOpacity = p.isLegendary ? holoOpacity * 0.65 : 0;
 
   return (
-    <div className={`relative w-full ${v.wrapper} aspect-[100/155] min-h-[320px]`}>
+    <div
+      className={`relative w-full ${v.wrapper} aspect-[100/155] min-h-[320px]`}
+    >
       {/* Gold frame */}
       <div
         className={`absolute inset-0 ${v.frameRound} ${p.isLegendary ? v.legendShadow : v.frameShadow}`}
@@ -154,7 +166,7 @@ export default function TcgCard({
             <div
               className={`font-mono font-semibold ${v.dex} text-accent-deep tracking-[0.08em] shrink-0`}
             >
-              {dexNum(p)}
+              #{dexNum(p)}
             </div>
           </div>
 
@@ -196,7 +208,7 @@ export default function TcgCard({
                 fill
                 src={pkmnIconUrl(p)}
                 alt={p.label}
-                className="object-contain [image-rendering:pixelated]"
+                className="object-contain"
                 sizes="200px"
               />
             </div>
@@ -210,8 +222,10 @@ export default function TcgCard({
               Likes
             </div>
             <ChipRow
-              items={(POKEMON_CATEGORIES_SORTED[p.slug] ?? p.categories).map((c) => c.label)}
-              max={size === "lg" ? 3 : 2}
+              items={(POKEMON_CATEGORIES_SORTED[p.slug] ?? p.categories).map(
+                (c) => c.label,
+              )}
+              max={2}
               chipClass={`${CHIP_BASE} ${v.chip}`}
               badgeClass={`${CHIP_BASE} ${v.chip} text-ink-soft`}
             />
@@ -219,12 +233,12 @@ export default function TcgCard({
             {((p.specialties && p.specialties.length > 0) || p.flavor) && (
               <div className="flex gap-[6px] mt-2 items-start">
                 {p.specialties && p.specialties.length > 0 && (
-                  <div className="flex-1 min-w-0">
-                    <div
-                      className={`font-mono ${v.chipLabel} text-accent-deep tracking-[0.07em] font-semibold uppercase mb-[3px]`}
+                  <div className="flex-1 min-w-0 flex flex-col items-start">
+                    <span
+                      className={`font-mono ${v.chipLabel} text-accent-deep tracking-[0.07em] font-semibold uppercase p-1`}
                     >
                       Specialty
-                    </div>
+                    </span>
                     <ChipRow
                       items={p.specialties.map((s) => s.label)}
                       max={size === "lg" ? 3 : 1}
@@ -234,12 +248,12 @@ export default function TcgCard({
                   </div>
                 )}
                 {p.flavor && (
-                  <div className="flex-1 min-w-0">
-                    <div
-                      className={`font-mono ${v.chipLabel} text-leaf tracking-[0.07em] font-semibold uppercase mb-[3px]`}
+                  <div className="flex-1 min-w-0 flex flex-col items-start">
+                    <span
+                      className={`font-mono ${v.chipLabel} text-leaf tracking-[0.07em] font-semibold uppercase p-1`}
                     >
                       Flavor
-                    </div>
+                    </span>
                     <ChipRow
                       items={[p.flavor.label]}
                       max={2}
@@ -265,7 +279,7 @@ export default function TcgCard({
             <span
               className={`font-mono ${v.footer} ${p.isLegendary ? "text-accent" : "text-ink-fade"} tracking-[0.06em] font-semibold`}
             >
-              {p.types[0]?.label ?? ""}
+              {p.types.map((t) => t.label).join(" / ")}
             </span>
           </div>
 

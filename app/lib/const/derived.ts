@@ -77,7 +77,8 @@ export const POKEMON_VARIANTS_BY_BASE: Record<string, PokemonConst[]> = {};
  */
 export const POKEMON_BASE_BY_VARIANT: Record<string, PokemonConst> = {};
 
-// Build variant maps in one pass
+// Build variant maps — two passes
+// Pass 1: variant icon with a plain-icon base (e.g. Mosslax → Snorlax)
 for (const p of POKEMON_LIST) {
   if (!VARIANT_ICON_RE.test(p.icon)) continue;
   const dexNum_ = p.nationalDexNum;
@@ -88,6 +89,27 @@ for (const p of POKEMON_LIST) {
   if (!base) continue;
   (POKEMON_VARIANTS_BY_BASE[base.slug] ??= []).push(p);
   POKEMON_BASE_BY_VARIANT[p.slug] = base;
+}
+
+// Pass 2: groups where ALL forms have variant icons and no base was found
+// (e.g. Toxtricity Amped + Low Key, Tatsugiri Curly/Droopy/Stretchy)
+// Group by nationalDexNum, skip any already linked
+const orphanGroups = new Map<number, PokemonConst[]>();
+for (const p of POKEMON_LIST) {
+  if (!VARIANT_ICON_RE.test(p.icon)) continue;
+  if (POKEMON_BASE_BY_VARIANT[p.slug]) continue; // already handled
+  const dexNum_ = p.nationalDexNum;
+  if (dexNum_ == null) continue;
+  (orphanGroups.get(dexNum_) ?? (orphanGroups.set(dexNum_, []), orphanGroups.get(dexNum_)!)).push(p);
+}
+for (const group of orphanGroups.values()) {
+  if (group.length < 2) continue;
+  const pseudoBase = group[0]!;
+  for (let i = 1; i < group.length; i++) {
+    const v = group[i]!;
+    (POKEMON_VARIANTS_BY_BASE[pseudoBase.slug] ??= []).push(v);
+    POKEMON_BASE_BY_VARIANT[v.slug] = pseudoBase;
+  }
 }
 
 Object.freeze(POKEMON_VARIANTS_BY_BASE);

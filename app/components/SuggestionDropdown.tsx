@@ -48,7 +48,7 @@ export function SuggestionDropdown({
             <PkmnIcon
               src={pkmnIconUrl(opt as PokemonConst)}
               alt={opt.label}
-              className="size-11 object-contain shrink-0 [image-rendering:pixelated]"
+              className="size-11 object-contain shrink-0"
             />
             <span className="font-mono text-[11px] text-ink-fade min-w-[38px] font-semibold">
               #{dexNum(opt as PokemonConst)}
