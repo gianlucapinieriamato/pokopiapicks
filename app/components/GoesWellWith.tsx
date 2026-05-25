@@ -1,10 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useId, useMemo } from "react";
-import {
-  POKEMON_LIST,
-  POKEMON_BY_SLUG,
-} from "@/app/lib/const";
+import { POKEMON_LIST, POKEMON_BY_SLUG } from "@/app/lib/const";
 import type { PokemonHabitatConst } from "@/app/lib/const";
 import InfoTip from "@/app/components/InfoTip";
 import PokemonGridCard from "@/app/components/PokemonGridCard";
