@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface AdSlotProps {
   slot: string;
@@ -13,14 +13,6 @@ export function AdSlot({ slot, format = "auto", className = "" }: AdSlotProps) {
   // The effect below detects blocked/unfilled ads and sets hidden=true after
   // the fact — this is intentional deferred behavior, not a stale-state bug.
   const [hidden, setHidden] = useState<boolean>(() => false);
-
-  useLayoutEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const agl = (window as any).adsbygoogle;
-    if (!agl?.loaded) {
-      setHidden(true);
-    }
-  }, []);
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
