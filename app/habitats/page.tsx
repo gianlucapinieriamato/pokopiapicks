@@ -26,7 +26,11 @@ export default function HabitatsPage() {
         url: `${SITE_URL}/habitats`,
       }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Habitats" }]} />
-      <PageHeader title="Habitats" meta={`${ALL_HABITATS.length} habitats`} />
+      <PageHeader title="Habitats" meta={`${ALL_HABITATS.length} habitats`}>
+        <p className="mt-2 text-[13px] text-ink-soft leading-relaxed max-w-prose">
+          Pokemon with the same habitat can share a living space in Pokopia. Grouping compatible Pokemon boosts their happiness and unlocks bonus interactions.
+        </p>
+      </PageHeader>
 
       <Card>
         <FilterableGrid

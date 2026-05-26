@@ -35,7 +35,11 @@ export default function LocationsPage() {
         url: `${SITE_URL}/locations`,
       }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Locations" }]} />
-      <PageHeader title="Locations" meta={`${ALL_LOCATIONS.length} locations`} />
+      <PageHeader title="Locations" meta={`${ALL_LOCATIONS.length} locations`}>
+        <p className="mt-2 text-[13px] text-ink-soft leading-relaxed max-w-prose">
+          Locations are areas in Pokopia where you can find and catch wild Pokemon. Each location has its own set of harvestable materials and resident Pokemon species.
+        </p>
+      </PageHeader>
 
       <Card>
         <FilterableGrid

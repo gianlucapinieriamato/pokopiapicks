@@ -26,7 +26,11 @@ export default function TypesPage() {
         url: `${SITE_URL}/types`,
       }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Types" }]} />
-      <PageHeader title="Types" meta={`${ALL_TYPES.length} types`} />
+      <PageHeader title="Types" meta={`${ALL_TYPES.length} types`}>
+        <p className="mt-2 text-[13px] text-ink-soft leading-relaxed max-w-prose">
+          A Pokemon&apos;s elemental type shapes its identity and battle interactions in Pokopia. Click a type to browse all Pokemon that belong to it.
+        </p>
+      </PageHeader>
 
       <Card>
         <FilterableGrid

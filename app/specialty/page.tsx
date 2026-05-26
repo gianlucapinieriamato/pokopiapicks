@@ -26,7 +26,11 @@ export default function SpecialtiesPage() {
         url: `${SITE_URL}/specialty`,
       }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Specialties" }]} />
-      <PageHeader title="Specialties" meta={`${ALL_SPECIALTIES.length} specialties`} />
+      <PageHeader title="Specialties" meta={`${ALL_SPECIALTIES.length} specialties`}>
+        <p className="mt-2 text-[13px] text-ink-soft leading-relaxed max-w-prose">
+          Specialties determine bonus effects when a Pokemon helps with certain Pokopia activities. Pokemon that share a specialty tend to work well together and pair naturally as roommates.
+        </p>
+      </PageHeader>
 
       <Card>
         <FilterableGrid
