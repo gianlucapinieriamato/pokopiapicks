@@ -22,7 +22,7 @@ export default function InfoTip({ tip, align = "center" }: { tip: string; align?
         className={`pointer-events-none absolute bottom-[calc(100%+6px)] ${tipPos} z-20 opacity-0 transition-opacity duration-150 group-hover/tip:opacity-100 group-focus-within/tip:opacity-100 bg-ink text-paper px-[10px] py-[5px] rounded-md text-[12px] font-['Outfit'] font-medium whitespace-normal w-max max-w-[260px] text-center leading-[1.4] tracking-normal`}
       >
         {tip}
-        <span className="absolute top-full left-1/2 -translate-x-1/2 block size-0 border-x-[5px] border-x-transparent border-t-[5px] border-t-ink" />
+        <span className={`absolute top-full block size-0 border-x-[5px] border-x-transparent border-t-[5px] border-t-ink ${align === "right" ? "right-2" : "left-1/2 -translate-x-1/2"}`} />
       </span>
     </span>
   );

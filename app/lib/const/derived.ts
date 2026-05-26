@@ -37,6 +37,12 @@ export const POKEMON_BY_SPECIALTY: Record<string, PokemonConst[]> = groupBy<Poke
   (p) => p.specialties.map((s) => s.slug),
 );
 
+/** Pokemon grouped by type slug */
+export const POKEMON_BY_TYPE: Record<string, PokemonConst[]> = groupBy<PokemonConst, string>(
+  POKEMON_LIST,
+  (p) => p.types.map((t) => t.slug),
+);
+
 /** Pokemon grouped by habitat config slug */
 export const POKEMON_BY_HABITAT_CONFIG: Record<string, PokemonConst[]> = groupBy<PokemonConst, string>(
   POKEMON_LIST,

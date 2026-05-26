@@ -65,6 +65,7 @@ export default function HabitatEntryCard({
               {entry.rarity.label}
             </span>
           )}
+          <InfoTip tip="Shows where and when to find this Pokémon in Pokopia." />
         </p>
         <HabitatEntryContent entry={entry} />
       </div>

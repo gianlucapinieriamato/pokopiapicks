@@ -244,17 +244,19 @@ export default async function PokemonPage({
               )}
               {p.types.length > 0 && (
                 <div>
-                  <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1">
+                  <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
                     Type
+                    <InfoTip tip="This Pokémon's elemental type in Pokopia. Click a type to browse all Pokémon of that type." />
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {p.types.map((t) => (
-                      <span
+                      <Link
                         key={t.slug}
-                        className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-accent-soft text-accent-deep border border-[1.5px] border-accent tracking-[0.04em]"
+                        href={`/types/${t.slug}`}
+                        className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-accent-soft text-accent-deep border border-[1.5px] border-accent tracking-[0.04em] no-underline"
                       >
                         {t.label}
-                      </span>
+                      </Link>
                     ))}
                   </div>
                 </div>

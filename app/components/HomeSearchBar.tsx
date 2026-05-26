@@ -1,128 +1,37 @@
 "use client";
-
-import { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { POKEMON_LIST } from "@/app/lib/const";
-import type { PokemonConst } from "@/app/lib/const";
-import SearchInput from "@/app/components/SearchInput";
+import { POKEMON_LIST, Item, HabitatConfig, Location } from "@/app/lib/const";
 import Shortcut from "@/app/components/Shortcut";
-import { SuggestionDropdown } from "@/app/components/SuggestionDropdown";
+import { GlobalSearch } from "@/app/components/GlobalSearch";
 
-function normalize(s: string) {
-  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+function pick<T extends { slug: string; label: string }>(
+  list: T[],
+  slug: string,
+  hrefFn: (slug: string) => string,
+): { label: string; href: string } | null {
+  const found = list.find((x) => x.slug === slug);
+  return found ? { label: found.label, href: hrefFn(found.slug) } : null;
 }
 
-function searchPokemon(q: string): PokemonConst[] {
-  const nq = normalize(q.trim());
-  if (!nq) return [];
-  const prefix: PokemonConst[] = [], contains: PokemonConst[] = [];
-  for (const p of POKEMON_LIST) {
-    const nName = normalize(p.label);
-    if (nName.startsWith(nq)) prefix.push(p);
-    else if (nName.includes(nq)) contains.push(p);
-  }
-  return [...prefix, ...contains].slice(0, 12);
-}
-
-const LISTBOX_ID = "home-search-listbox";
+const QUICK_PICKS: { label: string; href: string }[] = [
+  pick(POKEMON_LIST,                  "pikachu",     (s) => `/pokemon/${s}`),
+  pick(Object.values(Item),           "alarm-clock", (s) => `/item/${s}`),
+  pick(Object.values(HabitatConfig),  "beachset",    (s) => `/habitats/${s}`),
+  pick(POKEMON_LIST,                  "eevee",       (s) => `/pokemon/${s}`),
+  pick(Object.values(Location),       "palettetown", (s) => `/locations/${s}`),
+].filter((x): x is { label: string; href: string } => x !== null);
 
 export function HomeSearchBar() {
-  const { push } = useRouter();
-  const [query, setQuery] = useState("");
-  const [matches, setMatches] = useState<PokemonConst[]>([]);
-  const [activeIdx, setActiveIdx] = useState(-1);
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const blurTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    const timerRef = blurTimerRef;
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, []);
-
-  const handleInput = (v: string) => {
-    setQuery(v);
-    const results = searchPokemon(v);
-    setMatches(results);
-    setActiveIdx(results.length > 0 ? 0 : -1);
-    setShowSuggestions(results.length > 0);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!showSuggestions || matches.length === 0) return;
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      setActiveIdx((i) => Math.min(i + 1, matches.length - 1));
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      setActiveIdx((i) => Math.max(i - 1, 0));
-    } else if (e.key === "Enter") {
-      e.preventDefault();
-      const selected = matches[activeIdx];
-      if (activeIdx >= 0 && selected) push(`/pokemon/${selected.slug}`);
-    } else if (e.key === "Escape") {
-      setShowSuggestions(false);
-    }
-  };
-
-  function handleBlur() {
-    blurTimerRef.current = setTimeout(() => setShowSuggestions(false), 150);
-  }
-
-  function handleFocus() {
-    if (blurTimerRef.current) clearTimeout(blurTimerRef.current);
-    if (matches.length > 0) setShowSuggestions(true);
-  }
-
-  const noResults = query.trim().length > 1 && matches.length === 0;
-  const hasResults = showSuggestions && matches.length > 0;
-  const activeDescendant =
-    activeIdx >= 0 && matches[activeIdx] != null
-      ? `${LISTBOX_ID}-opt-${matches[activeIdx]!.slug}`
-      : undefined;
-
-  // Quick-pick pokemon slugs for the suggestion row
-  const quickPicks = (["lucario", "onix", "eevee", "pikachu", "snorlax"] as const)
-    .map((slug) => POKEMON_LIST.find((p) => p.slug === slug))
-    .filter((p): p is PokemonConst => p != null);
-
   return (
     <>
-      <SearchInput
-        value={query}
-        onChange={(e) => handleInput(e.target.value)}
-        onKeyDown={handleKeyDown}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        placeholder="Search Pokemon… (Lucario, Onix, Eevee…)"
-        autoComplete="new-password"
-        aria-expanded={hasResults}
-        aria-controls={LISTBOX_ID}
-        aria-activedescendant={activeDescendant}
-      >
-        {hasResults && (
-          <SuggestionDropdown
-            id={LISTBOX_ID}
-            options={matches}
-            activeIdx={activeIdx}
-            onSelect={(opt) => push(`/pokemon/${opt.slug}`)}
-          />
-        )}
-        {noResults && (
-          <div className="absolute top-[calc(100%+6px)] left-0 right-0 bg-paper border border-[1.5px] border-paper-edge rounded-[14px] max-h-[360px] overflow-y-auto z-10 block shadow-[0_12px_28px_-8px_var(--shadow)]">
-            <div className="flex items-center gap-3 px-4 py-2 cursor-pointer border-b border-surface-1 transition-colors hover:bg-surface-1 last:border-b-0 text-ink-fade italic cursor-default">
-              No Pokemon found for &quot;{query}&quot;
-            </div>
-          </div>
-        )}
-      </SearchInput>
+      <GlobalSearch />
       <div className="mt-4 flex gap-2 flex-wrap items-center">
-        <span className="font-mono text-[11px] text-ink-fade tracking-[0.08em] font-semibold">Try:</span>
-        {quickPicks.map((p) => (
-          <Link key={p.slug} href={`/pokemon/${p.slug}`} className="no-underline">
-            <Shortcut>{p.label}</Shortcut>
+        <span className="font-mono text-[11px] text-ink-fade tracking-[0.08em] font-semibold">
+          Try:
+        </span>
+        {QUICK_PICKS.map((pick) => (
+          <Link key={pick.href} href={pick.href} className="no-underline">
+            <Shortcut>{pick.label}</Shortcut>
           </Link>
         ))}
       </div>
