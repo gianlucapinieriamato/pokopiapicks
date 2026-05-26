@@ -36,7 +36,7 @@ export default function ItemsPage() {
       }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Items" }]} />
       <PageHeader title="Items" />
-      <Suspense>
+      <Suspense fallback={<div className="font-mono text-[12px] text-ink-soft py-8 text-center">Loading…</div>}>
         <ItemsClient items={ALL_ITEMS} categories={ALL_CATS} pkmnCountByCat={pkmnCountByCat} />
       </Suspense>
     </PageWrap>

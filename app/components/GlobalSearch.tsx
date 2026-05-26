@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect, useId } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import {
   POKEMON_LIST,
   Item,
@@ -137,9 +138,9 @@ export function GlobalSearch({
     }
     const icon =
       hit.kind === "pokemon" ? (
-        <img src={hit.icon} alt="" className="size-9 object-contain shrink-0" />
+        <Image src={hit.icon} alt="" width={36} height={36} className="size-9 object-contain shrink-0" />
       ) : hit.kind === "item" && hit.icon ? (
-        <img src={hit.icon} alt="" className="size-7 object-contain shrink-0" />
+        <Image src={hit.icon} alt="" width={28} height={28} className="size-7 object-contain shrink-0" />
       ) : null;
 
     rows.push(
@@ -148,17 +149,15 @@ export function GlobalSearch({
         id={`${listboxId}-${i}`}
         role="option"
         aria-selected={i === activeIdx}
+        tabIndex={-1}
+        className={`flex items-center gap-3 px-4 py-[7px] cursor-pointer border-b border-surface-1 last:border-b-0 transition-colors hover:bg-surface-1 ${i === activeIdx ? "bg-surface-1" : ""}`}
+        onMouseDown={(e) => { e.preventDefault(); navigate(hit); }}
       >
-        <div
-          className={`flex items-center gap-3 px-4 py-[7px] cursor-pointer border-b border-surface-1 last:border-b-0 transition-colors hover:bg-surface-1 ${i === activeIdx ? "bg-surface-1" : ""}`}
-          onMouseDown={(e) => { e.preventDefault(); navigate(hit); }}
-        >
-          {icon}
-          <span className="flex-1 min-w-0 font-semibold text-[14px] text-ink truncate">{hit.label}</span>
-          <span className="font-mono text-[9px] font-semibold tracking-[0.06em] uppercase text-ink-soft shrink-0">
-            {KIND_LABEL[hit.kind]}
-          </span>
-        </div>
+        {icon}
+        <span className="flex-1 min-w-0 font-semibold text-[14px] text-ink truncate">{hit.label}</span>
+        <span className="font-mono text-[9px] font-semibold tracking-[0.06em] uppercase text-ink-soft shrink-0">
+          {KIND_LABEL[hit.kind]}
+        </span>
       </li>
     );
   });

@@ -78,7 +78,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
               Unlock: <span className="text-ink normal-case not-[uppercase] font-semibold">{recipe.unlock}</span>
             </div>
             <div className="flex flex-wrap gap-3">
-              {recipe.materials.map((mat, i) => {
+              {recipe.materials.map((mat) => {
                 const inner = (
                   <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-1 border border-paper-edge">
                     {mat.item.icon && (
@@ -93,7 +93,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
                   </div>
                 );
                 return (
-                  <Link key={i} href={`/item/${mat.item.slug}`} className="no-underline">{inner}</Link>
+                  <Link key={mat.item.slug} href={`/item/${mat.item.slug}`} className="no-underline">{inner}</Link>
                 );
               })}
             </div>
