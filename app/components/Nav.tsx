@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { GlobalSearch } from "@/app/components/GlobalSearch";
 
 const LINKS = [
   { href: "/pokedex", label: "Pokedex" },
@@ -57,7 +58,7 @@ export default function Nav() {
           </span>
         </Link>
 
-        <div className="hidden md:flex gap-[2px]">
+        <div className="hidden md:flex gap-[2px] shrink-0">
           {LINKS.map(({ href, label }) => (
             <Link
               key={href}
@@ -68,6 +69,8 @@ export default function Nav() {
             </Link>
           ))}
         </div>
+
+        <GlobalSearch compact className="hidden md:block ml-auto w-[190px] lg:w-[230px] shrink-0" />
 
         <button
           type="button"
@@ -82,6 +85,7 @@ export default function Nav() {
 
       {open && (
         <div className="border-t border-paper-edge px-3 pb-3 pt-2 flex flex-col gap-[2px] bg-chrome">
+          <GlobalSearch compact className="mb-2" />
           {LINKS.map(({ href, label }) => (
             <Link
               key={href}

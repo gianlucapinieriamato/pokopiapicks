@@ -8,6 +8,8 @@ import {
   Location,
   PokemonHabitat,
   Flavor,
+  PokemonType,
+  POKEMON_BY_TYPE,
 } from "@/app/lib/const";
 import TcgCard from "@/app/components/TcgCard";
 import Shortcut from "@/app/components/Shortcut";
@@ -20,9 +22,14 @@ import PageHeader from "@/app/components/PageHeader";
 
 const ALL_HABITATS = Object.values(PokemonHabitat);
 const ALL_FLAVORS = Object.values(Flavor);
+const ALL_TYPES = Object.values(PokemonType);
 const ALL_SPECIALTIES = Object.values(Specialty);
 const ALL_CATEGORIES = Object.values(Category);
 const ALL_LOCATIONS = Object.values(Location);
+
+const TYPE_COUNTS = Object.freeze(
+  Object.fromEntries(ALL_TYPES.map((t) => [t.slug, (POKEMON_BY_TYPE[t.slug] ?? []).length])),
+);
 const PAGE_SIZE = 60;
 
 const HABITAT_COUNTS = Object.freeze(
@@ -39,11 +46,12 @@ const FLAVOR_COUNTS = Object.freeze(
   }, {}),
 );
 
-type FilterPanel = "habitat" | "flavor" | "specialty" | "location" | "category";
+type FilterPanel = "habitat" | "flavor" | "type" | "specialty" | "location" | "category";
 
 type FilterState = {
   habitatFilter: string[];
   flavorFilter: string[];
+  typeFilter: string[];
   specialtyFilter: string[];
   catFilter: string[];
   locFilter: string[];
@@ -54,7 +62,7 @@ type FilterState = {
 type FilterAction =
   | {
       type: "TOGGLE";
-      key: "habitatFilter" | "flavorFilter" | "specialtyFilter" | "catFilter" | "locFilter";
+      key: "habitatFilter" | "flavorFilter" | "typeFilter" | "specialtyFilter" | "catFilter" | "locFilter";
       val: string;
     }
   | { type: "SET_SEARCH"; val: string }
@@ -64,6 +72,7 @@ type FilterAction =
 const INIT_STATE: FilterState = {
   habitatFilter: [],
   flavorFilter: [],
+  typeFilter: [],
   specialtyFilter: [],
   catFilter: [],
   locFilter: [],
@@ -91,7 +100,7 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
 
 export default function PokedexClient() {
   const [state, dispatch] = useReducer(filterReducer, INIT_STATE);
-  const { habitatFilter, flavorFilter, specialtyFilter, catFilter, locFilter, search, page } = state;
+  const { habitatFilter, flavorFilter, typeFilter, specialtyFilter, catFilter, locFilter, search, page } = state;
   const [openPanel, setOpenPanel] = useState<FilterPanel | null>(null);
 
   const filtered = useMemo(() => {
@@ -100,17 +109,18 @@ export default function PokedexClient() {
       if (q && !p.label.toLowerCase().includes(q)) return false;
       if (habitatFilter.length && !habitatFilter.includes(p.habitat.slug)) return false;
       if (flavorFilter.length && (!p.flavor || !flavorFilter.includes(p.flavor.slug))) return false;
+      if (typeFilter.length && !typeFilter.some((ts) => p.types.some((t) => t.slug === ts))) return false;
       if (specialtyFilter.length && !p.specialties.some((s) => specialtyFilter.includes(s.slug))) return false;
       if (catFilter.length && !catFilter.every((cs) => p.categories.some((c) => c.slug === cs))) return false;
       if (locFilter.length && !locFilter.some((ls) => p.habitatList.some((h) => h.locations.some((l) => l.slug === ls)))) return false;
       return true;
     });
-  }, [search, habitatFilter, flavorFilter, specialtyFilter, catFilter, locFilter]);
+  }, [search, habitatFilter, flavorFilter, typeFilter, specialtyFilter, catFilter, locFilter]);
 
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
   const hasFilters = !!(
-    search || habitatFilter.length || flavorFilter.length || specialtyFilter.length || catFilter.length || locFilter.length
+    search || habitatFilter.length || flavorFilter.length || typeFilter.length || specialtyFilter.length || catFilter.length || locFilter.length
   );
 
   return (
@@ -191,6 +201,44 @@ export default function PokedexClient() {
               )}
             </div>
           ))}
+        </div>
+
+        <div className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mb-3">
+          <button
+            type="button"
+            aria-expanded={openPanel === "type"}
+            aria-controls="filter-panel-type"
+            className="w-full flex items-center justify-between cursor-pointer"
+            onClick={() => setOpenPanel(openPanel === "type" ? null : "type")}
+          >
+            <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">
+              Type
+            </div>
+            <div className="flex items-center gap-1.5">
+              {typeFilter.length > 0 && (
+                <span className="font-mono text-[9px] bg-accent text-paper px-1.5 py-[2px] rounded-full">
+                  {typeFilter.length}
+                </span>
+              )}
+              <span className="font-mono text-[10px] text-ink-fade">
+                {openPanel === "type" ? "▲" : "▼"}
+              </span>
+            </div>
+          </button>
+          {openPanel === "type" && (
+            <div id="filter-panel-type" className="flex flex-wrap gap-1.5 mt-3">
+              {ALL_TYPES.map((t) => (
+                <Shortcut
+                  key={t.slug}
+                  active={typeFilter.includes(t.slug)}
+                  onClick={() => dispatch({ type: "TOGGLE", key: "typeFilter", val: t.slug })}
+                >
+                  {t.label}{" "}
+                  <span className="opacity-55 text-[10px]">({TYPE_COUNTS[t.slug] ?? 0})</span>
+                </Shortcut>
+              ))}
+            </div>
+          )}
         </div>
 
         {(

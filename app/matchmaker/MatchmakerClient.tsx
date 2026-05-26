@@ -58,6 +58,100 @@ type PokemonRecommendation = {
   shared: number;
 };
 
+// ─── Sub-components ───────────────────────────────────────────────────────
+
+function RecommendationCard({
+  pokemon: p,
+  score: s,
+  shared,
+  isComplementary,
+  onSelect,
+}: {
+  pokemon: PokemonConst;
+  score: number;
+  shared: number;
+  isComplementary: boolean;
+  onSelect: (slug: string) => void;
+}) {
+  return (
+    <div className="relative mb-2.5 rounded-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] transition-all">
+      <button
+        type="button"
+        onClick={() => onSelect(p.slug)}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect(p.slug); } }}
+        className="absolute inset-0 rounded-[14px] cursor-pointer"
+        aria-label={`Add ${p.label} as anchor`}
+      />
+      <div className="absolute -top-2 right-3 flex items-center gap-1 pointer-events-none z-10">
+        {isComplementary && (
+          <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-leaf text-paper uppercase tracking-wide">COMPLEMENT</span>
+        )}
+        <span className="font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">{s} pts</span>
+      </div>
+      <div className="relative flex gap-3 items-center p-[14px] pointer-events-none z-10">
+        <div className="size-14 shrink-0 bg-paper rounded-[10px] p-1">
+          <div className="relative w-full h-full">
+            <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain" sizes="56px" />
+          </div>
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="font-extrabold text-[14px] text-ink leading-tight">{p.label}</span>
+            <Link
+              href={`/pokemon/${p.slug}`}
+              className="font-mono text-[10px] text-ink-soft no-underline hover:text-accent shrink-0 pointer-events-auto"
+            >
+              view →
+            </Link>
+          </div>
+          <div className="font-mono text-[10px] text-ink-soft tracking-[0.02em] leading-snug">
+            {shared} shared items · {p.specialties.map((sp) => sp.label).join(", ") || "no specialty"}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GroupPokemonCard({
+  pokemon: p,
+  isAnchor,
+  onSelect,
+}: {
+  pokemon: PokemonConst;
+  isAnchor: boolean;
+  onSelect: (slug: string) => void;
+}) {
+  return (
+    <div
+      className={`relative border border-[1.5px] rounded-[14px] p-3 text-center text-ink flex flex-col items-center gap-1 transition-all hover:-translate-y-0.5 hover:shadow-[0_6px_16px_-6px_var(--shadow)] w-full ${isAnchor ? "bg-accent-soft border-accent" : "bg-chrome border-paper-edge hover:bg-paper hover:border-accent"}`}
+    >
+      <button
+        type="button"
+        onClick={() => onSelect(p.slug)}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect(p.slug); } }}
+        className="absolute inset-0 rounded-[14px] cursor-pointer"
+        aria-label={`${isAnchor ? "Deselect" : "Select"} ${p.label}`}
+      />
+      <div className="flex flex-col items-center gap-1 pointer-events-none w-full">
+        {isAnchor && <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>}
+        <div className="relative size-16">
+          <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain" sizes="64px" />
+        </div>
+        <div className="font-mono text-[10px] text-ink-fade font-medium">#{dexNum(p)}</div>
+        <div className="font-bold text-[12px] leading-tight">{p.label}</div>
+      </div>
+      <Link
+        href={`/pokemon/${p.slug}`}
+        className="font-mono text-[10px] text-ink-soft no-underline hover:text-accent mt-0.5 relative"
+        onClick={(e) => e.stopPropagation()}
+      >
+        view →
+      </Link>
+    </div>
+  );
+}
+
 // ─── Component ────────────────────────────────────────────────────────────
 
 export default function MatchmakerClient() {
@@ -141,6 +235,11 @@ export default function MatchmakerClient() {
     return buildGroup(resolveSlugs(anchorSlugs), GROUP_SIZE);
   }, [anchorSlugs]);
 
+  const allAnchorSpecSlugs = useMemo(
+    () => new Set(anchors.flatMap((a) => a.specialties.map((s) => s.slug))),
+    [anchors],
+  );
+
   return (
     <PageWrap>
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Matchmaker" }]} />
@@ -206,7 +305,7 @@ export default function MatchmakerClient() {
               <div key={anchor.slug} className="flex items-start gap-3">
                 <div className="size-[72px] shrink-0 bg-[var(--portrait-bg)] rounded-[12px] border-2 border-paper-edge p-1.5 shadow-[0_4px_12px_-4px_var(--shadow)]">
                   <div className="relative w-full h-full">
-                    <Image fill src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.label} className="object-contain" sizes="72px" />
+                    <Image fill src={pkmnIconUrl(anchor)} alt={anchor.label} className="object-contain" sizes="72px" />
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
@@ -309,55 +408,20 @@ export default function MatchmakerClient() {
           <p className="text-[13px] text-ink-soft mb-4 leading-relaxed">
             Ranked by shared items{anchors.length > 1 ? ` across ${anchors.length} anchors` : ""}. Complementary specialties add a 50% bonus.
           </p>
-          {(() => {
-            const allAnchorSpecs = new Set(anchors.flatMap((a) => a.specialties.map((s) => s.slug)));
-            return recommendations.map(({ pokemon: p, score: s, shared }) => {
-              const candSpecs = p.specialties;
-              const isComplementary =
-                candSpecs.length > 0 && !candSpecs.some((sp) => allAnchorSpecs.has(sp.slug));
-              return (
-                <div
-                  key={p.slug}
-                  role="button"
-                  tabIndex={0}
-                  onClick={() => selectAnchor(p.slug)}
-                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectAnchor(p.slug); } }}
-                  className="relative flex gap-3 items-center rounded-[14px] p-[14px] border border-[1.5px] border-accent bg-gradient-to-br from-accent-soft to-surface-1 mb-2.5 cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-6px_var(--shadow)] transition-all w-full text-left"
-                >
-                  <div className="absolute -top-2 right-3 flex items-center gap-1">
-                    {isComplementary && (
-                      <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-leaf text-paper uppercase tracking-wide">
-                        COMPLEMENT
-                      </span>
-                    )}
-                    <span className="font-mono text-[10px] font-semibold px-2 py-[3px] rounded-full bg-accent text-paper tracking-[0.06em]">
-                      {s} pts
-                    </span>
-                  </div>
-                  <div className="size-14 shrink-0 bg-paper rounded-[10px] p-1">
-                    <div className="relative w-full h-full">
-                      <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain" sizes="56px" />
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-extrabold text-[14px] text-ink leading-tight">{p.label}</span>
-                      <Link
-                        href={`/pokemon/${p.slug}`}
-                        className="font-mono text-[10px] text-ink-soft no-underline hover:text-accent shrink-0"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        view →
-                      </Link>
-                    </div>
-                    <div className="font-mono text-[10px] text-ink-soft tracking-[0.02em] leading-snug">
-                      {shared} shared items · {p.specialties.map((sp) => sp.label).join(", ") || "no specialty"}
-                    </div>
-                  </div>
-                </div>
-              );
-            });
-          })()}
+          {recommendations.map(({ pokemon: p, score: s, shared }) => {
+            const isComplementary =
+              p.specialties.length > 0 && !p.specialties.some((sp) => allAnchorSpecSlugs.has(sp.slug));
+            return (
+              <RecommendationCard
+                key={p.slug}
+                pokemon={p}
+                score={s}
+                shared={shared}
+                isComplementary={isComplementary}
+                onSelect={selectAnchor}
+              />
+            );
+          })}
         </Card>
       )}
 
@@ -368,33 +432,14 @@ export default function MatchmakerClient() {
             Greedy algorithm: each Pokemon maximizes shared items with the current group.
           </p>
           <PokemonGrid>
-            {group.map((p) => {
-              const isAnchor = anchorSlugs.includes(p.slug);
-              return (
-                <div
-                  key={p.slug}
-                  role="button"
-                  tabIndex={0}
-                  onClick={() => selectAnchor(p.slug)}
-                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectAnchor(p.slug); } }}
-                  className={`border border-[1.5px] rounded-[14px] p-3 text-center text-ink flex flex-col items-center gap-1 transition-all hover:-translate-y-0.5 hover:shadow-[0_6px_16px_-6px_var(--shadow)] w-full cursor-pointer ${isAnchor ? "bg-accent-soft border-accent" : "bg-chrome border-paper-edge hover:bg-paper hover:border-accent"}`}
-                >
-                  {isAnchor && <div className="font-mono text-[10px] text-accent mb-1">ANCHOR</div>}
-                  <div className="relative size-16">
-                    <Image fill src={pkmnIconUrl(p)} alt={p.label} className="object-contain" sizes="64px" />
-                  </div>
-                  <div className="font-mono text-[10px] text-ink-fade font-medium">#{dexNum(p)}</div>
-                  <div className="font-bold text-[12px] leading-tight">{p.label}</div>
-                  <Link
-                    href={`/pokemon/${p.slug}`}
-                    className="font-mono text-[10px] text-ink-soft no-underline hover:text-accent mt-0.5"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    view →
-                  </Link>
-                </div>
-              );
-            })}
+            {group.map((p) => (
+              <GroupPokemonCard
+                key={p.slug}
+                pokemon={p}
+                isAnchor={anchorSlugs.includes(p.slug)}
+                onSelect={selectAnchor}
+              />
+            ))}
           </PokemonGrid>
         </Card>
       )}

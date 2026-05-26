@@ -20,7 +20,7 @@ function groupBy<T, K extends string>(
 }
 
 /** All pokemon sorted by national dex number (game-exclusives last) */
-export const POKEMON_LIST: PokemonConst[] = ALL_POKEMON.slice().sort((a, b) => {
+export const POKEMON_LIST: PokemonConst[] = ALL_POKEMON.toSorted((a, b) => {
   const na = a.nationalDexNum ?? 99999;
   const nb = b.nationalDexNum ?? 99999;
   return na !== nb ? na - nb : a.num - b.num;
@@ -35,6 +35,12 @@ export const POKEMON_BY_SLUG: Record<string, PokemonConst> = Object.fromEntries(
 export const POKEMON_BY_SPECIALTY: Record<string, PokemonConst[]> = groupBy<PokemonConst, string>(
   POKEMON_LIST,
   (p) => p.specialties.map((s) => s.slug),
+);
+
+/** Pokemon grouped by type slug */
+export const POKEMON_BY_TYPE: Record<string, PokemonConst[]> = groupBy<PokemonConst, string>(
+  POKEMON_LIST,
+  (p) => p.types.map((t) => t.slug),
 );
 
 /** Pokemon grouped by habitat config slug */
@@ -78,14 +84,20 @@ export const POKEMON_VARIANTS_BY_BASE: Record<string, PokemonConst[]> = {};
 export const POKEMON_BASE_BY_VARIANT: Record<string, PokemonConst> = {};
 
 // Build variant maps — two passes
+// Pre-index base forms (non-variant icons) by nationalDexNum for O(1) lookup
+const BASE_BY_DEX = new Map<number, PokemonConst>();
+for (const p of POKEMON_LIST) {
+  if (p.nationalDexNum != null && !VARIANT_ICON_RE.test(p.icon)) {
+    BASE_BY_DEX.set(p.nationalDexNum, p);
+  }
+}
+
 // Pass 1: variant icon with a plain-icon base (e.g. Mosslax → Snorlax)
 for (const p of POKEMON_LIST) {
   if (!VARIANT_ICON_RE.test(p.icon)) continue;
   const dexNum_ = p.nationalDexNum;
   if (dexNum_ == null) continue;
-  const base = POKEMON_LIST.find(
-    (q) => q.nationalDexNum === dexNum_ && !VARIANT_ICON_RE.test(q.icon),
-  );
+  const base = BASE_BY_DEX.get(dexNum_);
   if (!base) continue;
   (POKEMON_VARIANTS_BY_BASE[base.slug] ??= []).push(p);
   POKEMON_BASE_BY_VARIANT[p.slug] = base;
