@@ -305,7 +305,7 @@ export default function MatchmakerClient() {
               <div key={anchor.slug} className="flex items-start gap-3">
                 <div className="size-[72px] shrink-0 bg-[var(--portrait-bg)] rounded-[12px] border-2 border-paper-edge p-1.5 shadow-[0_4px_12px_-4px_var(--shadow)]">
                   <div className="relative w-full h-full">
-                    <Image fill src={anchor.spriteHq ?? pkmnIconUrl(anchor)} alt={anchor.label} className="object-contain" sizes="72px" />
+                    <Image fill src={pkmnIconUrl(anchor)} alt={anchor.label} className="object-contain" sizes="72px" />
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">

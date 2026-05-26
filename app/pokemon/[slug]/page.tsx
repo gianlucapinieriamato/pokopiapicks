@@ -53,7 +53,7 @@ export async function generateMetadata({
       url: `${SITE_URL}/pokemon/${slug}/`,
       images: [
         {
-          url: p.spriteHq ?? `/icons/pokemon/${p.icon}`,
+          url: `/icons/pokemon/${p.icon}`,
           width: 480,
           height: 480,
           alt: p.label,
@@ -148,7 +148,7 @@ export default async function PokemonPage({
               .slice(0, 3)
               .map((c) => c.label)
               .join(", ")}.`,
-            image: p.spriteHq ?? `/icons/pokemon/${p.icon}`,
+            image: `/icons/pokemon/${p.icon}`,
             url: `${SITE_URL}/pokemon/${slug}/`,
           },
         ]}
