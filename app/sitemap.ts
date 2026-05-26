@@ -7,6 +7,7 @@ import {
   Specialty,
   HabitatConfig,
   Location,
+  PokemonType,
 } from "@/app/lib/const";
 import { SITE_URL } from "@/app/lib/config";
 
@@ -21,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/specialty/`,  lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/habitats/`,   lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/locations/`,  lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_URL}/types/`,      lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/matchmaker/`, lastModified: LAST_UPDATED, changeFrequency: "weekly",  priority: 0.7 },
   ];
 
@@ -54,6 +56,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 0.5,
   }));
 
+  const typeRoutes: MetadataRoute.Sitemap = Object.values(PokemonType).map((t) => ({
+    url: `${SITE_URL}/types/${t.slug}/`,
+    lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 0.6,
+  }));
+
   return [
     ...staticRoutes,
     ...pokemonRoutes,
@@ -62,5 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...specialtyRoutes,
     ...habitatRoutes,
     ...locationRoutes,
+    ...typeRoutes,
   ];
 }
