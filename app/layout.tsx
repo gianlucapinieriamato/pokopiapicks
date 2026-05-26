@@ -88,7 +88,7 @@ export default function RootLayout({
         <AdSlot slot="2178978334" format="horizontal" />
         <footer className="mt-4 md:mt-12 py-6 border-t border-paper-edge text-center">
           <p className="text-[13px] text-ink-soft">
-            Pokopia Picks — fan-made wiki for Pokemon Pokopia.
+            Pokopia Picks, fan-made wiki for Pokemon Pokopia.
           </p>
         </footer>
       </body>

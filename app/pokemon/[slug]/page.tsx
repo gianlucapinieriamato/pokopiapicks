@@ -7,7 +7,6 @@ import {
   POKEMON_LIST,
   POKEMON_VARIANTS_BY_BASE,
   POKEMON_BASE_BY_VARIANT,
-  pkmnIconUrl,
   dexNum,
 } from "@/app/lib/const";
 import type { PokemonConst, ItemConst } from "@/app/lib/const";
@@ -76,9 +75,15 @@ export default async function PokemonPage({
   const variants = POKEMON_VARIANTS_BY_BASE[slug] ?? [];
   const baseForm = POKEMON_BASE_BY_VARIANT[slug] ?? null;
   const isVariant = baseForm !== null;
-  const variantDisplayList = isVariant && baseForm
-    ? [baseForm, ...(POKEMON_VARIANTS_BY_BASE[baseForm.slug] ?? []).filter((v) => v.slug !== slug)]
-    : variants;
+  const variantDisplayList =
+    isVariant && baseForm
+      ? [
+          baseForm,
+          ...(POKEMON_VARIANTS_BY_BASE[baseForm.slug] ?? []).filter(
+            (v) => v.slug !== slug,
+          ),
+        ]
+      : variants;
 
   const idx = POKEMON_LIST.findIndex((q) => q.slug === slug);
   const prev = idx > 0 ? POKEMON_LIST[idx - 1] : null;
@@ -158,142 +163,148 @@ export default async function PokemonPage({
 
       {/* ── Hero: card + info ── */}
       <Card>
-      <div className="flex flex-col items-center text-center gap-4 sm:flex-row sm:items-stretch sm:text-left sm:gap-7">
-        <div className="shrink-0 w-full max-w-[280px] sm:max-w-none sm:w-[240px]">
-          <TcgCard p={p} size="lg" />
-        </div>
-        <div className="flex-1 min-w-0 bg-chrome rounded-xl border border-paper-edge p-3 sm:p-4">
-          <div className="flex items-baseline justify-between gap-2 mb-2">
-            <div className="font-outfit font-extrabold text-[22px] sm:text-[26px] md:text-[36px] tracking-[-0.02em] leading-[1.05]">
-              {p.label}
-            </div>
-            <div className="font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] shrink-0">
-              #{dexNum(p)}
-            </div>
+        <div className="flex flex-col items-center text-center gap-4 sm:flex-row sm:items-stretch sm:text-left sm:gap-7">
+          <div className="shrink-0 w-full max-w-[280px] sm:max-w-none sm:w-[240px]">
+            <TcgCard p={p} size="lg" />
           </div>
+          <div className="flex-1 min-w-0 bg-chrome rounded-xl border border-paper-edge p-3 sm:p-4">
+            <div className="flex items-baseline justify-between gap-2 mb-2">
+              <div className="font-outfit font-extrabold text-[22px] sm:text-[26px] md:text-[36px] tracking-[-0.02em] leading-[1.05]">
+                {p.label}
+              </div>
+              <div className="font-mono text-[12px] text-accent-deep font-semibold tracking-[0.1em] shrink-0">
+                #{dexNum(p)}
+              </div>
+            </div>
 
-          {/* Classification · Height · Weight — first line */}
-          <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-x-3 gap-y-0.5 mb-2">
-            {p.classification && (
-              <span className="inline-flex items-center gap-1.5">
-                <span>Classification: </span>
-                <span className="font-semibold text-ink">
-                  {p.classification}
+            {/* Classification · Height · Weight — first line */}
+            <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-x-3 gap-y-0.5 mb-2">
+              {p.classification && (
+                <span className="inline-flex items-center gap-1.5">
+                  <span>Classification: </span>
+                  <span className="font-semibold text-ink">
+                    {p.classification}
+                  </span>
                 </span>
-              </span>
-            )}
-            {p.heightM && (
-              <span className="inline-flex items-center gap-1.5">
-                <span>Height: </span>
-                <span className="font-semibold text-ink">{p.heightM}</span>
-                {p.heightFt && (
-                  <span className="text-ink-fade">({p.heightFt})</span>
-                )}
-              </span>
-            )}
-            {p.weightKg && (
-              <span className="inline-flex items-center gap-1.5">
-                <span>Weight: </span>
-                <span className="font-semibold text-ink">{p.weightKg}</span>
-                {p.weightLbs && (
-                  <span className="text-ink-fade">({p.weightLbs})</span>
-                )}
-              </span>
-            )}
-          </div>
+              )}
+              {p.heightM && (
+                <span className="inline-flex items-center gap-1.5">
+                  <span>Height: </span>
+                  <span className="font-semibold text-ink">{p.heightM}</span>
+                  {p.heightFt && (
+                    <span className="text-ink-fade">({p.heightFt})</span>
+                  )}
+                </span>
+              )}
+              {p.weightKg && (
+                <span className="inline-flex items-center gap-1.5">
+                  <span>Weight: </span>
+                  <span className="font-semibold text-ink">{p.weightKg}</span>
+                  {p.weightLbs && (
+                    <span className="text-ink-fade">({p.weightLbs})</span>
+                  )}
+                </span>
+              )}
+            </div>
 
-          {/* Habitat · Flavor */}
-          <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-x-3 gap-y-0.5">
-            <span className="inline-flex items-center gap-1.5">
-              <span>Habitat: </span>
-              <span className="text-leaf font-semibold">{p.habitat.label}</span>
-              <InfoTip tip="Pokemon with the same habitat can share a living space in Pokopia." />
-            </span>
-            {p.flavor && (
+            {/* Habitat · Flavor */}
+            <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-x-3 gap-y-0.5">
               <span className="inline-flex items-center gap-1.5">
-                <span>Flavor: </span>
+                <span>Habitat: </span>
                 <span className="text-leaf font-semibold">
-                  {p.flavor.label}
+                  {p.habitat.label}
                 </span>
-                <InfoTip tip="The berry flavor this Pokemon prefers. Pokemon that share a flavor tend to like the same gift items." />
+                <InfoTip tip="Pokemon with the same habitat can share a living space in Pokopia." />
               </span>
+              {p.flavor && (
+                <span className="inline-flex items-center gap-1.5">
+                  <span>Flavor: </span>
+                  <span className="text-leaf font-semibold">
+                    {p.flavor.label}
+                  </span>
+                  <InfoTip tip="The berry flavor this Pokemon prefers. Pokemon that share a flavor tend to like the same gift items." />
+                </span>
+              )}
+            </div>
+
+            {/* Specialty + Type — side by side */}
+            {(p.specialties.length > 0 || p.types.length > 0) && (
+              <div className="mt-3 flex flex-wrap gap-x-5 gap-y-3">
+                {p.specialties.length > 0 && (
+                  <div>
+                    <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
+                      Specialty
+                      <InfoTip tip="Specialties determine bonus effects when this Pokemon helps with certain Pokopia activities." />
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {p.specialties.map((s) => (
+                        <Link
+                          key={s.slug}
+                          href={`/specialty/${s.slug}`}
+                          className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-accent-deep border border-[1.5px] border-accent tracking-[0.04em] no-underline"
+                        >
+                          {s.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {p.types.length > 0 && (
+                  <div>
+                    <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
+                      Type
+                      <InfoTip tip="This Pokémon's elemental type in Pokopia. Click a type to browse all Pokémon of that type." />
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {p.types.map((t) => (
+                        <Link
+                          key={t.slug}
+                          href={`/types/${t.slug}`}
+                          className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-accent-soft text-accent-deep border border-[1.5px] border-accent tracking-[0.04em] no-underline"
+                        >
+                          {t.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div className="mt-3">
+              <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
+                Favorite categories
+                <InfoTip
+                  tip={`Gift items in these categories will earn extra happiness with ${p.label}.`}
+                />
+              </p>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {p.categories.map((c) => (
+                  <Link
+                    key={c.slug}
+                    href={`/category/${c.slug}`}
+                    className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em] no-underline"
+                  >
+                    {c.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* ── Where to find — sm+ flat, inside info column ── */}
+            {p.habitatList.length > 0 && (
+              <div className="hidden sm:flex flex-col gap-4 mt-3">
+                {p.habitatList.map((entry) => (
+                  <HabitatEntryCard
+                    key={entry.habitat.slug}
+                    entry={entry}
+                    flat
+                  />
+                ))}
+              </div>
             )}
           </div>
-
-          {/* Specialty + Type — side by side */}
-          {(p.specialties.length > 0 || p.types.length > 0) && (
-            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-3">
-              {p.specialties.length > 0 && (
-                <div>
-                  <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
-                    Specialty
-                    <InfoTip tip="Specialties determine bonus effects when this Pokemon helps with certain Pokopia activities." />
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {p.specialties.map((s) => (
-                      <Link
-                        key={s.slug}
-                        href={`/specialty/${s.slug}`}
-                        className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-accent-deep border border-[1.5px] border-accent tracking-[0.04em] no-underline"
-                      >
-                        {s.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {p.types.length > 0 && (
-                <div>
-                  <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
-                    Type
-                    <InfoTip tip="This Pokémon's elemental type in Pokopia. Click a type to browse all Pokémon of that type." />
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {p.types.map((t) => (
-                      <Link
-                        key={t.slug}
-                        href={`/types/${t.slug}`}
-                        className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-accent-soft text-accent-deep border border-[1.5px] border-accent tracking-[0.04em] no-underline"
-                      >
-                        {t.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
-          <div className="mt-3">
-            <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
-              Favorite categories
-              <InfoTip
-                tip={`Gift items in these categories will earn extra happiness with ${p.label}.`}
-              />
-            </p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {p.categories.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={`/category/${c.slug}`}
-                  className="font-outfit text-[11px] font-bold px-[10px] py-1 rounded-full bg-surface-1 text-ink border border-[1.5px] border-paper-edge tracking-[0.04em] no-underline"
-                >
-                  {c.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* ── Where to find — sm+ flat, inside info column ── */}
-          {p.habitatList.length > 0 && (
-            <div className="hidden sm:flex flex-col gap-4 mt-3">
-              {p.habitatList.map((entry) => (
-                <HabitatEntryCard key={entry.habitat.slug} entry={entry} flat />
-              ))}
-            </div>
-          )}
         </div>
-      </div>
       </Card>
 
       {/* ── Where to find — mobile only, below Card ── */}
