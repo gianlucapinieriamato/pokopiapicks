@@ -60,6 +60,22 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1Q3023J5YJ"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1Q3023J5YJ');
+            `,
+          }}
+        />
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6028271541011678"
           crossOrigin="anonymous"
