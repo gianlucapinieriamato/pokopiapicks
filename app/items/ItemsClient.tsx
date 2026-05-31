@@ -3,7 +3,9 @@ import Link from "next/link";
 import { useReducer, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import type { ItemConst, CategoryConst } from "@/app/lib/const";
-import { ITEM_GROUPS } from "@/app/lib/const";
+import { ITEM_GROUPS, PASSIVE_DROPS } from "@/app/lib/const";
+
+const PASSIVE_DROP_ITEM_SLUGS = new Set(Object.values(PASSIVE_DROPS).map((i) => i.slug));
 import Shortcut from "@/app/components/Shortcut";
 import HoverTile from "@/app/components/HoverTile";
 import ItemTile from "@/app/components/ItemTile";
@@ -18,6 +20,7 @@ type State = {
   search: string;
   catFilter: string[];
   catOpen: boolean;
+  passiveOnly: boolean;
   page: number;
 };
 
@@ -26,6 +29,7 @@ type Action =
   | { type: "SET_SEARCH"; search: string }
   | { type: "TOGGLE_CAT"; slug: string }
   | { type: "TOGGLE_CAT_OPEN" }
+  | { type: "TOGGLE_PASSIVE" }
   | { type: "SET_PAGE"; page: number }
   | { type: "CLEAR_FILTERS" };
 
@@ -41,8 +45,9 @@ function reducer(state: State, action: Action): State {
       page: 1,
     };
     case "TOGGLE_CAT_OPEN": return { ...state, catOpen: !state.catOpen };
+    case "TOGGLE_PASSIVE":  return { ...state, passiveOnly: !state.passiveOnly, page: 1 };
     case "SET_PAGE":        return { ...state, page: action.page };
-    case "CLEAR_FILTERS":   return { ...state, search: "", catFilter: [], page: 1 };
+    case "CLEAR_FILTERS":   return { ...state, search: "", catFilter: [], passiveOnly: false, page: 1 };
   }
 }
 
@@ -63,9 +68,10 @@ export default function ItemsClient({
     search: searchParams.get("search") ?? "",
     catFilter: [] as string[],
     catOpen: false,
+    passiveOnly: false,
     page: 1,
   }));
-  const { view, search, catFilter, catOpen, page } = state;
+  const { view, search, catFilter, catOpen, passiveOnly, page } = state;
 
   const filtered = useMemo(() => {
     const groupSlugs = group ? new Set((ITEM_GROUPS[group] ?? []).map((i) => i.slug)) : null;
@@ -83,8 +89,11 @@ export default function ItemsClient({
       );
       list = list.filter((i) => catItemSlugs.has(i.slug));
     }
+    if (passiveOnly) {
+      list = list.filter((i) => PASSIVE_DROP_ITEM_SLUGS.has(i.slug));
+    }
     return list;
-  }, [items, search, catFilter, categories, group]);
+  }, [items, search, catFilter, categories, group, passiveOnly]);
 
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -125,8 +134,16 @@ export default function ItemsClient({
                 </div>
               )}
             </div>
-            {(search || catFilter.length > 0) && (
-              <Shortcut className="mt-2.5" onClick={() => dispatch({ type: "CLEAR_FILTERS" })}>
+            <div className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mt-2.5">
+              <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => dispatch({ type: "TOGGLE_PASSIVE" })}>
+                <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">Passive Drops Only</div>
+                <div className={`font-mono text-[9px] px-2 py-[2px] rounded-full border border-[1.5px] transition-colors ${passiveOnly ? "bg-accent-soft text-accent-deep border-accent" : "text-ink-fade border-paper-edge"}`}>
+                  {passiveOnly ? "on" : "off"}
+                </div>
+              </button>
+            </div>
+            {(search || catFilter.length > 0 || passiveOnly) && (
+              <Shortcut className="mt-2" onClick={() => dispatch({ type: "CLEAR_FILTERS" })}>
                 Clear filters
               </Shortcut>
             )}
