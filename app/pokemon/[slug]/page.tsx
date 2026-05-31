@@ -7,6 +7,7 @@ import {
   POKEMON_LIST,
   POKEMON_VARIANTS_BY_BASE,
   POKEMON_BASE_BY_VARIANT,
+  PASSIVE_DROPS,
   dexNum,
 } from "@/app/lib/const";
 import type { PokemonConst, ItemConst } from "@/app/lib/const";
@@ -84,6 +85,8 @@ export default async function PokemonPage({
           ),
         ]
       : variants;
+
+  const passiveDrop = PASSIVE_DROPS[slug] ?? null;
 
   const idx = POKEMON_LIST.findIndex((q) => q.slug === slug);
   const prev = idx > 0 ? POKEMON_LIST[idx - 1] : null;
@@ -290,6 +293,37 @@ export default async function PokemonPage({
                 ))}
               </div>
             </div>
+
+            {/* ── Passive drop ── */}
+            {passiveDrop && (
+              <div className="mt-3">
+                <p className="font-mono text-[11px] text-ink-soft tracking-[0.04em] font-medium mb-1 flex items-center gap-1.5">
+                  Passive drop
+                  <InfoTip tip={`${p.label} passively drops this item near its home.`} />
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Link
+                    href={`/item/${passiveDrop.slug}`}
+                    className="no-underline flex items-center gap-2 px-[10px] py-[6px] rounded-lg border border-paper-edge bg-paper hover:border-accent hover:bg-surface-1 transition-all min-h-[44px]"
+                  >
+                    {passiveDrop.icon && (
+                      <div className="relative size-8 shrink-0">
+                        <Image
+                          fill
+                          src={passiveDrop.icon}
+                          alt={passiveDrop.label}
+                          className="object-contain"
+                          sizes="32px"
+                        />
+                      </div>
+                    )}
+                    <span className="font-outfit text-[13px] font-bold text-ink">
+                      {passiveDrop.label}
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            )}
 
             {/* ── Where to find — sm+ flat, inside info column ── */}
             {p.habitatList.length > 0 && (
