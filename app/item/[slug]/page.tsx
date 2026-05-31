@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Item, Category, POKEMON_LIST, pkmnIconUrl, dexNum, ITEM_RECIPES } from "@/app/lib/const";
+import { Item, Category, POKEMON_LIST, pkmnIconUrl, dexNum, ITEM_RECIPES, PASSIVE_DROPS } from "@/app/lib/const";
 import type { ItemConst, CategoryConst } from "@/app/lib/const";
 import JsonLd from "@/app/components/JsonLd";
 import { SITE_URL } from "@/app/lib/config";
@@ -41,6 +41,10 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
 
   const pokemonWhoLike = POKEMON_LIST
     .filter((p) => p.categories.some((c) => cats.some((cat) => cat.slug === c.slug)))
+    .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
+
+  const passiveDropSources = POKEMON_LIST
+    .filter((p) => PASSIVE_DROPS[p.slug]?.slug === slug)
     .sort((a, b) => (a.nationalDexNum ?? 99999) - (b.nationalDexNum ?? 99999));
 
   const recipe = ITEM_RECIPES[slug];
@@ -121,6 +125,20 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
           </PokemonGrid>
         )}
       </Card>
+
+      {passiveDropSources.length > 0 && (
+        <Card>
+          <SectionTitle>Passively dropped by</SectionTitle>
+          <div className="font-mono text-[12px] text-ink-soft tracking-[0.04em] font-medium mb-3">
+            {passiveDropSources.length} Pokemon drop this near their home (Litter specialty)
+          </div>
+          <PokemonGrid>
+            {passiveDropSources.map((p) => (
+              <PokemonGridCard key={p.slug} p={p} />
+            ))}
+          </PokemonGrid>
+        </Card>
+      )}
     </PageWrap>
   );
 }

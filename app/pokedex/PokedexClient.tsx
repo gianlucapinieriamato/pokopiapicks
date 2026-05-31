@@ -10,7 +10,10 @@ import {
   Flavor,
   PokemonType,
   POKEMON_BY_TYPE,
+  PASSIVE_DROPS,
 } from "@/app/lib/const";
+
+const PASSIVE_DROP_POKEMON_SLUGS = new Set(Object.keys(PASSIVE_DROPS));
 import TcgCard from "@/app/components/TcgCard";
 import Shortcut from "@/app/components/Shortcut";
 import SearchInput from "@/app/components/SearchInput";
@@ -55,6 +58,7 @@ type FilterState = {
   specialtyFilter: string[];
   catFilter: string[];
   locFilter: string[];
+  passiveDropOnly: boolean;
   search: string;
   page: number;
 };
@@ -65,6 +69,7 @@ type FilterAction =
       key: "habitatFilter" | "flavorFilter" | "typeFilter" | "specialtyFilter" | "catFilter" | "locFilter";
       val: string;
     }
+  | { type: "TOGGLE_PASSIVE_DROP" }
   | { type: "SET_SEARCH"; val: string }
   | { type: "SET_PAGE"; val: number }
   | { type: "CLEAR" };
@@ -76,6 +81,7 @@ const INIT_STATE: FilterState = {
   specialtyFilter: [],
   catFilter: [],
   locFilter: [],
+  passiveDropOnly: false,
   search: "",
   page: 1,
 };
@@ -89,6 +95,8 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
         : [...arr, action.val];
       return { ...state, [action.key]: next, page: 1 };
     }
+    case "TOGGLE_PASSIVE_DROP":
+      return { ...state, passiveDropOnly: !state.passiveDropOnly, page: 1 };
     case "SET_SEARCH":
       return { ...state, search: action.val, page: 1 };
     case "SET_PAGE":
@@ -100,7 +108,7 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
 
 export default function PokedexClient() {
   const [state, dispatch] = useReducer(filterReducer, INIT_STATE);
-  const { habitatFilter, flavorFilter, typeFilter, specialtyFilter, catFilter, locFilter, search, page } = state;
+  const { habitatFilter, flavorFilter, typeFilter, specialtyFilter, catFilter, locFilter, passiveDropOnly, search, page } = state;
   const [openPanel, setOpenPanel] = useState<FilterPanel | null>(null);
 
   const filtered = useMemo(() => {
@@ -113,14 +121,15 @@ export default function PokedexClient() {
       if (specialtyFilter.length && !p.specialties.some((s) => specialtyFilter.includes(s.slug))) return false;
       if (catFilter.length && !catFilter.every((cs) => p.categories.some((c) => c.slug === cs))) return false;
       if (locFilter.length && !locFilter.some((ls) => p.habitatList.some((h) => h.locations.some((l) => l.slug === ls)))) return false;
+      if (passiveDropOnly && !PASSIVE_DROP_POKEMON_SLUGS.has(p.slug)) return false;
       return true;
     });
-  }, [search, habitatFilter, flavorFilter, typeFilter, specialtyFilter, catFilter, locFilter]);
+  }, [search, habitatFilter, flavorFilter, typeFilter, specialtyFilter, catFilter, locFilter, passiveDropOnly]);
 
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
   const hasFilters = !!(
-    search || habitatFilter.length || flavorFilter.length || typeFilter.length || specialtyFilter.length || catFilter.length || locFilter.length
+    search || habitatFilter.length || flavorFilter.length || typeFilter.length || specialtyFilter.length || catFilter.length || locFilter.length || passiveDropOnly
   );
 
   return (
@@ -339,6 +348,16 @@ export default function PokedexClient() {
               ))}
             </div>
           )}
+        </div>
+
+        <div className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mb-3 flex items-center justify-between">
+          <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">Passive drop</div>
+          <Shortcut
+            active={passiveDropOnly}
+            onClick={() => dispatch({ type: "TOGGLE_PASSIVE_DROP" })}
+          >
+            Has passive drop
+          </Shortcut>
         </div>
 
         {hasFilters && (
