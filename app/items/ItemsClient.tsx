@@ -134,10 +134,13 @@ export default function ItemsClient({
                 </div>
               )}
             </div>
-            <div className="mt-2.5">
-              <Shortcut active={passiveOnly} onClick={() => dispatch({ type: "TOGGLE_PASSIVE" })}>
-                Passive drops only
-              </Shortcut>
+            <div className="bg-chrome rounded-xl border border-paper-edge px-3 py-2.5 mt-2.5">
+              <button type="button" className="w-full flex items-center justify-between cursor-pointer" onClick={() => dispatch({ type: "TOGGLE_PASSIVE" })}>
+                <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft font-semibold">Passive Drops Only</div>
+                <div className={`font-mono text-[9px] px-2 py-[2px] rounded-full border border-[1.5px] transition-colors ${passiveOnly ? "bg-accent-soft text-accent-deep border-accent" : "text-ink-fade border-paper-edge"}`}>
+                  {passiveOnly ? "on" : "off"}
+                </div>
+              </button>
             </div>
             {(search || catFilter.length > 0 || passiveOnly) && (
               <Shortcut className="mt-2" onClick={() => dispatch({ type: "CLEAR_FILTERS" })}>
