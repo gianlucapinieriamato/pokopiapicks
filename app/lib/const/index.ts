@@ -10,3 +10,4 @@ export * from "./pokemon";
 export * from "./derived";
 export * from "./item-groups";
 export * from "./crafting";
+export * from "./passive-drops";
