@@ -68,6 +68,9 @@ export default function Nav() {
               {label}
             </Link>
           ))}
+          <a href="#support" className={linkBase}>
+            Support
+          </a>
         </div>
 
         <GlobalSearch compact className="hidden md:block ml-auto w-[190px] lg:w-[230px] shrink-0" />
@@ -96,6 +99,9 @@ export default function Nav() {
               {label}
             </Link>
           ))}
+          <a href="#support" className={dropBase}>
+            Support
+          </a>
         </div>
       )}
     </nav>

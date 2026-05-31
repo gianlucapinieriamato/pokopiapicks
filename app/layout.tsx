@@ -4,6 +4,7 @@ import Script from "next/script";
 import Nav from "@/app/components/Nav";
 import JsonLd from "@/app/components/JsonLd";
 import { AdSlot } from "@/app/components/AdSlot";
+import SupportBlock from "@/app/components/SupportBlock";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/config";
 
@@ -102,10 +103,13 @@ export default function RootLayout({
         <AdSlot slot="8403578120" format="horizontal" />
         <main className="flex-1 overflow-x-hidden">{children}</main>
         <AdSlot slot="2178978334" format="horizontal" />
-        <footer className="mt-4 md:mt-12 py-6 border-t border-paper-edge text-center">
-          <p className="text-[13px] text-ink-soft">
-            Pokopia Picks, fan-made wiki for Pokemon Pokopia.
-          </p>
+        <footer className="mt-4 md:mt-8 border-t border-paper-edge">
+          <div className="max-w-[1080px] mx-auto px-3 sm:px-5 pt-4 pb-6">
+            <SupportBlock />
+            <p className="text-[13px] text-ink-soft text-center mt-4">
+              Pokopia Picks, fan-made wiki for Pokemon Pokopia.
+            </p>
+          </div>
         </footer>
       </body>
     </html>
