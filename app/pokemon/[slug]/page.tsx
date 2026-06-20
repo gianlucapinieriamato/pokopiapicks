@@ -154,6 +154,43 @@ export default async function PokemonPage({
             image: `/icons/pokemon/${p.icon}`,
             url: `${SITE_URL}/pokemon/${slug}/`,
           },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: `What does ${p.label} like in Pokemon Pokopia?`,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: `${p.label} likes gift items in these categories: ${p.categories.map((c) => c.label).join(", ")}. Items that appear in multiple categories are the best gifts and count double or more.`,
+                },
+              },
+              {
+                "@type": "Question",
+                name: `Where can I find ${p.label} in Pokemon Pokopia?`,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    p.habitatList.length > 0
+                      ? `${p.label} can be found in the ${p.habitat.label} habitat: ${p.habitatList.map((e) => e.habitat.label).join(", ")}.`
+                      : `${p.label} lives in the ${p.habitat.label} habitat in Pokemon Pokopia.`,
+                },
+              },
+              ...(passiveDrop
+                ? [
+                    {
+                      "@type": "Question",
+                      name: `What does ${p.label} drop in Pokemon Pokopia?`,
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: `${p.label} passively drops ${passiveDrop.label} near its home in Pokemon Pokopia.`,
+                      },
+                    },
+                  ]
+                : []),
+            ],
+          },
         ]}
       />
       <Breadcrumb
