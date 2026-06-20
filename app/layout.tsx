@@ -108,8 +108,8 @@ export default function RootLayout({
           <div className="max-w-[1080px] mx-auto px-3 sm:px-5 pt-4 pb-6">
             <SupportBlock />
             <p className="text-[13px] text-ink-soft text-center mt-4">
-              Pokopia Picks — fan-made gift guide &amp; wiki for Pokemon Pokopia
-              (Nintendo Switch 2). Pokemon and all related properties are
+              Pokopia Picks — fan-made gift guide &amp; wiki for Pokemon Pokopia.
+              Pokemon and all related properties are
               trademarks of their respective owners. Unofficial fan project.
             </p>
             <div className="flex justify-center gap-4 mt-2">
