@@ -154,6 +154,43 @@ export default async function PokemonPage({
             image: `/icons/pokemon/${p.icon}`,
             url: `${SITE_URL}/pokemon/${slug}/`,
           },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: `What does ${p.label} like in Pokemon Pokopia?`,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: `${p.label} likes gift items in these categories: ${p.categories.map((c) => c.label).join(", ")}. Items that appear in multiple categories are the best gifts and count double or more.`,
+                },
+              },
+              {
+                "@type": "Question",
+                name: `Where can I find ${p.label} in Pokemon Pokopia?`,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    p.habitatList.length > 0
+                      ? `${p.label} can be found in the ${p.habitat.label} habitat: ${p.habitatList.map((e) => e.habitat.label).join(", ")}.`
+                      : `${p.label} lives in the ${p.habitat.label} habitat in Pokemon Pokopia.`,
+                },
+              },
+              ...(passiveDrop
+                ? [
+                    {
+                      "@type": "Question",
+                      name: `What does ${p.label} drop in Pokemon Pokopia?`,
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: `${p.label} passively drops ${passiveDrop.label} near its home in Pokemon Pokopia.`,
+                      },
+                    },
+                  ]
+                : []),
+            ],
+          },
         ]}
       />
       <Breadcrumb
@@ -166,6 +203,9 @@ export default async function PokemonPage({
 
       {/* ── Hero: card + info ── */}
       <Card>
+        <p className="sr-only">
+          {`${p.label} is a${p.types.length > 0 ? " " + p.types.map((t) => t.label).join("/") + "-type" : ""} Pokemon in Pokemon Pokopia (Nintendo Switch 2). It lives in the ${p.habitat.label} habitat${p.specialties.length > 0 ? " and specializes in " + p.specialties.map((s) => s.label).join(" and ") : ""}. ${p.label} likes gift items in these categories: ${p.categories.map((c) => c.label).join(", ")}.${passiveDrop ? " It passively drops " + passiveDrop.label + " near its home." : ""}`}
+        </p>
         <div className="flex flex-col items-center text-center gap-4 sm:flex-row sm:items-stretch sm:text-left sm:gap-7">
           <div className="shrink-0 w-full max-w-[280px] sm:max-w-none sm:w-[240px]">
             <TcgCard p={p} size="lg" />

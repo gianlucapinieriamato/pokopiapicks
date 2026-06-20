@@ -1,0 +1,47 @@
+# Pokopia Picks
+
+Pokopia Picks is a fan-made gift guide and wiki for Pokemon Pokopia (Nintendo Switch 2, released March 2026). It covers what items each Pokemon likes, their habitats, item categories, locations, and types, helping players plan housing arrangements and maximize happiness with their Pokemon.
+
+## What this site covers
+
+- Gift preferences per Pokemon (300+ entries across all Pokemon in the game)
+- Item categories that determine gift compatibility
+- Habitats (Pokemon with matching habitats can share living spaces)
+- Locations where Pokemon are found
+- Specialties (bonus effects for Pokopia activities)
+- Types (Fire, Water, Grass, etc.)
+- Passive drops (items some Pokemon passively drop near their home)
+
+## Key concepts
+
+Gift system: Giving items to Pokemon raises their happiness. Each Pokemon likes certain item categories rather than specific items. Items that appear in multiple categories a Pokemon likes are "best gifts" that count double or more toward happiness. The site makes it easy to find best gifts for any Pokemon.
+
+Habitat system: Pokemon with matching habitats can cohabit in Pokopia — they can share the same living space. The Matchmaker tool on this site finds compatible roommates by cross-referencing habitat data across all Pokemon.
+
+Passive drops: Some Pokemon passively drop specific items near their home. This makes them useful for item farming, since players can collect those items regularly without taking any action. The site surfaces this data on each Pokemon's detail page.
+
+## Data sources
+
+- Serebii (https://www.serebii.net/pokemonpokopia/) — primary source for Pokopia-specific data (gift preferences, habitats, locations, specialties)
+- PokeAPI sprites (https://github.com/PokeAPI/sprites) — official artwork by national dex number
+
+## Site map
+
+- `/` — Home page with search and quick-picks
+- `/pokedex/` — Full listing of all Pokemon with filtering by habitat, type, specialty
+- `/pokemon/[slug]/` — Per-Pokemon detail: gift item categories, best gifts, habitat locations, specialties, types, passive drop
+- `/items/` — All gift items listing
+- `/item/[slug]/` — Per-item detail: which Pokemon like this item and in which categories
+- `/habitats/` — All habitats listing
+- `/habitats/[slug]/` — Habitat detail with Pokemon that live there
+- `/locations/` — All in-game locations
+- `/locations/[slug]/` — Location detail with Pokemon found there
+- `/matchmaker/` — Tool to find Pokemon that can share a living space (compatible habitats)
+- `/types/` — All Pokemon types listing
+- `/types/[slug]/` — Type detail with all Pokemon of that type
+- `/specialty/` — All specialties listing
+- `/specialty/[slug]/` — Specialty detail with all Pokemon that have it
+
+## Attribution
+
+Pokopia Picks is an unofficial fan project. Pokemon, Pokemon Pokopia, Nintendo Switch 2, and all related properties are trademarks of Nintendo, Game Freak, and Creatures Inc. This site is not affiliated with or endorsed by Nintendo, Game Freak, or Creatures Inc.

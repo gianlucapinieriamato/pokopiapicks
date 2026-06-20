@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/config";
+import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from "@/app/lib/config";
 import { POKEMON_LIST } from "@/app/lib/const";
 import HoverTile from "@/app/components/HoverTile";
 import TcgCard from "@/app/components/TcgCard";
 import Card from "@/app/components/Card";
 import SectionTitle from "@/app/components/SectionTitle";
 import { HomeSearchBar } from "@/app/components/HomeSearchBar";
+import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} — Pokemon Pokopia Gift Guide & Wiki`,
@@ -38,7 +39,36 @@ const FEATURES = [
 
 export default function Home() {
   return (
-    <div className="max-w-[1080px] mx-auto px-5 pt-8 pb-20 relative z-[1]">
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Dataset",
+          "name": "Pokemon Pokopia Gift Guide Data",
+          "description": "Comprehensive database of Pokemon gift preferences, habitats, item categories, specialties, and locations for the game Pokemon Pokopia on Nintendo Switch 2.",
+          "url": SITE_URL,
+          "creator": {
+            "@type": "Organization",
+            "name": "Pokopia Picks",
+            "url": SITE_URL,
+          },
+          "keywords": [
+            "Pokemon Pokopia",
+            "Pokemon gifts",
+            "Nintendo Switch 2",
+            "Pokemon habitats",
+            "gift guide",
+          ],
+          "inLanguage": "en",
+          "isAccessibleForFree": true,
+          "isPartOf": {
+            "@type": "VideoGame",
+            "name": "Pokemon Pokopia",
+            "gamePlatform": "Nintendo Switch 2",
+          },
+        }}
+      />
+      <div className="max-w-[1080px] mx-auto px-5 pt-8 pb-20 relative z-[1]">
       <header className="text-center mb-5 pt-6 pb-2 px-5">
         <h1 className="font-outfit font-medium text-[clamp(2rem,5vw,3.4rem)] leading-none tracking-[-0.025em] mb-2 text-ink-soft whitespace-nowrap uppercase">
           Pokopia{" "}
@@ -91,6 +121,7 @@ export default function Home() {
           ))}
         </div>
       </Card>
-    </div>
+      </div>
+    </>
   );
 }
