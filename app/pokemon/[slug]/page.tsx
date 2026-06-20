@@ -204,7 +204,7 @@ export default async function PokemonPage({
       {/* ── Hero: card + info ── */}
       <Card>
         <p className="sr-only">
-          {`${p.label} is a${p.types.length > 0 ? " " + p.types.map((t) => t.label).join("/") + "-type" : ""} Pokemon in Pokemon Pokopia (Nintendo Switch 2). It lives in the ${p.habitat.label} habitat${p.specialties.length > 0 ? " and specializes in " + p.specialties.map((s) => s.label).join(" and ") : ""}. ${p.label} likes gift items in these categories: ${p.categories.map((c) => c.label).join(", ")}.${passiveDrop ? " It passively drops " + passiveDrop.label + " near its home." : ""}`}
+          {`${p.label} is a${p.types.length > 0 ? " " + p.types.map((t) => t.label).join("/") + "-type" : ""} Pokemon in Pokemon Pokopia. It lives in the ${p.habitat.label} habitat${p.specialties.length > 0 ? " and specializes in " + p.specialties.map((s) => s.label).join(" and ") : ""}. ${p.label} likes gift items in these categories: ${p.categories.map((c) => c.label).join(", ")}.${passiveDrop ? " It passively drops " + passiveDrop.label + " near its home." : ""}`}
         </p>
         <div className="flex flex-col items-center text-center gap-4 sm:flex-row sm:items-stretch sm:text-left sm:gap-7">
           <div className="shrink-0 w-full max-w-[280px] sm:max-w-none sm:w-[240px]">

@@ -1,6 +1,6 @@
 # Pokopia Picks
 
-Pokopia Picks is a fan-made gift guide and wiki for Pokemon Pokopia (Nintendo Switch 2, released March 2026). It covers what items each Pokemon likes, their habitats, item categories, locations, and types, helping players plan housing arrangements and maximize happiness with their Pokemon.
+Pokopia Picks is a fan-made gift guide and wiki for Pokemon Pokopia. It covers what items each Pokemon likes, their habitats, item categories, locations, and types, helping players plan housing arrangements and maximize happiness with their Pokemon.
 
 ## What this site covers
 

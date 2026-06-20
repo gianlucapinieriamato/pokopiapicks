@@ -75,8 +75,8 @@ export default function Home() {
           <span className="italic text-accent-deep font-bold">Picks</span>
         </h1>
         <p className="max-w-[600px] mx-auto text-ink-soft text-[15px] leading-[1.65] mb-3">
-          The fan-made gift guide for <strong className="text-ink">Pokemon Pokopia</strong>{" "}
-          (Nintendo Switch 2). Every Pokemon has favorite item categories —
+          The fan-made gift guide for <strong className="text-ink">Pokemon Pokopia</strong>.
+          Every Pokemon has favorite item categories —
           gifts that boost their happiness and unlock bonuses in your home.
           Look up any Pokemon to see exactly what to give them, which roommates
           they get along with, and where to find them.
