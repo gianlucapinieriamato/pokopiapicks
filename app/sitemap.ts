@@ -11,7 +11,7 @@ import {
 } from "@/app/lib/const";
 import { SITE_URL } from "@/app/lib/config";
 
-const LAST_UPDATED = new Date("2026-05-22"); // update this when data changes
+const LAST_UPDATED = new Date("2026-06-20"); // update this when data changes
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
