@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import Link from "next/link";
 import Nav from "@/app/components/Nav";
 import JsonLd from "@/app/components/JsonLd";
 import { AdSlot } from "@/app/components/AdSlot";
@@ -107,8 +108,18 @@ export default function RootLayout({
           <div className="max-w-[1080px] mx-auto px-3 sm:px-5 pt-4 pb-6">
             <SupportBlock />
             <p className="text-[13px] text-ink-soft text-center mt-4">
-              Pokopia Picks, fan-made wiki for Pokemon Pokopia.
+              Pokopia Picks — fan-made gift guide &amp; wiki for Pokemon Pokopia
+              (Nintendo Switch 2). Pokemon and all related properties are
+              trademarks of their respective owners. Unofficial fan project.
             </p>
+            <div className="flex justify-center gap-4 mt-2">
+              <Link href="/about" className="text-[12px] text-ink-fade hover:text-accent-deep no-underline">
+                About
+              </Link>
+              <Link href="/privacy" className="text-[12px] text-ink-fade hover:text-accent-deep no-underline">
+                Privacy Policy
+              </Link>
+            </div>
           </div>
         </footer>
       </body>
