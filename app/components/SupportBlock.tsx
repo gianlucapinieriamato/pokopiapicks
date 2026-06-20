@@ -22,14 +22,24 @@ export default function SupportBlock({
         time, you can buy me a coffee. It helps keep the Pokedex, items, and
         habitat data current with every game update.
       </p>
-      <a
-        href={kofiUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-5 inline-block font-outfit font-bold text-[15px] px-6 py-[11px] rounded-full bg-accent text-paper border border-accent-deep shadow-[0_2px_0_var(--accent-deep)] no-underline transition-all hover:bg-accent-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-      >
-        ☕ Buy me a coffee
-      </a>
+      <div className="mt-5 flex flex-wrap justify-center items-center gap-3">
+        <a
+          href={kofiUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block font-outfit font-bold text-[15px] px-6 py-[11px] rounded-full bg-accent text-paper border border-accent-deep shadow-[0_2px_0_var(--accent-deep)] no-underline transition-all hover:bg-accent-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        >
+          ☕ Buy me a coffee
+        </a>
+        <a
+          href="https://forms.gle/4uJkvp1R5xKgd7MU6"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block font-outfit font-bold text-[15px] px-6 py-[11px] rounded-full bg-paper text-ink-soft border border-paper-edge no-underline transition-all hover:border-accent hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        >
+          Report an issue
+        </a>
+      </div>
     </aside>
   );
 }
