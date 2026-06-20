@@ -28,19 +28,19 @@ Passive drops: Some Pokemon passively drop specific items near their home. This 
 ## Site map
 
 - `/` — Home page with search and quick-picks
-- `/pokedex` — Full listing of all Pokemon with filtering by habitat, type, specialty
-- `/pokemon/[slug]` — Per-Pokemon detail: gift item categories, best gifts, habitat locations, specialties, types, passive drop
-- `/items` — All gift items listing
-- `/item/[slug]` — Per-item detail: which Pokemon like this item and in which categories
-- `/habitats` — All habitats listing
-- `/habitats/[slug]` — Habitat detail with Pokemon that live there
-- `/locations` — All in-game locations
-- `/locations/[slug]` — Location detail with Pokemon found there
-- `/matchmaker` — Tool to find Pokemon that can share a living space (compatible habitats)
-- `/types` — All Pokemon types listing
-- `/types/[slug]` — Type detail with all Pokemon of that type
-- `/specialty` — All specialties listing
-- `/specialty/[slug]` — Specialty detail with all Pokemon that have it
+- `/pokedex/` — Full listing of all Pokemon with filtering by habitat, type, specialty
+- `/pokemon/[slug]/` — Per-Pokemon detail: gift item categories, best gifts, habitat locations, specialties, types, passive drop
+- `/items/` — All gift items listing
+- `/item/[slug]/` — Per-item detail: which Pokemon like this item and in which categories
+- `/habitats/` — All habitats listing
+- `/habitats/[slug]/` — Habitat detail with Pokemon that live there
+- `/locations/` — All in-game locations
+- `/locations/[slug]/` — Location detail with Pokemon found there
+- `/matchmaker/` — Tool to find Pokemon that can share a living space (compatible habitats)
+- `/types/` — All Pokemon types listing
+- `/types/[slug]/` — Type detail with all Pokemon of that type
+- `/specialty/` — All specialties listing
+- `/specialty/[slug]/` — Specialty detail with all Pokemon that have it
 
 ## Attribution
 

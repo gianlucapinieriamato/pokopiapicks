@@ -52,7 +52,6 @@ export default function Home() {
             "name": "Pokopia Picks",
             "url": SITE_URL,
           },
-          "license": `${SITE_URL}/about`,
           "keywords": [
             "Pokemon Pokopia",
             "Pokemon gifts",
