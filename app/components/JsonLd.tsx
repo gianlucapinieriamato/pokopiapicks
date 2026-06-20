@@ -1,7 +1,12 @@
-export default function JsonLd({ data }: { data: object }) {
+export default function JsonLd({ data }: { data: object | object[] }) {
+  const items = Array.isArray(data) ? data : [data];
   return (
-    <script type="application/ld+json">
-      {JSON.stringify(data)}
-    </script>
+    <>
+      {items.map((item, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(item)}
+        </script>
+      ))}
+    </>
   );
 }
