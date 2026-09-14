@@ -36,4 +36,9 @@ export const PASSIVE_DROPS: Record<string, ItemConst> = {
   "trapinch":       Item.SquishyClay,
   "glimmet":        Item.IronOre,
   "glimmora":       Item.IronOre,
+  "shellder":       Item.Seashell,
+  "cloyster":       Item.Seashell,
+  "seadra":         Item.BlackPaint,
+  "kingdra":        Item.BlackPaint,
+  "dhelmise":       Item.NonburnableGarbage,
 };

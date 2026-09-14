@@ -126,6 +126,16 @@ export const Item = {
     label: "Antique wall (upper)",
     icon: "/icons/items/antiquewall(upper).png",
   },
+  AntiqueWallWallpaper: {
+    slug: "antique-wall-wallpaper",
+    label: "Antique wall (wallpaper)",
+    icon: "/icons/items/antiquewall(wallpaper).png",
+  },
+  AquaCottageKit: {
+    slug: "aqua-cottage-kit",
+    label: "Aqua cottage kit",
+    icon: "/icons/items/aquacottagekit.png",
+  },
   ArcadeMachine: {
     slug: "arcade-machine",
     label: "Arcade machine",
@@ -140,6 +150,11 @@ export const Item = {
     slug: "arch-bridge",
     label: "Arch Bridge",
     icon: "/icons/items/archbridge.png",
+  },
+  ArchedFencing: {
+    slug: "arched-fencing",
+    label: "Arched fencing",
+    icon: "/icons/items/archedfencing.png",
   },
   ArchedTiling: {
     slug: "arched-tiling",
@@ -165,6 +180,16 @@ export const Item = {
     slug: "arrow-sign",
     label: "Arrow sign",
     icon: "/icons/items/arrowsign.png",
+  },
+  ArrowSignLeft: {
+    slug: "arrow-sign-left",
+    label: "Arrow sign (left)",
+    icon: "/icons/items/arrowsign(left).png",
+  },
+  ArrowSignRight: {
+    slug: "arrow-sign-right",
+    label: "Arrow sign (right)",
+    icon: "/icons/items/arrowsign(right).png",
   },
   AspearBerry: {
     slug: "aspear-berry",
@@ -212,6 +237,11 @@ export const Item = {
     label: "Barren striped soil",
     icon: "/icons/items/barrenstripedsoil.png",
   },
+  BasinPokemonCenterKit: {
+    slug: "basin-pokemon-center-kit",
+    label: "Basin Pokemon Center kit",
+    icon: "/icons/items/basinpokemoncenterkit.png",
+  },
   BathtimeSet: {
     slug: "bathtime-set",
     label: "Bathtime set",
@@ -237,6 +267,11 @@ export const Item = {
     label: "Battle! (Gym Leader) 2",
     icon: "/icons/items/battle!(gymleader)2.png",
   },
+  BattlePoster: {
+    slug: "battle-poster",
+    label: "Battle poster",
+    icon: "/icons/items/battleposter.png",
+  },
   BeachChair: {
     slug: "beach-chair",
     label: "Beach chair",
@@ -247,10 +282,20 @@ export const Item = {
     label: "Beach parasol",
     icon: "/icons/items/beachparasol.png",
   },
+  BeachPoster: {
+    slug: "beach-poster",
+    label: "Beach poster",
+    icon: "/icons/items/beachposter.png",
+  },
   BeachSand: {
     slug: "beach-sand",
     label: "Beach sand",
     icon: "/icons/items/beachsand.png",
+  },
+  BeachVolleyballSet: {
+    slug: "beach-volleyball-set",
+    label: "Beach volleyball set",
+    icon: "/icons/items/beachvolleyballset.png",
   },
   Bean: { slug: "bean", label: "Bean", icon: "/icons/items/bean.png" },
   BeautifulFlower: {
@@ -359,7 +404,22 @@ export const Item = {
     label: "Big storage box",
     icon: "/icons/items/bigstoragebox.png",
   },
+  BigSwimRing: {
+    slug: "big-swim-ring",
+    label: "Big swim ring",
+    icon: "/icons/items/bigswimring.png",
+  },
+  BigTreasureChest: {
+    slug: "big-treasure-chest",
+    label: "Big treasure chest",
+    icon: "/icons/items/bigtreasurechest.png",
+  },
   Bike: { slug: "bike", label: "Bike", icon: "/icons/items/bike.png" },
+  BikePoster: {
+    slug: "bike-poster",
+    label: "Bike poster",
+    icon: "/icons/items/bikeposter.png",
+  },
   BlackCliffRock: {
     slug: "black-cliff-rock",
     label: "Black cliff rock",
@@ -385,6 +445,26 @@ export const Item = {
     label: "Blank canvas",
     icon: "/icons/items/blankcanvas.png",
   },
+  Blender: {
+    slug: "blender",
+    label: "Blender",
+    icon: "/icons/items/blender.png",
+  },
+  BloomingWatermelonPlant: {
+    slug: "blooming-watermelon-plant",
+    label: "Blooming watermelon plant",
+    icon: "/icons/items/bloomingwatermelonplant.png",
+  },
+  BloomingWatermelonPlantGrow: {
+    slug: "blooming-watermelon-plant-grow",
+    label: "Blooming watermelon plant (Grow)",
+    icon: "/icons/items/bloomingwatermelonplant(grow).png",
+  },
+  BlueCaveRock: {
+    slug: "blue-cave-rock",
+    label: "Blue cave rock",
+    icon: "/icons/items/bluecaverock.png",
+  },
   BlueMeteorLamp: {
     slug: "blue-meteor-lamp",
     label: "Blue meteor lamp",
@@ -400,6 +480,11 @@ export const Item = {
     label: "Blue-green shoots",
     icon: "/icons/items/blue-greenshoots.png",
   },
+  BlueRock: {
+    slug: "blue-rock",
+    label: "Blue rock",
+    icon: "/icons/items/bluerock.png",
+  },
   Bonfire: {
     slug: "bonfire",
     label: "Bonfire",
@@ -411,10 +496,20 @@ export const Item = {
     icon: "/icons/items/boo-in-the-box.png",
   },
   Book: { slug: "book", label: "Book", icon: "/icons/items/book.png" },
+  BookStack: {
+    slug: "book-stack",
+    label: "Book stack",
+    icon: "/icons/items/bookstack.png",
+  },
   Bookcase: {
     slug: "bookcase",
     label: "Bookcase",
     icon: "/icons/items/bookcase.png",
+  },
+  BottledShip: {
+    slug: "bottled-ship",
+    label: "Bottled ship",
+    icon: "/icons/items/bottledship.png",
   },
   BouncyBlueBathtub: {
     slug: "bouncy-blue-bathtub",
@@ -446,10 +541,30 @@ export const Item = {
     label: "Broken-tiling wall",
     icon: "/icons/items/broken-tilingwall.png",
   },
+  BubbleMachine: {
+    slug: "bubble-machine",
+    label: "Bubble machine",
+    icon: "/icons/items/bubblemachine.png",
+  },
   BumpyBeachSand: {
     slug: "bumpy-beach-sand",
     label: "Bumpy beach sand",
     icon: "/icons/items/bumpybeachsand.png",
+  },
+  BuoyantBlock: {
+    slug: "buoyant-block",
+    label: "Buoyant block",
+    icon: "/icons/items/buoyantblock.png",
+  },
+  BuriedPearl: {
+    slug: "buried-pearl",
+    label: "Buried pearl",
+    icon: "/icons/items/buriedpearl.png",
+  },
+  CafeSign: {
+    slug: "cafe-sign",
+    label: "Cafe sign",
+    icon: "/icons/items/cafesign.png",
   },
   Campfire: {
     slug: "campfire",
@@ -460,6 +575,11 @@ export const Item = {
     slug: "camping-chair",
     label: "Camping chair",
     icon: "/icons/items/campingchair.png",
+  },
+  CanalaveCityNight: {
+    slug: "canalave-city-night",
+    label: "Canalave City (Night)",
+    icon: "/icons/items/canalavecity(night).png",
   },
   Cannon: { slug: "cannon", label: "Cannon", icon: "/icons/items/cannon.png" },
   Canoe: { slug: "canoe", label: "Canoe", icon: "/icons/items/canoe.png" },
@@ -473,6 +593,11 @@ export const Item = {
     label: "Cardboard boxes",
     icon: "/icons/items/cardboardboxes.png",
   },
+  CarvedBlueRock: {
+    slug: "carved-blue-rock",
+    label: "Carved blue rock",
+    icon: "/icons/items/carvedbluerock.png",
+  },
   CarvedRedRock: {
     slug: "carved-red-rock",
     label: "Carved red rock",
@@ -482,6 +607,11 @@ export const Item = {
     slug: "carved-yellow-rock",
     label: "Carved yellow rock",
     icon: "/icons/items/carvedyellowrock.png",
+  },
+  Cascarrafa: {
+    slug: "cascarrafa",
+    label: "Cascarrafa",
+    icon: "/icons/items/cascarrafa.png",
   },
   CashRegister: {
     slug: "cash-register",
@@ -528,6 +658,11 @@ export const Item = {
     label: "Cell phone",
     icon: "/icons/items/cellphone.png",
   },
+  ChainLamp: {
+    slug: "chain-lamp",
+    label: "Chain lamp",
+    icon: "/icons/items/chainlamp.png",
+  },
   ChanseyPlant: {
     slug: "chansey-plant",
     label: "Chansey plant",
@@ -548,6 +683,16 @@ export const Item = {
     label: "Chesto tree",
     icon: "/icons/items/chestotree.png",
   },
+  ChicAnchorPrint: {
+    slug: "chic-anchor-print",
+    label: "Chic anchor print",
+    icon: "/icons/items/chicanchorprint.png",
+  },
+  ChicAnchorPrintWallpaper: {
+    slug: "chic-anchor-print-wallpaper",
+    label: "Chic anchor print (wallpaper)",
+    icon: "/icons/items/chicanchorprint(wallpaper).png",
+  },
   ChicChair: {
     slug: "chic-chair",
     label: "Chic chair",
@@ -567,6 +712,16 @@ export const Item = {
     slug: "chic-table",
     label: "Chic table",
     icon: "/icons/items/chictable.png",
+  },
+  ChimechoWindChime: {
+    slug: "chimecho-wind-chime",
+    label: "Chimecho wind chime",
+    icon: "/icons/items/chimechowindchime.png",
+  },
+  ChimneyRocks: {
+    slug: "chimney-rocks",
+    label: "Chimney rocks",
+    icon: "/icons/items/chimneyrocks.png",
   },
   ChocolateCookies: {
     slug: "chocolate-cookies",
@@ -599,10 +754,25 @@ export const Item = {
     label: "Cliff rock",
     icon: "/icons/items/cliffrock.png",
   },
+  ClockTowerKit: {
+    slug: "clock-tower-kit",
+    label: "Clock tower kit",
+    icon: "/icons/items/clocktowerkit.png",
+  },
   ClothWall: {
     slug: "cloth-wall",
     label: "Cloth wall",
     icon: "/icons/items/clothwall.png",
+  },
+  ClusteredCoralsPrint: {
+    slug: "clustered-corals-print",
+    label: "Clustered corals print",
+    icon: "/icons/items/clusteredcoralsprint.png",
+  },
+  ClusteredCoralsPrintWallpaper: {
+    slug: "clustered-corals-print-wallpaper",
+    label: "Clustered corals print (wallpaper)",
+    icon: "/icons/items/clusteredcoralsprint(wallpaper).png",
   },
   CoarseRock: {
     slug: "coarse-rock",
@@ -613,6 +783,46 @@ export const Item = {
     slug: "cobblestone-wall",
     label: "Cobblestone wall",
     icon: "/icons/items/cobblestonewall.png",
+  },
+  CoffeeParfaitSmoothie: {
+    slug: "coffee-parfait-smoothie",
+    label: "Coffee parfait smoothie",
+    icon: "/icons/items/coffeeparfaitsmoothie.png",
+  },
+  ColorfulAnchorPrint: {
+    slug: "colorful-anchor-print",
+    label: "Colorful anchor print",
+    icon: "/icons/items/colorfulanchorprint.png",
+  },
+  ColorfulAnchorPrintWallpaper: {
+    slug: "colorful-anchor-print-wallpaper",
+    label: "Colorful anchor print (wallpaper)",
+    icon: "/icons/items/colorfulanchorprint(wallpaper).png",
+  },
+  ColorfulCorals: {
+    slug: "colorful-corals",
+    label: "Colorful corals",
+    icon: "/icons/items/colorfulcorals.png",
+  },
+  ColorfulCoralsPrint: {
+    slug: "colorful-corals-print",
+    label: "Colorful corals print",
+    icon: "/icons/items/colorfulcoralsprint.png",
+  },
+  ColorfulCoralsPrintWallpaper: {
+    slug: "colorful-corals-print-wallpaper",
+    label: "Colorful corals print (wallpaper)",
+    icon: "/icons/items/colorfulcoralsprint(wallpaper).png",
+  },
+  ColorfulFishScaleTiling: {
+    slug: "colorful-fish-scale-tiling",
+    label: "Colorful fish-scale tiling",
+    icon: "/icons/items/colorfulfish-scaletiling.png",
+  },
+  ColorfulFishScaleTilingWallpaper: {
+    slug: "colorful-fish-scale-tiling-wallpaper",
+    label: "Colorful fish-scale tiling (wallpaper)",
+    icon: "/icons/items/colorfulfish-scaletiling(wallpaper).png",
   },
   Computer: {
     slug: "computer",
@@ -628,6 +838,11 @@ export const Item = {
     slug: "concrete-wall",
     label: "Concrete wall",
     icon: "/icons/items/concretewall.png",
+  },
+  ConfectioneryWallWallpaper: {
+    slug: "confectionery-wall-wallpaper",
+    label: "Confectionery wall (wallpaper)",
+    icon: "/icons/items/confectionerywall(wallpaper).png",
   },
   ConstructionSupplies: {
     slug: "construction-supplies",
@@ -663,6 +878,11 @@ export const Item = {
     slug: "cooled-molten-rock",
     label: "Cooled molten rock",
     icon: "/icons/items/cooledmoltenrock.png",
+  },
+  Cooler: {
+    slug: "cooler",
+    label: "Cooler",
+    icon: "/icons/items/cooler.png",
   },
   CopperDeposit: {
     slug: "copper-deposit",
@@ -749,10 +969,25 @@ export const Item = {
     label: "Cube light",
     icon: "/icons/items/cubelight.png",
   },
+  CursolaLight: {
+    slug: "cursola-light",
+    label: "Cursola light",
+    icon: "/icons/items/cursolalight.png",
+  },
+  CushionBed: {
+    slug: "cushion-bed",
+    label: "Cushion bed",
+    icon: "/icons/items/cushionbed.png",
+  },
   CushyWall: {
     slug: "cushy-wall",
     label: "Cushy wall",
     icon: "/icons/items/cushywall.png",
+  },
+  CushyWallWallpaper: {
+    slug: "cushy-wall-wallpaper",
+    label: "Cushy wall (wallpaper)",
+    icon: "/icons/items/cushywall(wallpaper).png",
   },
   CuteBed: {
     slug: "cute-bed",
@@ -824,10 +1059,20 @@ export const Item = {
     label: "Cyber flooring",
     icon: "/icons/items/cyberflooring.png",
   },
+  CycleShopSign: {
+    slug: "cycle-shop-sign",
+    label: "Cycle shop sign",
+    icon: "/icons/items/cycleshopsign.png",
+  },
   DamagedAsphaltRoad: {
     slug: "damaged-asphalt-road",
     label: "Damaged asphalt road",
     icon: "/icons/items/damagedasphaltroad.png",
+  },
+  DamagedGlossyTiling: {
+    slug: "damaged-glossy-tiling",
+    label: "Damaged glossy tiling",
+    icon: "/icons/items/damagedglossytiling.png",
   },
   DamagedMosaicTiling: {
     slug: "damaged-mosaic-tiling",
@@ -879,6 +1124,11 @@ export const Item = {
     label: "Damp hedge (white)",
     icon: "/icons/items/damphedge(white).png",
   },
+  DanglingStreetlight: {
+    slug: "dangling-streetlight",
+    label: "Dangling streetlight",
+    icon: "/icons/items/danglingstreetlight.png",
+  },
   DarkMarbleFlooring: {
     slug: "dark-marble-flooring",
     label: "Dark marble flooring",
@@ -894,10 +1144,60 @@ export const Item = {
     label: "Decorative bookshelf",
     icon: "/icons/items/decorativebookshelf.png",
   },
+  DecorativeCloth: {
+    slug: "decorative-cloth",
+    label: "Decorative cloth",
+    icon: "/icons/items/decorativecloth.png",
+  },
+  DecorativeDiveBall: {
+    slug: "decorative-dive-ball",
+    label: "Decorative Dive Ball",
+    icon: "/icons/items/decorativediveball.png",
+  },
+  DecorativeGreatBall: {
+    slug: "decorative-great-ball",
+    label: "Decorative Great Ball",
+    icon: "/icons/items/decorativegreatball.png",
+  },
+  DecorativeHealBall: {
+    slug: "decorative-heal-ball",
+    label: "Decorative Heal Ball",
+    icon: "/icons/items/decorativehealball.png",
+  },
+  DecorativeLureBall: {
+    slug: "decorative-lure-ball",
+    label: "Decorative Lure Ball",
+    icon: "/icons/items/decorativelureball.png",
+  },
+  DecorativeNetBall: {
+    slug: "decorative-net-ball",
+    label: "Decorative Net Ball",
+    icon: "/icons/items/decorativenetball.png",
+  },
   DecorativePlantShelf: {
     slug: "decorative-plant-shelf",
     label: "Decorative plant shelf",
     icon: "/icons/items/decorativeplantshelf.png",
+  },
+  DecorativePlates: {
+    slug: "decorative-plates",
+    label: "Decorative plates",
+    icon: "/icons/items/decorativeplates.png",
+  },
+  DecorativePokeBall: {
+    slug: "decorative-poke-ball",
+    label: "Decorative Poke Ball",
+    icon: "/icons/items/decorativepokeball.png",
+  },
+  DecorativeQuickBall: {
+    slug: "decorative-quick-ball",
+    label: "Decorative Quick Ball",
+    icon: "/icons/items/decorativequickball.png",
+  },
+  DecorativeShopShelf: {
+    slug: "decorative-shop-shelf",
+    label: "Decorative shop shelf",
+    icon: "/icons/items/decorativeshopshelf.png",
   },
   DecorativeStorageShelf: {
     slug: "decorative-storage-shelf",
@@ -939,6 +1239,16 @@ export const Item = {
     label: "Digital camera",
     icon: "/icons/items/digitalcamera.png",
   },
+  DigitalWall: {
+    slug: "digital-wall",
+    label: "Digital wall",
+    icon: "/icons/items/digitalwall.png",
+  },
+  DigitalWallWallpaper: {
+    slug: "digital-wall-wallpaper",
+    label: "Digital wall (wallpaper)",
+    icon: "/icons/items/digitalwall(wallpaper).png",
+  },
   DiningCabinet: {
     slug: "dining-cabinet",
     label: "Dining cabinet",
@@ -953,6 +1263,21 @@ export const Item = {
     slug: "ditto-flag",
     label: "Ditto Flag",
     icon: "/icons/items/dittoflag.png",
+  },
+  DittoTransformPrint: {
+    slug: "ditto-transform-print",
+    label: "Ditto transform print",
+    icon: "/icons/items/dittotransformprint.png",
+  },
+  DittoTransformPrintWallpaper: {
+    slug: "ditto-transform-print-wallpaper",
+    label: "Ditto transform print (wallpaper)",
+    icon: "/icons/items/dittotransformprint(wallpaper).png",
+  },
+  Dive: {
+    slug: "dive",
+    label: "Dive",
+    icon: "/icons/items/dive.png",
   },
   DoubleStreetlight: {
     slug: "double-streetlight",
@@ -1079,6 +1404,11 @@ export const Item = {
     label: "Excavation tools",
     icon: "/icons/items/excavationtools.png",
   },
+  ExplosiveHamburgerSteak: {
+    slug: "explosive-hamburger-steak",
+    label: "Explosive hamburger steak",
+    icon: "/icons/items/explosivehamburgersteak.png",
+  },
   ExtravagantCarpeting: {
     slug: "extravagant-carpeting",
     label: "Extravagant carpeting",
@@ -1120,6 +1450,21 @@ export const Item = {
     label: "Fancy pen",
     icon: "/icons/items/fancypen.png",
   },
+  FancyWavyRoofDecoration: {
+    slug: "fancy-wavy-roof-decoration",
+    label: "Fancy wavy roof decoration",
+    icon: "/icons/items/fancywavyroofdecoration.png",
+  },
+  FannedOutDittoPrint: {
+    slug: "fanned-out-ditto-print",
+    label: "Fanned-out Ditto print",
+    icon: "/icons/items/fanned-outdittoprint.png",
+  },
+  FannedOutDittoPrintWallpaper: {
+    slug: "fanned-out-ditto-print-wallpaper",
+    label: "Fanned-out Ditto print (wallpaper)",
+    icon: "/icons/items/fanned-outdittoprint(wallpaper).png",
+  },
   Fern: { slug: "fern", label: "Fern", icon: "/icons/items/fern.png" },
   FieldGrass: {
     slug: "field-grass",
@@ -1130,6 +1475,11 @@ export const Item = {
     slug: "fiery-magby-statue",
     label: "Fiery Magby statue",
     icon: "/icons/items/fierymagbystatue.png",
+  },
+  FightingPoster: {
+    slug: "fighting-poster",
+    label: "Fighting poster",
+    icon: "/icons/items/fightingposter.png",
   },
   FireHydrant: {
     slug: "fire-hydrant",
@@ -1190,6 +1540,26 @@ export const Item = {
     slug: "flat-leaf-plant",
     label: "Flat-leaf plant",
     icon: "/icons/items/flat-leafplant.png",
+  },
+  FlatScaleRoof: {
+    slug: "flat-scale-roof",
+    label: "Flat scale roof",
+    icon: "/icons/items/flatscaleroof.png",
+  },
+  FlatWavyRoof: {
+    slug: "flat-wavy-roof",
+    label: "Flat wavy roof",
+    icon: "/icons/items/flatwavyroof.png",
+  },
+  FloatingLantern: {
+    slug: "floating-lantern",
+    label: "Floating lantern",
+    icon: "/icons/items/floatinglantern.png",
+  },
+  FloatingLogs: {
+    slug: "floating-logs",
+    label: "Floating logs",
+    icon: "/icons/items/floatinglogs.png",
   },
   FloorSwitch: {
     slug: "floor-switch",
@@ -1338,11 +1708,41 @@ export const Item = {
     label: "Garden table",
     icon: "/icons/items/gardentable.png",
   },
+  GiftShopSign: {
+    slug: "gift-shop-sign",
+    label: "Gift shop sign",
+    icon: "/icons/items/giftshopsign.png",
+  },
   Glass: { slug: "glass", label: "Glass", icon: "/icons/items/glass.png" },
+  GlassPane: {
+    slug: "glass-pane",
+    label: "Glass pane",
+    icon: "/icons/items/glasspane.png",
+  },
+  GlassPaneHorizontal: {
+    slug: "glass-pane-horizontal",
+    label: "Glass pane (horizontal)",
+    icon: "/icons/items/glasspane(horizontal).png",
+  },
+  GlassPaneSloped: {
+    slug: "glass-pane-sloped",
+    label: "Glass pane (sloped)",
+    icon: "/icons/items/glasspane(sloped).png",
+  },
   GlassWindow: {
     slug: "glass-window",
     label: "Glass window",
     icon: "/icons/items/glasswindow.png",
+  },
+  GlossyTiling: {
+    slug: "glossy-tiling",
+    label: "Glossy tiling",
+    icon: "/icons/items/glossytiling.png",
+  },
+  GlossyTilingWallpaper: {
+    slug: "glossy-tiling-wallpaper",
+    label: "Glossy tiling (wallpaper)",
+    icon: "/icons/items/glossytiling(wallpaper).png",
   },
   GlowingMushrooms: {
     slug: "glowing-mushrooms",
@@ -1383,6 +1783,21 @@ export const Item = {
     slug: "gold-wall",
     label: "Gold wall",
     icon: "/icons/items/goldwall.png",
+  },
+  GradientWallLower: {
+    slug: "gradient-wall-lower",
+    label: "Gradient wall (lower)",
+    icon: "/icons/items/gradientwall(lower).png",
+  },
+  GradientWallUpper: {
+    slug: "gradient-wall-upper",
+    label: "Gradient wall (upper)",
+    icon: "/icons/items/gradientwall(upper).png",
+  },
+  GradientWallWallpaper: {
+    slug: "gradient-wall-wallpaper",
+    label: "Gradient wall (wallpaper)",
+    icon: "/icons/items/gradientwall(wallpaper).png",
   },
   GrassFlooring: {
     slug: "grass-flooring",
@@ -1445,6 +1860,11 @@ export const Item = {
     label: "Grubby papers",
     icon: "/icons/items/grubbypapers.png",
   },
+  GrubbyPearl: {
+    slug: "grubby-pearl",
+    label: "Grubby pearl",
+    icon: "/icons/items/grubbypearl.png",
+  },
   GrubbyRags: {
     slug: "grubby-rags",
     label: "Grubby rags",
@@ -1464,6 +1884,16 @@ export const Item = {
     slug: "guest-room-wall",
     label: "Guest-room wall",
     icon: "/icons/items/guest-roomwall.png",
+  },
+  GuestRoomWallWallpaper: {
+    slug: "guest-room-wall-wallpaper",
+    label: "Guest-room wall (wallpaper)",
+    icon: "/icons/items/guest-roomwall(wallpaper).png",
+  },
+  GyaradosFountain: {
+    slug: "gyarados-fountain",
+    label: "Gyarados fountain",
+    icon: "/icons/items/gyaradosfountain.png",
   },
   GymEmblemStatue: {
     slug: "gym-emblem-statue",
@@ -1485,6 +1915,11 @@ export const Item = {
     label: "Hanging scroll",
     icon: "/icons/items/hangingscroll.png",
   },
+  HangingSign: {
+    slug: "hanging-sign",
+    label: "Hanging sign",
+    icon: "/icons/items/hangingsign.png",
+  },
   HarborStreetlight: {
     slug: "harbor-streetlight",
     label: "Harbor streetlight",
@@ -1494,6 +1929,16 @@ export const Item = {
     slug: "hardwood-flooring",
     label: "Hardwood flooring",
     icon: "/icons/items/hardwoodflooring.png",
+  },
+  Harp: {
+    slug: "harp",
+    label: "Harp",
+    icon: "/icons/items/harp.png",
+  },
+  Hatch: {
+    slug: "hatch",
+    label: "Hatch",
+    icon: "/icons/items/hatch.png",
   },
   HauoliCityDay: {
     slug: "hau-oli-city-day",
@@ -1555,6 +2000,11 @@ export const Item = {
     label: "Hexagonal flooring",
     icon: "/icons/items/hexagonalflooring.png",
   },
+  HideAndSneakTrophy: {
+    slug: "hide-and-sneak-trophy",
+    label: "Hide-and-sneak trophy",
+    icon: "/icons/items/hide-and-sneaktrophy.png",
+  },
   Honey: { slug: "honey", label: "Honey", icon: "/icons/items/honey.png" },
   HoppipWaterBottle: {
     slug: "hoppip-water-bottle",
@@ -1566,12 +2016,37 @@ export const Item = {
     label: "Horsea fountain",
     icon: "/icons/items/horseafountain.png",
   },
+  HotelZ: {
+    slug: "hotel-z",
+    label: "Hotel Z",
+    icon: "/icons/items/hotelz.png",
+  },
+  HousePartitionMedium: {
+    slug: "house-partition-medium",
+    label: "House partition (medium)",
+    icon: "/icons/items/housepartition(medium).png",
+  },
+  HousePartitionSmall: {
+    slug: "house-partition-small",
+    label: "House partition (small)",
+    icon: "/icons/items/housepartition(small).png",
+  },
   Humidifier: {
     slug: "humidifier",
     label: "Humidifier",
     icon: "/icons/items/humidifier.png",
   },
   Ice: { slug: "ice", label: "Ice", icon: "/icons/items/ice.png" },
+  ImperialCottageKit: {
+    slug: "imperial-cottage-kit",
+    label: "Imperial cottage kit",
+    icon: "/icons/items/imperialcottagekit.png",
+  },
+  ImperialHouseKit: {
+    slug: "imperial-house-kit",
+    label: "Imperial house kit",
+    icon: "/icons/items/imperialhousekit.png",
+  },
   IndigoMeteorLamp: {
     slug: "indigo-meteor-lamp",
     label: "Indigo meteor lamp",
@@ -1612,6 +2087,11 @@ export const Item = {
     label: "Information board",
     icon: "/icons/items/informationboard.png",
   },
+  InteriorDoor: {
+    slug: "interior-door",
+    label: "Interior door",
+    icon: "/icons/items/interiordoor.png",
+  },
   IronBall: {
     slug: "iron-ball",
     label: "Iron Ball",
@@ -1651,6 +2131,11 @@ export const Item = {
     slug: "iron-door",
     label: "Iron door",
     icon: "/icons/items/irondoor.png",
+  },
+  IronFrame: {
+    slug: "iron-frame",
+    label: "Iron frame",
+    icon: "/icons/items/ironframe.png",
   },
   IronGate: {
     slug: "iron-gate",
@@ -1701,6 +2186,11 @@ export const Item = {
     slug: "iron-steps",
     label: "Iron steps",
     icon: "/icons/items/ironsteps.png",
+  },
+  IronSupport: {
+    slug: "iron-support",
+    label: "Iron support",
+    icon: "/icons/items/ironsupport.png",
   },
   IronTable: {
     slug: "iron-table",
@@ -1762,10 +2252,25 @@ export const Item = {
     label: "Knitting supplies",
     icon: "/icons/items/knittingsupplies.png",
   },
+  LaboratoryKit: {
+    slug: "laboratory-kit",
+    label: "Laboratory kit",
+    icon: "/icons/items/laboratorykit.png",
+  },
+  LacqueredWall: {
+    slug: "lacquered-wall",
+    label: "Lacquered wall",
+    icon: "/icons/items/lacqueredwall.png",
+  },
   LaggingTail: {
     slug: "lagging-tail",
     label: "Lagging Tail",
     icon: "/icons/items/laggingtail.png",
+  },
+  Lampion: {
+    slug: "lampion",
+    label: "Lampion",
+    icon: "/icons/items/lampion.png",
   },
   Lantern: {
     slug: "lantern",
@@ -1782,6 +2287,11 @@ export const Item = {
     slug: "large-lost-relic",
     label: "Large Lost Relic",
     icon: "/icons/items/largelostrelic.png",
+  },
+  LargeLostSunkenRelic: {
+    slug: "large-lost-sunken-relic",
+    label: "Large lost sunken relic",
+    icon: "/icons/items/largelostsunkenrelic.png",
   },
   LargeMirror: {
     slug: "large-mirror",
@@ -1824,6 +2334,11 @@ export const Item = {
     label: "Leppa Berry",
     icon: "/icons/items/leppaberry.png",
   },
+  LeppaSmoothie: {
+    slug: "leppa-smoothie",
+    label: "Leppa smoothie",
+    icon: "/icons/items/leppasmoothie.png",
+  },
   LeppaTree: {
     slug: "leppa-tree",
     label: "Leppa Tree",
@@ -1840,6 +2355,11 @@ export const Item = {
     slug: "light-antique-wall-upper",
     label: "Light antique wall (upper)",
     icon: "/icons/items/lightantiquewall(upper).png",
+  },
+  LightAntiqueWallWallpaper: {
+    slug: "light-antique-wall-wallpaper",
+    label: "Light antique wall (wallpaper)",
+    icon: "/icons/items/lightantiquewall(wallpaper).png",
   },
   LightBrownRock: {
     slug: "light-brown-rock",
@@ -1902,10 +2422,20 @@ export const Item = {
     icon: "/icons/items/lumtree.png",
   },
   Lumber: { slug: "lumber", label: "Lumber", icon: "/icons/items/lumber.png" },
+  LumioseCity: {
+    slug: "lumiose-city",
+    label: "Lumiose City",
+    icon: "/icons/items/lumiosecity.png",
+  },
   LunchBox: {
     slug: "lunch-box",
     label: "Lunch box",
     icon: "/icons/items/lunchbox.png",
+  },
+  LushSeaweed: {
+    slug: "lush-seaweed",
+    label: "Lush seaweed",
+    icon: "/icons/items/lushseaweed.png",
   },
   LuxuryBed: {
     slug: "luxury-bed",
@@ -1958,6 +2488,36 @@ export const Item = {
     icon: "/icons/items/mapandcompass.png",
   },
   Marble: { slug: "marble", label: "Marble", icon: "/icons/items/marble.png" },
+  MarineChair: {
+    slug: "marine-chair",
+    label: "Marine chair",
+    icon: "/icons/items/marinechair.png",
+  },
+  MarineChest: {
+    slug: "marine-chest",
+    label: "Marine chest",
+    icon: "/icons/items/marinechest.png",
+  },
+  MarineCloset: {
+    slug: "marine-closet",
+    label: "Marine closet",
+    icon: "/icons/items/marinecloset.png",
+  },
+  MarineDresser: {
+    slug: "marine-dresser",
+    label: "Marine dresser",
+    icon: "/icons/items/marinedresser.png",
+  },
+  MarineSofa: {
+    slug: "marine-sofa",
+    label: "Marine sofa",
+    icon: "/icons/items/marinesofa.png",
+  },
+  MarineTable: {
+    slug: "marine-table",
+    label: "Marine table",
+    icon: "/icons/items/marinetable.png",
+  },
   MarkedRoadHorizontal: {
     slug: "marked-road-horizontal",
     label: "Marked road (horizontal)",
@@ -1993,10 +2553,20 @@ export const Item = {
     label: "Metal Powder",
     icon: "/icons/items/metalpowder.png",
   },
+  MetalWall: {
+    slug: "metal-wall",
+    label: "Metal wall",
+    icon: "/icons/items/metalwall.png",
+  },
   MetallicSmeltingFurnace: {
     slug: "metallic-smelting-furnace",
     label: "Metallic smelting furnace",
     icon: "/icons/items/metallicsmeltingfurnace.png",
+  },
+  Metronome: {
+    slug: "metronome",
+    label: "Metronome",
+    icon: "/icons/items/metronome.png",
   },
   Microscope: {
     slug: "microscope",
@@ -2074,6 +2644,16 @@ export const Item = {
     label: "Mossy boulder",
     icon: "/icons/items/mossyboulder.png",
   },
+  MossyOceanBoulder: {
+    slug: "mossy-ocean-boulder",
+    label: "Mossy ocean boulder",
+    icon: "/icons/items/mossyoceanboulder.png",
+  },
+  MossyOceanSoil: {
+    slug: "mossy-ocean-soil",
+    label: "Mossy ocean soil",
+    icon: "/icons/items/mossyoceansoil.png",
+  },
   MossySoil: {
     slug: "mossy-soil",
     label: "Mossy Soil",
@@ -2146,6 +2726,11 @@ export const Item = {
     label: "Mushroom streetlight",
     icon: "/icons/items/mushroomstreetlight.png",
   },
+  MusicBox: {
+    slug: "music-box",
+    label: "Music box",
+    icon: "/icons/items/musicbox.png",
+  },
   MusicMatFa: {
     slug: "music-mat-fa",
     label: "Music mat (Fa)",
@@ -2216,6 +2801,11 @@ export const Item = {
     label: "Neon flooring",
     icon: "/icons/items/neonflooring.png",
   },
+  Netting: {
+    slug: "netting",
+    label: "Netting",
+    icon: "/icons/items/netting.png",
+  },
   Newspaper: {
     slug: "newspaper",
     label: "Newspaper",
@@ -2241,6 +2831,16 @@ export const Item = {
     slug: "oak-s-lab",
     label: "Oak's Lab",
     icon: "/icons/items/oak'slab.png",
+  },
+  OceanDoor: {
+    slug: "ocean-door",
+    label: "Ocean door",
+    icon: "/icons/items/oceandoor.png",
+  },
+  OceanPalsRug: {
+    slug: "ocean-pals-rug",
+    label: "Ocean pals rug",
+    icon: "/icons/items/oceanpalsrug.png",
   },
   OceanRock: {
     slug: "ocean-rock",
@@ -2296,6 +2896,66 @@ export const Item = {
     slug: "ordinary-soil",
     label: "Ordinary soil",
     icon: "/icons/items/ordinarysoil.png",
+  },
+  OrnateBed: {
+    slug: "ornate-bed",
+    label: "Ornate bed",
+    icon: "/icons/items/ornatebed.png",
+  },
+  OrnateChair: {
+    slug: "ornate-chair",
+    label: "Ornate chair",
+    icon: "/icons/items/ornatechair.png",
+  },
+  OrnateDecorativeShelf: {
+    slug: "ornate-decorative-shelf",
+    label: "Ornate decorative shelf",
+    icon: "/icons/items/ornatedecorativeshelf.png",
+  },
+  OrnateDoor: {
+    slug: "ornate-door",
+    label: "Ornate door",
+    icon: "/icons/items/ornatedoor.png",
+  },
+  OrnatePartition: {
+    slug: "ornate-partition",
+    label: "Ornate partition",
+    icon: "/icons/items/ornatepartition.png",
+  },
+  OrnateStand: {
+    slug: "ornate-stand",
+    label: "Ornate stand",
+    icon: "/icons/items/ornatestand.png",
+  },
+  OrnateTable: {
+    slug: "ornate-table",
+    label: "Ornate table",
+    icon: "/icons/items/ornatetable.png",
+  },
+  OrnateWall: {
+    slug: "ornate-wall",
+    label: "Ornate wall",
+    icon: "/icons/items/ornatewall.png",
+  },
+  OrnateWallWallpaper: {
+    slug: "ornate-wall-wallpaper",
+    label: "Ornate wall (wallpaper)",
+    icon: "/icons/items/ornatewall(wallpaper).png",
+  },
+  OrnateWindow: {
+    slug: "ornate-window",
+    label: "Ornate window",
+    icon: "/icons/items/ornatewindow.png",
+  },
+  OverlappingWavesPrint: {
+    slug: "overlapping-waves-print",
+    label: "Overlapping waves print",
+    icon: "/icons/items/overlappingwavesprint.png",
+  },
+  OverlappingWavesPrintWallpaper: {
+    slug: "overlapping-waves-print-wallpaper",
+    label: "Overlapping waves print (wallpaper)",
+    icon: "/icons/items/overlappingwavesprint(wallpaper).png",
   },
   PaintBalloonAquamarine: {
     slug: "paint-balloon-aquamarine",
@@ -2418,15 +3078,40 @@ export const Item = {
     icon: "/icons/items/paperpartycups.png",
   },
   Papers: { slug: "papers", label: "Papers", icon: "/icons/items/papers.png" },
+  PartyBall: {
+    slug: "party-ball",
+    label: "Party ball",
+    icon: "/icons/items/partyball.png",
+  },
   PartyBunting: {
     slug: "party-bunting",
     label: "Party bunting",
     icon: "/icons/items/partybunting.png",
   },
+  PathwayLightCorner: {
+    slug: "pathway-light-corner",
+    label: "Pathway light (corner)",
+    icon: "/icons/items/pathwaylight(corner).png",
+  },
+  PathwayLightLine: {
+    slug: "pathway-light-line",
+    label: "Pathway light (line)",
+    icon: "/icons/items/pathwaylight(line).png",
+  },
+  PathwayLightSingle: {
+    slug: "pathway-light-single",
+    label: "Pathway light (single)",
+    icon: "/icons/items/pathwaylight(single).png",
+  },
   PatternedAgedStoneWall: {
     slug: "patterned-aged-stone-wall",
     label: "Patterned aged-stone wall",
     icon: "/icons/items/patternedaged-stonewall.png",
+  },
+  PearlStreetlight: {
+    slug: "pearl-streetlight",
+    label: "Pearl streetlight",
+    icon: "/icons/items/pearlstreetlight.png",
   },
   PechaBerry: {
     slug: "pecha-berry",
@@ -2544,6 +3229,16 @@ export const Item = {
     label: "Plaster wall",
     icon: "/icons/items/plasterwall.png",
   },
+  PoTown: {
+    slug: "po-town",
+    label: "Po Town",
+    icon: "/icons/items/potown.png",
+  },
+  PointedWoodenFencing: {
+    slug: "pointed-wooden-fencing",
+    label: "Pointed wooden fencing",
+    icon: "/icons/items/pointedwoodenfencing.png",
+  },
   PointyTree: {
     slug: "pointy-tree",
     label: "Pointy tree",
@@ -2593,6 +3288,11 @@ export const Item = {
     slug: "pok-eacute-mon-center",
     label: "Pokemon Center",
     icon: "/icons/items/pokemoncenter.png",
+  },
+  PokemonCenterWallWallpaper: {
+    slug: "pokemon-center-wall-wallpaper",
+    label: "Pokemon Center wall (wallpaper)",
+    icon: "/icons/items/pokemoncenterwall(wallpaper).png",
   },
   PokemonGym: {
     slug: "pok-eacute-mon-gym",
@@ -2644,10 +3344,45 @@ export const Item = {
     label: "Pop art wall (upper)",
     icon: "/icons/items/popartwall(upper).png",
   },
+  PopArtWallWallpaper: {
+    slug: "pop-art-wall-wallpaper",
+    label: "Pop art wall (wallpaper)",
+    icon: "/icons/items/popartwall(wallpaper).png",
+  },
+  PoppingSalad: {
+    slug: "popping-salad",
+    label: "Popping salad",
+    icon: "/icons/items/poppingsalad.png",
+  },
+  PoppingSoup: {
+    slug: "popping-soup",
+    label: "Popping soup",
+    icon: "/icons/items/poppingsoup.png",
+  },
+  PortalPod: {
+    slug: "portal-pod",
+    label: "Portal pod",
+    icon: "/icons/items/portalpod.png",
+  },
+  PrimarinaStatue: {
+    slug: "primarina-statue",
+    label: "Primarina statue",
+    icon: "/icons/items/primarinastatue.png",
+  },
   Printer: {
     slug: "printer",
     label: "Printer",
     icon: "/icons/items/printer.png",
+  },
+  PrismScale: {
+    slug: "prism-scale",
+    label: "Prism scale",
+    icon: "/icons/items/prismscale.png",
+  },
+  PrismScaleOutdoors: {
+    slug: "prism-scale-outdoors",
+    label: "Prism scale (outdoors)",
+    icon: "/icons/items/prismscale(outdoors).png",
   },
   ProtrudingWall: {
     slug: "protruding-wall",
@@ -2674,6 +3409,11 @@ export const Item = {
     label: "Pure-white soil",
     icon: "/icons/items/pure-whitesoil.png",
   },
+  RagingSeaPoster: {
+    slug: "raging-sea-poster",
+    label: "Raging sea poster",
+    icon: "/icons/items/ragingseaposter.png",
+  },
   RaichuSign: {
     slug: "raichu-sign",
     label: "Raichu sign",
@@ -2699,6 +3439,16 @@ export const Item = {
     label: "Rawst tree",
     icon: "/icons/items/rawsttree.png",
   },
+  RectangleTiling: {
+    slug: "rectangle-tiling",
+    label: "Rectangle tiling",
+    icon: "/icons/items/rectangletiling.png",
+  },
+  RectangleTilingWallpaper: {
+    slug: "rectangle-tiling-wallpaper",
+    label: "Rectangle tiling (wallpaper)",
+    icon: "/icons/items/rectangletiling(wallpaper).png",
+  },
   RecyclingBin: {
     slug: "recycling-bin",
     label: "Recycling bin",
@@ -2713,6 +3463,11 @@ export const Item = {
     slug: "red-crystal-fragment",
     label: "Red crystal fragment",
     icon: "/icons/items/redcrystalfragment.png",
+  },
+  RedHotSmoothie: {
+    slug: "red-hot-smoothie",
+    label: "Red-hot smoothie",
+    icon: "/icons/items/red-hotsmoothie.png",
   },
   RedMeteorLamp: {
     slug: "red-meteor-lamp",
@@ -2738,6 +3493,11 @@ export const Item = {
     slug: "reddish-brown-cave-rock",
     label: "Reddish-brown cave rock",
     icon: "/icons/items/reddish-browncaverock.png",
+  },
+  RefreshingSodaSmoothie: {
+    slug: "refreshing-soda-smoothie",
+    label: "Refreshing soda smoothie",
+    icon: "/icons/items/refreshingsodasmoothie.png",
   },
   Refrigerator: {
     slug: "refrigerator",
@@ -2775,6 +3535,11 @@ export const Item = {
     label: "Resort stool",
     icon: "/icons/items/resortstool.png",
   },
+  RestaurantSign: {
+    slug: "restaurant-sign",
+    label: "Restaurant sign",
+    icon: "/icons/items/restaurantsign.png",
+  },
   RibbonCake: {
     slug: "ribbon-cake",
     label: "Ribbon cake",
@@ -2789,6 +3554,16 @@ export const Item = {
     slug: "ripe-bean-plant",
     label: "Ripe bean plant",
     icon: "/icons/items/ripebeanplant.png",
+  },
+  RipeWatermelonPlant: {
+    slug: "ripe-watermelon-plant",
+    label: "Ripe watermelon plant",
+    icon: "/icons/items/ripewatermelonplant.png",
+  },
+  RipeWatermelonPlantGrow: {
+    slug: "ripe-watermelon-plant-grow",
+    label: "Ripe watermelon plant (Grow)",
+    icon: "/icons/items/ripewatermelonplant(grow).png",
   },
   RipeWheat: {
     slug: "ripe-wheat",
@@ -2809,6 +3584,11 @@ export const Item = {
     slug: "road-to-viridian-city",
     label: "Road to Viridian City",
     icon: "/icons/items/roadtoviridiancity.png",
+  },
+  RoaringFlamePoster: {
+    slug: "roaring-flame-poster",
+    label: "Roaring flame poster",
+    icon: "/icons/items/roaringflameposter.png",
   },
   RobustFlower: {
     slug: "robust-flower",
@@ -2871,6 +3651,11 @@ export const Item = {
     label: "Rowlet clock",
     icon: "/icons/items/rowletclock.png",
   },
+  RunningShoes: {
+    slug: "running-shoes",
+    label: "Running shoes",
+    icon: "/icons/items/runningshoes.png",
+  },
   RustedIronPlateFlooring: {
     slug: "rusted-iron-plate-flooring",
     label: "Rusted iron-plate flooring",
@@ -2881,10 +3666,30 @@ export const Item = {
     label: "Rusted wall",
     icon: "/icons/items/rustedwall.png",
   },
+  SafariPoster: {
+    slug: "safari-poster",
+    label: "Safari poster",
+    icon: "/icons/items/safariposter.png",
+  },
+  Safe: {
+    slug: "safe",
+    label: "Safe",
+    icon: "/icons/items/safe.png",
+  },
   SailFossil: {
     slug: "sail-fossil",
     label: "Sail Fossil",
     icon: "/icons/items/sailfossil.png",
+  },
+  SandBed: {
+    slug: "sand-bed",
+    label: "Sand bed",
+    icon: "/icons/items/sandbed.png",
+  },
+  SandToys: {
+    slug: "sand-toys",
+    label: "Sand toys",
+    icon: "/icons/items/sandtoys.png",
   },
   Sandbags: {
     slug: "sandbags",
@@ -2895,6 +3700,11 @@ export const Item = {
     slug: "sandbox",
     label: "Sandbox",
     icon: "/icons/items/sandbox.png",
+  },
+  Sandpile: {
+    slug: "sandpile",
+    label: "Sandpile",
+    icon: "/icons/items/sandpile.png",
   },
   Sandstone: {
     slug: "sandstone",
@@ -2911,6 +3721,26 @@ export const Item = {
     label: "Sash window",
     icon: "/icons/items/sashwindow.png",
   },
+  ScaleAwning: {
+    slug: "scale-awning",
+    label: "Scale awning",
+    icon: "/icons/items/scaleawning.png",
+  },
+  ScaleHippedRoof: {
+    slug: "scale-hipped-roof",
+    label: "Scale hipped roof",
+    icon: "/icons/items/scalehippedroof.png",
+  },
+  ScaleRoofDecoration: {
+    slug: "scale-roof-decoration",
+    label: "Scale roof decoration",
+    icon: "/icons/items/scaleroofdecoration.png",
+  },
+  ScaleRoofValley: {
+    slug: "scale-roof-valley",
+    label: "Scale roof valley",
+    icon: "/icons/items/scaleroofvalley.png",
+  },
   ScienceExperiment: {
     slug: "science-experiment",
     label: "Science experiment",
@@ -2926,10 +3756,110 @@ export const Item = {
     label: "Sea glass fragments",
     icon: "/icons/items/seaglassfragments.png",
   },
+  SeaGrapeSmoothie: {
+    slug: "sea-grape-smoothie",
+    label: "Sea grape smoothie",
+    icon: "/icons/items/seagrapesmoothie.png",
+  },
+  SeaGrapes: {
+    slug: "sea-grapes",
+    label: "Sea grapes",
+    icon: "/icons/items/seagrapes.png",
+  },
+  SeaMoss: {
+    slug: "sea-moss",
+    label: "Sea moss",
+    icon: "/icons/items/seamoss.png",
+  },
+  SeabedFlowerSeeds: {
+    slug: "seabed-flower-seeds",
+    label: "Seabed flower seeds",
+    icon: "/icons/items/seabedflowerseeds.png",
+  },
+  SeabedFlowerSeedsPink: {
+    slug: "seabed-flower-seeds-pink",
+    label: "Seabed flower seeds (Pink)",
+    icon: "/icons/items/seabedflowerseeds(pink).png",
+  },
+  SeabedFlowerSeedsPurple: {
+    slug: "seabed-flower-seeds-purple",
+    label: "Seabed flower seeds (Purple)",
+    icon: "/icons/items/seabedflowerseeds(purple).png",
+  },
+  SeabedFlowerSeedsRed: {
+    slug: "seabed-flower-seeds-red",
+    label: "Seabed flower seeds (Red)",
+    icon: "/icons/items/seabedflowerseeds(red).png",
+  },
+  SeabedFlowerSeedsYellow: {
+    slug: "seabed-flower-seeds-yellow",
+    label: "Seabed flower seeds (Yellow)",
+    icon: "/icons/items/seabedflowerseeds(yellow).png",
+  },
+  SeabedFlowers: {
+    slug: "seabed-flowers",
+    label: "Seabed flowers",
+    icon: "/icons/items/seabedflowers.png",
+  },
+  SeabedFlowersPink: {
+    slug: "seabed-flowers-pink",
+    label: "Seabed flowers (Pink)",
+    icon: "/icons/items/seabedflowers(pink).png",
+  },
+  SeabedFlowersPurple: {
+    slug: "seabed-flowers-purple",
+    label: "Seabed flowers (Purple)",
+    icon: "/icons/items/seabedflowers(purple).png",
+  },
+  SeabedFlowersRed: {
+    slug: "seabed-flowers-red",
+    label: "Seabed flowers (Red)",
+    icon: "/icons/items/seabedflowers(red).png",
+  },
+  SeabedFlowersYellow: {
+    slug: "seabed-flowers-yellow",
+    label: "Seabed flowers (Yellow)",
+    icon: "/icons/items/seabedflowers(yellow).png",
+  },
+  SeabedShoots: {
+    slug: "seabed-shoots",
+    label: "Seabed shoots",
+    icon: "/icons/items/seabedshoots.png",
+  },
+  SeabedTallGrass: {
+    slug: "seabed-tall-grass",
+    label: "Seabed tall grass",
+    icon: "/icons/items/seabedtallgrass.png",
+  },
+  SeafloorAlgae: {
+    slug: "seafloor-algae",
+    label: "Seafloor algae",
+    icon: "/icons/items/seaflooralgae.png",
+  },
+  SeagrapeStalk: {
+    slug: "seagrape-stalk",
+    label: "Seagrape stalk",
+    icon: "/icons/items/seagrapestalk.png",
+  },
+  SeagrapeStalkGrow: {
+    slug: "seagrape-stalk-grow",
+    label: "Seagrape stalk (grow)",
+    icon: "/icons/items/seagrapestalk(grow).png",
+  },
   Seashell: {
     slug: "seashell",
     label: "Seashell",
     icon: "/icons/items/seashell.png",
+  },
+  SeashellFencing: {
+    slug: "seashell-fencing",
+    label: "Seashell fencing",
+    icon: "/icons/items/seashellfencing.png",
+  },
+  SeashellSeat: {
+    slug: "seashell-seat",
+    label: "Seashell seat",
+    icon: "/icons/items/seashellseat.png",
   },
   SeashellSoil: {
     slug: "seashell-soil",
@@ -2976,10 +3906,20 @@ export const Item = {
     label: "Security camera",
     icon: "/icons/items/securitycamera.png",
   },
+  SecurityPoster: {
+    slug: "security-poster",
+    label: "Security poster",
+    icon: "/icons/items/securityposter.png",
+  },
   SeedotLamp: {
     slug: "seedot-lamp",
     label: "Seedot Lamp",
     icon: "/icons/items/seedotlamp.png",
+  },
+  Servers: {
+    slug: "servers",
+    label: "Servers",
+    icon: "/icons/items/servers.png",
   },
   ShavedIce: {
     slug: "shaved-ice",
@@ -3006,10 +3946,30 @@ export const Item = {
     label: "Shield Fossil (tail)",
     icon: "/icons/items/shieldfossil(tail).png",
   },
+  ShinyPearl: {
+    slug: "shiny-pearl",
+    label: "Shiny pearl",
+    icon: "/icons/items/shinypearl.png",
+  },
   ShipsWheel: {
     slug: "ship-s-wheel",
     label: "Ship's Wheel",
     icon: "/icons/items/ship'swheel.png",
+  },
+  ShopDisplayCase: {
+    slug: "shop-display-case",
+    label: "Shop display case",
+    icon: "/icons/items/shopdisplaycase.png",
+  },
+  ShopFridge: {
+    slug: "shop-fridge",
+    label: "Shop fridge",
+    icon: "/icons/items/shopfridge.png",
+  },
+  ShopShelf: {
+    slug: "shop-shelf",
+    label: "Shop shelf",
+    icon: "/icons/items/shopshelf.png",
   },
   Shower: { slug: "shower", label: "Shower", icon: "/icons/items/shower.png" },
   SidewaysLog: {
@@ -3119,6 +4079,11 @@ export const Item = {
     label: "Skyland spotted cliff rock",
     icon: "/icons/items/skylandspottedcliffrock.png",
   },
+  SleekSteps: {
+    slug: "sleek-steps",
+    label: "Sleek steps",
+    icon: "/icons/items/sleeksteps.png",
+  },
   SleepingBag: {
     slug: "sleeping-bag",
     label: "Sleeping bag",
@@ -3130,6 +4095,36 @@ export const Item = {
     icon: "/icons/items/slendercandle.png",
   },
   Slide: { slug: "slide", label: "Slide", icon: "/icons/items/slide.png" },
+  SlimInformationBoard: {
+    slug: "slim-information-board",
+    label: "Slim information board",
+    icon: "/icons/items/sliminformationboard.png",
+  },
+  SlopedScaleRoof: {
+    slug: "sloped-scale-roof",
+    label: "Sloped scale roof",
+    icon: "/icons/items/slopedscaleroof.png",
+  },
+  SlopedWavyRoof: {
+    slug: "sloped-wavy-roof",
+    label: "Sloped wavy roof",
+    icon: "/icons/items/slopedwavyroof.png",
+  },
+  SmallCoral: {
+    slug: "small-coral",
+    label: "Small coral",
+    icon: "/icons/items/smallcoral.png",
+  },
+  SmallCoralGreen: {
+    slug: "small-coral-green",
+    label: "Small coral (Green)",
+    icon: "/icons/items/smallcoral(green).png",
+  },
+  SmallCoralRed: {
+    slug: "small-coral-red",
+    label: "Small coral (Red)",
+    icon: "/icons/items/smallcoral(red).png",
+  },
   SmallGarbageCan: {
     slug: "small-garbage-can",
     label: "Small garbage can",
@@ -3205,6 +4200,11 @@ export const Item = {
     label: "Spacesuit",
     icon: "/icons/items/spacesuit.png",
   },
+  SparklingJewelry: {
+    slug: "sparkling-jewelry",
+    label: "Sparkling jewelry",
+    icon: "/icons/items/sparklingjewelry.png",
+  },
   Speaker: {
     slug: "speaker",
     label: "Speaker",
@@ -3245,6 +4245,16 @@ export const Item = {
     label: "Square tiling",
     icon: "/icons/items/squaretiling.png",
   },
+  SquigglyPrint: {
+    slug: "squiggly-print",
+    label: "Squiggly print",
+    icon: "/icons/items/squigglyprint.png",
+  },
+  SquigglyPrintWallpaper: {
+    slug: "squiggly-print-wallpaper",
+    label: "Squiggly print (wallpaper)",
+    icon: "/icons/items/squigglyprint(wallpaper).png",
+  },
   SquishyClay: {
     slug: "squishy-clay",
     label: "Squishy clay",
@@ -3275,6 +4285,11 @@ export const Item = {
     label: "Stalagmites",
     icon: "/icons/items/stalagmites.png",
   },
+  StandingFrame: {
+    slug: "standing-frame",
+    label: "Standing frame",
+    icon: "/icons/items/standingframe.png",
+  },
   StandingMic: {
     slug: "standing-mic",
     label: "Standing mic",
@@ -3285,15 +4300,50 @@ export const Item = {
     label: "Star Piece",
     icon: "/icons/items/starpiece.png",
   },
+  StarSpottedRock: {
+    slug: "star-spotted-rock",
+    label: "Star-spotted rock",
+    icon: "/icons/items/star-spottedrock.png",
+  },
   Stardust: {
     slug: "stardust",
     label: "Stardust",
     icon: "/icons/items/stardust.png",
   },
+  StarmieDoll: {
+    slug: "starmie-doll",
+    label: "Starmie doll",
+    icon: "/icons/items/starmiedoll.png",
+  },
   StarrySkyWall: {
     slug: "starry-sky-wall",
     label: "Starry-sky wall",
     icon: "/icons/items/starry-skywall.png",
+  },
+  StatelyFlooring: {
+    slug: "stately-flooring",
+    label: "Stately flooring",
+    icon: "/icons/items/statelyflooring.png",
+  },
+  StatelyFlooringWallpaper: {
+    slug: "stately-flooring-wallpaper",
+    label: "Stately flooring (wallpaper)",
+    icon: "/icons/items/statelyflooring(wallpaper).png",
+  },
+  StatelyWallMiddle: {
+    slug: "stately-wall-middle",
+    label: "Stately wall (middle)",
+    icon: "/icons/items/statelywall(middle).png",
+  },
+  StatelyWallUpperLower: {
+    slug: "stately-wall-upper-lower",
+    label: "Stately wall (upper lower)",
+    icon: "/icons/items/statelywall(upperlower).png",
+  },
+  StatelyWallWallpaper: {
+    slug: "stately-wall-wallpaper",
+    label: "Stately wall (wallpaper)",
+    icon: "/icons/items/statelywall(wallpaper).png",
   },
   StepStool: {
     slug: "step-stool",
@@ -3306,6 +4356,11 @@ export const Item = {
     icon: "/icons/items/stickyweb.png",
   },
   Stone: { slug: "stone", label: "Stone", icon: "/icons/items/stone.png" },
+  StoneAccentWall: {
+    slug: "stone-accent-wall",
+    label: "Stone-accent wall",
+    icon: "/icons/items/stone-accentwall.png",
+  },
   StoneBench: {
     slug: "stone-bench",
     label: "Stone bench",
@@ -3366,6 +4421,11 @@ export const Item = {
     label: "Stone pillar (upper)",
     icon: "/icons/items/stonepillar(upper).png",
   },
+  StonePillarWallpaper: {
+    slug: "stone-pillar-wallpaper",
+    label: "Stone pillar (wallpaper)",
+    icon: "/icons/items/stonepillar(wallpaper).png",
+  },
   StoneRoofDecoration: {
     slug: "stone-roof-decoration",
     label: "Stone roof decoration",
@@ -3375,6 +4435,11 @@ export const Item = {
     slug: "stone-roof-valley",
     label: "Stone roof valley",
     icon: "/icons/items/stoneroofvalley.png",
+  },
+  StoneSign: {
+    slug: "stone-sign",
+    label: "Stone sign",
+    icon: "/icons/items/stonesign.png",
   },
   StoneSteps: {
     slug: "stone-steps",
@@ -3400,6 +4465,11 @@ export const Item = {
     slug: "storage-box",
     label: "Storage box",
     icon: "/icons/items/storagebox.png",
+  },
+  StowOnSide: {
+    slug: "stow-on-side",
+    label: "Stow-on-Side",
+    icon: "/icons/items/stow-on-side.png",
   },
   StrawBed: {
     slug: "straw-bed",
@@ -3461,6 +4531,11 @@ export const Item = {
     label: "Stylish brick wall (upper)",
     icon: "/icons/items/stylishbrickwall(upper).png",
   },
+  StylishBrickWallWallpaper: {
+    slug: "stylish-brick-wall-wallpaper",
+    label: "Stylish brick wall (wallpaper)",
+    icon: "/icons/items/stylishbrickwall(wallpaper).png",
+  },
   StylishGoldWall: {
     slug: "stylish-gold-wall",
     label: "Stylish gold wall",
@@ -3506,20 +4581,70 @@ export const Item = {
     label: "Stylish tiling",
     icon: "/icons/items/stylishtiling.png",
   },
+  StylishWallWallpaper: {
+    slug: "stylish-wall-wallpaper",
+    label: "Stylish wall (wallpaper)",
+    icon: "/icons/items/stylishwall(wallpaper).png",
+  },
+  SubmarineDoor: {
+    slug: "submarine-door",
+    label: "Submarine door",
+    icon: "/icons/items/submarinedoor.png",
+  },
+  SubmarineKit: {
+    slug: "submarine-kit",
+    label: "Submarine kit",
+    icon: "/icons/items/submarinekit.png",
+  },
+  SubmarineWindow: {
+    slug: "submarine-window",
+    label: "Submarine window",
+    icon: "/icons/items/submarinewindow.png",
+  },
   SubstituteDoll: {
     slug: "substitute-doll",
     label: "Substitute doll",
     icon: "/icons/items/substitutedoll.png",
+  },
+  SunsetPoster: {
+    slug: "sunset-poster",
+    label: "Sunset poster",
+    icon: "/icons/items/sunsetposter.png",
   },
   SuperTraining: {
     slug: "super-training",
     label: "Super Training!",
     icon: "/icons/items/supertraining!.png",
   },
+  SupermarketKit: {
+    slug: "supermarket-kit",
+    label: "Supermarket kit",
+    icon: "/icons/items/supermarketkit.png",
+  },
+  SupermarketSign: {
+    slug: "supermarket-sign",
+    label: "Supermarket sign",
+    icon: "/icons/items/supermarketsign.png",
+  },
   SurfaceLight: {
     slug: "surface-light",
     label: "Surface light",
     icon: "/icons/items/surfacelight.png",
+  },
+  SurprisePoster: {
+    slug: "surprise-poster",
+    label: "Surprise poster",
+    icon: "/icons/items/surpriseposter.png",
+  },
+  SwampertSquadRug: {
+    slug: "swampert-squad-rug",
+    label: "Swampert squad rug",
+    icon: "/icons/items/swampertsquadrug.png",
+  },
+  SwimRing: {
+    slug: "swim-ring",
+    label: "Swim ring",
+    icon: "/icons/items/swimring.png",
   },
   TableSetting: {
     slug: "table-setting",
@@ -3531,6 +4656,16 @@ export const Item = {
     slug: "tabletop-mic",
     label: "Tabletop mic",
     icon: "/icons/items/tabletopmic.png",
+  },
+  TallCoral: {
+    slug: "tall-coral",
+    label: "Tall coral",
+    icon: "/icons/items/tallcoral.png",
+  },
+  TallCoralPurple: {
+    slug: "tall-coral-purple",
+    label: "Tall coral (Purple)",
+    icon: "/icons/items/tallcoral(purple).png",
   },
   TallPottedPlant: {
     slug: "tall-potted-plant",
@@ -3547,6 +4682,11 @@ export const Item = {
     label: "Team Rocket Wall Hanging",
     icon: "/icons/items/teamrocketwallhanging.png",
   },
+  TeawareSet: {
+    slug: "teaware-set",
+    label: "Teaware set",
+    icon: "/icons/items/teawareset.png",
+  },
   Television: {
     slug: "television",
     label: "Television",
@@ -3561,6 +4701,16 @@ export const Item = {
     slug: "the-s-s-anne",
     label: "The S.S. Anne",
     icon: "/icons/items/thes.s.anne.png",
+  },
+  TheSea: {
+    slug: "the-sea",
+    label: "The Sea",
+    icon: "/icons/items/thesea.png",
+  },
+  ThunderWavePoster: {
+    slug: "thunder-wave-poster",
+    label: "Thunder Wave poster",
+    icon: "/icons/items/thunderwaveposter.png",
   },
   TidalBell: {
     slug: "tidal-bell",
@@ -3580,6 +4730,11 @@ export const Item = {
   },
   Toilet: { slug: "toilet", label: "Toilet", icon: "/icons/items/toilet.png" },
   Tomato: { slug: "tomato", label: "Tomato", icon: "/icons/items/tomato.png" },
+  Toolbox: {
+    slug: "toolbox",
+    label: "Toolbox",
+    icon: "/icons/items/toolbox.png",
+  },
   Torch: { slug: "torch", label: "Torch", icon: "/icons/items/torch.png" },
   TowelRack: {
     slug: "towel-rack",
@@ -3632,10 +4787,40 @@ export const Item = {
     label: "Twisted Spoon",
     icon: "/icons/items/twistedspoon.png",
   },
+  TwistyPillarLower: {
+    slug: "twisty-pillar-lower",
+    label: "Twisty pillar (lower)",
+    icon: "/icons/items/twistypillar(lower).png",
+  },
+  TwistyPillarMiddle: {
+    slug: "twisty-pillar-middle",
+    label: "Twisty pillar (middle)",
+    icon: "/icons/items/twistypillar(middle).png",
+  },
+  TwistyPillarUpper: {
+    slug: "twisty-pillar-upper",
+    label: "Twisty pillar (upper)",
+    icon: "/icons/items/twistypillar(upper).png",
+  },
+  TwistyWaterweed: {
+    slug: "twisty-waterweed",
+    label: "Twisty waterweed",
+    icon: "/icons/items/twistywaterweed.png",
+  },
+  TwoToneWall: {
+    slug: "two-tone-wall",
+    label: "Two-tone wall",
+    icon: "/icons/items/two-tonewall.png",
+  },
   UltraRuin: {
     slug: "ultra-ruin",
     label: "Ultra Ruin",
     icon: "/icons/items/ultraruin.png",
+  },
+  UndellaTownSummer: {
+    slug: "undella-town-summer",
+    label: "Undella Town (Summer)",
+    icon: "/icons/items/undellatown(summer).png",
   },
   UnionCave: {
     slug: "union-cave",
@@ -3667,6 +4852,16 @@ export const Item = {
     label: "Vermilion City Theme",
     icon: "/icons/items/vermilioncitytheme.png",
   },
+  VibrantGlossyTiling: {
+    slug: "vibrant-glossy-tiling",
+    label: "Vibrant glossy tiling",
+    icon: "/icons/items/vibrantglossytiling.png",
+  },
+  VibrantGlossyTilingWallpaper: {
+    slug: "vibrant-glossy-tiling-wallpaper",
+    label: "Vibrant glossy tiling (wallpaper)",
+    icon: "/icons/items/vibrantglossytiling(wallpaper).png",
+  },
   Vine: { slug: "vine", label: "Vine", icon: "/icons/items/vine.png" },
   VineRope: {
     slug: "vine-rope",
@@ -3677,6 +4872,11 @@ export const Item = {
     slug: "vine-wall-decoration",
     label: "Vine wall decoration",
     icon: "/icons/items/vinewalldecoration.png",
+  },
+  VioletCity: {
+    slug: "violet-city",
+    label: "Violet City",
+    icon: "/icons/items/violetcity.png",
   },
   VioletMeteorLamp: {
     slug: "violet-meteor-lamp",
@@ -3698,6 +4898,11 @@ export const Item = {
     label: "Wall Calendar",
     icon: "/icons/items/wallcalendar.png",
   },
+  WallClock: {
+    slug: "wall-clock",
+    label: "Wall clock",
+    icon: "/icons/items/wallclock.png",
+  },
   WallLight: {
     slug: "wall-light",
     label: "Wall light",
@@ -3713,10 +4918,20 @@ export const Item = {
     label: "Wall monitor",
     icon: "/icons/items/wallmonitor.png",
   },
+  WallMountedTools: {
+    slug: "wall-mounted-tools",
+    label: "Wall-mounted tools",
+    icon: "/icons/items/wall-mountedtools.png",
+  },
   WallPhotoFrame: {
     slug: "wall-photo-frame",
     label: "Wall photo frame",
     icon: "/icons/items/wallphotoframe.png",
+  },
+  WallPlant: {
+    slug: "wall-plant",
+    label: "Wall plant",
+    icon: "/icons/items/wallplant.png",
   },
   WallStorageBox: {
     slug: "wall-storage-box",
@@ -3763,10 +4978,65 @@ export const Item = {
     label: "Water pillar quarter",
     icon: "/icons/items/waterpillarquarter.png",
   },
+  Watermelon: {
+    slug: "watermelon",
+    label: "Watermelon",
+    icon: "/icons/items/watermelon.png",
+  },
+  WatermelonBread: {
+    slug: "watermelon-bread",
+    label: "Watermelon bread",
+    icon: "/icons/items/watermelonbread.png",
+  },
+  WatermelonSeeds: {
+    slug: "watermelon-seeds",
+    label: "Watermelon seeds",
+    icon: "/icons/items/watermelonseeds.png",
+  },
+  WatermelonSlice: {
+    slug: "watermelon-slice",
+    label: "Watermelon slice",
+    icon: "/icons/items/watermelonslice.png",
+  },
+  WatermelonSmoothie: {
+    slug: "watermelon-smoothie",
+    label: "Watermelon smoothie",
+    icon: "/icons/items/watermelonsmoothie.png",
+  },
+  WatermelonSprout: {
+    slug: "watermelon-sprout",
+    label: "Watermelon sprout",
+    icon: "/icons/items/watermelonsprout.png",
+  },
+  WatermelonSproutGrow: {
+    slug: "watermelon-sprout-grow",
+    label: "Watermelon sprout (Grow)",
+    icon: "/icons/items/watermelonsprout(grow).png",
+  },
   WaterproofSeat: {
     slug: "waterproof-seat",
     label: "Waterproof seat",
     icon: "/icons/items/waterproofseat.png",
+  },
+  WavyHippedRoof: {
+    slug: "wavy-hipped-roof",
+    label: "Wavy hipped roof",
+    icon: "/icons/items/wavyhippedroof.png",
+  },
+  WavyPatternPlanter: {
+    slug: "wavy-pattern-planter",
+    label: "Wavy-pattern planter",
+    icon: "/icons/items/wavy-patternplanter.png",
+  },
+  WavyRoofDecoration: {
+    slug: "wavy-roof-decoration",
+    label: "Wavy roof decoration",
+    icon: "/icons/items/wavyroofdecoration.png",
+  },
+  WavyRoofValley: {
+    slug: "wavy-roof-valley",
+    label: "Wavy roof valley",
+    icon: "/icons/items/wavyroofvalley.png",
   },
   WeaknessPolicy: {
     slug: "weakness-policy",
@@ -3784,6 +5054,11 @@ export const Item = {
     label: "Wheelbarrow",
     icon: "/icons/items/wheelbarrow.png",
   },
+  WhiteDriftwood: {
+    slug: "white-driftwood",
+    label: "White driftwood",
+    icon: "/icons/items/whitedriftwood.png",
+  },
   WhitePaint: {
     slug: "white-paint",
     label: "White paint",
@@ -3799,6 +5074,11 @@ export const Item = {
     label: "Whiteboard",
     icon: "/icons/items/whiteboard.png",
   },
+  WigWugRug: {
+    slug: "wig-wug-rug",
+    label: "Wig-Wug rug",
+    icon: "/icons/items/wig-wugrug.png",
+  },
   WigglyMirror: {
     slug: "wiggly-mirror",
     label: "Wiggly mirror",
@@ -3808,6 +5088,11 @@ export const Item = {
     slug: "wild-area-north",
     label: "Wild Area (North)",
     icon: "/icons/items/wildarea(north).png",
+  },
+  WildPoster: {
+    slug: "wild-poster",
+    label: "Wild poster",
+    icon: "/icons/items/wildposter.png",
   },
   Wildflowers: {
     slug: "wildflowers",
@@ -3838,6 +5123,21 @@ export const Item = {
     slug: "window-pane",
     label: "Window pane",
     icon: "/icons/items/windowpane.png",
+  },
+  WindowPaneHorizontal: {
+    slug: "window-pane-horizontal",
+    label: "Window pane (horizontal)",
+    icon: "/icons/items/windowpane(horizontal).png",
+  },
+  WindowPaneSloped: {
+    slug: "window-pane-sloped",
+    label: "Window pane (sloped)",
+    icon: "/icons/items/windowpane(sloped).png",
+  },
+  WindupInkay: {
+    slug: "windup-inkay",
+    label: "Windup Inkay",
+    icon: "/icons/items/windupinkay.png",
   },
   WingFossilBody: {
     slug: "wing-fossil-body",
@@ -3870,10 +5170,20 @@ export const Item = {
     label: "Wireless power transmitter",
     icon: "/icons/items/wirelesspowertransmitter.png",
   },
+  WirelessPowerTransmitterPost: {
+    slug: "wireless-power-transmitter-post",
+    label: "Wireless power-transmitter post",
+    icon: "/icons/items/wirelesspower-transmitterpost.png",
+  },
   WirelessPowerTransmitterSwitch: {
     slug: "wireless-power-transmitter-switch",
     label: "Wireless power-transmitter switch",
     icon: "/icons/items/wirelesspower-transmitterswitch.png",
+  },
+  WirelessPowerTransmitterSwitchPost: {
+    slug: "wireless-power-transmitter-switch-post",
+    label: "Wireless power-transmitter switch post",
+    icon: "/icons/items/wirelesspower-transmitterswitchpost.png",
   },
   WobbuffetWobbler: {
     slug: "wobbuffet-wobbler",
@@ -3884,6 +5194,11 @@ export const Item = {
     slug: "wood-fragments",
     label: "Wood fragments",
     icon: "/icons/items/woodfragments.png",
+  },
+  WoodenBeam: {
+    slug: "wooden-beam",
+    label: "Wooden beam",
+    icon: "/icons/items/woodenbeam.png",
   },
   WoodenBed: {
     slug: "wooden-bed",
@@ -3925,6 +5240,11 @@ export const Item = {
     label: "Wooden pillar (upper)",
     icon: "/icons/items/woodenpillar(upper).png",
   },
+  WoodenPillarWallpaper: {
+    slug: "wooden-pillar-wallpaper",
+    label: "Wooden pillar (wallpaper)",
+    icon: "/icons/items/woodenpillar(wallpaper).png",
+  },
   WoodenPlate: {
     slug: "wooden-plate",
     label: "Wooden plate",
@@ -3935,6 +5255,11 @@ export const Item = {
     label: "Wooden stool",
     icon: "/icons/items/woodenstool.png",
   },
+  WoodenSupport: {
+    slug: "wooden-support",
+    label: "Wooden support",
+    icon: "/icons/items/woodensupport.png",
+  },
   WoodenWall: {
     slug: "wooden-wall",
     label: "Wooden wall",
@@ -3944,6 +5269,11 @@ export const Item = {
     slug: "worn-lumber",
     label: "Worn lumber",
     icon: "/icons/items/wornlumber.png",
+  },
+  WornTreasureChest: {
+    slug: "worn-treasure-chest",
+    label: "Worn treasure chest",
+    icon: "/icons/items/worntreasurechest.png",
   },
   WornWoodenCrate: {
     slug: "worn-wooden-crate",
