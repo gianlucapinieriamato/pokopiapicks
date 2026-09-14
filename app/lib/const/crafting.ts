@@ -8683,6 +8683,2014 @@ export const ITEM_RECIPES: Record<string, CraftingRecipe> = {
         qty: 6,
       }
     ]
+  },
+  "antique-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "arched-fencing": {
+    "category": "Buildings",
+    "unlock": "Basin Pokedex - 15 Registered / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronOre,
+        qty: 2,
+      }
+    ]
+  },
+  "arrow-sign-left": {
+    "category": "Outdoor",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronOre,
+        qty: 1,
+      }
+    ]
+  },
+  "arrow-sign-right": {
+    "category": "Outdoor",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronOre,
+        qty: 1,
+      }
+    ]
+  },
+  "battle-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "beach-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "big-treasure-chest": {
+    "category": "Furniture",
+    "unlock": "Basin Pokedex - 25 Registered / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.IronOre,
+        qty: 1,
+      }
+    ]
+  },
+  "bike-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "blender": {
+    "category": "Utilities",
+    "unlock": "Start Mudkip's Request after building temple / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 2,
+      }
+    ]
+  },
+  "book-stack": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "bottled-ship": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.Glass,
+        qty: 1,
+      }
+    ]
+  },
+  "bubble-machine": {
+    "category": "Utilities",
+    "unlock": "Shop - Bubbly Basin Lv. 6 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronOre,
+        qty: 1,
+      }
+    ]
+  },
+  "buoyant-block": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 2 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 1,
+      },
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      }
+    ]
+  },
+  "carved-blue-rock": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 2 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.BlueRock,
+        qty: 1,
+      }
+    ]
+  },
+  "chain-lamp": {
+    "category": "Utilities",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronOre,
+        qty: 2,
+      },
+      {
+        item: Item.Glass,
+        qty: 1,
+      }
+    ]
+  },
+  "chic-anchor-print": {
+    "category": "Blocks",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Twine,
+        qty: 2,
+      }
+    ]
+  },
+  "chic-anchor-print-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "clustered-corals-print": {
+    "category": "Blocks",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Twine,
+        qty: 2,
+      }
+    ]
+  },
+  "clustered-corals-print-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "colorful-anchor-print": {
+    "category": "Blocks",
+    "unlock": "Daily Shop Special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Twine,
+        qty: 2,
+      }
+    ]
+  },
+  "colorful-anchor-print-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "colorful-corals-print": {
+    "category": "Blocks",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Twine,
+        qty: 2,
+      }
+    ]
+  },
+  "colorful-corals-print-wallpaper": {
+    "category": "Other",
+    "unlock": "Bubbly Basin / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "colorful-fish-scale-tiling": {
+    "category": "Blocks",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.SquishyClay,
+        qty: 2,
+      }
+    ]
+  },
+  "colorful-fish-scale-tiling-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "confectionery-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "cushion-bed": {
+    "category": "Furniture",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Fluff,
+        qty: 2,
+      },
+      {
+        item: Item.Twine,
+        qty: 1,
+      }
+    ]
+  },
+  "cushy-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "dangling-streetlight": {
+    "category": "Utilities",
+    "unlock": "Basin Pokedex - 5 Registered / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronOre,
+        qty: 1,
+      },
+      {
+        item: Item.SeaGlassFragments,
+        qty: 1,
+      }
+    ]
+  },
+  "decorative-cloth": {
+    "category": "Buildings",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Fluff,
+        qty: 1,
+      },
+      {
+        item: Item.Twine,
+        qty: 1,
+      }
+    ]
+  },
+  "decorative-dive-ball": {
+    "category": "Misc",
+    "unlock": "Daily shop special after Treasure Map found / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.IronIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "decorative-great-ball": {
+    "category": "Misc",
+    "unlock": "Daily shop special after Treasure Map found / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.IronIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "decorative-heal-ball": {
+    "category": "Misc",
+    "unlock": "Daily shop special after Treasure Map found / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.IronIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "decorative-lure-ball": {
+    "category": "Misc",
+    "unlock": "Daily shop special after Treasure Map found / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.IronIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "decorative-net-ball": {
+    "category": "Misc",
+    "unlock": "Daily shop special after Treasure Map found / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.IronIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "decorative-plates": {
+    "category": "Misc",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.SquishyClay,
+        qty: 1,
+      },
+      {
+        item: Item.Lumber,
+        qty: 1,
+      }
+    ]
+  },
+  "decorative-quick-ball": {
+    "category": "Misc",
+    "unlock": "Daily shop special after Treasure Map found / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.IronIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "decorative-shop-shelf": {
+    "category": "Misc",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronIngot,
+        qty: 1,
+      },
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      }
+    ]
+  },
+  "digital-wall": {
+    "category": "Blocks",
+    "unlock": "Bubbly Basin - Bill's House in north / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.GlowingStone,
+        qty: 1,
+      }
+    ]
+  },
+  "digital-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "ditto-transform-print": {
+    "category": "Blocks",
+    "unlock": "From Smearguru after receiving diploma",
+    "materials": [
+      {
+        item: Item.Twine,
+        qty: 2,
+      }
+    ]
+  },
+  "ditto-transform-print-wallpaper": {
+    "category": "Other",
+    "unlock": "From Smearguru after receiving diploma",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "fancy-wavy-roof-decoration": {
+    "category": "Buildings",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "fanned-out-ditto-print": {
+    "category": "Blocks",
+    "unlock": "Basin Pokedex - 35 Registered / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Twine,
+        qty: 2,
+      }
+    ]
+  },
+  "fanned-out-ditto-print-wallpaper": {
+    "category": "Other",
+    "unlock": "Bubbly Basin / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "fighting-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "flat-scale-roof": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 4 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "flat-wavy-roof": {
+    "category": "Buildings",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "floating-logs": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 3 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.SmallLog,
+        qty: 2,
+      },
+      {
+        item: Item.VineRope,
+        qty: 1,
+      }
+    ]
+  },
+  "glass-pane": {
+    "category": "Buildings",
+    "unlock": "Shop - Sparkly Skylands Lv. 6",
+    "materials": [
+      {
+        item: Item.Glass,
+        qty: 2,
+      }
+    ]
+  },
+  "glass-pane-horizontal": {
+    "category": "Buildings",
+    "unlock": "Shop - Sparkly Skylands Lv. 6",
+    "materials": [
+      {
+        item: Item.Glass,
+        qty: 2,
+      }
+    ]
+  },
+  "glass-pane-sloped": {
+    "category": "Buildings",
+    "unlock": "Shop - Sparkly Skylands Lv. 6",
+    "materials": [
+      {
+        item: Item.Glass,
+        qty: 2,
+      }
+    ]
+  },
+  "glossy-tiling": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 2 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 2,
+      }
+    ]
+  },
+  "glossy-tiling-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "gradient-wall-lower": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 8 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 2,
+      }
+    ]
+  },
+  "gradient-wall-upper": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 8 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 2,
+      }
+    ]
+  },
+  "gradient-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop - Bubbly Basin Lv. 5 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "guest-room-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "hanging-sign": {
+    "category": "Outdoor",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 2,
+      },
+      {
+        item: Item.IronOre,
+        qty: 1,
+      }
+    ]
+  },
+  "harp": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.Twine,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "hatch": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 8 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronIngot,
+        qty: 2,
+      }
+    ]
+  },
+  "house-partition-medium": {
+    "category": "Buildings",
+    "unlock": "Shop - Withered Wasteland Lv. 5",
+    "materials": [
+      {
+        item: Item.Twine,
+        qty: 2,
+      }
+    ]
+  },
+  "house-partition-small": {
+    "category": "Buildings",
+    "unlock": "Shop - Withered Wasteland Lv. 5",
+    "materials": [
+      {
+        item: Item.Twine,
+        qty: 1,
+      }
+    ]
+  },
+  "interior-door": {
+    "category": "Buildings",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.Glass,
+        qty: 1,
+      }
+    ]
+  },
+  "iron-frame": {
+    "category": "Buildings",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronIngot,
+        qty: 2,
+      }
+    ]
+  },
+  "iron-support": {
+    "category": "Buildings",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.IronIngot,
+        qty: 2,
+      }
+    ]
+  },
+  "lacquered-wall": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 5 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 2,
+      }
+    ]
+  },
+  "lampion": {
+    "category": "Utilities",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      },
+      {
+        item: Item.Lumber,
+        qty: 1,
+      }
+    ]
+  },
+  "light-antique-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "marine-chair": {
+    "category": "Furniture",
+    "unlock": "Bubbly Basin / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 2,
+      }
+    ]
+  },
+  "marine-chest": {
+    "category": "Furniture",
+    "unlock": "Bubbly Basin / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 1,
+      },
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      },
+      {
+        item: Item.Seashell,
+        qty: 1,
+      }
+    ]
+  },
+  "marine-closet": {
+    "category": "Furniture",
+    "unlock": "Shop - Bubbly Basin Lv. 5 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 1,
+      },
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      },
+      {
+        item: Item.Seashell,
+        qty: 1,
+      }
+    ]
+  },
+  "marine-dresser": {
+    "category": "Furniture",
+    "unlock": "Shop - Bubbly Basin Lv. 3 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 1,
+      },
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      },
+      {
+        item: Item.Seashell,
+        qty: 1,
+      }
+    ]
+  },
+  "marine-sofa": {
+    "category": "Furniture",
+    "unlock": "From Mareanie as part of request / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Seashell,
+        qty: 1,
+      },
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      },
+      {
+        item: Item.Twine,
+        qty: 1,
+      }
+    ]
+  },
+  "marine-table": {
+    "category": "Furniture",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 1,
+      },
+      {
+        item: Item.Seashell,
+        qty: 1,
+      }
+    ]
+  },
+  "metal-wall": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 6 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronIngot,
+        qty: 2,
+      }
+    ]
+  },
+  "metronome": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      }
+    ]
+  },
+  "music-box": {
+    "category": "Misc",
+    "unlock": "Shop after reaching Bubbly Basin Level 5 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "netting": {
+    "category": "Buildings",
+    "unlock": "Bubbly Basin / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.VineRope,
+        qty: 1,
+      },
+      {
+        item: Item.Twine,
+        qty: 1,
+      }
+    ]
+  },
+  "ocean-door": {
+    "category": "Buildings",
+    "unlock": "Bubbly Basin / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 1,
+      }
+    ]
+  },
+  "ornate-bed": {
+    "category": "Furniture",
+    "unlock": "Shop - Bubbly Basin Lv. 8 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.Twine,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "ornate-chair": {
+    "category": "Furniture",
+    "unlock": "Shop - Bubbly Basin Lv. 6 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "ornate-decorative-shelf": {
+    "category": "Misc",
+    "unlock": "Shop - Bubbly Basin Lv. 10 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      },
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      }
+    ]
+  },
+  "ornate-door": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 6 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      },
+      {
+        item: Item.Glass,
+        qty: 1,
+      }
+    ]
+  },
+  "ornate-partition": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 9 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "ornate-stand": {
+    "category": "Furniture",
+    "unlock": "Shop - Bubbly Basin Lv. 9 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "ornate-table": {
+    "category": "Furniture",
+    "unlock": "Shop - Bubbly Basin Lv. 7 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "ornate-wall": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 7 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 2,
+      }
+    ]
+  },
+  "ornate-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "ornate-window": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 7 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      },
+      {
+        item: Item.Glass,
+        qty: 1,
+      }
+    ]
+  },
+  "overlapping-waves-print": {
+    "category": "Other",
+    "unlock": "Bubbly Basin / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "party-ball": {
+    "category": "Misc",
+    "unlock": "Basin Pokedex - 50 Registered / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      },
+      {
+        item: Item.VineRope,
+        qty: 1,
+      }
+    ]
+  },
+  "pathway-light-corner": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 6 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.SeaGlassFragments,
+        qty: 1,
+      }
+    ]
+  },
+  "pathway-light-line": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 6 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.SeaGlassFragments,
+        qty: 1,
+      }
+    ]
+  },
+  "pathway-light-single": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 6 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.SeaGlassFragments,
+        qty: 1,
+      }
+    ]
+  },
+  "pearl-streetlight": {
+    "category": "Utilities",
+    "unlock": "Shop - Bubbly Basin Lv. 4 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      },
+      {
+        item: Item.IronOre,
+        qty: 1,
+      }
+    ]
+  },
+  "pointed-wooden-fencing": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 4 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 2,
+      }
+    ]
+  },
+  "pokemon-center-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "pop-art-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "portal-pod": {
+    "category": "Furniture",
+    "unlock": "Shop - Palette Town Lv. 8",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 10,
+      },
+      {
+        item: Item.RarePokemetal,
+        qty: 1,
+      }
+    ]
+  },
+  "raging-sea-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "rectangle-tiling": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 9 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.SquishyClay,
+        qty: 2,
+      }
+    ]
+  },
+  "rectangle-tiling-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronIngot,
+        qty: 6,
+      }
+    ]
+  },
+  "roaring-flame-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "safari-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "safe": {
+    "category": "Furniture",
+    "unlock": "Shop - Palette Town Lv. 6",
+    "materials": [
+      {
+        item: Item.IronIngot,
+        qty: 3,
+      },
+      {
+        item: Item.Pokemetal,
+        qty: 3,
+      }
+    ]
+  },
+  "sand-toys": {
+    "category": "Outdoor",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.BeachSand,
+        qty: 1,
+      }
+    ]
+  },
+  "sandpile": {
+    "category": "Outdoor",
+    "unlock": "Shop - Bubbly Basin Lv. 3 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.BeachSand,
+        qty: 1,
+      },
+      {
+        item: Item.SeaGlassFragments,
+        qty: 1,
+      },
+      {
+        item: Item.Seashell,
+        qty: 1,
+      }
+    ]
+  },
+  "scale-awning": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 4 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "scale-hipped-roof": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 4 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "scale-roof-decoration": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 4 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "scale-roof-valley": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 4 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "seashell-fencing": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 3 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 1,
+      },
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      }
+    ]
+  },
+  "seashell-seat": {
+    "category": "Furniture",
+    "unlock": "Shop - Bubbly Basin (after Barboach quest) / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Fluff,
+        qty: 1,
+      },
+      {
+        item: Item.Seashell,
+        qty: 1,
+      },
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      }
+    ]
+  },
+  "security-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "servers": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 4,
+      }
+    ]
+  },
+  "shop-display-case": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Glass,
+        qty: 1,
+      },
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.IronIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "shop-fridge": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 2,
+      },
+      {
+        item: Item.Glass,
+        qty: 1,
+      }
+    ]
+  },
+  "shop-shelf": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 2,
+      }
+    ]
+  },
+  "sleek-steps": {
+    "category": "Utilities",
+    "unlock": "Basin Pokedex - 10 Registered / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 1,
+      },
+      {
+        item: Item.IronOre,
+        qty: 1,
+      }
+    ]
+  },
+  "slim-information-board": {
+    "category": "Outdoor",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronOre,
+        qty: 1,
+      },
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      }
+    ]
+  },
+  "sloped-scale-roof": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 4 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "sloped-wavy-roof": {
+    "category": "Buildings",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "sparkling-jewelry": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.ShinyPearl,
+        qty: 1,
+      },
+      {
+        item: Item.Seashell,
+        qty: 1,
+      }
+    ]
+  },
+  "squiggly-print": {
+    "category": "Blocks",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Twine,
+        qty: 2,
+      }
+    ]
+  },
+  "squiggly-print-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "standing-frame": {
+    "category": "Utilities",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 2,
+      }
+    ]
+  },
+  "stately-flooring": {
+    "category": "Blocks",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 2,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 2,
+      }
+    ]
+  },
+  "stately-flooring-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "stately-wall-middle": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 10 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 2,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "stately-wall-upper-lower": {
+    "category": "Blocks",
+    "unlock": "Shop - Bubbly Basin Lv. 10 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 2,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "stately-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "stone-accent-wall": {
+    "category": "Blocks",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 2,
+      }
+    ]
+  },
+  "stone-pillar-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "stone-sign": {
+    "category": "Outdoor",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 2,
+      },
+      {
+        item: Item.IronOre,
+        qty: 1,
+      }
+    ]
+  },
+  "stylish-brick-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "stylish-wall-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "submarine-door": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 8 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronIngot,
+        qty: 2,
+      }
+    ]
+  },
+  "submarine-window": {
+    "category": "Buildings",
+    "unlock": "Shop - Bubbly Basin Lv. 8 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronIngot,
+        qty: 2,
+      },
+      {
+        item: Item.Glass,
+        qty: 1,
+      }
+    ]
+  },
+  "sunset-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop speciall / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "surprise-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "teaware-set": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.SquishyClay,
+        qty: 1,
+      },
+      {
+        item: Item.Lumber,
+        qty: 1,
+      }
+    ]
+  },
+  "thunder-wave-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "toolbox": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronOre,
+        qty: 1,
+      },
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      }
+    ]
+  },
+  "twisty-pillar-lower": {
+    "category": "Buildings",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 2,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "twisty-pillar-middle": {
+    "category": "Buildings",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 2,
+      }
+    ]
+  },
+  "twisty-pillar-upper": {
+    "category": "Buildings",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.StarSpottedRock,
+        qty: 2,
+      },
+      {
+        item: Item.GoldIngot,
+        qty: 1,
+      }
+    ]
+  },
+  "two-tone-wall": {
+    "category": "Blocks",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.SeaGlassFragments,
+        qty: 1,
+      }
+    ]
+  },
+  "vibrant-glossy-tiling": {
+    "category": "Blocks",
+    "unlock": "Bubbly Basin / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 2,
+      }
+    ]
+  },
+  "vibrant-glossy-tiling-wallpaper": {
+    "category": "Other",
+    "unlock": "Random chance in whirlpools / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "wall-clock": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      },
+      {
+        item: Item.Glass,
+        qty: 1,
+      }
+    ]
+  },
+  "wall-mounted-tools": {
+    "category": "Misc",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.IronOre,
+        qty: 1,
+      },
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      }
+    ]
+  },
+  "wavy-hipped-roof": {
+    "category": "Buildings",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "wavy-pattern-planter": {
+    "category": "Outdoor",
+    "unlock": "Shop - Bubbly Basin Lv. 7 / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Pokemetal,
+        qty: 1,
+      }
+    ]
+  },
+  "wavy-roof-decoration": {
+    "category": "Buildings",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "wavy-roof-valley": {
+    "category": "Buildings",
+    "unlock": "Daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Stone,
+        qty: 1,
+      },
+      {
+        item: Item.Brick,
+        qty: 1,
+      }
+    ]
+  },
+  "wild-poster": {
+    "category": "Other",
+    "unlock": "Bubbly Basin whirlpools or daily shop special / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 1,
+      }
+    ]
+  },
+  "window-pane-horizontal": {
+    "category": "Buildings",
+    "unlock": "Shop - Sparkly Skylands Lv.",
+    "materials": [
+      {
+        item: Item.Glass,
+        qty: 2,
+      },
+      {
+        item: Item.IronIngot,
+        qty: 2,
+      }
+    ]
+  },
+  "window-pane-sloped": {
+    "category": "Buildings",
+    "unlock": "Shop - Sparkly Skylands Lv.",
+    "materials": [
+      {
+        item: Item.Glass,
+        qty: 2,
+      },
+      {
+        item: Item.IronIngot,
+        qty: 2,
+      }
+    ]
+  },
+  "wireless-power-transmitter-post": {
+    "category": "Utilities",
+    "unlock": "Finish Chinchou's request after building temple / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Glass,
+        qty: 2,
+      },
+      {
+        item: Item.Pokemetal,
+        qty: 2,
+      }
+    ]
+  },
+  "wireless-power-transmitter-switch-post": {
+    "category": "Utilities",
+    "unlock": "Finish Chinchou's request after building temple / Expansion Pass only",
+    "materials": [
+      {
+        item: Item.Glass,
+        qty: 2,
+      },
+      {
+        item: Item.Pokemetal,
+        qty: 2,
+      }
+    ]
+  },
+  "wooden-beam": {
+    "category": "Buildings",
+    "unlock": "Shop - Withered Wasteland Lv. 5",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 2,
+      }
+    ]
+  },
+  "wooden-pillar-wallpaper": {
+    "category": "Other",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Paper,
+        qty: 6,
+      }
+    ]
+  },
+  "wooden-support": {
+    "category": "Buildings",
+    "unlock": "Shop",
+    "materials": [
+      {
+        item: Item.Lumber,
+        qty: 2,
+      }
+    ]
   }
 } as const;
 

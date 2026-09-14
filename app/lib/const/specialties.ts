@@ -143,6 +143,12 @@ export const Specialty = {
     description:
       "Pokemon with the Recycle specialty can process nonburnable garbage into iron ore and wastepaper into paper",
   },
+  Scrub: {
+    slug: "scrub",
+    label: "Scrub",
+    description:
+      "Pokemon with the Scrub speciality clean grubby pearls into shiny pearls",
+  },
   Search: {
     slug: "search",
     label: "Search",

@@ -21,6 +21,7 @@ export type TimeConst = (typeof Time)[keyof typeof Time];
 export const Rarity = {
   Common: { slug: "common", label: "Common" },
   Rare: { slug: "rare", label: "Rare" },
+  VeryRare: { slug: "very-rare", label: "Very Rare" },
 } as const;
 export type RarityConst = (typeof Rarity)[keyof typeof Rarity];
 

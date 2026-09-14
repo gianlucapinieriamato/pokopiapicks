@@ -136,6 +136,46 @@ export const HabitatConfig = {
       },
     ],
   },
+  BasinTallGrass: {
+    slug: "basintallgrass",
+    label: "Basin tall grass",
+    description:
+      "Tall grass that can be seen all over the sea floor. Marine Pokemon may come here to hide.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.SeabedTallGrass,
+        label: "Seabed tall grass",
+        qty: 1,
+      },
+    ],
+  },
+  BasinTallGrassAndCoral: {
+    slug: "basintallgrassandcoral",
+    label: "Basin tall grass and coral",
+    description:
+      "Bushy tall grass and a variety of corals make this a perfect resting spot for Pokemon",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.SeabedTallGrass,
+        label: "Seabed tall grass",
+        qty: 4,
+      },
+      {
+        type: "item" as const,
+        item: Item.SmallCoral,
+        label: "Small coral",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.TallCoral,
+        label: "Tall coral",
+        qty: 1,
+      },
+    ],
+  },
   BeachSet: {
     slug: "beachset",
     label: "Beach Set",
@@ -255,6 +295,38 @@ export const HabitatConfig = {
       },
     ],
   },
+  BiteablePunchingBag: {
+    slug: "biteablepunchingbag",
+    label: "Biteable punching bag",
+    description:
+      "A punching bag hanging near a set of dentures. Pokemon with big jaws mayy be tempted to take a bite.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Sandpile,
+        label: "Sandpile",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.PunchingBag,
+        label: "Punching bag",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "table",
+        label: "Table (any)",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.GoldTeeth,
+        label: "Gold Teeth",
+        qty: 1,
+      },
+    ],
+  },
   BoulderShadedTallGrass: {
     slug: "boulder-shadedtallgrass",
     label: "Boulder-shaded Tall Grass",
@@ -350,6 +422,44 @@ export const HabitatConfig = {
       { type: "item" as const, item: Item.Sign, label: "Sign", qty: 1 },
     ],
   },
+  BubblyBathtub: {
+    slug: "bubblybathtub",
+    label: "Bubbly bathtub",
+    description: "Fill the tub and enjoy a fun bubbly bath time",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Bathtub,
+        label: "Bathtub",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.BubbleMachine,
+        label: "Bubble machine",
+        qty: 1,
+      },
+    ],
+  },
+  BubblyStage: {
+    slug: "bubblystage",
+    label: "Bubbly stage",
+    description: "Dance on a stage bursting with bubbles!",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.SmallStage,
+        label: "Small stage",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.BubbleMachine,
+        label: "Bubble machine",
+        qty: 2,
+      },
+    ],
+  },
   BurningHotSpice: {
     slug: "burning-hotspice",
     label: "Burning-hot spice",
@@ -407,6 +517,32 @@ export const HabitatConfig = {
         item: Item.StrawStool,
         label: "Straw stool",
         qty: 1,
+      },
+    ],
+  },
+  CanoeDock: {
+    slug: "canoedock",
+    label: "Canoe dock",
+    description:
+      "A cozy little canoe dock. Pokemon may come by to ride the canoe",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Canoe,
+        label: "Canoe",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.FloatingLogs,
+        label: "Floating logs",
+        qty: 2,
+      },
+      {
+        type: "group" as const,
+        groupKey: "water",
+        label: "Water",
+        qty: 2,
       },
     ],
   },
@@ -473,6 +609,38 @@ export const HabitatConfig = {
         type: "item" as const,
         item: Item.ShavedIce,
         label: "Shaved ice",
+        qty: 1,
+      },
+    ],
+  },
+  ChimneyRocksDigSite: {
+    slug: "chimneyrocksdigsite",
+    label: "Chimney rocks dig site",
+    description:
+      "Dig around the chimney rocks to see if you can find any treasure!",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.ChimneyRocks,
+        label: "Chimney rocks",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.Wheelbarrow,
+        label: "Wheelbarrow",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.ExcavationTools,
+        label: "Excavation tools",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.TrafficCone,
+        label: "Traffic cone",
         qty: 1,
       },
     ],
@@ -613,6 +781,32 @@ export const HabitatConfig = {
       },
     ],
   },
+  CoralCongregation: {
+    slug: "coralcongregation",
+    label: "Coral congregation",
+    description:
+      "Colorful corals of various sizes. Pokemon who are coral connoisseurs find them irresistible",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.ColorfulCorals,
+        label: "Colorful corals",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SmallCoral,
+        label: "Small coral",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.TallCoral,
+        label: "Tall coral",
+        qty: 1,
+      },
+    ],
+  },
   CozyLogHandicrafts: {
     slug: "cozyloghandicrafts",
     label: "Cozy log handicrafts",
@@ -630,6 +824,38 @@ export const HabitatConfig = {
         type: "item" as const,
         item: Item.LogTable,
         label: "Log table",
+        qty: 1,
+      },
+    ],
+  },
+  CreepyChimneyRocks: {
+    slug: "creepychimneyrocks",
+    label: "Creepy chimney rocks",
+    description:
+      "Creepy chimney rocks surrounded by sea moss. Pick up the lantern and take a closer look",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.ChimneyRocks,
+        label: "Chimney rocks",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SeaMoss,
+        label: "Sea moss",
+        qty: 4,
+      },
+      {
+        type: "item" as const,
+        item: Item.Barrel,
+        label: "Barrel",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.Lantern,
+        label: "Lantern",
         qty: 1,
       },
     ],
@@ -873,6 +1099,32 @@ export const HabitatConfig = {
       },
     ],
   },
+  DiscardedTreasure: {
+    slug: "discardedtreasure",
+    label: "Discarded treasure",
+    description:
+      "A treasure chest that's been tossed out with the trash. Open it up and see what's inside!",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.BigTreasureChest,
+        label: "Big treasure chest",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "waste bin",
+        label: "Waste bin",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "garbage bags",
+        label: "Garbage bagss",
+        qty: 1,
+      },
+    ],
+  },
   Dock: {
     slug: "dock",
     label: "Dock",
@@ -932,6 +1184,32 @@ export const HabitatConfig = {
         item: Item.FriedPotatoes,
         label: "Fried Potatoes",
         qty: 1,
+      },
+    ],
+  },
+  ElegantConcert: {
+    slug: "elegantconcert",
+    label: "Elegant concert",
+    description:
+      "A harp that gleams in the lamplight. Try strumming a melody inspired by the ocean.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Harp,
+        label: "Harp",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.MarineChair,
+        label: "Marine chair",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.ShellLamp,
+        label: "Shell lamp",
+        qty: 2,
       },
     ],
   },
@@ -1331,6 +1609,32 @@ export const HabitatConfig = {
       },
     ],
   },
+  FluffyRelaxation: {
+    slug: "fluffyrelaxation",
+    label: "Fluffy relaxation",
+    description:
+      "The huge cushion bed and fluffy doll create a soothing environment",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.CushionBed,
+        label: "Cushion bed",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "lighting",
+        label: "Lighting",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "doll",
+        label: "Doll (any)",
+        qty: 1,
+      },
+    ],
+  },
   FreshVeggieField: {
     slug: "freshveggiefield",
     label: "Fresh Veggie Field",
@@ -1454,6 +1758,26 @@ export const HabitatConfig = {
       },
     ],
   },
+  GlowingStageForThree: {
+    slug: "glowingstageforthree",
+    label: "Glowing stage for three",
+    description:
+      "A shiny stage perfect for a trio. Gather everyone and get singing!",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.StandingMic,
+        label: "Standing mic",
+        qty: 3,
+      },
+      {
+        type: "item" as const,
+        item: Item.WirelessPowerTransmitterPost,
+        label: "Wireless power-transmitter post",
+        qty: 3,
+      },
+    ],
+  },
   GoodOldFashionedAntiques: {
     slug: "goodold-fashionedantiques",
     label: "Good old-fashioned antiques",
@@ -1482,6 +1806,32 @@ export const HabitatConfig = {
         type: "item" as const,
         item: Item.AntiqueChair,
         label: "Antique chair",
+        qty: 1,
+      },
+    ],
+  },
+  GorgeousSleepingArea: {
+    slug: "gorgeoussleepingarea",
+    label: "Gorgeous Sleeping Area",
+    description:
+      "Sleeping surrounded by gorgeously decorated furniture may help you drift into fancy dreams.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.OrnatePartition,
+        label: "Ornate partition",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.OrnateBed,
+        label: "Ornate bed",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.OrnateStand,
+        label: "Ornate stand",
         qty: 1,
       },
     ],
@@ -2214,6 +2564,110 @@ export const HabitatConfig = {
       { type: "group" as const, groupKey: "lava", label: "Lava (any)", qty: 1 },
     ],
   },
+  MarineMakeupStand: {
+    slug: "marinemakeupstand",
+    label: "Marine makeup stand",
+    description:
+      "An elegant space adorned with shell and pearl furniture. You could probably get extra stylish here.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.MarineCloset,
+        label: "Marine closet",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.MarineDresser,
+        label: "Marine dresser",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.MarineChair,
+        label: "Marine chair",
+        qty: 1,
+      },
+    ],
+  },
+  MarineMossyRestSpot: {
+    slug: "marinemossyrestspot",
+    label: "Marine mossy rest spot",
+    description:
+      "The fluffy pink moss makes this spot very popular with aquatic Pokemon.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.SeaMoss,
+        label: "Sea moss",
+        qty: 1,
+      },
+    ],
+  },
+  MarineShop: {
+    slug: "marineshop",
+    label: "Marine shop",
+    description:
+      "Just power up the cash register, and you'll be ready for business in no time-even underwater!",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.CashRegister,
+        label: "Cash register",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "table",
+        label: "Table (any)",
+        qty: 2,
+      },
+      {
+        type: "group" as const,
+        groupKey: "water",
+        label: "Water",
+        qty: 1,
+      },
+    ],
+  },
+  MarineTeatime: {
+    slug: "marineteatime",
+    label: "Marine teatime",
+    description:
+      "Relax and enjoy teatime in a chic space while admiring a bottled ship.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.ChicTable,
+        label: "Chic table",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.ChicChair,
+        label: "Chic chair",
+        qty: 2,
+      },
+      {
+        type: "item" as const,
+        item: Item.PushCart,
+        label: "Push cart",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.TeaSet,
+        label: "Tea set",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.BottledShip,
+        label: "Bottled ship",
+        qty: 1,
+      },
+    ],
+  },
   MarshFishingSpot: {
     slug: "marshfishingspot",
     label: "Marsh fishing spot",
@@ -2252,6 +2706,62 @@ export const HabitatConfig = {
         groupKey: "muddy water",
         label: "Muddy Water (any)",
         qty: 2,
+      },
+    ],
+  },
+  MermaidSGym: {
+    slug: "mermaid'sgym",
+    label: "Mermaid's Gym",
+    description:
+      "This space with a shining pearl sofa feels ready for someone to arrive",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.MarineSofa,
+        label: "Marine Sofa",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "pedestal",
+        label: "Pedestal",
+        qty: 6,
+      },
+      {
+        type: "item" as const,
+        item: Item.DecorativeGreatBall,
+        label: "Decorative Great Ball",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.DecorativeHealBall,
+        label: "Decorative Heal Ball",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.DecorativeDiveBall,
+        label: "Decorative Dive Ball",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.DecorativeNetBall,
+        label: "Decorative Net Ball",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.DecorativeLureBall,
+        label: "Decorative Lure Ball",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.DecorativeQuickBall,
+        label: "Decorative Quick Ball",
+        qty: 1,
       },
     ],
   },
@@ -2403,6 +2913,26 @@ export const HabitatConfig = {
       },
     ],
   },
+  MoltenMossyRestSpot: {
+    slug: "moltenmossyrestspot",
+    label: "Molten mossy rest spot",
+    description:
+      "Even the heat of the molten rock could not stop the thick growth of moss",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.MoltenRock,
+        label: "Molten rock",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SeaMoss,
+        label: "Sea moss",
+        qty: 4,
+      },
+    ],
+  },
   MossyBoulder: {
     slug: "mossyboulder",
     label: "Mossy boulder",
@@ -2440,6 +2970,70 @@ export const HabitatConfig = {
       "All that nice, damp moss makes this a great location for Pokemon who love humid places",
     requirements: [
       { type: "item" as const, item: Item.Moss, label: "Moss", qty: 4 },
+    ],
+  },
+  MuddyPlaytime: {
+    slug: "muddyplaytime",
+    label: "Muddy playtime",
+    description:
+      "Have fun in the muddy water by playing with the toys or riding the floating logs.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.WindupInkay,
+        label: "Windup Inkay",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.TowelRack,
+        label: "Towel rack",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.FloatingLogs,
+        label: "Floating logs",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "muddy water",
+        label: "Muddy water",
+        qty: 2,
+      },
+    ],
+  },
+  MuddySpa: {
+    slug: "muddyspa",
+    label: "Muddy spa",
+    description:
+      "A luxurious spa with a large, prominent fountain. Taking a mud bath may turn your skin silky smooth",
+    requirements: [
+      {
+        type: "group" as const,
+        groupKey: "seat (wide)",
+        label: "Seat (widde)",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.GyaradosFountain,
+        label: "Gyarados fountain",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.BathtimeSet,
+        label: "Bathtime set",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "muddy water",
+        label: "Muddy water",
+        qty: 2,
+      },
     ],
   },
   MusicAndMagazines: {
@@ -2487,6 +3081,50 @@ export const HabitatConfig = {
       { type: "item" as const, item: Item.Firepit, label: "Firepit", qty: 9 },
     ],
   },
+  NostalgiaZone: {
+    slug: "nostalgiazone",
+    label: "Nostalgia zone",
+    description:
+      "Listen to the melody of the music box and take a stroll down memory lane.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.AntiqueChest,
+        label: "Antique chest",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.MusicBox,
+        label: "Music box",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.PhotoFrame,
+        label: "Photo frame",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SeaMoss,
+        label: "Sea moss",
+        qty: 2,
+      },
+      {
+        type: "item" as const,
+        item: Item.WoodenCrate,
+        label: "Wooden crate",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.Lantern,
+        label: "Lantern",
+        qty: 1,
+      },
+    ],
+  },
   OceanFishingSpot: {
     slug: "oceanfishingspot",
     label: "Ocean fishing spot",
@@ -2504,6 +3142,58 @@ export const HabitatConfig = {
         type: "group" as const,
         groupKey: "ocean water",
         label: "Ocean Water (any)",
+        qty: 1,
+      },
+    ],
+  },
+  OceanRestSpot: {
+    slug: "oceanrestspot",
+    label: "Ocean rest spot",
+    description:
+      "Sit on the cushion beside the coral and relax while gazing at the light.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.SmallCoral,
+        label: "Small coral",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SeashellSeat,
+        label: "Seashell seat",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.Lampion,
+        label: "Lampion",
+        qty: 1,
+      },
+    ],
+  },
+  OceanTreasures: {
+    slug: "oceantreasures",
+    label: "Ocean treasures",
+    description:
+      "Sparkling jewelry and a bottled ship. These should be stored very carefully",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.MarineChest,
+        label: "Marine chest",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.BottledShip,
+        label: "Bottled ship",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SparklingJewelry,
+        label: "Sparkling jewelry",
         qty: 1,
       },
     ],
@@ -2778,6 +3468,38 @@ export const HabitatConfig = {
         qty: 1,
       },
       { type: "item" as const, item: Item.Cannon, label: "Cannon", qty: 2 },
+    ],
+  },
+  PlayingSailor: {
+    slug: "playingsailor",
+    label: "Playing sailor",
+    description:
+      "Turn the ship's wheel next to the treasure chest, just like a sea captain! Steady as she goes!",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.BigTreasureChest,
+        label: "Big treasure chest",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.ShipsWheel,
+        label: "Ship's Wheel",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.WoodenCrate,
+        label: "Wooden crate",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.BottledShip,
+        label: "Bottled ship",
+        qty: 1,
+      },
     ],
   },
   Playland: {
@@ -3145,6 +3867,72 @@ export const HabitatConfig = {
       },
     ],
   },
+  SandyBasinTallGrass: {
+    slug: "sandybasintallgrass",
+    label: "Sandy basin tall grass",
+    description:
+      "Both the basin tall grass and the pile of sand are hiding spots for Pokemon",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Sandpile,
+        label: "Sandpile",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SeabedTallGrass,
+        label: "Seabed tall grass",
+        qty: 4,
+      },
+    ],
+  },
+  SandyDiggingSpot: {
+    slug: "sandydiggingspot",
+    label: "Sandy digging spot",
+    description:
+      "Get your rake and shovel, then start digging until you find what you're after!",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Sandpile,
+        label: "Sandpile",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SandToys,
+        label: "Sandtoys",
+        qty: 1,
+      },
+    ],
+  },
+  SandySpeech: {
+    slug: "sandyspeech",
+    label: "Sandy speech",
+    description:
+      "Pokemon curious about the platform may pop out of the sandpile",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Sandpile,
+        label: "Sandpile",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "table",
+        label: "Table (any)",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.TabletopMic,
+        label: "Tabletop mic",
+        qty: 1,
+      },
+    ],
+  },
   SeasideTallGrass: {
     slug: "seasidetallgrass",
     label: "Seaside Tall Grass",
@@ -3155,6 +3943,26 @@ export const HabitatConfig = {
         type: "group" as const,
         groupKey: "ocean water",
         label: "Ocean Water (any)",
+        qty: 2,
+      },
+    ],
+  },
+  SeaweedAndNetting: {
+    slug: "seaweedandnetting",
+    label: "Seaweed and netting",
+    description:
+      "A bunch of seaweed near some netting. Somehow none of it gets tangled in the mesh.",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Netting,
+        label: "Netting",
+        qty: 4,
+      },
+      {
+        type: "item" as const,
+        item: Item.LushSeaweed,
+        label: "Lush seaweed",
         qty: 2,
       },
     ],
@@ -3289,6 +4097,32 @@ export const HabitatConfig = {
         type: "item" as const,
         item: Item.SmoothRock,
         label: "Smooth Rock",
+        qty: 1,
+      },
+    ],
+  },
+  SmoothieMakingSpot: {
+    slug: "smoothie-makingspot",
+    label: "Smoothie-making spot",
+    description:
+      "Grab some berries and a blender, and you'll be all set to make smoothies",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Blender,
+        label: "Blender",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "plated food",
+        label: "Plated food",
+        qty: 1,
+      },
+      {
+        type: "group" as const,
+        groupKey: "table",
+        label: "Table (any)",
         qty: 1,
       },
     ],
@@ -3430,6 +4264,65 @@ export const HabitatConfig = {
         item: Item.BooInTheBox,
         label: "Boo-in-the-box",
         qty: 1,
+      },
+    ],
+  },
+  SwayingFlowerBed: {
+    slug: "swayingflowerbed",
+    label: "Swaying flower bed",
+    description:
+      "A cluster of small flowers and luxuriant leaves that sways gently to and fro",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.SeabedFlowers,
+        label: "Seabed flowers",
+        qty: 4,
+      },
+    ],
+  },
+  SwayingFlowerBedAndCoral: {
+    slug: "swayingflowerbedandcoral",
+    label: "Swaying flower bed and coral",
+    description:
+      "This gorgeous tableau of colorful corals and basin flowers can lift your mood",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.ColorfulCorals,
+        label: "Colorful corals",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SeabedFlowers,
+        label: "Seabed flowers",
+        qty: 4,
+      },
+    ],
+  },
+  SwayingFlowerBedAndSeaweed: {
+    slug: "swayingflowerbedandseaweed",
+    label: "Swaying flower bed and seaweed",
+    description: "Flowers and seaweed sway gently beside rugged chimney rocks",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.ChimneyRocks,
+        label: "Chimney rocks",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SeabedFlowers,
+        label: "Seabed flowers",
+        qty: 4,
+      },
+      {
+        type: "item" as const,
+        item: Item.LushSeaweed,
+        label: "Lush seaweed",
+        qty: 2,
       },
     ],
   },
@@ -3603,6 +4496,20 @@ export const HabitatConfig = {
       },
     ],
   },
+  TopsyTurvy: {
+    slug: "topsy-turvy",
+    label: "Topsy-turvy",
+    description:
+      "A row of lampions hanging upside down, but that's fine as long as they shine brightly",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.Lampion,
+        label: "Lampion",
+        qty: 3,
+      },
+    ],
+  },
   TrainingWaterfall: {
     slug: "trainingwaterfall",
     label: "Training waterfall",
@@ -3695,6 +4602,31 @@ export const HabitatConfig = {
         type: "item" as const,
         item: Item.Television,
         label: "Television",
+        qty: 1,
+      },
+    ],
+  },
+  TreasureChestAndSparklingJewels: {
+    slug: "treasurechestandsparklingjewels",
+    label: "Treasure chest and sparkling jewels",
+    description: "Treasure chest and sparkling jewels",
+    requirements: [
+      {
+        type: "item" as const,
+        item: Item.BigTreasureChest,
+        label: "Big treasure chest",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.SparklingJewelry,
+        label: "Sparkling jewelry",
+        qty: 1,
+      },
+      {
+        type: "item" as const,
+        item: Item.Lantern,
+        label: "Lantern",
         qty: 1,
       },
     ],

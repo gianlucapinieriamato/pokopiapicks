@@ -3064,5 +3064,690 @@
         "level": 10
       }
     ]
+  },
+  "bubblybasin": {
+    "slug": "bubblybasin",
+    "name": "Bubbly Basin",
+    "description": "Bubbly Basin is a new area introduced in the first pack of the Pokemon Pokopia Expansion Pass and is an area that is primarily underwater. It is based on a sunken Cerulean City including iconic areas such as Nugget Bridge, Cerulean Cave, Cerulean Gym and Bill's House There are several hidden locations within it including Misty's room behind the gym, an underwater lab at the bottom of the sea trench and a Coral room near the temple",
+    "objective": "",
+    "materials": [
+      "Sturdy stick",
+      "Stone",
+      "Vine rope",
+      "Leppa Berry",
+      "Watermelon",
+      "Grubby pearl",
+      "Twine",
+      "Lumber",
+      "Sea grapes",
+      "Seashell",
+      "Sea glass fragments",
+      "Seaweed",
+      "Nonburnable garbage",
+      "Glowing mushrooms",
+      "Leaf",
+      "Fresh carrot"
+    ],
+    "blocksAndPlants": [
+      "Seabed tall grass",
+      "Yellow Tall grass",
+      "Seabed flowers",
+      "Seabed flowers (Purple)",
+      "Lush seaweed",
+      "Seagrape stalk",
+      "Blooming watermelon plant",
+      "Driftwood",
+      "White driftwood",
+      "Sea moss",
+      "Mossy ocean boulder",
+      "Chimney rocks",
+      "Small coral",
+      "Small coral (Red)",
+      "Small coral (Green)",
+      "Tall coral",
+      "Tall coral (Purple)",
+      "Colorful corals",
+      "Leppa Tree",
+      "Twisty waterweed",
+      "Seafloor algae",
+      "Blue rock",
+      "Blue cave rock",
+      "Carved blue rock",
+      "Ocean rock",
+      "Mossy ocean soil",
+      "Star-spotted rock",
+      "Seashore grass",
+      "Glossy tiling",
+      "Vibrant glossy tiling",
+      "Muddy sand",
+      "Mud",
+      "Beach sand",
+      "Bumpy beach sand",
+      "Seashell soil",
+      "Iron tiling",
+      "Damaged glossy tiling",
+      "Stone brick wall",
+      "Rough wall",
+      "Stone pillar (middle)",
+      "Cave rock",
+      "Cracked sandstone",
+      "Stylish brick wall (middle)",
+      "Stylish brick wall (upper)",
+      "Crisscross wooden flooring",
+      "Iron-plate flooring",
+      "Rusted iron-plate flooring",
+      "Grubby rags",
+      "Sandpile",
+      "Water pillar quarter",
+      "Pokemon Center wall (trim)",
+      "Dry Leppa tree",
+      "Dry yellow tall grass",
+      "Cobblestone wall",
+      "Light wooden wall",
+      "Molten rock",
+      "Diagonal wooden flooring",
+      "Foundation",
+      "Dry yellow-green shoots",
+      "Yellow-green shoots",
+      "Tatami mat",
+      "Rectangle tiling",
+      "Mossy boulder",
+      "Brick wall",
+      "Dark marble flooring",
+      "Gray circle flooring",
+      "Marble",
+      "Iron column",
+      "Worn lumber",
+      "Cube light",
+      "Ornate wall",
+      "Lacquered wall",
+      "Extravagant carpeting",
+      "Stately flooring",
+      "Damaged stone tiling",
+      "Plaster wall",
+      "Pop art wall (upper)",
+      "Pop art wall (middle)",
+      "Pop art wall (lower)",
+      "Simple square tiling",
+      "Confectionery wall (lower)",
+      "Gradient wall (lower)",
+      "Gradient wall (upper)",
+      "Gold wall",
+      "Colorful fish-scale tiling",
+      "Stylish wall (upper)",
+      "Stylish wall (middle)",
+      "Concrete wall",
+      "Hardwood flooring",
+      "Simple flooring",
+      "Hexagonal flooring",
+      "Light antique wall (lower)",
+      "Light antique wall (middle)",
+      "Light antique wall (upper)",
+      "Dynamic Ditto print",
+      "Fanned-out Ditto print",
+      "Wooden pillar (lower)",
+      "Vine",
+      "Moss",
+      "Mossy Stone",
+      "Crystal wall",
+      "Chic anchor print",
+      "Colorful anchor print",
+      "Cloth wall",
+      "Squiggly print",
+      "Confectionery wall (upper)",
+      "Confectionery wall (middle)",
+      "Colorful corals print",
+      "Clustered corals print",
+      "Damaged stone flooring"
+    ],
+    "itemsInArea": [
+      "Workbench",
+      "Storage box",
+      "Concrete steps",
+      "Pointed wooden fencing",
+      "Worn wooden crate",
+      "Wheelbarrow",
+      "Traffic cone",
+      "Netting",
+      "Worn treasure chest",
+      "Construction supplies",
+      "Stone fragments",
+      "Sloped scale roof",
+      "Broken Window Pane",
+      "Window pane",
+      "Sash window",
+      "Cash register",
+      "Large mirror",
+      "Counter",
+      "Grubby newspaper",
+      "Harbor pole",
+      "Metal fragments",
+      "Excavation tools",
+      "Metal Debris",
+      "Dangling streetlight",
+      "Slim information board",
+      "Wavy-pattern planter",
+      "Scale roof valley",
+      "Scale awning",
+      "Wireless power-transmitter post",
+      "Bridge planks",
+      "Garden light",
+      "Simple door",
+      "Wall light",
+      "Wooden posts",
+      "Walkway",
+      "Deck chair",
+      "Flat scale roof",
+      "Industrial chair",
+      "Iron table",
+      "Grubby tablet",
+      "Poke Ball bed",
+      "Wall monitor",
+      "Decorative bookshelf",
+      "Decorative storage shelf",
+      "Modern sink",
+      "Cooking stove",
+      "Floating logs",
+      "Menu board",
+      "String lights",
+      "Pop art lamp",
+      "Spotlight",
+      "Standing mic",
+      "Iron steps",
+      "Broken iron steps",
+      "Lampion",
+      "Iron ladder",
+      "Iron enclosure",
+      "Buried pearl",
+      "Ornate chair",
+      "Ornate door",
+      "Ornate window",
+      "Sloped wavy roof",
+      "Fancy wavy roof decoration",
+      "Wood fragments",
+      "Sleek steps",
+      "Broken bookcase",
+      "Wavy hipped roof",
+      "Seashell seat",
+      "Grubby book",
+      "Garbage bin",
+      "Sewer-hole cover",
+      "Mysterious pedestal",
+      "Decorative Great Ball",
+      "Decorative Heal Ball",
+      "Decorative Dive Ball",
+      "Decorative Net Ball",
+      "Decorative Lure Ball",
+      "Decorative Quick Ball",
+      "Mysterious statue",
+      "Spectator chair",
+      "Iron scaffold",
+      "Metal drum",
+      "Sandbags",
+      "Berry table",
+      "Berry chair",
+      "Arrow sign",
+      "Arched fencing",
+      "Grubby letter",
+      "Iron frame",
+      "Tire toy",
+      "Slide",
+      "Tires",
+      "Concrete border (line)",
+      "Concrete border (corner)",
+      "Industrial bench",
+      "Cushion bed",
+      "Ditto doll",
+      "Toy blocks",
+      "Mini bookcase",
+      "Wreath",
+      "Photo frame",
+      "Plain chest",
+      "Towel rack",
+      "Wall mirror",
+      "Bubble machine",
+      "Bathtub",
+      "Grate flooring",
+      "Bathtime set",
+      "Shell lamp",
+      "Vending machine",
+      "Canoe",
+      "Wooden siding (panel)",
+      "Wooden siding (corner)",
+      "Stone bench",
+      "Fishing rod",
+      "Campfire",
+      "Mailbox",
+      "Wooden steps",
+      "Rustic door",
+      "Sloped stone roof",
+      "Stone roof decoration",
+      "Cardboard boxes",
+      "Office chair",
+      "Computer",
+      "Office desk",
+      "Portal pod",
+      "Office locker",
+      "Office shelf",
+      "Fluorescent light",
+      "Glass pane",
+      "Stylish door",
+      "Folding chair",
+      "Whiteboard",
+      "Kitchen table",
+      "Microscope",
+      "Book pile",
+      "Lantern",
+      "Wooden stool",
+      "Wooden table",
+      "Recycling bin",
+      "Wall-mounted tools",
+      "Pencil holder",
+      "Arched barrier",
+      "Plain chair",
+      "Wall-mounted table",
+      "Garden bench",
+      "Gyarados fountain",
+      "Wooden gate",
+      "Glossy awning",
+      "Substitute doll",
+      "Underground hatch",
+      "Plain sofa",
+      "Pop art bed",
+      "Pop art chair",
+      "Simple cushion",
+      "Decorative cloth",
+      "Cycle shop sign",
+      "Bike",
+      "Toolbox",
+      "Iron rack",
+      "Magazine rack",
+      "Large boulder",
+      "Sign",
+      "Wooden ladder",
+      "Stepping stones",
+      "Torch",
+      "Straw stool",
+      "Wall torch",
+      "Railway track",
+      "Crystal cluster",
+      "Office table",
+      "Wall Calendar",
+      "Side table",
+      "Servers",
+      "Audio mixer",
+      "Control unit",
+      "Small garbage can",
+      "Mirror ball",
+      "Submarine door",
+      "Jumbled cords",
+      "Small square rug",
+      "Iron bed",
+      "Submarine window",
+      "Chic sofa",
+      "Corkboard",
+      "Speaker",
+      "Marine closet",
+      "Resort sofa",
+      "Plain table",
+      "Plain stool",
+      "Resort stool",
+      "Seashell fencing",
+      "Cute bed",
+      "Marine dresser",
+      "Marine chair",
+      "Clefairy doll",
+      "Watermelon seeds",
+      "Seabed flower seeds",
+      "Star-spotted rock",
+      "Grubby pearl",
+      "Sea glass fragments",
+      "Pokemetal",
+      "Rare Pokemetal",
+      "Imperial cottage kit",
+      "Imperial house kit",
+      "Waterwheel kit"
+    ],
+    "itemsInPokeballs": [
+      "Marine chair",
+      "Wall plant",
+      "Wireless power-transmitter post",
+      "Marine table",
+      "Sand toys",
+      "Seabed flower seeds",
+      "Sand den kit",
+      "Netting",
+      "Heat Rock",
+      "Submarine kit",
+      "Imperial house kit",
+      "Ornate decorative shelf",
+      "Lampion",
+      "Marine chest",
+      "Buoyant block",
+      "Watermelon seeds",
+      "Ship's Wheel",
+      "Lantern",
+      "Pokemetal",
+      "Big Nugget",
+      "Battle poster",
+      "Vibrant glossy tiling",
+      "Ocean door",
+      "Beach poster",
+      "Tabletop mic",
+      "Ocean pals rug",
+      "Clock tower kit",
+      "Colorful corals print (wallpaper)",
+      "Fanned-out Ditto print (wallpaper)",
+      "Digital wall",
+      "Portal pod",
+      "Colorful anchor print (wallpaper)",
+      "Big treasure chest",
+      "Resort hammock",
+      "Security poster",
+      "Overlapping waves print (wallpaper)"
+    ],
+    "treasure": [
+      "Large lost sunken relic",
+      "Small Lost Relic",
+      "Large Lost Relic",
+      "Substitute doll",
+      "Starmie doll",
+      "Ditto doll",
+      "The Sea",
+      "Violet City",
+      "Dive",
+      "Canalave City (Night)",
+      "Undella Town (Summer)",
+      "Lumiose City",
+      "Po Town",
+      "Stow-on-Side",
+      "Hotel Z"
+    ],
+    "shopItems": [
+      {
+        "name": "Marine table",
+        "level": 2
+      },
+      {
+        "name": "Marine chair",
+        "level": 2
+      },
+      {
+        "name": "Sand toys",
+        "level": 2
+      },
+      {
+        "name": "Submarine kit",
+        "level": 2
+      },
+      {
+        "name": "Buoyant block",
+        "level": 2
+      },
+      {
+        "name": "Glossy tiling",
+        "level": 2
+      },
+      {
+        "name": "Carved blue rock",
+        "level": 2
+      },
+      {
+        "name": "Seabed flower seeds",
+        "level": 2
+      },
+      {
+        "name": "Toolbox",
+        "level": 3
+      },
+      {
+        "name": "Lampion",
+        "level": 3
+      },
+      {
+        "name": "Marine closet",
+        "level": 3
+      },
+      {
+        "name": "Cushion bed",
+        "level": 3
+      },
+      {
+        "name": "Grubby pearl",
+        "level": 3
+      },
+      {
+        "name": "Clock tower kit",
+        "level": 3
+      },
+      {
+        "name": "Aqua cottage kit",
+        "level": 3
+      },
+      {
+        "name": "Marine dresser",
+        "level": 3
+      },
+      {
+        "name": "Sandpile",
+        "level": 3
+      },
+      {
+        "name": "Seashell fencing",
+        "level": 3
+      },
+      {
+        "name": "Floating logs",
+        "level": 3
+      },
+      {
+        "name": "Watermelon seeds",
+        "level": 3
+      },
+      {
+        "name": "Bottled ship",
+        "level": 4
+      },
+      {
+        "name": "Sparkling jewelry",
+        "level": 4
+      },
+      {
+        "name": "Imperial cottage kit",
+        "level": 4
+      },
+      {
+        "name": "Laboratory kit",
+        "level": 4
+      },
+      {
+        "name": "Pearl streetlight",
+        "level": 4
+      },
+      {
+        "name": "Pointed wooden fencing",
+        "level": 4
+      },
+      {
+        "name": "Sloped scale roof",
+        "level": 4
+      },
+      {
+        "name": "Scale hipped roof",
+        "level": 4
+      },
+      {
+        "name": "Scale roof valley",
+        "level": 4
+      },
+      {
+        "name": "Flat scale roof",
+        "level": 4
+      },
+      {
+        "name": "Scale roof decoration",
+        "level": 4
+      },
+      {
+        "name": "Scale awning",
+        "level": 4
+      },
+      {
+        "name": "Teaware set",
+        "level": 5
+      },
+      {
+        "name": "Book stack",
+        "level": 5
+      },
+      {
+        "name": "Chain lamp",
+        "level": 5
+      },
+      {
+        "name": "Imperial house kit",
+        "level": 5
+      },
+      {
+        "name": "Supermarket kit",
+        "level": 5
+      },
+      {
+        "name": "Marine closet",
+        "level": 5
+      },
+      {
+        "name": "Marine table",
+        "level": 5
+      },
+      {
+        "name": "Lacquered wall",
+        "level": 5
+      },
+      {
+        "name": "Gradient wall (wallpaper)",
+        "level": 5
+      },
+      {
+        "name": "Supermarket sign",
+        "level": 6
+      },
+      {
+        "name": "Ornate chair",
+        "level": 6
+      },
+      {
+        "name": "Bubble machine",
+        "level": 6
+      },
+      {
+        "name": "Ornate door",
+        "level": 6
+      },
+      {
+        "name": "Metal wall",
+        "level": 6
+      },
+      {
+        "name": "Pathway light (line)",
+        "level": 6
+      },
+      {
+        "name": "Pathway light (single)",
+        "level": 6
+      },
+      {
+        "name": "Pathway light (corner)",
+        "level": 6
+      },
+      {
+        "name": "Ocean pals rug",
+        "level": 6
+      },
+      {
+        "name": "Rare Pokemetal",
+        "level": 7
+      },
+      {
+        "name": "Ornate table",
+        "level": 7
+      },
+      {
+        "name": "Wavy-pattern planter",
+        "level": 7
+      },
+      {
+        "name": "Ornate window",
+        "level": 7
+      },
+      {
+        "name": "Ornate wall",
+        "level": 7
+      },
+      {
+        "name": "Ornate bed",
+        "level": 8
+      },
+      {
+        "name": "Submarine door",
+        "level": 8
+      },
+      {
+        "name": "Submarine window",
+        "level": 8
+      },
+      {
+        "name": "Hatch",
+        "level": 8
+      },
+      {
+        "name": "Gradient wall (upper)",
+        "level": 8
+      },
+      {
+        "name": "Gradient wall (lower)",
+        "level": 8
+      },
+      {
+        "name": "Harp",
+        "level": 9
+      },
+      {
+        "name": "Ornate stand",
+        "level": 9
+      },
+      {
+        "name": "Ornate partition",
+        "level": 9
+      },
+      {
+        "name": "Rectangle tiling",
+        "level": 9
+      },
+      {
+        "name": "Ornate decorative shelf",
+        "level": 10
+      },
+      {
+        "name": "Stone-accent wall",
+        "level": 10
+      },
+      {
+        "name": "Stately flooring",
+        "level": 10
+      },
+      {
+        "name": "Stately wall (upper lower)",
+        "level": 10
+      },
+      {
+        "name": "Stately wall (middle)",
+        "level": 10
+      },
+      {
+        "name": "Basin Pokemon Center kit",
+        "level": 10
+      }
+    ]
   }
 }
